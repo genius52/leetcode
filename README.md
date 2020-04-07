@@ -1,21 +1,9 @@
-# Array
+Leetcode solution in Golang
 
-# String
+[Array](https://github.com/genius52/leetcode/blob/master/src/array_practice.go)
 
-# Two pointer
+[Number](https://github.com/genius52/leetcode/blob/master/src/number_practice.go)
 
-# Stack
+[Tree](https://github.com/genius52/leetcode/blob/master/src/tree_practice.go)
 
-# Heap
-
-# Sort
-
-# Hash table
-
-# Link list
-
-# DFS
-
-# BFS
-
-# Dynamic programming
+[Diagram](https://github.com/genius52/leetcode/blob/master/src/diagram_practice.go)
