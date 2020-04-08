@@ -1,4 +1,4 @@
-package main
+package tree
 
 import (
 	"fmt"
@@ -1052,3 +1052,8 @@ func constructFromPrePost(pre []int, post []int) *TreeNode {
 //	post_cnt++
 //	return node
 //}
+
+//95
+func generateTrees(n int) []*TreeNode {
+	return nil
+}

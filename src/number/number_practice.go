@@ -1,4 +1,4 @@
-package main
+package number
 
 import (
 	"bytes"
@@ -9,6 +9,33 @@ import (
 	"strings"
 )
 
+func max_int(a,b int)int{
+	if a > b {
+		return a
+	}else{
+		return b
+	}
+}
+
+func min_int_number(nums ...int)int{
+	var min int = math.MaxInt32
+	for _,n := range nums{
+		if n < min{
+			min = n
+		}
+	}
+	return min
+}
+
+func max_int_number(nums ...int)int{
+	var max int = math.MinInt32
+	for _,n := range nums{
+		if n > max{
+			max = n
+		}
+	}
+	return max
+}
 //Input: [5,7]
 //Output: 4
 func rangeBitwiseAnd(m int, n int) int {
@@ -1631,4 +1658,80 @@ func maxSubarraySumCircular(A []int) int {
 		return max_int(max, sum - min)
 	}
 	return max
+}
+
+//1332
+//Input: s = "baabb"
+//Output: 2
+//Explanation: "baabb" -> "b" -> "".
+//Remove palindromic subsequence "baab" then "b".
+func is_palindromic(s string)bool{
+	l := len(s)
+	begin := 0
+	end := l - 1
+	for begin < end{
+		if s[begin] != s[end]{
+			return false;
+		}
+	}
+	return true
+}
+func removePalindromeSub(s string) int {
+	if len(s) == 0{
+		return 0
+	}
+	if is_palindromic(s){
+		return 1
+	}
+	return 2
+}
+
+//6 ZigZag Conversion
+//Input: s = "PAYPALISHIRING", numRows = 4
+//Output: "PINALSIGYAHRPI"
+//Explanation:
+//
+//P     I    N
+//A   L S  I G
+//Y A   H R
+//P     I
+func convert(s string, numRows int) string {
+	l := len(s)
+	if numRows <= 1{
+		return s
+	}
+	var arr [][]uint8 = make([][]uint8,numRows)
+	for i := 0;i < numRows;i++{
+		arr[i] = make([]uint8,l)
+	}
+	i := 0
+	col := 0
+	for i < l{
+		for row := 0;row < numRows;row++{
+			arr[row][col] = s[i]
+			i++
+			if i >= l{
+				goto out
+			}
+		}
+		col++
+		for row := numRows - 2;row > 0;row--{
+			arr[row][col] = s[i]
+			col++
+			i++
+			if i >= l{
+				goto out
+			}
+		}
+	}
+out:
+	var res string
+	for r := 0;r < numRows;r++ {
+		for c := 0; c < l; c++ {
+			if arr[r][c] != 0 {
+				res += string(arr[r][c])
+			}
+		}
+	}
+	return res
 }

@@ -1,4 +1,4 @@
-package main
+package diagram
 
 import (
 	"math"
@@ -689,3 +689,4 @@ func minFlips(mat [][]int) int {
 	//}
 	return 0
 }
+

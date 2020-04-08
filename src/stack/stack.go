@@ -1,4 +1,4 @@
-package main
+package stack
 import "container/list"
 
 type Stack struct {
