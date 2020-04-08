@@ -1,9 +1,9 @@
 Leetcode solution in Golang
 
-[Array](https://github.com/genius52/leetcode/blob/master/src/array_practice.go)
+[Array](https://github.com/genius52/leetcode/tree/master/src/array)
 
-[Number](https://github.com/genius52/leetcode/blob/master/src/number_practice.go)
+[Number](https://github.com/genius52/leetcode/tree/master/src/number)
 
-[Tree](https://github.com/genius52/leetcode/blob/master/src/tree_practice.go)
+[Tree](https://github.com/genius52/leetcode/tree/master/src/tree)
 
-[Diagram](https://github.com/genius52/leetcode/blob/master/src/diagram_practice.go)
+[Diagram](https://github.com/genius52/leetcode/tree/master/src/diagram)
