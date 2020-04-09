@@ -2,10 +2,16 @@ package main
 
 import (
 	"../number"
+	"../tree"
 	"fmt"
 )
 
 func main(){
+	{
+		input := 10
+		res := tree.GenerateTrees(input)
+		fmt.Println(res)
+	}
 	{
 		input := []int{2,5,7,9}
 		target := 16

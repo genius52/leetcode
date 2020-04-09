@@ -24,6 +24,23 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+func max_int(a,b int)int{
+	if a > b {
+		return a
+	}else{
+		return b
+	}
+}
+func max_int_number(nums ...int)int{
+	var max int = math.MinInt32
+	for _,n := range nums{
+		if n > max{
+			max = n
+		}
+	}
+	return max
+}
+
 var prev *tree_node = nil
 
 func inorder_visit2(root *TreeNode){
@@ -1052,8 +1069,3 @@ func constructFromPrePost(pre []int, post []int) *TreeNode {
 //	post_cnt++
 //	return node
 //}
-
-//95
-func generateTrees(n int) []*TreeNode {
-	return nil
-}
