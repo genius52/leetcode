@@ -9,6 +9,15 @@ import (
 
 func main(){
 	{
+		input := []int{2,4,7,8,9,10,14,15,18,23,32,50}
+		res := number.LenLongestFibSubseq(input)
+		fmt.Println(res)
+	}
+	{
+		res := number.NumOfWays(5000)
+		fmt.Println(res)
+	}
+	{
 		var t1 tree.TreeNode
 		t1.Val = 1
 		var t2 tree.TreeNode
