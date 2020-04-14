@@ -10,7 +10,8 @@ import (
 func main(){
 	{
 		input := []int{2,4,7,8,9,10,14,15,18,23,32,50}
-		res := number.LenLongestFibSubseq(input)
+		//res := number.LenLongestFibSubseq(input)
+		res := number.LenLongestFibSubseq2(input)
 		fmt.Println(res)
 	}
 	{
