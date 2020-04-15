@@ -10,6 +10,12 @@ import (
 
 func main(){
 	{
+		input := [][]int{{2},{3,4},{6,5,7},{4,1,8,3}}
+		//res := number.MinimumTotal(input)
+		res := number.MinimumTotal2(input)
+		fmt.Println(res)
+	}
+	{
 		var t1 tree.TreeNode
 		t1.Val = 1
 		var t2 tree.TreeNode

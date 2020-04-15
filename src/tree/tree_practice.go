@@ -42,6 +42,16 @@ func max_int_number(nums ...int)int{
 	return max
 }
 
+func min_int_number(nums ...int)int{
+	var min int = math.MaxInt32
+	for _,n := range nums{
+		if n < min{
+			min = n
+		}
+	}
+	return min
+}
+
 var prev *tree_node = nil
 
 func inorder_visit2(root *TreeNode){
