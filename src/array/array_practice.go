@@ -11,6 +11,11 @@ import (
 	"strings"
 )
 
+//Definition for singly-linked list.
+type ListNode struct {
+	Val int
+	Next *ListNode
+}
 
 //func remove_duplicated_sorted_array(arr []int)  []int{
 //	result := make([]int,0)
@@ -934,16 +939,6 @@ func oddCells(n int, m int, indices [][]int) int {
 	return res
 }
 
-//951
-func flipEquiv(root1 *TreeNode, root2 *TreeNode) bool {
-	if nil == root1 && nil == root2{
-		return true
-	}
-	if (nil == root1 || nil == root2) || (root1.Val != root2.Val){
-		return false
-	}
-	return (flipEquiv(root1.Left,root2.Left) && flipEquiv(root1.Right,root2.Right)) || (flipEquiv(root1.Left,root2.Right) && flipEquiv(root1.Right,root2.Left))
-}
 
 //1078
 func findOcurrences(text string, first string, second string) []string {
@@ -1263,26 +1258,6 @@ func kClosest2(points [][]int, K int) [][]int{
 	return points[0:K]
 }
 
-//1026
-func pre_visit(node *TreeNode,min int,max int,max_diff int)int{
-	if nil == node{
-		return 0
-	}
-	diff := int(math.Max(math.Abs(float64(node.Val - min)),math.Abs(float64(node.Val - max))))
-	max_diff = int(math.Max(float64(max_diff),float64(diff)))
-	min = int(math.Min(float64(node.Val),float64(min)))
-	max = int(math.Max(float64(node.Val),float64(max)))
-	res := int(math.Max(float64(pre_visit(node.Left,min,max,max_diff)),float64(pre_visit(node.Right,min,max,max_diff))))
-	res = int(math.Max(float64(res),float64(max_diff)))
-	return res
-}
-
-func maxAncestorDiff(root *TreeNode) int {
-	if nil == root{
-		return 0
-	}
-	return pre_visit(root,root.Val,root.Val,0)
-}
 
 //1277
 // Input: matrix =
@@ -1495,31 +1470,6 @@ func maxEqualRowsAfterFlips(matrix [][]int) int {
 	return res
 }
 
-//515
-func preorder_search_max(node *TreeNode,record *[]int,level int){
-	if nil == node{
-		return
-	}
-	if level == len(*record){
-		*record = append(*record, node.Val)
-	}else{
-		if node.Val > (*record)[level]{
-			(*record)[level] = node.Val
-		}
-	}
-	preorder_search_max(node.Left,record,level + 1)
-	preorder_search_max(node.Right,record,level + 1)
-}
-
-func largestValues(root *TreeNode) []int {
-	var res []int
-	if nil == root{
-		return res
-	}
-	preorder_search_max(root,&res,0)
-	return res
-}
-
 //1249
 // "())()((("
 func reverse(s string) string {
@@ -1683,64 +1633,7 @@ func numberOfArithmeticSlices(A []int) int {
 	return res
 }
 
-//1190
-func reverseParentheses(s string) string {
-	stack := NewStack()
-	for i := 0;i < len(s);i++{
-		if s[i] == ')'{
-			var sub string = ""
-			for !stack.Empty(){
-				v := stack.Pop().(byte)
-				if v != '('{
-					sub += string(v)
-				}else{
-					for j := 0;j < len(sub);j++{
-						stack.Push(sub[j])
-					}
-					break
-				}
-			}
-		}else{
-			stack.Push(s[i])
-		}
-	}
-	var res string
-	for !stack.Empty(){
-		res += string(stack.Pop().(byte))
-	}
-	return reverse(res)
-}
 
-//865
-func level_visit_865(node *TreeNode,level int)(max_depth int,res *TreeNode){
-	if nil == node{
-		return level,node
-	}
-	level++
-	left_max_depth,leftnode := level_visit_865(node.Left,level)
-	right_max_depth,rightnode := level_visit_865(node.Right,level)
-	if left_max_depth > right_max_depth {
-		if left_max_depth >level {
-			return left_max_depth,leftnode
-		}
-		return level,node
-	}else if left_max_depth < right_max_depth{
-		if right_max_depth > level{
-			return right_max_depth,rightnode
-		}
-		return level,node
-	}else{
-		return left_max_depth,node
-	}
-}
-
-func subtreeWithAllDeepest(root *TreeNode) *TreeNode {
-	if nil == root{
-		return root
-	}
-	_,res :=  level_visit_865(root,0)
-	return res
-}
 
 //1281
 func subtractProductAndSum(n int) int {
@@ -3385,6 +3278,14 @@ func decodeString2(s string) string {
 //Input: [-2,0,-1]
 //Output: 0
 //[2,3,-2,4,-2,4,6,-9,3]
+func min_int(a,b int)int{
+	if a < b {
+		return a
+	}else{
+		return b
+	}
+}
+
 func dp_maxProduct(nums []int,begin int,memo map[int][]int)(min int,max int){
 	if begin < 0{
 		return 1,1

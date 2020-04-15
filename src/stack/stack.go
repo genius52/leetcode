@@ -39,3 +39,42 @@ func (stack *Stack) Len() int {
 func (stack *Stack) Empty() bool {
 	return stack.list.Len() == 0
 }
+
+
+//1190
+func reverse(s string) string {
+	s1 := []rune(s)
+	for i := 0; i < len(s1)/2; i++ {
+		tmp := s1[i]
+		s1[i] = s1[len(s1)-1-i]
+		s1[len(s1)-1-i] = tmp
+	}
+	return string(s1)
+}
+
+func reverseParentheses(s string) string {
+	stack := NewStack()
+	for i := 0;i < len(s);i++{
+		if s[i] == ')'{
+			var sub string = ""
+			for !stack.Empty(){
+				v := stack.Pop().(byte)
+				if v != '('{
+					sub += string(v)
+				}else{
+					for j := 0;j < len(sub);j++{
+						stack.Push(sub[j])
+					}
+					break
+				}
+			}
+		}else{
+			stack.Push(s[i])
+		}
+	}
+	var res string
+	for !stack.Empty(){
+		res += string(stack.Pop().(byte))
+	}
+	return reverse(res)
+}

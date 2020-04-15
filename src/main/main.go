@@ -1,6 +1,7 @@
 package main
 
 import (
+	"../array"
 	"../number"
 	"../string"
 	"../tree"
@@ -8,6 +9,33 @@ import (
 )
 
 func main(){
+	{
+		var t1 tree.TreeNode
+		t1.Val = 1
+		var t2 tree.TreeNode
+		t2.Val = 2
+		var t3 tree.TreeNode
+		t3.Val = 3
+		var t4 tree.TreeNode
+		t4.Val = 4
+		var t5 tree.TreeNode
+		t5.Val = 5
+		t1.Left = &t2
+		t1.Right = &t3
+		t2.Left = &t4
+		t2.Right = &t5
+		tree.Inorder_visit_norecursive(&t1)
+		//tree.Preorder_visit_norecursive(&t1)
+	}
+	{
+		res := number.AngleClock(4,50)
+		fmt.Println(res)
+	}
+	{
+		input := [][]int{{1,6},{4,6},{4,8}}
+		res := array.RemoveCoveredIntervals(input)
+		fmt.Println(res)
+	}
 	{
 		input := []int{2,4,7,8,9,10,14,15,18,23,32,50}
 		//res := number.LenLongestFibSubseq(input)

@@ -1,6 +1,7 @@
 package tree
 
 import (
+	"container/list"
 	"fmt"
 	"math"
 	"strconv"
@@ -1069,3 +1070,133 @@ func constructFromPrePost(pre []int, post []int) *TreeNode {
 //	post_cnt++
 //	return node
 //}
+
+
+//1026
+func pre_visit(node *TreeNode,min int,max int,max_diff int)int{
+	if nil == node{
+		return 0
+	}
+	diff := int(math.Max(math.Abs(float64(node.Val - min)),math.Abs(float64(node.Val - max))))
+	max_diff = int(math.Max(float64(max_diff),float64(diff)))
+	min = int(math.Min(float64(node.Val),float64(min)))
+	max = int(math.Max(float64(node.Val),float64(max)))
+	res := int(math.Max(float64(pre_visit(node.Left,min,max,max_diff)),float64(pre_visit(node.Right,min,max,max_diff))))
+	res = int(math.Max(float64(res),float64(max_diff)))
+	return res
+}
+
+func maxAncestorDiff(root *TreeNode) int {
+	if nil == root{
+		return 0
+	}
+	return pre_visit(root,root.Val,root.Val,0)
+}
+
+
+//865
+func level_visit_865(node *TreeNode,level int)(max_depth int,res *TreeNode){
+	if nil == node{
+		return level,node
+	}
+	level++
+	left_max_depth,leftnode := level_visit_865(node.Left,level)
+	right_max_depth,rightnode := level_visit_865(node.Right,level)
+	if left_max_depth > right_max_depth {
+		if left_max_depth >level {
+			return left_max_depth,leftnode
+		}
+		return level,node
+	}else if left_max_depth < right_max_depth{
+		if right_max_depth > level{
+			return right_max_depth,rightnode
+		}
+		return level,node
+	}else{
+		return left_max_depth,node
+	}
+}
+
+func subtreeWithAllDeepest(root *TreeNode) *TreeNode {
+	if nil == root{
+		return root
+	}
+	_,res :=  level_visit_865(root,0)
+	return res
+}
+
+//951
+func flipEquiv(root1 *TreeNode, root2 *TreeNode) bool {
+	if nil == root1 && nil == root2{
+		return true
+	}
+	if (nil == root1 || nil == root2) || (root1.Val != root2.Val){
+		return false
+	}
+	return (flipEquiv(root1.Left,root2.Left) && flipEquiv(root1.Right,root2.Right)) || (flipEquiv(root1.Left,root2.Right) && flipEquiv(root1.Right,root2.Left))
+}
+
+
+//515
+func preorder_search_max(node *TreeNode,record *[]int,level int){
+	if nil == node{
+		return
+	}
+	if level == len(*record){
+		*record = append(*record, node.Val)
+	}else{
+		if node.Val > (*record)[level]{
+			(*record)[level] = node.Val
+		}
+	}
+	preorder_search_max(node.Left,record,level + 1)
+	preorder_search_max(node.Right,record,level + 1)
+}
+
+func largestValues(root *TreeNode) []int {
+	var res []int
+	if nil == root{
+		return res
+	}
+	preorder_search_max(root,&res,0)
+	return res
+}
+
+//no recursive pre_visit
+func Preorder_visit_norecursive(root *TreeNode){
+	var q list.List
+	q.PushBack(root)
+	for q.Len() > 0{
+		top := q.Back()
+		node := top.Value.(*TreeNode)
+		fmt.Println(node.Val)
+		q.Remove(top)
+		if node.Right != nil{
+			q.PushBack(node.Right)
+		}
+		if node.Left != nil{
+			q.PushBack(node.Left)
+		}
+	}
+}
+
+//no recursive inorder visit
+func Inorder_visit_norecursive(root *TreeNode){
+	var q list.List
+	q.PushBack(root)
+	for q.Len() > 0{
+		for root.Left != nil{
+			q.PushBack(root.Left)
+			root = root.Left
+		}
+		if q.Len() > 0{
+			top := q.Back()
+			node := top.Value.(*TreeNode)
+			fmt.Println(node.Val)
+			q.Remove(top)
+			if node.Right != nil{
+				q.PushBack(node.Right)
+			}
+		}
+	}
+}
