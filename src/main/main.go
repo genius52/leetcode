@@ -2,6 +2,7 @@ package main
 
 import (
 	"../array"
+	"../list"
 	"../number"
 	"../string"
 	"../tree"
@@ -9,6 +10,24 @@ import (
 )
 
 func main(){
+	{
+		var list1 list.ListNode
+		list1.Val = 1
+		var list2 list.ListNode
+		list2.Val = 2
+		var list3 list.ListNode
+		list3.Val = 3
+		var list4 list.ListNode
+		list4.Val = 4
+		var list5 list.ListNode
+		list5.Val = 5
+		//list1.Next = &list2
+		//list2.Next = &list3
+		//list3.Next = &list4
+		//list4.Next = &list5
+		list.ReorderList(&list1)
+		fmt.Println(list1.Val)
+	}
 	{
 		input := [][]int{{2},{3,4},{6,5,7},{4,1,8,3}}
 		//res := number.MinimumTotal(input)
