@@ -11,6 +11,11 @@ import (
 
 func main(){
 	{
+		input := []int{0,1,0,1,0,1,99}
+		res := number.SingleNumber(input)
+		fmt.Println(res)
+	}
+	{
 		var list1 list.ListNode
 		list1.Val = 1
 		var list2 list.ListNode
