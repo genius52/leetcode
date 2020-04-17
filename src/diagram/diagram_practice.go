@@ -5,7 +5,15 @@ import (
 	"strconv"
 	"strings"
 )
-
+func min_int_number(nums ...int)int{
+	var min int = math.MaxInt32
+	for _,n := range nums{
+		if n < min{
+			min = n
+		}
+	}
+	return min
+}
 //207
 func dfs_canFinish(relation [][]int,cur_course int,total_course_num int,depth int)bool{
 	if depth >= total_course_num{

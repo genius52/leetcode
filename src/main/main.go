@@ -2,6 +2,7 @@ package main
 
 import (
 	"../array"
+	"../diagram"
 	"../list"
 	"../number"
 	"../string"
@@ -10,6 +11,23 @@ import (
 )
 
 func main(){
+	{
+		//[[2,4],[1,3],[2,4],[1,3]]
+		var node1 diagram.Node
+		node1.Val = 1
+		var node2 diagram.Node
+		node2.Val = 2
+		var node3 diagram.Node
+		node3.Val = 3
+		var node4 diagram.Node
+		node4.Val = 4
+		node1.Neighbors = append(node1.Neighbors,&node2,&node4)
+		node2.Neighbors = append(node1.Neighbors,&node1,&node3)
+		node3.Neighbors = append(node2.Neighbors,&node2,&node4)
+		node4.Neighbors = append(node2.Neighbors,&node1,&node3)
+		res := diagram.CloneGraph(&node1)
+		fmt.Println(res.Val)
+	}
 	{
 		//-1->5->3->4->0
 		var l1 list.ListNode
