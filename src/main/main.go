@@ -11,6 +11,25 @@ import (
 
 func main(){
 	{
+		//-1->5->3->4->0
+		var l1 list.ListNode
+		l1.Val = 4
+		var l2 list.ListNode
+		l2.Val = 2
+		var l3 list.ListNode
+		l3.Val = 1
+		var l4 list.ListNode
+		l4.Val = 3
+		var l5 list.ListNode
+		l5.Val = 0
+		l1.Next = &l2
+		l2.Next = &l3
+		l3.Next = &l4
+		//l4.Next = &l5
+		res := list.InsertionSortList(&l1)
+		fmt.Println(res.Val)
+	}
+	{
 		input := []int{0,1,0,1,0,1,99}
 		res := number.SingleNumber(input)
 		fmt.Println(res)
