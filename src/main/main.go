@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		input := "  hello   world!  "
+		res := string.ReverseWords(input)
+		fmt.Println(res)
+	}
+	{
 		//[[2,4],[1,3],[2,4],[1,3]]
 		var node1 diagram.Node
 		node1.Val = 1
