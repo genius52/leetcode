@@ -36,13 +36,6 @@ func max_int_number(nums ...int)int{
 	}
 	return max
 }
-//Input: [5,7]
-//Output: 4
-func rangeBitwiseAnd(m int, n int) int {
-	var res int
-
-	return res
-}
 
 func toHex(num int) string {
 	//var m []string = make([]string,16,0)

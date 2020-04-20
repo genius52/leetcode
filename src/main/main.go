@@ -12,6 +12,12 @@ import (
 
 func main(){
 	{
+		nums := []int{1,2,3,4,5}
+		s := 11
+		res := array.MinSubArrayLen2(s,nums)
+		fmt.Println(res)
+	}
+	{
 		input := "  hello   world!  "
 		res := string.ReverseWords(input)
 		fmt.Println(res)
