@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"math"
 	"strconv"
-	"strings"
 )
 
 type ListNode struct {
@@ -704,54 +703,6 @@ func pre_faltten(node *TreeNode)*TreeNode{
 
 func flatten(root *TreeNode)  {
 	pre_faltten(root)
-}
-
-//208
-
-
-/**
- * Your Trie object will be instantiated and called as such:
- * obj := Constructor();
- * obj.Insert(word);
- * param_2 := obj.Search(word);
- * param_3 := obj.StartsWith(prefix);
- */
-type Trie struct {
-	data map[string]bool
-}
-
-
-/** Initialize your data structure here. */
-func Constructor4() Trie {
-	var obj Trie
-	obj.data = make(map[string]bool)
-	return obj
-}
-
-
-/** Inserts a word into the trie. */
-func (this *Trie) Insert(word string)  {
-	this.data[word] = true
-}
-
-
-/** Returns if the word is in the trie. */
-func (this *Trie) Search(word string) bool {
-	if _,ok := this.data[word];ok{
-		return true
-	}
-	return false
-}
-
-
-/** Returns if there is any word in the trie that starts with the given prefix. */
-func (this *Trie) StartsWith(prefix string) bool {
-	for word,_ := range this.data{
-		if strings.HasPrefix(word,prefix){
-			return true
-		}
-	}
-	return false
 }
 
 //1361

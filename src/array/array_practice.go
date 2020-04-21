@@ -4150,3 +4150,54 @@ func numOfSubarrays(arr []int, k int, threshold int) int {
 	}
 	return res
 }
+
+type Boundary struct {
+	low int
+	high int
+}
+
+func Norecursive_qsort(data []int){
+	length := len(data)
+	if length == 0{
+		return
+	}
+	var s list.List
+	var b Boundary
+	b.low = 0
+	b.high = length - 1
+	s.PushBack(b)
+	for s.Len() > 0{
+		top := s.Back()
+		s.Remove(top)
+		l := top.Value.(Boundary).low
+		h := top.Value.(Boundary).high
+		tag := data[l]
+		for l < h{
+			for l < h && data[h] > tag {
+				h--
+			}
+			if l < h{
+				data[l] = data[h]
+			}
+			for l < h && data[l] < tag{
+				l++
+			}
+			if l < h{
+				data[h] = data[l]
+			}
+		}
+		data[l] = tag
+		if l - 1 > top.Value.(Boundary).low{
+			var b Boundary
+			b.low = top.Value.(Boundary).low
+			b.high = l - 1
+			s.PushBack(b)
+		}
+		if h + 1 < top.Value.(Boundary).high{
+			var b Boundary
+			b.low = h + 1
+			b.high = top.Value.(Boundary).high
+			s.PushBack(b)
+		}
+	}
+}

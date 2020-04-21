@@ -12,6 +12,31 @@ import (
 
 func main(){
 	{
+		var obj tree.Trie  = tree.Constructor208()
+
+		obj.Insert("apple");
+		res := obj.Search("apple");   // returns true
+		res = obj.Search("app");     // returns false
+		res = obj.StartsWith("app"); // returns true
+		obj.Insert("app");
+		res = obj.Search("app");     // returns true
+		fmt.Println(res)
+	}
+	{
+		obj := diagram.Constructor();
+		obj.AddWord("and")
+		obj.AddWord("abd")
+		obj.AddWord("ab")
+		res := obj.Search(".and")
+		res = obj.Search(".bcd")
+		fmt.Println(res)
+	}
+	{
+		input := []int{9,8,7,4,3,2,1,6}
+		array.Norecursive_qsort(input)
+		fmt.Println(input)
+	}
+	{
 		nums := []int{1,2,3,4,5}
 		s := 11
 		res := array.MinSubArrayLen2(s,nums)
