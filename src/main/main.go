@@ -12,6 +12,20 @@ import (
 
 func main(){
 	{
+		//8
+		//50
+		//23
+		//5
+		//26
+		m := 8
+		n := 50
+		N := 23
+		i := 5
+		j := 26
+		res := diagram.FindPaths(m, n, N, i, j)
+		fmt.Println(res)
+	}
+	{
 		k := 3
 		n := 9
 		res := number.CombinationSum3(k,n)
