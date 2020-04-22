@@ -47,3 +47,26 @@ func Rob(nums []int) int {
 	return max_int(nums[0] + dp_rob(nums,l,2,true,record_selectfirst,record_notselectfirst),
 		dp_rob(nums,l,1,false,record_selectfirst,record_notselectfirst))
 }
+
+//dp no recursive
+func dp_rob2(nums []int,low int,high int)int{
+	var rob_last_last int = 0
+	var rob_last int = nums[low]
+	for i := low + 1;i <= high;i++{
+		tmp := max_int(rob_last_last + nums[i],rob_last)
+		rob_last_last = rob_last
+		rob_last = tmp
+	}
+	return rob_last
+}
+
+func rob2(nums []int) int {
+	l := len(nums)
+	if l == 0{
+		return 0
+	}
+	if l == 1{
+		return nums[0]
+	}
+	return max_int(dp_rob2(nums,0,l - 2),dp_rob2(nums,1,l - 1))
+}
