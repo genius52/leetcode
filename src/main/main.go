@@ -12,6 +12,13 @@ import (
 
 func main(){
 	{
+		input := []int{2,2}
+		k := 3
+		t := 0
+		res := array.ContainsNearbyAlmostDuplicate(input,k,t)
+		fmt.Println(res)
+	}
+	{
 		k := 22
 		res := number.FindMinFibonacciNumbers(k)
 		fmt.Println(res)
