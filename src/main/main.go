@@ -12,6 +12,16 @@ import (
 
 func main(){
 	{
+		input := []int{3,2,3}
+		res := number.MajorityElement(input)
+		fmt.Println(res)
+	}
+	{
+		input := []int{0,2,3,4,6,8,9}
+		res := array.SummaryRanges(input)
+		fmt.Println(res)
+	}
+	{
 		input := []int{2,2}
 		k := 3
 		t := 0
