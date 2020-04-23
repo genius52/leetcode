@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		k := 22
+		res := number.FindMinFibonacciNumbers(k)
+		fmt.Println(res)
+	}
+	{
 		//["MyCircularQueue","enQueue","Rear","Rear","deQueue","enQueue","Rear",
 		var obj list.MyCircularQueue = list.Constructor(8)
 
