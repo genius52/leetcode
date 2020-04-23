@@ -12,11 +12,20 @@ import (
 
 func main(){
 	{
-		//8
-		//50
-		//23
-		//5
-		//26
+		//["MyCircularQueue","enQueue","Rear","Rear","deQueue","enQueue","Rear",
+		var obj list.MyCircularQueue = list.Constructor(8)
+
+		res := obj.EnQueue(3)
+		res = obj.EnQueue(9)
+		res = obj.EnQueue(5)
+		res = obj.EnQueue(0)
+		res = obj.DeQueue()
+		res = obj.DeQueue()
+		res = obj.IsEmpty()
+		res = obj.IsEmpty()
+		fmt.Println(res)
+	}
+	{
 		m := 8
 		n := 50
 		N := 23
