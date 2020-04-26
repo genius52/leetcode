@@ -8,6 +8,8 @@
 #include "other.h"
 #include "mystring.h"
 #include "tree.h"
+#include "./number/229. Majority Element II.hpp"
+#include "./number/220. Contains Duplicate III.hpp"
 #define x 9999
 #define max 9999
 int data[10][10];
@@ -16,25 +18,20 @@ int path[10];//记录最短路径
 void fpath(int a[][10]);
 int froute(int a[][10]);
 int getlastlength(std::string& s);
-
-std::vector<std::string> format_string(std::vector<std::string> v){
-    std::vector<std::string> res;
-    for(auto i = 0;i < v.size();i++){
-        auto s1 = v[i];
-        while (s1.length() > 8){
-            res.push_back(s1.substr(0,8));
-            s1 = s1.substr(8,s1.length() - 8);
-        }
-        s1.append(8 - s1.length(),'0');
-        res.push_back(s1);
-    }
-    return res;
-}
-
+std::vector<std::string> format_string(std::vector<std::string> v);
 std::mutex mtx;
 std::condition_variable gcv;
 bool g_ready = false;
+
 int main() {
+    {
+        Solution_220 s220;
+        std::vector<int> v{1,1,1,3,3,2,2,2};
+        int k = 3;
+        int t = 0;
+        auto res = s220.containsNearbyAlmostDuplicate(v,k,t);
+        std::cout<<res<<std::endl;
+    }
     {
         Solution_241 s241;
         std::string input = "2-1-1";
@@ -396,6 +393,19 @@ int getlastlength(std::string& s){
     return res;
 }
 
+std::vector<std::string> format_string(std::vector<std::string> v){
+    std::vector<std::string> res;
+    for(auto i = 0;i < v.size();i++){
+        auto s1 = v[i];
+        while (s1.length() > 8){
+            res.push_back(s1.substr(0,8));
+            s1 = s1.substr(8,s1.length() - 8);
+        }
+        s1.append(8 - s1.length(),'0');
+        res.push_back(s1);
+    }
+    return res;
+}
 //int getlastlength(std::string s){
 //    auto l = s.length();
 //    int res = 0;

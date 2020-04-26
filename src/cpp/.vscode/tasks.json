@@ -13,7 +13,8 @@
           "-g",
           "${workspaceFolder}/*.cpp",
           "-o",
-          "${fileDirname}/${fileBasenameNoExtension}"
+          "${workspaceFolder}/main",
+	        "--debug"
         ],
         "options": {
           "cwd": "${workspaceFolder}"
