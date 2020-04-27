@@ -12,6 +12,10 @@ import (
 
 func main(){
 	{
+		res := number.NthUglyNumber(1)
+		fmt.Print(res)
+	}
+	{
 		input := []int{0,0,0,0}
 		target := 0
 		res := number.FourSum(input,target)
@@ -111,7 +115,7 @@ func main(){
 	}
 	{
 		input := []int{9,8,7,4,3,2,1,6}
-		array.Norecursive_qsort(input)
+		array.Recursive_qsort(input,0,len(input) - 1)
 		fmt.Println(input)
 	}
 	{

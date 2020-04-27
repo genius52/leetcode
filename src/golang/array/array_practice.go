@@ -4151,6 +4151,34 @@ func numOfSubarrays(arr []int, k int, threshold int) int {
 	return res
 }
 
+func Recursive_qsort(data []int,low int,high int){
+	if low > high{
+		return
+	}
+	l := low
+	h := high
+	tag := data[l]
+	for l < h {
+		for l < h && data[h] > tag {
+			h--
+		}
+		if l < h {
+			data[l] = data[h]
+			l++
+		}
+		for l < h && data[l] < tag{
+			l++
+		}
+		if l < h{
+			data[h] = data[l]
+			h--
+		}
+	}
+	data[l] = tag
+	Recursive_qsort(data,low,l - 1)
+	Recursive_qsort(data,l + 1,high)
+}
+
 type Boundary struct {
 	low int
 	high int
@@ -4178,12 +4206,14 @@ func Norecursive_qsort(data []int){
 			}
 			if l < h{
 				data[l] = data[h]
+				l++
 			}
 			for l < h && data[l] < tag{
 				l++
 			}
 			if l < h{
 				data[h] = data[l]
+				h--
 			}
 		}
 		data[l] = tag
