@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		input := "0235813"
+		res := number.IsAdditiveNumber(input)
+		fmt.Println(res)
+	}
+	{
 		input := [][]int{{3,0,1,4,2},{5,6,3,2,1},{1,2,0,1,5},{4,1,0,1,7},{1,0,3,0,5}}
 		obj := array.Constructor304(input)
 		res := obj.SumRegion(2,1,4,3)
