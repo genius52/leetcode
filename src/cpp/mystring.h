@@ -2,6 +2,7 @@
 #include <map>
 #include <stack>
 #include <deque>
+#include <vector>
 using namespace std;
 
 int numTilePossibilities(std::string tiles);
