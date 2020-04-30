@@ -12,6 +12,12 @@ import (
 
 func main(){
 	{
+		n := 12
+		primes := []int{2,7,13,19}
+		res := number.NthSuperUglyNumber2(n,primes)
+		fmt.Println(res)
+	}
+	{
 		input := "0235813"
 		res := number.IsAdditiveNumber(input)
 		fmt.Println(res)
