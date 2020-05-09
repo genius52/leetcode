@@ -130,6 +130,9 @@ TreeNode* insertIntoBST(TreeNode* root, int val) {
     return root;
 }
 
+vector<TreeNode*> allPossibleFBT(int N) {
+
+}
 
 TreeNode* Solution_1379::getTargetCopy(TreeNode* original, TreeNode* cloned, TreeNode* target){
     if (original == nullptr || target == nullptr){

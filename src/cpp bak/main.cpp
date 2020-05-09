@@ -319,17 +319,17 @@ int main() {
 
     int start = 0;
     int end = 9;
-    std::cout<<"from "<<start <<" run to" <<end<<" the shortest distance is "<< my_short_distance(a,start,end)<<std::endl;
+    std::cout<<"从 "<<start <<" 出发至" <<end<<"的最短距离为 "<< my_short_distance(a,start,end)<<std::endl;
 
     fpath(a);
     for (int j = 0; j < 10; ++j) {
-        printf("%d shortest distance is:  %d\n",j,dist[j]);
+        printf("%d 最短路径大小为:  %d\n",j,dist[j]);
     }
 
 
     m=froute(a);
     for(i=m-1;i>=0;i--)
-        printf("pass from: %d\n",path[i]);
+        printf("最短路径经过: %d\n",path[i]);
     return 0;
 }
 
