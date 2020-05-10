@@ -38,23 +38,23 @@ int main() {
         auto res = s241.diffWaysToCompute(input);
         std::cout<<res.size()<<std::endl;
     }
-    {
-        std::thread([](){
-            std::unique_lock <std::mutex> lck(mtx);
-            gcv.wait(lck);
-            std::cout<< "999"<<std::endl;
-            //g_ready = true;
-        }).detach();
-
-        std::this_thread::sleep_for(std::chrono::seconds(3));
-        gcv.notify_all();
-
-        std::thread([](){
-            std::unique_lock <std::mutex> lck(mtx);
-            gcv.wait(lck,[]() {return g_ready; });
-            std::cout<< "888"<<std::endl;
-        }).detach();
-    }
+//    {
+//        std::thread([](){
+//            std::unique_lock <std::mutex> lck(mtx);
+//            gcv.wait(lck);
+//            std::cout<< "999"<<std::endl;
+//            //g_ready = true;
+//        }).detach();
+//
+//        std::this_thread::sleep_for(std::chrono::seconds(3));
+//        gcv.notify_all();
+//
+//        std::thread([](){
+//            std::unique_lock <std::mutex> lck(mtx);
+//            gcv.wait(lck,[]() {return g_ready; });
+//            std::cout<< "888"<<std::endl;
+//        }).detach();
+//    }
     {
         Solution_324 s324;
         std::vector<int> v{1, 3, 2, 2, 3, 1};
@@ -67,6 +67,7 @@ int main() {
         auto res = s84.largestRectangleArea(v);
         std::cout<<res<<std::endl;
     }
+
     {
         Solution_612 s612;
         std::vector<char> v{'A','A','A','B','C','D','E','F','G'};
@@ -74,51 +75,22 @@ int main() {
         auto res = s612.leastInterval(v,n);
         std::cout<<res<<std::endl;
     }
-    {
-        int i = 2;
-        std::vector<std::string> input;
-        while(i > 0){
-            std::string s;
-            std::cin>>s;
-            input.push_back(s);
-            i--;
-        }
-        auto res = format_string(input);
-        for (auto s : res){
-            std::cout<< s << std::endl;
-        }
-    }
-    {
-        int* data = new int[1000];
-        int n = 0;
-        while(cin>>n){
-            if (data[n-1] == 0){
 
-                data[n-1] = 1;
-            }
-
-        }
-        for (int i = 0;i < 1000;i++){
-            if (data[i] == 1){
-                std::cout<<i + 1<<std::endl;
-            }
-        }
-    }
-    {
-        std::string s;
-        char c;
-        std::cin>>s;
-        std::cin>>c;
-        int res = 0;
-        transform(s.begin(), s.end(), s.begin(), ::tolower);
-        c = std::tolower(c);
-        for (int i = 0;i < s.length();i++){
-            if (s[i] == c){
-                res++;
-            }
-        }
-        std::cout<<res;
-    }
+//    {
+//        std::string s;
+//        char c;
+//        std::cin>>s;
+//        std::cin>>c;
+//        int res = 0;
+//        transform(s.begin(), s.end(), s.begin(), ::tolower);
+//        c = std::tolower(c);
+//        for (int i = 0;i < s.length();i++){
+//            if (s[i] == c){
+//                res++;
+//            }
+//        }
+//        std::cout<<res;
+//    }
     {
         std::string s = "XSUWHQ";
         auto l = getlastlength(s);
@@ -165,22 +137,22 @@ int main() {
         auto res = s.smallerNumbersThanCurrent(nums);
         std::cout<<res[0]<<std::endl;
     }
-    {
-        std::vector<int> nums{1,2,3};
-        using namespace s384;
-        s384::Solution s(nums);
-        for (int i = 0;i<200;i++){
-            auto res = s.shuffle();
-            //s.reset();
-            res = s.shuffle();
-            for (auto i : res){
-                std::cout<<i;
-            }
-            std::cout<<std::endl;
-            //s.reset();
-        }
-        s.reset();
-    }
+//    {
+//        std::vector<int> nums{1,2,3};
+//        using namespace s384;
+//        s384::Solution s(nums);
+//        for (int i = 0;i<200;i++){
+//            auto res = s.shuffle();
+//            //s.reset();
+//            res = s.shuffle();
+//            for (auto i : res){
+//                std::cout<<i;
+//            }
+//            std::cout<<std::endl;
+//            //s.reset();
+//        }
+//        s.reset();
+//    }
     {
         Node* n1 = new Node(7);
         Node* n2 = new Node(13);
@@ -202,25 +174,7 @@ int main() {
         auto res = s138->copyRandomList(n1);
         std::cout << res->val << std::endl;
     }
-//    std::vector<int> v = {1,2,3,4,4,4,4,5,5,6,6,7};
-//    std::cout<<remove_duplicate_number(v)<<std::endl;
-//    for (auto n : v)
-//        std::cout<<n<<",";
-    //int *p = nullptr;
-    //*p = 12;
 
-    //std::cout<<fibex(130)<<std::endl;
-    //std::cout<<fibex2(130)<<std::endl;
-
-//    int route[4][4] = {
-//            {0,4,2,0},
-//            {4,0,0,1},
-//            {2,0,0,1},
-//            {0,1,1,0}
-//    };
-//    int start = 0;
-//    int end = 3;
-//    bfs_short_route(route,0,3);
     {
         vector<int> v = {2,7,4,1,8,1};
         std::cout<<lastStoneWeight(v)<<std::endl;
@@ -239,62 +193,45 @@ int main() {
         map.insert(s);
         std::cout<<map.size()<<std::endl;
     }
-    {
-        vector<int> v = {3,2,1,6,0,5};
-        auto res = constructMaximumBinaryTree(v);
-        std::cout<<res->val<<std::endl;
-    }
-
-    {
-        std::vector<int> v{114,117,207,117,235,82,90,67,143,146,53,108,200,91,80,223,58,170,110,236,81,90,222,160,165,195,187,199,114,235,197,187,69,129,64,214,228,78,188,67,205,94,205,169,241,202,144,240};
-//        Solution_array s;
-//        auto ret = s.rob(v);
-//        std::cout<<ret<<std::endl;
-    }
-
-
-    std::vector<int> qv{2,1,2};
-    quick_sort(qv,0,2);
-    std::cout<<hasAlternatingBits(715827882)<<std::endl;
-    ListNode l5(5);
-    ListNode l4(4);
-    l4.next = &l5;
-    ListNode l3(3);
-    l3.next = &l4;
-    ListNode l2(2);
-    l2.next = &l3;
-    ListNode l1(1);
-    l1.next = &l2;
-    auto new_list =  oddEvenList(&l1);
-
-    std::vector<int> nums2{1,2,3};
-    auto ret_subsets = subsets(nums2);
-    std::vector<int> nums{1,2,3};
-    auto ret_permute = permute(nums);
-    std::cout<<backspaceCompare("ad#b","aa#b");
-    std::cout<< repeatedSubstringPattern("abac") <<std::endl;
-    auto cnt = countPrimes(10);
-    auto ret = reverseBits(0b11111111111111111111111111111101);
-    std::cout<<isPalindrome("OP")<<std::endl;
-    std::cout<<addStrings("9","99")<<std::endl;
-    Solution s;
-    std::cout<<s.addBinary("100","110010");
-
-    std::vector<std::string> v;
-    std::cout<<longestCommonPrefix(v)<<std::endl;
-    std::cout<<isPalindrome(10)<<std::endl;
-    std::cout<<reverse_number(1534236469)<<std::endl;
-
-//    my_list* l1 = new my_list();
-//    l1->val = 43;
-//    my_list* l2 = new my_list();
-//    l2->val = 11;
-//    my_list* l3 = new my_list();
-//    l3->val = 9;
-//    l1->next = l2;
-//    l2->next = l3;
-//    l3->next = nullptr;
-//    reverse_print_list_ex(l1);
+//    {
+//        vector<int> v = {3,2,1,6,0,5};
+//        auto res = constructMaximumBinaryTree(v);
+//        std::cout<<res->val<<std::endl;
+//    }
+//
+//    {
+//        std::vector<int> qv{2, 1, 2};
+//        quick_sort(qv, 0, 2);
+//        std::cout << hasAlternatingBits(715827882) << std::endl;
+//        ListNode l5(5);
+//        ListNode l4(4);
+//        l4.next = &l5;
+//        ListNode l3(3);
+//        l3.next = &l4;
+//        ListNode l2(2);
+//        l2.next = &l3;
+//        ListNode l1(1);
+//        l1.next = &l2;
+//        auto new_list = oddEvenList(&l1);
+//
+//        std::vector<int> nums2{1, 2, 3};
+//        auto ret_subsets = subsets(nums2);
+//        std::vector<int> nums{1, 2, 3};
+//        auto ret_permute = permute(nums);
+//        std::cout << backspaceCompare("ad#b", "aa#b");
+//        std::cout << repeatedSubstringPattern("abac") << std::endl;
+//        auto cnt = countPrimes(10);
+//        auto ret = reverseBits(0b11111111111111111111111111111101);
+//        std::cout << isPalindrome("OP") << std::endl;
+//        std::cout << addStrings("9", "99") << std::endl;
+//        Solution s;
+//        std::cout << s.addBinary("100", "110010");
+//
+//        std::vector<std::string> v;
+//        std::cout << longestCommonPrefix(v) << std::endl;
+//        std::cout << isPalindrome(10) << std::endl;
+//        std::cout << reverse_number(1534236469) << std::endl;
+//    }
 
     int i,m;
     int a[10][10]=
@@ -310,12 +247,7 @@ int main() {
                     {x,x,x,x,x,x,x,x,x,4},
                     {x,x,x,x,x,x,x,x,x,x}
             };
-    /*for (i=0;i<10;i++)
-    {
-    for(j=0;j<10;j++)
-    printf("%d ",a[i][j]);
-    printf("\n");
-    }*/
+
 
     int start = 0;
     int end = 9;
