@@ -10,6 +10,8 @@
 #include "tree.h"
 #include "./number/229. Majority Element II.hpp"
 #include "./number/220. Contains Duplicate III.hpp"
+#include "./number/1441. Build an Array With Stack Operations.hpp"
+#include "./number//1442. Count Triplets That Can Form Two Arrays of Equal XOR.hpp"
 #define x 9999
 #define max 9999
 int data[10][10];
@@ -23,7 +25,91 @@ std::mutex mtx;
 std::condition_variable gcv;
 bool g_ready = false;
 
+//Input: target = [2,3,4], n = 4
+//Output: ["Push", "Pop", "Push", "Push", "Push"]
+
+
+
+class Solution_5406 {
+public:
+    long find_target(int start, int end, int limit, std::map<int, vector<int>> record,std::vector<bool>& visited) {
+        if (start == end) {
+            return 0;
+        }
+        if (visited[start])
+            return 100000;
+        visited[start] = true;
+        long cur_min_steps = 100000;;
+        int subway_len = record[start].size();
+        for (int i = 0; i < subway_len; i++) {
+            int res = 0;
+            int new_start = record[start][i];
+            res = 1 + find_target(new_start, end, limit, record, visited);
+            if (res < cur_min_steps) {
+                cur_min_steps = res;
+            }
+        }
+        visited[start] = false;
+        return cur_min_steps;
+    }
+
+    int minTime(int n, vector<vector<int>>& edges, vector<bool>& hasApple) {
+        std::map<int, vector<int>> record;
+        int len = edges.size();
+        for (int i = 0; i < len; i++) {
+            if (record.find(edges[i][0]) == record.end()) {
+                record[edges[i][0]] = std::vector<int>{ edges[i][1] };
+            }
+            else {
+                record[edges[i][0]].push_back(edges[i][1]);
+            }
+
+            if (record.find(edges[i][1]) == record.end()) {
+                record[edges[i][1]] = std::vector<int>{ edges[i][0] };
+            }
+            else {
+                record[edges[i][1]].push_back(edges[i][0]);
+            }
+        }
+        int apple_len = hasApple.size();
+        int total_steps = 0;
+        int start_index = 0;
+        for (int i = 0; i < apple_len; i++) {
+            if (!hasApple[i])
+                continue;
+            std::vector<bool> visited(n, false);
+            total_steps += find_target(start_index, i, n, record, visited);
+            start_index = i;
+        }
+        std::vector<bool> visited(n, false);
+        total_steps += find_target(start_index, 0, n, record, visited);
+        return total_steps;
+    }
+};
+
+
 int main() {
+    {
+        Solution_5406 s5406;
+        int n = 4;
+        std::vector<std::vector<int>> edges{ std::vector<int>{0, 1} ,std::vector<int>{1, 2},std::vector < int>{0, 3}};
+        std::vector<bool> apples{true,true,true,true};
+        auto res = s5406.minTime(n, edges, apples);
+        std::cout << res << std::endl;
+    }
+    {
+        std::vector<int> v{58,506,448,780,716,871,427,693,798,672,446,600,998,840,174,282,436,636,968,84,924,888,228,948,848,553,377,245,396,774,650,336,986,55,1005,120,917,551,434,949,519,718,201,987,786,350,588,646,202,463,261,144,405,290,183,690,517,823,306,517,823,456,767,566,201,900,845,860,17,295,310,929,663,261,914,745,379,569,834,213,919,639,488,867,651,619,224,659,627,793,362,65,299,572,791,800,55,911,952,290,666,934,316,123,327,22,337,88,265,973,708,209,533,782,283,747,1008,397,637,952,453,285,216,397,341,885,544,767,223,258,477,371,174,486,328,755,955,593,490,760,786,834,80,2,82,467,385,375,246,51,197,635,702,979,365,73,292,567,787,745,506,690,840,938,226,325,423,207,360,888,528,374,870,560,342,308,98,645,743,732,59,191,132,694,562,183,645,323,966,971,13,392,389,313,188,471,363,650,993,534,503,322,181,940,793,727,462,137,327,213,402,820,678,54,656,285,909,834,207,780,963,474,537,809,304,17,289,44,269,506,247,22,225,601,696,937,273,103,374,501,131,49,178,932,790,908,154,329,467,996,567,486,977,679,374,969,703 };
+        Solution_5405 s5405;
+        auto res = s5405.countTriplets(v);
+        std::cout << res << std::endl;
+    }
+    {
+        Solution_5404 s5404;
+        std::vector<int> v{3,6,9 };
+        int n = 12;
+        auto res = s5404.buildArray(v, n);
+        std::cout << res.size() << std::endl;
+    }
     {
         Solution_220 s220;
         std::vector<int> v{1,1,1,3,3,2,2,2};
