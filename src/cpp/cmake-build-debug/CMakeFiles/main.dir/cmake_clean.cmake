@@ -1,16 +1,14 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/main.dir/array.cpp.obj"
-  "CMakeFiles/main.dir/diagram.cpp.obj"
-  "CMakeFiles/main.dir/main.cpp.obj"
-  "CMakeFiles/main.dir/mylist.cpp.obj"
-  "CMakeFiles/main.dir/mystring.cpp.obj"
-  "CMakeFiles/main.dir/other.cpp.obj"
-  "CMakeFiles/main.dir/tree.cpp.obj"
-  "CMakeFiles/main.dir/list/284._Peeking_Iterator.cpp.obj"
+  "CMakeFiles/main.dir/array.cpp.o"
+  "CMakeFiles/main.dir/diagram.cpp.o"
+  "CMakeFiles/main.dir/main.cpp.o"
+  "CMakeFiles/main.dir/mylist.cpp.o"
+  "CMakeFiles/main.dir/mystring.cpp.o"
+  "CMakeFiles/main.dir/other.cpp.o"
+  "CMakeFiles/main.dir/tree.cpp.o"
+  "CMakeFiles/main.dir/list/284._Peeking_Iterator.cpp.o"
   "main.pdb"
-  "main.exe"
-  "main.exe.manifest"
-  "main.lib"
+  "main"
 )
 
 # Per-language clean rules from dependency scanning.

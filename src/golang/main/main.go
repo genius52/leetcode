@@ -12,6 +12,17 @@ import (
 
 func main(){
 	{
+		input := "9,3,4,#,#,1,#,#,2,#,6,#,#"
+		res := tree.IsValidSerialization(input)
+		fmt.Println(res)
+	}
+	{
+		s1 := "abe"
+		s2 := "acd"
+		res := string.CheckIfCanBreak2(s1,s2)
+		fmt.Print(res)
+	}
+	{
 		n := 12
 		primes := []int{2,7,13,19}
 		res := number.NthSuperUglyNumber2(n,primes)

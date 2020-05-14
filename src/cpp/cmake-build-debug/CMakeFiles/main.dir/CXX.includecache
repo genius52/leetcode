@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
-D:/github/leetcode/src/cpp/./number/220. Contains Duplicate III.hpp
+/Users/taochengcheng/Work/github/leetcode/src/cpp/./number/1441. Build an Array With Stack Operations.hpp
+
+/Users/taochengcheng/Work/github/leetcode/src/cpp/./number/1442. Count Triplets That Can Form Two Arrays of Equal XOR.hpp
+
+/Users/taochengcheng/Work/github/leetcode/src/cpp/./number/220. Contains Duplicate III.hpp
 vector
 -
 map
@@ -14,13 +18,27 @@ map
 math.h
 -
 
-D:/github/leetcode/src/cpp/./number/229. Majority Element II.hpp
+/Users/taochengcheng/Work/github/leetcode/src/cpp/./number/229. Majority Element II.hpp
 vector
 -
 unordered_map
 -
 
-D:/github/leetcode/src/cpp/array.h
+/Users/taochengcheng/Work/github/leetcode/src/cpp/array.cpp
+array.h
+/Users/taochengcheng/Work/github/leetcode/src/cpp/array.h
+map
+-
+vector
+-
+math.h
+-
+algorithm
+-
+set
+-
+
+/Users/taochengcheng/Work/github/leetcode/src/cpp/array.h
 vector
 -
 map
@@ -36,7 +54,19 @@ algorithm
 ctime
 -
 
-D:/github/leetcode/src/cpp/diagram.h
+/Users/taochengcheng/Work/github/leetcode/src/cpp/diagram.cpp
+diagram.h
+/Users/taochengcheng/Work/github/leetcode/src/cpp/diagram.h
+iostream
+-
+vector
+-
+queue
+-
+map
+-
+
+/Users/taochengcheng/Work/github/leetcode/src/cpp/diagram.h
 vector
 -
 map
@@ -44,7 +74,9 @@ map
 queue
 -
 
-D:/github/leetcode/src/cpp/main.cpp
+/Users/taochengcheng/Work/github/leetcode/src/cpp/list/284. Peeking Iterator.cpp
+
+/Users/taochengcheng/Work/github/leetcode/src/cpp/main.cpp
 iostream
 -
 set
@@ -54,25 +86,47 @@ thread
 condition_variable
 -
 array.h
-D:/github/leetcode/src/cpp/array.h
+/Users/taochengcheng/Work/github/leetcode/src/cpp/array.h
 diagram.h
-D:/github/leetcode/src/cpp/diagram.h
+/Users/taochengcheng/Work/github/leetcode/src/cpp/diagram.h
 mylist.h
-D:/github/leetcode/src/cpp/mylist.h
+/Users/taochengcheng/Work/github/leetcode/src/cpp/mylist.h
 other.h
-D:/github/leetcode/src/cpp/other.h
+/Users/taochengcheng/Work/github/leetcode/src/cpp/other.h
 mystring.h
-D:/github/leetcode/src/cpp/mystring.h
+/Users/taochengcheng/Work/github/leetcode/src/cpp/mystring.h
 tree.h
-D:/github/leetcode/src/cpp/tree.h
+/Users/taochengcheng/Work/github/leetcode/src/cpp/tree.h
 ./number/229. Majority Element II.hpp
-D:/github/leetcode/src/cpp/./number/229. Majority Element II.hpp
+/Users/taochengcheng/Work/github/leetcode/src/cpp/./number/229. Majority Element II.hpp
 ./number/220. Contains Duplicate III.hpp
-D:/github/leetcode/src/cpp/./number/220. Contains Duplicate III.hpp
+/Users/taochengcheng/Work/github/leetcode/src/cpp/./number/220. Contains Duplicate III.hpp
+./number/1441. Build an Array With Stack Operations.hpp
+/Users/taochengcheng/Work/github/leetcode/src/cpp/./number/1441. Build an Array With Stack Operations.hpp
+./number/1442. Count Triplets That Can Form Two Arrays of Equal XOR.hpp
+/Users/taochengcheng/Work/github/leetcode/src/cpp/./number/1442. Count Triplets That Can Form Two Arrays of Equal XOR.hpp
 
-D:/github/leetcode/src/cpp/mylist.h
+/Users/taochengcheng/Work/github/leetcode/src/cpp/mylist.cpp
+mylist.h
+/Users/taochengcheng/Work/github/leetcode/src/cpp/mylist.h
+iostream
+-
+map
+-
 
-D:/github/leetcode/src/cpp/mystring.h
+/Users/taochengcheng/Work/github/leetcode/src/cpp/mylist.h
+
+/Users/taochengcheng/Work/github/leetcode/src/cpp/mystring.cpp
+mystring.h
+/Users/taochengcheng/Work/github/leetcode/src/cpp/mystring.h
+set
+-
+vector
+-
+iostream
+-
+
+/Users/taochengcheng/Work/github/leetcode/src/cpp/mystring.h
 string
 -
 map
@@ -84,7 +138,19 @@ deque
 vector
 -
 
-D:/github/leetcode/src/cpp/other.h
+/Users/taochengcheng/Work/github/leetcode/src/cpp/other.cpp
+deque
+-
+cmath
+-
+iostream
+-
+other.h
+/Users/taochengcheng/Work/github/leetcode/src/cpp/other.h
+map
+-
+
+/Users/taochengcheng/Work/github/leetcode/src/cpp/other.h
 string
 -
 sstream
@@ -102,7 +168,15 @@ condition_variable
 mutex
 -
 
-D:/github/leetcode/src/cpp/tree.h
+/Users/taochengcheng/Work/github/leetcode/src/cpp/tree.cpp
+tree.h
+/Users/taochengcheng/Work/github/leetcode/src/cpp/tree.h
+iostream
+-
+math.h
+-
+
+/Users/taochengcheng/Work/github/leetcode/src/cpp/tree.h
 vector
 -
 map
