@@ -13,6 +13,7 @@ CMakeFiles/main.dir/main.cpp.o: .././number/1441.\ Build\ an\ Array\ With\ Stack
 CMakeFiles/main.dir/main.cpp.o: .././number/1442.\ Count\ Triplets\ That\ Can\ Form\ Two\ Arrays\ of\ Equal\ XOR.hpp
 CMakeFiles/main.dir/main.cpp.o: .././number/220.\ Contains\ Duplicate\ III.hpp
 CMakeFiles/main.dir/main.cpp.o: .././number/229.\ Majority\ Element\ II.hpp
+CMakeFiles/main.dir/main.cpp.o: .././tree/1443.\ Minimum\ Time\ to\ Collect\ All\ Apples\ in\ a\ Tree.cpp
 CMakeFiles/main.dir/main.cpp.o: ../array.h
 CMakeFiles/main.dir/main.cpp.o: ../diagram.h
 CMakeFiles/main.dir/main.cpp.o: ../main.cpp

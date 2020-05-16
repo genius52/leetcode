@@ -11,7 +11,8 @@
 #include "./number/229. Majority Element II.hpp"
 #include "./number/220. Contains Duplicate III.hpp"
 #include "./number/1441. Build an Array With Stack Operations.hpp"
-#include "./number//1442. Count Triplets That Can Form Two Arrays of Equal XOR.hpp"
+#include "./number/1442. Count Triplets That Can Form Two Arrays of Equal XOR.hpp"
+#include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #define x 9999
 #define max 9999
 int data[10][10];
@@ -89,6 +90,20 @@ public:
 
 
 int main() {
+    {
+        Solution_1443 s1443;
+        int n = 7;
+        std::vector<std::vector<int>> edges;
+        edges.push_back({0,1});
+        edges.push_back({0,2});
+        edges.push_back({1,4});
+        edges.push_back({1,5});
+        edges.push_back({2,3});
+        edges.push_back({2,6});
+        std::vector<bool> hasApple{false,false,true,false,true,true,false};
+        auto res = s1443.minTime(n,edges,hasApple);
+        std::cout<<"1443 res = "<<res<<std::endl;
+    }
     {
         Solution_5406 s5406;
         int n = 4;

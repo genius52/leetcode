@@ -24,18 +24,8 @@ vector
 unordered_map
 -
 
-/Users/taochengcheng/Work/github/leetcode/src/cpp/array.cpp
-array.h
-/Users/taochengcheng/Work/github/leetcode/src/cpp/array.h
-map
--
+/Users/taochengcheng/Work/github/leetcode/src/cpp/./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp
 vector
--
-math.h
--
-algorithm
--
-set
 -
 
 /Users/taochengcheng/Work/github/leetcode/src/cpp/array.h
@@ -54,18 +44,6 @@ algorithm
 ctime
 -
 
-/Users/taochengcheng/Work/github/leetcode/src/cpp/diagram.cpp
-diagram.h
-/Users/taochengcheng/Work/github/leetcode/src/cpp/diagram.h
-iostream
--
-vector
--
-queue
--
-map
--
-
 /Users/taochengcheng/Work/github/leetcode/src/cpp/diagram.h
 vector
 -
@@ -73,8 +51,6 @@ map
 -
 queue
 -
-
-/Users/taochengcheng/Work/github/leetcode/src/cpp/list/284. Peeking Iterator.cpp
 
 /Users/taochengcheng/Work/github/leetcode/src/cpp/main.cpp
 iostream
@@ -105,26 +81,10 @@ tree.h
 /Users/taochengcheng/Work/github/leetcode/src/cpp/./number/1441. Build an Array With Stack Operations.hpp
 ./number/1442. Count Triplets That Can Form Two Arrays of Equal XOR.hpp
 /Users/taochengcheng/Work/github/leetcode/src/cpp/./number/1442. Count Triplets That Can Form Two Arrays of Equal XOR.hpp
-
-/Users/taochengcheng/Work/github/leetcode/src/cpp/mylist.cpp
-mylist.h
-/Users/taochengcheng/Work/github/leetcode/src/cpp/mylist.h
-iostream
--
-map
--
+./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp
+/Users/taochengcheng/Work/github/leetcode/src/cpp/./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp
 
 /Users/taochengcheng/Work/github/leetcode/src/cpp/mylist.h
-
-/Users/taochengcheng/Work/github/leetcode/src/cpp/mystring.cpp
-mystring.h
-/Users/taochengcheng/Work/github/leetcode/src/cpp/mystring.h
-set
--
-vector
--
-iostream
--
 
 /Users/taochengcheng/Work/github/leetcode/src/cpp/mystring.h
 string
@@ -136,18 +96,6 @@ stack
 deque
 -
 vector
--
-
-/Users/taochengcheng/Work/github/leetcode/src/cpp/other.cpp
-deque
--
-cmath
--
-iostream
--
-other.h
-/Users/taochengcheng/Work/github/leetcode/src/cpp/other.h
-map
 -
 
 /Users/taochengcheng/Work/github/leetcode/src/cpp/other.h
@@ -166,14 +114,6 @@ functional
 condition_variable
 -
 mutex
--
-
-/Users/taochengcheng/Work/github/leetcode/src/cpp/tree.cpp
-tree.h
-/Users/taochengcheng/Work/github/leetcode/src/cpp/tree.h
-iostream
--
-math.h
 -
 
 /Users/taochengcheng/Work/github/leetcode/src/cpp/tree.h
