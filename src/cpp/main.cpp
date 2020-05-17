@@ -13,6 +13,7 @@
 #include "./number/1441. Build an Array With Stack Operations.hpp"
 #include "./number/1442. Count Triplets That Can Form Two Arrays of Equal XOR.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
+#include "./number/1447. Simplified Fractions.hpp"
 #define x 9999
 #define max 9999
 int data[10][10];
@@ -90,6 +91,11 @@ public:
 
 
 int main() {
+    {
+        Solution_1447 s1447;
+        auto res = s1447.simplifiedFractions(4);
+        std::cout << "1447 res = " << res.size() << std::endl;
+    }
     {
         Solution_1443 s1443;
         int n = 7;
