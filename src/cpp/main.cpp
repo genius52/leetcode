@@ -14,6 +14,8 @@
 #include "./number/1442. Count Triplets That Can Form Two Arrays of Equal XOR.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./number/1447. Simplified Fractions.hpp"
+#include "./graph/332. Reconstruct Itinerary.cpp"
+#include "./string/1446. Consecutive Characters.cpp"
 #define x 9999
 #define max 9999
 int data[10][10];
@@ -95,6 +97,21 @@ int main() {
         Solution_1447 s1447;
         auto res = s1447.simplifiedFractions(4);
         std::cout << "1447 res = " << res.size() << std::endl;
+    }
+    {
+        Solution_1446 s1446;
+        string s = "aa";
+        auto res = s1446.maxPower(s);
+        std::cout<<"1446 res = "<<res<<std::endl;
+    }
+    {
+        //[["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]
+        //[["JFK","KUL"],["JFK","NRT"],["NRT","JFK"]]
+        Solution_332 s332;
+        std::vector<std::vector<std::string>> input = {std::vector<std::string>{"JFK","KUL"}, std::vector<std::string>{"JFK","NRT"},
+        std::vector<std::string>{"NRT","JFK"}};
+        auto res = s332.findItinerary(input);
+        std::cout << "332 res = "<< res.size() <<std::endl;
     }
     {
         Solution_1443 s1443;
