@@ -16,6 +16,7 @@
 #include "./number/1447. Simplified Fractions.hpp"
 #include "./graph/332. Reconstruct Itinerary.cpp"
 #include "./string/1446. Consecutive Characters.cpp"
+#include "./string/1451. Rearrange Words in a Sentence.hpp"
 #define x 9999
 #define max 9999
 int data[10][10];
@@ -93,6 +94,12 @@ public:
 
 
 int main() {
+    {
+        Solution_1451 s1451;
+        std::string input = "To be or not to be";
+        auto res = s1451.arrangeWords(input);
+        std::cout<<"res = "<< res << std::endl;
+    }
     {
         Solution_1447 s1447;
         auto res = s1447.simplifiedFractions(4);
