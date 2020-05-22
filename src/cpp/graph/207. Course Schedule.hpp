@@ -1,5 +1,6 @@
 #include <vector>
 #include <unordered_map>
+#include <queue>
 //Input: numCourses = 2, prerequisites = [[1,0],[0,1]]
 //Output: false
 class Solution_207 {
@@ -39,6 +40,38 @@ public:
             std::vector<bool> trace;
             trace.resize(numCourses);
             if (!dfs_canFinish(i,record,trace,visited))
+                return false;
+        }
+        return true;
+    }
+
+    bool canFinish_bfs(int numCourses, vector<vector<int>>& prerequisites) {
+        int len = prerequisites.size();
+        std::vector<std::vector<int>> graph;
+        graph.resize(numCourses);
+        std::vector<int> indegree;//store indegree for each node
+        indegree.resize(numCourses);
+        for(int i = 0;i < len;i++){
+            graph[prerequisites[i][0]].push_back(prerequisites[i][1]);
+            indegree[prerequisites[i][1]]++;
+        }
+        std::queue<int> q;
+        for(int i = 0;i < numCourses;i++){
+            if(indegree[i] == 0){
+                q.push(i);
+            }
+        }
+        while(!q.empty()){
+            auto n = q.front();
+            q.pop();
+            for(int i = 0;i < graph[n].size();i++){
+                indegree[graph[n][i]]--;
+                if(indegree[graph[n][i]] == 0)
+                    q.push(graph[n][i]);
+            }
+        }
+        for(int i = 0;i < numCourses;i++){
+            if(indegree[i] > 0)
                 return false;
         }
         return true;
