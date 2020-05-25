@@ -20,6 +20,7 @@
 #include "./string/1446. Consecutive Characters.cpp"
 #include "./string/1451. Rearrange Words in a Sentence.hpp"
 #include "./string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
+#include "./string/1456. Maximum Number of Vowels in a Substring of Given Length.hpp"
 #define x 9999
 #define max 9999
 int data[10][10];
@@ -97,6 +98,13 @@ public:
 
 
 int main() {
+    {
+        Solution_1456 s1456;
+        std::string s = "ibpbhixfiouhdljnjfflpapptrxgcomvnb";
+        int k = 33;
+        auto res = s1456.maxVowels(s,k);
+        std::cout<<"1456 res = "<<res<<std::endl;
+    }
     {
         Solution_1455 s1455;
         std::string sentence = "i";
