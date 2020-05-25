@@ -15,8 +15,11 @@
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./number/1447. Simplified Fractions.hpp"
 #include "./graph/332. Reconstruct Itinerary.cpp"
+#include "./graph/207. Course Schedule.hpp"
+#include "./graph/210. Course Schedule II.hpp"
 #include "./string/1446. Consecutive Characters.cpp"
 #include "./string/1451. Rearrange Words in a Sentence.hpp"
+#include "./string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
 #define x 9999
 #define max 9999
 int data[10][10];
@@ -94,6 +97,32 @@ public:
 
 
 int main() {
+    {
+        Solution_1455 s1455;
+        std::string sentence = "i";
+        std::string search = "i";
+        auto res = s1455.isPrefixOfWord(sentence,search);
+        std::cout<<"1455 res = "<<res<<std::endl;
+    }
+    {
+        Solution_210 s210;
+        std::vector<std::vector<int>> input;
+        input.push_back({1,0});
+        auto res = s210.findOrder(2,input);
+        std::cout<<"210 res = "<<res.size()<<std::endl;
+    }
+    {
+        Solution_207 s207;
+        int num = 2;
+        std::vector<std::vector<int>> input;
+//        input.push_back({0,1});
+//        input.push_back({0,2});
+//        input.push_back({1,2});
+//        //auto res = s207.canFinish(num,input);
+        input.push_back({1,0});
+        auto res = s207.canFinish_bfs(num,input);
+        std::cout<<"207 res = "<<res<<std::endl;
+    }
     {
         Solution_1451 s1451;
         std::string input = "To be or not to be";
