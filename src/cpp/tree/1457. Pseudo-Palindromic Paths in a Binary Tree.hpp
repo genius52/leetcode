@@ -16,14 +16,9 @@ using namespace std;
 
 class Solution_1457 {
 public:
-    bool check_palindromic(std::deque<int>& trace){
-        int len = trace.size();
-        std::unordered_map<int,int> record;
-        for(auto it = trace.begin();it != trace.end();it++){
-            record[*it]++;
-        }
+    bool check_palindromic(std::unordered_map<int,int>& trace){
         bool find_single = false;
-        for(auto it = record.begin();it != record.end();it++){
+        for(auto it = trace.begin();it != trace.end();it++){
             if((*it).second % 2 == 1){
                 if(find_single)
                     return false;
@@ -35,25 +30,25 @@ public:
         return true;
     }
 
-    void dfs_pseudoPalindromicPaths(TreeNode* node,std::deque<int>& trace,int& total){
+    void dfs_pseudoPalindromicPaths(TreeNode* node,std::unordered_map<int,int>& trace,int& total){
         if(nullptr == node)
             return;
-        trace.push_back(node->val);
+        trace[node->val]++;
         if(nullptr == node->left && nullptr == node->right){
             if(check_palindromic(trace)){
                 total++;
             }
-            trace.pop_back();
+            trace[node->val]--;
             return;
         }
         dfs_pseudoPalindromicPaths(node->left,trace,total);
         dfs_pseudoPalindromicPaths(node->right,trace,total);
-        trace.pop_back();
+        trace[node->val]--;
     }
 
     int pseudoPalindromicPaths (TreeNode* root) {
         int total = 0;
-        std::deque<int> trace;
+        std::unordered_map<int,int> trace;
         dfs_pseudoPalindromicPaths(root,trace,total);
         return total;
     }
