@@ -13,6 +13,7 @@
 #include "./number/1441. Build an Array With Stack Operations.hpp"
 #include "./number/1442. Count Triplets That Can Form Two Arrays of Equal XOR.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
+#include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./number/1447. Simplified Fractions.hpp"
 #include "./graph/332. Reconstruct Itinerary.cpp"
 #include "./graph/207. Course Schedule.hpp"
@@ -98,6 +99,30 @@ public:
 
 
 int main() {
+    {
+        TreeNode t1(8);
+        TreeNode t2(8);
+        TreeNode t3(7);
+        TreeNode t4(7);
+        TreeNode t5(4);
+        TreeNode t6(7);
+        t1.left = &t2;
+        t2.left = &t3;
+        t2.right = &t4;
+        t4.right = &t5;
+        t5.right = &t6;
+
+        TreeNode t7(2);
+        TreeNode t8(8);
+        TreeNode t9(1);
+        t4.left = &t7;
+        t7.right = &t8;
+        t8.right = &t9;
+        Solution_1457 s1457;
+        auto res = s1457.pseudoPalindromicPaths(&t1);
+        std::cout<<"1457 res = "<<res<<std::endl;
+
+    }
     {
         Solution_1456 s1456;
         std::string s = "ibpbhixfiouhdljnjfflpapptrxgcomvnb";
