@@ -61,13 +61,15 @@ public:
                 q.push(i);
             }
         }
-        while(!q.empty()){
+        while(!q.empty()) {
             auto n = q.front();
-            q.pop();
-            for(int i = 0;i < graph[n].size();i++){
-                indegree[graph[n][i]]--;
-                if(indegree[graph[n][i]] == 0)
-                    q.push(graph[n][i]);
+            {
+                q.pop();
+                for (int i = 0; i < graph[n].size(); i++) {
+                    indegree[graph[n][i]]--;
+                    if (indegree[graph[n][i]] == 0)
+                        q.push(graph[n][i]);
+                }
             }
         }
         for(int i = 0;i < numCourses;i++){
