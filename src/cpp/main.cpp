@@ -14,6 +14,7 @@
 #include "./number/1442. Count Triplets That Can Form Two Arrays of Equal XOR.hpp"
 #include "./number/1447. Simplified Fractions.hpp"
 #include "./number/368. Largest Divisible Subset.hpp"
+#include "./number/343. Integer Break.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./graph/332. Reconstruct Itinerary.cpp"
@@ -99,6 +100,11 @@ public:
 
 
 int main() {
+    {
+        Solution_343 s343;
+        auto res = s343.integerBreak(5);
+        std::cout<<"343 res = "<<res<<std::endl;
+    }
     {
         Solution_368 s368;
         std::vector<int> nums{4,8,10,240};
