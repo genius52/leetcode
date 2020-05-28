@@ -12,12 +12,14 @@
 #include "./number/220. Contains Duplicate III.hpp"
 #include "./number/1441. Build an Array With Stack Operations.hpp"
 #include "./number/1442. Count Triplets That Can Form Two Arrays of Equal XOR.hpp"
+#include "./number/1447. Simplified Fractions.hpp"
+#include "./number/368. Largest Divisible Subset.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
-#include "./number/1447. Simplified Fractions.hpp"
 #include "./graph/332. Reconstruct Itinerary.cpp"
 #include "./graph/207. Course Schedule.hpp"
 #include "./graph/210. Course Schedule II.hpp"
+#include "./graph/1444. Number of Ways of Cutting a Pizza.hpp"
 #include "./string/1446. Consecutive Characters.cpp"
 #include "./string/1451. Rearrange Words in a Sentence.hpp"
 #include "./string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -37,8 +39,6 @@ bool g_ready = false;
 
 //Input: target = [2,3,4], n = 4
 //Output: ["Push", "Pop", "Push", "Push", "Push"]
-
-
 
 class Solution_5406 {
 public:
@@ -99,6 +99,19 @@ public:
 
 
 int main() {
+    {
+        Solution_368 s368;
+        std::vector<int> nums{4,8,10,240};
+        auto res = s368.largestDivisibleSubset(nums);
+        std::cout<<"368 res = "<<res.size()<<std::endl;
+    }
+    {
+        Solution_1444 s1444;
+        std::vector<std::string> pizza = {"A..","AAA","..."};
+        int k = 3;
+        auto res = s1444.ways(pizza,k);
+        std::cout<<"1444 res = "<<res<<std::endl;
+    }
     {
         TreeNode t1(8);
         TreeNode t2(8);
