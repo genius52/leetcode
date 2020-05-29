@@ -15,12 +15,16 @@
 #include "./number/1447. Simplified Fractions.hpp"
 #include "./number/368. Largest Divisible Subset.hpp"
 #include "./number/343. Integer Break.hpp"
+#include "./number/373. Find K Pairs with Smallest Sums.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./graph/332. Reconstruct Itinerary.cpp"
 #include "./graph/207. Course Schedule.hpp"
 #include "./graph/210. Course Schedule II.hpp"
 #include "./graph/1444. Number of Ways of Cutting a Pizza.hpp"
+#include "./graph/310. Minimum Height Trees.hpp"
+#include "./graph/355. Design Twitter.hpp"
+#include "./graph/5406.hpp"
 #include "./string/1446. Consecutive Characters.cpp"
 #include "./string/1451. Rearrange Words in a Sentence.hpp"
 #include "./string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -38,68 +42,63 @@ std::mutex mtx;
 std::condition_variable gcv;
 bool g_ready = false;
 
-//Input: target = [2,3,4], n = 4
-//Output: ["Push", "Pop", "Push", "Push", "Push"]
-
-class Solution_5406 {
-public:
-    long find_target(int start, int end, int limit, std::map<int, vector<int>> record,std::vector<bool>& visited) {
-        if (start == end) {
-            return 0;
-        }
-        if (visited[start])
-            return 100000;
-        visited[start] = true;
-        long cur_min_steps = 100000;;
-        int subway_len = record[start].size();
-        for (int i = 0; i < subway_len; i++) {
-            int res = 0;
-            int new_start = record[start][i];
-            res = 1 + find_target(new_start, end, limit, record, visited);
-            if (res < cur_min_steps) {
-                cur_min_steps = res;
-            }
-        }
-        visited[start] = false;
-        return cur_min_steps;
-    }
-
-    int minTime(int n, vector<vector<int>>& edges, vector<bool>& hasApple) {
-        std::map<int, vector<int>> record;
-        int len = edges.size();
-        for (int i = 0; i < len; i++) {
-            if (record.find(edges[i][0]) == record.end()) {
-                record[edges[i][0]] = std::vector<int>{ edges[i][1] };
-            }
-            else {
-                record[edges[i][0]].push_back(edges[i][1]);
-            }
-
-            if (record.find(edges[i][1]) == record.end()) {
-                record[edges[i][1]] = std::vector<int>{ edges[i][0] };
-            }
-            else {
-                record[edges[i][1]].push_back(edges[i][0]);
-            }
-        }
-        int apple_len = hasApple.size();
-        int total_steps = 0;
-        int start_index = 0;
-        for (int i = 0; i < apple_len; i++) {
-            if (!hasApple[i])
-                continue;
-            std::vector<bool> visited(n, false);
-            total_steps += find_target(start_index, i, n, record, visited);
-            start_index = i;
-        }
-        std::vector<bool> visited(n, false);
-        total_steps += find_target(start_index, 0, n, record, visited);
-        return total_steps;
-    }
-};
-
 
 int main() {
+    {
+        Solution_373 s373;
+        std::vector<int> nums1{1,2};
+        std::vector<int> nums2{3};
+        int k = 3;
+        auto res = s373.kSmallestPairs(nums1,nums2,k);
+        std::cout<<"373 res = "<<res.size()<<std::endl;
+    }
+    {
+        //["Twitter","postTweet","follow","follow","getNewsFeed","postTweet","getNewsFeed","getNewsFeed","unfollow","getNewsFeed","getNewsFeed","unfollow","getNewsFeed","getNewsFeed"]
+        //[[],[1,5],[1,2],[2,1],[2],[2,6],[1],[2],[2,1],[1],[2],[1,2],[1],[2]]
+        Twitter twitter;
+        twitter.postTweet(1, 5);
+
+        twitter.follow(1, 2);
+        twitter.follow(2, 1);
+
+        auto res = twitter.getNewsFeed(1);
+
+        twitter.postTweet(2, 6);
+        res = twitter.getNewsFeed(1);
+        res = twitter.getNewsFeed(2);
+        twitter.unfollow(2, 1);
+        res = twitter.getNewsFeed(1);
+        res = twitter.getNewsFeed(2);
+        twitter.unfollow(1, 2);
+        res = twitter.getNewsFeed(1);
+        res = twitter.getNewsFeed(2);
+//        Twitter twitter;
+//        twitter.postTweet(1, 1);
+//        twitter.postTweet(1, 2);
+//        twitter.postTweet(1, 3);
+//        twitter.postTweet(1, 4);
+//        twitter.postTweet(1, 5);
+//        twitter.postTweet(1, 6);
+//        twitter.postTweet(1, 7);
+//        twitter.postTweet(1, 8);
+//        twitter.postTweet(1, 9);
+//        twitter.postTweet(1, 10);
+//        twitter.postTweet(1, 11);
+//        auto res = twitter.getNewsFeed(1);
+        std::cout<<"355 res = "<<res.size()<<std::endl;
+    }
+    {
+        Solution_310 s310;
+        int n = 6;
+        std::vector<std::vector<int>> input;
+        input.push_back(std::vector<int>{0, 3});
+        input.push_back(std::vector<int>{1, 3});
+        input.push_back(std::vector<int>{2, 3});
+        input.push_back(std::vector<int>{4, 3});
+        input.push_back(std::vector<int>{5, 4});
+        auto res = s310.findMinHeightTrees(n,input);
+        std::cout<<"310 res = "<<res.size()<<std::endl;
+    }
     {
         Solution_343 s343;
         auto res = s343.integerBreak(5);
@@ -224,7 +223,16 @@ int main() {
         std::cout << res << std::endl;
     }
     {
-        std::vector<int> v{58,506,448,780,716,871,427,693,798,672,446,600,998,840,174,282,436,636,968,84,924,888,228,948,848,553,377,245,396,774,650,336,986,55,1005,120,917,551,434,949,519,718,201,987,786,350,588,646,202,463,261,144,405,290,183,690,517,823,306,517,823,456,767,566,201,900,845,860,17,295,310,929,663,261,914,745,379,569,834,213,919,639,488,867,651,619,224,659,627,793,362,65,299,572,791,800,55,911,952,290,666,934,316,123,327,22,337,88,265,973,708,209,533,782,283,747,1008,397,637,952,453,285,216,397,341,885,544,767,223,258,477,371,174,486,328,755,955,593,490,760,786,834,80,2,82,467,385,375,246,51,197,635,702,979,365,73,292,567,787,745,506,690,840,938,226,325,423,207,360,888,528,374,870,560,342,308,98,645,743,732,59,191,132,694,562,183,645,323,966,971,13,392,389,313,188,471,363,650,993,534,503,322,181,940,793,727,462,137,327,213,402,820,678,54,656,285,909,834,207,780,963,474,537,809,304,17,289,44,269,506,247,22,225,601,696,937,273,103,374,501,131,49,178,932,790,908,154,329,467,996,567,486,977,679,374,969,703 };
+        std::vector<int> v{58,506,448,780,716,871,427,693,798,672,446,600,998,840,174,282,436,636,968,84,924,888,228,948,848,
+                           553,377,245,396,774,650,336,986,55,1005,120,917,551,434,949,519,718,201,987,786,350,588,646,202,463,
+                           261,144,405,290,183,690,517,823,306,517,823,456,767,566,201,900,845,860,17,295,310,929,663,261,914,
+                           745,379,569,834,213,919,639,488,867,651,619,224,659,627,793,362,65,299,572,791,800,55,911,952,290,666,
+                           934,316,123,327,22,337,88,265,973,708,209,533,782,283,747,1008,397,637,952,453,285,216,397,341,885,544,
+                           767,223,258,477,371,174,486,328,755,955,593,490,760,786,834,80,2,82,467,385,375,246,51,197,635,702,979,
+                           365,73,292,567,787,745,506,690,840,938,226,325,423,207,360,888,528,374,870,560,342,308,98,645,743,732,59,
+                           191,132,694,562,183,645,323,966,971,13,392,389,313,188,471,363,650,993,534,503,322,181,940,793,727,462,
+                           137,327,213,402,820,678,54,656,285,909,834,207,780,963,474,537,809,304,17,289,44,269,506,247,22,225,601,
+                           696,937,273,103,374,501,131,49,178,932,790,908,154,329,467,996,567,486,977,679,374,969,703 };
         Solution_5405 s5405;
         auto res = s5405.countTriplets(v);
         std::cout << res << std::endl;
@@ -338,7 +346,14 @@ int main() {
     {
         using namespace s1366;
         s1366::Solution s;
-        std::vector<std::string> scores = {"FVSHJIEMNGYPTQOURLWCZKAX","AITFQORCEHPVJMXGKSLNZWUY","OTERVXFZUMHNIYSCQAWGPKJL","VMSERIJYLZNWCPQTOKFUHAXG","VNHOZWKQCEFYPSGLAMXJIUTR","ANPHQIJMXCWOSKTYGULFVERZ","RFYUXJEWCKQOMGATHZVILNSP","SCPYUMQJTVEXKRNLIOWGHAFZ","VIKTSJCEYQGLOMPZWAHFXURN","SVJICLXKHQZTFWNPYRGMEUAO","JRCTHYKIGSXPOZLUQAVNEWFM","NGMSWJITREHFZVQCUKXYAPOL","WUXJOQKGNSYLHEZAFIPMRCVT","PKYQIOLXFCRGHZNAMJVUTWES","FERSGNMJVZXWAYLIKCPUQHTO","HPLRIUQMTSGYJVAXWNOCZEKF","JUVWPTEGCOFYSKXNRMHQALIZ","MWPIAZCNSLEYRTHFKQXUOVGJ","EZXLUNFVCMORSIWKTYHJAQPG","HRQNLTKJFIEGMCSXAZPYOVUW","LOHXVYGWRIJMCPSQENUAKTZF","XKUTWPRGHOAQFLVYMJSNEIZC","WTCRQMVKPHOSLGAXZUEFYNJI"};
+        std::vector<std::string> scores = {"FVSHJIEMNGYPTQOURLWCZKAX","AITFQORCEHPVJMXGKSLNZWUY","OTERVXFZUMHNIYSCQAWGPKJL",
+                                           "VMSERIJYLZNWCPQTOKFUHAXG","VNHOZWKQCEFYPSGLAMXJIUTR","ANPHQIJMXCWOSKTYGULFVERZ",
+                                           "RFYUXJEWCKQOMGATHZVILNSP","SCPYUMQJTVEXKRNLIOWGHAFZ","VIKTSJCEYQGLOMPZWAHFXURN",
+                                           "SVJICLXKHQZTFWNPYRGMEUAO","JRCTHYKIGSXPOZLUQAVNEWFM","NGMSWJITREHFZVQCUKXYAPOL",
+                                           "WUXJOQKGNSYLHEZAFIPMRCVT","PKYQIOLXFCRGHZNAMJVUTWES","FERSGNMJVZXWAYLIKCPUQHTO",
+                                           "HPLRIUQMTSGYJVAXWNOCZEKF","JUVWPTEGCOFYSKXNRMHQALIZ","MWPIAZCNSLEYRTHFKQXUOVGJ",
+                                           "EZXLUNFVCMORSIWKTYHJAQPG","HRQNLTKJFIEGMCSXAZPYOVUW","LOHXVYGWRIJMCPSQENUAKTZF",
+                                           "XKUTWPRGHOAQFLVYMJSNEIZC","WTCRQMVKPHOSLGAXZUEFYNJI"};
         auto res = s.rankTeams(scores);
         std::cout<<res<<std::endl;
     }
