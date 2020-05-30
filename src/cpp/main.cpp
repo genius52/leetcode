@@ -16,6 +16,7 @@
 #include "./number/368. Largest Divisible Subset.hpp"
 #include "./number/343. Integer Break.hpp"
 #include "./number/373. Find K Pairs with Smallest Sums.hpp"
+#include "./number/376. Wiggle Subsequence.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./graph/332. Reconstruct Itinerary.cpp"
@@ -44,6 +45,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_376 s376;
+        std::vector<int> input{1,7,4,9,2,5};
+        auto res = s376.wiggleMaxLength(input);
+        std::cout<<"376 res = "<<res<<std::endl;
+    }
     {
         Solution_373 s373;
         std::vector<int> nums1{1,2};
