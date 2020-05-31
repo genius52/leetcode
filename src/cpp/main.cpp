@@ -30,6 +30,7 @@
 #include "./string/1451. Rearrange Words in a Sentence.hpp"
 #include "./string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
 #include "./string/1456. Maximum Number of Vowels in a Substring of Given Length.hpp"
+#include "./number/1461. Check If a String Contains All Binary Codes of Size K.hpp"
 #define x 9999
 #define max 9999
 int data[10][10];
@@ -43,8 +44,133 @@ std::mutex mtx;
 std::condition_variable gcv;
 bool g_ready = false;
 
+//Input: nums = [3,4,5,2]
+//Output: 12
+class Solution_5424 {
+public:
+    int maxProduct(vector<int>& nums) {
+        int res = -2147483648;
+        int len = nums.size();
+        for (int i = 0; i < len; i++) {
+            for (int j = 0; j < len; j++) {
+                if (i == j)
+                    continue;
+                int product = (nums[i] - 1) * (nums[j] - 1);
+                if (product > res)
+                    res = product;
+            }
+        }
+        return res;
+    }
+};
+
+class Solution_5425 {
+public:
+    //int dfs_maxArea(int h, int w, int start_row, int start_col,int last_row,int last_col,std::set<int>& set_hor, std::set<int>& set_ver,vector<vector<bool>>& visited) {
+    //    if (start_row < 0 || start_row >= h || start_col < 0 || start_col >= w)
+    //        return 0;
+    //    if (visited[start_row][start_col])
+    //        return 0;
+    //    if (last_row != -1 && last_col != -1) {
+    //        if (set_hor.find(start_row) != set_hor.end() && last_row == start_row - 1)
+    //            return 0;
+    //        if (set_hor.find(last_row) != set_hor.end() && last_row == start_row + 1)
+    //            return 0;
+    //        if (set_ver.find(start_col) != set_ver.end() && last_col == start_col - 1)
+    //            return 0;
+    //        if (set_ver.find(last_col) != set_ver.end() && last_col == start_col + 1)
+    //            return 0;
+    //    }
+    //    visited[start_row][start_col] = true;
+    //    return 1 + dfs_maxArea(h, w, start_row - 1, start_col, start_row, start_col, set_hor, set_ver, visited) +
+    //        dfs_maxArea(h, w, start_row + 1, start_col, start_row, start_col, set_hor, set_ver, visited) +
+    //        dfs_maxArea(h, w, start_row, start_col - 1, start_row, start_col, set_hor, set_ver, visited) +
+    //        dfs_maxArea(h, w, start_row, start_col + 1, start_row, start_col, set_hor, set_ver, visited);
+    //}
+
+    //int maxArea(int h, int w, vector<int>& horizontalCuts, vector<int>& verticalCuts) {
+    //    std::vector<std::vector<bool>> visited;
+    //    visited.resize(h);
+    //    for (int i = 0; i < h; i++) {
+    //        visited[i].resize(w);
+    //    }
+    //    std::set<int> set_hor;
+    //    for (int i = 0; i < horizontalCuts.size(); i++) {
+    //        set_hor.insert(horizontalCuts[i]);
+    //    }
+    //    std::set<int> set_ver;
+    //    for (int i = 0; i < verticalCuts.size(); i++) {
+    //        set_ver.insert(verticalCuts[i]);
+    //    }
+    //    int res = 0;
+    //    for (int i = 0; i < h; i++) {
+    //        for (int j = 0; j < w; j++) {
+    //            if (visited[i][j])
+    //                continue;
+    //            int n = dfs_maxArea(h,w,i,j,-1,-1,set_hor,set_ver,visited);
+    //            if (n > res)
+    //                res = n;
+    //        }
+    //    }
+    //    return res;
+    //}
+    int maxArea(int h, int w, vector<int>& horizontalCuts, vector<int>& verticalCuts) {
+        int res = 0;
+        std::sort(horizontalCuts.begin(), horizontalCuts.end());
+        std::sort(verticalCuts.begin(), verticalCuts.end());
+        int max_rowspan = 0;
+        int len_hor = horizontalCuts.size();
+        for (int i = 1; i < len_hor; i++) {
+            if ((horizontalCuts[i] - horizontalCuts[i-1]) > max_rowspan) {
+                max_rowspan = horizontalCuts[i] - horizontalCuts[i - 1];
+            }
+        }
+        if ((h - horizontalCuts[len_hor - 1]) > max_rowspan) {
+            max_rowspan = h - horizontalCuts[len_hor - 1];
+        }
+        int len_ver = verticalCuts.size();
+        int max_colspan = 0;
+        for (int j = 1; j < len_ver; j++) {
+            if ((verticalCuts[j] - verticalCuts[j-1]) > max_colspan) {
+                max_colspan = verticalCuts[j] - verticalCuts[j - 1];
+            }
+        }
+        if ((w - verticalCuts[len_ver - 1]) > max_colspan) {
+            max_colspan = w - verticalCuts[len_ver - 1];
+        }
+        return long(max_rowspan) * long(max_colspan) % 1000000007;
+    }
+};
+
+//
 
 int main() {
+    {
+        Solution_5425 s5425;
+        //int h = 975;
+        //int w = 726;
+        //std::vector<int> horizontalCuts{ 327,438,434,346,147,64,613,410,130,621,429,559,446,947,440,520,273,109,732,374,172,968,325,647,10,91,483,467,838,886,593,650,937,77,951,422,384,403,972,204,608,178,309,476,171,820,144,150,498,871,431,554,578,703,668,69,625,781,96,689,893,757,55,292,391,164,252,102,251,616,491,709,532,143,207,749,782,34,196,361,900,631,913,328,121,727,8,116,910,592,917,477,484,43,614,304,2,462,773,203,334,856,518,786,840,962,14,572,197,825,299,565,945,712,37,586,734,512,238,821,744,193,720,205,561,426,534,500,95,654,274,700,813,404,137,735,862,801,369,881,533,81,920,928,710,288,594,236,737,472,806,771,370,73,135,659,128,392,475,78,966,270,21,148,817,569,182,504,208,524,503,176,368,523,478,619,673,663,942,65,313,104,811,573,798,187,596,542,278,936,282,816,103,449,923,469,584,582,657,395,644,306,528,690,850,161,40,541,967,72,953,679,632,373,320,126,186,12,716,906,624,289,769,622,379,517,777,589,377,530,451,796,189,221,371,645,343,145,852,687,752,595,845,643,32,682,101,250,347,340,626,267,754,260,680,590,745,723,707,114,249,231,580,363,295,316,653,549,6,683,243,444,753,706,531,418,576,413,93,149,693,225,5,536,120,7,261,808,686,922,730,157,194,831,360,409,873,758,272,918,450,447,362,31,308,45,872,67,511,174,609,466,867,286,18,812,348,86,188,111,697,105,110,215,294,453,725,763,408,222,648,544,878,807,874,651,948,780,129,861,957,676,588,406,253,916,28,837,946,163,480,756,154,353,283,400,639,885,787,543,218,170,925,891,623,784,670,809,411,293,655,550,896,822,729,736,366,743,92,269,356,487,398,265,711,638,551,506,414,48,125,378,432,846,522,956,931,733,567,810,669,577,56,751,19,364,938,627,25,731,912,167,685,63,482,615,779,939,46,302,190,42,210,496,604,173,112,897,127,99,22,834,575,59,492,721,3,889,50,728,905,767,342,563,90,390,863,258,448,959,692,213,571,436,416,776,118,815,857,355,206,855,141,11,457,677,664,934,285,704,887,888,562,235,824,876,122,842,435,312,44,761,510,257,333,932,277,879,722,617,24,785,521,742,66,519,791,68,705,788,860,75,688,332,949,880,660,407,9,439,323,929,540,445,301,570,336,385,597,83,160,902,739,142,708,220,726,229,919,566,964,138,321,944,924,85,58,335,424,658,970,242,585,926,969,298,601,437,790,661,82,26,248,376,546,960,17,598,869,442,971,326,502,76,415,933,88,331,633,795,762,823,958,349,884,895,192,783,974,133,493,539,191,471,61,775,547,507,827,155,646,89,324,279,805,694,715,124,819,310,963,560,459,770,841,481 };
+        //std::vector<int> verticalCuts{ 524,256,169,409,632,77,639,564,621,226,682,8,645,206,535,456,252,669,219,143,368,178,6,57,52,56,251,369,155,520,131,129,464,628,389,33,388,209,481,565,76,696,695,559,534,445,658,550,724,499,358,692,223,327,516,329,412,384,450,53,80,479,137,295,574,221,678,152,558,260,441,36,463,706,282,545,713,351,25,643,14,262,640,336,618,110,44,352,216,469,719,642,716,419,563,546,158,255,17,239,62,703,116,59,214,275,372,414,416,699,608,4,406,622,522,136,237,73,395,523,455,193,381,601,613,30,308,614,293,27,594,421,300,313,557,205,556,349,624,527,42,443,497,151,332,491,355,38,596,182,401,641,667,615,330,75,194,680,374,227,224,533,166,506,616,612,383,278,586,353,657,453,132,560,714,61,130,700,424,84,283,267,176,580,405,232,549,186,609,629,570,476,203,364,45,397,500,197,587,7,531,408,218,122,150,547,160,638,514,473,246,13,431,588,272,343,170,707,135,50,652,215,91,229,541,103,83,536,655,286,161,348,393,228,92,67,442,10,148,670,48,220,378,604,482,12,356,451,525,606,654,722,167,529,328,650,519,334,478,114,354,597,323,111,376,507,426,387,386,663,95,126,96,503,242,3,671,357,568,470,139,459,572,492,299,399,279,725,619,257,29,141,718,581,105,319,49,254,712,502,691,15,723,623,578,711,686,710,265,159,380,579,335,636,225,9,717,363,704,697,119,99,672,661,285,561,172,121,173,60,107,140,662,340,1,302,411,43,626,338,168,234,666,373,390,407,475,28,248,688,26,720,134 };
+        int h = 5;
+        int w = 4;
+        std::vector<int> horizontalCuts{3};
+        std::vector<int> verticalCuts{3};
+        auto res = s5425.maxArea(h,w,horizontalCuts,verticalCuts);
+        std::cout << "5425 res = " << res << std::endl;
+    }
+    {
+        Solution_5424 s5424;
+        std::vector<int> input{3,7};
+        auto res = s5424.maxProduct(input);
+        std::cout << "5424 res = " << res << std::endl;
+    }
+    {
+        Solution_1461 s1461;
+        std::string s = "00110110";
+        int k = 2;
+        auto res = s1461.hasAllCodes(s, k);
+        std::cout << "1461 res = " << res << std::endl;
+    }
     {
         Solution_376 s376;
         std::vector<int> input{1,7,4,9,2,5};
@@ -220,14 +346,6 @@ int main() {
         std::vector<bool> hasApple{false,false,true,false,true,true,false};
         auto res = s1443.minTime(n,edges,hasApple);
         std::cout<<"1443 res = "<<res<<std::endl;
-    }
-    {
-        Solution_5406 s5406;
-        int n = 4;
-        std::vector<std::vector<int>> edges{ std::vector<int>{0, 1} ,std::vector<int>{1, 2},std::vector < int>{0, 3}};
-        std::vector<bool> apples{true,true,true,true};
-        auto res = s5406.minTime(n, edges, apples);
-        std::cout << res << std::endl;
     }
     {
         std::vector<int> v{58,506,448,780,716,871,427,693,798,672,446,600,998,840,174,282,436,636,968,84,924,888,228,948,848,
