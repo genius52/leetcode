@@ -26,6 +26,7 @@
 #include "./graph/310. Minimum Height Trees.hpp"
 #include "./graph/355. Design Twitter.hpp"
 #include "./graph/5406.hpp"
+#include "./graph/1466. Reorder Routes to Make All Paths Lead to the City Zero.hpp"
 #include "./string/1446. Consecutive Characters.cpp"
 #include "./string/1451. Rearrange Words in a Sentence.hpp"
 #include "./string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -66,54 +67,6 @@ public:
 
 class Solution_5425 {
 public:
-    //int dfs_maxArea(int h, int w, int start_row, int start_col,int last_row,int last_col,std::set<int>& set_hor, std::set<int>& set_ver,vector<vector<bool>>& visited) {
-    //    if (start_row < 0 || start_row >= h || start_col < 0 || start_col >= w)
-    //        return 0;
-    //    if (visited[start_row][start_col])
-    //        return 0;
-    //    if (last_row != -1 && last_col != -1) {
-    //        if (set_hor.find(start_row) != set_hor.end() && last_row == start_row - 1)
-    //            return 0;
-    //        if (set_hor.find(last_row) != set_hor.end() && last_row == start_row + 1)
-    //            return 0;
-    //        if (set_ver.find(start_col) != set_ver.end() && last_col == start_col - 1)
-    //            return 0;
-    //        if (set_ver.find(last_col) != set_ver.end() && last_col == start_col + 1)
-    //            return 0;
-    //    }
-    //    visited[start_row][start_col] = true;
-    //    return 1 + dfs_maxArea(h, w, start_row - 1, start_col, start_row, start_col, set_hor, set_ver, visited) +
-    //        dfs_maxArea(h, w, start_row + 1, start_col, start_row, start_col, set_hor, set_ver, visited) +
-    //        dfs_maxArea(h, w, start_row, start_col - 1, start_row, start_col, set_hor, set_ver, visited) +
-    //        dfs_maxArea(h, w, start_row, start_col + 1, start_row, start_col, set_hor, set_ver, visited);
-    //}
-
-    //int maxArea(int h, int w, vector<int>& horizontalCuts, vector<int>& verticalCuts) {
-    //    std::vector<std::vector<bool>> visited;
-    //    visited.resize(h);
-    //    for (int i = 0; i < h; i++) {
-    //        visited[i].resize(w);
-    //    }
-    //    std::set<int> set_hor;
-    //    for (int i = 0; i < horizontalCuts.size(); i++) {
-    //        set_hor.insert(horizontalCuts[i]);
-    //    }
-    //    std::set<int> set_ver;
-    //    for (int i = 0; i < verticalCuts.size(); i++) {
-    //        set_ver.insert(verticalCuts[i]);
-    //    }
-    //    int res = 0;
-    //    for (int i = 0; i < h; i++) {
-    //        for (int j = 0; j < w; j++) {
-    //            if (visited[i][j])
-    //                continue;
-    //            int n = dfs_maxArea(h,w,i,j,-1,-1,set_hor,set_ver,visited);
-    //            if (n > res)
-    //                res = n;
-    //        }
-    //    }
-    //    return res;
-    //}
     int maxArea(int h, int w, vector<int>& horizontalCuts, vector<int>& verticalCuts) {
         int res = 0;
         std::sort(horizontalCuts.begin(), horizontalCuts.end());
@@ -125,6 +78,9 @@ public:
                 max_rowspan = horizontalCuts[i] - horizontalCuts[i - 1];
             }
         }
+        if (horizontalCuts[0] > max_rowspan) {
+            max_rowspan = horizontalCuts[0];
+        }
         if ((h - horizontalCuts[len_hor - 1]) > max_rowspan) {
             max_rowspan = h - horizontalCuts[len_hor - 1];
         }
@@ -134,6 +90,9 @@ public:
             if ((verticalCuts[j] - verticalCuts[j-1]) > max_colspan) {
                 max_colspan = verticalCuts[j] - verticalCuts[j - 1];
             }
+        }
+        if (verticalCuts[0] > max_colspan) {
+            max_colspan = verticalCuts[0];
         }
         if ((w - verticalCuts[len_ver - 1]) > max_colspan) {
             max_colspan = w - verticalCuts[len_ver - 1];
@@ -145,6 +104,18 @@ public:
 //
 
 int main() {
+    {
+        Solution_1466 s1466;
+        int n = 6;
+        std::vector<std::vector<int>> input;
+        input.push_back({ 0,1 });
+        input.push_back({ 1,3 });
+        input.push_back({ 2,3 });
+        input.push_back({ 4,0 });
+        input.push_back({ 4,5 });
+        auto res = s1466.minReorder(n, input);
+        std::cout << "5425 res = " << res << std::endl;
+    }
     {
         Solution_5425 s5425;
         //int h = 975;
