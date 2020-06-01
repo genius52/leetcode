@@ -28,13 +28,35 @@ class Solution_386 {
         }
     }
 public:
+//    vector<int> lexicalOrder(int n) {
+//        std::vector<int> res;
+//        res.resize(n);
+//        for(int i = 1;i <= n;i++){
+//            res[i - 1] = i;
+//        }
+//        std::sort(res.begin(),res.end(),cmp);
+//        return res;
+//    }
+
+    bool dfs_lexicalOrder(int num,int limit,std::vector<int>& record,int& pos){
+        if(num > limit)
+            return false;
+        record[pos++] = num;
+        num *= 10;
+        for(int i = 0;i <= 9;i++){
+            if(!dfs_lexicalOrder(num + i,limit,record,pos))
+                break;
+        }
+        return true;
+    }
+
     vector<int> lexicalOrder(int n) {
         std::vector<int> res;
         res.resize(n);
-        for(int i = 1;i <= n;i++){
-            res[i - 1] = i;
+        int pos = 0;
+        for(int i = 1;i <= 9;i++){
+            dfs_lexicalOrder(i,n,res,pos);
         }
-        std::sort(res.begin(),res.end(),cmp);
         return res;
     }
 };
