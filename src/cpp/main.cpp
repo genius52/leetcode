@@ -17,6 +17,7 @@
 #include "./number/343. Integer Break.hpp"
 #include "./number/373. Find K Pairs with Smallest Sums.hpp"
 #include "./number/376. Wiggle Subsequence.hpp"
+#include "./number/386. Lexicographical Numbers.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./graph/332. Reconstruct Itinerary.cpp"
@@ -31,7 +32,7 @@
 #include "./string/1451. Rearrange Words in a Sentence.hpp"
 #include "./string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
 #include "./string/1456. Maximum Number of Vowels in a Substring of Given Length.hpp"
-#include "./number/1461. Check If a String Contains All Binary Codes of Size K.hpp"
+//#include "./number/1461. Check If a String Contains All Binary Codes of Size K.hpp"
 #define x 9999
 #define max 9999
 int data[10][10];
@@ -105,6 +106,12 @@ public:
 
 int main() {
     {
+        Solution_386 s386;
+        int k = 13;
+        auto res = s386.lexicalOrder(k);
+        std::cout << "386 res = " << res.size() << std::endl;
+    }
+    {
         Solution_1466 s1466;
         int n = 6;
         std::vector<std::vector<int>> input;
@@ -136,11 +143,11 @@ int main() {
         std::cout << "5424 res = " << res << std::endl;
     }
     {
-        Solution_1461 s1461;
-        std::string s = "00110110";
-        int k = 2;
-        auto res = s1461.hasAllCodes(s, k);
-        std::cout << "1461 res = " << res << std::endl;
+//        Solution_1461 s1461;
+//        std::string s = "00110110";
+//        int k = 2;
+//        auto res = s1461.hasAllCodes(s, k);
+//        std::cout << "1461 res = " << res << std::endl;
     }
     {
         Solution_376 s376;
