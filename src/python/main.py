@@ -2,9 +2,12 @@ from functools import cmp_to_key
 from array import *
 from tree import *
 from other import *
-
+from Longest_Absolute_File_Path import *
 
 if __name__ == '__main__':
+    s388 = Solution_388()
+    res = s388.lengthLongestPath("dir")
+
     s1342 = Solution_1342()
     res = s1342.numberOfSteps(99)
 
