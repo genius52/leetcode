@@ -18,6 +18,7 @@
 #include "./number/373. Find K Pairs with Smallest Sums.hpp"
 #include "./number/376. Wiggle Subsequence.hpp"
 #include "./number/386. Lexicographical Numbers.hpp"
+#include "./number/390. Elimination Game.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./graph/332. Reconstruct Itinerary.cpp"
@@ -105,6 +106,11 @@ public:
 //
 
 int main() {
+    {
+        Solution_390 s390;
+        auto res = s390.lastRemaining(19);
+        std::cout << "390 res = " << res << std::endl;
+    }
     {
         Solution_386 s386;
         int k = 13;
