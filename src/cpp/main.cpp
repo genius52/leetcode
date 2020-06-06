@@ -8,6 +8,8 @@
 #include "other.h"
 #include "mystring.h"
 #include "tree.h"
+#include "./array/396. Rotate Function.hpp"
+#include "./array/417. Pacific Atlantic Water Flow.hpp"
 #include "./number/229. Majority Element II.hpp"
 #include "./number/220. Contains Duplicate III.hpp"
 #include "./number/1441. Build an Array With Stack Operations.hpp"
@@ -19,6 +21,7 @@
 #include "./number/376. Wiggle Subsequence.hpp"
 #include "./number/386. Lexicographical Numbers.hpp"
 #include "./number/390. Elimination Game.hpp"
+#include "./number/397. Integer Replacement.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./graph/332. Reconstruct Itinerary.cpp"
@@ -29,6 +32,7 @@
 #include "./graph/355. Design Twitter.hpp"
 #include "./graph/5406.hpp"
 #include "./graph/1466. Reorder Routes to Make All Paths Lead to the City Zero.hpp"
+#include "./graph/399. Evaluate Division.hpp"
 #include "./string/1446. Consecutive Characters.cpp"
 #include "./string/1451. Rearrange Words in a Sentence.hpp"
 #include "./string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -106,6 +110,48 @@ public:
 //
 
 int main() {
+    {
+        Solution_417 s417;
+        vector<vector<int>> matrix;
+//        matrix.push_back({1,2,2,3,5});
+//        matrix.push_back({3,2,3,4,4});
+//        matrix.push_back({2,4,5,3,1});
+//        matrix.push_back({6,7,1,4,5});
+//        matrix.push_back({5,1,1,2,4});
+        matrix.push_back({3,3,3});
+        matrix.push_back({3,1,3});
+        matrix.push_back({0,2,4});
+        //auto res = s417.pacificAtlantic(matrix);
+        auto res = s417.pacificAtlantic2(matrix);
+        std::cout << "417 res = " << res.size() << std::endl;
+    }
+    {
+        Solution_399 s399;
+        std::vector<std::vector<std::string>> equations;
+        equations.push_back(std::vector<std::string>{"a", "b"});
+        equations.push_back(std::vector<std::string>{"b", "c"});
+        std::vector<double> values{2.0, 3.0};
+        std::vector<std::vector<std::string>> queries;
+        queries.push_back(std::vector<std::string>{"a", "c"});
+        queries.push_back(std::vector<std::string>{"b", "a"});
+        queries.push_back(std::vector<std::string>{"a", "e"});
+        queries.push_back(std::vector<std::string>{"a", "a"});
+        queries.push_back(std::vector<std::string>{"x", "x"});
+        auto res = s399.calcEquation(equations,values,queries);
+        std::cout << "399 res = " << res.size() << std::endl;
+    }
+    {
+        Solution_397 s397;
+        int n = 7;
+        auto res = s397.integerReplacement(n);
+        std::cout << "397 res = " << res << std::endl;
+    }
+    {
+        Solution_396 s396;
+        std::vector<int> input{4, 3, 2, 6};
+        auto res = s396.maxRotateFunction(input);
+        std::cout << "390 res = " << res << std::endl;
+    }
     {
         Solution_390 s390;
         auto res = s390.lastRemaining(19);
