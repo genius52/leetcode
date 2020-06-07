@@ -3,3 +3,5 @@
 /.idea/
 /main.dSYM/
 main
+/out/
+/.vs/
