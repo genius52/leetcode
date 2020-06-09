@@ -37,6 +37,7 @@
 #include "./string/1451. Rearrange Words in a Sentence.hpp"
 #include "./string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
 #include "./string/1456. Maximum Number of Vowels in a Substring of Given Length.hpp"
+#include "./string/424. Longest Repeating Character Replacement.hpp"
 //#include "./number/1461. Check If a String Contains All Binary Codes of Size K.hpp"
 #define x 9999
 #define max 9999
@@ -110,6 +111,13 @@ public:
 //
 
 int main() {
+    {
+        Solution_424 s424;
+        std::string s = "ABAB";
+        int k = 2;
+        auto res = s424.characterReplacement(s,k);
+        std::cout<<"424 res = "<<res<<std::endl;
+    }
     {
         Solution_417 s417;
         vector<vector<int>> matrix;
