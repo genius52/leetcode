@@ -33,6 +33,7 @@
 #include "./graph/5406.hpp"
 #include "./graph/1466. Reorder Routes to Make All Paths Lead to the City Zero.hpp"
 #include "./graph/399. Evaluate Division.hpp"
+#include "./graph/433. Minimum Genetic Mutation.hpp"
 #include "./string/1446. Consecutive Characters.cpp"
 #include "./string/1451. Rearrange Words in a Sentence.hpp"
 #include "./string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -111,6 +112,19 @@ public:
 //
 
 int main() {
+    {
+        //start: "AAAAACCC"
+        //end:   "AACCCCCC"
+        //bank: ["AAAACCCC", "AAACCCCC", "AACCCCCC"]
+        //
+        //return: 3
+        Solution_433 s433;
+        std::string start = "AAAAACCC";
+        std::string end = "AACCCCCC";
+        std::vector<std::string> bank = {"AAAACCCC", "AAACCCCC", "AACCCCCC"};
+        auto res = s433.minMutation(start,end,bank);
+        std::cout<<"433 res = "<<res<<std::endl;
+    }
     {
         Solution_424 s424;
         std::string s = "ABAB";
