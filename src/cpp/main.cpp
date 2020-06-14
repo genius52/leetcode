@@ -10,6 +10,8 @@
 #include "tree.h"
 #include "./array/396. Rotate Function.hpp"
 #include "./array/417. Pacific Atlantic Water Flow.hpp"
+#include "./array/1470. Shuffle the Array.hpp"
+#include "./array/1471. The k Strongest Values in an Array.hpp"
 #include "./number/229. Majority Element II.hpp"
 #include "./number/220. Contains Duplicate III.hpp"
 #include "./number/1441. Build an Array With Stack Operations.hpp"
@@ -34,6 +36,7 @@
 #include "./graph/1466. Reorder Routes to Make All Paths Lead to the City Zero.hpp"
 #include "./graph/399. Evaluate Division.hpp"
 #include "./graph/433. Minimum Genetic Mutation.hpp"
+#include "./graph/1472. Design Browser History.hpp"
 #include "./string/1446. Consecutive Characters.cpp"
 #include "./string/1451. Rearrange Words in a Sentence.hpp"
 #include "./string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -53,65 +56,35 @@ std::mutex mtx;
 std::condition_variable gcv;
 bool g_ready = false;
 
-//Input: nums = [3,4,5,2]
-//Output: 12
-class Solution_5424 {
-public:
-    int maxProduct(vector<int>& nums) {
-        int res = -2147483648;
-        int len = nums.size();
-        for (int i = 0; i < len; i++) {
-            for (int j = 0; j < len; j++) {
-                if (i == j)
-                    continue;
-                int product = (nums[i] - 1) * (nums[j] - 1);
-                if (product > res)
-                    res = product;
-            }
-        }
-        return res;
-    }
-};
-
-class Solution_5425 {
-public:
-    int maxArea(int h, int w, vector<int>& horizontalCuts, vector<int>& verticalCuts) {
-        int res = 0;
-        std::sort(horizontalCuts.begin(), horizontalCuts.end());
-        std::sort(verticalCuts.begin(), verticalCuts.end());
-        int max_rowspan = 0;
-        int len_hor = horizontalCuts.size();
-        for (int i = 1; i < len_hor; i++) {
-            if ((horizontalCuts[i] - horizontalCuts[i-1]) > max_rowspan) {
-                max_rowspan = horizontalCuts[i] - horizontalCuts[i - 1];
-            }
-        }
-        if (horizontalCuts[0] > max_rowspan) {
-            max_rowspan = horizontalCuts[0];
-        }
-        if ((h - horizontalCuts[len_hor - 1]) > max_rowspan) {
-            max_rowspan = h - horizontalCuts[len_hor - 1];
-        }
-        int len_ver = verticalCuts.size();
-        int max_colspan = 0;
-        for (int j = 1; j < len_ver; j++) {
-            if ((verticalCuts[j] - verticalCuts[j-1]) > max_colspan) {
-                max_colspan = verticalCuts[j] - verticalCuts[j - 1];
-            }
-        }
-        if (verticalCuts[0] > max_colspan) {
-            max_colspan = verticalCuts[0];
-        }
-        if ((w - verticalCuts[len_ver - 1]) > max_colspan) {
-            max_colspan = w - verticalCuts[len_ver - 1];
-        }
-        return long(max_rowspan) * long(max_colspan) % 1000000007;
-    }
-};
-
-//
-
 int main() {
+    {
+        BrowserHistory browserHistory("leetcode.com");
+        browserHistory.visit("google.com");       // You are in "leetcode.com". Visit "google.com"
+        //browserHistory.visit("facebook.com");     // You are in "google.com". Visit "facebook.com"
+        //browserHistory.visit("youtube.com");      // You are in "facebook.com". Visit "youtube.com"
+        auto res = browserHistory.back(1);                   // You are in "youtube.com", move back to "facebook.com" return "facebook.com"
+        res = browserHistory.back(1);                   // You are in "facebook.com", move back to "google.com" return "google.com"
+        res = browserHistory.forward(1);                // You are in "google.com", move forward to "facebook.com" return "facebook.com"
+        browserHistory.visit("linkedin.com");     // You are in "facebook.com". Visit "linkedin.com"
+        res = browserHistory.forward(2);                // You are in "linkedin.com", you cannot move forward any steps.
+        res = browserHistory.back(2);                   // You are in "linkedin.com", move back two steps to "facebook.com" then to "google.com". return "google.com"
+        res = browserHistory.back(7);                   // You are in "google.com", you can move back only one step to "leetcode.com". return "leetcode.com"
+        std::cout << "5430 res = " << res << std::endl;
+    }
+    {
+        Solution_1471 s1471;
+        std::vector<int> input{ 1,2,3,4,5 };
+        int k = 2;
+        auto res = s1471.getStrongest(input, k);
+        std::cout << "5429 res = " << res.size() << std::endl;
+    }
+    {
+        Solution_1470 s1470;
+        std::vector<int> input{ 1,2,3,4,4,3,2,1 };
+        int n = 4;
+        auto res = s1470.shuffle(input, n);
+        std::cout << "5428 res = " << res.size() << std::endl;
+    }
     {
         //start: "AAAAACCC"
         //end:   "AACCCCCC"
