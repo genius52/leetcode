@@ -67,29 +67,45 @@ public:
         return -1;
     }
 
-    //int minMutation2(string start, string end, vector<string>& bank) {
-    //    int l = bank.size();
-    //    std::unordered_map<std::string,std::unordered_set<std::string>> graph;
-    //    for(int i = 0;i < l;i++){
-    //        for(int j = 0;j < l;j++){
-    //            if(i == j)
-    //                continue;
-    //            if(is_mutation(bank[i],bank[j]))
-    //                graph[bank[i]].insert(bank[j]);
-    //        }
-    //    }
-    //    for(int i = 0;i < l;i++){
-    //        if(is_mutation(bank[i],start))
-    //            graph[start].insert(bank[i]);
-    //    }
-    //    int res = 0;
-    //    std::unordered_set<std::string> visited;
-    //    std::queue<std::string> q;
-    //    q.push(start);
-    //    int cnt = 0;
-    //    while(q.empty()){
-    //        q.front();
-    //    }
-    //    return cnt;
-    //}
+    int minMutation2(string start, string end, vector<string>& bank) {
+        int l = bank.size();
+        std::unordered_map<std::string,std::unordered_set<std::string>> graph;
+        for(int i = 0;i < l;i++){
+            for(int j = 0;j < l;j++){
+                if(i == j)
+                    continue;
+                if(is_mutation(bank[i],bank[j]))
+                    graph[bank[i]].insert(bank[j]);
+            }
+        }
+        for(int i = 0;i < l;i++){
+            if(is_mutation(bank[i],start))
+                graph[start].insert(bank[i]);
+        }
+        int res = 0;
+        std::unordered_set<std::string> visited;
+        //visited.insert(start);
+        std::queue<std::string> q;
+        q.push(start);
+        int steps = 0;
+        while(!q.empty()){
+            int len_q = q.size();
+//            if(steps > l)
+//                return -1;
+            for(int i = 0;i < len_q;i++){
+                auto str = q.front();
+                q.pop();
+                if(str == end)
+                    return steps;
+                if(visited.find(str) == visited.end()){
+                    for(auto it = graph[str].begin();it != graph[str].end();it++){
+                        q.push(*it);
+                    }
+                    visited.insert(str);
+                }
+            }
+            steps++;
+        }
+        return -1;
+    }
 };
