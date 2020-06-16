@@ -13,6 +13,7 @@
 #include "./array/1470. Shuffle the Array.hpp"
 #include "./array/1471. The k Strongest Values in an Array.hpp"
 #include "./array/1465. Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts.hpp"
+#include "./array/1481. Least Number of Unique Integers after K Removals.hpp"
 #include "./number/229. Majority Element II.hpp"
 #include "./number/220. Contains Duplicate III.hpp"
 #include "./number/1441. Build an Array With Stack Operations.hpp"
@@ -58,123 +59,15 @@ std::mutex mtx;
 std::condition_variable gcv;
 bool g_ready = false;
 
-class Solution_5436 {
-public:
-    vector<int> runningSum(vector<int>& nums) {
-        int len = nums.size();
-        std::vector<int> res;
-        res.resize(len);
-        res[0] = nums[0];
-        for (int i = 1; i < len; i++) {
-            res[i] = res[i - 1] + nums[i];
-        }
-        return res;
-    }
-};
 
-class Solution_5437 {
-public:
-    int findLeastNumOfUniqueInts(vector<int>& arr, int k) {
-        std::unordered_map<int, int> record;
-        int len = arr.size();
-        for (int i = 0; i < len; i++) {
-            record[arr[i]]++;
-        }
-        int total = record.size();
-        std::map<int, std::vector<int>> cnt_record;
-        for (auto it = record.begin(); it != record.end(); it++) {
-            cnt_record[(*it).second].push_back((*it).first);
-        }
-        for (auto it = cnt_record.begin(); it != cnt_record.end(); it++) {
-            auto cnt = (*it).first;
-            auto num_len = (*it).second.size();
-            while (num_len > 0) {
-                if (k < cnt)
-                    return total;
-                k = k - cnt;
-                total--;
-                num_len--;
-            }
-        }
-        return total;
-    }
-};
-
-
-class Solution_5437 {
-public:
-    int findLeastNumOfUniqueInts(vector<int>& arr, int k) {
-        std::unordered_map<int, int> record;
-        int len = arr.size();
-        for (int i = 0; i < len; i++) {
-            record[arr[i]]++;
-        }
-        int total = record.size();
-        std::map<int, std::vector<int>> cnt_record;
-        for (auto it = record.begin(); it != record.end(); it++) {
-            cnt_record[(*it).second].push_back((*it).first);
-        }
-        for (auto it = cnt_record.begin(); it != cnt_record.end(); it++) {
-            auto cnt = (*it).first;
-            auto num_len = (*it).second.size();
-            while (num_len > 0) {
-                if (k < cnt)
-                    return total;
-                k = k - cnt;
-                total--;
-                num_len--;
-            }
-        }
-        return total;
-    }
-};
-
-class Solution_5438 {
-public:
-    int minDays(vector<int>& bloomDay, int m, int k) {
-        int len = bloomDay.size();
-        if (m * k > len)
-            return -1;
-        std::set<int> s(bloomDay.begin(), bloomDay.end(), std::less<int>());
-        std::set<int>::reverse_iterator it = s.rbegin();
-        int min_days = *it;
-        while (it != s.rend()) {
-            int flowers = 0;
-            int i = 0;
-            int days = *it;
-            while (i <= len - k) {
-                bool can_bloom = true;
-                for (int j = 0; j < k; j++) {
-                    if (bloomDay[i + j] > days) {
-                        can_bloom = false;
-                        i = i + j + 1;
-                        break;
-                    }
-                }
-                if (can_bloom) {
-                    flowers++;
-                    i = i + k;
-                }
-                if (flowers >= m)
-                    break;
-            }
-            if (flowers >= m)
-                min_days = *it;
-            else
-                return min_days;
-            it++;
-        }
-        return min_days;
-    }
-};
 
 int main() {
     {
-        Solution_5437 s5437;
+        Solution_1481 s1481;
         std::vector<int> input{ 4, 3, 1, 1, 3, 3, 2 };
         int k = 3;
-        auto res = s5437.findLeastNumOfUniqueInts(input,k);
-        std::cout << "5437 res = " << res << std::endl;
+        auto res = s1481.findLeastNumOfUniqueInts(input,k);
+        std::cout << "1481 res = " << res << std::endl;
     }
     {
         BrowserHistory browserHistory("leetcode.com");
@@ -834,19 +727,3 @@ std::vector<std::string> format_string(std::vector<std::string> v){
     }
     return res;
 }
-//int getlastlength(std::string s){
-//    auto l = s.length();
-//    int res = 0;
-//    bool findword = false;
-//    for (int i = l - 1;i >= 0;i--){
-//        if (s[i] == ' '){
-//            if(findword)
-//                break;
-//        }else{
-//            if (!findword)
-//                findword = true;
-//            res++;
-//        }
-//    }
-//    return res;
-//}
