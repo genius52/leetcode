@@ -27,6 +27,7 @@
 #include "./number/390. Elimination Game.hpp"
 #include "./number/397. Integer Replacement.hpp"
 #include "./number/1464. Maximum Product of Two Elements in an Array.hpp"
+#include "./number/1475. Final Prices With a Special Discount in a Shop.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./graph/332. Reconstruct Itinerary.cpp"
@@ -63,6 +64,12 @@ bool g_ready = false;
 
 int main() {
     {
+        Solution_1475 s1475;
+        std::vector<int> input{10,1,1,6};
+        auto res = s1475.finalPrices(input);
+        std::cout<<"1475 res = "<<res.size() << std::endl;
+    }
+    {
         Solution_1481 s1481;
         std::vector<int> input{ 4, 3, 1, 1, 3, 3, 2 };
         int k = 3;
@@ -88,14 +95,14 @@ int main() {
         std::vector<int> input{ 1,2,3,4,5 };
         int k = 2;
         auto res = s1471.getStrongest(input, k);
-        std::cout << "5429 res = " << res.size() << std::endl;
+        std::cout << "1471 res = " << res.size() << std::endl;
     }
     {
         Solution_1470 s1470;
         std::vector<int> input{ 1,2,3,4,4,3,2,1 };
         int n = 4;
         auto res = s1470.shuffle(input, n);
-        std::cout << "5428 res = " << res.size() << std::endl;
+        std::cout << "1470 res = " << res.size() << std::endl;
     }
     {
         //start: "AAAAACCC"
@@ -107,7 +114,7 @@ int main() {
         std::string start = "AAAAACCC";
         std::string end = "AACCCCCC";
         std::vector<std::string> bank = {"AAAACCCC", "AAACCCCC", "AACCCCCC"};
-        auto res = s433.minMutation(start,end,bank);
+        auto res = s433.minMutation2(start,end,bank);
         std::cout<<"433 res = "<<res<<std::endl;
     }
     {
