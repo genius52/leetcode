@@ -36,16 +36,17 @@
 #include "./graph/1444. Number of Ways of Cutting a Pizza.hpp"
 #include "./graph/310. Minimum Height Trees.hpp"
 #include "./graph/355. Design Twitter.hpp"
-#include "./graph/5406.hpp"
 #include "./graph/1466. Reorder Routes to Make All Paths Lead to the City Zero.hpp"
 #include "./graph/399. Evaluate Division.hpp"
 #include "./graph/433. Minimum Genetic Mutation.hpp"
 #include "./graph/1472. Design Browser History.hpp"
+#include "./graph/1476. Subrectangle Queries.hpp"
 #include "./string/1446. Consecutive Characters.cpp"
 #include "./string/1451. Rearrange Words in a Sentence.hpp"
 #include "./string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
 #include "./string/1456. Maximum Number of Vowels in a Substring of Given Length.hpp"
 #include "./string/424. Longest Repeating Character Replacement.hpp"
+#include "./list/1483. Kth Ancestor of a Tree Node.hpp"
 //#include "./number/1461. Check If a String Contains All Binary Codes of Size K.hpp"
 #define x 9999
 #define max 9999
@@ -63,6 +64,20 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        std::vector<std::vector<int>> input{{1,2,1},{4,3,4},{3,2,1},{1,1,1}};
+        SubrectangleQueries query(input);
+        query.updateSubrectangle(0,0,3,2,5);
+        auto res = query.getValue(1,2);
+        std::cout<<"1476 res = "<<res << std::endl;
+    }
+    {
+        int n = 7;
+        std::vector<int> input{-1, 0, 0, 1, 1, 2, 2};
+        TreeAncestor tree(n,input);
+        auto res = tree.getKthAncestor(6,3);
+        std::cout<<"1475 res = "<<res << std::endl;
+    }
     {
         Solution_1475 s1475;
         std::vector<int> input{10,1,1,6};
