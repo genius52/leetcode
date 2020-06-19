@@ -14,6 +14,8 @@
 #include "./array/1471. The k Strongest Values in an Array.hpp"
 #include "./array/1465. Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts.hpp"
 #include "./array/1481. Least Number of Unique Integers after K Removals.hpp"
+#include "./array/1477. Find Two Non-overlapping Sub-arrays Each With Target Sum.hpp"
+#include "./array/435. Non-overlapping Intervals.hpp"
 #include "./number/229. Majority Element II.hpp"
 #include "./number/220. Contains Duplicate III.hpp"
 #include "./number/1441. Build an Array With Stack Operations.hpp"
@@ -62,8 +64,20 @@ std::condition_variable gcv;
 bool g_ready = false;
 
 
-
 int main() {
+    {
+        Solution_435 s435;
+        std::vector<std::vector<int>> input{{1,100},{11,22},{1,11},{2,12}};
+        auto res = s435.eraseOverlapIntervals(input);
+        std::cout<<"435 res = "<<res << std::endl;
+    }
+    {
+        Solution_1477 s1477;
+        std::vector<int> input{33,15,14,2,4,39,23,1,3,2,62,1,2,1,2,43,7,9,2,3,1,3,45,17,3,2,1,7,6,21,34,65,1,2};
+        int target = 68;
+        auto res = s1477.minSumOfLengths(input,target);
+        std::cout<<"1477 res = "<<res << std::endl;
+    }
     {
         std::vector<std::vector<int>> input{{1,2,1},{4,3,4},{3,2,1},{1,1,1}};
         SubrectangleQueries query(input);
