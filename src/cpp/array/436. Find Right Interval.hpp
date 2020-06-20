@@ -11,14 +11,14 @@ public:
         int len = intervals.size();
         std::vector<int> res;
         res.resize(len);
-        std::map<int,std::vector<int>> record;
+        std::map<int,int> record;
         for(int i = 0;i < len;i++){
-            record[intervals[i][0]].push_back(i);
+            record[intervals[i][0]] = i;
         }
         for(int i = 0;i < len;i++){
             auto it = record.lower_bound(intervals[i][1]);
             if(it != record.end())
-                res[i] = (*it).second[0];
+                res[i] = (*it).second;
             else
                 res[i] = -1;
         }
