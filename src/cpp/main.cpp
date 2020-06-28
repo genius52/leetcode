@@ -34,6 +34,8 @@
 #include "./number/1475. Final Prices With a Special Discount in a Shop.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
+#include "./tree/450. Delete Node in a BST.hpp"
+#include "./tree/449. Serialize and Deserialize BST.hpp"
 #include "./graph/332. Reconstruct Itinerary.cpp"
 #include "./graph/207. Course Schedule.hpp"
 #include "./graph/210. Course Schedule II.hpp"
@@ -68,6 +70,42 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Codec_449 s449;
+        TreeNode t5(5);
+        TreeNode t3(3);
+        TreeNode t6(6);
+        TreeNode t2(2);
+        TreeNode t4(4);
+        TreeNode t7(7);
+        t5.left = &t3;
+        t5.right = &t6;
+        t3.left = &t2;
+        t3.right = &t4;
+        t6.right = &t7;
+        auto s = s449.serialize(&t5);
+        auto t = s449.deserialize(s);
+        std::cout<<"449 s = " << s<<std::endl;
+    }
+    {
+        //root = [5,3,6,2,4,null,7]
+        //key = 3
+        Solution_450 s450;
+        TreeNode t5(5);
+        TreeNode t3(3);
+        TreeNode t6(6);
+        TreeNode t2(2);
+        TreeNode t4(4);
+        TreeNode t7(7);
+        t5.left = &t3;
+        t5.right = &t6;
+        t3.left = &t2;
+        t3.right = &t4;
+        t6.right = &t7;
+        int key = 3;
+        auto res = s450.deleteNode(&t5,key);
+        std::cout<< "450 res = "<<res->val << std::endl;
+    }
     {
         Solution_445 s445;
         //[1]
