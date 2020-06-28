@@ -49,6 +49,7 @@
 #include "./graph/433. Minimum Genetic Mutation.hpp"
 #include "./graph/1472. Design Browser History.hpp"
 #include "./graph/1476. Subrectangle Queries.hpp"
+#include "./graph/1496. Path Crossing.hpp"
 #include "./string/1446. Consecutive Characters.cpp"
 #include "./string/1451. Rearrange Words in a Sentence.hpp"
 #include "./string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -72,6 +73,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_1496 s1496;
+        std::string path = "W";
+        auto res = s1496.isPathCrossing(path);
+        std::cout << "1496 res = "<<res<<std::endl;
+    }
     {
         Solution_1493 s1493;
         std::vector<int> input{0,1,1,1,0,1,1,0,1};
