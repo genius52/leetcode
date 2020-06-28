@@ -18,6 +18,7 @@
 #include "./array/1477. Find Two Non-overlapping Sub-arrays Each With Target Sum.hpp"
 #include "./array/435. Non-overlapping Intervals.hpp"
 #include "./array/436. Find Right Interval.hpp"
+#include "./array/1493. Longest Subarray of 1's After Deleting One Element.hpp"
 #include "./number/229. Majority Element II.hpp"
 #include "./number/220. Contains Duplicate III.hpp"
 #include "./number/1441. Build an Array With Stack Operations.hpp"
@@ -71,6 +72,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_1493 s1493;
+        std::vector<int> input{0,1,1,1,0,1,1,0,1};
+        auto res = s1493.longestSubarray(input);
+        std::cout<<"1493 res = "<<res<<std::endl;
+    }
     {
         Solution_1492 s1492;
         int n = 24;
