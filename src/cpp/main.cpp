@@ -32,6 +32,7 @@
 #include "./number/397. Integer Replacement.hpp"
 #include "./number/1464. Maximum Product of Two Elements in an Array.hpp"
 #include "./number/1475. Final Prices With a Special Discount in a Shop.hpp"
+#include "./number/1492. The kth Factor of n.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./tree/450. Delete Node in a BST.hpp"
@@ -70,6 +71,13 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_1492 s1492;
+        int n = 24;
+        int k = 6;
+        auto res = s1492.kthFactor(n,k);
+        std::cout<<res<<std::endl;
+    }
     {
         Codec_449 s449;
         TreeNode t5(5);
