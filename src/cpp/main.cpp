@@ -19,6 +19,7 @@
 #include "./array/435. Non-overlapping Intervals.hpp"
 #include "./array/436. Find Right Interval.hpp"
 #include "./array/1493. Longest Subarray of 1's After Deleting One Element.hpp"
+#include "./array/1497. Check If Array Pairs Are Divisible by k.hpp"
 #include "./number/229. Majority Element II.hpp"
 #include "./number/220. Contains Duplicate III.hpp"
 #include "./number/1441. Build an Array With Stack Operations.hpp"
@@ -73,6 +74,13 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_1497 s1497;
+        std::vector<int> input{-1,1,-2,2,-3,3,-4,4};
+        int k = 3;
+        auto res = s1497.canArrange(input,k);
+        std::cout << "1497 res = "<<res<<std::endl;
+    }
     {
         Solution_1496 s1496;
         std::string path = "W";
