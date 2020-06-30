@@ -35,6 +35,7 @@
 #include "./number/1464. Maximum Product of Two Elements in an Array.hpp"
 #include "./number/1475. Final Prices With a Special Discount in a Shop.hpp"
 #include "./number/1492. The kth Factor of n.hpp"
+#include "./number/1498. Number of Subsequences That Satisfy the Given Sum Condition.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./tree/450. Delete Node in a BST.hpp"
@@ -74,6 +75,13 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_1498 s1498;
+        std::vector<int> input{5,2,4,1,7,6,8};
+        int target = 16;
+        auto res = s1498.numSubseq(input,target);
+        std::cout<<"1498 res = "<<res<<std::endl;
+    }
     {
         Solution_1497 s1497;
         std::vector<int> input{-1,1,-2,2,-3,3,-4,4};
