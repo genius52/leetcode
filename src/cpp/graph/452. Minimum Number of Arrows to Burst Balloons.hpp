@@ -18,7 +18,6 @@ public:
         std::sort(points.begin(),points.end(),my_sort);
         int cnt = 1;
         int pre_shot_pos = points[0][1];
-
         for(int i = 1;i < len;i++){
             if(points[i][0] <= pre_shot_pos){
                 pre_shot_pos = min(points[i][1],pre_shot_pos);
