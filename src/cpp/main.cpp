@@ -52,6 +52,7 @@
 #include "./graph/1472. Design Browser History.hpp"
 #include "./graph/1476. Subrectangle Queries.hpp"
 #include "./graph/1496. Path Crossing.hpp"
+#include "./graph/452. Minimum Number of Arrows to Burst Balloons.hpp"
 #include "./string/1446. Consecutive Characters.cpp"
 #include "./string/1451. Rearrange Words in a Sentence.hpp"
 #include "./string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -75,6 +76,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_452 s452;
+        std::vector<std::vector<int>> input{{9,12},{1,10},{4,11},{8,12},{3,9},{6,9},{6,7}};
+        auto res = s452.findMinArrowShots(input);
+        std::cout<<"452 res = "<<res<<std::endl;
+    }
     {
         Solution_1498 s1498;
         std::vector<int> input{5,2,4,1,7,6,8};
