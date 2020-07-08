@@ -39,6 +39,7 @@
 #include "./number/1498. Number of Subsequences That Satisfy the Given Sum Condition.hpp"
 #include "./number/464. Can I Win.hpp"
 #include "number/492. Construct the Rectangle.hpp"
+#include "number/507. Perfect Number.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./tree/450. Delete Node in a BST.hpp"
@@ -80,6 +81,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_507 s507;
+        int num = 6;
+        auto res = s507.checkPerfectNumber(num);
+        std::cout<<"507 res = "<<res<<std::endl;
+    }
     {
         Solution_492 s492;
         int area = 12;
