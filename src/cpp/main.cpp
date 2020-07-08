@@ -21,6 +21,7 @@
 #include "./array/1493. Longest Subarray of 1's After Deleting One Element.hpp"
 #include "./array/1497. Check If Array Pairs Are Divisible by k.hpp"
 #include "./array/456. 132 Pattern.hpp"
+#include "array/532. K-diff Pairs in an Array.hpp"
 #include "./number/229. Majority Element II.hpp"
 #include "./number/220. Contains Duplicate III.hpp"
 #include "./number/1441. Build an Array With Stack Operations.hpp"
@@ -81,6 +82,13 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_532 s532;
+        std::vector<int> input{1,1};
+        int k = 0;
+        auto res = s532.findPairs(input,k);
+        std::cout<<"532 res = "<<res<<std::endl;
+    }
     {
         Solution_507 s507;
         int num = 6;
