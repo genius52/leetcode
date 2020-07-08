@@ -37,6 +37,7 @@
 #include "./number/1475. Final Prices With a Special Discount in a Shop.hpp"
 #include "./number/1492. The kth Factor of n.hpp"
 #include "./number/1498. Number of Subsequences That Satisfy the Given Sum Condition.hpp"
+#include "./number/464. Can I Win.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./tree/450. Delete Node in a BST.hpp"
@@ -59,6 +60,7 @@
 #include "./string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
 #include "./string/1456. Maximum Number of Vowels in a Substring of Given Length.hpp"
 #include "./string/424. Longest Repeating Character Replacement.hpp"
+#include "./string/482. License Key Formatting.hpp"
 #include "./list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "./list/445. Add Two Numbers II.hpp"
 //#include "./number/1461. Check If a String Contains All Binary Codes of Size K.hpp"
@@ -77,6 +79,20 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_482 s482;
+        std::string s = "--a-a-a-a--";
+        int k = 2;
+        auto res = s482.licenseKeyFormatting(s,k);
+        std::cout<<"482 res = "<<res<<std::endl;
+    }
+    {
+        Solution_464 s464;
+        int maxChoosableInteger = 10;
+        int desiredTotal = 11;
+        auto res = s464.canIWin(maxChoosableInteger,desiredTotal);
+        std::cout<<"464 res = "<<res<<std::endl;
+    }
     {
         Solution_456 s456;
         std::vector<int> input{-2,1,2,-2,1,2};
