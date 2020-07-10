@@ -22,6 +22,7 @@
 #include "./array/1497. Check If Array Pairs Are Divisible by k.hpp"
 #include "./array/456. 132 Pattern.hpp"
 #include "array/532. K-diff Pairs in an Array.hpp"
+#include "array/598. Range Addition II.hpp"
 #include "./number/229. Majority Element II.hpp"
 #include "./number/220. Contains Duplicate III.hpp"
 #include "./number/1441. Build an Array With Stack Operations.hpp"
@@ -83,8 +84,16 @@ bool g_ready = false;
 
 int main() {
     {
+        Solution_598 s598;
+        int m = 3;
+        int n = 3;
+        std::vector<std::vector<int>> input{{2,2},{3,3}};
+        auto res = s598.maxCount(m,n,input);
+        std::cout<<"598 res = "<<res<<std::endl;
+    }
+    {
         Solution_532 s532;
-        std::vector<int> input{1,1};
+        std::vector<int> input{1, 3, 1, 5, 4};
         int k = 0;
         auto res = s532.findPairs(input,k);
         std::cout<<"532 res = "<<res<<std::endl;
