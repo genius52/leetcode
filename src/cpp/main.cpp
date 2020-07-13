@@ -43,6 +43,7 @@
 #include "./number/464. Can I Win.hpp"
 #include "number/492. Construct the Rectangle.hpp"
 #include "number/507. Perfect Number.hpp"
+#include "number/703. Kth Largest Element in a Stream.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./tree/450. Delete Node in a BST.hpp"
@@ -84,6 +85,13 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        std::vector<int> input{};
+        int k = 1;
+        KthLargest s703(k,input);
+        auto res = s703.add(3);
+        std::cout<<"703 res = "<<res<<std::endl;
+    }
     {
         Solution_661 s661;
         std::vector<std::vector<int>> input{{1,1,1},{1,0,1},{1,1,1}};
