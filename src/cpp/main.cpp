@@ -44,6 +44,7 @@
 #include "number/492. Construct the Rectangle.hpp"
 #include "number/507. Perfect Number.hpp"
 #include "number/703. Kth Largest Element in a Stream.hpp"
+#include "number/682. Baseball Game.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./tree/450. Delete Node in a BST.hpp"
@@ -85,6 +86,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_682 s682;
+        std::vector<std::string> input{"5","2","C","D","+"};
+        auto res = s682.calPoints(input);
+        std::cout<<"682 res = "<<res<<std::endl;
+    }
     {
         std::vector<int> input{};
         int k = 1;
