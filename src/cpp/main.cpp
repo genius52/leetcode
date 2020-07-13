@@ -23,6 +23,7 @@
 #include "./array/456. 132 Pattern.hpp"
 #include "array/532. K-diff Pairs in an Array.hpp"
 #include "array/598. Range Addition II.hpp"
+#include "array/661. Image Smoother.hpp"
 #include "./number/229. Majority Element II.hpp"
 #include "./number/220. Contains Duplicate III.hpp"
 #include "./number/1441. Build an Array With Stack Operations.hpp"
@@ -83,6 +84,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_661 s661;
+        std::vector<std::vector<int>> input{{1,1,1},{1,0,1},{1,1,1}};
+        auto res = s661.imageSmoother(input);
+        std::cout<<"661 res = "<<res.size()<<std::endl;
+    }
     {
         Solution_598 s598;
         int m = 3;
