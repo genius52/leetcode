@@ -45,6 +45,7 @@
 #include "number/507. Perfect Number.hpp"
 #include "number/703. Kth Largest Element in a Stream.hpp"
 #include "number/682. Baseball Game.hpp"
+#include "number/717. 1-bit and 2-bit Characters.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./tree/450. Delete Node in a BST.hpp"
@@ -87,6 +88,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_717 s717;
+        std::vector<int> input{1,1,1,0};
+        auto res = s717.isOneBitCharacter(input);
+        std::cout<<"717 res = "<<res<<std::endl;
+    }
     {
         Solution_1507 s1507;
         std::string date = "20th Oct 2052";
