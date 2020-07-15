@@ -68,6 +68,7 @@
 #include "./string/1456. Maximum Number of Vowels in a Substring of Given Length.hpp"
 #include "./string/424. Longest Repeating Character Replacement.hpp"
 #include "./string/482. License Key Formatting.hpp"
+#include "string/1507. Reformat Date.hpp"
 #include "./list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "./list/445. Add Two Numbers II.hpp"
 //#include "./number/1461. Check If a String Contains All Binary Codes of Size K.hpp"
@@ -86,6 +87,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_1507 s1507;
+        std::string date = "20th Oct 2052";
+        auto res = s1507.reformatDate(date);
+        std::cout<<"1507 res = "<<res<<std::endl;
+    }
     {
         Solution_682 s682;
         std::vector<std::string> input{"5","2","C","D","+"};
