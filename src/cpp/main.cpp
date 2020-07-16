@@ -71,6 +71,7 @@
 #include "./string/482. License Key Formatting.hpp"
 #include "string/1507. Reformat Date.hpp"
 #include "string/744. Find Smallest Letter Greater Than Target.hpp"
+#include "string/748. Shortest Completing Word.hpp"
 #include "./list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "./list/445. Add Two Numbers II.hpp"
 //#include "./number/1461. Check If a String Contains All Binary Codes of Size K.hpp"
@@ -89,6 +90,13 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_748 s748;
+        std::string licensePlate = "1s3 456";
+        std::vector<string> words{"looks", "pest", "stew", "show"};
+        auto res = s748.shortestCompletingWord(licensePlate,words);
+        std::cout<<"748 res = "<<res<<std::endl;
+    }
     {
         Solution_744 s744;
         std::vector<char> input{'c', 'f', 'j'};
