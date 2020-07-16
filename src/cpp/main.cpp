@@ -70,6 +70,7 @@
 #include "./string/424. Longest Repeating Character Replacement.hpp"
 #include "./string/482. License Key Formatting.hpp"
 #include "string/1507. Reformat Date.hpp"
+#include "string/744. Find Smallest Letter Greater Than Target.hpp"
 #include "./list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "./list/445. Add Two Numbers II.hpp"
 //#include "./number/1461. Check If a String Contains All Binary Codes of Size K.hpp"
@@ -88,6 +89,13 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_744 s744;
+        std::vector<char> input{'c', 'f', 'j'};
+        char target = 'c';
+        auto res = s744.nextGreatestLetter(input,target);
+        std::cout<<"744 res = "<<res<<std::endl;
+    }
     {
         Solution_717 s717;
         std::vector<int> input{1,1,1,0};
