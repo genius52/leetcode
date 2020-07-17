@@ -46,6 +46,7 @@
 #include "number/703. Kth Largest Element in a Stream.hpp"
 #include "number/682. Baseball Game.hpp"
 #include "number/717. 1-bit and 2-bit Characters.hpp"
+#include "number/762. Prime Number of Set Bits in Binary Representation.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./tree/450. Delete Node in a BST.hpp"
@@ -90,6 +91,13 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_762 s762;
+        int L = 10;
+        int R = 15;
+        auto res = s762.countPrimeSetBits(L,R);
+        std::cout<<"762 res = "<<res<<std::endl;
+    }
     {
         Solution_748 s748;
         std::string licensePlate = "1s3 456";
