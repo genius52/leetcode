@@ -95,7 +95,7 @@ int main() {
         Solution_762 s762;
         int L = 10;
         int R = 15;
-        auto res = s762.countPrimeSetBits(L,R);
+        auto res = s762.countPrimeSetBits2(L,R);
         std::cout<<"762 res = "<<res<<std::endl;
     }
     {
