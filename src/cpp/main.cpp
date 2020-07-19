@@ -74,6 +74,7 @@
 #include "string/1507. Reformat Date.hpp"
 #include "string/744. Find Smallest Letter Greater Than Target.hpp"
 #include "string/748. Shortest Completing Word.hpp"
+#include "string/806. Number of Lines To Write String.hpp"
 #include "./list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "./list/445. Add Two Numbers II.hpp"
 //#include "./number/1461. Check If a String Contains All Binary Codes of Size K.hpp"
@@ -92,6 +93,13 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_806 s806;
+        std::vector<int> width{10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10};
+        std::string S = "abcdefghijklmnopqrstuvwxyz";
+        auto res = s806.numberOfLines(width,S);
+        std::cout<<"806 res = "<<res[0] << res[1]<<std::endl;
+    }
     {
         Solution_788 s788;
         auto res = s788.rotatedDigits(20);
