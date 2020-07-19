@@ -49,6 +49,7 @@
 #include "number/762. Prime Number of Set Bits in Binary Representation.hpp"
 #include "number/788. Rotated Digits.hpp"
 #include "number/812. Largest Triangle Area.hpp"
+#include "number/1518. Water Bottles.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./tree/450. Delete Node in a BST.hpp"
@@ -94,6 +95,13 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_1518 s1518;
+        int numBottles = 2;
+        int numExchange = 3;
+        auto res = s1518.numWaterBottles(numBottles,numExchange);
+        std::cout<<"1518 res = "<<res<<std::endl;
+    }
     {
         Solution_812 s812;
         std::vector<std::vector<int>> input{{1,0},{0,0},{0,1}};
