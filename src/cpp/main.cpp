@@ -48,6 +48,7 @@
 #include "number/717. 1-bit and 2-bit Characters.hpp"
 #include "number/762. Prime Number of Set Bits in Binary Representation.hpp"
 #include "number/788. Rotated Digits.hpp"
+#include "number/812. Largest Triangle Area.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./tree/450. Delete Node in a BST.hpp"
@@ -93,6 +94,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_812 s812;
+        std::vector<std::vector<int>> input{{1,0},{0,0},{0,1}};
+        auto res = s812.largestTriangleArea(input);
+        std::cout<<"812 res = "<<res<<std::endl;
+    }
     {
         Solution_806 s806;
         std::vector<int> width{10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10};
