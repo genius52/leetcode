@@ -77,6 +77,7 @@
 #include "string/744. Find Smallest Letter Greater Than Target.hpp"
 #include "string/748. Shortest Completing Word.hpp"
 #include "string/806. Number of Lines To Write String.hpp"
+#include "string/824. Goat Latin.hpp"
 #include "./list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "./list/445. Add Two Numbers II.hpp"
 //#include "./number/1461. Check If a String Contains All Binary Codes of Size K.hpp"
@@ -95,6 +96,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_824 s824;
+        std::string s = "The quick brown fox jumped over the lazy dog";
+        auto res = s824.toGoatLatin(s);
+        std::cout<<"824 res = "<<res<<std::endl;
+    }
     {
         Solution_1518 s1518;
         int numBottles = 2;
