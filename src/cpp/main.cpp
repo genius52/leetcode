@@ -69,6 +69,7 @@
 #include "./graph/1496. Path Crossing.hpp"
 #include "./graph/452. Minimum Number of Arrows to Burst Balloons.hpp"
 #include "graph/874. Walking Robot Simulation.hpp"
+#include "graph/883. Projection Area of 3D Shapes.hpp"
 #include "./string/1446. Consecutive Characters.cpp"
 #include "./string/1451. Rearrange Words in a Sentence.hpp"
 #include "./string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -98,6 +99,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_883 s883;
+        std::vector<std::vector<int>> grid{{2,2,2},{2,1,2},{2,2,2}};
+        auto res = s883.projectionArea(grid);
+        std::cout<<"883 res = "<<res<<std::endl;
+    }
     {
         Solution_874 s874;
         std::vector<int> commands{4,-1,3};
