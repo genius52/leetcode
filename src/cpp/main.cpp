@@ -68,6 +68,7 @@
 #include "./graph/1476. Subrectangle Queries.hpp"
 #include "./graph/1496. Path Crossing.hpp"
 #include "./graph/452. Minimum Number of Arrows to Burst Balloons.hpp"
+#include "graph/874. Walking Robot Simulation.hpp"
 #include "./string/1446. Consecutive Characters.cpp"
 #include "./string/1451. Rearrange Words in a Sentence.hpp"
 #include "./string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -97,6 +98,13 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_874 s874;
+        std::vector<int> commands{4,-1,3};
+        std::vector<vector<int>> obstacles{};
+        auto res = s874.robotSim(commands,obstacles);
+        std::cout<<"874 res = "<<res<<std::endl;
+    }
     {
         Solution_868 s868;
         int N = 8;
