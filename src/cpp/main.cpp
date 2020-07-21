@@ -50,6 +50,7 @@
 #include "number/788. Rotated Digits.hpp"
 #include "number/812. Largest Triangle Area.hpp"
 #include "number/1518. Water Bottles.hpp"
+#include "number/868. Binary Gap.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./tree/450. Delete Node in a BST.hpp"
@@ -96,6 +97,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_868 s868;
+        int N = 8;
+        auto res = s868.binaryGap(N);
+        std::cout<<"868 res = "<<res<<std::endl;
+    }
     {
         Solution_824 s824;
         std::string s = "The quick brown fox jumped over the lazy dog";
