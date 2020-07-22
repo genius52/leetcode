@@ -83,6 +83,7 @@
 #include "string/806. Number of Lines To Write String.hpp"
 #include "string/824. Goat Latin.hpp"
 #include "string/893. Groups of Special-Equivalent Strings.hpp"
+#include "string/937. Reorder Data in Log Files.hpp"
 #include "./list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "./list/445. Add Two Numbers II.hpp"
 //#include "./number/1461. Check If a String Contains All Binary Codes of Size K.hpp"
@@ -101,6 +102,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_937 s937;
+        std::vector<std::string> input{"dig1 8 1 5 1","let1 art can","dig2 3 6","let2 own kit dig","let3 art zero"};
+        auto res = s937.reorderLogFiles(input);
+        std::cout<<"937 res = "<<res[0]<<std::endl;
+    }
     {
         Solution_893 s893;
         std::vector<string> input{"abc","acb","bac","bca","cab","cba"};

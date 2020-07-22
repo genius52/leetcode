@@ -19,10 +19,6 @@ public:
         for(int i = 0;i < len;i++){
             std::map<char,int> even_map;//偶数
             std::map<char,int> odd_map;//奇数
-//            std::vector<int> even_map;
-//            std::vector<int> odd_map;
-//            even_map.resize(26);
-//            odd_map.resize(26);
             for(int j = 0;j < word_len;j++){
                 if(j % 2 == 0)
                     even_map[A[i][j]]++;
