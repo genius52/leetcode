@@ -82,6 +82,7 @@
 #include "string/748. Shortest Completing Word.hpp"
 #include "string/806. Number of Lines To Write String.hpp"
 #include "string/824. Goat Latin.hpp"
+#include "string/893. Groups of Special-Equivalent Strings.hpp"
 #include "./list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "./list/445. Add Two Numbers II.hpp"
 //#include "./number/1461. Check If a String Contains All Binary Codes of Size K.hpp"
@@ -100,6 +101,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_893 s893;
+        std::vector<string> input{"abc","acb","bac","bca","cab","cba"};
+        auto res = s893.numSpecialEquivGroups(input);
+        std::cout<<"893 res = "<<res<<std::endl;
+    }
     {
         Solution_892 s892;
         std::vector<std::vector<int>> input{{2,2,2},{2,1,2},{2,2,2}};
