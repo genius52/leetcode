@@ -70,6 +70,7 @@
 #include "./graph/452. Minimum Number of Arrows to Burst Balloons.hpp"
 #include "graph/874. Walking Robot Simulation.hpp"
 #include "graph/883. Projection Area of 3D Shapes.hpp"
+#include "graph/892. Surface Area of 3D Shapes.hpp"
 #include "./string/1446. Consecutive Characters.cpp"
 #include "./string/1451. Rearrange Words in a Sentence.hpp"
 #include "./string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -99,6 +100,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_892 s892;
+        std::vector<std::vector<int>> input{{2,2,2},{2,1,2},{2,2,2}};
+        auto res = s892.surfaceArea(input);
+        std::cout<<"892 res = "<<res<<std::endl;
+    }
     {
         Solution_883 s883;
         std::vector<std::vector<int>> grid{{2,2,2},{2,1,2},{2,2,2}};
