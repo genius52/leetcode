@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var heights []int = []int{1,2,3,4,5}
+		res := array.HeightChecker2(heights)
+		fmt.Println(res)
+	}
+	{
 		var N int = 4
 		var paths [][]int = [][]int{{1,2},{2,3},{3,4},{4,1},{1,3},{2,4}}
 		res := array.GardenNoAdj(N,paths)
