@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var input [][]int = [][]int{{1,1},{2,2},{3,3}}
+		res := number.IsBoomerang(input)
+		fmt.Println(res)
+	}
+	{
 		var a int = 3
 		var b int = 5
 		var c int = 1
