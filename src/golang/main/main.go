@@ -12,6 +12,13 @@ import (
 
 func main(){
 	{
+		var x int = 2
+		var y int = 3
+		var bound int = 10
+		res := number.PowerfulIntegers(x,y,bound)
+		fmt.Println(res)
+	}
+	{
 		input := []int{0,2,0,0}
 		res := number.LargestTimeFromDigits(input)
 		fmt.Println(res);
