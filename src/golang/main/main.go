@@ -12,6 +12,18 @@ import (
 
 func main(){
 	{
+		var a int = 3
+		var b int = 5
+		var c int = 1
+		res := number.NumMovesStones(a,b,c)
+		fmt.Println(res)
+	}
+	{
+		var N int = 3
+		res := number.DivisorGame(N)
+		fmt.Println(res)
+	}
+	{
 		var x int = 2
 		var y int = 3
 		var bound int = 10
