@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		input := []int{0,2,0,0}
+		res := number.LargestTimeFromDigits(input)
+		fmt.Println(res);
+	}
+	{
 		input := "9,3,4,#,#,1,#,#,2,#,6,#,#"
 		res := tree.IsValidSerialization(input)
 		fmt.Println(res)
