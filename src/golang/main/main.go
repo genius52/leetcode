@@ -12,6 +12,12 @@ import (
 
 func main(){
 	{
+		var N int = 4
+		var paths [][]int = [][]int{{1,2},{2,3},{3,4},{4,1},{1,3},{2,4}}
+		res := array.GardenNoAdj(N,paths)
+		fmt.Println(res)
+	}
+	{
 		var input [][]int = [][]int{{1,1},{2,2},{3,3}}
 		res := number.IsBoomerang(input)
 		fmt.Println(res)
