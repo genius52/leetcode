@@ -1,8 +1,8 @@
-package string
+package string_issue
 
 //Input: s1 = "abc", s2 = "xya"
 //Output: true
-//Explanation: "ayx" is a permutation of s2="xya" which can break to string "abc" which is a permutation of s1="abc".
+//Explanation: "ayx" is a permutation of s2="xya" which can break to string_issue "abc" which is a permutation of s1="abc".
 
 func is_break(s1 string,s2 string)bool{
 	l := len(s1)

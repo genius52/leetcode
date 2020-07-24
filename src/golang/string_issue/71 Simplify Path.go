@@ -1,4 +1,4 @@
-package string
+package string_issue
 
 import "strings"
 
