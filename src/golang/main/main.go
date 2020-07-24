@@ -12,6 +12,13 @@ import (
 
 func main(){
 	{
+		var year int = 2019
+		var month int = 8
+		var day int = 31
+		res := number.DayOfTheWeek(day,month,year)
+		fmt.Println(res)
+	}
+	{
 		date1 := "2020-01-15"
 		date2 := "2019-12-31"
 		res := number.DaysBetweenDates(date1,date2)
