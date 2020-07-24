@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var n int = 100
+		res := number.NumPrimeArrangements(n)
+		fmt.Println(res)
+	}
+	{
 		var queries []string = []string{"bbb","cc"}
 		words := []string{"a","aa","aaa","aaaa"}
 		res := string_issue.NumSmallerByFrequency(queries,words)
