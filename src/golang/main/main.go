@@ -12,6 +12,12 @@ import (
 
 func main(){
 	{
+		date1 := "2020-01-15"
+		date2 := "2019-12-31"
+		res := number.DaysBetweenDates(date1,date2)
+		fmt.Println(res)
+	}
+	{
 		var chips []int = []int{2,2,2,3,3}
 		res := number.MinCostToMoveChips(chips)
 		fmt.Println(res)
