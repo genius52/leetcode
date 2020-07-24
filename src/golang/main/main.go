@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var chips []int = []int{2,2,2,3,3}
+		res := number.MinCostToMoveChips(chips)
+		fmt.Println(res)
+	}
+	{
 		var n int = 100
 		res := number.NumPrimeArrangements(n)
 		fmt.Println(res)
