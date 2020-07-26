@@ -12,6 +12,12 @@ import (
 
 func main(){
 	{
+		var dividend int = -2147483648
+		var divisor int = -1
+		res := number.Divide(dividend,divisor)
+		fmt.Println(res)
+	}
+	{
 		var year int = 2019
 		var month int = 8
 		var day int = 31
