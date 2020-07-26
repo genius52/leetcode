@@ -51,6 +51,7 @@
 #include "number/812. Largest Triangle Area.hpp"
 #include "number/1518. Water Bottles.hpp"
 #include "number/868. Binary Gap.hpp"
+#include "number/31. Next Permutation.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./tree/450. Delete Node in a BST.hpp"
@@ -102,6 +103,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_31 s31;
+        std::vector<int> input{3,4,5};
+        s31.nextPermutation(input);
+        std::cout<<"31 res = "<<input[0]<<std::endl;
+    }
     {
         Solution_937 s937;
         std::vector<std::string> input{"dig1 8 1 5 1","let1 art can","dig2 3 6","let2 own kit dig","let3 art zero"};
