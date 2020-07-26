@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var target string = "10111"
+		res := number.MinFlips(target)
+		fmt.Println(res)
+	}
+	{
 		var s = "codeleet"
 		var indices []int = []int{4,5,6,7,0,2,1,3}
 		res := string_issue.RestoreString(s,indices)
