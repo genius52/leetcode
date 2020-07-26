@@ -12,6 +12,12 @@ import (
 
 func main(){
 	{
+		var s = "codeleet"
+		var indices []int = []int{4,5,6,7,0,2,1,3}
+		res := string_issue.RestoreString(s,indices)
+		fmt.Println(res)
+	}
+	{
 		var dividend int = -2147483648
 		var divisor int = -1
 		res := number.Divide(dividend,divisor)
