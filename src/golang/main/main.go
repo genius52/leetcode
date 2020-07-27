@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		s := "acbadbaada"
+		res := string_issue.NumSplits(s)
+		fmt.Println(res)
+	}
+	{
 		var t1 tree.TreeNode
 		t1.Val = 1
 		var t2 tree.TreeNode
