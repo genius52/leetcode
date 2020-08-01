@@ -12,7 +12,18 @@ import (
 
 func main(){
 	{
-		s := "acbadbaada"
+		var s1 string = "delete"
+		var s2 string = "leet"
+		res := string_issue.MinimumDeleteSum(s1,s2)
+		fmt.Println(res)
+	}
+	{
+		var arr []int = []int{1,2,3,4,5,6,7}
+		res := array.NumOfSubarrays(arr)
+		fmt.Println(res)
+	}
+	{
+		s := "aacaba"
 		res := string_issue.NumSplits(s)
 		fmt.Println(res)
 	}
