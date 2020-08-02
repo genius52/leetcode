@@ -57,24 +57,24 @@ func MinimumDeleteSum(s1 string, s2 string) int {
 func LCS_minimumDeleteSum(s1 string, s2 string) int {
 	var len1 int = len(s1)
 	var len2 int = len(s2)
-	var graph [][]int = make([][]int,len1)
-	for i := 0;i < len1;i++{
-		graph[i] = make([]int,len2)
+	var dp [][]int = make([][]int,len1 + 1)//s1和s2前i，j个字符相同需要删除的字符总和
+	for i := 0;i <= len1;i++{
+		dp[i] = make([]int,len2 + 1)
 	}
-	for i := 0;i < len1;i++{
-		graph[i][0] = int(s1[i])
+	for i := 1;i <= len1;i++{
+		dp[i][0] = dp[i-1][0] + int(s1[i - 1])
 	}
-	for j := 0;j < len2;j++{
-		graph[0][j] = int(s2[j])
+	for j := 1;j <= len2;j++{
+		dp[0][j] = dp[0][j-1] + int(s2[j - 1])
 	}
-	for i := 1;i < len1;i++{
-		for j := 1;j < len2;j++{
-			if(s1[i] == s2[j]){
-				graph[i][j] = int(math.Max(float64(graph[i - 1][j]),float64(graph[i][j - 1]))) + 1
+	for i := 1;i <= len1;i++{
+		for j := 1;j <= len2;j++{
+			if(s1[i - 1] == s2[j - 1]){
+				dp[i][j] = dp[i - 1][j - 1]
 			}else{
-				graph[i][j] = int(math.Max(float64(graph[i - 1][j]),float64(graph[i][j - 1])))
+				dp[i][j] = int(math.Min(float64(dp[i - 1][j] + int(s1[i - 1])),float64(dp[i][j - 1] + int(s2[j - 1]))))
 			}
 		}
 	}
-
+	return dp[len1][len2]
 }

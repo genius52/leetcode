@@ -14,7 +14,7 @@ func main(){
 	{
 		var s1 string = "delete"
 		var s2 string = "leet"
-		res := string_issue.MinimumDeleteSum(s1,s2)
+		res := string_issue.LCS_minimumDeleteSum(s1,s2)
 		fmt.Println(res)
 	}
 	{
