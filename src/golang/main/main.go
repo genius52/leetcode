@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var path string = "/"
+		res := string_issue.SimplifyPath(path)
+		fmt.Println(res)
+	}
+	{
 		var s1 string = "delete"
 		var s2 string = "leet"
 		res := string_issue.LCS_minimumDeleteSum(s1,s2)
@@ -402,9 +407,9 @@ func main(){
 	}
 	{
 		//input := "/a//b////c/d//././/.."
-		input := "/a/../../b/../c//.//"
-		res := string_issue.SimplifyPath(input)
-		fmt.Println(res)
+		//input := "/a/../../b/../c//.//"
+		//res := string_issue.SimplifyPath(input)
+		//fmt.Println(res)
 	}
 	{
 		input := 10
