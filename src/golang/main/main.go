@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var s string = "20000000000000000000"
+		res := number.MyAtoi(s)
+		fmt.Println(res)
+	}
+	{
 		var path string = "/"
 		res := string_issue.SimplifyPath(path)
 		fmt.Println(res)
