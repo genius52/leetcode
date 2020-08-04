@@ -12,6 +12,12 @@ import (
 
 func main(){
 	{
+		var arr []int = []int{1,35,25,42,68,70}
+		var k int = 3
+		res := array.GetWinner(arr,k)
+		fmt.Println(res)
+	}
+	{
 		var s string = "20000000000000000000"
 		res := number.MyAtoi(s)
 		fmt.Println(res)
