@@ -38,3 +38,31 @@ func GetWinner(arr []int, k int) int {
 	}
 	return -1
 }
+
+
+func GetWinner2(arr []int, k int) int {
+	var l int = len(arr)
+	if(k >= l){
+		var res int = math.MinInt32
+		for i := 0;i < l;i++{
+			if(arr[i] > res){
+				res = arr[i]
+			}
+		}
+		return res
+	}
+	var biggest int = arr[0]
+	var win_cnt int = 0
+	for i := 1;i < l;i++{
+		if(arr[i] > biggest){
+			win_cnt = 1
+			biggest = arr[i]
+		}else{
+			win_cnt++
+		}
+		if(win_cnt == k){
+			return biggest
+		}
+	}
+	return biggest
+}

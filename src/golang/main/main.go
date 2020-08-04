@@ -12,9 +12,9 @@ import (
 
 func main(){
 	{
-		var arr []int = []int{1,35,25,42,68,70}
-		var k int = 3
-		res := array.GetWinner(arr,k)
+		var arr []int = []int{1,25,35,42,68,70}
+		var k int = 2
+		res := array.GetWinner2(arr,k)
 		fmt.Println(res)
 	}
 	{
