@@ -12,6 +12,12 @@ import (
 
 func main(){
 	{
+		version1 := "0.1"
+		version2 := "1.1"
+		res := string_issue.CompareVersion(version1,version2)
+		fmt.Println(res)
+	}
+	{
 		var arr []int = []int{1,25,35,42,68,70}
 		var k int = 2
 		res := array.GetWinner2(arr,k)
