@@ -24,6 +24,7 @@
 #include "array/532. K-diff Pairs in an Array.hpp"
 #include "array/598. Range Addition II.hpp"
 #include "array/661. Image Smoother.hpp"
+#include "array/932. Beautiful Array.hpp"
 #include "./number/229. Majority Element II.hpp"
 #include "./number/220. Contains Duplicate III.hpp"
 #include "./number/1441. Build an Array With Stack Operations.hpp"
@@ -52,6 +53,8 @@
 #include "number/1518. Water Bottles.hpp"
 #include "number/868. Binary Gap.hpp"
 #include "number/31. Next Permutation.hpp"
+#include "number/166. Fraction to Recurring Decimal.hpp"
+#include "number/241. Different Ways to Add Parentheses.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./tree/450. Delete Node in a BST.hpp"
@@ -103,6 +106,25 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_241 s241;
+        std::string input = "2*3-4*5";
+        auto res = s241.diffWaysToCompute(input);
+        std::cout<<"241 res = "<<res[0]<<std::endl;
+    }
+    {
+        Solution_166 s166;
+        int numerator = 1;
+        int denominator = 333;
+        auto res = s166.fractionToDecimal(numerator,denominator);
+        std::cout<<"932 res = "<<res[0]<<std::endl;
+    }
+    {
+        Solution_932 s932;
+        int N = 4;
+        auto res = s932.beautifulArray(N);
+        std::cout<<"932 res = "<<res[0]<<std::endl;
+    }
     {
         Solution_31 s31;
         std::vector<int> input{3,4,5};
@@ -754,10 +776,10 @@ int main() {
         std::cout<<res<<std::endl;
     }
     {
-        Solution_241 s241;
-        std::string input = "2-1-1";
-        auto res = s241.diffWaysToCompute(input);
-        std::cout<<res.size()<<std::endl;
+//        Solution_241 s241;
+//        std::string input = "2-1-1";
+//        auto res = s241.diffWaysToCompute(input);
+//        std::cout<<res.size()<<std::endl;
     }
 //    {
 //        std::thread([](){
