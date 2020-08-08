@@ -12,6 +12,18 @@ import (
 
 func main(){
 	{
+		A := -3
+		B := 0
+		C := 0
+		D := 4
+		E := 0
+		F := -1
+		G := 9
+		H := 2
+		res := diagram.ComputeArea(A, B , C , D , E, F, G, H)
+		fmt.Println(res)
+	}
+	{
 		version1 := "0.1"
 		version2 := "1.1"
 		res := string_issue.CompareVersion(version1,version2)
