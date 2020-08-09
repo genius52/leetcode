@@ -12,6 +12,31 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{}
+		tree.Constructor307(nums)
+		//var obj = tree.Constructor307(nums)
+		//res := obj.SumRange(1,3)
+		//obj.Update(6,8)
+		//res = obj.SumRange(4,6)
+		//fmt.Println(res)
+	}
+	{
+		var arr []int = []int{1,2,3,4}
+		var k int = 2
+		res := number.FindKthPositive(arr,k)
+		fmt.Println(res)
+	}
+	{
+		var n int = 3
+		res := number.BulbSwitch(n)
+		fmt.Println(res)
+	}
+	{
+		var citations []int = []int{0,1,3,5,6}
+		res := array.HIndex2(citations)
+		fmt.Println(res)
+	}
+	{
 		A := -3
 		B := 0
 		C := 0
