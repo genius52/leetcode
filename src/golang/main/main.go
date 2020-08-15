@@ -12,6 +12,29 @@ import (
 
 func main(){
 	{
+		var s string = "xsi"
+		res := string_issue.OriginalDigits(s)
+		fmt.Println(res)
+	}
+	{
+		var n int = 12
+		res := number.FindNthDigit(n)
+		fmt.Println(res)
+	}
+	{
+		var x int = 2
+		var y int = 8
+		var z int = 4
+		res := number.CanMeasureWater(x,y,z)
+		fmt.Println(res)
+	}
+	{
+		var n int = 20
+		var k int = 1048575
+		res := string_issue.FindKthBit(n,k)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{}
 		tree.Constructor307(nums)
 		//var obj = tree.Constructor307(nums)
