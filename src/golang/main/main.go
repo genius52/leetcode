@@ -12,6 +12,16 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{-1,-2,-3,-4,-5}
+		res := array.CircularArrayLoop(nums)
+		fmt.Println(res)
+	}
+	{
+		var s string = "sSA"
+		res := string_issue.MakeGood(s)
+		fmt.Println(res)
+	}
+	{
 		var s string = "xsi"
 		res := string_issue.OriginalDigits(s)
 		fmt.Println(res)
