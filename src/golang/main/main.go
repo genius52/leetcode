@@ -12,6 +12,17 @@ import (
 
 func main(){
 	{
+		var n int = 6
+		res := array.MinOperations(n)
+		fmt.Println(res)
+	}
+	{
+		var maxChoosableInteger int = 11
+		var desiredTotal int = 11
+		res := number.CanIWin(maxChoosableInteger,desiredTotal)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{-1,-2,-3,-4,-5}
 		res := array.CircularArrayLoop(nums)
 		fmt.Println(res)
