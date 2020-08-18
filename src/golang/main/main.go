@@ -12,6 +12,17 @@ import (
 
 func main(){
 	{
+		var s string = "zabcopabc"
+		res := string_issue.FindSubstringInWraproundString(s)
+		fmt.Println(res)
+	}
+	{
+		var nums []int = []int{0,0,0}
+		var target int = 0
+		res := array.MaxNonOverlapping(nums,target)
+		fmt.Println(res)
+	}
+	{
 		var n int = 6
 		res := array.MinOperations(n)
 		fmt.Println(res)
