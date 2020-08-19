@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var s string = "123:123.123.123.123"
+		res := string_issue.ValidIPAddress(s)
+		fmt.Println(res)
+	}
+	{
 		var s string = "zabcopabc"
 		res := string_issue.FindSubstringInWraproundString(s)
 		fmt.Println(res)

@@ -1,17 +1,5 @@
 package string_issue
-
 import "math"
-
-func JC(num int) int{
-	var count int = 1;
-	if (num == 1 || num == 0) {
-		return 1;
-	}
-	for i := 1; i <= num;i++ {
-		count = count*i;
-	}
-	return count;
-}
 
 func FindSubstringInWraproundString(p string) int {
 	var alpha []int = make([]int,26)
