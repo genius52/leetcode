@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var input []int = []int{1,1,1,2,2,3,3,3}
+		res := number.Makesquare(input)
+		fmt.Println(res)
+	}
+	{
 		var s string = "123:123.123.123.123"
 		res := string_issue.ValidIPAddress(s)
 		fmt.Println(res)
