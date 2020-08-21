@@ -80,6 +80,7 @@
 #include "./string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
 #include "./string/1456. Maximum Number of Vowels in a Substring of Given Length.hpp"
 #include "./string/424. Longest Repeating Character Replacement.hpp"
+#include "./string/474. Ones and Zeroes.hpp"
 #include "./string/482. License Key Formatting.hpp"
 #include "string/1507. Reformat Date.hpp"
 #include "string/744. Find Smallest Letter Greater Than Target.hpp"
@@ -106,6 +107,14 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_474 s474;
+        std::vector<std::string> strs{"10","0001","111001","1","0"};
+        int m = 30;
+        int n = 30;
+        auto res = s474.findMaxForm(strs,m,n);
+        std::cout<<"474 res = "<<res<<std::endl;
+    }
     {
         Solution_241 s241;
         std::string input = "2*3-4*5";
