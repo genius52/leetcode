@@ -97,32 +97,32 @@ public:
 // ((2*(3-4))*5) = -10 
 // (2*((3-4)*5)) = -10 
 // (((2*3)-4)*5) = 10
-class Solution_241 {
-public:
-    vector<int> diffWaysToCompute(string input) {
-        std::vector<int> res;
-        int l = input.length();
-        std::deque<char> nums;
-        std::deque<char> operators;
-        int num_begin = 0;
-        for (int i = 0;i < l;){
-            if (input[i] == '+' || input[i] == '-' || input[i] == '*' ){
-                operators.push_back(input[i]);
-                i++;
-            }else{
-                int begin = i;
-                while(i < (l - 1) && input[i + 1] != '+' && input[i + 1] != '-' && input[i + 1] != '*'){
-                    i++;
-                }
-                std::stringstream ss;
-                ss<<input.substr(begin,i - begin + 1);
-                int n;
-                ss>>n;
-                nums.push_back(n);
-                i++;
-            }
-        }
-        return res;
-    }
-};
+//class Solution_241 {
+//public:
+//    vector<int> diffWaysToCompute(string input) {
+//        std::vector<int> res;
+//        int l = input.length();
+//        std::deque<char> nums;
+//        std::deque<char> operators;
+//        int num_begin = 0;
+//        for (int i = 0;i < l;){
+//            if (input[i] == '+' || input[i] == '-' || input[i] == '*' ){
+//                operators.push_back(input[i]);
+//                i++;
+//            }else{
+//                int begin = i;
+//                while(i < (l - 1) && input[i + 1] != '+' && input[i + 1] != '-' && input[i + 1] != '*'){
+//                    i++;
+//                }
+//                std::stringstream ss;
+//                ss<<input.substr(begin,i - begin + 1);
+//                int n;
+//                ss>>n;
+//                nums.push_back(n);
+//                i++;
+//            }
+//        }
+//        return res;
+//    }
+//};
 #endif //LEET_OTHER_H
