@@ -12,6 +12,16 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{3,2,1}
+		res := array.NextGreaterElements(nums)
+		fmt.Println(res)
+	}
+	{
+		var nums []int = []int{3606449,6,5,9,452429,7,9580316,9857582,8514433,9,6,6614512,753594,5474165,4,2697293,8,7,1}
+		res := number.PredictTheWinner(nums)
+		fmt.Println(res)
+	}
+	{
 		var input []int = []int{1,1,1,2,2,3,3,3}
 		res := number.Makesquare(input)
 		fmt.Println(res)
