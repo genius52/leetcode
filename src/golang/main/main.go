@@ -12,6 +12,16 @@ import (
 
 func main(){
 	{
+		var i int = 1234
+		res := number.ThousandSeparator(i)
+		fmt.Println(res)
+	}
+	{
+		var s string = "bbbab"
+		res := string_issue.LongestPalindromeSubseq(s)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{3,2,1}
 		res := array.NextGreaterElements(nums)
 		fmt.Println(res)
