@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{1,0,1,99,101}
+		res := array.MinOperations2(nums)
+		fmt.Println(res)
+	}
+	{
 		var i int = 1234
 		res := number.ThousandSeparator(i)
 		fmt.Println(res)

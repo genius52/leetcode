@@ -1,0 +1,27 @@
+package array
+
+func MinOperations2(nums []int) int {
+	var record map[int]int = make(map[int]int)
+	for _,n := range nums{
+		record[n]++
+	}
+	var res int = 0
+	var max_div int = 0
+	for k,cnt := range record{
+		var div_cnt int = 0
+		for k != 0{
+			if k % 2 == 1{
+				res += cnt
+			}
+			k /= 2
+			if k > 0{
+				div_cnt++
+			}
+		}
+		if max_div < div_cnt{
+			max_div = div_cnt
+		}
+	}
+	res += max_div
+	return res
+}
