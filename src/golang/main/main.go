@@ -12,6 +12,24 @@ import (
 
 func main(){
 	{
+		rows := 1
+		columns := 2
+		s := array.Constructor519(rows,columns)
+		res := s.Flip()
+		fmt.Println(res)
+		res = s.Flip()
+		fmt.Println(res)
+		s.Reset()
+		res = s.Flip()
+		fmt.Println(res)
+	}
+	{
+		var amount int = 5
+		var coins []int = []int{1, 2, 5}
+		res := number.Change2(amount,coins)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{1,0,1,99,101}
 		res := array.MinOperations2(nums)
 		fmt.Println(res)
