@@ -12,6 +12,12 @@ import (
 
 func main(){
 	{
+		var n int = 3
+		var rounds []int = []int{3,2,1}
+		res := diagram.MostVisited(n,rounds)
+		fmt.Println(res)
+	}
+	{
 		rows := 1
 		columns := 2
 		s := array.Constructor519(rows,columns)
