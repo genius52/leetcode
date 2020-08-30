@@ -12,6 +12,18 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{1,2,3,5,-6,4,0,10}
+		res := array.GetMaxLen(nums)
+		fmt.Println(res)
+	}
+	{
+		var arr []int = []int{6,3,5,5,5,5,1,5,6,2,5,1,2,5,3,5,1,3,5,5,6,4,1,2}
+		var m int = 1
+		var k int = 5
+		res := diagram.ContainsPattern(arr,m,k)
+		fmt.Println(res)
+	}
+	{
 		var n int = 3
 		var rounds []int = []int{3,2,1}
 		res := diagram.MostVisited(n,rounds)
