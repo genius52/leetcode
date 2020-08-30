@@ -68,9 +68,9 @@ func main(){
 		fmt.Println(res)
 	}
 	{
-		var nums []int = []int{3606449,6,5,9,452429,7,9580316,9857582,8514433,9,6,6614512,753594,5474165,4,2697293,8,7,1}
-		res := number.PredictTheWinner(nums)
-		fmt.Println(res)
+		//var nums []int = []int{3606449,6,5,9,452429,7,9580316,9857582,8514433,9,6,6614512,753594,5474165,4,2697293,8,7,1}
+		//res := number.PredictTheWinner(nums)
+		//fmt.Println(res)
 	}
 	{
 		var input []int = []int{1,1,1,2,2,3,3,3}
@@ -88,10 +88,10 @@ func main(){
 		fmt.Println(res)
 	}
 	{
-		var nums []int = []int{0,0,0}
-		var target int = 0
-		res := array.MaxNonOverlapping(nums,target)
-		fmt.Println(res)
+		//var nums []int = []int{0,0,0}
+		//var target int = 0
+		//res := array.MaxNonOverlapping(nums,target)
+		//fmt.Println(res)
 	}
 	{
 		var n int = 6
@@ -99,10 +99,10 @@ func main(){
 		fmt.Println(res)
 	}
 	{
-		var maxChoosableInteger int = 11
-		var desiredTotal int = 11
-		res := number.CanIWin(maxChoosableInteger,desiredTotal)
-		fmt.Println(res)
+		//var maxChoosableInteger int = 11
+		//var desiredTotal int = 11
+		//res := number.CanIWin(maxChoosableInteger,desiredTotal)
+		//fmt.Println(res)
 	}
 	{
 		var nums []int = []int{-1,-2,-3,-4,-5}
@@ -110,9 +110,9 @@ func main(){
 		fmt.Println(res)
 	}
 	{
-		var s string = "sSA"
-		res := string_issue.MakeGood(s)
-		fmt.Println(res)
+		//var s string = "sSA"
+		//res := string_issue.MakeGood(s)
+		//fmt.Println(res)
 	}
 	{
 		var s string = "xsi"
@@ -153,9 +153,9 @@ func main(){
 		fmt.Println(res)
 	}
 	{
-		var n int = 3
-		res := number.BulbSwitch(n)
-		fmt.Println(res)
+		//var n int = 3
+		//res := number.BulbSwitch(n)
+		//fmt.Println(res)
 	}
 	{
 		var citations []int = []int{0,1,3,5,6}
@@ -203,9 +203,9 @@ func main(){
 		fmt.Println(res)
 	}
 	{
-		var arr []int = []int{1,2,3,4,5,6,7}
-		res := array.NumOfSubarrays(arr)
-		fmt.Println(res)
+		//var arr []int = []int{1,2,3,4,5,6,7}
+		//res := array.NumOfSubarrays(arr)
+		//fmt.Println(res)
 	}
 	{
 		s := "aacaba"
