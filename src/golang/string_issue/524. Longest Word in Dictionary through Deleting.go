@@ -27,7 +27,7 @@ func FindLongestWord(s string, d []string) string {
 	var max_len int = 0
 	for _,sub := range d{
 		var sub_len int = len(sub)
-		if l < sub_len{
+		if l < sub_len || sub_len < max_len{
 			continue
 		}
 		if is_sub(s,sub){
