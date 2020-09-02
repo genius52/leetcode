@@ -14,10 +14,11 @@ func check_nums(nums []int)bool{
 
 func perm(nums []int,l int,pos int)int{
 	if pos == l{
-		if check_nums(nums){
-			return 1
-		}
-		return 0
+		//if check_nums(nums){
+		//	return 1
+		//}
+		//return 0
+		return 1
 	}
 	var total int = 0
 	for i := pos;i < l;i++{
