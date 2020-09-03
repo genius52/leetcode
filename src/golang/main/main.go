@@ -12,6 +12,15 @@ import (
 
 func main(){
 	{
+		var board [][]byte = [][]byte{{'B', '1', 'E', '1', 'B'},
+		{'B', '1', 'M', '1', 'B'},
+		{'B', '1', '1', '1', 'B'},
+		{'B', 'B', 'B', 'B', 'B'}}
+		var click []int = []int{1,2}
+		res := diagram.UpdateBoard(board,click)
+		fmt.Println(res)
+	}
+	{
 		var N int = 12
 		res := array.CountArrangement(N)
 		fmt.Println(res)
