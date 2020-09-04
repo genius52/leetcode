@@ -22,6 +22,7 @@
 #include "./array/1497. Check If Array Pairs Are Divisible by k.hpp"
 #include "./array/456. 132 Pattern.hpp"
 #include "./array/498. Diagonal Traverse.hpp"
+#include "./array/525. Contiguous Array.hpp"
 #include "array/532. K-diff Pairs in an Array.hpp"
 #include "array/598. Range Addition II.hpp"
 #include "array/661. Image Smoother.hpp"
@@ -108,6 +109,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_525 s525;
+        std::vector<int> nums{1,1,1,1,1,1,0,0,0,0};
+        auto res = s525.findMaxLength(nums);
+        std::cout << "525 res = " << res << std::endl;
+    }
     {
         Solution_498 s498;
         std::vector<std::vector<int>> input{ {1,2,3,4},{5,6,7,8},{9,10,11,12} };
