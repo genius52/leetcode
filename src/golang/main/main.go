@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var matrix [][]int = [][]int{{0,0,0},{0,1,0},{0,0,0}}
+		res := array.UpdateMatrix(matrix)
+		fmt.Println(res)
+	}
+	{
 		var board [][]byte = [][]byte{{'B', '1', 'E', '1', 'B'},
 		{'B', '1', 'M', '1', 'B'},
 		{'B', '1', '1', '1', 'B'},
