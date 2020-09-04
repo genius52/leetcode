@@ -1,6 +1,5 @@
 #include <vector>
 #include <unordered_map>
-//#include <deque>
 #include <queue>
 #include <math.h>
 using namespace std;
@@ -8,7 +7,7 @@ using namespace std;
 class Solution_525 {
 public:
     int findMaxLength(vector<int>& nums) {
-        std::unordered_map<int,std::priority_queue<int,std::vector<int>,std::greater<int>>> record;
+        std::unordered_map<int,int> record;
         int max_len = 0;
         int zero_cnt = 0;
         int len = nums.size();
@@ -20,9 +19,10 @@ public:
                 max_len = i + 1;
             else{
                 if(record.find(diff) != record.end()){
-                    max_len = max(max_len,i - record[diff].top());
+                    max_len = max(max_len,i - record[diff]);
+                }else{
+                    record[diff] = i;
                 }
-                record[diff].push(i);
             }
         }
         return max_len;
