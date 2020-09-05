@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var n int = 123
+		res := number.NextGreaterElement(n)
+		fmt.Println(res)
+	}
+	{
 		var matrix [][]int = [][]int{{0,0,0},{0,1,0},{0,0,0}}
 		res := array.UpdateMatrix(matrix)
 		fmt.Println(res)
