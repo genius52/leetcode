@@ -12,6 +12,14 @@ import (
 
 func main(){
 	{
+		p1 := []int{0,0}
+		p2 := []int{-1,0}
+		p3 := []int{1,0}
+		p4 := []int{0,1}
+		res := diagram.ValidSquare(p1,p2,p3,p4)
+		fmt.Println(res)
+	}
+	{
 		var n int = 123
 		res := number.NextGreaterElement(n)
 		fmt.Println(res)
