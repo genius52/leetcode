@@ -12,6 +12,16 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{2,2,3,4}
+		res := array.TriangleNumber(nums)
+		fmt.Println(res)
+	}
+	{
+		var s string = "??yw?ipkj?"
+		res := string_issue.ModifyString(s)
+		fmt.Println(res)
+	}
+	{
 		p1 := []int{0,0}
 		p2 := []int{-1,0}
 		p3 := []int{1,0}
