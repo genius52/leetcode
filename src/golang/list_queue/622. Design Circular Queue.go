@@ -1,4 +1,4 @@
-package list
+package list_queue
 
 /**
  * Your MyCircularQueue object will be instantiated and called as such:

@@ -1,4 +1,4 @@
-package list
+package list_queue
 
 //ugly solution!!!
 //Input: -1->5->3->4->0

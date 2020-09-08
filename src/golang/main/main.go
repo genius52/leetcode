@@ -3,7 +3,7 @@ package main
 import (
 	"../array"
 	"../diagram"
-	"../list"
+	"../list_queue"
 	"../number"
 	"../string_issue"
 	"../tree"
@@ -482,7 +482,7 @@ func main(){
 	}
 	{
 		//["MyCircularQueue","enQueue","Rear","Rear","deQueue","enQueue","Rear",
-		var obj list.MyCircularQueue = list.Constructor(8)
+		var obj list_queue.MyCircularQueue = list_queue.Constructor(8)
 
 		res := obj.EnQueue(3)
 		res = obj.EnQueue(9)
@@ -569,21 +569,21 @@ func main(){
 	}
 	{
 		//-1->5->3->4->0
-		var l1 list.ListNode
+		var l1 list_queue.ListNode
 		l1.Val = 4
-		var l2 list.ListNode
+		var l2 list_queue.ListNode
 		l2.Val = 2
-		var l3 list.ListNode
+		var l3 list_queue.ListNode
 		l3.Val = 1
-		var l4 list.ListNode
+		var l4 list_queue.ListNode
 		l4.Val = 3
-		var l5 list.ListNode
+		var l5 list_queue.ListNode
 		l5.Val = 0
 		l1.Next = &l2
 		l2.Next = &l3
 		l3.Next = &l4
 		//l4.Next = &l5
-		res := list.InsertionSortList(&l1)
+		res := list_queue.InsertionSortList(&l1)
 		fmt.Println(res.Val)
 	}
 	{
@@ -592,21 +592,21 @@ func main(){
 		fmt.Println(res)
 	}
 	{
-		var list1 list.ListNode
+		var list1 list_queue.ListNode
 		list1.Val = 1
-		var list2 list.ListNode
+		var list2 list_queue.ListNode
 		list2.Val = 2
-		var list3 list.ListNode
+		var list3 list_queue.ListNode
 		list3.Val = 3
-		var list4 list.ListNode
+		var list4 list_queue.ListNode
 		list4.Val = 4
-		var list5 list.ListNode
+		var list5 list_queue.ListNode
 		list5.Val = 5
 		//list1.Next = &list2
 		//list2.Next = &list3
 		//list3.Next = &list4
 		//list4.Next = &list5
-		list.ReorderList(&list1)
+		list_queue.ReorderList(&list1)
 		fmt.Println(list1.Val)
 	}
 	{

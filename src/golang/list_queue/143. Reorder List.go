@@ -1,4 +1,4 @@
-package list
+package list_queue
 
 import "container/list"
 
@@ -7,7 +7,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
-//Given a singly linked list L: L0→L1→…→Ln-1→Ln,
+//Given a singly linked list_queue L: L0→L1→…→Ln-1→Ln,
 //reorder it to: L0→Ln→L1→Ln-1→L2→Ln-2→…
 func ReorderList(head *ListNode)  {
 	if head == nil || head.Next == nil{
