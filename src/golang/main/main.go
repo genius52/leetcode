@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var pairs [][]int = [][]int{{-10,-8},{8,9},{-5,0},{6,10},{-6,-4},{1,7},{9,10},{-4,7}}
+		res := number.FindLongestChain2(pairs)
+		fmt.Println(res)
+	}
+	{
 		var price []int = []int{2,3,4}
 		var special [][]int = [][]int{{1,1,0,4},{2,2,1,9}}
 		var needs []int = []int{1,2,1}
