@@ -12,6 +12,14 @@ import (
 
 func main(){
 	{
+		//var dictionary []string = []string{"a", "aa", "aaa", "aaaa"}
+		//var sentence string = "a aa a aaaa aaa aaa aaa aaaaaa bbb baba ababa"
+		var dictionary []string = []string{"cat","bat","rat"}
+		var sentence string = "the cattle was rattled by the battery"
+		res := string_issue.ReplaceWords(dictionary,sentence)
+		fmt.Println(res)
+	}
+	{
 		var pairs [][]int = [][]int{{-10,-8},{8,9},{-5,0},{6,10},{-6,-4},{1,7},{9,10},{-4,7}}
 		res := number.FindLongestChain2(pairs)
 		fmt.Println(res)
