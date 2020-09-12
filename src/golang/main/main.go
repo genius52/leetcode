@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var n int = 6
+		res := number.MinSteps(n)
+ 		fmt.Println(res)
+	}
+	{
 		//var dictionary []string = []string{"a", "aa", "aaa", "aaaa"}
 		//var sentence string = "a aa a aaaa aaa aaa aaa aaaaaa bbb baba ababa"
 		var dictionary []string = []string{"cat","bat","rat"}
