@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var mat [][]int = [][]int{{1,0,0},{0,0,1},{1,0,0}}
+		res := array.NumSpecial(mat)
+		fmt.Println(res)
+	}
+	{
 		var arr []int = []int{1,7,9,11,19,25}
 		var k int = 4
 		var x int = 10
