@@ -12,6 +12,13 @@ import (
 
 func main(){
 	{
+		var arr []int = []int{1,7,9,11,19,25}
+		var k int = 4
+		var x int = 10
+		res := array.FindClosestElements(arr,k,x)
+		fmt.Println(res)
+	}
+	{
 		var n int = 6
 		res := number.MinSteps(n)
  		fmt.Println(res)
