@@ -57,6 +57,7 @@
 #include "number/31. Next Permutation.hpp"
 #include "number/166. Fraction to Recurring Decimal.hpp"
 #include "number/241. Different Ways to Add Parentheses.hpp"
+#include "number/659. Split Array into Consecutive Subsequences.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./tree/450. Delete Node in a BST.hpp"
@@ -110,6 +111,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_659 s659;
+        std::vector<int> nums{1,3,3,4,4,7,8,8,9,10};
+        auto res = s659.isPossible(nums);
+        std::cout << "659 res = " << res << std::endl;
+    }
     {
         Solution_547 s547;
         std::vector<std::vector<int>> input{ {1,1,0 }, { 1,1,0 }, { 0,0,1 } };
