@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var num int = 1993
+		res := number.MaximumSwap(num)
+		fmt.Println(res)
+	}
+	{
 		var mat [][]int = [][]int{{1,0,0},{0,0,1},{1,0,0}}
 		res := array.NumSpecial(mat)
 		fmt.Println(res)
