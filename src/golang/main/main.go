@@ -12,6 +12,16 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{1,2,3,1,2,3,1,2,3}
+		res := array.FindNumberOfLIS(nums)
+		fmt.Println(res)
+	}
+	{
+		var nums []int = []int{2,2,2,2,2}
+		res := array.FindNumberOfLIS(nums)
+		fmt.Println(res)
+	}
+	{
 		var num int = 1993
 		res := number.MaximumSwap(num)
 		fmt.Println(res)
