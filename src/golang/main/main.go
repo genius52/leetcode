@@ -12,6 +12,15 @@ import (
 
 func main(){
 	{
+		//["MagicDictionary", "buildDict", "search", "search", "search", "search"]
+		//[[], [["hello","hallo","leetcode"]], ["hello"], ["hhllo"], ["hell"], ["leetcoded"]]
+		obj := string_issue.Constructor()
+		var dictionary []string = []string{"hello","hallo","leetcode"}
+		obj.BuildDict(dictionary)
+		res := obj.Search("hhllo")
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{1,2,3,1,2,3,1,2,3}
 		res := array.FindNumberOfLIS(nums)
 		fmt.Println(res)
