@@ -12,6 +12,12 @@ import (
 
 func main(){
 	{
+		var s = "aabaa"
+		var cost []int = []int{1,2,3,4,1}
+		res := diagram.MinCost(s,cost)
+		fmt.Println(res)
+	}
+	{
 		var arr []int = []int{1,4,2,5,3}
 		res := array.SumOddLengthSubarrays(arr)
 		fmt.Println(res)
