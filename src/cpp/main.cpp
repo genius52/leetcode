@@ -79,6 +79,7 @@
 #include "graph/883. Projection Area of 3D Shapes.hpp"
 #include "graph/892. Surface Area of 3D Shapes.hpp"
 #include "graph/547. Friend Circles.hpp"
+#include "graph/677. Map Sum Pairs.hpp"
 #include "./string/1446. Consecutive Characters.cpp"
 #include "./string/1451. Rearrange Words in a Sentence.hpp"
 #include "./string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -111,6 +112,15 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        MapSum s677;
+
+        s677.insert("a", 3);
+        auto res = s677.sum("ap");
+        s677.insert("b", 2);
+        res = s677.sum("a");
+        std::cout<<"677 res = "<<res<<std::endl;
+    }
     {
         Solution_659 s659;
         std::vector<int> nums{1,3,3,4,4,7,8,8,9,10};
