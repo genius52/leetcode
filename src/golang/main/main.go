@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var text string = "a"
+		res := string_issue.ReorderSpaces(text)
+		fmt.Println(res)
+	}
+	{
 		var s = "aabaa"
 		var cost []int = []int{1,2,3,4,1}
 		res := diagram.MinCost(s,cost)
