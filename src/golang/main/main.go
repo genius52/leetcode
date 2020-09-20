@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var arr []int = []int{1,4,2,5,3}
+		res := array.SumOddLengthSubarrays(arr)
+		fmt.Println(res)
+	}
+	{
 		//["MagicDictionary", "buildDict", "search", "search", "search", "search"]
 		//[[], [["hello","hallo","leetcode"]], ["hello"], ["hhllo"], ["hell"], ["leetcoded"]]
 		obj := string_issue.Constructor()
