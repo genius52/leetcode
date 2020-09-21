@@ -12,6 +12,12 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{4, 3, 2, 3, 5, 2, 1}
+		var k int = 4
+		res := array.CanPartitionKSubsets(nums,k)
+		fmt.Println(res)
+	}
+	{
 		var text string = "a"
 		res := string_issue.ReorderSpaces(text)
 		fmt.Println(res)
