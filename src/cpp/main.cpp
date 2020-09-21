@@ -94,6 +94,7 @@
 #include "string/824. Goat Latin.hpp"
 #include "string/893. Groups of Special-Equivalent Strings.hpp"
 #include "string/937. Reorder Data in Log Files.hpp"
+#include "string/692. Top K Frequent Words.hpp"
 #include "./list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "./list/445. Add Two Numbers II.hpp"
 //#include "./number/1461. Check If a String Contains All Binary Codes of Size K.hpp"
@@ -112,6 +113,13 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_692 s692;
+        std::vector<std::string> words{"i", "love", "leetcode", "i", "love", "coding"};
+        int k = 2;
+        auto res = s692.topKFrequent(words,k);
+        std::cout<<"692 res = "<<res.size()<<std::endl;
+    }
     {
         MapSum s677;
 
