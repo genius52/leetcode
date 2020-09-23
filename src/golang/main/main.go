@@ -12,6 +12,20 @@ import (
 
 func main(){
 	{
+		//[1,3,2,8,4,56,35,13,56,22,26,41,9]
+		//2
+		var prices []int = []int{1,3,2,8,4,56,35,13,56,22,26,41,9}
+		var fee int = 2
+		res := array.MaxProfit4(prices,fee)
+		fmt.Println(res)
+	}
+	{
+		var nums []int = []int{10, 5, 2, 6}
+		var k int = 100
+		res := number.NumSubarrayProductLessThanK(nums,k)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{4, 3, 2, 3, 5, 2, 1}
 		var k int = 4
 		res := array.CanPartitionKSubsets(nums,k)
