@@ -1,0 +1,9 @@
+Language:
+  - go
+
+go:
+  - "1.14"
+  - master
+
+before_script:
+  - cd src/golang/main
