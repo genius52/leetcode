@@ -12,6 +12,18 @@ import (
 
 func main(){
 	{
+		//root = [1, 2, 3], k = 5
+		var l1,l2,l3 list_queue.ListNode
+		l1.Val = 1
+		l2.Val = 2
+		l3.Val = 3
+		l1.Next = &l2
+		l2.Next = &l3
+		var k int = 5
+		res := list_queue.SplitListToParts(&l1,k)
+		fmt.Println(res)
+	}
+	{
 		//[1,3,2,8,4,56,35,13,56,22,26,41,9]
 		//2
 		var prices []int = []int{1,3,2,8,4,56,35,13,56,22,26,41,9}

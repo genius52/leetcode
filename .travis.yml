@@ -7,3 +7,6 @@ go:
 
 before_script:
   - cd src/golang/main
+
+install:
+  - export GOPATH=$HOME/gopath/src/github.com/genius52/leetcode
