@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		s := "aa"
+		res := string_issue.MaxUniqueSplit(s)
+		fmt.Println(res)
+	}
+	{
 		//root = [1, 2, 3], k = 5
 		var l1,l2,l3 list_queue.ListNode
 		l1.Val = 1
