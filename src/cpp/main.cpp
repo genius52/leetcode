@@ -27,6 +27,7 @@
 #include "array/598. Range Addition II.hpp"
 #include "array/661. Image Smoother.hpp"
 #include "array/932. Beautiful Array.hpp"
+#include "array/735. Asteroid Collision.hpp"
 #include "./number/229. Majority Element II.hpp"
 #include "./number/220. Contains Duplicate III.hpp"
 #include "./number/1441. Build an Array With Stack Operations.hpp"
@@ -80,6 +81,7 @@
 #include "graph/892. Surface Area of 3D Shapes.hpp"
 #include "graph/547. Friend Circles.hpp"
 #include "graph/677. Map Sum Pairs.hpp"
+#include "graph/721. Accounts Merge.hpp"
 #include "./string/1446. Consecutive Characters.cpp"
 #include "./string/1451. Rearrange Words in a Sentence.hpp"
 #include "./string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -113,6 +115,25 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_735 s735;
+        std::vector<int> asteroids{1,-2,-2,-2};
+        auto res = s735.asteroidCollision(asteroids);
+        std::cout<<"735 res = "<<res.size()<<std::endl;
+    }
+    {
+        Solution_721 s721;
+        auto accounts = std::vector<std::vector<std::string>>{{"Lily","Lily8@m.co","Lily2@m.co","Lily2@m.co"},
+                                                              {"Fern","Fern6@m.co","Fern1@m.co","Fern1@m.co"},
+                                                              {"John","John8@m.co","John0@m.co","John2@m.co"},
+                                                              {"Kevin","Kevin4@m.co","Kevin8@m.co","Kevin0@m.co"},
+                                                              {"Fern","Fern2@m.co","Fern7@m.co","Fern7@m.co"},
+                                                              {"John","John4@m.co","John6@m.co","John7@m.co"},
+                                                              {"Hanzo","Hanzo8@m.co","Hanzo8@m.co","Hanzo6@m.co"},
+                                                              {"Bob","Bob8@m.co","Bob6@m.co","Bob1@m.co"}};
+        auto res = s721.accountsMerge(accounts);
+        std::cout<<"721 res = "<<res.size()<<std::endl;
+    }
     {
         Solution_692 s692;
         std::vector<std::string> words{"i", "love", "leetcode", "i", "love", "coding"};
