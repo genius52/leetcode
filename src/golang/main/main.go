@@ -59,10 +59,10 @@ func main(){
 		fmt.Println(res)
 	}
 	{
-		var nums []int = []int{10, 5, 2, 6}
-		var k int = 100
-		res := number.NumSubarrayProductLessThanK(nums,k)
-		fmt.Println(res)
+		//var nums []int = []int{10, 5, 2, 6}
+		//var k int = 100
+		//res := number.NumSubarrayProductLessThanK(nums,k)
+		//fmt.Println(res)
 	}
 	{
 		var nums []int = []int{4, 3, 2, 3, 5, 2, 1}
