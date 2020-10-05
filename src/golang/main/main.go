@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{2, 2, 3, 3, 3, 4,5}
+		res := array.DeleteAndEarn(nums)
+		fmt.Println(res)
+	}
+	{
 		var N int = 1234
 		res := number.MonotoneIncreasingDigits(N)
 		fmt.Println(res)
