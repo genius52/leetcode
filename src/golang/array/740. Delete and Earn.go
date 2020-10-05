@@ -27,3 +27,36 @@ func DeleteAndEarn(nums []int) int {
 	var memo map[int]int = make(map[int]int)
 	return dp_deleteAndEarn(record,0,memo)
 }
+
+func DeleteAndEarn2(nums []int) int {
+	var record []int = make([]int,10001)
+	for _,n := range nums{
+		record[n]++
+	}
+	var skip []int = make([]int,10001)
+	var choose []int = make([]int,10001)
+	var res int = 0
+	for i := 1;i <= 10000;i++{
+		if record[i] == 0{
+			if choose[i - 1] > skip[i - 1]{
+				skip[i] = choose[i - 1]
+			}else{
+				skip[i] = skip[i - 1]
+			}
+			choose[i] = choose[i - 1]
+			continue
+		}
+		choose[i] = record[i] * i + skip[i - 1]
+		if choose[i - 1] > skip[i - 1]{
+			skip[i] = choose[i - 1]
+		}else{
+			skip[i] = skip[i - 1]
+		}
+		if choose[i] > skip[i]{
+			res = choose[i]
+		}else{
+			res = skip[i]
+		}
+	}
+	return res
+}

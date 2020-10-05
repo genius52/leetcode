@@ -12,8 +12,8 @@ import (
 
 func main(){
 	{
-		var nums []int = []int{2, 2, 3, 3, 3, 4,5}
-		res := array.DeleteAndEarn(nums)
+		var nums []int = []int{3,4,2,324,432,233,2332,2234,7766,5544,3334,3,9,88,19}
+		res := array.DeleteAndEarn2(nums)
 		fmt.Println(res)
 	}
 	{
