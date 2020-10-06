@@ -12,6 +12,13 @@ import (
 
 func main(){
 	{
+		var times [][]int = [][]int{{2,1,1},{2,3,1},{3,4,1}}
+		var N int = 4
+		var K int = 2
+		res := diagram.NetworkDelayTime(times,N,K)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{3,4,2,324,432,233,2332,2234,7766,5544,3334,3,9,88,19}
 		res := array.DeleteAndEarn2(nums)
 		fmt.Println(res)
