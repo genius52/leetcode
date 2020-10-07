@@ -12,6 +12,28 @@ import (
 
 func main(){
 	{
+		var t1 tree.TreeNode
+		t1.Val = 1
+		var t2 tree.TreeNode
+		t2.Val = 10
+		var t3 tree.TreeNode
+		t3.Val = 4
+
+		var t4 tree.TreeNode
+		t4.Val = 3
+		var t5 tree.TreeNode
+		t5.Val = 7
+		var t6 tree.TreeNode
+		t6.Val = 9
+		t1.Left = &t2
+		t1.Right = &t3
+		t2.Left = &t4
+		t3.Left = &t5
+		t3.Right = &t6
+		res := tree.IsEvenOddTree(&t1)
+		fmt.Println(res)
+	}
+	{
 		var rowSum []int = []int{3,8}
 		var colSum []int = []int{4,7}
 		res := array.RestoreMatrix(rowSum,colSum)
