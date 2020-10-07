@@ -12,6 +12,12 @@ import (
 
 func main(){
 	{
+		var rowSum []int = []int{3,8}
+		var colSum []int = []int{4,7}
+		res := array.RestoreMatrix(rowSum,colSum)
+		fmt.Println(res)
+	}
+	{
 		var times [][]int = [][]int{{2,1,1},{2,3,1},{3,4,1}}
 		var N int = 4
 		var K int = 2
