@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var mat [][]int = [][]int{{1,0,1}, {1,1,0}, {1,1,0}}
+		res := array.NumSubmat(mat)
+		fmt.Println(res)
+	}
+	{
 		var N int = 5
 		var mines [][]int = [][]int{{0,0},{0,3},{1,1},{1,4},{2,3},{3,0},{4,2}}
 		res := diagram.OrderOfLargestPlusSign(N,mines)
