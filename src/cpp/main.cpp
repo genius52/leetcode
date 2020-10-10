@@ -28,6 +28,7 @@
 #include "array/661. Image Smoother.hpp"
 #include "array/932. Beautiful Array.hpp"
 #include "array/735. Asteroid Collision.hpp"
+#include "array/1536. Minimum Swaps to Arrange a Binary Grid.hpp"
 #include "./number/229. Majority Element II.hpp"
 #include "./number/220. Contains Duplicate III.hpp"
 #include "./number/1441. Build an Array With Stack Operations.hpp"
@@ -115,6 +116,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_1536 s1536;
+        std::vector<std::vector<int>> grid{{1,0,0},{1,1,0},{1,1,1}};
+        auto res = s1536.minSwaps(grid);
+        std::cout<<"1536 res = "<<res<<std::endl;
+    }
     {
         Solution_735 s735;
         std::vector<int> asteroids{1,-2,-2,-2};
