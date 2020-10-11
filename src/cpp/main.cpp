@@ -100,7 +100,7 @@
 #include "string/937. Reorder Data in Log Files.hpp"
 #include "string/692. Top K Frequent Words.hpp"
 #include "string/5535. Maximum Nesting Depth of the Parentheses.hpp"
-#include "string/5537. Split Two Strings to Make Palindrome.hpp"
+#include "string/1616. Split Two Strings to Make Palindrome.hpp"
 #include "./list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "./list/445. Add Two Numbers II.hpp"
 //#include "./number/1461. Check If a String Contains All Binary Codes of Size K.hpp"
@@ -120,18 +120,18 @@ bool g_ready = false;
 
 int main() {
     {
+        Solution_1616 s1616;
+        std::string a = "aejbaalflrmkswrydwdkdwdyrwskmrlfqizjezd";
+        std::string b = "uvebspqckawkhbrtlqwblfwzfptanhiglaabjea";
+        auto res = s1616.checkPalindromeFormation(a,b);
+        std::cout << "1616 res = " << res << std::endl;
+    }
+    {
         int n = 8;
         std::vector<std::vector<int>> roads{ {0,1 }, { 1,2 }, { 2,3 }, { 2,4 }, { 5,6 }, { 5,7 } };
         Solution_5536 s5536;
         auto res = s5536.maximalNetworkRank(n, roads);
         std::cout << "s5536 res = " << res << std::endl;
-    }
-    {
-        Solution_5537 s5537;
-        std::string a = "abdef";
-        std::string b = "fecab";
-        auto res = s5537.checkPalindromeFormation(a,b);
-        std::cout << "s5537 res = " << res << std::endl;
     }
     {
         Solution_5535 s5535;
