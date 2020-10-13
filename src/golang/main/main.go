@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var A []int = []int{1,2,0}
+		res := array.IsIdealPermutation(A)
+		fmt.Println(res)
+	}
+	{
 		var mat [][]int = [][]int{{1,0,1}, {1,1,0}, {1,1,0}}
 		res := array.NumSubmat(mat)
 		fmt.Println(res)
