@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var S string = "aaabbc"
+		res := string_issue.ReorganizeString(S)
+		fmt.Println(res)
+	}
+	{
 		var A []int = []int{1,2,0}
 		res := array.IsIdealPermutation(A)
 		fmt.Println(res)
