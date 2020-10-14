@@ -12,6 +12,12 @@ import (
 
 func main(){
 	{
+		var N int = 4
+		var K int = 6
+		res := number.KthGrammar(N,K)
+		fmt.Println(res)
+	}
+	{
 		var start string = "XXXRXXLXXXXXXXXRXXXR"
 		var end string = "XXXXRLXXXXXXXXXXXXRR"
 		res := string_issue.CanTransform(start,end)
