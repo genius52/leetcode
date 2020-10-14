@@ -12,6 +12,12 @@ import (
 
 func main(){
 	{
+		var start string = "XXXRXXLXXXXXXXXRXXXR"
+		var end string = "XXXXRLXXXXXXXXXXXXRR"
+		res := string_issue.CanTransform(start,end)
+		fmt.Println(res)
+	}
+	{
 		var S string = "aaabbc"
 		res := string_issue.ReorganizeString(S)
 		fmt.Println(res)
