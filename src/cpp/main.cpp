@@ -60,6 +60,7 @@
 #include "number/166. Fraction to Recurring Decimal.hpp"
 #include "number/241. Different Ways to Add Parentheses.hpp"
 #include "number/659. Split Array into Consecutive Subsequences.hpp"
+#include "number/781. Rabbits in Forest.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./tree/450. Delete Node in a BST.hpp"
@@ -119,6 +120,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_781 s781;
+        std::vector<int> answers{};
+        auto res = s781.numRabbits(answers);
+        std::cout << "781 res = " << res << std::endl;
+    }
     {
         Solution_1616 s1616;
         std::string a = "aejbaalflrmkswrydwdkdwdyrwskmrlfqizjezd";
