@@ -61,6 +61,7 @@
 #include "number/241. Different Ways to Add Parentheses.hpp"
 #include "number/659. Split Array into Consecutive Subsequences.hpp"
 #include "number/781. Rabbits in Forest.hpp"
+#include "number/1619. Mean of Array After Removing Some Elements.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./tree/450. Delete Node in a BST.hpp"
@@ -120,6 +121,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_1619 s1619;
+        std::vector<int> arr{ 6,0,7,0,7,5,7,8,3,4,0,7,8,1,6,8,1,1,2,4,8,1,9,5,4,3,8,5,10,8,6,6,1,0,6,10,8,2,3,4 };
+        auto res = s1619.trimMean(arr);
+        std::cout << "781 res = " << res << std::endl;
+    }
     {
         Solution_781 s781;
         std::vector<int> answers{};
