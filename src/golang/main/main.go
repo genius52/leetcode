@@ -12,6 +12,34 @@ import (
 
 func main(){
 	{
+		var n int = 999
+		var k int = 34
+		res := diagram.NumberOfSets(n,k)
+		fmt.Println(res)
+	}
+	{
+		//5
+		//[[0,1,100],[0,2,100],[0,3,10],[1,2,100],[1,4,10],[2,1,10],[2,3,100],[2,4,100],[3,2,10],[3,4,100]]
+		//0
+		//4
+		//3
+		var n int = 5
+		var edges [][]int = [][]int{{0,1,100},{0,2,100},{0,3,10},{1,2,100},{1,4,10},{2,1,10},{2,3,100},{2,4,100},{3,2,10},{3,4,100}}
+		var src int = 0
+		var dst int = 4
+		var k int = 3
+		res := diagram.FindCheapestPrice(n,edges,src,dst,k)
+		fmt.Println(res)
+	}
+	{
+		//var graph [][]int = [][]int{{1},{0,3},{3},{1,2}}
+		var graph [][]int = [][]int{{},{2,4,6},{1,4,8,9},{7,8},{1,2,8,9},{6,9},{1,5,7,8,9},{3,6,9},{2,3,4,6,9},{2,4,5,6,7,8}}
+		//var graph [][]int = [][]int{{},{2,3},{1},{1}}
+		//var graph [][]int = [][]int{{1},{0},{4},{4},{2,3}}
+		res := diagram.IsBipartite(graph)
+		fmt.Println(res)
+	}
+	{
 		var N int = 4
 		var K int = 6
 		res := number.KthGrammar(N,K)
