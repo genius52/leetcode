@@ -12,6 +12,17 @@ import (
 
 func main(){
 	{
+		var S string = "abcde"
+		var words []string = []string{"a", "bb", "acd", "ace"}
+		res := string_issue.NumMatchingSubseq(S,words)
+		fmt.Println(res)
+	}
+	{
+		var N int = 4
+		res := diagram.NumTilings(N)
+		fmt.Println(res)
+	}
+	{
 		var n int = 999
 		var k int = 34
 		res := diagram.NumberOfSets(n,k)
