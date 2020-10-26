@@ -12,6 +12,13 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{4,6,5,9,3,7}
+		var l []int = []int{0,0,2}
+		var r []int = []int{2,3,5}
+		res := array.CheckArithmeticSubarrays(nums,l,r)
+		fmt.Println(res)
+	}
+	{
 		var S string = "abcde"
 		var words []string = []string{"a", "bb", "acd", "ace"}
 		res := string_issue.NumMatchingSubseq(S,words)
