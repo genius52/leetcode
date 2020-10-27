@@ -12,6 +12,22 @@ import (
 
 func main(){
 	{
+		var poured int = 10
+		var query_row int = 4
+		var query_glass int = 3
+		res := number.ChampagneTower(poured,query_row,query_glass)
+		fmt.Println(res)
+	}
+	{
+		//var heights [][]int = [][]int{{8,3,2,5,2,10,7,1,8,9},{1,4,9,1,10,2,4,10,3,5},
+		//	{4,10,10,3,6,1,3,9,8,8},{4,4,6,10,10,10,2,10,8,8},{9,10,2,4,1,2,2,6,5,7},
+		//	{2,9,2,6,1,4,7,6,10,9},{8,8,2,10,8,2,3,9,5,3},{2,10,9,3,5,1,7,4,5,6},
+		//	{2,3,9,2,5,10,2,7,1,8},{9,10,4,10,7,4,9,3,1,6}}
+		var heights [][]int = [][]int{{1,2,2},{3,8,2},{5,3,5}}
+		res := diagram.MinimumEffortPath(heights)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{4,6,5,9,3,7}
 		var l []int = []int{0,0,2}
 		var r []int = []int{2,3,5}
