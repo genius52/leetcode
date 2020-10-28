@@ -12,6 +12,20 @@ import (
 
 func main(){
 	{
+		//var graph [][]int = [][]int{{1,2},{2,3},{5},{0},{5},{},{}}
+		var graph [][]int = [][]int{{},{2},{3,4},{4},{}}
+		res := diagram.EventualSafeNodes(graph)
+		fmt.Println(res)
+	}
+	{
+		//[0,7,8,10,10,11,12,13,19,18]
+		//[4,4,5,7,11,14,15,16,17,20]
+		var A []int = []int{0,7,8,10,10,11,12,13,19,18}
+		var B []int = []int{4,4,5,7,11,14,15,16,17,20}
+		res := array.MinSwap(A,B)
+		fmt.Println(res)
+	}
+	{
 		var poured int = 10
 		var query_row int = 4
 		var query_glass int = 3
