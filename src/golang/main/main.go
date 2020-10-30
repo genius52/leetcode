@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var A []int = []int{1,2, 4}
+		res := tree.NumFactoredBinaryTrees(A)
+		fmt.Println(res)
+	}
+	{
 		//var A []int = []int{9,1,2,3,9}
 		//var K int = 3
 		var A []int = []int{4,1,7,5,6,2,3}
