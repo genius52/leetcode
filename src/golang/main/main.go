@@ -12,6 +12,14 @@ import (
 
 func main(){
 	{
+		//var intervals [][]int = [][]int{{1,2},{3,5},{6,7},{8,10},{12,16}}
+		//var newInterval []int = []int{16,18}
+		var intervals [][]int = [][]int{{1,5}}
+		var newInterval []int = []int{0,0}
+		res := array.Insert(intervals,newInterval)
+		fmt.Println(res)
+	}
+	{
 		var A []int = []int{1,2, 4}
 		res := tree.NumFactoredBinaryTrees(A)
 		fmt.Println(res)
