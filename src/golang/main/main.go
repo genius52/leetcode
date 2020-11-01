@@ -12,6 +12,17 @@ import (
 
 func main(){
 	{
+		var arr []int = []int{1,3,5,7}
+		var pieces [][]int = [][]int{{2,4,6,8}}
+		res := array.CanFormArray(arr,pieces)
+		fmt.Println(res)
+	}
+	{
+		var nums []int = []int{-1,1,-6,4,5,-6,1,4,1}
+		res := array.FrequencySort(nums)
+		fmt.Println(res)
+	}
+	{
 		//var difficulty []int = []int{2,4,6,8,10}
 		//var profit []int = []int{10,20,30,40,50}
 		//var worker []int = []int{4,5,6,7}
