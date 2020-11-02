@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var n int = 3
+		res := number.CountVowelStrings(n)
+		fmt.Println(res)
+	}
+	{
 		var arr []int = []int{1,3,5,7}
 		var pieces [][]int = [][]int{{2,4,6,8}}
 		res := array.CanFormArray(arr,pieces)
