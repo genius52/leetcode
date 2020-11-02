@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var dominoes string = "RR.L."
+		res := diagram.PushDominoes(dominoes)
+		fmt.Println(res)
+	}
+	{
 		var heights []int= []int{4,2,7,6,9,14,12}
 		var bricks int = 5
 		var ladders int = 1
