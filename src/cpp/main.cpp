@@ -23,6 +23,7 @@
 #include "./array/456. 132 Pattern.hpp"
 #include "./array/498. Diagonal Traverse.hpp"
 #include "./array/525. Contiguous Array.hpp"
+#include "./array/846. Hand of Straights.hpp"
 #include "array/532. K-diff Pairs in an Array.hpp"
 #include "array/598. Range Addition II.hpp"
 #include "array/661. Image Smoother.hpp"
@@ -121,6 +122,13 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_846 s846;
+        std::vector<int> hand{1,2,3,6,2,3,4,7,8};
+        int W = 3;
+        auto res = s846.isNStraightHand(hand,W);
+        std::cout << "846 res = " << res << std::endl;
+    }
     {
         Solution_1619 s1619;
         std::vector<int> arr{ 6,0,7,0,7,5,7,8,3,4,0,7,8,1,6,8,1,1,2,4,8,1,9,5,4,3,8,5,10,8,6,6,1,0,6,10,8,2,3,4 };
