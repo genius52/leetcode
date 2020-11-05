@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var s string = "17522"
+		res := number.SplitIntoFibonacci(s)
+		fmt.Println(res)
+	}
+	{
 		var dominoes string = "RR.L."
 		res := diagram.PushDominoes(dominoes)
 		fmt.Println(res)
