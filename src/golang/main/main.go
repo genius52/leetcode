@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var arr []int = []int{2,3,2}
+		res := array.LongestMountain(arr)
+		fmt.Println(res)
+	}
+	{
 		var s string = "17522"
 		res := number.SplitIntoFibonacci(s)
 		fmt.Println(res)
