@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var S string = "(()(()))"
+		res := string_issue.ScoreOfParentheses(S)
+		fmt.Println(res)
+	}
+	{
 		var S string = "zd"
 		var shifts []int = []int{0,1}
 		res := string_issue.ShiftingLetters(S,shifts)
