@@ -12,6 +12,12 @@ import (
 
 func main(){
 	{
+		var S string = "zd"
+		var shifts []int = []int{0,1}
+		res := string_issue.ShiftingLetters(S,shifts)
+		fmt.Println(res)
+	}
+	{
 		var arr []int = []int{2,3,2}
 		res := array.LongestMountain(arr)
 		fmt.Println(res)
