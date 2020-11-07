@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var n int = 2 << 29
+		res := number.ReorderedPowerOf2(n)
+		fmt.Println(res)
+	}
+	{
 		var S string = "(()(()))"
 		res := string_issue.ScoreOfParentheses(S)
 		fmt.Println(res)
