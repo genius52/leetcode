@@ -30,6 +30,7 @@
 #include "array/932. Beautiful Array.hpp"
 #include "array/735. Asteroid Collision.hpp"
 #include "array/1536. Minimum Swaps to Arrange a Binary Grid.hpp"
+#include "array/870. Advantage Shuffle.hpp"
 #include "./number/229. Majority Element II.hpp"
 #include "./number/220. Contains Duplicate III.hpp"
 #include "./number/1441. Build an Array With Stack Operations.hpp"
@@ -123,6 +124,13 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_870 s870;
+        std::vector<int> A{12,24,8,32};
+        std::vector<int> B{13,25,32,11};
+        auto res = s870.advantageCount(A,B);
+        std::cout << "870 res = " << res.size() << std::endl;
+    }
     {
         Solution_853 s853;
         int target = 10;
