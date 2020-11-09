@@ -12,6 +12,12 @@ import (
 
 func main(){
 	{
+		var piles []int = []int{30,11,23,4,20}
+		var H int = 6
+		res := number.MinEatingSpeed(piles,H)
+		fmt.Println(res)
+	}
+	{
 		var n int = 2 << 29
 		res := number.ReorderedPowerOf2(n)
 		fmt.Println(res)
