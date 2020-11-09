@@ -65,6 +65,7 @@
 #include "number/781. Rabbits in Forest.hpp"
 #include "number/1619. Mean of Array After Removing Some Elements.hpp"
 #include "number/853. Car Fleet.hpp"
+#include "number/1647. Minimum Deletions to Make Character Frequencies Unique.hpp"
 #include "./tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./tree/450. Delete Node in a BST.hpp"
@@ -124,6 +125,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_1647 s1647;
+        std::string s = "ceabaacb";
+        auto res = s1647.minDeletions(s);
+        std::cout << "1647 res = " << res << std::endl;
+    }
     {
         Solution_870 s870;
         std::vector<int> A{12,24,8,32};
