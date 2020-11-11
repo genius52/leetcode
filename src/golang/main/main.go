@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var A []int = []int{1}
+		res := array.SubarrayBitwiseORs(A)
+		fmt.Println(res)
+	}
+	{
 		var R int = 5
 		var C int = 6
 		var r0 int = 1
