@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var A []int = []int{3,1,2,4}
+		res := array.SumSubarrayMins(A)
+		fmt.Println(res)
+	}
+	{
 		var input []int = []int{3,8,0,9,2,5}
 		obj := diagram.Constructor900(input)
 		res := obj.Next(2)
