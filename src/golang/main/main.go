@@ -12,6 +12,16 @@ import (
 
 func main(){
 	{
+		var input []int = []int{3,8,0,9,2,5}
+		obj := diagram.Constructor900(input)
+		res := obj.Next(2)
+		res = obj.Next(1)
+		res = obj.Next(1)
+		res = obj.Next(1)
+		res = obj.Next(1)
+		fmt.Println(res)
+	}
+	{
 		var A []int = []int{1}
 		res := array.SubarrayBitwiseORs(A)
 		fmt.Println(res)
