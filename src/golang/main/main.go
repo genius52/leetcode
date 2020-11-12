@@ -12,6 +12,12 @@ import (
 
 func main(){
 	{
+		var A []int = []int{1,3,6}
+		var K int = 3
+		res := array.SmallestRangeII(A,K)
+		fmt.Println(res)
+	}
+	{
 		obj := array.Constructor901()
 		//[100],[80],[60],[70],[60],[75],[85]
 		res := obj.Next(100)
