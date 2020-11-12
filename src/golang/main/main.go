@@ -12,6 +12,18 @@ import (
 
 func main(){
 	{
+		obj := array.Constructor901()
+		//[100],[80],[60],[70],[60],[75],[85]
+		res := obj.Next(100)
+		res = obj.Next(80)
+		res = obj.Next(60)
+		res = obj.Next(70)
+		res = obj.Next(68)
+		res = obj.Next(75)
+		res = obj.Next(85)
+		fmt.Println(res)
+	}
+	{
 		var A []int = []int{3,1,2,4}
 		res := array.SumSubarrayMins(A)
 		fmt.Println(res)
