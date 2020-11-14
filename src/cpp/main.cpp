@@ -90,6 +90,7 @@
 #include "graph/547. Friend Circles.hpp"
 #include "graph/677. Map Sum Pairs.hpp"
 #include "graph/721. Accounts Merge.hpp"
+#include "graph/911. Online Election.hpp"
 #include "./string/1446. Consecutive Characters.cpp"
 #include "./string/1451. Rearrange Words in a Sentence.hpp"
 #include "./string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -125,6 +126,13 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        std::vector<int> persons{0,1,1,0,0,1,0};
+        std::vector<int> times{0,5,10,15,20,25,30};
+        TopVotedCandidate s911(persons,times);
+        auto res = s911.q(25);
+        std::cout << "911 res = " << res << std::endl;
+    }
     {
         Solution_1647 s1647;
         std::string s = "ceabaacb";
