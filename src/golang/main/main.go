@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var A []int = []int{5,0,3,8,6}
+		res := array.PartitionDisjoint(A)
+		fmt.Println(res)
+	}
+	{
 		var A []int = []int{1,3,6}
 		var K int = 3
 		res := array.SmallestRangeII(A,K)
@@ -72,10 +77,10 @@ func main(){
 	{
 		//"cpmxv8ewnfk3xxcilcmm68d2ygc88daomywc3imncfjgtwj8nrxjtwhiem5nzqnicxzo248g52y72v3yujqpvqcssrofd99lkovg"
 		//480551547
-		var S string = "cpmxv8ewnfk3xxcilcmm68d2ygc88daomywc3imncfjgtwj8nrxjtwhiem5nzqnicxzo248g52y72v3yujqpvqcssrofd99lkovg"
-		var K int = 480551547
-		res := string_issue.DecodeAtIndex(S,K)
-		fmt.Println(res)
+		//var S string = "cpmxv8ewnfk3xxcilcmm68d2ygc88daomywc3imncfjgtwj8nrxjtwhiem5nzqnicxzo248g52y72v3yujqpvqcssrofd99lkovg"
+		//var K int = 480551547
+		//res := string_issue.DecodeAtIndex(S,K)
+		//fmt.Println(res)
 	}
 	{
 		var piles []int = []int{30,11,23,4,20}
@@ -177,10 +182,10 @@ func main(){
 	{
 		//[0,7,8,10,10,11,12,13,19,18]
 		//[4,4,5,7,11,14,15,16,17,20]
-		var A []int = []int{0,7,8,10,10,11,12,13,19,18}
-		var B []int = []int{4,4,5,7,11,14,15,16,17,20}
-		res := array.MinSwap(A,B)
-		fmt.Println(res)
+		//var A []int = []int{0,7,8,10,10,11,12,13,19,18}
+		//var B []int = []int{4,4,5,7,11,14,15,16,17,20}
+		//res := array.MinSwap(A,B)
+		//fmt.Println(res)
 	}
 	{
 		var poured int = 10
@@ -194,9 +199,9 @@ func main(){
 		//	{4,10,10,3,6,1,3,9,8,8},{4,4,6,10,10,10,2,10,8,8},{9,10,2,4,1,2,2,6,5,7},
 		//	{2,9,2,6,1,4,7,6,10,9},{8,8,2,10,8,2,3,9,5,3},{2,10,9,3,5,1,7,4,5,6},
 		//	{2,3,9,2,5,10,2,7,1,8},{9,10,4,10,7,4,9,3,1,6}}
-		var heights [][]int = [][]int{{1,2,2},{3,8,2},{5,3,5}}
-		res := diagram.MinimumEffortPath(heights)
-		fmt.Println(res)
+		//var heights [][]int = [][]int{{1,2,2},{3,8,2},{5,3,5}}
+		//res := diagram.MinimumEffortPath(heights)
+		//fmt.Println(res)
 	}
 	{
 		var nums []int = []int{4,6,5,9,3,7}
@@ -212,9 +217,9 @@ func main(){
 		fmt.Println(res)
 	}
 	{
-		var N int = 4
-		res := diagram.NumTilings(N)
-		fmt.Println(res)
+		//var N int = 4
+		//res := diagram.NumTilings(N)
+		//fmt.Println(res)
 	}
 	{
 		var n int = 999
@@ -228,13 +233,13 @@ func main(){
 		//0
 		//4
 		//3
-		var n int = 5
-		var edges [][]int = [][]int{{0,1,100},{0,2,100},{0,3,10},{1,2,100},{1,4,10},{2,1,10},{2,3,100},{2,4,100},{3,2,10},{3,4,100}}
-		var src int = 0
-		var dst int = 4
-		var k int = 3
-		res := diagram.FindCheapestPrice(n,edges,src,dst,k)
-		fmt.Println(res)
+		//var n int = 5
+		//var edges [][]int = [][]int{{0,1,100},{0,2,100},{0,3,10},{1,2,100},{1,4,10},{2,1,10},{2,3,100},{2,4,100},{3,2,10},{3,4,100}}
+		//var src int = 0
+		//var dst int = 4
+		//var k int = 3
+		//res := diagram.FindCheapestPrice(n,edges,src,dst,k)
+		//fmt.Println(res)
 	}
 	{
 		//var graph [][]int = [][]int{{1},{0,3},{3},{1,2}}

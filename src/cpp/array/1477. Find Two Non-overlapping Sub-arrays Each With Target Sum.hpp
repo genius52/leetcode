@@ -22,7 +22,7 @@ public:
         std::vector<int> rightdp(len);
         std::unordered_map<int,int> record;//key: sum from 0 to i, value: start to end
         leftdp[0] = arr[0];
-        for(int i = 1;i <= len;i++){
+        for(int i = 1;i < len;i++){
             leftdp[i] = leftdp[i - 1] + arr[i];
         }
         for(int i = len - 2;i >= 0;i--){

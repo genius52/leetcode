@@ -16,10 +16,8 @@ public:
             else {
                 end_record[s[i]] = i;
                 int maxlen = i - begin_record[s[i]] - 1;
-                if (maxlen > 0) {
-                    if (maxlen > res) {
-                        res = maxlen;
-                    }
+                if (maxlen > res) {
+                    res = maxlen;
                 }
             }
         }
