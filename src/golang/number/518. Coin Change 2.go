@@ -47,7 +47,7 @@ func Change2(amount int, coins []int) int {
 	for i := 1;i <= l;i++{
 		for j := 1;j <= amount;j++{
 			if j >= coins[i - 1]{
-				dp[i][j] += dp[i][j - coins[i - 1]] // 
+				dp[i][j] += dp[i][j - coins[i - 1]] //
 			}
 			dp[i][j] += dp[i-1][j]//do not choose (i)th element
 		}

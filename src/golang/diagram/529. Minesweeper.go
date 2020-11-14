@@ -77,7 +77,7 @@ func dfs_UpdateBoard(board [][]byte,rows int,columns int,row int,column int){
 func UpdateBoard(board [][]byte, click []int) [][]byte {
 	var rows int = len(board)
 	var columns int = len(board[0])
-	
+
 	row := click[0]
 	column := click[1]
 	dfs_UpdateBoard(board,rows,columns,row,column)

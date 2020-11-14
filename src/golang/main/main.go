@@ -12,6 +12,13 @@ import (
 
 func main(){
 	{
+		var A []string = []string{"amazon","apple","facebook","google","leetcode"}
+		var B []string = []string{"e","oo"}
+		//["facebook","leetcode"]
+		res := array.WordSubsets(A,B)
+		fmt.Println(res)
+	}
+	{
 		var A []int = []int{5,0,3,8,6}
 		res := array.PartitionDisjoint(A)
 		fmt.Println(res)

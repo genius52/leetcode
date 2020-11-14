@@ -12,7 +12,6 @@ func MinEatingSpeed(piles []int, H int) int {
 	if total % H != 0{
 		least_speed++
 	}
-
 	for true{
 		var cost_hours int = 0
 		for i := 0;i < l;i++{

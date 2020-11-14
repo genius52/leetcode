@@ -2,7 +2,7 @@ package number
 
 import "sort"
 
-//Definition for singly-linked list.
+//Definition for singly-linked list_queue.
 type ListNode struct {
 	Val int
 	Next *ListNode

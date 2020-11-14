@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-//Definition for singly-linked list.
+//Definition for singly-linked list_queue.
 type ListNode struct {
 	Val int
 	Next *ListNode
@@ -3780,7 +3780,7 @@ func generateTheString(n int) string {
 
 //23
 /**
- * Definition for singly-linked list.
+ * Definition for singly-linked list_queue.
  * type ListNode struct {
  *     Val int
  *     Next *ListNode

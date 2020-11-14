@@ -1232,7 +1232,7 @@ func largestRectangleArea(heights []int) int {
 }
 
 //739
-//For example, given the list of temperatures
+//For example, given the list_queue of temperatures
 //T = [73, 74, 75, 71, 69, 72, 76, 73],
 //your output should be [1, 1, 4, 2, 1, 1, 0, 0].
 func dailyTemperatures(T []int) []int {
