@@ -12,6 +12,12 @@ import (
 
 func main(){
 	{
+		var code []int = []int{2,4,9,3}
+		var k int = -2
+		res := array.Decrypt(code,k)
+		fmt.Println(res)
+	}
+	{
 		var A []string = []string{"amazon","apple","facebook","google","leetcode"}
 		var B []string = []string{"e","oo"}
 		//["facebook","leetcode"]
