@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var s string = "aabbbbaabababbbbaaaaaabbababaaabaabaabbbabbbbabbabbababaabaababbbbaaaaabbabbabaaaabbbabaaaabbaaabbbaabbaaaaabaa"
+		res := string_issue.MinimumDeletions(s)
+		fmt.Println(res)
+	}
+	{
 		var code []int = []int{2,4,9,3}
 		var k int = -2
 		res := array.Decrypt(code,k)
