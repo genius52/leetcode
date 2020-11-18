@@ -12,6 +12,39 @@ import (
 
 func main(){
 	{
+
+		//["CBTInserter","insert","insert","get_root"]
+		//[[[1,2,3,4,5,6]],[7],[8],[]]
+		//var t1 tree.TreeNode
+		//t1.Val = 1
+		//var t2 tree.TreeNode
+		//t2.Val = 2
+		//var t3 tree.TreeNode
+		//t3.Val = 3
+		//var t4 tree.TreeNode
+		//t4.Val = 4
+		//var t5 tree.TreeNode
+		//t5.Val = 5
+		//var t6 tree.TreeNode
+		//t6.Val = 6
+		//t1.Left = &t2
+		//t1.Right = &t3
+		//t2.Left = &t4
+		//t2.Right = &t5
+		//t3.Left = &t6
+		//obj := tree.Constructor919(&t1)
+		//obj.Insert(7)
+		//obj.Insert(8)
+		var t1 tree.TreeNode
+		t1.Val = 1
+		obj := tree.Constructor919(&t1)
+		obj.Insert(2)
+		obj.Insert(3)
+		obj.Insert(4)
+		r := obj.Get_root()
+		fmt.Println(r.Val)
+	}
+	{
 		var nums []int = []int{5,2,3,1,1}
 		var x int = 5
 		res := array.MinOperations1658(nums,x)
