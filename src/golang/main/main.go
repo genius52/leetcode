@@ -12,7 +12,17 @@ import (
 
 func main(){
 	{
-
+		var s string = "01"
+		res := string_issue.MinFlipsMonoIncr(s)
+		fmt.Println(res)
+	}
+	{
+		var data []int = []int{1,1,2,2,3,3,4,4,5,5}
+		var target int = 8
+		res := array.ThreeSumMulti(data,target)
+		fmt.Println(res)
+	}
+	{
 		//["CBTInserter","insert","insert","get_root"]
 		//[[[1,2,3,4,5,6]],[7],[8],[]]
 		//var t1 tree.TreeNode
