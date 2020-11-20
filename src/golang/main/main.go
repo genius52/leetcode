@@ -12,6 +12,12 @@ import (
 
 func main(){
 	{
+		var A []int = []int{0,0,0,0,0}
+		var S int = 0
+		res := array.NumSubarraysWithSum(A,S)
+		fmt.Println(res)
+	}
+	{
 		var s string = "01"
 		res := string_issue.MinFlipsMonoIncr(s)
 		fmt.Println(res)
