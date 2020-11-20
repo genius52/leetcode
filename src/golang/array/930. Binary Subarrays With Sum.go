@@ -11,6 +11,24 @@ package array
 //A.length <= 30000
 //0 <= S <= A.length
 //A[i] is either 0 or 1.
+func NumSubarraysWithSum2(A []int, S int) int {
+	var l int = len(A)
+	var record map[int]int = make(map[int]int)
+	var res int = 0
+	var total int = 0
+	for i := 0;i < l;i++{
+		total += A[i]
+		if cnt,ok := record[total - S];ok{
+			res += cnt
+		}
+		if total == S{
+			res++
+		}
+		record[total]++
+	}
+	return res
+}
+
 func NumSubarraysWithSum(A []int, S int) int {
 	var l int = len(A)
 	var res int = 0

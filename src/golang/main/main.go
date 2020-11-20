@@ -12,9 +12,14 @@ import (
 
 func main(){
 	{
-		var A []int = []int{0,0,0,0,0}
-		var S int = 0
-		res := array.NumSubarraysWithSum(A,S)
+		var A [][]int = [][]int{{1,1,1,1,1},{1,0,0,0,1},{1,0,1,0,1},{1,0,0,0,1},{1,1,1,1,1}}
+		res := diagram.ShortestBridge(A)
+		fmt.Println(res)
+	}
+	{
+		var A []int = []int{1,0,1,0,1}
+		var S int = 2
+		res := array.NumSubarraysWithSum2(A,S)
 		fmt.Println(res)
 	}
 	{
