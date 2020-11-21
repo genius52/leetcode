@@ -8,9 +8,6 @@ func KnightDialer(n int) int {
 	if n == 1{
 		return 10
 	}
-	if n == 2{
-		return 20
-	}
 	var graph map[int][]int = make(map[int][]int)
 	graph[0] = []int{4,6}
 	graph[1] = []int{6,8}
@@ -22,10 +19,6 @@ func KnightDialer(n int) int {
 	graph[8] = []int{1,3}
 	graph[9] = []int{2,4}
 
-	//dp[i][0] = dp[i - 1][4] + dp[i - 1][6]
-	//dp[2][0] = dp[1][4] + dp[1][6]
-	//04,06
-	//040,043,049, 060,061,067
 	var dp [][]int = make([][]int,n)//dp[i][j]: when length = i + 1,the number j's counts
 	for i := 0;i < n;i++{
 		dp[i] = make([]int,10)
@@ -33,17 +26,7 @@ func KnightDialer(n int) int {
 	for i := 0;i < 10;i++{
 		dp[0][i] = 1
 	}
-	dp[1][0] = 2
-	dp[1][1] = 2
-	dp[1][2] = 2
-	dp[1][3] = 2
-	dp[1][4] = 3
-	dp[1][5] = 0
-	dp[1][6] = 3
-	dp[1][7] = 2
-	dp[1][8] = 2
-	dp[1][9] = 2
-	for i := 2;i < n;i++{
+	for i := 1;i < n;i++{
 		for j := 0;j < 10;j++{
 			if nums,ok := graph[j];ok{
 				for _,num := range nums{
