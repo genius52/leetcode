@@ -12,6 +12,12 @@ import (
 
 func main(){
 	{
+		var n int = 1
+		var k int = 26
+		res := string_issue.GetSmallestString(n,k)
+		fmt.Print(res)
+	}
+	{
 		var A []int = []int{1,1,1,2,2,2}
 		res := array.MinIncrementForUnique(A)
 		fmt.Println(res)
