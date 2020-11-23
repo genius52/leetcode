@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{2,1,6,4}
+		res := array.WaysToMakeFair(nums)
+		fmt.Println(res)
+	}
+	{
 		var n int = 1
 		var k int = 26
 		res := string_issue.GetSmallestString(n,k)
