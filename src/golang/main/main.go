@@ -12,6 +12,11 @@ import (
 
 func main(){
 	{
+		var points [][]int = [][]int{{1,1},{1,3},{3,1},{3,3},{4,1},{4,3}}
+		res := diagram.MinAreaRect(points)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{2,1,6,4}
 		res := array.WaysToMakeFair(nums)
 		fmt.Println(res)
