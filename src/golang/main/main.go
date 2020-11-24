@@ -5,12 +5,19 @@ import (
 	"../diagram"
 	"../list_queue"
 	"../number"
+	"../stack"
 	"../string_issue"
 	"../tree"
 	"fmt"
 )
 
 func main(){
+	{
+		var pushed []int = []int{1,2,3,4,5}
+		var popped []int = []int{4,5,3,2,1}
+		res := stack.ValidateStackSequences(pushed,popped)
+		fmt.Println(res)
+	}
 	{
 		var points [][]int = [][]int{{1,1},{1,3},{3,1},{3,3},{4,1},{4,3}}
 		res := diagram.MinAreaRect(points)
