@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var tokens []int = []int{100,200,200,400,300,400,500}
+		var P int = 200
+		res := array.BagOfTokensScore(tokens,P)
+		fmt.Println(res)
+	}
+	{
 		var pushed []int = []int{1,2,3,4,5}
 		var popped []int = []int{4,5,3,2,1}
 		res := stack.ValidateStackSequences(pushed,popped)
