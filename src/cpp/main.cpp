@@ -31,6 +31,7 @@
 #include "array/735. Asteroid Collision.hpp"
 #include "array/1536. Minimum Swaps to Arrange a Binary Grid.hpp"
 #include "array/870. Advantage Shuffle.hpp"
+#include "array/954. Array of Doubled Pairs.hpp"
 #include "./number/229. Majority Element II.hpp"
 #include "./number/220. Contains Duplicate III.hpp"
 #include "./number/1441. Build an Array With Stack Operations.hpp"
@@ -126,6 +127,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_954 s954;
+        std::vector<int> A{4,-2,2,-4,1,2,0,0};
+        auto res = s954.canReorderDoubled(A);
+        std::cout << "954 res = " << res << std::endl;
+    }
     {
         std::vector<int> persons{0,1,1,0,0,1,0};
         std::vector<int> times{0,5,10,15,20,25,30};
