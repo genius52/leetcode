@@ -109,6 +109,7 @@
 #include "string/692. Top K Frequent Words.hpp"
 #include "string/5535. Maximum Nesting Depth of the Parentheses.hpp"
 #include "string/1616. Split Two Strings to Make Palindrome.hpp"
+#include "string/955. Delete Columns to Make Sorted II.hpp"
 #include "./list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "./list/445. Add Two Numbers II.hpp"
 //#include "./number/1461. Check If a String Contains All Binary Codes of Size K.hpp"
@@ -127,6 +128,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        std::vector<std::string> A{"abx","agz","bgc","bfc"};
+        Solution_955 s955;
+        auto res = s955.minDeletionSize(A);
+        std::cout << "955 res = " << res << std::endl;
+    }
     {
         Solution_954 s954;
         std::vector<int> A{4,-2,2,-4,1,2,0,0};
