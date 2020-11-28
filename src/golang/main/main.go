@@ -13,6 +13,17 @@ import (
 
 func main(){
 	{
+		var n int = 2
+		var k int = 0
+		res := number.NumsSameConsecDiff(n,k)
+		fmt.Println(res)
+	}
+	{
+		var A []int = []int{9,8,1,0,1,9,4,0,4,1}
+		res := array.MaxWidthRamp(A)
+		fmt.Println(res)
+	}
+	{
 		var tokens []int = []int{100,200,200,400,300,400,500}
 		var P int = 200
 		res := array.BagOfTokensScore(tokens,P)
