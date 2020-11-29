@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var sequence string = "bbbabbabba"
+		var word string = "bba"
+		res := string_issue.MaxRepeating(sequence,word)
+		fmt.Println(res)
+	}
+	{
 		var n int = 2
 		var k int = 0
 		res := number.NumsSameConsecDiff(n,k)
