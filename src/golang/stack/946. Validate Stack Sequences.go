@@ -18,22 +18,18 @@ func ValidateStackSequences(pushed []int, popped []int) bool {
 		return true
 	}
 	var stack list.List
-	var record map[int]bool = make(map[int]bool)
 	var pos_push int = 0
 	var pos_pop int = 0
 	for pos_push < l && pos_push < l{
-		record[pushed[pos_push]] = true
 		if pushed[pos_push] == popped[pos_pop]{
 			pos_push++
 			pos_pop++
-			//delete(record,pushed[pos_push])
 		}else{
 			if stack.Len() > 0{
 				top_val := stack.Back().Value.(int)
 				if top_val == popped[pos_pop]{
 					stack.Remove(stack.Back())
 					pos_pop++
-					//pos_push++
 				}else{
 					stack.PushBack(pushed[pos_push])
 					pos_push++

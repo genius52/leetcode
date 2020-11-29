@@ -13,15 +13,9 @@ import (
 
 func main(){
 	{
-		var nums []int = []int{1,0}
-		var k int = 2
-		res := array.CheckSubarraySum(nums,k)
-		fmt.Println(res)
-	}
-	{
-		var sequence string = "bbbabbabba"
-		var word string = "bba"
-		res := string_issue.MaxRepeating(sequence,word)
+		var A []int = []int{4,5,0,-2,-3,1}
+		var K int = 5
+		res := array.SubarraysDivByK(A, K)
 		fmt.Println(res)
 	}
 	{
