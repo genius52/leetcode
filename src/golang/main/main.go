@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{1,0}
+		var k int = 2
+		res := array.CheckSubarraySum(nums,k)
+		fmt.Println(res)
+	}
+	{
 		var sequence string = "bbbabbabba"
 		var word string = "bba"
 		res := string_issue.MaxRepeating(sequence,word)
@@ -673,12 +679,6 @@ func main(){
 		var s string = "abpcplea"
 		var d []string = []string{"b","c","a"}
 		res := string_issue.FindLongestWord(s,d)
-		fmt.Println(res)
-	}
-	{
-		var nums []int = []int{0,0}
-		var k int = -1
-		res := array.CheckSubarraySum(nums,k)
 		fmt.Println(res)
 	}
 	{
