@@ -30,16 +30,4 @@ public:
     }
 };
 
-string get(string key, int timestamp) {
-    if (m.find(key) == m.end()) {
-        return "";
-    }
-    auto it = m[key].upper_bound(timestamp);
-    if (it != m[key].begin()) {
-        it--;
-        return it->second;
-    } else {
-        return "";
-    }
-}
 
