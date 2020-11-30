@@ -92,6 +92,7 @@
 #include "graph/677. Map Sum Pairs.hpp"
 #include "graph/721. Accounts Merge.hpp"
 #include "graph/911. Online Election.hpp"
+#include "graph/981. Time Based Key-Value Store.hpp"
 #include "./string/1446. Consecutive Characters.cpp"
 #include "./string/1451. Rearrange Words in a Sentence.hpp"
 #include "./string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -128,6 +129,16 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        //"love","high",10],["love","low",20]
+        TimeMap s981;
+
+        s981.set("love","high",10);
+        s981.set("love","low",20);
+        auto res = s981.get("love",10);
+        res = s981.get("love",30);
+        std::cout << "981 res = " << res << std::endl;
+    }
     {
         std::vector<std::string> A{"abx","agz","bgc","bfc"};
         Solution_955 s955;
