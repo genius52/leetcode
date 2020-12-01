@@ -72,6 +72,7 @@
 #include "./tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "./tree/450. Delete Node in a BST.hpp"
 #include "./tree/449. Serialize and Deserialize BST.hpp"
+#include "tree/987. Vertical Order Traversal of a Binary Tree.hpp"
 #include "./graph/332. Reconstruct Itinerary.cpp"
 #include "./graph/207. Course Schedule.hpp"
 #include "./graph/210. Course Schedule II.hpp"
@@ -130,6 +131,22 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        //3,9,20,null,null,15,7
+        Solution_987 s987;
+        TreeNode t1(3);
+        TreeNode t2(9);
+        TreeNode t3(20);
+        TreeNode t4(15);
+        TreeNode t5(17);
+
+        t1.left = &t2;
+        t1.right = &t3;
+        t3.left = &t4;
+        t3.right = &t5;
+        auto res = s987.verticalTraversal(&t1);
+        std::cout << "987 res = " << res.size() << std::endl;
+    }
     {
         Solution_983 s983;
         std::vector<int> days{1,2,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,20,21,24,25,27,28,29,30,31,34,37,38,39,41,43,44,45,47,48,49,54,57,60,62,63,66,69,70,72,74,76,78,80,81,82,83,84,85,88,89,91,93,94,97,99};
