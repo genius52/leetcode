@@ -73,6 +73,7 @@
 #include "./tree/450. Delete Node in a BST.hpp"
 #include "./tree/449. Serialize and Deserialize BST.hpp"
 #include "tree/987. Vertical Order Traversal of a Binary Tree.hpp"
+#include "tree/988. Smallest String Starting From Leaf.hpp"
 #include "./graph/332. Reconstruct Itinerary.cpp"
 #include "./graph/207. Course Schedule.hpp"
 #include "./graph/210. Course Schedule II.hpp"
@@ -131,6 +132,24 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_988 s988;
+        TreeNode t1(0);
+        TreeNode t2(1);
+        TreeNode t3(2);
+        TreeNode t4(3);
+        TreeNode t5(4);
+        TreeNode t6(3);
+        TreeNode t7(4);
+        t1.left = &t2;
+        t1.right = &t3;
+        t2.left = &t4;
+        t2.right = &t5;
+        t3.left = &t6;
+        t3.right = &t7;
+        auto res = s988.smallestFromLeaf(&t1);
+        std::cout << "988 res = " << res << std::endl;
+    }
     {
         //3,9,20,null,null,15,7
         Solution_987 s987;
