@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var equations []string = []string{"c==c","f!=a","f==b","b==c"}
+		res := diagram.EquationsPossible(equations)
+		fmt.Println(res)
+	}
+	{
 		var A []int = []int{4,5,0,-2,-3,1}
 		var K int = 5
 		res := array.SubarraysDivByK(A, K)
