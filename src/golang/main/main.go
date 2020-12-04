@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var weights []int = []int{1,2,3,1,1}
+		var D int = 4
+		res := array.ShipWithinDays(weights,D)
+		fmt.Println(res)
+	}
+	{
 		//[1,2,1,1,1,2,2,2]
 		//[2,1,2,2,2,2,2,2]
 		//A = [3,5,1,2,3], B = [3,6,3,3,4]
