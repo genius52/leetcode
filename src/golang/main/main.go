@@ -13,6 +13,15 @@ import (
 
 func main(){
 	{
+		//[1,2,1,1,1,2,2,2]
+		//[2,1,2,2,2,2,2,2]
+		//A = [3,5,1,2,3], B = [3,6,3,3,4]
+		var A []int = []int{1,2,1,1,1,2,2,2}
+		var B []int = []int{2,1,2,2,2,2,2,2}
+		res := array.MinDominoRotations(A,B)
+		fmt.Println(res)
+	}
+	{
 		//var A []int = []int{0,0,1,1,1}
 		//var K int = 2
 		//var A []int = []int{1,1,1,0,0,0,1,1,1,1,0}
