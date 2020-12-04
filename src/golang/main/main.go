@@ -13,6 +13,22 @@ import (
 
 func main(){
 	{
+		//var A []int = []int{0,0,1,1,1}
+		//var K int = 2
+		//var A []int = []int{1,1,1,0,0,0,1,1,1,1,0}
+		//var K int = 2
+		var A []int = []int{0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1}
+		var K int = 3
+		res := array.LongestOnes(A,K)
+		fmt.Println(res)
+	}
+	{
+		var X int = 2133
+		var Y int = 12321313
+		res := number.BrokenCalc(X,Y)
+		fmt.Println(res)
+	}
+	{
 		var equations []string = []string{"c==c","f!=a","f==b","b==c"}
 		res := diagram.EquationsPossible(equations)
 		fmt.Println(res)
