@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var queries []string = []string{"FooBar","FooBarTest","FootBall","FrameBuffer","ForceFeedBack"}
+		var pattern string = "FoBa"
+		res := string_issue.CamelMatch(queries,pattern)
+		fmt.Println(res)
+	}
+	{
 		//[2,7,4,3,5]
 		var l0 list_queue.ListNode
 		l0.Val = 2
