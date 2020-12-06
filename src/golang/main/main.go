@@ -13,6 +13,13 @@ import (
 
 func main(){
 	{
+		var x int = 5
+		var y int = 9
+		var z int = 12
+		res := number.CanMeasureWater(x,y,z)
+		fmt.Println(res)
+	}
+	{
 		var queries []string = []string{"FooBar","FooBarTest","FootBall","FrameBuffer","ForceFeedBack"}
 		var pattern string = "FoBa"
 		res := string_issue.CamelMatch(queries,pattern)
@@ -854,13 +861,7 @@ func main(){
 		res := number.FindNthDigit(n)
 		fmt.Println(res)
 	}
-	{
-		var x int = 2
-		var y int = 8
-		var z int = 4
-		res := number.CanMeasureWater(x,y,z)
-		fmt.Println(res)
-	}
+
 	{
 		var n int = 20
 		var k int = 1048575
