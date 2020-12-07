@@ -13,6 +13,13 @@ import (
 
 func main(){
 	{
+		var A []int = []int{3,8,1,3,2,1,8,9,0}
+		var L int = 3
+		var M int = 2
+		res := array.MaxSumTwoNoOverlap(A,L,M)
+		fmt.Println(res)
+	}
+	{
 		var A []int = []int{0,0,0,0}
 		res := array.LongestArithSeqLength(A)
 		fmt.Println(res)
