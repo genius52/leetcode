@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var A []int = []int{0,0,0,0}
+		res := array.LongestArithSeqLength(A)
+		fmt.Println(res)
+	}
+	{
 		var x int = 5
 		var y int = 9
 		var z int = 12
