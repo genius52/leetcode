@@ -13,6 +13,14 @@ import (
 
 func main(){
 	{
+		//[1,3,7,1,7,5]
+		//[1,9,2,5,1]
+		var A []int = []int{1,3,7,1,7,5}
+		var B []int = []int{1,9,2,5,1}
+		res := diagram.MaxUncrossedLines2(A,B)
+		fmt.Println(res)
+	}
+	{
 		var A []int = []int{3,8,1,3,2,1,8,9,0}
 		var L int = 3
 		var M int = 2
