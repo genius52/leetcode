@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var instructions string = "GG"
+		res := diagram.IsRobotBounded(instructions)
+		fmt.Println(res)
+	}
+	{
 		//[1,3,7,1,7,5]
 		//[1,9,2,5,1]
 		var A []int = []int{1,3,7,1,7,5}
