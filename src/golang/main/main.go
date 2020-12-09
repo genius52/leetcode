@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var words []string = []string{"a","ab","ac","bd","abc","abd","abdd"}
+		res := string_issue.LongestStrChain(words)
+		fmt.Println(res)
+	}
+	{
 		var instructions string = "GG"
 		res := diagram.IsRobotBounded(instructions)
 		fmt.Println(res)
