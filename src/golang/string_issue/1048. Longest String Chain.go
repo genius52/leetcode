@@ -31,7 +31,7 @@ func is_predecessor(s1 string,s2 string)bool{
 	return true
 }
 
-func dp_longestStrChain(record [17][]string,pre_string string,cur_len int,memo map[string]int)int{
+func dp_longestStrChain(record [17][]string,pre_string string,cur_len int)int{
 	if cur_len > 16{
 		return 0
 	}
@@ -45,7 +45,7 @@ func dp_longestStrChain(record [17][]string,pre_string string,cur_len int,memo m
 	var max_len int = 0
 	for i := 0;i < cnt;i++{
 		if len(pre_string) == 0 || is_predecessor(pre_string,record[cur_len][i]){
-			var res int = 1 + dp_longestStrChain(record,record[cur_len][i],cur_len + 1,memo)
+			var res int = 1 + dp_longestStrChain(record,record[cur_len][i],cur_len + 1)
 			if res > max_len{
 				max_len = res
 			}
@@ -65,7 +65,7 @@ func LongestStrChain(words []string) int {
 	var res int = 0
 	for i := 1;i <= 16;i++{
 		if len(record[i]) > 0{
-			var cur int =  dp_longestStrChain(record,"",i,memo)
+			var cur int =  dp_longestStrChain(record,"",i)
 			if cur > res{
 				res = cur
 			}

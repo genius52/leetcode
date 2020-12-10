@@ -13,6 +13,13 @@ import (
 
 func main(){
 	{
+		var customers []int = []int{1}
+		var grumpy []int = []int{0}
+		var X int = 1
+		res := array.MaxSatisfied(customers,grumpy,X)
+		fmt.Println(res)
+	}
+	{
 		var words []string = []string{"a","ab","ac","bd","abc","abd","abdd"}
 		res := string_issue.LongestStrChain(words)
 		fmt.Println(res)
