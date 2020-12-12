@@ -33,6 +33,9 @@
 #include "array/1536. Minimum Swaps to Arrange a Binary Grid.hpp"
 #include "array/870. Advantage Shuffle.hpp"
 #include "array/954. Array of Doubled Pairs.hpp"
+#include "array/1024. Video Stitching.hpp"
+#include "array/1049. Last Stone Weight II.hpp"
+#include "array/1054. Distant Barcodes.hpp"
 #include "./number/229. Majority Element II.hpp"
 #include "./number/220. Contains Duplicate III.hpp"
 #include "./number/1441. Build an Array With Stack Operations.hpp"
@@ -132,6 +135,18 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_1054 s1054;
+        std::vector<int> barcodes{1,1,1,1,2,2,3,3};
+        auto res = s1054.rearrangeBarcodes(barcodes);
+        std::cout << "1054 res = " << res.size() << std::endl;
+    }
+    {
+        Solution_1049 s1049;
+        std::vector<int> stones{31,26,33,21,40};
+        auto res = s1049.lastStoneWeightII(stones);
+        std::cout << "1049 res = " << res << std::endl;
+    }
     {
         Solution_988 s988;
         TreeNode t1(0);
