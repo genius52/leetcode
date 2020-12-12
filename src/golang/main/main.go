@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var grid [][]int = [][]int{{0}}
+		res := diagram.ShortestPathBinaryMatrix(grid)
+		fmt.Println(res)
+	}
+	{
 		var customers []int = []int{1}
 		var grumpy []int = []int{0}
 		var X int = 1
