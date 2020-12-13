@@ -117,10 +117,10 @@ func main(){
 		fmt.Println(res)
 	}
 	{
-		var X int = 2133
-		var Y int = 12321313
-		res := number.BrokenCalc(X,Y)
-		fmt.Println(res)
+		//var X int = 2133
+		//var Y int = 12321313
+		//res := number.BrokenCalc(X,Y)
+		//fmt.Println(res)
 	}
 	{
 		var equations []string = []string{"c==c","f!=a","f==b","b==c"}
