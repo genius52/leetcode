@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{2,3,5}
+		res := array.GetSumAbsoluteDifferences(nums)
+		fmt.Println(res)
+	}
+	{
 		var grid [][]int = [][]int{{0}}
 		res := diagram.ShortestPathBinaryMatrix(grid)
 		fmt.Println(res)
