@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var books [][]int = [][]int{{1,1},{2,3},{2,3},{1,1},{1,1},{1,1},{1,2}}
+		var shelf_width int = 4
+		res := diagram.MinHeightShelves(books,shelf_width)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{2,3,5}
 		res := array.GetSumAbsoluteDifferences(nums)
 		fmt.Println(res)
