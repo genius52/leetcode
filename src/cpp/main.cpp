@@ -119,6 +119,7 @@
 #include "string/955. Delete Columns to Make Sorted II.hpp"
 #include "./list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "./list/445. Add Two Numbers II.hpp"
+#include "thread/1115. Print FooBar Alternately.hpp"
 //#include "./number/1461. Check If a String Contains All Binary Codes of Size K.hpp"
 #define x 9999
 #define max 9999
@@ -135,6 +136,27 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        FooBar* s1115 = new FooBar(3);
+        std::thread bar = std::thread([s1115](){
+            s1115->bar([](){
+                static int i = 0;
+                std::cout << "bar" << i << std::endl;
+                i++;
+            });
+        });
+        bar.detach();
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::thread foo = std::thread([s1115](){
+            s1115->foo([](){
+                static int i = 0;
+                std::cout << "foo";
+                i++;
+            });
+        });
+        foo.detach();
+        std::this_thread::sleep_for(std::chrono::seconds(20));
+    }
     {
         Solution_1054 s1054;
         std::vector<int> barcodes{1,1,1,1,2,2,3,3};
