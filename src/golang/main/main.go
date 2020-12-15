@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var bookings [][]int = [][]int{{1,2,10},{2,3,20},{2,5,25}}
+		var n int = 5
+		res := diagram.CorpFlightBookings(bookings,n)
+		fmt.Println(res)
+	}
+	{
 		var books [][]int = [][]int{{1,1},{2,3},{2,3},{1,1},{1,1},{1,1},{1,2}}
 		var shelf_width int = 4
 		res := diagram.MinHeightShelves(books,shelf_width)
