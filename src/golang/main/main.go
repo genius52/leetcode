@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		//var hours []int = []int{9,9,6,0,6,6,9}
+		var hours []int = []int{6,6,9,0,9,9,6}
+		res := array.LongestWPI(hours)
+		fmt.Println(res)
+	}
+	{
 		var bookings [][]int = [][]int{{1,2,10},{2,3,20},{2,5,25}}
 		var n int = 5
 		res := diagram.CorpFlightBookings(bookings,n)
