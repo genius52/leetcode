@@ -120,6 +120,7 @@
 #include "./list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "./list/445. Add Two Numbers II.hpp"
 #include "thread/1115. Print FooBar Alternately.hpp"
+#include "thread/1116. Print Zero Even Odd.hpp"
 //#include "./number/1461. Check If a String Contains All Binary Codes of Size K.hpp"
 #define x 9999
 #define max 9999
@@ -136,6 +137,28 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        ZeroEvenOdd* s1116 = new ZeroEvenOdd(1);
+        std::thread t1 = std::thread([s1116](){
+            s1116->zero([](int n) {
+                            std::cout << n;
+                        });
+        });
+        t1.detach();
+        std::thread t2 = std::thread([s1116](){
+            s1116->even([](int n) {
+                std::cout << n;
+            });
+        });
+        t2.detach();
+        std::thread t3 = std::thread([s1116](){
+            s1116->odd([](int n) {
+                std::cout << n;
+            });
+        });
+        t3.detach();
+        std::this_thread::sleep_for(std::chrono::seconds(20));
+    }
     {
         FooBar* s1115 = new FooBar(3);
         std::thread bar = std::thread([s1115](){
