@@ -13,6 +13,16 @@ import (
 
 func main(){
 	{
+		//6
+		//[[4,1],[3,5],[5,2],[1,4],[4,2],[0,0],[2,0],[1,1]]
+		//[[5,5],[5,0],[4,4],[0,3],[1,0]]
+		var n int = 6
+		var red_edges [][]int = [][]int{{4,1},{3,5},{5,2},{1,4},{4,2},{0,0},{2,0},{1,1}}
+		var blue_edges [][]int = [][]int{{5,5},{5,0},{4,4},{0,3},{1,0}}
+		res := diagram.ShortestAlternatingPaths(n,red_edges,blue_edges)
+		fmt.Println(res)
+	}
+	{
 		//var hours []int = []int{9,9,6,0,6,6,9}
 		var hours []int = []int{6,6,9,0,9,9,6}
 		res := array.LongestWPI(hours)
