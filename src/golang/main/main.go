@@ -13,8 +13,13 @@ import (
 
 func main(){
 	{
-		var text1 string = "abcde"
-		var text2 string = "ace"
+		var nums []int = []int{1,2,3,4}
+		res := array.MovesToMakeZigzag(nums)
+		fmt.Println(res)
+	}
+	{
+		var text1 string = "abc"
+		var text2 string = "abcabc"
 		res := string_issue.LongestCommonSubsequence(text1,text2)
 		fmt.Println(res)
 	}
