@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var text1 string = "abcde"
+		var text2 string = "ace"
+		res := string_issue.LongestCommonSubsequence(text1,text2)
+		fmt.Println(res)
+	}
+	{
 		var grid [][]int = [][]int{{0,1,1,1},{1,1,1,1},{1,0,0,1},{1,1,1,1},{1,0,1,1},{1,1,0,1}}
 		//var grid [][]int = [][]int{{1,1,1},{1,0,1},{1,1,1}}
 		res := array.Largest1BorderedSquare(grid)
