@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{1,-5,-20,4,-1,3,-6,-3}
+		var k int = 2
+		res := array.MaxResult(nums,k)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{4,4}
 		res := array.MaximumUniqueSubarray(nums)
 		fmt.Println(res)
