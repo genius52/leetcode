@@ -31,9 +31,6 @@ func LongestArithSeqLength(A []int) int {
 				if _,ok2 := record[i][diff];!ok2{
 					record[i][diff] = 2
 				}
-				if record[i][diff] > max_cnt{
-					max_cnt = record[i][diff]
-				}
 			}
 		}
 	}

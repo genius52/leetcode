@@ -12,3 +12,14 @@ func CorpFlightBookings(bookings [][]int, n int) []int {
 	}
 	return res
 }
+
+func CorpFlightBookings2(bookings [][]int, n int) []int {
+	var res []int = make([]int,n)
+	var l int = len(bookings)
+	for i := 0;i < l;i++{
+		for j := bookings[i][0];j <= bookings[i][1];j++{
+			res[j - 1] += bookings[i][2]
+		}
+	}
+	return res
+}

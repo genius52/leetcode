@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{4,4}
+		res := array.MaximumUniqueSubarray(nums)
+		fmt.Println(res)
+	}
+	{
 		var number string = "123456"
 		res := string_issue.ReformatNumber(number)
 		fmt.Println(res)
