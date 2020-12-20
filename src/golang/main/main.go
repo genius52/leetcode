@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var number string = "123456"
+		res := string_issue.ReformatNumber(number)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{1,2,3,4}
 		res := array.MovesToMakeZigzag(nums)
 		fmt.Println(res)
