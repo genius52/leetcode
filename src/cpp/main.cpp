@@ -99,6 +99,7 @@
 #include "graph/721. Accounts Merge.hpp"
 #include "graph/911. Online Election.hpp"
 #include "graph/981. Time Based Key-Value Store.hpp"
+#include "graph/1146. Snapshot Array.hpp"
 #include "./string/1446. Consecutive Characters.cpp"
 #include "./string/1451. Rearrange Words in a Sentence.hpp"
 #include "./string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -137,6 +138,21 @@ bool g_ready = false;
 
 
 int main() {
+    {
+//Input: ["SnapshotArray","set","snap","set","get"]
+//[[3],[0,5],[],[0,6],[0,0]]
+//Output: [null,null,0,null,5]
+        SnapshotArray s1146(1);
+        s1146.set(0,15);
+        auto res = s1146.snap();
+        res = s1146.snap();
+        res = s1146.snap();
+        res = s1146.get(0,2);
+        res = s1146.snap();
+        res = s1146.snap();
+        s1146.get(0,0);
+        std::cout << "1146 res = " << res << std::endl;
+    }
     {
         ZeroEvenOdd* s1116 = new ZeroEvenOdd(1);
         std::thread t1 = std::thread([s1116](){
