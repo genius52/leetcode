@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var text string = "aaaaa"
+		res := string_issue.MaxRepOpt1(text)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{1,-5,-20,4,-1,3,-6,-3}
 		var k int = 2
 		res := array.MaxResult(nums,k)
