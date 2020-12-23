@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var grid [][]int = [][]int{{1,0,0},{0,0,0},{0,0,0}}
+		res := diagram.MaxDistance(grid)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{1,-5,-20,4,-1,3,-6,-3}
 		var k int = 2
 		res := array.MaxResult(nums,k)
