@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var s string = "abcda"
+		var queries [][]int = [][]int{{3,3,0},{1,2,0},{0,3,1},{0,3,2},{0,4,1}}
+		res := string_issue.CanMakePaliQueries(s,queries)
+		fmt.Println(res)
+	}
+	{
 		//[1,3,2,-3,-2,5,5,-5,1]
 		var l1 list_queue.ListNode
 		l1.Val = 0
