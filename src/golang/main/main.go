@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var arr []int = []int{-1,-3}
+		res := array.MaximumSum(arr)
+		fmt.Println(res)
+	}
+	{
 		var s string = "abcda"
 		var queries [][]int = [][]int{{3,3,0},{1,2,0},{0,3,1},{0,3,2},{0,4,1}}
 		res := string_issue.CanMakePaliQueries(s,queries)
