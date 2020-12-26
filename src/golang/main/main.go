@@ -52,8 +52,13 @@ func main(){
 		fmt.Println(res.Val)
 	}
 	{
-		var grid [][]int = [][]int{{1,0,0},{0,0,0},{0,0,0}}
+		var grid [][]int = [][]int{{1, 0, 0}, {0, 0, 0}, {0, 0, 0}}
 		res := diagram.MaxDistance(grid)
+		fmt.Println(res)
+	}
+	{
+		var text string = "aaaaa"
+		res := string_issue.MaxRepOpt1(text)
 		fmt.Println(res)
 	}
 	{
