@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var arr []int = []int{-5,4,-4,-3,5,-3}
+		var k int = 3
+		res := array.KConcatenationMaxSum(arr,k)
+		fmt.Println(res)
+	}
+	{
 		var arr []int = []int{-1,-3}
 		res := array.MaximumSum(arr)
 		fmt.Println(res)
