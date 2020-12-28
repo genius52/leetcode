@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var customers [][]int = [][]int{{5,2},{5,4},{10,3},{20,1}}
+		res := array.AverageWaitingTime(customers)
+		fmt.Println(res)
+	}
+	{
 		var students []int = []int{1,1,1,0,0,1}
 		var sandwiches []int = []int{1,0,0,0,1,1}
 		res := array.CountStudents2(students,sandwiches)
