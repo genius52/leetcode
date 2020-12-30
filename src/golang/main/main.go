@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var s = "cba"
+		var pairs [][]int = [][]int{{0,1},{1,2}}
+		res := diagram.SmallestStringWithSwaps(s,pairs)
+		fmt.Println(res)
+	}
+	{
 		var customers [][]int = [][]int{{5,2},{5,4},{10,3},{20,1}}
 		res := array.AverageWaitingTime(customers)
 		fmt.Println(res)
