@@ -118,6 +118,7 @@
 #include "string/5535. Maximum Nesting Depth of the Parentheses.hpp"
 #include "string/1616. Split Two Strings to Make Palindrome.hpp"
 #include "string/955. Delete Columns to Make Sorted II.hpp"
+#include "string/1209. Remove All Adjacent Duplicates in String II.hpp"
 #include "./list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "./list/445. Add Two Numbers II.hpp"
 #include "thread/1115. Print FooBar Alternately.hpp"
@@ -138,6 +139,13 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_1209 s1209;
+        std::string s = "pbbcggttciiippooaais";
+        int k = 2;
+        auto res = s1209.removeDuplicates(s,k);
+        std::cout << "1209 res = " << res << std::endl;
+    }
     {
 //Input: ["SnapshotArray","set","snap","set","get"]
 //[[3],[0,5],[],[0,6],[0,0]]
