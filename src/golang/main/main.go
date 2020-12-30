@@ -13,6 +13,19 @@ import (
 
 func main(){
 	{
+		//"krpgjbjjznpzdfy"
+		//"nxargkbydxmsgby"
+		//14
+		//"krrgw"
+		//"zjxss"
+		//19
+		var s string = "krpgjbjjznpzdfy"
+		var t string = "nxargkbydxmsgby"
+		var maxCost int = 14
+		res := string_issue.EqualSubstring(s,t,maxCost)
+		fmt.Println(res)
+	}
+	{
 		var s = "cba"
 		var pairs [][]int = [][]int{{0,1},{1,2}}
 		res := diagram.SmallestStringWithSwaps(s,pairs)
