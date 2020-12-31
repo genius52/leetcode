@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var arr []int = []int{4,12,10,0,-2,7,-8,9,-9,-12,-12,8,8}
+		var difference int = 0
+		res := array.LongestSubsequence(arr,difference)
+		fmt.Println(res)
+	}
+	{
 		//"krpgjbjjznpzdfy"
 		//"nxargkbydxmsgby"
 		//14
