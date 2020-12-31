@@ -13,6 +13,13 @@ import (
 
 func main(){
 	{
+		var d int = 30
+		var f int = 30
+		var target int = 500
+		res := number.NumRollsToTarget(d,f,target)
+		fmt.Println(res)
+	}
+	{
 		var arr []int = []int{4,12,10,0,-2,7,-8,9,-9,-12,-12,8,8}
 		var difference int = 0
 		res := array.LongestSubsequence(arr,difference)
