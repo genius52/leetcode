@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var folder []string = []string{"/a/b/c","/a","/a/b/d"}
+		res := string_issue.RemoveSubfolders(folder)
+		fmt.Println(res)
+	}
+	{
 		var d int = 1
 		var f int = 6
 		var target int = 3
