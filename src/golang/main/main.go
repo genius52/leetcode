@@ -13,10 +13,10 @@ import (
 
 func main(){
 	{
-		var d int = 30
-		var f int = 30
-		var target int = 500
-		res := number.NumRollsToTarget(d,f,target)
+		var d int = 1
+		var f int = 6
+		var target int = 3
+		res := number.NumRollsToTarget2(d,f,target)
 		fmt.Println(res)
 	}
 	{
