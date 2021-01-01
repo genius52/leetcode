@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var arr []string = []string{"abcdefghijklmnopqrstuvwxyz"}
+		res := string_issue.MaxLength(arr)
+		fmt.Println(res)
+	}
+	{
 		var s string = "QQWWWWWWQQQQQWWWWWWW"
 		res := string_issue.BalancedString(s)
 		fmt.Println(res)
