@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var s1 string = "xxyyxyxyxx"
+		var s2 string = "xyyxyxxxyx"
+		res := string_issue.MinimumSwap(s1,s2)
+		fmt.Println(res)
+	}
+	{
 		var arr []string = []string{"abcdefghijklmnopqrstuvwxyz"}
 		res := string_issue.MaxLength(arr)
 		fmt.Println(res)
