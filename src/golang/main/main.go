@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var s string = "QQWWWWWWQQQQQWWWWWWW"
+		res := string_issue.BalancedString(s)
+		fmt.Println(res)
+	}
+	{
 		var folder []string = []string{"/a/b/c","/a","/a/b/d"}
 		res := string_issue.RemoveSubfolders(folder)
 		fmt.Println(res)
