@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{2,2,2,1,2,2,1,2,2,2,1}
+		var k int = 2
+		res := array.NumberOfSubarrays(nums,k)
+		fmt.Println(res)
+	}
+	{
 		var s1 string = "xxyyxyxyxx"
 		var s2 string = "xyyxyxxxyx"
 		res := string_issue.MinimumSwap(s1,s2)
