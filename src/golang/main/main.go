@@ -13,6 +13,13 @@ import (
 
 func main(){
 	{
+		var upper int = 2
+		var lower int = 3
+		var colsum []int = []int{2,2,1,1}
+		res := array.ReconstructMatrix(upper,lower,colsum)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{2,2,2,1,2,2,1,2,2,2,1}
 		var k int = 2
 		res := array.NumberOfSubarrays(nums,k)
