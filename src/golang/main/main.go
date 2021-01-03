@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var grid [][]int = [][]int{{1,1,1,1,1,1,1,0},{1,0,0,0,0,1,1,0},
+			{1,0,1,0,1,1,1,0},{1,0,0,0,0,1,0,1},{1,1,1,1,1,1,1,0}}
+		res := diagram.ClosedIsland(grid)
+		fmt.Println(res)
+	}
+	{
 		var upper int = 2
 		var lower int = 3
 		var colsum []int = []int{2,2,1,1}
