@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{3,6,5,1,8}
+		res := array.MaxSumDivThree(nums)
+		fmt.Println(res)
+	}
+	{
 		var grid [][]int = [][]int{{1,1,1,1,1,1,1,0},{1,0,0,0,0,1,1,0},
 			{1,0,1,0,1,1,1,0},{1,0,0,0,0,1,0,1},{1,1,1,1,1,1,1,0}}
 		res := diagram.ClosedIsland(grid)
