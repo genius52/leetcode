@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var boxTypes [][]int = [][]int{{5,10},{2,5},{4,7},{3,9}}
+		var truckSize int = 10
+		res := array.MaximumUnits(boxTypes,truckSize)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{3,6,5,1,8}
 		res := array.MaxSumDivThree(nums)
 		fmt.Println(res)
