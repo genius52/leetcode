@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var products []string = []string{"mobile","mouse","moneypot","monitor","mousepad"}
+		var searchWord string = "mouse"
+		res := string_issue.SuggestedProducts(products,searchWord)
+		fmt.Println(res)
+	}
+	{
 		var boxTypes [][]int = [][]int{{5,10},{2,5},{4,7},{3,9}}
 		var truckSize int = 10
 		res := array.MaximumUnits(boxTypes,truckSize)
