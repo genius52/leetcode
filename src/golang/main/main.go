@@ -13,6 +13,13 @@ import (
 
 func main(){
 	{
+
+		var mat [][]int = [][]int{{18,70},{61,1},{25,85},{14,40},{11,96},{97,96},{63,45}}
+		var threshold int = 40184
+		res := diagram.MaxSideLength(mat,threshold)
+		fmt.Println(res)
+	}
+	{
 		//10
 		//1000000000
 		var low int = 10
