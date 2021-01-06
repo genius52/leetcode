@@ -13,6 +13,14 @@ import (
 
 func main(){
 	{
+		//10
+		//1000000000
+		var low int = 10
+		var high int = 1000000000
+		res := number.SequentialDigits(low,high)
+		fmt.Println(res)
+	}
+	{
 		var characters string = "abc"
 		var combinationLength int = 2
 		res := diagram.Constructor1286(characters,combinationLength)
