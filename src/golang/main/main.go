@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var characters string = "abc"
+		var combinationLength int = 2
+		res := diagram.Constructor1286(characters,combinationLength)
+		fmt.Println(res)
+	}
+	{
 		var products []string = []string{"mobile","mouse","moneypot","monitor","mousepad"}
 		var searchWord string = "mouse"
 		res := string_issue.SuggestedProducts(products,searchWord)
