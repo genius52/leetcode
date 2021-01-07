@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var n int = 5
+		var connections [][]int = [][]int{{0,1},{0,2},{3,4},{2,3}}
+		res := diagram.MakeConnected(n,connections)
+		fmt.Println(res)
+	}
+	{
 		var arr []int = []int{60864, 25176, 27249, 21296, 20204}
 		var target int = 56803
 		res := number.FindBestValue(arr, target)
