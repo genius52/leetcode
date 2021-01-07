@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var arr []int = []int{60864, 25176, 27249, 21296, 20204}
+		var target int = 56803
+		res := number.FindBestValue(arr, target)
+		fmt.Println(res)
+	}
+	{
 		var s string = "abeeadcdbceedccdabcd"
 		var maxLetters int = 4
 		var minSize int = 2
