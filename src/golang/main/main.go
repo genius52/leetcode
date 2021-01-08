@@ -13,6 +13,14 @@ import (
 
 func main(){
 	{
+		var n int = 4
+		//var edges [][]int = [][]int{{0,1,2},{0,4,8},{1,2,3},{1,4,2},{2,3,1},{3,4,1}}
+		var edges [][]int = [][]int{{0,1,3},{1,2,1},{1,3,4},{2,3,1}}
+		var distanceThreshold int = 4
+		res := diagram.FindTheCity(n,edges,distanceThreshold)
+		fmt.Println(res)
+	}
+	{
 		var s string = "CONTEST IS COMING"
 		res := string_issue.PrintVertically(s)
 		fmt.Println(res)
