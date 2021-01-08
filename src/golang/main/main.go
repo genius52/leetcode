@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var s string = "CONTEST IS COMING"
+		res := string_issue.PrintVertically(s)
+		fmt.Println(res)
+	}
+	{
 		var n int = 5
 		var connections [][]int = [][]int{{0,1},{0,2},{3,4},{2,3}}
 		res := diagram.MakeConnected(n,connections)
