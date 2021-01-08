@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var s string = "abab"
+		res := string_issue.NumberOfSubstrings(s)
+		fmt.Println(res)
+	}
+	{
 		var n int = 4
 		//var edges [][]int = [][]int{{0,1,2},{0,4,8},{1,2,3},{1,4,2},{2,3,1},{3,4,1}}
 		var edges [][]int = [][]int{{0,1,3},{1,2,1},{1,3,4},{2,3,1}}
