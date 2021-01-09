@@ -13,6 +13,17 @@ import (
 
 func main(){
 	{
+		var radius int = 1
+		var x_center int = 0
+		var y_center int = 0
+		var x1 int = 1
+		var y1 int = -1
+		var x2 int = 3
+		var y2 int = 1
+		res := diagram.CheckOverlap(radius, x_center, y_center, x1, y1, x2, y2)
+		fmt.Println(res)
+	}
+	{
 		//11
 		//4
 		//[5,9,6,10,-1,8,9,1,9,3,4]
