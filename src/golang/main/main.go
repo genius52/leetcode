@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var light []int = []int{1}
+		res := array.NumTimesAllBlue(light)
+		fmt.Println(res)
+	}
+	{
 		//[1,null,1,1,1,null,null,1,1,null,1,null,null,null,1,null,1]
 		var t1 tree.TreeNode
 		t1.Val = 1
