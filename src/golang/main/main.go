@@ -13,6 +13,34 @@ import (
 
 func main(){
 	{
+		//[1,null,1,1,1,null,null,1,1,null,1,null,null,null,1,null,1]
+		var t1 tree.TreeNode
+		t1.Val = 1
+		var t2 tree.TreeNode
+		t2.Val = 2
+		var t3 tree.TreeNode
+		t3.Val = 3
+		var t4 tree.TreeNode
+		t4.Val = 4
+		var t5 tree.TreeNode
+		t5.Val = 5
+		var t6 tree.TreeNode
+		t6.Val = 6
+		var t7 tree.TreeNode
+		t7.Val = 7
+		var t8 tree.TreeNode
+		t8.Val = 8
+		t1.Right = &t2
+		t2.Left = &t3
+		t2.Right = &t4
+		t4.Left = &t5
+		t4.Right = &t6
+		t5.Right = &t7
+		t7.Right = &t8
+		res := tree.LongestZigZag(&t1)
+		fmt.Println(res)
+	}
+	{
 		var s string = "abab"
 		res := string_issue.NumberOfSubstrings(s)
 		fmt.Println(res)
