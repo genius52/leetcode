@@ -13,6 +13,21 @@ import (
 
 func main(){
 	{
+		//11
+		//4
+		//[5,9,6,10,-1,8,9,1,9,3,4]
+		//[0,213,0,253,686,170,975,0,261,309,337]
+		//n = 4, headID = 2, manager = [3,3,-1,2], informTime = [0,0,162,914]
+		//n = 7, headID = 6, manager = [1,2,3,4,5,6,-1], informTime = [0,6,5,4,3,2,1]
+		//n = 15, headID = 0, manager = [-1,0,0,1,1,2,2,3,3,4,4,5,5,6,6], informTime = [1,1,1,1,1,1,1,0,0,0,0,0,0,0,0]
+		var n int = 11
+		var headID int = 4
+		var manager []int = []int{5,9,6,10,-1,8,9,1,9,3,4}
+		var informTime []int = []int{0,213,0,253,686,170,975,0,261,309,337}
+		res := diagram.NumOfMinutes(n,headID,manager,informTime)
+		fmt.Println(res)
+	}
+	{
 		var light []int = []int{1}
 		res := array.NumTimesAllBlue(light)
 		fmt.Println(res)
