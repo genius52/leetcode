@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var n int = 1
+		var k int = 4
+		res := string_issue.GetHappyString(n,k)
+		fmt.Println(res)
+	}
+	{
 		var radius int = 1
 		var x_center int = 0
 		var y_center int = 0
