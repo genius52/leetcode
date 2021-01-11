@@ -13,6 +13,13 @@ import (
 
 func main(){
 	{
+		var n int = 3
+		var prerequisites [][]int = [][]int{{1,0},{2,0}}
+		var queries [][]int = [][]int{{0,1},{2,0}}
+		res := diagram.CheckIfPrerequisite(n,prerequisites,queries)
+		fmt.Println(res)
+	}
+	{
 		var n int = 1
 		var k int = 4
 		res := string_issue.GetHappyString(n,k)

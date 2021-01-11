@@ -36,6 +36,7 @@
 #include "array/1024. Video Stitching.hpp"
 #include "array/1049. Last Stone Weight II.hpp"
 #include "array/1054. Distant Barcodes.hpp"
+#include "array/1488. Avoid Flood in The City.hpp"
 #include "./number/229. Majority Element II.hpp"
 #include "./number/220. Contains Duplicate III.hpp"
 #include "./number/1441. Build an Array With Stack Operations.hpp"
@@ -139,6 +140,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_1488 s1488;
+        vector<int> rain{1,0,2,0,3,0,2,0,0,0,1,2,3};
+        auto res = s1488.avoidFlood(rain);
+        std::cout << "1488 res = " << res.size() << std::endl;
+    }
     {
         Solution_1209 s1209;
         std::string s = "pbbcggttciiippooaais";
