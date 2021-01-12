@@ -13,6 +13,13 @@ import (
 
 func main(){
 	{
+		var n int = 9
+		var left []int = []int{5}
+		var right []int = []int{4}
+		res := array.GetLastMoment(n,left,right)
+		fmt.Println(res)
+	}
+	{
 		var n int = 3
 		var prerequisites [][]int = [][]int{{1,0},{2,0}}
 		var queries [][]int = [][]int{{0,1},{2,0}}
