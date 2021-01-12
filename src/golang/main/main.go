@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var s string = "111111"
+		res := string_issue.NumSub(s)
+		fmt.Println(res)
+	}
+	{
 		var n int = 9
 		var left []int = []int{5}
 		var right []int = []int{4}
