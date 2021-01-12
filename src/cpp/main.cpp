@@ -37,6 +37,7 @@
 #include "array/1049. Last Stone Weight II.hpp"
 #include "array/1054. Distant Barcodes.hpp"
 #include "array/1488. Avoid Flood in The City.hpp"
+#include "array/1509. Minimum Difference Between Largest and Smallest Value in Three Moves.hpp"
 #include "./number/229. Majority Element II.hpp"
 #include "./number/220. Contains Duplicate III.hpp"
 #include "./number/1441. Build an Array With Stack Operations.hpp"
@@ -140,6 +141,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_1509 s1509;
+        std::vector<int> nums{0,0,0,1,1,1};
+        auto res = s1509.minDifference(nums);
+        std::cout << "1509 res = " << res << std::endl;
+    }
     {
         Solution_1488 s1488;
         vector<int> rain{1,0,2,0,3,0,2,0,0,0,1,2,3};
