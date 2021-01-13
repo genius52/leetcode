@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var arr []int = []int{1,2,3,4,5,6,7}
+		res := array.NumOfSubarrays(arr)
+		fmt.Println(res)
+	}
+	{
 		var n int = 3
 		var edges [][]int = [][]int{{0,1}}
 		var succProb []float64 = []float64{0.5}
@@ -1351,11 +1356,6 @@ func main(){
 		var s2 string = "leet"
 		res := string_issue.LCS_minimumDeleteSum(s1,s2)
 		fmt.Println(res)
-	}
-	{
-		//var arr []int = []int{1,2,3,4,5,6,7}
-		//res := array.NumOfSubarrays(arr)
-		//fmt.Println(res)
 	}
 	{
 		s := "aacaba"

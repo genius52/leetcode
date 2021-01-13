@@ -7,20 +7,32 @@ package array
 //Odd sums are [1,9,3,5] so the answer is 4.
 
 func NumOfSubarrays(arr []int) int {
-	var odd []int
-	var even []int
-	for _,n := range arr{
-		if(n % 2 == 1){
-			odd = append(odd,n)
+	var l int = len(arr)
+	var dp_odd []int = make([]int,l)//dp[i] = end with i odd arr num
+	var dp_even []int = make([]int,l)//dp[i] = end with i even arr num
+	if arr[0] | 1 == arr[0]{
+		dp_odd[0] = 1
+	}else{
+		dp_even[0] = 1
+	}
+	for i := 1;i < l;i++{
+		if arr[i] | 1 == arr[i]{
+			dp_odd[i] = dp_even[i - 1] + 1
+			dp_odd[i] %= 1000000007
+			dp_even[i] = dp_odd[i - 1]
+			dp_even[i] %= 1000000007
 		}else{
-			even = append(even,n)
+			dp_even[i] = dp_even[i - 1] + 1
+			dp_even[i] %= 1000000007
+			dp_odd[i] = dp_odd[i - 1]
+			dp_odd[i] %= 1000000007
 		}
 	}
-	if(len(odd) == 0){
-		return 0
-	}
-	//var mod int = 10e9 + 7
 	var res int = 0
+	for i := 0;i < l;i++{
+		res += dp_odd[i]
+		res %= 1000000007
+	}
 	return res
 }
 
