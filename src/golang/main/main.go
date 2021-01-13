@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var s string = "((()))())()()()))))"
+		res := string_issue.MinInsertions(s)
+		fmt.Println(res)
+	}
+	{
 		var arr []int = []int{1,2,3,4,5,6,7}
 		res := array.NumOfSubarrays(arr)
 		fmt.Println(res)
