@@ -13,6 +13,15 @@ import (
 
 func main(){
 	{
+		var n int = 3
+		var edges [][]int = [][]int{{0,1}}
+		var succProb []float64 = []float64{0.5}
+		var start int = 0
+		var end int = 2
+		res := diagram.MaxProbability(n,edges,succProb,start,end)
+		fmt.Println(res)
+	}
+	{
 		var s string = "111111"
 		res := string_issue.NumSub(s)
 		fmt.Println(res)
