@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var arr []int = []int{1,2,3,10,4,2,3,5}
+		res := array.FindLengthOfShortestSubarray(arr)
+		fmt.Println(res)
+	}
+	{
 		var s string = "10101"
 		res := string_issue.NumWays2(s)
 		fmt.Println(res)
