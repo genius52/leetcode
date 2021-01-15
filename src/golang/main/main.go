@@ -13,6 +13,16 @@ import (
 
 func main(){
 	{
+		//4
+		//[[1,3,2],[2,3,0],[1,0,3],[1,0,2]]
+		//[[2,1],[3,0]]
+		var n int = 4
+		var preferences [][]int = [][]int{{1,3,2},{2,3,0},{1,0,3},{1,0,2}}
+		var pairs [][]int = [][]int{{2,1}, {3,0}}
+		res := array.UnhappyFriends(n,preferences,pairs)
+		fmt.Println(res)
+	}
+	{
 		var nums1 []int = []int{2,3,6,3,5,1,1,3,4,6,6}
 		var nums2 []int = []int{3,3,7,7,5,2,1,2,7,6}
 		res := number.NumTriplets(nums1,nums2)
