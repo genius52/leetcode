@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var nums1 []int = []int{2,3,6,3,5,1,1,3,4,6,6}
+		var nums2 []int = []int{3,3,7,7,5,2,1,2,7,6}
+		res := number.NumTriplets(nums1,nums2)
+		fmt.Println(res)
+	}
+	{
 		var arr []int = []int{1,2,3,10,4,2,3,5}
 		res := array.FindLengthOfShortestSubarray(arr)
 		fmt.Println(res)
