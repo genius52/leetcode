@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{1,2,3,4,5}
+		var requests [][]int = [][]int{{1,3},{0,1}}
+		res := array.MaxSumRangeQuery(nums,requests)
+		fmt.Println(res)
+	}
+	{
 		//4
 		//[[1,3,2],[2,3,0],[1,0,3],[1,0,2]]
 		//[[2,1],[3,0]]
