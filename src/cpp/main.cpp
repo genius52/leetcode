@@ -38,6 +38,7 @@
 #include "array/1054. Distant Barcodes.hpp"
 #include "array/1488. Avoid Flood in The City.hpp"
 #include "array/1509. Minimum Difference Between Largest and Smallest Value in Three Moves.hpp"
+#include "array/1626. Best Team With No Conflicts.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
@@ -142,6 +143,19 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        //[1,3,7,3,2,4,10,7,5]
+        //[4,5,2,1,1,2,4,1,4]
+        //[9,2,8,8,2]
+        //[4,1,3,3,5]
+        //[1,1,1,1,1,1,1,1,1,1] 
+        //[811,364,124,873,790,656,581,446,885,134] 
+        Solution_1626 s1626;
+        std::vector<int> scores{1,1,1,1,1,1,1,1,1,1};
+        std::vector<int> ages{811,364,124,873,790,656,581,446,885,134};
+        auto res = s1626.bestTeamScore(scores,ages);
+        std::cout << "1626 res = " << res << std::endl;
+    }
     {
         Solution_1584 s1584;
         std::vector<std::vector<int>> points{{0,0},{2,2},{3,10},{5,2},{7,0}};
