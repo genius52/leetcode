@@ -104,6 +104,7 @@
 #include "graph/981. Time Based Key-Value Store.hpp"
 #include "graph/1146. Snapshot Array.hpp"
 #include "graph/1584. Min Cost to Connect All Points.hpp"
+#include "graph/1727. Largest Submatrix With Rearrangements.hpp"
 #include "string/1446. Consecutive Characters.cpp"
 #include "string/1451. Rearrange Words in a Sentence.hpp"
 #include "string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -143,6 +144,12 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_1727 s1727;
+        std::vector<std::vector<int>> matrix{{0,0,1},{1,1,1},{1,0,1}};
+        auto res = s1727.largestSubmatrix(matrix);
+        std::cout << "1727 res = " << res << std::endl;
+    }
     {
         //[1,3,7,3,2,4,10,7,5]
         //[4,5,2,1,1,2,4,1,4]
