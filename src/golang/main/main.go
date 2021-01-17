@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{1,12,2,6,3,4}
+		res := number.TupleSameProduct(nums)
+		fmt.Println(res)
+	}
+	{
 		var s string = "a"
 		var t string = "a"
 		res := string_issue.CountSubstrings(s,t)
