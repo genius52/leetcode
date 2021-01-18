@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{-3,-1,-2}
+		res := array.MaxSubArray(nums)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{1,12,2,6,3,4}
 		res := number.TupleSameProduct(nums)
 		fmt.Println(res)
