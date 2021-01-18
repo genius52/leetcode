@@ -39,6 +39,7 @@
 #include "array/1488. Avoid Flood in The City.hpp"
 #include "array/1509. Minimum Difference Between Largest and Smallest Value in Three Moves.hpp"
 #include "array/1626. Best Team With No Conflicts.hpp"
+#include "array/1673. Find the Most Competitive Subsequence.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
@@ -144,6 +145,13 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_1673 s1673;
+        std::vector<int> nums{4,3,2,1,6,4,8,9,3,2};
+        int k = 5;
+        auto res = s1673.mostCompetitive(nums,k);
+        std::cout << "1673 res = " << res.size() << std::endl;
+    }
     {
         Solution_1727 s1727;
         std::vector<std::vector<int>> matrix{{0,0,1},{1,1,1},{1,0,1}};
