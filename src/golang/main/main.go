@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var grid [][]int = [][]int{{1,1,1,-1,-1},{1,1,1,-1,-1},{-1,-1,-1,1,1},{1,1,1,1,-1},{-1,-1,-1,-1,-1}}
+		res := array.FindBall(grid)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{-3,-1,-2}
 		res := array.MaxSubArray(nums)
 		fmt.Println(res)
