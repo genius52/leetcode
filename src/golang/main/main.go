@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var deliciousness []int = []int{1048576,1048576}
+		res := number.CountPairs(deliciousness)
+		fmt.Println(res)
+	}
+	{
 		var grid [][]int = [][]int{{1,1,1,-1,-1},{1,1,1,-1,-1},{-1,-1,-1,1,1},{1,1,1,1,-1},{-1,-1,-1,-1,-1}}
 		res := array.FindBall(grid)
 		fmt.Println(res)
