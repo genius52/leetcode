@@ -13,6 +13,13 @@ import (
 
 func main(){
 	{
+		var s string = "cdbcbbaaabab"
+		var x int = 4
+		var y int = 5
+		res := string_issue.MaximumGain(s,x,y)
+		fmt.Println(res)
+	}
+	{
 		var deliciousness []int = []int{1048576,1048576}
 		res := number.CountPairs(deliciousness)
 		fmt.Println(res)
