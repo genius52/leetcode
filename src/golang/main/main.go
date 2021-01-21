@@ -13,6 +13,13 @@ import (
 
 func main(){
 	{
+		var source []int = []int{1,2,3,4}
+		var target []int = []int{2,1,4,5}
+		var allowedSwaps [][]int = [][]int{{0,1},{2,3}}
+		res := diagram.MinimumHammingDistance(source,target,allowedSwaps)
+		fmt.Println(res)
+	}
+	{
 		//head = [1,2,3,4,5], k = 2
 		var l1 list_queue.ListNode
 		l1.Val = 1
