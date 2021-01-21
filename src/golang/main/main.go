@@ -13,6 +13,31 @@ import (
 
 func main(){
 	{
+		//head = [1,2,3,4,5], k = 2
+		var l1 list_queue.ListNode
+		l1.Val = 1
+		var l2 list_queue.ListNode
+		l2.Val = 2
+		var l3 list_queue.ListNode
+		l3.Val = 3
+		var l4 list_queue.ListNode
+		l4.Val = 4
+		var l5 list_queue.ListNode
+		l5.Val = 5
+		l1.Next = &l2
+		l2.Next = &l3
+		l3.Next = &l4
+		l4.Next = &l5
+		var m int = 1
+		res := list_queue.SwapNodes(&l1,m)
+		fmt.Println(res.Val)
+	}
+	{
+		var n int = 2
+		res := array.ConstructDistancedSequence(n)
+		fmt.Println(res)
+	}
+	{
 		var s string = "cdbcbbaaabab"
 		var x int = 4
 		var y int = 5
