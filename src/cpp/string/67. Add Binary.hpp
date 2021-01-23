@@ -5,7 +5,7 @@
 #include <vector>
 using namespace std;
 
-class Solution {
+class Solution_67 {
     std::map<char,char> tags_;
     std::stack<char> stacks_;
 public:

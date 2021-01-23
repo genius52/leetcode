@@ -1,4 +1,5 @@
 #include <vector>
+using namespace std;
 
 //A = [4, 3, 2, 6]
 //

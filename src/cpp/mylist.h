@@ -30,9 +30,4 @@ public:
     }
 };
 
-void reverse_print_list(my_list* l);
-void reverse_print_list_ex(my_list* l);
-
-ListNode* oddEvenList(ListNode* head);
-
 #endif //LEET_LIST_H
