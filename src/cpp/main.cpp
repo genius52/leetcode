@@ -42,6 +42,7 @@
 #include "array/1673. Find the Most Competitive Subsequence.hpp"
 #include "array/1562. Find Latest Group of Size M.hpp"
 #include "array/315. Count of Smaller Numbers After Self.hpp"
+#include "array/1365. How Many Numbers Are Smaller Than the Current Number.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
@@ -246,7 +247,7 @@ int main() {
             });
         });
         t3.detach();
-        std::this_thread::sleep_for(std::chrono::seconds(20));
+        //std::this_thread::sleep_for(std::chrono::seconds(20));
     }
     {
         FooBar* s1115 = new FooBar(3);
@@ -267,7 +268,7 @@ int main() {
             });
         });
         foo.detach();
-        std::this_thread::sleep_for(std::chrono::seconds(20));
+        //std::this_thread::sleep_for(std::chrono::seconds(20));
     }
     {
         Solution_1054 s1054;
@@ -1259,10 +1260,10 @@ int main() {
         std::cout<<res<<std::endl;
     }
     {
-        using namespace s1365;
-        s1365::Solution s;
+        //using namespace s1365;
+        Solution_1365 s1365;
         auto nums = std::vector<int>{37,64,63,2,41,78,51,36,2,20,25,41,72,100,17,43,54,27,34,86,12,48,70,44,87,68,62,98,68,30,8,92,5,10};
-        auto res = s.smallerNumbersThanCurrent(nums);
+        auto res = s1365.smallerNumbersThanCurrent(nums);
         std::cout<<res[0]<<std::endl;
     }
 //    {
