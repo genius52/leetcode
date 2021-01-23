@@ -5,14 +5,6 @@
 #include <vector>
 using namespace std;
 
-int numTilePossibilities(std::string tiles);
-bool isPalindrome(string s);
-
-string addStrings(string num1, string num2);
-bool repeatedSubstringPattern(string s);
-
-bool backspaceCompare(string S, string T);
-std::vector<int> diStringMatch(string S);
 class Solution {
     std::map<char,char> tags_;
     std::stack<char> stacks_;

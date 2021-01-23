@@ -34,8 +34,5 @@ void reverse_print_list(my_list* l);
 void reverse_print_list_ex(my_list* l);
 
 ListNode* oddEvenList(ListNode* head);
-class Solution_138{
-public:
-    Node* copyRandomList(Node* head);
-};
+
 #endif //LEET_LIST_H
