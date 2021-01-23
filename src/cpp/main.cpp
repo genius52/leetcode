@@ -40,6 +40,8 @@
 #include "array/1509. Minimum Difference Between Largest and Smallest Value in Three Moves.hpp"
 #include "array/1626. Best Team With No Conflicts.hpp"
 #include "array/1673. Find the Most Competitive Subsequence.hpp"
+#include "array/1562. Find Latest Group of Size M.hpp"
+#include "array/315. Count of Smaller Numbers After Self.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
@@ -145,6 +147,19 @@ bool g_ready = false;
 
 
 int main() {
+    {
+        Solution_315 s315;
+        std::vector<int> nums{5,2,3,8,5,4,3,5,8,9,2,1,0,8,6,1};
+        auto res = s315.countSmaller(nums);
+        std::cout << "315 res = " << res.size() << std::endl;
+    }
+    {
+        Solution_1562 s1562;
+        std::vector<int> arr{3,2,5,6,10,8,9,4,1,7};
+        int m = 3;
+        auto res = s1562.findLatestStep(arr,m);
+        std::cout << "1562 res = " << res << std::endl;
+    }
     {
         Solution_1673 s1673;
         std::vector<int> nums{4,3,2,1,6,4,8,9,3,2};
