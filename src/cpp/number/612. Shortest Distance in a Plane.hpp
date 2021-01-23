@@ -1,23 +1,7 @@
-//
-// Created by 陶诚程 on 2019/4/16.
-//
-
-#ifndef LEET_DIAGRAM_H
-#define LEET_DIAGRAM_H
-
-#endif //LEET_DIAGRAM_H
 #include <vector>
-#include <map>
 #include <queue>
+using namespace std;
 
-void bfs();
-void dfs();
-
-int bfs_short_route(int array[][4],int start,int end);
-
-int my_short_distance(int a[][10],int start,int end);
-
-//612
 class Solution_612 {
 public:
     int leastInterval(std::vector<char>& tasks, int n) {

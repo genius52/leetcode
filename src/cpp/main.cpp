@@ -2,8 +2,6 @@
 #include <set>
 #include <thread>
 #include <condition_variable>
-#include "array.h"
-#include "diagram.h"
 #include "mylist.h"
 #include "tree.h"
 #include "array/396. Rotate Function.hpp"
@@ -78,6 +76,7 @@
 #include "number/853. Car Fleet.hpp"
 #include "number/295. Find Median from Data Stream.hpp"
 #include "number/1647. Minimum Deletions to Make Character Frequencies Unique.hpp"
+#include "number/612. Shortest Distance in a Plane.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
