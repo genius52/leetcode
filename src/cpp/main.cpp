@@ -1247,20 +1247,6 @@ int main() {
         std::cout<<res<<std::endl;
     }
     {
-        using namespace s1366;
-        s1366::Solution s;
-        std::vector<std::string> scores = {"FVSHJIEMNGYPTQOURLWCZKAX","AITFQORCEHPVJMXGKSLNZWUY","OTERVXFZUMHNIYSCQAWGPKJL",
-                                           "VMSERIJYLZNWCPQTOKFUHAXG","VNHOZWKQCEFYPSGLAMXJIUTR","ANPHQIJMXCWOSKTYGULFVERZ",
-                                           "RFYUXJEWCKQOMGATHZVILNSP","SCPYUMQJTVEXKRNLIOWGHAFZ","VIKTSJCEYQGLOMPZWAHFXURN",
-                                           "SVJICLXKHQZTFWNPYRGMEUAO","JRCTHYKIGSXPOZLUQAVNEWFM","NGMSWJITREHFZVQCUKXYAPOL",
-                                           "WUXJOQKGNSYLHEZAFIPMRCVT","PKYQIOLXFCRGHZNAMJVUTWES","FERSGNMJVZXWAYLIKCPUQHTO",
-                                           "HPLRIUQMTSGYJVAXWNOCZEKF","JUVWPTEGCOFYSKXNRMHQALIZ","MWPIAZCNSLEYRTHFKQXUOVGJ",
-                                           "EZXLUNFVCMORSIWKTYHJAQPG","HRQNLTKJFIEGMCSXAZPYOVUW","LOHXVYGWRIJMCPSQENUAKTZF",
-                                           "XKUTWPRGHOAQFLVYMJSNEIZC","WTCRQMVKPHOSLGAXZUEFYNJI"};
-        auto res = s.rankTeams(scores);
-        std::cout<<res<<std::endl;
-    }
-    {
         //using namespace s1365;
         Solution_1365 s1365;
         auto nums = std::vector<int>{37,64,63,2,41,78,51,36,2,20,25,41,72,100,17,43,54,27,34,86,12,48,70,44,87,68,62,98,68,30,8,92,5,10};
@@ -1306,8 +1292,9 @@ int main() {
     }
 
     {
-        vector<int> v = {2,7,4,1,8,1};
-        std::cout<<lastStoneWeight(v)<<std::endl;
+        Solution_1049 s1049;
+        std::vector<int> v = {2,7,4,1,8,1};
+        std::cout<<s1049.lastStoneWeightII(v)<<std::endl;
     }
     {
         auto res = diStringMatch("IDID");
