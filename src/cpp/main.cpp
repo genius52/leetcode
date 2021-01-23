@@ -43,6 +43,7 @@
 #include "array/1562. Find Latest Group of Size M.hpp"
 #include "array/315. Count of Smaller Numbers After Self.hpp"
 #include "array/1365. How Many Numbers Are Smaller Than the Current Number.hpp"
+#include "array/324. Wiggle Sort II.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
