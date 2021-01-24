@@ -76,6 +76,7 @@
 #include "number/295. Find Median from Data Stream.hpp"
 #include "number/1647. Minimum Deletions to Make Character Frequencies Unique.hpp"
 #include "number/612. Shortest Distance in a Plane.hpp"
+#include "number/1734. Decode XORed Permutation.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
@@ -134,9 +135,14 @@
 #include "list/138. Copy List with Random Pointer.hpp"
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
-//#include "./number/1461. Check If a String Contains All Binary Codes of Size K.hpp"
 
 int main() {
+    {
+        Solution_1734 s1734;
+        std::vector<int> encoded{6,5,4,6};
+        auto res = s1734.decode(encoded);
+        std::cout << "1734 res = " << res.size() << std::endl;
+    }
     {
         Solution_315 s315;
         std::vector<int> nums{5,2,3,8,5,4,3,5,8,9,2,1,0,8,6,1};
