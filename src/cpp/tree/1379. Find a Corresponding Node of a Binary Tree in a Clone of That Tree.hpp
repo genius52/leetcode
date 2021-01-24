@@ -1,4 +1,4 @@
-#include "../tree.h"
+#include "../define.h"
 #include <deque>
 using namespace std;
 

@@ -1,4 +1,4 @@
-#include "../tree.h"
+#include "../define.h"
 #include <vector>
 #include <map>
 using namespace std;

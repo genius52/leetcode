@@ -1,7 +1,21 @@
-#include "../mylist.h"
+#include "../define.h"
+
 
 class Solution_138{
 public:
+    class Node {
+    public:
+        int val;
+        Node* next;
+        Node* random;
+
+        Node(int _val) {
+            val = _val;
+            next = nullptr;
+            random = nullptr;
+        }
+    };
+
     Node* copyRandomList(Node* head) {
         Node* v1 = head;
         Node* root = nullptr;

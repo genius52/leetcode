@@ -1,4 +1,4 @@
-#include "../mylist.h"
+#include "../define.h"
 /**
  * Definition for singly-linked list.
  * struct ListNode {

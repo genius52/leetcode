@@ -1,7 +1,7 @@
 #include <vector>
 #include <map>
 #include <set>
-#include "../tree.h"
+#include "../define.h"
 using namespace std;
 
 /**

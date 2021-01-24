@@ -9,7 +9,7 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-#include "../tree.h"
+#include "../define.h"
 
 class Solution_450 {
     int find_max_inleft(TreeNode* node){

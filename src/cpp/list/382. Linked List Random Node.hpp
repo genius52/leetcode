@@ -10,7 +10,7 @@
  * };
  */
 #include <random>
-#include "../mylist.h"
+#include "../define.h"
 
 class Solution_382 {
     ListNode* h;

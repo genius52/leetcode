@@ -1,4 +1,4 @@
-#include "../tree.h"
+#include "../define.h"
 #include <vector>
 using namespace std;
 

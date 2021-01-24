@@ -12,7 +12,7 @@
 #include <vector>
 #include <unordered_map>
 #include <map>
-#include "../tree.h"
+#include "../define.h"
 
 
 //class Codec_449 {

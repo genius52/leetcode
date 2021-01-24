@@ -1,4 +1,4 @@
-#include "../mylist.h"
+#include "../define.h"
 
 class Solution_328 {
 public:

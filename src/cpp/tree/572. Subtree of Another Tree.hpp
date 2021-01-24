@@ -1,4 +1,4 @@
-#include "../tree.h"
+#include "../define.h"
 
 class Solution_572 {
 public:

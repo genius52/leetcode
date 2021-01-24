@@ -2,8 +2,7 @@
 #include <set>
 #include <thread>
 #include <condition_variable>
-#include "mylist.h"
-#include "tree.h"
+#include "define.h"
 #include "array/396. Rotate Function.hpp"
 #include "array/417. Pacific Atlantic Water Flow.hpp"
 #include "array/1470. Shuffle the Array.hpp"
@@ -1199,11 +1198,11 @@ int main() {
         std::cout<<res[0]<<std::endl;
     }
     {
-        Node* n1 = new Node(7);
-        Node* n2 = new Node(13);
-        Node* n3 = new Node(11);
-        Node* n4 = new Node(10);
-        Node* n5 = new Node(1);
+        Solution_138::Node* n1 = new Solution_138::Node(7);
+        Solution_138::Node* n2 = new Solution_138::Node(13);
+        Solution_138::Node* n3 = new Solution_138::Node(11);
+        Solution_138::Node* n4 = new Solution_138::Node(10);
+        Solution_138::Node* n5 = new Solution_138::Node(1);
         n1->next = n2;
         n2->next = n3;
         n3->next = n4;

@@ -1,6 +1,6 @@
 #include <vector>
 #include <deque>
-#include "../tree.h"
+#include "../define.h"
 using namespace std;
 
 //

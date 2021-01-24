@@ -9,7 +9,7 @@
  * };
  */
 #include <deque>
-#include "../mylist.h"
+#include "../define.h"
 
 //Input: (7 -> 2 -> 4 -> 3) + (5 -> 6 -> 4)
 //Output: 7 -> 8 -> 0 -> 7
