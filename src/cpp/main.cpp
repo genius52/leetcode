@@ -39,6 +39,7 @@
 #include "array/1365. How Many Numbers Are Smaller Than the Current Number.hpp"
 #include "array/324. Wiggle Sort II.hpp"
 #include "array/84. Largest Rectangle in Histogram.hpp"
+#include "array/1738. Find Kth Largest XOR Coordinate Value.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
@@ -138,6 +139,13 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_1738 s1738;
+        std::vector<std::vector<int>> matrix{{5,2},{1,6}};
+        int k = 2;
+        auto res = s1738.kthLargestValue(matrix,k);
+        std::cout << "1738 res = " << res << std::endl;
+    }
     {
         std::string time = "0?:3?";
         Solution_1736 s1736;
