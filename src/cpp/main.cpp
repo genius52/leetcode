@@ -77,6 +77,7 @@
 #include "number/1647. Minimum Deletions to Make Character Frequencies Unique.hpp"
 #include "number/612. Shortest Distance in a Plane.hpp"
 #include "number/1734. Decode XORed Permutation.hpp"
+#include "number/1736. Latest Time by Replacing Hidden Digits.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
@@ -137,6 +138,12 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        std::string time = "0?:3?";
+        Solution_1736 s1736;
+        auto res = s1736.maximumTime(time);
+        std::cout << "1736 res = " << res << std::endl;
+    }
     {
         Solution_1734 s1734;
         std::vector<int> encoded{6,5,4,6};
