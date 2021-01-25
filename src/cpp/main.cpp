@@ -111,6 +111,8 @@
 #include "graph/1146. Snapshot Array.hpp"
 #include "graph/1584. Min Cost to Connect All Points.hpp"
 #include "graph/1727. Largest Submatrix With Rearrangements.hpp"
+#include "graph/51. N-Queens.hpp"
+#include "graph/52. N-Queens II.hpp"
 #include "string/1446. Consecutive Characters.cpp"
 #include "string/1451. Rearrange Words in a Sentence.hpp"
 #include "string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -139,6 +141,18 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_52 s52;
+        int n = 4;
+        auto res = s52.totalNQueens(n);
+        std::cout << "52 res = " << res << std::endl;
+    }
+    {
+        Solution_51 s51;
+        int n = 4;
+        auto res = s51.solveNQueens(n);
+        std::cout << "51 res = " << res.size() << std::endl;
+    }
     {
         Solution_1738 s1738;
         std::vector<std::vector<int>> matrix{{5,2},{1,6}};

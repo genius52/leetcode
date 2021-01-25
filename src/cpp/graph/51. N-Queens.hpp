@@ -21,7 +21,7 @@ public:
         }
         i = r - 1;
         j = col + 1;
-        while(i >= 0 && col < n){
+        while(i >= 0 && j < n){
             if(pre[i][j] == 'Q')
                 return true;
             i--;
