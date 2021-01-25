@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var s  string = "eleetminicoworoep"
+		res := string_issue.FindTheLongestSubstring(s)
+		fmt.Println(res)
+	}
+	{
 		var source []int = []int{1,2,3,4}
 		var target []int = []int{2,1,4,5}
 		var allowedSwaps [][]int = [][]int{{0,1},{2,3}}
