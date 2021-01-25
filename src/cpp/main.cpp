@@ -142,7 +142,7 @@ int main() {
     {
         Solution_1738 s1738;
         std::vector<std::vector<int>> matrix{{5,2},{1,6}};
-        int k = 2;
+        int k = 3;
         auto res = s1738.kthLargestValue(matrix,k);
         std::cout << "1738 res = " << res << std::endl;
     }
