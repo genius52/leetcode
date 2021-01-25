@@ -40,6 +40,7 @@
 #include "array/324. Wiggle Sort II.hpp"
 #include "array/84. Largest Rectangle in Histogram.hpp"
 #include "array/1738. Find Kth Largest XOR Coordinate Value.hpp"
+#include "array/1508. Range Sum of Sorted Subarray Sums.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
@@ -141,6 +142,15 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_1508 s1508;
+        std::vector<int> nums{1,2,3,4};
+        int n = 4;
+        int left = 1;
+        int right = 5;
+        auto res = s1508.rangeSum(nums,n,left,right);
+        std::cout << "1508 res = " << res << std::endl;
+    }
     {
         Solution_52 s52;
         int n = 4;
