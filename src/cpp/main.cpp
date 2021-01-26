@@ -80,6 +80,7 @@
 #include "number/612. Shortest Distance in a Plane.hpp"
 #include "number/1734. Decode XORed Permutation.hpp"
 #include "number/1736. Latest Time by Replacing Hidden Digits.hpp"
+#include "number/477. Total Hamming Distance.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
@@ -142,6 +143,12 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_477 s477;
+        std::vector<int> nums{4, 14, 2};
+        auto res = s477.totalHammingDistance(nums);
+        std::cout << "477 res = " << res << std::endl;
+    }
     {
         Solution_1508 s1508;
         std::vector<int> nums{1,2,3,4};
