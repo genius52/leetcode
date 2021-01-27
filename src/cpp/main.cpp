@@ -81,6 +81,7 @@
 #include "number/1734. Decode XORed Permutation.hpp"
 #include "number/1736. Latest Time by Replacing Hidden Digits.hpp"
 #include "number/477. Total Hamming Distance.hpp"
+#include "number/60. Permutation Sequence.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
@@ -88,7 +89,6 @@
 #include "tree/987. Vertical Order Traversal of a Binary Tree.hpp"
 #include "tree/988. Smallest String Starting From Leaf.hpp"
 #include "tree/297. Serialize and Deserialize Binary Tree.hpp"
-#include "graph/332. Reconstruct Itinerary.cpp"
 #include "graph/207. Course Schedule.hpp"
 #include "graph/210. Course Schedule II.hpp"
 #include "graph/1444. Number of Ways of Cutting a Pizza.hpp"
@@ -143,6 +143,22 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_60 s60;
+        int n = 8;
+        int k = 15025;
+        auto res = s60.getPermutation(n,k);
+        std::cout << "60 res = " << res << std::endl;
+    }
+    {
+        //        //[["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]
+        //        //[["JFK","KUL"],["JFK","NRT"],["NRT","JFK"]]
+        //        Solution_332 s332;
+        //        std::vector<std::vector<std::string>> input = {std::vector<std::string>{"JFK","KUL"}, std::vector<std::string>{"JFK","NRT"},
+        //        std::vector<std::string>{"NRT","JFK"}};
+        //        auto res = s332.findItinerary(input);
+        //        std::cout << "332 res = "<< res.size() <<std::endl;
+    }
     {
         Solution_477 s477;
         std::vector<int> nums{4, 14, 2};
@@ -1141,15 +1157,6 @@ int main() {
         string s = "aa";
         auto res = s1446.maxPower(s);
         std::cout<<"1446 res = "<<res<<std::endl;
-    }
-    {
-        //[["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]
-        //[["JFK","KUL"],["JFK","NRT"],["NRT","JFK"]]
-        Solution_332 s332;
-        std::vector<std::vector<std::string>> input = {std::vector<std::string>{"JFK","KUL"}, std::vector<std::string>{"JFK","NRT"},
-        std::vector<std::string>{"NRT","JFK"}};
-        auto res = s332.findItinerary(input);
-        std::cout << "332 res = "<< res.size() <<std::endl;
     }
     {
         Solution_1443 s1443;
