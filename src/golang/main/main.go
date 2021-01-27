@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var s1 string = "sea"
+		var s2 string = "eat"
+		res := string_issue.MinDistance(s1,s2)
+		fmt.Println(res)
+	}
+	{
 		var s  string = "eleetminicoworoep"
 		res := string_issue.FindTheLongestSubstring(s)
 		fmt.Println(res)
