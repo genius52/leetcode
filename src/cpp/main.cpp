@@ -137,6 +137,7 @@
 #include "string/1209. Remove All Adjacent Duplicates in String II.hpp"
 #include "string/942. DI String Match.hpp"
 #include "string/1079. Letter Tile Possibilities.hpp"
+#include "string/535. Encode and Decode TinyURL.hpp"
 #include "list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "list/445. Add Two Numbers II.hpp"
 #include "list/138. Copy List with Random Pointer.hpp"
@@ -145,6 +146,13 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_535 s535;
+        std::string url = "https://leetcode.com/problems/design-tinyurl";
+        auto encoded_url = s535.encode(url);
+        auto decoded_url = s535.decode(encoded_url);
+        std::cout << "535 decoded_url = " << decoded_url << std::endl;
+    }
     {
         ListNode l1(1);
         ListNode l2(2);
