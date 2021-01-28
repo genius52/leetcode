@@ -140,10 +140,28 @@
 #include "list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "list/445. Add Two Numbers II.hpp"
 #include "list/138. Copy List with Random Pointer.hpp"
+#include "list/25. Reverse Nodes in k-Group.hpp"
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        ListNode l1(1);
+        ListNode l2(2);
+        ListNode l3(3);
+        ListNode l4(4);
+        ListNode l5(5);
+        ListNode l6(6);
+        l1.next = &l2;
+        l2.next = &l3;
+        l3.next = &l4;
+        l4.next = &l5;
+        l5.next = &l6;
+        Solution_25 s25;
+        int k = 2;
+        auto res = s25.reverseKGroup(&l1,k);
+        std::cout << "1366 res = " << res->val << std::endl;
+    }
     {
         Solution_1366 s1366;
         std::vector<std::string> votes{"ABC","ACB","ABC","ACB","ACB"};
