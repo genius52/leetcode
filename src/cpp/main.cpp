@@ -115,6 +115,7 @@
 #include "graph/1727. Largest Submatrix With Rearrangements.hpp"
 #include "graph/51. N-Queens.hpp"
 #include "graph/52. N-Queens II.hpp"
+#include "graph/1366. Rank Teams by Votes.hpp"
 #include "string/1446. Consecutive Characters.cpp"
 #include "string/1451. Rearrange Words in a Sentence.hpp"
 #include "string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -143,6 +144,12 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_1366 s1366;
+        std::vector<std::string> votes{"ABC","ACB","ABC","ACB","ACB"};
+        auto res = s1366.rankTeams(votes);
+        std::cout << "1366 res = " << res << std::endl;
+    }
     {
         Solution_60 s60;
         int n = 8;
