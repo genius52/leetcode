@@ -83,6 +83,7 @@
 #include "number/477. Total Hamming Distance.hpp"
 #include "number/60. Permutation Sequence.hpp"
 #include "number/357. Count Numbers with Unique Digits.hpp"
+#include "number/486. Predict the Winner.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
@@ -147,6 +148,13 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_486 s486;
+        //std::vector<int> nums{1, 5, 233, 7};
+        std::vector<int> nums{1, 5, 2};
+        auto res = s486.PredictTheWinner(nums);
+        std::cout << "486 res = " << res << std::endl;
+    }
     {
         Solution_357 s357;
         int n = 3;
