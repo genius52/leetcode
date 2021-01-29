@@ -82,6 +82,7 @@
 #include "number/1736. Latest Time by Replacing Hidden Digits.hpp"
 #include "number/477. Total Hamming Distance.hpp"
 #include "number/60. Permutation Sequence.hpp"
+#include "number/357. Count Numbers with Unique Digits.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
@@ -146,6 +147,12 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_357 s357;
+        int n = 3;
+        auto res = s357.countNumbersWithUniqueDigits(n);
+        std::cout << "357 res = " << res << std::endl;
+    }
     {
         Solution_535 s535;
         std::string url = "https://leetcode.com/problems/design-tinyurl";
