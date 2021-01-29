@@ -140,6 +140,7 @@
 #include "string/942. DI String Match.hpp"
 #include "string/1079. Letter Tile Possibilities.hpp"
 #include "string/535. Encode and Decode TinyURL.hpp"
+#include "string/1419. Minimum Number of Frogs Croaking.hpp"
 #include "list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "list/445. Add Two Numbers II.hpp"
 #include "list/138. Copy List with Random Pointer.hpp"
@@ -148,6 +149,12 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_1419 s1419;
+        std::string croakOfFrogs = "croackcrrooakak";
+        auto res = s1419.minNumberOfFrogs(croakOfFrogs);
+        std::cout << "1419 res = " << res << std::endl;
+    }
     {
         Solution_486 s486;
         //std::vector<int> nums{1, 5, 233, 7};
