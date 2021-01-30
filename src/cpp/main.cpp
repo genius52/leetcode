@@ -118,6 +118,7 @@
 #include "graph/51. N-Queens.hpp"
 #include "graph/52. N-Queens II.hpp"
 #include "graph/1366. Rank Teams by Votes.hpp"
+#include "graph/743. Network Delay Time.hpp"
 #include "string/1446. Consecutive Characters.cpp"
 #include "string/1451. Rearrange Words in a Sentence.hpp"
 #include "string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -149,6 +150,14 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_743 s743;
+        std::vector<std::vector<int>> times{{2,1,1},{2,3,1},{3,4,1}};
+        int n = 4;
+        int k = 2;
+        auto res = s743.networkDelayTime(times,n,k);
+        std::cout << "743 res = " << res << std::endl;
+    }
     {
         Solution_1419 s1419;
         std::string croakOfFrogs = "croackcrrooakak";
