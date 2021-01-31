@@ -145,6 +145,7 @@
 #include "string/1079. Letter Tile Possibilities.hpp"
 #include "string/535. Encode and Decode TinyURL.hpp"
 #include "string/1419. Minimum Number of Frogs Croaking.hpp"
+#include "string/567. Permutation in String.hpp"
 #include "list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "list/445. Add Two Numbers II.hpp"
 #include "list/138. Copy List with Random Pointer.hpp"
@@ -153,6 +154,13 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_567 s567;
+        std::string s1 = "aba";
+        std::string s2 = "aadbaaooo";
+        auto res = s567.checkInclusion(s1,s2);
+        std::cout << "567 res = " << res << std::endl;
+    }
     {
         Solution_1743 s1743;
         std::vector<std::vector<int>> adjacentPairs{{2,1},{3,4},{3,2}};
