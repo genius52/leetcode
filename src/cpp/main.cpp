@@ -41,6 +41,7 @@
 #include "array/84. Largest Rectangle in Histogram.hpp"
 #include "array/1738. Find Kth Largest XOR Coordinate Value.hpp"
 #include "array/1508. Range Sum of Sorted Subarray Sums.hpp"
+#include "array/322. Coin Change.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
@@ -150,6 +151,19 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_1049 s1049;
+        vector<int> stones{2,7,4,1,8,1,6,4,33,68,32};
+        auto res = s1049.lastStoneWeightII(stones);
+        std::cout << "1049 res = " << res << std::endl;
+    }
+    {
+        Solution_322 s322;
+        std::vector<int> coins{1,2,5};
+        int amount = 11;
+        auto res = s322.coinChange(coins,amount);
+        std::cout << "322 res = " << res << std::endl;
+    }
     {
         Solution_743 s743;
         std::vector<std::vector<int>> times{{2,1,1},{2,3,1},{3,4,1}};
@@ -396,12 +410,6 @@ int main() {
         std::vector<int> barcodes{1,1,1,1,2,2,3,3};
         auto res = s1054.rearrangeBarcodes(barcodes);
         std::cout << "1054 res = " << res.size() << std::endl;
-    }
-    {
-        Solution_1049 s1049;
-        std::vector<int> stones{31,26,33,21,40};
-        auto res = s1049.lastStoneWeightII(stones);
-        std::cout << "1049 res = " << res << std::endl;
     }
     {
         Solution_988 s988;
@@ -1340,12 +1348,6 @@ int main() {
         auto s138 = new Solution_138();
         auto res = s138->copyRandomList(n1);
         std::cout << res->val << std::endl;
-    }
-
-    {
-        Solution_1049 s1049;
-        std::vector<int> v = {2,7,4,1,8,1};
-        std::cout<<s1049.lastStoneWeightII(v)<<std::endl;
     }
     {
         Solution_942 s942;
