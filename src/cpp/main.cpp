@@ -42,6 +42,7 @@
 #include "array/1738. Find Kth Largest XOR Coordinate Value.hpp"
 #include "array/1508. Range Sum of Sorted Subarray Sums.hpp"
 #include "array/322. Coin Change.hpp"
+#include "array/1743. Restore the Array From Adjacent Pairs.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
@@ -85,6 +86,7 @@
 #include "number/60. Permutation Sequence.hpp"
 #include "number/357. Count Numbers with Unique Digits.hpp"
 #include "number/486. Predict the Winner.hpp"
+#include "number/1742. Maximum Number of Balls in a Box.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
@@ -151,6 +153,19 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_1743 s1743;
+        std::vector<std::vector<int>> adjacentPairs{{2,1},{3,4},{3,2}};
+        auto res = s1743.restoreArray(adjacentPairs);
+        std::cout << "1743 res = " << res[0] << std::endl;
+    }
+    {
+        Solution_1742 s1742;
+        int lowLimit = 5;
+        int highLimit = 15;
+        auto res = s1742.countBalls(lowLimit,highLimit);
+        std::cout << "1742 res = " << res << std::endl;
+    }
     {
         Solution_1049 s1049;
         vector<int> stones{2,7,4,1,8,1,6,4,33,68,32};
