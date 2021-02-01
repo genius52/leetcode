@@ -43,6 +43,7 @@
 #include "array/1508. Range Sum of Sorted Subarray Sums.hpp"
 #include "array/322. Coin Change.hpp"
 #include "array/1743. Restore the Array From Adjacent Pairs.hpp"
+#include "array/1546. Maximum Number of Non-Overlapping Subarrays With Sum Equals Target.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
@@ -154,6 +155,13 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_1546 s1546;
+        std::vector<int> nums{-2,6,6,3,5,4,1,2,8};
+        int target = 10;
+        auto res = s1546.maxNonOverlapping(nums,target);
+        std::cout << "1546 res = " << res << std::endl;
+    }
     {
         Solution_567 s567;
         std::string s1 = "aba";
