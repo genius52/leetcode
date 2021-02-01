@@ -123,6 +123,7 @@
 #include "graph/52. N-Queens II.hpp"
 #include "graph/1366. Rank Teams by Votes.hpp"
 #include "graph/743. Network Delay Time.hpp"
+#include "graph/787. Cheapest Flights Within K Stops.hpp"
 #include "string/1446. Consecutive Characters.cpp"
 #include "string/1451. Rearrange Words in a Sentence.hpp"
 #include "string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -155,6 +156,16 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_787 s787;
+        int n = 5;
+        std::vector<std::vector<int>> flights{{0,1,1},{1,2,2},{2,3,3},{3,4,4}};
+        int src = 0;
+        int dst = 1;
+        int K = 4;
+        auto res = s787.findCheapestPrice(n,flights,src,dst,K);
+        std::cout << "787 res = " << res << std::endl;
+    }
     {
         Solution_1546 s1546;
         std::vector<int> nums{-2,6,6,3,5,4,1,2,8};
