@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var A []int = []int{4, 3, 2, 6}
+		res := array.MaxRotateFunction(A)
+		fmt.Println(res)
+	}
+	{
 		var s1 string = "sea"
 		var s2 string = "eat"
 		res := string_issue.MinDistance(s1,s2)
