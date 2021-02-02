@@ -13,6 +13,27 @@ import (
 
 func main(){
 	{
+		//[1998]
+		//1999
+		//2000
+		//2000
+		var forbidden []int = []int{1998}
+		var a int = 1999
+		var b int = 2000
+		var x int = 2000
+		res := array.MinimumJumps(forbidden,a,b,x)
+		fmt.Println(res)
+	}
+	{
+		//A = [1,3,5,4], B = [1,2,3,7]
+		//[0,7,8,10,10,11,12,13,19,18]
+		//[4,4,5,7,11,14,15,16,17,20]
+		var A []int = []int{0,7,8,10,10,11,12,13,19,18}
+		var B []int = []int{4,4,5,7,11,14,15,16,17,20}
+		res := array.MinSwap(A,B)
+		fmt.Println(res)
+	}
+	{
 		var maxChoosableInteger int = 10
 		var desiredTotal int = 40
 		res := number.CanIWin(maxChoosableInteger,desiredTotal)
@@ -953,14 +974,6 @@ func main(){
 		var graph [][]int = [][]int{{},{2},{3,4},{4},{}}
 		res := diagram.EventualSafeNodes(graph)
 		fmt.Println(res)
-	}
-	{
-		//[0,7,8,10,10,11,12,13,19,18]
-		//[4,4,5,7,11,14,15,16,17,20]
-		//var A []int = []int{0,7,8,10,10,11,12,13,19,18}
-		//var B []int = []int{4,4,5,7,11,14,15,16,17,20}
-		//res := array.MinSwap(A,B)
-		//fmt.Println(res)
 	}
 	{
 		var poured int = 10
