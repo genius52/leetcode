@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var maxChoosableInteger int = 10
+		var desiredTotal int = 40
+		res := number.CanIWin(maxChoosableInteger,desiredTotal)
+		fmt.Println(res)
+	}
+	{
 		var A []int = []int{4, 3, 2, 6}
 		res := array.MaxRotateFunction(A)
 		fmt.Println(res)
@@ -1390,12 +1396,6 @@ func main(){
 		var n int = 6
 		res := array.MinOperations(n)
 		fmt.Println(res)
-	}
-	{
-		//var maxChoosableInteger int = 11
-		//var desiredTotal int = 11
-		//res := number.CanIWin(maxChoosableInteger,desiredTotal)
-		//fmt.Println(res)
 	}
 	{
 		var nums []int = []int{-1,-2,-3,-4,-5}
