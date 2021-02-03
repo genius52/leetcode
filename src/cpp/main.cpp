@@ -44,6 +44,7 @@
 #include "array/322. Coin Change.hpp"
 #include "array/1743. Restore the Array From Adjacent Pairs.hpp"
 #include "array/1546. Maximum Number of Non-Overlapping Subarrays With Sum Equals Target.hpp"
+#include "array/1705. Maximum Number of Eaten Apples.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
@@ -156,6 +157,17 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_1705 s1705;
+//        std::vector<int> apples{1,2,3,5,2};
+//        std::vector<int> days{3,2,1,4,2};
+//        std::vector<int> apples{3,0,0,0,0,2};
+//        std::vector<int> days{3,0,0,0,0,2};
+        std::vector<int> apples{5,2,3};
+        std::vector<int> days{6,9,10};
+        auto res = s1705.eatenApples(apples,days);
+        std::cout << "1705 res = " << res << std::endl;
+    }
     {
         Solution_787 s787;
         int n = 5;
