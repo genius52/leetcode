@@ -45,6 +45,7 @@
 #include "array/1743. Restore the Array From Adjacent Pairs.hpp"
 #include "array/1546. Maximum Number of Non-Overlapping Subarrays With Sum Equals Target.hpp"
 #include "array/1705. Maximum Number of Eaten Apples.hpp"
+#include "array/37. Sudoku Solver.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
@@ -157,6 +158,20 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_37 s37;
+        std::vector<std::vector<char>> board{{'5','3','.','.','7','.','.','.','.'},
+                                             {'6','.','.','1','9','5','.','.','.'},
+                                             {'.','9','8','.','.','.','.','6','.'},
+                                             {'8','.','.','.','6','.','.','.','3'},
+                                             {'4','.','.','8','.','3','.','.','1'},
+                                             {'7','.','.','.','2','.','.','.','6'},
+                                             {'.','6','.','.','.','.','2','8','.'},
+                                             {'.','.','.','4','1','9','.','.','5'},
+                                             {'.','.','.','.','8','.','.','7','9'}};
+        s37.solveSudoku(board);
+        std::cout << "37 res = " << board[0][2] << std::endl;
+    }
     {
         Solution_1705 s1705;
 //        std::vector<int> apples{1,2,3,5,2};
