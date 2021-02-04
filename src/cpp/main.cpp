@@ -46,6 +46,7 @@
 #include "array/1546. Maximum Number of Non-Overlapping Subarrays With Sum Equals Target.hpp"
 #include "array/1705. Maximum Number of Eaten Apples.hpp"
 #include "array/37. Sudoku Solver.hpp"
+#include "array/4. Median of Two Sorted Arrays.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
@@ -150,6 +151,7 @@
 #include "string/535. Encode and Decode TinyURL.hpp"
 #include "string/1419. Minimum Number of Frogs Croaking.hpp"
 #include "string/567. Permutation in String.hpp"
+#include "string/44. Wildcard Matching.hpp"
 #include "list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "list/445. Add Two Numbers II.hpp"
 #include "list/138. Copy List with Random Pointer.hpp"
@@ -158,6 +160,24 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        //[1,2,3]
+        //[1,2,2]
+        Solution_4 s4;
+        std::vector<int> nums1{1,2,3};
+        std::vector<int> nums2{1,2,2};
+        auto res = s4.findMedianSortedArrays(nums1,nums2);
+        std::cout << "4 res = " << res << std::endl;
+    }
+    {
+        //"acdcb"
+        //"a*cb"
+        Solution_44 s44;
+        std::string s = "acdcb";
+        std::string p = "a*cb";
+        auto res = s44.isMatch(s,p);
+        std::cout << "44 res = " << res << std::endl;
+    }
     {
         Solution_37 s37;
         std::vector<std::vector<char>> board{{'5','3','.','.','7','.','.','.','.'},
