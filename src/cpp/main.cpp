@@ -152,6 +152,7 @@
 #include "string/1419. Minimum Number of Frogs Croaking.hpp"
 #include "string/567. Permutation in String.hpp"
 #include "string/44. Wildcard Matching.hpp"
+#include "string/3. Longest Substring Without Repeating Characters.hpp"
 #include "list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "list/445. Add Two Numbers II.hpp"
 #include "list/138. Copy List with Random Pointer.hpp"
@@ -160,6 +161,12 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        std::string s = "pwwkew";
+        Solution_3 s3;
+        auto res = s3.lengthOfLongestSubstring(s);
+        std::cout << "3 res = " << res << std::endl;
+    }
     {
         //[1,2,3]
         //[1,2,2]
