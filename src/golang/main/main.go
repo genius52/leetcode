@@ -13,6 +13,14 @@ import (
 
 func main(){
 	{
+		//[1,2,4,8,16,32,64,128]
+		//82
+		var nums []int = []int{1,2,4,8,16,32,64,128}
+		var target int = 82
+		res := number.ThreeSumClosest(nums,target)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{-1,0,1,2,-1,-4}
 		res := number.ThreeSum(nums)
 		fmt.Println(res)
