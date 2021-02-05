@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{-1,0,1,2,-1,-4}
+		res := number.ThreeSum(nums)
+		fmt.Println(res)
+	}
+	{
 		//[1998]
 		//1999
 		//2000
