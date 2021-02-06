@@ -1375,28 +1375,6 @@ func dp_longestValidParentheses(s string) int{
 //	}
 //}
 
-//20
-//Input: 2.00000, -2
-//Output: 0.25000
-func myPow(x float64, n int) float64 {
-	if n == 0{
-		return 1
-	}
-	if n == 1{
-		return x
-	}
-	if n < 0{
-		return myPow(1 / x,-n)
-	}
-	if n == 2{
-		return x * x
-	}
-	if n % 2 == 0{
-		return myPow(myPow(x,n/2),2)
-	}else{
-		return x * myPow(myPow(x,n/2), 2)
-	}
-}
 
 //166
 //Input: numerator = 2, denominator = 3
@@ -1523,32 +1501,6 @@ func regionsBySlashes(grid []string) int {
 		}
 	}
 	return res
-}
-
-//53
-//[-2,1,-3,4,-1,2,1,-5,4],
-func maxSubArray(nums []int) int {
-	l := len(nums)
-	if l == 0{
-		return 0
-	}
-	//var dp []int = make([]int,l)
-	//dp[0] = 0
-	var last_sum int = 0
-	var cur_sum int = 0
-	var max int = math.MinInt32
-	for i := 0;i < l;i++{
-		if i == 0{
-			cur_sum = nums[i]
-		}else{
-			cur_sum = max_int(nums[i], last_sum + nums[i])
-		}
-		last_sum = cur_sum
-		if cur_sum > max{
-			max = cur_sum
-		}
-	}
-	return max
 }
 
 //918
