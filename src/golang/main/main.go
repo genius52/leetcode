@@ -13,6 +13,20 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{1,3}
+		var target int = 4
+		res := array.SearchInsert(nums,target)
+		fmt.Println(res)
+	}
+	{
+		//var haystack string = "ababaabab"
+		//var needle string = "abaabab"
+		var haystack string = "hello"
+		var needle string = "ll"
+		res := string_issue.StrStr(haystack,needle)
+		fmt.Println(res)
+	}
+	{
 		//[1,2,4,8,16,32,64,128]
 		//82
 		var nums []int = []int{1,2,4,8,16,32,64,128}
