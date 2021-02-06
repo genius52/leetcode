@@ -70,42 +70,6 @@ func findDuplicates(nums []int) []int {
 	return res
 }
 
-//Input: ["eat", "tea", "tan", "ate", "nat", "bat"],
-//Output:
-//[
-//  ["ate","eat","tea"],
-//  ["nat","tan"],
-//  ["bat"]
-//]
-
-type sortRunes []rune
-
-func (s sortRunes) Less(i, j int) bool {
-	return s[i] < s[j]
-}
-
-func (s sortRunes) Swap(i, j int) {
-	s[i], s[j] = s[j], s[i]
-}
-
-func (s sortRunes) Len() int {
-	return len(s)
-}
-
-func groupAnagrams(strs []string) [][]string {
-	var m map[string][]string
-	for i := 0;i < len(strs);i++{
-		data := []rune(strs[i])
-		sort.Sort(sortRunes(data))
-		var s string = string(data[:])
-		m[s] = append(m[s],strs[i])
-	}
-	var res [][]string
-	for _,val := range m{
-		res = append(res,val)
-	}
-	return res
-}
 
 //a[ i ][ j ] = a[i - 1] [j - 1] + a[i - 1][ j ]
 func generate(numRows int) [][]int {
@@ -147,35 +111,6 @@ func maxArea(height []int) int {
 	return max_cap
 }
 
-//Here is my idea: instead of calculating area by height*width, we can think it in a cumulative way. In other words, sum water amount of each bin(width=1).
-//Search from left to right and maintain a max height of left and right separately, which is like a one-side wall of partial container.
-// Fix the higher one and flow water from the lower part. For example, if current height of left is lower, we fill water in the left bin.
-// Until left meets right, we filled the whole container
-func trap(height []int) int {
-	var cap int
-	var left_max int = 0
-	var right_max int = 0
-	var low int = 0
-	var high int = len(height) - 1
-	for low <= high{
-		if(height[low] < height[high]){
-			if(height[low] > left_max){
-				left_max = height[low]
-			} else{
-				cap += left_max - height[low]
-			}
-			low++
-		}else{
-			if(height[high] > right_max){
-				right_max = height[high]
-			}else{
-				cap += right_max - height[high]
-			}
-			high--
-		}
-	}
-	return cap
-}
 
 func distributeCandies(candies int, num_people int) []int {
 	var res []int = make([]int,num_people,num_people)
@@ -1948,68 +1883,6 @@ func findDuplicate(nums []int) int {
 	return min
 }
 
-//Given input matrix =
-//[
-//  [ 5, 1, 9,11],
-//  [ 2, 4, 8,10],
-//  [13, 3, 6, 7],
-//  [15,14,12,16]
-//],
-//
-//rotate the input matrix in-place such that it becomes:
-//[
-//  [15,13, 2, 5],
-//  [14, 3, 4, 1],
-//  [12, 6, 8, 9],
-//  [16, 7,10,11]
-//]
-func rotate(matrix [][]int)  {
-	//swap by lines
-	rows := len(matrix)
-	for row := 0;row < rows/2;row++{
-		matrix[row],matrix[rows - 1 - row] = matrix[rows - 1 - row],matrix[row]
-	}
-	//swap by diagonal line
-	for i := 1;i < rows;i++{
-		for j := 0;j < i;j++{
-			matrix[i][j],matrix[j][i] = matrix[j][i],matrix[i][j]
-		}
-	}
-}
-
-//36
-func isValidSudoku(board [][]byte) bool {
-	var row_map [9][]byte
-	var column_map [9][]byte
-	var threeplusthree_map [9][]byte
-	for i := 0;i < len(board);i++{
-		for j := 0;j < len(board[0]);j++{
-			if board[i][j] != '.'{
-				for _,val := range row_map[i]{
-					if val == board[i][j]{
-						return false
-					}
-				}
-				row_map[i] = append(row_map[i], board[i][j])
-				for _,val := range column_map[j]{
-					if val == board[i][j]{
-						return false
-					}
-				}
-				column_map[j] = append(column_map[j], board[i][j])
-				index := i/3 * 3  + j / 3
-				for _,val := range threeplusthree_map[index]{
-					if val == board[i][j]{
-						return false
-					}
-				}
-				threeplusthree_map[index] = append(threeplusthree_map[index],board[i][j])
-			}
-		}
-	}
-	return true
-}
-
 //289
 //Input:
 //[
@@ -2508,25 +2381,6 @@ func canReach(arr []int, start int) bool {
 	return dfs_canReach(arr,start,dp)
 }
 
-//45
-//Input: [2,3,1,1,4]
-//Output: 2
-//Explanation: The minimum number of jumps to reach the last index is 2.
-//    Jump 1 step from index 0 to 1, then 3 steps to the last index.
-func jump(nums []int) int {
-	var dp []int = make([]int,len(nums))
-	dp[len(nums) - 1] = 0
-	for i := len(nums) - 2;i >=0;i--{
-		min_step := len(nums)
-		for l := 1;l <= nums[i] && (i + l) <= len(nums) - 1;l++{
-			min_step = min_int_number(1 + dp[i + l],min_step)
-			//min_step = min_int_number(1 + dp[len(nums) - 1 - i - j],min_step)
-		}
-		dp[i] = min_step
-	}
-	return dp[0]
-}
-
 //[2,3,1,1,4]
 //bfs solution
 func jump2(nums []int) int{
@@ -2701,43 +2555,6 @@ func merge(intervals [][]int) [][]int {
 	return res
 }
 
-//47
-//[1,1,2,3,3,4,5,6]
-func dfs_permuteUnique(cur_pos int,nums []int,res *[][]int,record map[string]bool){
-	if cur_pos == len(nums){
-		var s string
-		for _,n := range nums{
-			s += strconv.Itoa(n)
-		}
-		if _,ok := record[s];ok{
-			return
-		}else{
-			record[s] = true
-		}
-		var c []int = make([]int,len(nums))
-		copy(c,nums)
-		*res = append(*res,c)
-		return
-	}
-	for i := cur_pos;i < len(nums);i++{
-		if i > cur_pos{
-			if nums[i] == nums[i-1] || nums[i] == nums[cur_pos]{
-				continue
-			}
-		}
-		nums[cur_pos],nums[i] = nums[i],nums[cur_pos]
-		dfs_permuteUnique(cur_pos + 1,nums,res,record)
-		nums[cur_pos],nums[i] = nums[i],nums[cur_pos]
-	}
-}
-
-func permuteUnique(nums []int) [][]int {
-	var res [][]int
-	sort.Ints(nums)
-	var record map[string]bool = make(map[string]bool)
-	dfs_permuteUnique(0,nums,&res,record)
-	return res
-}
 
 //130
 //Example:
