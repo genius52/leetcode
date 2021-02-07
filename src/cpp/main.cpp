@@ -153,6 +153,7 @@
 #include "string/567. Permutation in String.hpp"
 #include "string/44. Wildcard Matching.hpp"
 #include "string/3. Longest Substring Without Repeating Characters.hpp"
+#include "string/316. Remove Duplicate Letters.hpp"
 #include "list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "list/445. Add Two Numbers II.hpp"
 #include "list/138. Copy List with Random Pointer.hpp"
@@ -161,6 +162,12 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_316 s316;
+        std::string s = "bbcaac";
+        auto res = s316.removeDuplicateLetters(s);
+        std::cout << "316 res = " << res << std::endl;
+    }
     {
         std::string s = "pwwkew";
         Solution_3 s3;
