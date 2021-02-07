@@ -154,6 +154,7 @@
 #include "string/44. Wildcard Matching.hpp"
 #include "string/3. Longest Substring Without Repeating Characters.hpp"
 #include "string/316. Remove Duplicate Letters.hpp"
+#include "string/97. Interleaving String.hpp"
 #include "list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "list/445. Add Two Numbers II.hpp"
 #include "list/138. Copy List with Random Pointer.hpp"
@@ -162,6 +163,14 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_97 s97;
+        std::string s1 = "aabcc";
+        std::string s2 = "dbbca";
+        std::string s3 = "aadbbcbcac";
+        auto res = s97.isInterleave(s1,s2,s3);
+        std::cout << "97 res = " << res << std::endl;
+    }
     {
         Solution_316 s316;
         std::string s = "bbcaac";
