@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var s string = "abbbbbbbaaa"
+		res := string_issue.MinimumLength(s)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{2,-5,1,-4,3,-2}
 		res := number.MaxAbsoluteSum(nums)
 		fmt.Println(res)
