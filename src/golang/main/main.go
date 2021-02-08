@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{2,1,3,4}
+		res := array.Check(nums)
+		fmt.Println(res)
+	}
+	{
 		var s string = "abbbbbbbaaa"
 		res := string_issue.MinimumLength(s)
 		fmt.Println(res)
