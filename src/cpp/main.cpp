@@ -127,6 +127,7 @@
 #include "graph/1366. Rank Teams by Votes.hpp"
 #include "graph/743. Network Delay Time.hpp"
 #include "graph/787. Cheapest Flights Within K Stops.hpp"
+#include "graph/684. Redundant Connection.hpp"
 #include "string/1446. Consecutive Characters.cpp"
 #include "string/1451. Rearrange Words in a Sentence.hpp"
 #include "string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -163,6 +164,13 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_684 s684;
+        //std::vector<std::vector<int>> edges{{9,10},{5,8},{2,6},{1,5},{3,8},{4,9},{8,10},{4,10},{6,8},{7,9}};
+        std::vector<std::vector<int>> edges{{1,5},{3,4},{3,5},{4,5},{2,4}};
+        auto res = s684.findRedundantConnection(edges);
+        std::cout << "684 res = " << res[0] << std::endl;
+    }
     {
         Solution_97 s97;
         std::string s1 = "aabcc";
