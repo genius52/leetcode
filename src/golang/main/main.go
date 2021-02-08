@@ -13,6 +13,18 @@ import (
 
 func main(){
 	{
+		//"uuurruuuruuuuuuuuruuuuu"
+		//"urrrurrrrrrrruurrrurrrurrrrruu"
+		//"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+		//"bbbbbbbbbbbbbbbbbbbb"
+		//"uuurr"
+		//"urrru"
+		var word1 string = "uuurr"
+		var word2 string = "urrru"
+		res := string_issue.LargestMerge(word1,word2)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{2,1,3,4}
 		res := array.Check(nums)
 		fmt.Println(res)
