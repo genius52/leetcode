@@ -47,6 +47,7 @@
 #include "array/1705. Maximum Number of Eaten Apples.hpp"
 #include "array/37. Sudoku Solver.hpp"
 #include "array/4. Median of Two Sorted Arrays.hpp"
+#include "array/688. Knight Probability in Chessboard.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
@@ -164,6 +165,15 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_688 s688;
+        int N = 3;
+        int K = 2;
+        int r = 0;
+        int c = 0;
+        auto res = s688.knightProbability(N,K,r,c);
+        std::cout << "688 res = " << res<< std::endl;
+    }
     {
         Solution_684 s684;
         //std::vector<std::vector<int>> edges{{9,10},{5,8},{2,6},{1,5},{3,8},{4,9},{8,10},{4,10},{6,8},{7,9}};
