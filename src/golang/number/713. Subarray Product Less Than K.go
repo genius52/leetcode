@@ -1,30 +1,24 @@
 package number
 
-import "sort"
-
+//Input: nums = [10, 5, 2, 6], k = 100
+//Output: 8
 func NumSubarrayProductLessThanK(nums []int, k int) int {
 	var l int = len(nums)
 	if l == 0{
 		return 0
 	}
-	sort.Ints(nums)
 	var res int = 0
-	begin := 0
-	end := 0
-	product := nums[begin]
-	for (begin < l && end < l) || (nums[begin] > k){
-		if product < k{
-			//res++
-			end++
-			if end >= l{
-				break
-			}
-			product *= nums[end]
-		}else{
+	var begin int = 0
+	var end int = 0
+	product := 1
+	for begin < l && end < l{
+		product *= nums[end]
+		for begin <= end && product >= k{
+			product /= nums[begin]
 			begin++
-			end = begin
-			product = nums[begin]
 		}
+		res += end - begin + 1
+		end++
 	}
 	return res
 }
