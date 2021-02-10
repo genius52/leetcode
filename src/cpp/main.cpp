@@ -162,10 +162,28 @@
 #include "list/138. Copy List with Random Pointer.hpp"
 #include "list/25. Reverse Nodes in k-Group.hpp"
 #include "list/729. My Calendar I.hpp"
+#include "list/731. My Calendar II.hpp"
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        //MyCalendar();
+//MyCalendar.book(10, 20); // returns true
+//MyCalendar.book(50, 60); // returns true
+//MyCalendar.book(10, 40); // returns true
+//MyCalendar.book(5, 15); // returns false
+//MyCalendar.book(5, 10); // returns true
+//MyCalendar.book(25, 55); // returns true
+        MyCalendarTwo s731;
+        auto res = s731.book(10, 20); // returns true
+        res = s731.book(50, 60); // returns true
+        res = s731.book(10, 40); // returns true
+        res = s731.book(5, 15); // returns false
+        res = s731.book(5, 10); // returns true
+        res = s731.book(25, 55); // returns true
+        std::cout << "731 res = " << res<< std::endl;
+    }
     {
         MyCalendar s729;
         auto res = s729.book(10, 20); // returns true
