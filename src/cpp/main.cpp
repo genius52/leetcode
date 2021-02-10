@@ -161,10 +161,18 @@
 #include "list/445. Add Two Numbers II.hpp"
 #include "list/138. Copy List with Random Pointer.hpp"
 #include "list/25. Reverse Nodes in k-Group.hpp"
+#include "list/729. My Calendar I.hpp"
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        MyCalendar s729;
+        auto res = s729.book(10, 20); // returns true
+        res = s729.book(15, 25); // returns false
+        res = s729.book(20, 30); // returns true
+        std::cout << "729 res = " << res<< std::endl;
+    }
     {
         Solution_688 s688;
         int N = 3;
