@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		input := []int{3,2,1,0,4}
+		res := array.CanJump(input)
+		fmt.Println(res)
+	}
+	{
 		var matrix [][]int = [][]int{{1,2,3,4},{5,6,7,8},{9,10,11,12}}
 		res := array.SpiralOrder(matrix)
 		fmt.Println(res)
@@ -2657,11 +2662,6 @@ func main(){
 	//{
 	//	input := []int{3,0,2,1,2}
 	//	res := canReach(input,2)
-	//	fmt.Println(res)
-	//}
-	//{
-	//	input := []int{25000,24999,24998,6,5,4,3,2,1,1,0,0}
-	//	res := canJump(input)
 	//	fmt.Println(res)
 	//}
 	//{
