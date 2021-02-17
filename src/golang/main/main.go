@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var n int = 3
+		res := array.GenerateMatrix(n)
+		fmt.Println(res)
+	}
+	{
 		var s string = "zzzzz"
 		res := string_issue.CountHomogenous(s)
 		fmt.Println(res)
