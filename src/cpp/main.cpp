@@ -157,6 +157,7 @@
 #include "string/3. Longest Substring Without Repeating Characters.hpp"
 #include "string/316. Remove Duplicate Letters.hpp"
 #include "string/97. Interleaving String.hpp"
+#include "string/752. Open the Lock.hpp"
 #include "list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "list/445. Add Two Numbers II.hpp"
 #include "list/138. Copy List with Random Pointer.hpp"
@@ -167,6 +168,32 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_752 s752;
+        std::vector<std::string> deadends{"0000"};
+        std::string target = "0202";
+        auto res = s752.openLock(deadends,target);
+        std::cout << "752 res = " << res<< std::endl;
+    }
+    {
+        Solution_37 s37;
+        std::vector<std::vector<char>> board{{'5','3','.','.','7','.','.','.','.'},
+                                             {'6','.','.','1','9','5','.','.','.'},
+                                             {'.','9','8','.','.','.','.','6','.'},
+                                             {'8','.','.','.','6','.','.','.','3'},
+                                             {'4','.','.','8','.','3','.','.','1'},
+                                             {'7','.','.','.','2','.','.','.','6'},
+                                             {'.','6','.','.','.','.','2','8','.'},
+                                             {'.','.','.','4','1','9','.','.','5'},
+                                             {'.','.','.','.','8','.','.','7','9'}};
+        s37.solveSudoku(board);
+        for(int i = 0;i < 9;i++){
+            for(int j = 0;j < 9;j++){
+                std::cout<<board[i][j];
+            }
+            std::cout<<std::endl;
+        }
+    }
     {
         //MyCalendar();
 //MyCalendar.book(10, 20); // returns true
@@ -244,20 +271,6 @@ int main() {
         std::string p = "a*cb";
         auto res = s44.isMatch(s,p);
         std::cout << "44 res = " << res << std::endl;
-    }
-    {
-        Solution_37 s37;
-        std::vector<std::vector<char>> board{{'5','3','.','.','7','.','.','.','.'},
-                                             {'6','.','.','1','9','5','.','.','.'},
-                                             {'.','9','8','.','.','.','.','6','.'},
-                                             {'8','.','.','.','6','.','.','.','3'},
-                                             {'4','.','.','8','.','3','.','.','1'},
-                                             {'7','.','.','.','2','.','.','.','6'},
-                                             {'.','6','.','.','.','.','2','8','.'},
-                                             {'.','.','.','4','1','9','.','.','5'},
-                                             {'.','.','.','.','8','.','.','7','9'}};
-        s37.solveSudoku(board);
-        std::cout << "37 res = " << board[0][2] << std::endl;
     }
     {
         Solution_1705 s1705;
