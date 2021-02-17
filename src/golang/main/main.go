@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var s string = "zzzzz"
+		res := string_issue.CountHomogenous(s)
+		fmt.Println(res)
+	}
+	{
 		var s string = "11111"
 		res := string_issue.MinOperations(s)
 		fmt.Println(res)
