@@ -2322,37 +2322,6 @@ func setZeroes(matrix [][]int)  {
 	}
 }
 
-//55
-//Input: [2,3,1,1,4]
-//Output: true
-func dfs_canJump(nums []int,start int,dp []int)bool{
-	if start >= len(nums) - 1 {
-		return true
-	}
-	max_steps := nums[start]
-	if max_steps == 0{
-		return false
-	}
-	if dp[start] == 1{
-		return false
-	}
-	for i := 1;i <= max_steps;i++{
-		if dp[start+i] == 1{
-			continue
-		}
-		res := dfs_canJump(nums,start + i,dp)
-		if res{
-			return true
-		}
-		dp[start + i] = 1
-	}
-	return false
-}
-
-func canJump(nums []int) bool {
-	var dp []int = make([]int,len(nums))
-	return dfs_canJump(nums,0,dp)
-}
 
 //1306
 //Input: arr = [4,2,3,0,3,1,2], start = 5
@@ -2514,46 +2483,6 @@ func maxSlidingWindow(nums []int, k int) []int {
 	return res
 }
 
-type Position [][]int
-
-func (pos Position) Len()int{
-	return len(pos)
-}
-
-func (pos Position) Less(i,j int)bool{
-	if pos[i][0] == pos[j][0]{
-		return pos[i][1] >= pos[j][1]
-	}
-	return pos[i][0] <= pos[j][0]
-}
-
-func (pos Position) Swap(i,j int){
-	pos[i],pos[j] = pos[j],pos[i]
-}
-
-//56
-//Input: [[1,3],[2,6],[8,10],[15,18]]
-//Output: [[1,6],[8,10],[15,18]]
-//Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].
-func merge(intervals [][]int) [][]int {
-	var l int = len(intervals)
-	if l <= 1{
-		return intervals
-	}
-	sort.Sort(Position(intervals))
-	var res [][]int
-	res = append(res,intervals[0])
-	for i := 1;i < len(intervals);i++{
-		if res[len(res)-1][1] >= intervals[i][0]{
-			if res[len(res)-1][1] <= intervals[i][1]{
-				res[len(res)-1][1] = intervals[i][1]
-			}
-		} else{
-			res = append(res,intervals[i])
-		}
-	}
-	return res
-}
 
 
 //130
