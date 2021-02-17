@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var s string = "11111"
+		res := string_issue.MinOperations(s)
+		fmt.Println(res)
+	}
+	{
 		input := []int{3,2,1,0,4}
 		res := array.CanJump(input)
 		fmt.Println(res)
