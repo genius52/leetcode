@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var obstacleGrid [][]int = [][]int{{0,1},{0,0}}
+		res := array.UniquePathsWithObstacles(obstacleGrid)
+		fmt.Println(res)
+	}
+	{
 		var n int = 3
 		res := array.GenerateMatrix(n)
 		fmt.Println(res)
