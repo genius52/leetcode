@@ -1928,53 +1928,6 @@ func gameOfLife(board [][]int)  {
 	}
 }
 
-//64
-//Input:
-//[
-//  [1,3,1],
-//  [1,5,1],
-//  [4,2,1]
-//]
-//Output: 7
-//Explanation: Because the path 1→3→1→1→1 minimizes the sum.
-func dp_minpathsum(grid [][]int,row int,col int,target_row int,target_col int,visited [][]int)(int,bool){
-	if row < 0|| row > target_row || col < 0 || col > target_col {
-		return 0,false
-	}
-	if visited[row][col] != 0{
-		return visited[row][col],true
-	}
-	if row == target_row && col == target_col{
-		visited[row][col] = grid[row][col]
-		return grid[row][col],true
-	}
-	var sum int = math.MaxInt32
-	var res bool = false
-	if val,ok := dp_minpathsum(grid,row + 1,col,target_row,target_col,visited);ok{
-		sum = min_int_number(grid[row][col] + val,sum)
-		res = ok
-	}
-	if val,ok := dp_minpathsum(grid,row,col + 1,target_row,target_col,visited);ok{
-		sum = min_int_number(grid[row][col] + val,sum)
-		res = ok
-	}
-	if res{
-		visited[row][col] = sum
-	}
-	return sum,res
-}
-
-func minPathSum(grid [][]int) int {
-	var visited [][]int = make([][]int,len(grid))
-	for i := 0;i < len(grid);i++{
-		visited[i] = make([]int,len(grid[0]))
-	}
-	target_row := len(grid) - 1
-	target_col := len(grid[0]) - 1
-	val,_ :=  dp_minpathsum(grid,0,0,target_row,target_col,visited)
-	return val
-}
-
 //1295
 func findNumbers(nums []int) int {
 	var res int = 0

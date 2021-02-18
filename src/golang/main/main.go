@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		input := [][]int{{1,2,3},{4,5,6}}
+		res := array.MinPathSum2(input)
+		fmt.Println(res)
+	}
+	{
 		var obstacleGrid [][]int = [][]int{{0,1},{0,0}}
 		res := array.UniquePathsWithObstacles(obstacleGrid)
 		fmt.Println(res)
@@ -2723,11 +2728,7 @@ func main(){
 	//	res := partition(input)
 	//	fmt.Println(res)
 	//}
-	//{
-	//	input := [][]int{{1,3,1},{1,5,1},{4,2,1}}
-	//	res := minPathSum(input)
-	//	fmt.Println(res)
-	//}
+
 	//{
 	//	input := []int{2,3,6,7}
 	//	target := 7
