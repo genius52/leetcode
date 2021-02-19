@@ -1975,12 +1975,6 @@ func main(){
 		fmt.Println(res)
 	}
 	{
-		//input := "/a//b////c/d//././/.."
-		//input := "/a/../../b/../c//.//"
-		//res := string_issue.SimplifyPath(input)
-		//fmt.Println(res)
-	}
-	{
 		input := 10
 		res := tree.GenerateTrees(input)
 		fmt.Println(res)
