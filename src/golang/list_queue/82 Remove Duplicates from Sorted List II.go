@@ -1,12 +1,12 @@
-package number
+package list_queue
 
 import "sort"
 
 //Definition for singly-linked list_queue.
-type ListNode struct {
-	Val int
-	Next *ListNode
-}
+//type ListNode struct {
+//	Val int
+//	Next *ListNode
+//}
 
 //82
 //Input: 1->1->1->2->3
@@ -43,4 +43,29 @@ func deleteDuplicates(head *ListNode) *ListNode {
 		}
 	}
 	return ret
+}
+
+//Input: head = [1,2,3,3,4,4,5]
+//Output: [1,2,5]
+func DeleteDuplicates2(head *ListNode) *ListNode{
+	if head == nil || head.Next == nil{
+		return head
+	}
+	var slow *ListNode = head
+	var fast *ListNode = head
+	for fast.Next != nil{
+		if fast.Next.Val == slow.Val{
+			fast = fast.Next
+		}else{
+			break
+		}
+	}
+	if slow == fast{
+		next := DeleteDuplicates2(fast.Next)
+		slow.Next = next
+		return slow
+	}else{
+		next := DeleteDuplicates2(fast.Next)
+		return next
+	}
 }
