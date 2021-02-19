@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		s := "a"
+		t := "aa"
+		res := string_issue.MinWindow(s,t)
+		fmt.Println(res)
+	}
+	{
 		input := [][]int{{1,2,3},{4,5,6}}
 		res := array.MinPathSum2(input)
 		fmt.Println(res)
@@ -2139,12 +2145,7 @@ func main(){
 	//	res := findTheDistanceValue(arr1,arr2,d)
 	//	fmt.Println(res)
 	//}
-	//{
-	//	s := "a"
-	//	t := "aa"
-	//	res := minWindow(s,t)
-	//	fmt.Println(res)
-	//}
+
 	//{
 	//	input := []int{4,2,0,3,2,5}
 	//	res := largestRectangleArea(input)
