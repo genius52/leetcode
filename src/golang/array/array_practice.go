@@ -2190,29 +2190,29 @@ func dfs_longestConsecutive(record map[int]bool,num int,increase bool)int{
 }
 
 func longestConsecutive(nums []int) int {
-	if len(nums) == 0{
+	if len(nums) == 0 {
 		return 0
 	}
 
 	var record map[int]bool = make(map[int]bool)
-	for i := 0;i < len(nums);i++{
-		if _,ok := record[nums[i]];ok{
+	for i := 0; i < len(nums); i++ {
+		if _, ok := record[nums[i]]; ok {
 			continue
 		}
 		record[nums[i]] = true
 	}
 	var max int = 1
-	for num,_ := range record{
-		if record[num]{
-			res := 1 + dfs_longestConsecutive(record,num + 1,true) + + dfs_longestConsecutive(record,num - 1,false)
+	for num, _ := range record {
+		if record[num] {
+			res := 1 + dfs_longestConsecutive(record, num+1, true) + + dfs_longestConsecutive(record, num-1, false)
 			record[num] = false
-			if res > max{
+			if res > max {
 				max = res
 			}
 		}
 	}
 	return max
-
+}
 
 
 //1306
@@ -2261,67 +2261,6 @@ func jump2(nums []int) int{
 		}
 	}
 	return steps
-}
-
-//79
-//board =
-//[
-//  ['A','B','C','E'],
-//  ['S','F','C','S'],
-//  ['A','D','E','E']
-//]
-//
-//Given word = "ABCCED", return true.
-//Given word = "SEE", return true.
-//Given word = "ABCB", return false.
-// 1: up 2: right 3:down 4:left
-type DIRECTION int32
-const (
-	 UP_FORBIDDEN DIRECTION = 1
-	 RIGHT_FORBIDDEN DIRECTION = 2
-	 DOWN_FORBIDDEN DIRECTION = 3
-	 LEFT_FORBIDDEN DIRECTION = 4
-)
-func dfs_exist(board [][]byte,word string,cur_pos int,row int,col int,forbidden_orientation DIRECTION,dp [][]bool)bool{
-	if cur_pos >= len(word){
-		return true
-	}
-	if row < 0 || row >= len(board) || col < 0 || col >= len(board[0]) || dp[row][col]{
-		return false
-	}
-
-	if word[cur_pos] == board[row][col]{
-		cur_pos++
-		dp[row][col] = true
-	}
-
-	//if dfs_exist(board,word,cur_pos,row - 1,col,dp) {
-	//	return true
-	//}
-	//if dfs_exist(board,word,cur_pos,row + 1,col,dp) {
-	//	return true
-	//}
-	//if dfs_exist(board,word,cur_pos,row,col - 1,dp){
-	//	return true
-	//}
-	//if dfs_exist(board,word,cur_pos,row,col  + 1,dp){
-	//	return true
-	//}
-
-	if word[cur_pos] == board[row][col]{
-		cur_pos--
-		dp[row][col] = false
-	}
-
-	return false
-}
-
-func exist(board [][]byte, word string) bool {
-	var record [][]bool = make([][]bool,len(board))
-	for i := 0; i < len(board);i++{
-		record[i] = make([]bool,len(board[0]))
-	}
-	return dfs_exist(board,word,0,0,0,UP_FORBIDDEN,record)
 }
 
 //239

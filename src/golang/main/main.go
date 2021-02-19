@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		board := [][]byte{{'A'}}
+		word := "A"
+		res := array.Exist(board,word)
+		fmt.Println(res)
+	}
+	{
 		var n int = 4
 		var k int = 2
 		res := array.Combine(n,k)
@@ -2672,12 +2678,6 @@ func main(){
 	//{
 	//	input := []int{1,3,1,2,0,5}
 	//	res := maxSlidingWindow(input,3)
-	//	fmt.Println(res)
-	//}
-	//{
-	//	board := [][]byte{{'A','B','C','E'}, {'S','F','C','S'}, {'A','D','E','E'}}
-	//	word := "SEE"
-	//	res := exist(board,word)
 	//	fmt.Println(res)
 	//}
 	//{
