@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		var n int = 4
+		var k int = 2
+		res := array.Combine(n,k)
+		fmt.Println(res)
+	}
+	{
 		s := "a"
 		t := "aa"
 		res := string_issue.MinWindow(s,t)
