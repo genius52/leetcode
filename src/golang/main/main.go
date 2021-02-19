@@ -13,6 +13,12 @@ import (
 
 func main(){
 	{
+		//var nums []int = []int{0,0,1,1,1,2,2,3,3,4,4}
+		var nums []int = []int{0,1,2,3}
+		res := array.RemoveDuplicates(nums)
+		fmt.Println(res)
+	}
+	{
 		board := [][]byte{{'A'}}
 		word := "A"
 		res := array.Exist(board,word)
