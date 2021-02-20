@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{1,2,2}
+		res := array.SubsetsWithDup(nums)
+		fmt.Println(res)
+	}
+	{
 		var l1 list_queue.ListNode
 		l1.Val = 1
 		var l2 list_queue.ListNode
