@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		input := "23"
+		res := diagram.LetterCombinations(input)
+		fmt.Println(res)
+	}
+	{
 		//head = [1,2,3,3,4,4,5]
 		var l1 list_queue.ListNode
 		l1.Val = 1
@@ -2753,11 +2758,7 @@ func main(){
 	//	res := numIslands(input)
 	//	fmt.Println(res)
 	//}
-	//{
-	//	input := "23"
-	//	res := letterCombinations(input)
-	//	fmt.Println(res)
-	//}
+
 	//{
 	//	input := "aa"
 	//	res := partition(input)
