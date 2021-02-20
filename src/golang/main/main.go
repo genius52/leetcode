@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var s string = "10"
+		res := string_issue.NumDecodings(s)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{1,2,2}
 		res := array.SubsetsWithDup(nums)
 		fmt.Println(res)
