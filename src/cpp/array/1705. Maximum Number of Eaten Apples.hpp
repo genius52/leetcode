@@ -35,13 +35,11 @@ public:
         for(auto it = record.begin();it != record.end();it++){
             int m = min(it->first - date,it->second);
             res += m;
-            //res += it->second;
             if(it->second >= (it->first - date)){
                 date = it->first;
             }else{
                 date += (it->first - date - it->second);
             }
-            //date = it->first;
         }
         return res;
     }
