@@ -12,6 +12,11 @@ import (
 )
 func main(){
 	{
+		var prices []int = []int{7,1,5,3,6,4}
+		res := number.MaxProfit1(prices)
+		fmt.Println(res)
+	}
+	{
 		var s string = "adbdadeecadeadeccaeaabdabdbcdabddddabcaaadbabaaedeeddeaeebcdeabcaaaeeaeeabcddcebddebeebedaecccbdcbcedbdaeaedcdebeecdaaedaacadbdccabddaddacdddc"
 		var t string = "bcddceeeebecbc"
 		res := string_issue.NumDistinct(s,t)
