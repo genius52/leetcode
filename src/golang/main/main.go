@@ -13,6 +13,11 @@ import (
 
 func main(){
 	{
+		var s string = "YazaAay"
+		res := string_issue.LongestNiceSubstring(s)
+		fmt.Println(res)
+	}
+	{
 		var l1 list_queue.ListNode
 		l1.Val = 1
 		var l2 list_queue.ListNode
