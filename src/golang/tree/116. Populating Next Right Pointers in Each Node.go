@@ -2,7 +2,7 @@ package tree
 
 import "container/list"
 
-func connect(root *Node) *Node {
+func connect116(root *Node) *Node {
 	if root == nil{
 		return nil
 	}

@@ -385,34 +385,6 @@ func countBinarySubstrings(s string) int {
 	return res
 }
 
-//119
-//1
-//11
-//121
-//1331
-//14641
-func getRow(rowIndex int) []int {
-	if rowIndex < 0{
-		return []int{}
-	}
-	var triangle [][]int = make([][]int,rowIndex + 1)
-	triangle[0] = make([]int,1)
-	triangle[0][0] = 1
-	level := 1
-	for level <= rowIndex{
-		triangle[level] = make([]int,level + 1)
-		triangle[level][0] = 1
-		triangle[level][level] = 1
-		pos := 1
-		for pos <= level/2{
-			triangle[level][pos] = triangle[level-1][pos] + triangle[level-1][pos - 1]
-			triangle[level][level - pos] = triangle[level-1][level - pos] + triangle[level-1][level - pos - 1]
-			pos++
-		}
-		level++
-	}
-	return triangle[level-1]
-}
 
 //1331
 func arrayRankTransform(arr []int) []int {
