@@ -70,25 +70,6 @@ func findDuplicates(nums []int) []int {
 	return res
 }
 
-
-//a[ i ][ j ] = a[i - 1] [j - 1] + a[i - 1][ j ]
-func generate(numRows int) [][]int {
-	var res [][]int
-	for i := 0;i < numRows;i++{
-		var tmp []int = make([]int,i+1)
-		tmp[0] = 1
-		res = append(res, tmp)
-		for j := 1;j <= i;j++{
-			if i == j{
-				res[i][j] = 1
-			} else{
-				res[i][j] = res[i-1][j-1] + res[i-1][j]
-			}
-		}
-	}
-	return res
-}
-
 func maxArea(height []int) int {
 	var length int = len(height)
 	var low int = 0
@@ -268,8 +249,6 @@ func findJudge(N int, trust [][]int) int {
 	}
 	return -1
 }
-
-
 
 type IntSlice []int
 func (s IntSlice) Len() int { return len(s) }
