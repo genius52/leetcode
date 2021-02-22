@@ -426,40 +426,6 @@ func (this *FindElements) Find(target int) bool {
 	return false
 }
 
-//103
-//[1,2,3,4,null,null,5]
-//[3,9,20,null,null,15,7]
-func level_visit103(node *TreeNode,level int,res *[][]int){
-	if nil == node{
-		return
-	}
-	l := len(*res)
-	if l <= level{
-		*res = append(*res,[]int{node.Val})
-	}else{
-		(*res)[level] = append((*res)[level], node.Val)
-	}
-	//if level % 2 == 1{
-		level_visit103(node.Left,level + 1,res)
-		level_visit103(node.Right,level + 1,res)
-	//}else{
-	//	level_visit103(node.Right,level + 1,res)
-	//	level_visit103(node.Left,level + 1,res)
-	//}
-}
-
-func zigzagLevelOrder(root *TreeNode) [][]int {
-	var res [][]int
-	level_visit103(root,0,&res)
-	for i := 0; i < len(res);i++{
-		if i % 2 == 1{
-			for begin, end := 0, len(res[i])-1; begin < end; begin, end = begin+1, end-1 {
-				res[i][begin], res[i][end] = res[i][end], res[i][begin]
-			}
-		}
-	}
-	return res
-}
 
 //337
 func dp_rob(node *TreeNode,is_rob bool,record map[*TreeNode]int)(ret int){
