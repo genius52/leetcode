@@ -497,34 +497,6 @@ func removeLeafNodes(root *TreeNode, target int) *TreeNode {
 	}
 }
 
-//109
-func divide_sortedListToBST(lnode *ListNode,begin int,end int)*TreeNode{
-	if begin >= end{
-		return nil
-	}
-	var mid int = begin + (end - begin)/2
-	var i int = 0
-	var visit *ListNode = lnode
-	for i != mid{
-		visit = visit.Next
-		i++
-	}
-	var tnode TreeNode
-	tnode.Val = visit.Val
-	tnode.Left = divide_sortedListToBST(lnode,begin,mid)
-	tnode.Right = divide_sortedListToBST(lnode,mid+1,end)
-	return &tnode
-}
-
-func sortedListToBST(head *ListNode) *TreeNode {
-	var l int = 0
-	var visit *ListNode = head
-	for visit != nil{
-		visit = visit.Next
-		l++
-	}
-	return divide_sortedListToBST(head,0,l)
-}
 
 //114
 //For example, given the following tree:
