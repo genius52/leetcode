@@ -12,6 +12,11 @@ import (
 )
 func main(){
 	{
+		var prices []int = []int{3,3,5,0,0,3,1,4}
+		res := number.MaxProfit(prices)
+		fmt.Println(res)
+	}
+	{
 		var prices []int = []int{7,1,5,3,6,4}
 		res := number.MaxProfit1(prices)
 		fmt.Println(res)
