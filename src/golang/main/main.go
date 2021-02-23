@@ -12,6 +12,16 @@ import (
 )
 func main(){
 	{
+		//"red"
+		//"tax"
+		//["ted","tex","red","tax","tad","den","rex","pee"]
+		var beginWord string = "red"
+		var endWord string = "tax"
+		var wordList []string = []string{"ted","tex","red","tax","tad","den","rex","pee"}
+		res := string_issue.FindLadders(beginWord,endWord,wordList)
+		fmt.Println(res)
+	}
+	{
 		var prices []int = []int{3,3,5,0,0,3,1,4}
 		res := number.MaxProfit(prices)
 		fmt.Println(res)
