@@ -660,27 +660,6 @@ func balanceBST(root *TreeNode) *TreeNode {
 	return build_bst(record,0,len(record) - 1)
 }
 
-//124
-//return1: open way max
-//return2: closed way max
-func post_visit(node *TreeNode)(int,int){
-	if node == nil{
-		return math.MinInt32,math.MinInt32
-	}
-	if node.Left == nil && node.Right == nil{
-		return node.Val,node.Val
-	}
-	left_open_sum,left_close_sum := post_visit(node.Left)
-	right_open_sum,right_close_sum := post_visit(node.Right)
-	return max_int_number(left_open_sum + node.Val,right_open_sum + node.Val,node.Val),
-	max_int_number(left_open_sum,left_close_sum,right_open_sum,right_close_sum,left_open_sum + right_open_sum + node.Val)
-}
-
-func maxPathSum(root *TreeNode) int {
-	r1,r2 := post_visit(root)
-	return max_int_number(r1,r2)
-}
-
 //1028
 //Input: "1-2--3--4-5--6--7"
 //Output: [1,2,5,3,4,6,7]
