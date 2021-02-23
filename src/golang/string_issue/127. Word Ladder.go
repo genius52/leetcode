@@ -1,92 +1,57 @@
 package string_issue
 
 import "container/list"
+//func is_similar(first string,second string)bool{
+//	var difference int = 0
+//	for i,_ := range first{
+//		if second[i] != first[i]{
+//			difference++
+//		}
+//		if difference >= 2{
+//			return false
+//		}
+//	}
+//	return difference == 1
+//}
 
-type word_layer struct {
-	word string
-	last *word_layer
-}
-
-func is_similar(w1 string,w2 string)bool{
-	var l int = len(w1)
-	var diff_cnt int = 0
-	for i := 0;i < l;i++{
-		if w1[i] != w2[i]{
-			diff_cnt++
-			if diff_cnt > 1{
-				return false
-			}
+func ladderLength(beginWord string, endWord string, wordList []string) int {
+	var find bool = false
+	for _,s := range wordList{
+		if endWord == s{
+			find = true
+			break;
 		}
 	}
-	return true
-}
-
-func findLadders(beginWord string, endWord string, wordList []string) [][]string {
-	var neighbours map[string][]string = make(map[string][]string)
-	var dict map[string]bool = make(map[string]bool)
-	for _,w := range wordList{
-		dict[w] = true
+	if !find{
+		return 0
 	}
-	delete(dict,beginWord)
-	wordList = append(wordList,beginWord)
-	var word_len int = len(wordList)
-	for i := 0;i < word_len;i++{
-		for j := 0;j < word_len;j++{
-			if i == j{
-				continue
-			}
-			if !is_similar(wordList[i],wordList[j]){
-				continue
-			}
-			if _,ok := neighbours[wordList[i]];ok{
-				neighbours[wordList[i]] = append(neighbours[wordList[i]],wordList[j])
-			}else{
-				neighbours[wordList[i]] = []string{wordList[j]}
-			}
-			if _,ok := neighbours[wordList[j]];ok{
-				neighbours[wordList[j]] = append(neighbours[wordList[j]],wordList[i])
-			}else{
-				neighbours[wordList[j]] = []string{wordList[i]}
-			}
-		}
+	var trace map[string]bool = make(map[string]bool) //store unvisited words
+	for _,word := range wordList{
+		trace[word] = true
 	}
-	var res [][]string
 	var q list.List
-	var begin *word_layer = new(word_layer)
-	begin.word = beginWord
-	begin.last = nil
-	var over bool = false
-	q.PushBack(begin)
+	q.PushBack(beginWord)
+	var steps int = 1
 	for q.Len() > 0{
-		var l int = q.Len()
-		for i := 0;i < l;i++{
-			var node *word_layer = q.Front().Value.(*word_layer)
-			q.Remove(q.Front())
-			for _,w := range neighbours[node.word]{
-				if _,ok := dict[w];ok{
-					if w == endWord{
-						var cur []string = []string{endWord}
-						var visit *word_layer = node
-						for visit != nil{
-							cur = append([]string{visit.word},cur...)
-							visit = visit.last
-						}
-						res = append(res,cur)
-						over = true
-						break
-					}else{
-						var next *word_layer = new(word_layer)
-						next.word = w
-						next.last = node
-						q.PushBack(next)
-						delete(dict,w)
+		cur_step_size := q.Len()
+		for i := 0;i < cur_step_size;i++{
+			ele := q.Front()
+			cur_word := ele.Value.(string)
+			if cur_word == endWord{
+				return steps
+			}
+			q.Remove(ele)
+			delete(trace,cur_word)
+			for j := 0;j < len(cur_word);j ++{
+				for k := 0;k < 26;k++{
+					search_word := cur_word[0:j] + string(k + 'a') + cur_word[j+1:]
+					if _,ok := trace[search_word];ok{
+						q.PushBack(search_word)
 					}
 				}
 			}
 		}
-		if over{
-			return res
-		}
+		steps++
 	}
-	return res
+	return 0
 }
