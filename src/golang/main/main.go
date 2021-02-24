@@ -12,6 +12,27 @@ import (
 )
 func main(){
 	{
+		//[1,3,null,null,2]
+		var t1 tree.TreeNode
+		t1.Val = 4
+		var t2 tree.TreeNode
+		t2.Val = 2
+		var t3 tree.TreeNode
+		t3.Val = 1
+		var t4 tree.TreeNode
+		t4.Val = 3
+		t1.Left = &t2
+		t2.Right = &t3
+		t3.Right = &t4
+		tree.RecoverTree(&t1)
+		fmt.Println(t1)
+	}
+	{
+		var s string = "baba"
+		res := string_issue.MinCut(s)
+		fmt.Println(res)
+	}
+	{
 		//"red"
 		//"tax"
 		//["ted","tex","red","tax","tad","den","rex","pee"]
