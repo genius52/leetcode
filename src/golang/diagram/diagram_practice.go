@@ -3,7 +3,6 @@ package diagram
 import (
 	"math"
 	"strconv"
-	"strings"
 )
 func min_int_number(nums ...int)int{
 	var min int = math.MaxInt32
@@ -544,65 +543,6 @@ func longestPrefix(s string) string {
 	return res
 }
 
-//140
-//Input:
-//s = "pineapplepenapple"
-//wordDict = ["apple", "pen", "applepen", "pine", "pineapple"]
-//Output:
-//[
-//  "pine apple pen apple",
-//  "pineapple pen apple",
-//  "pine applepen apple"
-//]
-func dp_wordBreak(s string,cur_pos int,wordDict []string,sub string,record *[]string,memo map[string][]string)[]string {
-	if cur_pos >= len(s){
-		*record = append(*record,sub)
-		return []string{}
-	}
-	if _,ok := memo[s[:cur_pos]];ok{
-		return memo[s[:cur_pos]]
-	}
-	l := len(wordDict)
-
-	for i := 0;i < l;i++{
-		if !strings.HasPrefix(s,wordDict[i]){
-			continue
-		}
-
-		var newsub string = sub + " "+ wordDict[i]
-		res := dp_wordBreak(s,cur_pos + len(wordDict[i]),wordDict,newsub,record,memo)
-		for _,r := range res{
-			var postfix string = wordDict[i]
-			postfix += " " + r
-			memo[s[:cur_pos]] = append(memo[s[:cur_pos]], postfix)
-		}
-	}
-	return memo[s[:cur_pos]]
-}
-
-func wordBreak2(s string, wordDict []string) []string {
-	l := len(wordDict)
-	var res []string
-	if l == 0{
-		return res
-	}
-	if len(s) == 0{
-		return res
-	}
-	var memo map[string][]string = make(map[string][]string)
-	for i := 0;i < l;i++{
-		if len(wordDict[i]) == 0{
-			continue
-		}
-		if !strings.HasPrefix(s,wordDict[i]){
-			continue
-		}
-		var sub string = wordDict[i]
-		dp_wordBreak(s,len(wordDict[i]),wordDict,sub,&res,memo)
-	}
-	return res
-}
-
 //1284
 func minFlips(mat [][]int) int {
 	//rows := len(mat)
@@ -614,4 +554,3 @@ func minFlips(mat [][]int) int {
 	//}
 	return 0
 }
-
