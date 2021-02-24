@@ -12,6 +12,12 @@ import (
 )
 func main(){
 	{
+		s := "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+		wordDict := []string{"a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"}
+		res := string_issue.WordBreak2(s,wordDict)
+		fmt.Println(res)
+	}
+	{
 		//[1,3,null,null,2]
 		var t1 tree.TreeNode
 		t1.Val = 4
@@ -2241,12 +2247,6 @@ func main(){
 	//	//input := []int{1, 3, 2, 1, 3, 2}
 	//	//wiggleSort(input)
 	//	//fmt.Println("over")
-	//}
-	//{
-	//	s := "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-	//	wordDict := []string_issue{"a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"}
-	//	res := wordBreak2(s,wordDict)
-	//	fmt.Println(res)
 	//}
 	//{
 	//	input := "cbcccbbccbbacbcaccbacabacacbcccbbccbbacb"
