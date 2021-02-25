@@ -3,6 +3,33 @@ package list_queue
 //ugly solution!!!
 //Input: -1->5->3->4->0
 //Output: -1->0->3->4->5
+func InsertionSortList2(head *ListNode) *ListNode{
+	if head == nil || head.Next == nil{
+		return head
+	}
+	var dummy *ListNode = new(ListNode)
+	dummy.Val = -2147483648
+	dummy.Next = head
+	var sort_end *ListNode = head
+	for sort_end.Next != nil{
+		var to_sort *ListNode = sort_end.Next
+		if to_sort.Val > sort_end.Val{
+			sort_end = to_sort
+		}else{
+			var visit *ListNode = dummy
+			var pre *ListNode = dummy
+			for visit.Val <= to_sort.Val{
+				pre = visit
+				visit = visit.Next
+			}
+			sort_end.Next = to_sort.Next
+			pre.Next = to_sort
+			to_sort.Next = visit
+		}
+	}
+	return dummy.Next
+}
+
 func InsertionSortList(head *ListNode) *ListNode {
 	var new_head *ListNode = nil
 	var visit *ListNode = head

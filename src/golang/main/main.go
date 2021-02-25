@@ -12,6 +12,25 @@ import (
 )
 func main(){
 	{
+		//-1->5->3->4->0
+		var l1 list_queue.ListNode
+		l1.Val = 4
+		var l2 list_queue.ListNode
+		l2.Val = 2
+		var l3 list_queue.ListNode
+		l3.Val = 1
+		var l4 list_queue.ListNode
+		l4.Val = 3
+		var l5 list_queue.ListNode
+		l5.Val = 0
+		l1.Next = &l2
+		l2.Next = &l3
+		l3.Next = &l4
+		l4.Next = &l5
+		res := list_queue.InsertionSortList2(&l1)
+		fmt.Println(res.Val)
+	}
+	{
 		var l1 list_queue.ListNode
 		l1.Val = 1
 		var l2 list_queue.ListNode
@@ -2059,25 +2078,6 @@ func main(){
 		node3.Neighbors = append(node2.Neighbors,&node2,&node4)
 		node4.Neighbors = append(node2.Neighbors,&node1,&node3)
 		res := diagram.CloneGraph(&node1)
-		fmt.Println(res.Val)
-	}
-	{
-		//-1->5->3->4->0
-		var l1 list_queue.ListNode
-		l1.Val = 4
-		var l2 list_queue.ListNode
-		l2.Val = 2
-		var l3 list_queue.ListNode
-		l3.Val = 1
-		var l4 list_queue.ListNode
-		l4.Val = 3
-		var l5 list_queue.ListNode
-		l5.Val = 0
-		l1.Next = &l2
-		l2.Next = &l3
-		l3.Next = &l4
-		//l4.Next = &l5
-		res := list_queue.InsertionSortList(&l1)
 		fmt.Println(res.Val)
 	}
 	{
