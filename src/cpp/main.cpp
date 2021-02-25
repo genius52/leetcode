@@ -168,11 +168,24 @@
 #include "list/25. Reverse Nodes in k-Group.hpp"
 #include "list/729. My Calendar I.hpp"
 #include "list/731. My Calendar II.hpp"
+#include "list/146. LRU Cache.hpp"
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 
 int main() {
+    {
+        LRUCache lRUCache(2);
+        lRUCache.put(2, 1);
+        lRUCache.put(1, 1);
+        lRUCache.put(2, 3);
+        lRUCache.put(4, 1);
+        auto res = lRUCache.get(1);    // return 1
+        res = lRUCache.get(2);    // return 1
+        //lRUCache.put(3, 3);
+        //res = lRUCache.get(2);
+        std::cout << "146 res = " << res << std::endl;
+    }
     {
         Solution_1770 s1770;
         std::vector<int> nums{ -5, -3, -3, -2, 7, 1 };
