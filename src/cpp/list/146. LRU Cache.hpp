@@ -3,69 +3,49 @@
 #include <list>
 using namespace std;
 
-struct Node{
-    int key;
-    int val;
-};
 
 class LRUCache {
-    std::list<Node*> l;
-    int capacity = 0;
-    std::unordered_map<int,Node*> key_pos;//key -> index
+    std::list<int> lru;
+    std::unordered_map<int,std::list<int>::iterator> key_position;//key -> index
+    std::unordered_map<int,int> key_value;
+    int cap = 0;
 public:
     LRUCache(int capacity) {
-        this->capacity = capacity;
+        this->cap = capacity;
     }
 
     int get(int key) {
-        auto it = key_pos.find(key);
-        if(it == key_pos.end())
+        if(key_value.find(key) == key_value.end())
             return -1;
-        else{
-            auto val = it->second->val;
-            auto it = l.begin();
-            while(it != l.end()){
-                if((*it)->key == key){
-                    break;
-                }
-                it++;
-            }
-            l.erase(it);
-            Node* node2 = new Node();
-            node2->key = key;
-            node2->val = val;
-            l.push_back(node2);
-            key_pos[key] = node2;
-            return val;
-        }
+        if (!lru.empty())
+            lru.erase(key_position[key]);
+        lru.push_front(key);
+        key_position[key] = lru.begin();
+        return key_value[key];
     }
 
     void put(int key, int value) {
-        auto cur_size = l.size();
-        auto it = key_pos.find(key);
-        if(it == key_pos.end()){
-            Node* node = new Node();
-            node->key = key;
-            node->val = value;
-            if(cur_size == capacity){
-                auto front = l.front();
-                key_pos.erase(front->key);
-                l.pop_front();
-            }
-            l.push_back(node);
-            key_pos[key] = node;
+        if(key_value.find(key) != key_value.end()){//已存在，更新value和位置
+            if (key_position.size() > 0)
+                lru.erase(key_position[key]);
+            lru.push_front(key);
+            key_position[key] = lru.begin();
+            key_value[key] = value;
         }else{
-            Node* old = it->second;
-            old->val = value;
-            auto it = l.begin();
-            while(it != l.end()){
-                if((*it)->key == key){
-                    break;
+            if(cap == key_value.size()){//不存在，去除旧的value
+                if(!lru.empty() && !key_position.empty() && !key_value.empty()){
+                    key_position.erase(lru.back());
+                    key_value.erase(lru.back());
+                    lru.pop_back();
                 }
-                it++;
+                lru.push_front(key);
+                key_value[key] = value;
+                key_position[key] = lru.begin();
+            }else{//不存在，添加新的
+                lru.push_front(key);
+                key_position[key] = lru.begin();
+                key_value[key] = value;
             }
-            l.erase(it);
-            l.push_back(old);
         }
     }
 };

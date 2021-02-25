@@ -175,13 +175,17 @@
 
 int main() {
     {
+        //[[2],[1,1],[2,2],[1],[3,3],[2],[4,4],[1],[3],[4]]
         LRUCache lRUCache(2);
-        lRUCache.put(2, 1);
         lRUCache.put(1, 1);
-        lRUCache.put(2, 3);
-        lRUCache.put(4, 1);
-        auto res = lRUCache.get(1);    // return 1
-        res = lRUCache.get(2);    // return 1
+        lRUCache.put(2, 2);
+        auto res = lRUCache.get(1);
+        lRUCache.put(3, 3);
+        res = lRUCache.get(2);
+        lRUCache.put(4, 4);
+        res = lRUCache.get(1);
+        res = lRUCache.get(3);
+        res = lRUCache.get(4);
         //lRUCache.put(3, 3);
         //res = lRUCache.get(2);
         std::cout << "146 res = " << res << std::endl;
