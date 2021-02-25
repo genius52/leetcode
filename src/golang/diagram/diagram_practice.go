@@ -2,7 +2,6 @@ package diagram
 
 import (
 	"math"
-	"strconv"
 )
 func min_int_number(nums ...int)int{
 	var min int = math.MaxInt32
@@ -302,38 +301,6 @@ func longestPalindrome(s string) string {
 //	}
 //	return steps
 //}
-
-func evalRPN(tokens []string) int {
-	var data []int
-	var res int = 0
-	for i := 0;i < len(tokens);i++{
-		if tokens[i] != "+" && tokens[i] != "-" && tokens[i] != "*" && tokens[i] != "/"{
-			n,err := strconv.Atoi(tokens[i])
-			if err == nil{
-				data = append(data,n)
-			}
-		}else{
-			first := data[len(data) - 2]
-			second := data[len(data) - 1]
-			data = data[:len(data) - 2]
-			var result int = 0
-			switch(tokens[i]){
-			case "+":
-				result = first + second
-			case "-":
-				result = first - second
-			case "*":
-				result = first * second
-			case "/":
-				result = first / second
-			}
-			res += result
-			data = append(data, res)
-			res = 0
-		}
-	}
-	return data[0]
-}
 
 //10
 //Input:

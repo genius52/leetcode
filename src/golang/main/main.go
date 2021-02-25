@@ -12,6 +12,16 @@ import (
 )
 func main(){
 	{
+		input := []string{"4", "13", "5", "/", "+"}
+		res := number.EvalRPN2(input)
+		fmt.Println(res)
+	}
+	{
+		//var points [][]int = [][]int{{2,3},{3,2},{5,3},{4,1},{1,1},{1,4}}
+		//res := diagram.MaxPoints(points)
+		//fmt.Println(res)
+	}
+	{
 		//-1->5->3->4->0
 		var l1 list_queue.ListNode
 		l1.Val = 4
