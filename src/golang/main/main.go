@@ -12,6 +12,11 @@ import (
 )
 func main(){
 	{
+		input := []int{2,3,-2,4,-2,4,6,-9,3}
+		res := number.MaxProduct2(input)
+		fmt.Println(res)
+	}
+	{
 		input := []string{"4", "13", "5", "/", "+"}
 		res := number.EvalRPN2(input)
 		fmt.Println(res)

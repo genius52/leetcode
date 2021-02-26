@@ -11,6 +11,14 @@ import (
 	"strings"
 )
 
+func min_int(a,b int)int{
+	if a < b {
+		return a
+	}else{
+		return b
+	}
+}
+
 //Definition for singly-linked list_queue.
 type ListNode struct {
 	Val int

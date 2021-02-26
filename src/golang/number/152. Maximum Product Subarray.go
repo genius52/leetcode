@@ -25,7 +25,8 @@ func dp_maxProduct(nums []int,begin int,memo map[int][]int)(min int,max int){
 	return small,big
 }
 
-func maxProduct(nums []int) int {
+//不容易理解
+func MaxProduct(nums []int) int {
 	var res int = math.MinInt32
 	var record map[int][]int = make(map[int][]int)
 	for i := 0;i < len(nums) ;i++{
@@ -37,7 +38,7 @@ func maxProduct(nums []int) int {
 	return res
 }
 
-func maxProduct2(nums []int) int{
+func MaxProduct2(nums []int) int{
 	l := len(nums)
 	if l == 0{
 		return 0
@@ -45,8 +46,8 @@ func maxProduct2(nums []int) int{
 	if l == 1{
 		return nums[0]
 	}
-	var dp_min []int = make([]int,l)
-	var dp_max []int = make([]int,l)
+	var dp_min []int = make([]int,l)//nums[0:i] =  子数组乘积的最小值
+	var dp_max []int = make([]int,l)//nums[0:i] =  子数组乘积的最大值
 	dp_min[0] = nums[0]
 	dp_max[0] = nums[0]
 	var max int = nums[0]
