@@ -2441,74 +2441,6 @@ func decodeString2(s string) string {
 	return dfs_decodeString2(s,&pos)
 }
 
-//152
-//Input: [-2,0,-1]
-//Output: 0
-//[2,3,-2,4,-2,4,6,-9,3]
-func min_int(a,b int)int{
-	if a < b {
-		return a
-	}else{
-		return b
-	}
-}
-
-func dp_maxProduct(nums []int,begin int,memo map[int][]int)(min int,max int){
-	if begin < 0{
-		return 1,1
-	}
-	if nums[begin] == 0{
-		return 0,0
-	}
-	if _,ok := memo[begin];ok{
-		return memo[begin][0],memo[begin][1]
-	}
-	s,b := dp_maxProduct(nums,begin - 1,memo)
-	big := max_int(max_int(b * nums[begin],s * nums[begin]),nums[begin])
-	small := min_int(min_int(b * nums[begin],s * nums[begin]),nums[begin])
-	memo[begin] = make([]int,2)
-	memo[begin][0] = small
-	memo[begin][1] = big
-	return small,big
-}
-
-func maxProduct(nums []int) int {
-	var res int = math.MinInt32
-	var record map[int][]int = make(map[int][]int)
-	for i := 0;i < len(nums) ;i++{
-		_,big :=  dp_maxProduct(nums,i,record)
-		if big > res{
-			res = big
-		}
-	}
-	return res
-}
-
-func maxProduct2(nums []int) int{
-	l := len(nums)
-	if l == 0{
-		return 0
-	}
-	if l == 1{
-		return nums[0]
-	}
-	var dp_min []int = make([]int,l)
-	var dp_max []int = make([]int,l)
-	dp_min[0] = nums[0]
-	dp_max[0] = nums[0]
-	var max int = nums[0]
-	for i := 1;i < l;i++{
-		product1 := nums[i] * dp_min[i-1]
-		product2 := nums[i] * dp_max[i-1]
-		dp_min[i] = min_int_number(nums[i],product1,product2)
-		dp_max[i] = max_int_number(nums[i],product1,product2)
-		if dp_max[i] > max{
-			max = dp_max[i]
-		}
-	}
-	return max
-}
-
 //560
 //Input:nums = [1,1,1], k = 2
 //Output: 2
@@ -3021,34 +2953,6 @@ func max_rectange(arr [][]int)int{
 				max = dp[i][j]
 			}
 		}
-	}
-	return max
-}
-
-//3
-func lengthOfLongestSubstring(s string) int {
-	var start int = 0
-	var end int = 0
-	var max int = 0
-	var cur_len int = 0
-	var record map[uint8]int = make(map[uint8]int)
-	for end < len(s) && start < len(s){
-		if _,ok := record[s[end]];ok{
-			start = max_int(record[s[end]] + 1,start)
-			record[s[end]] = end
-			if cur_len > max{
-				max = cur_len
-			}
-			cur_len = end - start + 1
-			end++
-		}else{
-			cur_len++
-			record[s[end]] = end
-			end++
-		}
-	}
-	if (end - start) > max{
-		max = (end - start)
 	}
 	return max
 }
