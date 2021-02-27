@@ -12,6 +12,11 @@ import (
 )
 func main(){
 	{
+		var n int = 26
+		res := number.ConvertToTitle(n)
+		fmt.Println(res)
+	}
+	{
 		input := []int{2,3,-2,4,-2,4,6,-9,3}
 		res := number.MaxProduct2(input)
 		fmt.Println(res)
