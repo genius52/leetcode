@@ -12,6 +12,11 @@ import (
 )
 func main(){
 	{
+		var nums []int = []int{-1,-1,2147483647}
+		res := number.MajorityElement1(nums)
+		fmt.Println(res)
+	}
+	{
 		var n int = 26
 		res := number.ConvertToTitle(n)
 		fmt.Println(res)
