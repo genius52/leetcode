@@ -908,33 +908,6 @@ func calculate(s string) int {
 //findMedian() -> 2
 
 
-//162
-func findPeakElement(nums []int) int {
-	l := len(nums)
-	if l < 2 {
-		return 0
-	}
-	if nums[0] >= nums[1] {
-		return 0
-	}
-	if nums[l - 1] >= nums[l - 2]{
-		return l - 1
-	}
-	low := 0
-	high := l - 1
-	for low < high{
-		mid := (low + high)/2
-		if nums[mid-1] < nums[mid] && nums[mid] > nums[mid+1]{
-			return mid
-		}
-		if nums[mid-1] > nums[mid]{
-			high = mid
-		}else{
-			low = mid + 1
-		}
-	}
-	return 0
-}
 
 //933
 /**
