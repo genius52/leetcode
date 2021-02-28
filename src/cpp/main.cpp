@@ -50,6 +50,7 @@
 #include "array/688. Knight Probability in Chessboard.hpp"
 #include "array/1769. Minimum Number of Operations to Move All Balls to Each Box.hpp"
 #include "array/1770. Maximum Score from Performing Multiplication Operations.hpp"
+#include "array/1775. Equal Sum Arrays With Minimum Number of Operations.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
@@ -95,6 +96,7 @@
 #include "number/486. Predict the Winner.hpp"
 #include "number/1742. Maximum Number of Balls in a Box.hpp"
 #include "number/1760. Minimum Limit of Balls in a Bag.hpp"
+#include "number/1774. Closest Dessert Cost.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
@@ -174,6 +176,21 @@
 
 
 int main() {
+    {
+        Solution_1775 s1775;
+        std::vector<int> n1{ 1};
+        std::vector<int> n2{ 6,6};
+        auto res = s1775.minOperations(n1,n2);
+        std::cout << "1775 res = " << res << std::endl;
+    }
+    {
+        Solution_1774 s1774;
+        std::vector<int> baseCosts{ 3,10 };
+        std::vector<int> toppingCosts{ 2,5};
+        int target = 9;
+        auto res = s1774.closestCost(baseCosts, toppingCosts, target);
+        std::cout << "1774 res = " << res << std::endl;
+    }
     {
         //[[2],[1,1],[2,2],[1],[3,3],[2],[4,4],[1],[3],[4]]
         LRUCache lRUCache(2);
