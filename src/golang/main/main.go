@@ -13,6 +13,12 @@ import (
 )
 func main(){
 	{
+		var k int = 2
+		var prices []int = []int{2,4,1}
+		res := array.MaxProfit(k,prices)
+		fmt.Println(res)
+	}
+	{
 		ss := strings.TrimLeft("00010","0")
 		fmt.Println(ss)
 		res := number.LargestNumber([]int{3,32,34,5,9})
