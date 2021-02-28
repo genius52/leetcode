@@ -9,8 +9,15 @@ import (
 	"../string_issue"
 	"../tree"
 	"fmt"
+	"strings"
 )
 func main(){
+	{
+		ss := strings.TrimLeft("00010","0")
+		fmt.Println(ss)
+		res := number.LargestNumber([]int{3,32,34,5,9})
+		fmt.Println(res)
+	}
 	{
 		var nums []int = []int{-1,-1,2147483647}
 		res := number.MajorityElement1(nums)
@@ -2956,12 +2963,7 @@ func main(){
 	//	res := isPalindrome(input)
 	//	fmt.Println(res)
 	//}
-	//{
-	//	ss := strings.TrimLeft("00010","0")
-	//	fmt.Println(ss)
-	//	res := largestNumber([]int{3,32,34,5,9})
-	//	fmt.Println(res)
-	//}
+
 	//{
 	//	res := longestSubstring("aaabb", 3)
 	//	fmt.Println(res)

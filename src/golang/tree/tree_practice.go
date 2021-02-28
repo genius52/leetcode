@@ -924,7 +924,7 @@ func Inorder_visit_norecursive(root *TreeNode){
 		if q.Len() > 0{
 			top := q.Back()
 			node := top.Value.(*TreeNode)
-			fmt.Println(node.Val)
+			fmt.Println(node.Val)//visit here
 			q.Remove(top)
 			if node.Right != nil{
 				q.PushBack(node.Right)
