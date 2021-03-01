@@ -13,6 +13,11 @@ import (
 )
 func main(){
 	{
+		var s string = "aagd"
+		res := string_issue.ShortestPalindrome(s)
+		fmt.Println(res)
+	}
+	{
 		var k int = 2
 		var prices []int = []int{2,4,1}
 		res := array.MaxProfit(k,prices)
