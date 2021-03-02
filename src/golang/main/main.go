@@ -13,6 +13,11 @@ import (
 )
 func main(){
 	{
+		var s string = " 2-1 + 2  "
+		res := number.Calculate224(s)
+		fmt.Println(res)
+	}
+	{
 		var s string = "abbaa"
 		var t string = "cddcd"
 		res := string_issue.IsIsomorphic(s,t)
