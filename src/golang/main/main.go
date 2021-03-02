@@ -13,6 +13,12 @@ import (
 )
 func main(){
 	{
+		var s string = "abbaa"
+		var t string = "cddcd"
+		res := string_issue.IsIsomorphic(s,t)
+		fmt.Println(res)
+	}
+	{
 		var s string = "aagd"
 		res := string_issue.ShortestPalindrome(s)
 		fmt.Println(res)

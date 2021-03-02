@@ -171,11 +171,22 @@
 #include "list/729. My Calendar I.hpp"
 #include "list/731. My Calendar II.hpp"
 #include "list/146. LRU Cache.hpp"
+#include "list/206. Reverse Linked List.hpp"
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 
 int main() {
+    {
+        Solution206 s206;
+        ListNode l1(1);
+        ListNode l2(2);
+        ListNode l3(3);
+        l1.next = &l2;
+        l2.next = &l3;
+        auto res = s206.reverseList(&l1);
+        std::cout << "206 res = " << res->val << std::endl;
+    }
     {
         Solution_1775 s1775;
         std::vector<int> n1{ 1};
