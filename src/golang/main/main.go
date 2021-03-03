@@ -13,6 +13,14 @@ import (
 )
 func main(){
 	{
+		//"3456237490"
+		//9191
+		var num string = "3456237490"
+		var target int = 9191
+		res := number.AddOperators(num,target)
+		fmt.Println(res)
+	}
+	{
 		nums := 5
 		input := [][]int{{1,0},{2,0},{3,1},{3,2}}
 		res := diagram.FindOrder(nums,input)
