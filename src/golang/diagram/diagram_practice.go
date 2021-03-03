@@ -12,40 +12,7 @@ func min_int_number(nums ...int)int{
 	}
 	return min
 }
-//207
-func dfs_canFinish(relation [][]int,cur_course int,total_course_num int,depth int)bool{
-	if depth >= total_course_num{
-		return false
-	}
-	if len(relation[cur_course]) == 0{
-		return true
-	}
-	for _,c := range relation[cur_course]{
-		if !dfs_canFinish(relation,c,total_course_num,depth + 1){
-			return false
-		}
-	}
-	return true
-}
 
-func canFinish(numCourses int, prerequisites [][]int) bool {
-	var relation [][]int = make([][]int,numCourses)
-	for _,pair := range prerequisites{
-		relation[pair[0]] = append(relation[pair[0]],pair[1])
-	}
-
-	for i := 0;i < numCourses;i++{
-		if len(relation[i]) == 0{
-			continue
-		}
-		for _,c := range relation[i]{
-			if !dfs_canFinish(relation,c,numCourses,0){
-				return false
-			}
-		}
-	}
-	return true
-}
 
 //210
 //Input: 4, [[1,0],[2,0],[3,1],[3,2]]

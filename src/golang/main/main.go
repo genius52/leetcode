@@ -13,6 +13,12 @@ import (
 )
 func main(){
 	{
+		courses := 2
+		input := [][]int{{1,0}}
+		res := diagram.CanFinish(courses,input)
+		fmt.Println(res)
+	}
+	{
 		var s string = " 2-1 + 2  "
 		res := number.Calculate224(s)
 		fmt.Println(res)
@@ -2514,12 +2520,6 @@ func main(){
 	//	nums := 5
 	//	input := [][]int{{1,0},{2,0},{3,1},{3,2}}
 	//	res := findOrder(nums,input)
-	//	fmt.Println(res)
-	//}
-	//{
-	//	courses := 2
-	//	input := [][]int{{1,0}}
-	//	res := canFinish(courses,input)
 	//	fmt.Println(res)
 	//}
 	//{
