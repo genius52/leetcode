@@ -13,6 +13,12 @@ import (
 )
 func main(){
 	{
+		nums := 5
+		input := [][]int{{1,0},{2,0},{3,1},{3,2}}
+		res := diagram.FindOrder(nums,input)
+		fmt.Println(res)
+	}
+	{
 		courses := 2
 		input := [][]int{{1,0}}
 		res := diagram.CanFinish(courses,input)
@@ -2514,12 +2520,6 @@ func main(){
 	//{
 	//	input := [][]int{{7,8},{1,2}}
 	//	res := luckyNumbers(input)
-	//	fmt.Println(res)
-	//}
-	//{
-	//	nums := 5
-	//	input := [][]int{{1,0},{2,0},{3,1},{3,2}}
-	//	res := findOrder(nums,input)
 	//	fmt.Println(res)
 	//}
 	//{

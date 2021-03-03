@@ -14,52 +14,6 @@ func min_int_number(nums ...int)int{
 }
 
 
-//210
-//Input: 4, [[1,0],[2,0],[3,1],[3,2]]
-//Output: [0,1,2,3] or [0,2,1,3]
-func dfs_findOrder(relation [][]int,cur_course int,visited []int,order *[]int) bool{
-	if visited[cur_course] == -1{
-		return false
-	}
-	visited[cur_course] = -1
-	for _,c := range relation[cur_course]{
-		//-1 means loop existed
-		if visited[c] == 1{
-			continue
-		}
-		if visited[c] == -1{
-			return false
-		}
-		if !dfs_findOrder(relation,c,visited,order){
-			return false
-		}
-	}
-	visited[cur_course] = 1
-	*order = append(*order, cur_course)
-	return true
-}
-
-func findOrder(numCourses int, prerequisites [][]int) []int {
-	if numCourses == 0{
-		return []int{}
-	}
-	var relation [][]int = make([][]int,numCourses)
-	for _,pair := range prerequisites{
-		relation[pair[0]] = append(relation[pair[0]],pair[1])
-	}
-	var visited []int = make([]int,numCourses)  //0: not visited  1:visited and pass   -1:start current search,prevent loop
-	var order []int
-	for i := 0;i < numCourses;i++{
-		if visited[i] != 0{
-			continue
-		}
-		if !dfs_findOrder(relation,i,visited,&order){
-			return []int{}
-		}
-	}
-	return order
-}
-
 //301
 //Input: "(a)())()"
 //Output: ["(a)()()", "(a())()"]
