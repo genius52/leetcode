@@ -34,3 +34,44 @@ func longestPalindrome(s string) string{
 	}
 	return res
 }
+
+
+//5 Longest Palindromic Substring
+//Input: "babad"
+//Output: "bab"
+//Note: "aba" is also a valid answer.
+func longestPalindrome2(s string) string {
+	l := len(s)
+	if l == 1{
+		return s
+	}
+	var dp [][]int = make([][]int,l)
+	for i := 0;i < l;i++{
+		dp[i] = make([]int,l)
+		dp[i][i] = 1
+	}
+	var res string = s[0:1]
+	var max int = 0
+	for i := 1;i < l;i++{
+		for j := i - 1 ;j >= 0;j--{
+			if s[i] == s[j] {
+				if (i - j) == 1{
+					dp[j][i] = 1
+					if (i - j + 1) > max {
+						max = i - j + 1
+						res = s[j : i+1]
+					}
+				}else{
+					if dp[j + 1][i - 1] == 1{
+						dp[j][i] = 1
+						if (i - j + 1) > max{
+							max = i - j + 1
+							res = s[j:i+1]
+						}
+					}
+				}
+			}
+		}
+	}
+	return res
+}
