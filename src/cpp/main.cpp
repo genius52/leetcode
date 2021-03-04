@@ -78,6 +78,7 @@
 #include "number/812. Largest Triangle Area.hpp"
 #include "number/1518. Water Bottles.hpp"
 #include "number/868. Binary Gap.hpp"
+#include "number/219. Contains Duplicate II.hpp"
 #include "number/31. Next Permutation.hpp"
 #include "number/166. Fraction to Recurring Decimal.hpp"
 #include "number/241. Different Ways to Add Parentheses.hpp"
@@ -177,6 +178,13 @@
 
 
 int main() {
+    {
+        std::vector<int> nums{1,0,1,1};
+        int k = 1;
+        Solution_219 s219;
+        auto res = s219.containsNearbyDuplicate(nums,k);
+        std::cout << "219 res = " << res << std::endl;
+    }
     {
         Solution206 s206;
         ListNode l1(1);
