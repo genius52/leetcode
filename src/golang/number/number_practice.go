@@ -816,50 +816,6 @@ func maxCoins(nums []int) int {
 	return dp[1][len(nums)]
 }
 
-//227
-//Implement a basic calculator to evaluate a simple expression string.
-//The expression string contains only non-negative integers, +, -, *, / operators and empty spaces .
-//The integer division should truncate toward zero.
-//Input: " 3+5 / 2 "
-//Output: 5
-func calculate(s string) int {
-	var q list.List
-	var cur_num int = 0
-	var last_op int32
-	s = "+" + s + "+"
-	for _,c := range s{
-		if c >= '0' && c <= '9' {
-			n , _ := strconv.Atoi(string(c))
-			cur_num = cur_num * 10 + n
-			continue
-		}
-		if c == ' '{
-			continue
-		}
-		if last_op == '+'{
-			q.PushBack(cur_num)
-		}else if last_op == '-'{
-			q.PushBack(-cur_num)
-		}else if last_op == '*'{
-			last_num := q.Back().Value.(int)
-			q.Remove(q.Back())
-			q.PushBack(last_num * cur_num)
-		}else if last_op == '/'{
-			last_num := q.Back().Value.(int)
-			q.Remove(q.Back())
-			q.PushBack(last_num/cur_num)
-		}
-		last_op = c
-		cur_num = 0
-	}
-	var sum int = 0
-	for item := q.Front();nil != item ;item = item.Next() {
-		n := item.Value.(int)
-		sum += n
-	}
-	return sum
-}
-
 //295
 /**
  * Your MedianFinder object will be instantiated and called as such:

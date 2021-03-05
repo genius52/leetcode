@@ -13,6 +13,16 @@ import (
 )
 func main(){
 	{
+		var n int = 1
+		res := number.IsPowerOfTwo(n)
+		fmt.Println(res)
+	}
+	{
+		input := " 3+5 / 2 - 3"
+		res := number.Calculate227(input)
+		fmt.Println(res)
+	}
+	{
 		var n int = 10
 		res := number.GetMoneyAmount(n)
 		fmt.Println(res)
@@ -2624,11 +2634,7 @@ func main(){
 	//	res := findPeakElement(input)
 	//	fmt.Println(res)
 	//}
-	//{
-	//	input := " 3+5 / 2 - 3"
-	//	res := calculate(input)
-	//	fmt.Println(res)
-	//}
+
 	//{
 	//	nums := []int{30,1,20,21,15,19,2,-1,3}
 	//	res := increasingTriplet(nums)
