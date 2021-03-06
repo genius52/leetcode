@@ -98,6 +98,7 @@
 #include "number/1742. Maximum Number of Balls in a Box.hpp"
 #include "number/1760. Minimum Limit of Balls in a Bag.hpp"
 #include "number/1774. Closest Dessert Cost.hpp"
+#include "array/239. Sliding Window Maximum.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
@@ -178,6 +179,13 @@
 
 
 int main() {
+    {
+        Solution_239 s239;
+        std::vector<int> nums{1,3,-1,-3,5,3,6,7};
+        int k = 3;
+        auto res = s239.maxSlidingWindow(nums,k);
+        std::cout << "239 res = " << res[0] << std::endl;
+    }
     {
         std::vector<int> nums{1,0,1,1};
         int k = 1;
