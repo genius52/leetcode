@@ -13,6 +13,11 @@ import (
 )
 func main(){
 	{
+		var nums []int = []int{1,2,3,4}
+		res := number.ProductExceptSelf(nums)
+		fmt.Println(res)
+	}
+	{
 		var n int = 1
 		res := number.IsPowerOfTwo(n)
 		fmt.Println(res)
