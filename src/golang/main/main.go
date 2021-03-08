@@ -13,6 +13,11 @@ import (
 )
 func main(){
 	{
+		var s string = "aabcb"
+		res := string_issue.BeautySum(s)
+		fmt.Println(res)
+	}
+	{
 		var n int = 2147483647
 		res := number.CheckPowersOfThree(n)
 		fmt.Println(res)
