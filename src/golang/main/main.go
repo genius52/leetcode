@@ -13,6 +13,11 @@ import (
 )
 func main(){
 	{
+		var n int = 2147483647
+		res := number.CheckPowersOfThree(n)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{1,2,3,4}
 		res := number.ProductExceptSelf(nums)
 		fmt.Println(res)
