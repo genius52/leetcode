@@ -13,6 +13,11 @@ import (
 )
 func main(){
 	{
+		var n int = 5
+		res := number.IsUgly(n)
+		fmt.Println(res)
+	}
+	{
 		var n int = 38
 		res := number.AddDigits(n)
 		fmt.Println(res)
