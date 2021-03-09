@@ -210,19 +210,6 @@ func combinationSum(candidates []int, target int) [][]int {
 	return res
 }
 
-//279
-func numSquares(n int) int {
-	var record []int = make([]int,n + 1)
-	record[0] = 0
-	for i := 1;i <= n;i++{
-		record[i] = math.MaxInt32
-		for j := 1;(j * j) <= i;j++{
-			record[i] = min_int_number(record[i],record[i - j*j] + 1)
-		}
-	}
-	return record[n]
-}
-
 //1323
 //Input: num = 9669
 //Output: 9969

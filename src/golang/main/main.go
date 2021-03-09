@@ -13,6 +13,11 @@ import (
 )
 func main(){
 	{
+		var nums []int = []int{1}
+		array.MoveZeroes(nums)
+		fmt.Println(nums[0])
+	}
+	{
 		var n int = 12
 		res := number.NumSquares(n)
 		fmt.Println(res)
