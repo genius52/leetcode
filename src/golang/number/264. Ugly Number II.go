@@ -28,3 +28,27 @@ func NthUglyNumber(n int) int {
 	}
 	return dp[cnt - 1]
 }
+
+func NthUglyNumber2(n int) int{
+	if n <= 0{
+		return 0
+	}
+	var dp []int = make([]int,n)
+	dp[0] = 1
+	var last_multiple_two int = 0
+	var last_multiple_three int = 0
+	var last_multiple_five int = 0
+	for i := 1;i < n;i++{
+		dp[i] = min_int_number(dp[last_multiple_two] * 2,dp[last_multiple_three] * 3,dp[last_multiple_five] * 5)
+		if dp[i] == dp[last_multiple_two] * 2{
+			last_multiple_two++
+		}
+		if dp[i] == dp[last_multiple_three] * 3{
+			last_multiple_three++
+		}
+		if dp[i] == dp[last_multiple_five] * 5{
+			last_multiple_five++
+		}
+	}
+	return dp[n - 1]
+}
