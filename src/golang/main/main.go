@@ -13,6 +13,11 @@ import (
 )
 func main(){
 	{
+		var n int = 12
+		res := number.NumSquares(n)
+		fmt.Println(res)
+	}
+	{
 		res := number.NthUglyNumber2(10)
 		fmt.Print(res)
 	}
@@ -2979,10 +2984,6 @@ func main(){
 	//	preorder := []int{3,9,20,15,7}
 	//	inorder := []int{9,3,15,20,7}
 	//	res := buildTree2(preorder,inorder)
-	//	fmt.Println(res)
-	//}
-	//{
-	//	res := numSquares(12)
 	//	fmt.Println(res)
 	//}
 	//{
