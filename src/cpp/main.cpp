@@ -166,6 +166,7 @@
 #include "string/97. Interleaving String.hpp"
 #include "string/752. Open the Lock.hpp"
 #include "string/1768. Merge Strings Alternately.hpp"
+#include "string/242. Valid Anagram.hpp"
 #include "list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "list/445. Add Two Numbers II.hpp"
 #include "list/138. Copy List with Random Pointer.hpp"
@@ -177,141 +178,21 @@
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 
-class Solution5697 {
-public:
-    bool checkOnesSegment(string s) {
-        int len = s.size();
-        int i = 0;
-        while (i < len) {
-            if (s[i] == '1') {
-                i++;
-                continue;
-            }
-            else {
-                break;
-            }
-        }
-        int j = len - 1;
-        while (j >= 0) {
-            if (s[j] == '0') {
-                j--;
-                continue;
-            }
-            else {
-                break;
-            }
-        }
-        i--;
-        if (i >= j)
-            return true;
-        else
-            return false;
-    }
-};
-
-class Solution5689 {
-public:
-    int minElements(vector<int>& nums, int limit, int goal) {
-        long sum = 0;
-        int len = nums.size();
-        for (int i = 0; i < len; i++) {
-            sum += nums[i];
-        }
-        long need = long(abs(long(goal) - sum));
-        if (need == 0)
-            return 0;
-        long cnt = 0;
-        cnt = need / limit;
-        if ((need % limit) != 0)
-            cnt++;
-        //while (need != 0) {
-        //    cnt++;
-        //    if (need > limit) {
-        //        need -= limit;
-        //    }
-        //    else {
-        //        break;
-        //    }
-        //}
-        return cnt;
-    }
-};
-
-class Solution5699 {
-public:
-    int dfs_countRestrictedPaths(int cur,int target,int last_weight,std::vector<std::vector<int>>& graph, std::vector<bool>& visited, std::unordered_map<int, std::unordered_set<int>>& neighbours, std::vector<int>& memo) {
-        if (visited[cur])
-            return 0;
-        if (cur == target)
-            return 1;
-        if (memo[cur] != -1)
-            return memo[cur];
-        visited[cur] = true;
-        int total = 0;
-        //for (int i = 1; i <= target; i++) {
-        //int len = neighbours[cur].size();
-        for (auto it = neighbours[cur].begin(); it != neighbours[cur].end(); it++){
-            int next = *it;
-            if (next == cur)
-                continue;
-            if (graph[cur][next] == 0)
-                continue;
-            if (visited[next])
-                continue;
-            if (graph[next][target] >= last_weight)
-                continue;
-            total += dfs_countRestrictedPaths(next, target, graph[next][target], graph, visited, neighbours,memo);
-        }
-        visited[cur] = false;
-        memo[cur] = total;
-        return total;
-    }
-
-    int countRestrictedPaths(int n, vector<vector<int>>& edges) {
-        int len = edges.size();
-        std::vector<std::vector<int>> graph(n + 1, std::vector<int>(n + 1));
-        std::unordered_map<int,std::unordered_set<int>> neighbours;
-        for (int i = 0; i < len; i++) {
-            graph[edges[i][0]][edges[i][1]] = edges[i][2];
-            graph[edges[i][1]][edges[i][0]] = edges[i][2];
-
-            neighbours[edges[i][0]].insert(edges[i][1]);
-            neighbours[edges[i][1]].insert(edges[i][0]);
-        }
-        for (int k = 1; k <= n; k++) {
-            for (int i = 1; i <= n; i++) {//start
-                for (int j = 1; j <= n; j++) {//end
-                    if (i == j)
-                        continue;
-                    if (graph[i][k] != 0 && graph[k][j] != 0) {
-                        int dis = graph[i][k] + graph[k][j];
-                        if (graph[i][j] == 0) {
-                            graph[i][j] = dis;
-                        }else if (dis < graph[i][j]) {
-                            graph[i][j] = dis;
-                        }
-                    }
-                }
-            }
-        }
-        int total = 0;
-
-        std::vector<bool> visited(n+1);
-        std::vector<int> memo(n + 1,-1);
-        total += dfs_countRestrictedPaths(1, n, graph[1][n], graph, visited, neighbours,memo);
-        total = total % 1000000007;
-        return total;
-    }
-};
-
 int main() {
     {
-        Solution5699 s5699;
-        int n = 5;
-        std::vector<std::vector<int>> edges{ {1,2,3},{1,3,3},{2,3,1},{1,4,2},{5,2,2},{3,5,1},{5,4,10} };
-        auto res = s5699.countRestrictedPaths(n, edges);
-        std::cout << "5699 res = " << res << std::endl;
+        std::string s = "anagram";
+        std::string t = "nagaram";
+        Solution_242 s242;
+        auto res = s242.isAnagram(s,t);
+        std::cout << "242 res = " << res << std::endl;
     }
+//    {
+//        Solution5699 s5699;
+//        int n = 5;
+//        std::vector<std::vector<int>> edges{ {1,2,3},{1,3,3},{2,3,1},{1,4,2},{5,2,2},{3,5,1},{5,4,10} };
+//        auto res = s5699.countRestrictedPaths(n, edges);
+//        std::cout << "5699 res = " << res << std::endl;
+//    }
     {
         Solution_239 s239;
         std::vector<int> nums{1,3,-1,-3,5,3,6,7};
