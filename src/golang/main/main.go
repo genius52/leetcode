@@ -13,8 +13,21 @@ import (
 )
 func main(){
 	{
+		var pattern string = "abba"
+		var s string = "dog dog dog dog"
+		res := string_issue.WordPattern(pattern,s)
+		fmt.Println(res)
+	}
+	{
+		//[14,16,12,1,16,17,6,8,5,19,16,13,16,3,11,16,4,16,9,7]
+		var nums []int = []int{14,16,12,1,16,17,6,8,5,19,16,13,16,3,11,16,4,16,9,7}
+		//var nums []int = []int{1,3,4,2,2}
+		res := number.FindDuplicate(nums)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{1}
-		array.MoveZeroes(nums)
+		array.MoveZeroes2(nums)
 		fmt.Println(nums[0])
 	}
 	{
