@@ -1770,36 +1770,6 @@ func tictactoe(moves [][]int) string {
 	}
 }
 
-//300
-//Input: [10,9,2,5,3,7,101,18]
-//Output: 4
-//Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.
-func lengthOfLIS(nums []int) int {
-	if len(nums) == 0{
-		return 0
-	}
-	var dp []int = make([]int,len(nums)+1)
-	dp[0] = 1
-	for i := 1;i < len(nums);i++{
-		max := 1
-		for j := 0;j < i;j++{
-			if nums[i] > nums[j]{
-				if (dp[j] + 1) > max{
-					max = dp[j] + 1
-				}
-			}
-		}
-		dp[i] = max
-	}
-	var res int = 1
-	for _,val := range dp{
-		if val > res{
-			res = val
-		}
-	}
-	return res
-}
-
 //1299
 //Input: arr = [17,18,5,4,6,1]
 //Output: [18,6,6,6,1,-1]

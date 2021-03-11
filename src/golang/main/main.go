@@ -11,7 +11,13 @@ import (
 	"fmt"
 	"strings"
 )
+
 func main(){
+	{
+		input := []int{10,9,2,5,3,4}
+		res := array.LengthOfLIS(input)
+		fmt.Println(res)
+	}
 	{
 		secret := "1123"
 		guess := "0111"
@@ -2991,11 +2997,6 @@ func main(){
 	//{
 	//	input := []int{9,1,4,7,3,-1,0,5,8,-1,6}
 	//	res := longestConsecutive(input)
-	//	fmt.Println(res)
-	//}
-	//{
-	//	input := []int{10,9,2,5,3,4}
-	//	res := lengthOfLIS(input)
 	//	fmt.Println(res)
 	//}
 	//{
