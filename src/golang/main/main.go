@@ -14,6 +14,11 @@ import (
 
 func main(){
 	{
+		s := "()())()"
+		res := string_issue.RemoveInvalidParentheses(s)
+		fmt.Println(res)
+	}
+	{
 		input := []int{10,9,2,5,3,4}
 		res := array.LengthOfLIS(input)
 		fmt.Println(res)
@@ -2557,11 +2562,6 @@ func main(){
 	//{
 	//	input := [][]byte{{'1','0','1','0','0'},{'1','0','1','1','1'},{'1','1','1','1','1'},{'1','0','0','1','0'}}
 	//	res := maximalRectangle(input)
-	//	fmt.Println(res)
-	//}
-	//{
-	//	s := "()())()"
-	//	res := removeInvalidParentheses(s)
 	//	fmt.Println(res)
 	//}
 	//{

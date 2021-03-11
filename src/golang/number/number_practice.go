@@ -443,39 +443,6 @@ func countAndSay(n int) string {
 	return last
 }
 
-//303
-//obj := Constructor(nums);
-//param_1 := obj.SumRange(i,j);
-type NumArray struct {
-	data []int
-	dp map[string]int
-}
-
-func Constructor3(nums []int) NumArray {
-	var obj NumArray
-	obj.data = make([]int,len(nums))
-	copy(obj.data,nums)
-	obj.dp = make(map[string]int)
-	//sort.Ints(obj.data)
-	return obj
-}
-
-
-func (this *NumArray) SumRange(i int, j int) int {
-	if i < 0 || j >= len(this.data){
-		return 0
-	}
-	var k string = strconv.Itoa(i)+ "," + strconv.Itoa(j)
-	if _,ok := this.dp[k];ok{
-		return this.dp[k]
-	}
-	var res int = 0
-	for begin := i; begin <= j;begin++{
-		res += this.data[begin]
-	}
-	this.dp[k] = res
-	return res
-}
 
 //447
 func numberOfBoomerangs(points [][]int) int {
