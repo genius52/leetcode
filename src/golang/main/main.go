@@ -13,6 +13,12 @@ import (
 )
 func main(){
 	{
+		secret := "1123"
+		guess := "0111"
+		res := number.GetHint(secret,guess)
+		fmt.Println(res)
+	}
+	{
 		var pattern string = "abba"
 		var s string = "dog dog dog dog"
 		res := string_issue.WordPattern(pattern,s)
@@ -2884,12 +2890,6 @@ func main(){
 	//{
 	//	input := [][]int{{0,0},{1,0},{2,0}}
 	//	res := numberOfBoomerangs(input)
-	//	fmt.Println(res)
-	//}
-	//{
-	//	secret := "1123"
-	//	guess := "0111"
-	//	res := getHint(secret,guess)
 	//	fmt.Println(res)
 	//}
 	//{
