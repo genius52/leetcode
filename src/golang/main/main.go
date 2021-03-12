@@ -14,6 +14,14 @@ import (
 
 func main(){
 	{
+		//var n int = 6
+		//var edges [][]int = [][]int{{3,0},{3,1},{3,2},{3,4},{5,4}}
+		var n int = 2
+		var edges [][]int = [][]int{{0,1}}
+		res := tree.FindMinHeightTrees(n,edges)
+		fmt.Println(res)
+	}
+	{
 		//[8,5,9,5,1,6,9]
 		//[2,6,4,3,8,4,1,0,7,2,9,2,8]
 		//20
