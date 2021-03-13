@@ -14,6 +14,11 @@ import (
 
 func main(){
 	{
+		var words []string = []string{"a","aa","aaa","aaaa"}
+		res := array.MaxProduct(words)
+		fmt.Println(res)
+	}
+	{
 		input := []int{3,1,5,8}
 		res := number.MaxCoins312(input)
 		fmt.Println(res)
