@@ -14,6 +14,11 @@ import (
 
 func main(){
 	{
+		input := []int{3,1,5,8}
+		res := number.MaxCoins312(input)
+		fmt.Println(res)
+	}
+	{
 		//var n int = 6
 		//var edges [][]int = [][]int{{3,0},{3,1},{3,2},{3,4},{5,4}}
 		var n int = 2
@@ -2725,11 +2730,6 @@ func main(){
 	//{
 	//	nums := []int{30,1,20,21,15,19,2,-1,3}
 	//	res := increasingTriplet(nums)
-	//	fmt.Println(res)
-	//}
-	//{
-	//	input := []int{3,1,5,8}
-	//	res := maxCoins(input)
 	//	fmt.Println(res)
 	//}
 	//{
