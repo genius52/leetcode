@@ -14,6 +14,11 @@ import (
 
 func main(){
 	{
+		var n int = 3
+		res := number.BulbSwitch(n)
+		fmt.Println(res)
+	}
+	{
 		var words []string = []string{"a","aa","aaa","aaaa"}
 		res := array.MaxProduct(words)
 		fmt.Println(res)
@@ -1954,11 +1959,6 @@ func main(){
 		var k int = 2
 		res := number.FindKthPositive(arr,k)
 		fmt.Println(res)
-	}
-	{
-		//var n int = 3
-		//res := number.BulbSwitch(n)
-		//fmt.Println(res)
 	}
 	{
 		var citations []int = []int{0,1,3,5,6}

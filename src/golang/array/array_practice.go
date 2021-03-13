@@ -1531,11 +1531,6 @@ func minTimeToVisitAllPoints(points [][]int) int {
 	return res
 }
 
-//1094
-//func carPooling(trips [][]int, capacity int) bool {
-//
-//}
-
 //395
 func longestSubstring(s string, k int) int{
 	l := len(s)
@@ -1590,83 +1585,6 @@ func longestSubstring(s string, k int) int{
 		start++
 	}
 	return max_len
-}
-
-//func longestSubstring(s string, k int) int {
-//	var record [26]int
-//	for _,v := range s{
-//		record[v - 'a']++
-//	}
-//	var less_than_k map[byte]int = make(map[byte]int)
-//	var i byte = 0
-//	for ;i < 26;i++{
-//		if record[i] != 0 && record[i] < k{
-//			less_than_k[i] = record[i]
-//		}
-//	}
-//	begin,end := 0,len(s) - 1
-//	for begin < len(s) && begin < end{
-//		if len(less_than_k) == 0{
-//			break
-//		}
-//		_,okbegin := less_than_k[s[begin] - 'a']
-//		_,okend := less_than_k[s[end] - 'a']
-//		if !okbegin && !okend{
-//			begin++
-//			end--
-//			continue
-//		}
-//		if _,ok := less_than_k[s[begin] - 'a'];ok{
-//			less_than_k[s[begin] - 'a']--
-//			if less_than_k[s[begin] - 'a'] == 0{
-//				delete(less_than_k,s[begin] - 'a')
-//			}
-//			begin++
-//		}
-//		if begin < end{
-//			if _,ok := less_than_k[s[end] - 'a'];ok{
-//				less_than_k[s[end] - 'a']--
-//				if less_than_k[s[end] - 'a'] == 0{
-//					delete(less_than_k,s[end] - 'a')
-//				}
-//				end--
-//			}
-//		}
-//		if len(less_than_k) == 0{
-//			break
-//		}
-//	}
-//	if len(less_than_k) > 0{
-//		return 0
-//	}
-//	sub := s[begin:end+1]
-//	var rest map[int32]int = make(map[int32]int)
-//	for _,v := range sub{
-//		if _,ok := rest[v];ok{
-//			rest[v]++
-//		}else{
-//			rest[v] = 1
-//		}
-//	}
-//	for _,v := range rest{
-//		if v < k{
-//			return 0
-//		}
-//	}
-//	return end - begin + 1
-//}
-
-//326
-func isPowerOfThree(n int) bool {
-	if n > 1{
-		for n > 1{
-			if n % 3 != 0{
-				return false
-			}
-			n = n / 3
-		}
-	}
-	return n == 1
 }
 
 //287
