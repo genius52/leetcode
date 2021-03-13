@@ -14,6 +14,13 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{2147483647,-2147483648,-1,0}
+		var lower int = -1
+		var upper int = 0
+		res := number.CountRangeSum(nums,lower,upper)
+		fmt.Println(res)
+	}
+	{
 		var n int = 3
 		res := number.BulbSwitch(n)
 		fmt.Println(res)
