@@ -13,6 +13,16 @@ func min_int_number(nums ...int)int{
 	return min
 }
 
+func max_int_number(nums ...int)int{
+	var max int = math.MinInt32
+	for _,n := range nums{
+		if n > max{
+			max = n
+		}
+	}
+	return max
+}
+
 //85
 //Input:
 //[
