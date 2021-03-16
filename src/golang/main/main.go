@@ -14,6 +14,19 @@ import (
 
 func main(){
 	{
+		nums := []int{0,4,2,1,0,-1,-3}
+		res := array.IncreasingTriplet2(nums)
+		fmt.Println(res)
+	}
+	{
+		//[1,2,31,33]
+		//2147483647
+		var nums []int = []int{1,2,31,33}
+		var n int = 2147483647
+		res := number.MinPatches(nums,n)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{2147483647,-2147483648,-1,0}
 		var lower int = -1
 		var upper int = 0
@@ -2736,12 +2749,6 @@ func main(){
 	//{
 	//	input := []int{1,6,5,4,3,2,1}
 	//	res := findPeakElement(input)
-	//	fmt.Println(res)
-	//}
-
-	//{
-	//	nums := []int{30,1,20,21,15,19,2,-1,3}
-	//	res := increasingTriplet(nums)
 	//	fmt.Println(res)
 	//}
 	//{

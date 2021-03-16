@@ -2326,30 +2326,6 @@ func sortByBits(arr []int) []int {
 	return arr
 }
 
-//334
-//Return true if there exists i, j, k
-//such that arr[i] < arr[j] < arr[k] given 0 ≤ i < j < k ≤ n-1 else return false.
-//Note: Your algorithm should run in O(n) time complexity and O(1) space complexity.
-func increasingTriplet(nums []int) bool {
-	l := len(nums)
-	if l <= 2{
-		return false
-	}
-	var min int = nums[0]
-	var mid int = math.MaxInt32
-	for i := 1;i < len(nums);i++ {
-		if nums[i] > mid{
-			return true
-		}
-		if nums[i] > min{
-			mid = nums[i]
-		}else{
-			min = nums[i]
-		}
-	}
-	return false;
-}
-
 //678
 func checkValidString(s string) bool {
 	var left []int
