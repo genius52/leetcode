@@ -14,6 +14,12 @@ import (
 
 func main(){
 	{
+		var words []string = []string{"abcd","dcba","lls","s","sssll"}
+		//var words []string = []string{"a","abc","aba",""}
+		res := string_issue.PalindromePairs(words)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{0,4,2,1,0,-1,-3}
 		res := array.IncreasingTriplet2(nums)
 		fmt.Println(res)
