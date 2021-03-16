@@ -31,6 +31,7 @@ func max_int(a,b int)int{
 		return b
 	}
 }
+
 func max_int_number(nums ...int)int{
 	var max int = math.MinInt32
 	for _,n := range nums{
@@ -424,29 +425,6 @@ func (this *FindElements) Find(target int) bool {
 		return true
 	}
 	return false
-}
-
-
-//337
-func dp_rob(node *TreeNode,is_rob bool,record map[*TreeNode]int)(ret int){
-	if nil == node{
-		return 0
-	}
-	var max int = 0
-	if is_rob{
-		max = dp_rob(node.Left,false,record) + dp_rob(node.Right,false,record)
-	}else{
-		max = max_int(node.Val + dp_rob(node.Left,true,record) + dp_rob(node.Right,true,record),dp_rob(node.Left,false,record) + dp_rob(node.Right,false,record))
-	}
-	return max
-}
-
-func rob(root *TreeNode) int {
-	if nil == root{
-		return 0
-	}
-	var record map[*TreeNode]int = make(map[*TreeNode]int)
-	return dp_rob(root,false,record)
 }
 
 //1315
