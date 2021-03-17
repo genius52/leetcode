@@ -14,6 +14,11 @@ import (
 
 func main(){
 	{
+		var num int = 5
+		res := number.CountBits(num)
+		fmt.Println(res)
+	}
+	{
 		var words []string = []string{"abcd","dcba","lls","s","sssll"}
 		//var words []string = []string{"a","abc","aba",""}
 		res := string_issue.PalindromePairs(words)
