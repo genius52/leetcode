@@ -14,6 +14,11 @@ import (
 
 func main(){
 	{
+		var s string = "aA"
+		res := string_issue.ReverseVowels(s)
+		fmt.Println(res)
+	}
+	{
 		var n int = 8
 		res := number.IsPowerOfFour(n)
 		fmt.Println(res)
