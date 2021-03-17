@@ -14,6 +14,11 @@ import (
 
 func main(){
 	{
+		var n int = 8
+		res := number.IsPowerOfFour(n)
+		fmt.Println(res)
+	}
+	{
 		var num int = 5
 		res := number.CountBits(num)
 		fmt.Println(res)
