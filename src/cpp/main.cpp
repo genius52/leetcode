@@ -179,10 +179,21 @@
 #include "list/731. My Calendar II.hpp"
 #include "list/146. LRU Cache.hpp"
 #include "list/206. Reverse Linked List.hpp"
+#include "list/352. Data Stream as Disjoint Intervals.hpp"
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        SummaryRanges s352;
+        s352.addNum(1);
+        s352.addNum(3);
+        s352.addNum(7);
+        s352.addNum(2);
+        s352.addNum(6);
+        auto res = s352.getIntervals();
+        std::cout << "352 res = "<< res.size() <<std::endl;
+    }
     {
         Solution_350 s350;
         //[4,9,5]
