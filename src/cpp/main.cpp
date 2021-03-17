@@ -51,6 +51,7 @@
 #include "array/1769. Minimum Number of Operations to Move All Balls to Each Box.hpp"
 #include "array/1770. Maximum Score from Performing Multiplication Operations.hpp"
 #include "array/1775. Equal Sum Arrays With Minimum Number of Operations.hpp"
+#include "array/350. Intersection of Two Arrays II.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
@@ -182,6 +183,15 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_350 s350;
+        //[4,9,5]
+        //[9,4,9,8,4]
+        std::vector<int> nums1{4,9,5};
+        std::vector<int> nums2{9,4,9,8,4};
+        auto res = s350.intersect(nums1,nums2);
+        std::cout << "350 res = "<< res.size() <<std::endl;
+    }
     {
         Solution_347 s347;
         std::vector<int> nums{1,1,1,2,2,3};
