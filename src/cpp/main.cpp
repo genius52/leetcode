@@ -98,6 +98,8 @@
 #include "number/1742. Maximum Number of Balls in a Box.hpp"
 #include "number/1760. Minimum Limit of Balls in a Bag.hpp"
 #include "number/1774. Closest Dessert Cost.hpp"
+#include "number/1792. Maximum Average Pass Ratio.hpp"
+#include "number/347. Top K Frequent Elements.hpp"
 #include "array/239. Sliding Window Maximum.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
@@ -136,6 +138,7 @@
 #include "graph/743. Network Delay Time.hpp"
 #include "graph/787. Cheapest Flights Within K Stops.hpp"
 #include "graph/684. Redundant Connection.hpp"
+#include "graph/332. Reconstruct Itinerary.hpp"
 #include "string/1446. Consecutive Characters.cpp"
 #include "string/1451. Rearrange Words in a Sentence.hpp"
 #include "string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -179,6 +182,31 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_347 s347;
+        std::vector<int> nums{1,1,1,2,2,3};
+        int k = 2;
+        auto res = s347.topKFrequent(nums,k);
+        std::cout << "347 res = "<< res.size() <<std::endl;
+    }
+    {
+        //        //[["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]
+        //        //[["JFK","KUL"],["JFK","NRT"],["NRT","JFK"]]
+        Solution_332 s332;
+        //std::vector<std::vector<std::string>> input = {std::vector<std::string>{"JFK","KUL"}, std::vector<std::string>{"JFK","NRT"},
+
+        //std::vector<std::vector<std::string>> input{{"JFK","SFO"},{"JFK","ATL"},{"SFO","ATL"},{"ATL","JFK"},{"ATL","SFO"}};
+        std::vector<std::vector<std::string>> input{{"MUC","LHR"},{"JFK","MUC"},{"SFO","SJC"},{"LHR","SFO"}};
+        auto res = s332.findItinerary(input);
+        std::cout << "332 res = "<< res.size() <<std::endl;
+    }
+    {
+        Solution_1792 s1792;
+        std::vector<std::vector<int>> classes{{2,4},{3,9},{4,5},{2,10}};
+        int extraStudents = 4;
+        auto res = s1792.maxAverageRatio(classes,extraStudents);
+        std::cout << "1792 res = " << res << std::endl;
+    }
     {
         std::string s = "anagram";
         std::string t = "nagaram";
@@ -505,15 +533,6 @@ int main() {
         int k = 15025;
         auto res = s60.getPermutation(n,k);
         std::cout << "60 res = " << res << std::endl;
-    }
-    {
-        //        //[["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]
-        //        //[["JFK","KUL"],["JFK","NRT"],["NRT","JFK"]]
-        //        Solution_332 s332;
-        //        std::vector<std::vector<std::string>> input = {std::vector<std::string>{"JFK","KUL"}, std::vector<std::string>{"JFK","NRT"},
-        //        std::vector<std::string>{"NRT","JFK"}};
-        //        auto res = s332.findItinerary(input);
-        //        std::cout << "332 res = "<< res.size() <<std::endl;
     }
     {
         Solution_477 s477;
