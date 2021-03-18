@@ -101,6 +101,7 @@
 #include "number/1774. Closest Dessert Cost.hpp"
 #include "number/1792. Maximum Average Pass Ratio.hpp"
 #include "number/347. Top K Frequent Elements.hpp"
+#include "number/363. Max Sum of Rectangle No Larger Than K.hpp"
 #include "array/239. Sliding Window Maximum.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
@@ -184,6 +185,13 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_363 s363;
+        std::vector<std::vector<int>> matrix{{1,0,1},{0,-2,3}};
+        int k = 5;
+        auto res = s363.maxSumSubmatrix(matrix,k);
+        std::cout << "363 res = "<< res <<std::endl;
+    }
     {
         SummaryRanges s352;
         s352.addNum(1);
