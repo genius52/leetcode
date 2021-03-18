@@ -6,6 +6,7 @@ func LengthOfLIS(nums []int) int {
 	}
 	var dp []int = make([]int,len(nums)+1)
 	dp[0] = 1
+	var res int = 1
 	for i := 1;i < len(nums);i++{
 		max := 1
 		for j := 0;j < i;j++{
@@ -15,13 +16,10 @@ func LengthOfLIS(nums []int) int {
 				}
 			}
 		}
-		dp[i] = max
-	}
-	var res int = 1
-	for _,val := range dp{
-		if val > res{
-			res = val
+		if max > res{
+			res = max
 		}
+		dp[i] = max
 	}
 	return res
 }

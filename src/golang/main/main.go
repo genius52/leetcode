@@ -14,6 +14,11 @@ import (
 
 func main(){
 	{
+		var envelopes [][]int = [][]int{{5,4},{6,4},{6,7},{2,3}}
+		res := number.MaxEnvelopes(envelopes)
+		fmt.Println(res)
+	}
+	{
 		var s string = "aA"
 		res := string_issue.ReverseVowels(s)
 		fmt.Println(res)
