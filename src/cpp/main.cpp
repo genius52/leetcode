@@ -186,8 +186,18 @@
 
 int main() {
     {
+        //nums1 = [1,7,11], nums2 = [2,4,6]
+        Solution_373 s373;
+        std::vector<int> nums1{1,7,11};
+        std::vector<int> nums2{2,4,6};
+        int k = 3;
+        auto res = s373.kSmallestPairs(nums1,nums2,k);
+        std::cout<<"373 res = "<<res.size()<<std::endl;
+    }
+    {
         Solution_363 s363;
-        std::vector<std::vector<int>> matrix{{1,0,1},{0,-2,3}};
+        //std::vector<std::vector<int>> matrix{{1,0,1},{0,-2,3}};
+        std::vector<std::vector<int>> matrix{{2,2,-1}};
         int k = 5;
         auto res = s363.maxSumSubmatrix(matrix,k);
         std::cout << "363 res = "<< res <<std::endl;
@@ -1408,14 +1418,6 @@ int main() {
         std::vector<int> input{1,7,4,9,2,5};
         auto res = s376.wiggleMaxLength(input);
         std::cout<<"376 res = "<<res<<std::endl;
-    }
-    {
-        Solution_373 s373;
-        std::vector<int> nums1{1,2};
-        std::vector<int> nums2{3};
-        int k = 3;
-        auto res = s373.kSmallestPairs(nums1,nums2,k);
-        std::cout<<"373 res = "<<res.size()<<std::endl;
     }
     {
         //["Twitter","postTweet","follow","follow","getNewsFeed","postTweet","getNewsFeed","getNewsFeed","unfollow","getNewsFeed","getNewsFeed","unfollow","getNewsFeed","getNewsFeed"]

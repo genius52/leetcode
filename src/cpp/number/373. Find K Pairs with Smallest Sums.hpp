@@ -9,24 +9,31 @@ class Solution_373 {
     struct cmp{
         bool operator()(std::pair<int,int> a, std::pair<int,int> b) {
             if ((a.first + a.second) < (b.first + b.second))
-                return false;
-            return true;
+                return true;
+            return false;
         }
     };
 public:
-    vector<vector<int>> kSmallestPairs(vector<int>& nums1, vector<int>& nums2, int k) {
-        std::priority_queue<std::pair<int,int>,std::vector<std::pair<int,int>>,cmp > q;
-        for(int i = 0;i < nums1.size();i++){
-            for(int j = 0;j < nums2.size();j++){
-                std::pair<int,int> p;
-                p.first = nums1[i];
-                p.second = nums2[j];
-                q.push(p);
+    vector<vector<int>> kSmallestPairs(vector<int> &nums1, vector<int> &nums2, int k) {
+        std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, cmp> q;
+        for (int i = 0; i < nums1.size(); i++) {
+            for (int j = 0; j < nums2.size(); j++) {
+                if(q.size() < k){
+                    std::pair<int, int> p{nums1[i],nums2[j]};
+                    q.push(p);
+                }else{
+                    auto top = q.top();
+                    if((top.first + top.second) > (nums1[i] + nums2[j])){
+                        q.pop();
+                        std::pair<int, int> p{nums1[i],nums2[j]};
+                        q.push(p);
+                    }
+                }
             }
         }
         std::vector<std::vector<int>> res;
-        for(int i = 0;i < k && !q.empty();i++){
-            res.push_back({q.top().first,q.top().second});
+        for (int i = 0; i < k && !q.empty(); i++) {
+            res.push_back({q.top().first, q.top().second});
             q.pop();
         }
         return res;
