@@ -80,15 +80,6 @@ func canThreePartsEqualSum(A []int) bool {
 	return false;
 }
 
-func isPerfectSquare(num int)bool {
-	var i int = 1;
-	for num > 0 {
-		num -= i;
-		i += 2;
-	}
-	return num == 0;
-}
-
 func findRadius(houses []int, heaters []int) int {
 	sort.Ints(houses)
 	sort.Ints(heaters)
