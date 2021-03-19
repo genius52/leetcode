@@ -14,6 +14,11 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{1,2,3}
+		res := number.LargestDivisibleSubset(nums)
+		fmt.Println(res)
+	}
+	{
 		var envelopes [][]int = [][]int{{5,4},{6,4},{6,7},{2,3}}
 		res := number.MaxEnvelopes(envelopes)
 		fmt.Println(res)
