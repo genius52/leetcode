@@ -14,6 +14,11 @@ import (
 
 func main(){
 	{
+		var s string = "3[a2[c]]"
+		res := string_issue.DecodeString2(s)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{1,2,3}
 		res := number.LargestDivisibleSubset(nums)
 		fmt.Println(res)
