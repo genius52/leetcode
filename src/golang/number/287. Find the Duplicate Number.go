@@ -25,3 +25,25 @@ func FindDuplicate(nums []int) int{
 	}
 	return res
 }
+
+
+//287
+func findDuplicate(nums []int) int {
+	min := 0
+	max := len(nums)-1
+	for min < max{
+		mid := min + (max - min)/2
+		cnt := 0
+		for _,v := range nums{
+			if v <= mid{
+				cnt++
+			}
+		}
+		if cnt <= mid{
+			min = mid + 1
+		}else{
+			max = mid
+		}
+	}
+	return min
+}

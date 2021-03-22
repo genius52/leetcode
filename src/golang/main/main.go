@@ -14,6 +14,12 @@ import (
 
 func main(){
 	{
+		input := "ababacb"
+		k := 3
+		res := string_issue.LongestSubstring(input,k)
+		fmt.Println(res)
+	}
+	{
 		var s string = "3[a2[c]]"
 		res := string_issue.DecodeString2(s)
 		fmt.Println(res)
@@ -2589,12 +2595,6 @@ func main(){
 	//{
 	//	input := []int{2,0,1}
 	//	res := countSmaller(input)
-	//	fmt.Println(res)
-	//}
-	//{
-	//	input := "ababacb"
-	//	k := 3
-	//	res := longestSubstring(input,k)
 	//	fmt.Println(res)
 	//}
 	//{
