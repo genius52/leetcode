@@ -14,6 +14,11 @@ import (
 
 func main(){
 	{
+		var n int = 7
+		res := number.ReadBinaryWatch2(n)
+		fmt.Println(res)
+	}
+	{
 		input := "ababacb"
 		k := 3
 		res := string_issue.LongestSubstring(input,k)
