@@ -35,3 +35,21 @@ func FindNthDigit(n int) int {
 	res := int(num_str[bit_offset - 1] - '0')
 	return res
 }
+
+func FindNthDigit2(n int) int{
+	var bit_len int = 1
+	var cur_number_count int = 9
+	var total_bit int = 0
+	//get single number's bit length
+	for (total_bit + bit_len * cur_number_count) < n{
+		total_bit += bit_len * cur_number_count
+		bit_len++
+		cur_number_count *= 10
+	}
+	//get which single number
+	var cur_num int = int(math.Pow(10.0,float64(bit_len - 1))) + (n - total_bit - 1)/bit_len
+	//get bit of single number
+	var offset int = (n - total_bit - 1)%bit_len
+	var res int = int(strconv.Itoa(cur_num)[offset] - '0')
+	return res
+}

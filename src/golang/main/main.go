@@ -14,6 +14,12 @@ import (
 
 func main(){
 	{
+		var n int = 12
+		res := number.FindNthDigit2(n)
+		fmt.Println(res)
+	}
+
+	{
 		var n int = 7
 		res := number.ReadBinaryWatch2(n)
 		fmt.Println(res)
@@ -2000,12 +2006,6 @@ func main(){
 		res := string_issue.OriginalDigits(s)
 		fmt.Println(res)
 	}
-	{
-		var n int = 12
-		res := number.FindNthDigit(n)
-		fmt.Println(res)
-	}
-
 	{
 		var n int = 20
 		var k int = 1048575
