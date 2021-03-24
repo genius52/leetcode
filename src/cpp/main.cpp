@@ -52,6 +52,7 @@
 #include "array/1770. Maximum Score from Performing Multiplication Operations.hpp"
 #include "array/1775. Equal Sum Arrays With Minimum Number of Operations.hpp"
 #include "array/350. Intersection of Two Arrays II.hpp"
+#include "array/406. Queue Reconstruction by Height.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
@@ -185,6 +186,12 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_406 s406;
+        std::vector<std::vector<int>> people{{7,0},{4,4},{7,1},{5,0},{6,1},{5,2}};
+        auto res = s406.reconstructQueue(people);
+        std::cout<<"406 res = "<<res.size()<<std::endl;
+    }
     {
         //nums1 = [1,7,11], nums2 = [2,4,6]
         Solution_373 s373;

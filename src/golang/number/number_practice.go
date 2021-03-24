@@ -44,18 +44,6 @@ func max_int_number(nums ...int)int{
 	return max
 }
 
-func toHex(num int) string {
-	//var m []string = make([]string,16,0)
-	char_map := "0123456789abcdef"
-	var res string
-	for num > 0{
-		mod := char_map[num % 16]
-		res = string(mod) + res
-		num = num/16
-	}
-	return res
-}
-
 func canThreePartsEqualSum(A []int) bool {
 	var total int = 0
 	for _, val := range A{
