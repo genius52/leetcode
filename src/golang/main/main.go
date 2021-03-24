@@ -14,6 +14,11 @@ import (
 
 func main(){
 	{
+		var num int = -26
+		res := number.ToHex(num)
+		fmt.Println(res)
+	}
+	{
 		var stones []int = []int{0,1,2,3,4,8,9,11}
 		res := array.CanCross2(stones)
 		fmt.Println(res)
