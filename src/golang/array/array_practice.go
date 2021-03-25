@@ -1452,56 +1452,6 @@ func countSubstrings(s string) int {
 	return res
 }
 
-//413
-func is_same_diff(A []int,left int,right int) (diff int,ret bool){
-	if left < 0 || right >= len(A){
-		diff = 0
-		ret = false
-		return
-	}
-	diff = A[left+1] - A[left]
-	ret = true
-    for i := left + 1;i < right;i++{
-    	if (A[i+1] - A[i]) != diff{
-    		ret = false
-    		break
-		}
-	}
-	return
-}
-
-func numberOfArithmeticSlices(A []int) int {
-	var l int = len(A)
-	if l < 3{
-		return 0
-	}
-	var record map[int]int = make(map[int]int)
-	for start,end := 0, 2;start < l && end < l;{
-		_,ok := is_same_diff(A,start,end)
-		if ok{
-			end++
-			if _,ok := record[start];ok{
-				record[start]++
-			}else{
-				record[start] = 1
-			}
-		}else{
-			start = end - 1
-			end = start + 2
-		}
-	}
-	res := 0
-	for _,val := range record{
-		for val > 0{
-			res += val
-			val--
-		}
-	}
-	return res
-}
-
-
-
 //1281
 func subtractProductAndSum(n int) int {
 	var sum int = 0
