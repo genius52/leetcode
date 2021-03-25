@@ -53,6 +53,7 @@
 #include "array/1775. Equal Sum Arrays With Minimum Number of Operations.hpp"
 #include "array/350. Intersection of Two Arrays II.hpp"
 #include "array/406. Queue Reconstruction by Height.hpp"
+#include "array/407. Trapping Rain Water II.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
@@ -186,6 +187,12 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_407 s407;
+        std::vector<std::vector<int>> heightMap{{1,4,3,1,3,2},{3,2,1,3,2,4},{2,3,3,2,3,1}};
+        auto res = s407.trapRainWater(heightMap);
+        std::cout<<"407 res = "<<res<<std::endl;
+    }
     {
         Solution_406 s406;
         std::vector<std::vector<int>> people{{7,0},{4,4},{7,1},{5,0},{6,1},{5,2}};
