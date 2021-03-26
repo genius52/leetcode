@@ -104,6 +104,7 @@
 #include "number/1792. Maximum Average Pass Ratio.hpp"
 #include "number/347. Top K Frequent Elements.hpp"
 #include "number/363. Max Sum of Rectangle No Larger Than K.hpp"
+#include "number/414. Third Maximum Number.hpp"
 #include "array/239. Sliding Window Maximum.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
@@ -187,6 +188,12 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_414 s414;
+        std::vector<int> nums{3,2,2};
+        auto res = s414.thirdMax(nums);
+        std::cout<<"414 res = "<<res<<std::endl;
+    }
     {
         Solution_407 s407;
         std::vector<std::vector<int>> heightMap{{1,4,3,1,3,2},{3,2,1,3,2,4},{2,3,3,2,3,1}};
