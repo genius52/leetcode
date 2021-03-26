@@ -1,6 +1,6 @@
 package array
 
-func numberOfArithmeticSlices2(A []int) int{
+func NumberOfArithmeticSlices(A []int) int{
 	var l int = len(A)
 	if l < 3{
 		return 0

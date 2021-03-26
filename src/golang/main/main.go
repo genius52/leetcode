@@ -14,6 +14,12 @@ import (
 
 func main(){
 	{
+		var num1 string = "99"
+		var num2 string = "1"
+		res := number.AddStrings(num1,num2)
+		fmt.Println(res)
+	}
+	{
 		res := array.NumberOfArithmeticSlices([]int{1,2,3,4,8,9,10})
 		fmt.Println(res)
 	}
