@@ -2091,36 +2091,6 @@ func decompressRLElist(nums []int) []int {
 	return res
 }
 
-//416
-func dp_canPartition(nums []int,cur_sum int,cur_pos int,target int,memo map[int]bool)int{
-	if cur_pos >= len(nums) || cur_sum > target{
-		return 0
-	}
-	if _,ok := memo[cur_sum];ok{
-		return 0
-	}
-	if cur_sum == target{
-		return 1
-	}
-	cnt := dp_canPartition(nums,cur_sum + nums[cur_pos],cur_pos + 1,target,memo) + dp_canPartition(nums,cur_sum,cur_pos + 1,target,memo)
-	if cnt == 0{
-		memo[cur_sum] = false
-	}
-	return cnt
-}
-
-func canPartition(nums []int) bool {
-	var sum int = 0
-	for _,v := range nums{
-		sum += v
-	}
-	if sum % 2 == 1{
-		return false
-	}
-	var record map[int]bool = make(map[int]bool)
-	return dp_canPartition(nums,0,0,sum / 2,record) > 0
-}
-
 //1356
 type sortBit []int
 

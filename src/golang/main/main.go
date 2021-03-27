@@ -14,6 +14,11 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{1,5,11,5}
+		res := array.CanPartition2(nums)
+		fmt.Println(res)
+	}
+	{
 		var num1 string = "99"
 		var num2 string = "1"
 		res := number.AddStrings(num1,num2)
