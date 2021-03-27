@@ -54,6 +54,7 @@
 #include "array/350. Intersection of Two Arrays II.hpp"
 #include "array/406. Queue Reconstruction by Height.hpp"
 #include "array/407. Trapping Rain Water II.hpp"
+#include "array/410. Split Array Largest Sum.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
@@ -188,6 +189,13 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        std::vector<int> nums{1,2,3,4,5};
+        int m = 2;
+        Solution_410 s410;
+        auto res = s410.splitArray(nums,m);
+        std::cout<<"410 res = "<<res<<std::endl;
+    }
     {
         Solution_414 s414;
         std::vector<int> nums{3,2,2};
