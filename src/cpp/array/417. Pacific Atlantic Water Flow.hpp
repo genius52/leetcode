@@ -84,16 +84,14 @@ public:
         return res;
     }
 
-    void dfs_pacificAtlantic(vector<vector<int>>& matrix,int row,int col,int pre_height,vector<vector<bool>>& visited){
-        auto rows = matrix.size();
-        auto columns = matrix[0].size();
+    void dfs_pacificAtlantic(vector<vector<int>>& matrix,int rows,int columns,int row,int col,int pre_height,vector<vector<bool>>& visited){
         if(row < 0 || row >= rows || col < 0 || col >= columns || visited[row][col] || matrix[row][col] < pre_height)
             return;
         visited[row][col] = true;
-        dfs_pacificAtlantic(matrix,row - 1,col,matrix[row][col],visited);
-        dfs_pacificAtlantic(matrix,row + 1,col,matrix[row][col],visited);
-        dfs_pacificAtlantic(matrix,row,col - 1,matrix[row][col],visited);
-        dfs_pacificAtlantic(matrix,row,col + 1,matrix[row][col],visited);
+        dfs_pacificAtlantic(matrix,rows,columns,row - 1,col,matrix[row][col],visited);
+        dfs_pacificAtlantic(matrix,rows,columns,row + 1,col,matrix[row][col],visited);
+        dfs_pacificAtlantic(matrix,rows,columns,row,col - 1,matrix[row][col],visited);
+        dfs_pacificAtlantic(matrix,rows,columns,row,col + 1,matrix[row][col],visited);
     }
 
     vector<vector<int>> pacificAtlantic2(vector<vector<int>>& matrix) {
@@ -102,30 +100,16 @@ public:
         if(rows == 0)
             return res;
         int columns = matrix[0].size();
-        vector<vector<bool>> pacific_visited;
-        vector<vector<bool>> atlantic_visited;
-        pacific_visited.resize(rows);
-        atlantic_visited.resize(rows);
-        for(int i = 0;i < rows;i++){
-            pacific_visited[i].resize(columns);
-            atlantic_visited[i].resize(columns);
-        }
-//        for(int i = 0;i < rows;i++){
-//            pacific_visited[i][0] = true;
-//            atlantic_visited[i][columns - 1] = true;
-//        }
-//        for(int i = 0;i < columns;i++){
-//            pacific_visited[0][i] = true;
-//            atlantic_visited[rows - 1][i] = true;
-//        }
+        vector<vector<bool>> pacific_visited(rows,std::vector<bool>(columns));
+        vector<vector<bool>> atlantic_visited(rows,std::vector<bool>(columns));
 
         for(int i = 0;i < rows;i++){
-            dfs_pacificAtlantic(matrix,i,0,-1,pacific_visited);
-            dfs_pacificAtlantic(matrix,i,columns - 1,-1,atlantic_visited);
+            dfs_pacificAtlantic(matrix,rows,columns,i,0,-1,pacific_visited);
+            dfs_pacificAtlantic(matrix,rows,columns,i,columns - 1,-1,atlantic_visited);
         }
         for(int i = 0;i < columns;i++){
-            dfs_pacificAtlantic(matrix,0,i,-1,pacific_visited);
-            dfs_pacificAtlantic(matrix,rows - 1,i,-1,atlantic_visited);
+            dfs_pacificAtlantic(matrix,rows,columns,0,i,-1,pacific_visited);
+            dfs_pacificAtlantic(matrix,rows,columns,rows - 1,i,-1,atlantic_visited);
         }
         for(int i = 0;i < rows;i++){
             for(int j = 0;j < columns;j++){
