@@ -14,6 +14,11 @@ import (
 
 func main(){
 	{
+		var word string = "035985750011523523129774573439111590559325"
+		res := string_issue.NumDifferentIntegers(word)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{1,5,11,5}
 		res := array.CanPartition2(nums)
 		fmt.Println(res)
