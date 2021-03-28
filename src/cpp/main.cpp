@@ -55,6 +55,7 @@
 #include "array/406. Queue Reconstruction by Height.hpp"
 #include "array/407. Trapping Rain Water II.hpp"
 #include "array/410. Split Array Largest Sum.hpp"
+#include "array/1806. Minimum Number of Operations to Reinitialize a Permutation.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
@@ -189,6 +190,12 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_1806 s1806;
+        int n = 4;
+        auto res = s1806.reinitializePermutation(n);
+        std::cout<<"1806 res = "<<res<<std::endl;
+    }
     {
         std::vector<int> nums{1,2,3,4,5};
         int m = 2;
