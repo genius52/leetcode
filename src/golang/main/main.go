@@ -14,6 +14,12 @@ import (
 
 func main(){
 	{
+		var s string = "AAAA"
+		var k int = 0
+		res := string_issue.CharacterReplacement(s,k)
+		fmt.Println(res)
+	}
+	{
 		var word string = "035985750011523523129774573439111590559325"
 		res := string_issue.NumDifferentIntegers(word)
 		fmt.Println(res)
