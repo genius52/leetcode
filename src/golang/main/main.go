@@ -14,6 +14,28 @@ import (
 
 func main(){
 	{
+		//Input: head = [1,2,null,3]
+		//Output: [1,3,2]
+		//Explanation:
+		//
+		//The input multilevel linked list is as follows:
+		//
+		//  1---2---NULL
+		//  |
+		//  3---NULL
+		var n1 list_queue.Node
+		n1.Val = 1
+		var n2 list_queue.Node
+		n2.Val = 2
+		var n3 list_queue.Node
+		n3.Val = 3
+		n1.Child = &n2
+		n2.Child = &n3
+		//n2.Prev = &n1
+		res := list_queue.Flatten(&n1)
+		fmt.Println(res)
+	}
+	{
 		var s string = "AAAA"
 		var k int = 0
 		res := string_issue.CharacterReplacement(s,k)
