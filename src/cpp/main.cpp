@@ -186,10 +186,41 @@
 #include "list/146. LRU Cache.hpp"
 #include "list/206. Reverse Linked List.hpp"
 #include "list/352. Data Stream as Disjoint Intervals.hpp"
+#include "list/460. LFU Cache.hpp"
+#include "list/432. All O`one Data Structure.hpp"
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        AllOne s432;
+        s432.inc("a");
+        s432.inc("a");
+        s432.inc("b");
+        auto res = s432.getMaxKey();
+        res = s432.getMinKey();
+        s432.dec("b");
+        res = s432.getMinKey();
+        std::cout<<"432 res = "<<res<<std::endl;
+    }
+    {
+        //["LFUCache", "put", "put", "get", "put", "get", "get", "put", "get", "get", "get"]
+        //[[2], [1, 1], [2, 2], [1], [3, 3], [2], [3], [4, 4], [1], [3], [4]]
+        //Output
+        //[null, null, null, 1, null, -1, 3, null, -1, 3, 4]
+        LFUCache lfu(2);
+        lfu.put(1,1);
+        lfu.put(2,2);
+        auto res = lfu.get(1);
+        lfu.put(3,3);
+        res = lfu.get(2);
+        res = lfu.get(3);
+        lfu.put(4,4);
+        res = lfu.get(1);
+        res = lfu.get(3);
+        res = lfu.get(4);
+        std::cout<<"460 res = "<<res<<std::endl;
+    }
     {
         Solution_1806 s1806;
         int n = 4;
