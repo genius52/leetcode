@@ -14,6 +14,12 @@ import (
 
 func main(){
 	{
+		var n int = 1500
+		var k int = 600
+		res := number.FindKthNumber(n,k)
+		fmt.Println(res)
+	}
+	{
 		//Input: head = [1,2,null,3]
 		//Output: [1,3,2]
 		//Explanation:
