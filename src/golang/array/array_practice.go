@@ -57,27 +57,6 @@ func remove_duplicated_sorted_array(arr []int)(length int){
 	return cur_pos + 1
 }
 
-func sum_exist(arr []int){
-
-}
-
-func findDuplicates(nums []int) []int {
-	var res []int
-	for i := 0; i < len(nums);{
-		if(nums[nums[i] - 1] != nums[i]){
-			nums[nums[i] - 1],nums[i] = nums[i],nums[nums[i] - 1]
-		} else{
-			i++
-		}
-	}
-	for i := 0;i < len(nums);i++{
-		if(nums[i]-1 != i){
-			res = append(res, nums[i])
-		}
-	}
-	return res
-}
-
 func maxArea(height []int) int {
 	var length int = len(height)
 	var low int = 0

@@ -14,6 +14,11 @@ import (
 
 func main(){
 	{
+		var arr []int = []int{4,3,2,7,8,2,3,1}
+		var res = array.FindDuplicates(arr)
+		fmt.Println(res)
+	}
+	{
 		var n int = 1500
 		var k int = 600
 		res := number.FindKthNumber(n,k)
@@ -3369,11 +3374,6 @@ func main(){
 	//}
 	//{
 	//	generate(5)
-	//}
-	//{
-	//	var arr []int = []int{4,3,2,7,8,2,3,1}
-	//	var res = findDuplicates(arr)
-	//	fmt.Println(res)
 	//}
 	//
 	//var arr []int = []int{1,2,2,3,3,3,3,4,4,5,6,6,7,7,8}
