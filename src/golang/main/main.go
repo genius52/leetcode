@@ -14,6 +14,11 @@ import (
 
 func main(){
 	{
+		input := [][]int{{0,0},{1,0},{2,0}}
+		res := diagram.NumberOfBoomerangs(input)
+		fmt.Println(res)
+	}
+	{
 		var A []int = []int{2,2,3,4}
 		res := number.NumberOfArithmeticSlices(A)
 		fmt.Println(res)
@@ -3047,11 +3052,6 @@ func main(){
 	//	res := compress(input)
 	//	fmt.Println(res)
 	//	fmt.Println(input)
-	//}
-	//{
-	//	input := [][]int{{0,0},{1,0},{2,0}}
-	//	res := numberOfBoomerangs(input)
-	//	fmt.Println(res)
 	//}
 	//{
 	//	//res := countAndSay(90)
