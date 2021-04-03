@@ -14,6 +14,11 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{4,3,2,7,8,2,3,1}
+		res := number.FindDisappearedNumbers(nums)
+		fmt.Println(res)
+	}
+	{
 		input := [][]int{{0,0},{1,0},{2,0}}
 		res := diagram.NumberOfBoomerangs(input)
 		fmt.Println(res)
