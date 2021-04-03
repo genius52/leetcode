@@ -14,6 +14,11 @@ import (
 
 func main(){
 	{
+		var A []int = []int{2,2,3,4}
+		res := number.NumberOfArithmeticSlices(A)
+		fmt.Println(res)
+	}
+	{
 		var arr []int = []int{4,3,2,7,8,2,3,1}
 		var res = array.FindDuplicates(arr)
 		fmt.Println(res)
