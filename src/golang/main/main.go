@@ -12,7 +12,20 @@ import (
 	"strings"
 )
 
+func truncateSentence(s string, k int) string {
+	var data []string = strings.Split(s," ")
+	data = data[0:k]
+	var res string = strings.Join(data," ")
+	return res
+}
+
 func main(){
+	{
+		var s string = "Hello how are you Contestant"
+		var k int = 4
+		res := truncateSentence(s,k)
+		fmt.Println(res)
+	}
 	{
 		var nums []int = []int{4,3,2,7,8,2,3,1}
 		res := number.FindDisappearedNumbers(nums)

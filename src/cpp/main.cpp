@@ -56,6 +56,9 @@
 #include "array/407. Trapping Rain Water II.hpp"
 #include "array/410. Split Array Largest Sum.hpp"
 #include "array/1806. Minimum Number of Operations to Reinitialize a Permutation.hpp"
+#include "array/1812. Determine Color of a Chessboard Square.hpp"
+#include "array/1817. Finding the Users Active Minutes.hpp"
+#include "array/1818. Minimum Absolute Sum Difference.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
@@ -191,7 +194,29 @@
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 
+
+
 int main() {
+    {
+        Solution_1818 s1818;
+        std::vector<int> nums1{1,10,4,4,2,7};
+        std::vector<int> nums2{9,3,5,1,7,4};
+        auto res = s1818.minAbsoluteSumDiff(nums1,nums2);
+        std::cout<<"5724 res = "<<res<<std::endl;
+    }
+    {
+        Solution_1817 s1817;
+        std::vector<std::vector<int>> logs{{0,5},{1,2},{0,2},{0,5},{1,3}};
+        int k = 5;
+        auto res = s1817.findingUsersActiveMinutes(logs,k);
+        std::cout<<"5732 res = "<<res.size()<<std::endl;
+    }
+    {
+        Solution_1812 s1812;
+        std::string s = "h3";
+        auto res = s1812.squareIsWhite(s);
+        std::cout<<"1812 res = "<<res<<std::endl;
+    }
     {
         AllOne s432;
         s432.inc("a");
