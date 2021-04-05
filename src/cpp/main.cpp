@@ -3,6 +3,7 @@
 #include <thread>
 #include <condition_variable>
 #include "define.h"
+#include "array/239. Sliding Window Maximum.hpp"
 #include "array/396. Rotate Function.hpp"
 #include "array/417. Pacific Atlantic Water Flow.hpp"
 #include "array/1470. Shuffle the Array.hpp"
@@ -110,7 +111,7 @@
 #include "number/347. Top K Frequent Elements.hpp"
 #include "number/363. Max Sum of Rectangle No Larger Than K.hpp"
 #include "number/414. Third Maximum Number.hpp"
-#include "array/239. Sliding Window Maximum.hpp"
+#include "number/378. Kth Smallest Element in a Sorted Matrix.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
@@ -197,6 +198,15 @@
 
 
 int main() {
+    {
+        Solution_378 s378;
+//        std::vector<std::vector<int>> matrix{{1,5,9},{10,11,13},{12,13,15}};
+//        int k = 8;
+        std::vector<std::vector<int>> matrix{{-5}};
+        int k = 1;
+        auto res = s378.kthSmallest(matrix,k);
+        std::cout<<"378 res = "<<res<<std::endl;
+    }
     {
         Solution_1818 s1818;
         std::vector<int> nums1{1,10,4,4,2,7};
