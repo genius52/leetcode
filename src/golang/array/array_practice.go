@@ -237,29 +237,6 @@ func findJudge(N int, trust [][]int) int {
 	return -1
 }
 
-type IntSlice []int
-func (s IntSlice) Len() int { return len(s) }
-func (s IntSlice) Swap(i, j int){ s[i], s[j] = s[j], s[i] }
-func (s IntSlice) Less(i, j int) bool { return s[i] < s[j] }
-
-func findContentChildren(g []int, s []int) int {
-	sort.Sort(IntSlice(g))
-	sort.Sort(IntSlice(s))
-	var len_g int = len(g)
-	var len_s int = len(s)
-	i := 0
-	j := 0
-	for j < len_s && i < len_g{
-		if s[j] < g[i]{
-			j++
-		}else{
-			i++
-			j++
-		}
-	}
-	return i
-}
-
 func is_binary_string(s string,len int) bool{
 	start := 0
 	end := len-1
