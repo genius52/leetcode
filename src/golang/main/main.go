@@ -21,6 +21,12 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		//var words []string = []string{"cat","dog","catdog"}
+		var words []string = []string{"catsdogcats","cat","cats","dog","dogcatsdog","hippopotamuses","rat","ratcatdogcat"}
+		res := string_issue.FindAllConcatenatedWordsInADict(words)
+		fmt.Println(res)
+	}
+	{
 		var s string = "Hello how are you Contestant"
 		var k int = 4
 		res := truncateSentence(s,k)

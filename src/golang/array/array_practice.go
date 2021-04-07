@@ -254,25 +254,6 @@ func is_binary_string(s string,len int) bool{
 	return true
 }
 
-//func countBinarySubstrings(s string) int {
-//	var res int = 0
-//	var len int = len(s)
-//	for i := 2;i <= len;i = i + 2{
-//		start := 0
-//		end := i
-//		for ;end <= len;{
-//			if s[start] != s[end-1] {
-//				if is_binary_string(s[start:end],end-start) {
-//					res++
-//				}
-//			}
-//			start++
-//			end++
-//		}
-//	}
-//	return res
-//}
-
 func is_point_in_rectangle(px int,py int,rec []int) bool{
 	return px > rec[0] && px < rec[2] && py > rec[1] && py < rec[3]
 }
@@ -293,7 +274,7 @@ func ConstructorK(k int, nums []int) KthLargest {
 		k:k,
 		nums:nums,
 	}
-	sort.Sort(IntSlice(ele.nums))
+	sort.Ints(ele.nums)
 	ele.largest = make([]int, k, k)
 	copy(ele.largest,ele.nums[0:k])
 	return ele
@@ -302,7 +283,7 @@ func ConstructorK(k int, nums []int) KthLargest {
 func (this *KthLargest) Add(val int) int {
 	this.nums = append(this.nums, val)
 	this.largest = append(this.largest, val)
-	sort.Sort(IntSlice(this.largest))
+	sort.Ints(this.largest)
 	this.largest = this.largest[0:this.k]
 	return this.nums[this.k - 1]
 }
