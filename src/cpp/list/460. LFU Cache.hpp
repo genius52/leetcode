@@ -48,14 +48,16 @@ public:
             if(cur_size >= cap){
                 auto it = count_key.begin();
                 int k = it->first;
-                auto del_key = *it->second.begin();
+                auto del_key = it->second.front();
                 key_value.erase(del_key);
                 key_count.erase(del_key);
                 if(it->second.size() == 1){
                     count_key.erase(k);
                 }else{
-                    std::deque<int> l = it->second;
-                    l.erase(l.begin());
+                    //it->second.erase(it->second.front());
+                    it->second.erase(it->second.begin());
+                    //std::deque<int> l = it->second;
+                    //l.erase(l.begin());
                 }
             }
             key_value[key] = value;
