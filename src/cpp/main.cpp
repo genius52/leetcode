@@ -60,6 +60,7 @@
 #include "array/1812. Determine Color of a Chessboard Square.hpp"
 #include "array/1817. Finding the Users Active Minutes.hpp"
 #include "array/1818. Minimum Absolute Sum Difference.hpp"
+#include "array/480. Sliding Window Median.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
@@ -198,6 +199,13 @@
 
 
 int main() {
+    {
+        Solution_480 s480;
+        std::vector<int> nums{5,5,8,1,4,7,1,3,8,4};
+        int k = 8;
+        auto res = s480.medianSlidingWindow(nums,k);
+        std::cout<<"480 res = "<<res.size()<<std::endl;
+    }
     {
         Solution_378 s378;
 //        std::vector<std::vector<int>> matrix{{1,5,9},{10,11,13},{12,13,15}};
