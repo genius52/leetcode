@@ -61,6 +61,7 @@
 #include "array/1817. Finding the Users Active Minutes.hpp"
 #include "array/1818. Minimum Absolute Sum Difference.hpp"
 #include "array/480. Sliding Window Median.hpp"
+#include "array/493. Reverse Pairs.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
@@ -196,9 +197,13 @@
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 
-
-
 int main() {
+    {
+        Solution_493 s493;
+        std::vector<int> nums{1,3,2,3,1};
+        auto res = s493.reversePairs(nums);
+        std::cout<<"493 res = "<<res<<std::endl;
+    }
     {
         Solution_480 s480;
         std::vector<int> nums{5,5,8,1,4,7,1,3,8,4};
