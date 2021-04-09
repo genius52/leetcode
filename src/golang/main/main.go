@@ -21,6 +21,11 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var num int = 123
+		res := number.FindComplement(num)
+		fmt.Println(res)
+	}
+	{
 		var houses []int = []int{1,5}
 		var heaters []int = []int{10}
 		res := number.FindRadius2(houses,heaters)
