@@ -68,25 +68,6 @@ func canThreePartsEqualSum(A []int) bool {
 	return false;
 }
 
-func findRadius(houses []int, heaters []int) int {
-	sort.Ints(houses)
-	sort.Ints(heaters)
-	res := 0
-	for _,house_pos := range houses{
- 		min_diff := math.MaxInt32
-		for _,heater_pos := range heaters{
-			diff := math.Abs(float64(house_pos - heater_pos))
-			if diff < float64(min_diff){
-				min_diff = int(diff)
-			}
-		}
-		if min_diff > res{
-			res = min_diff
-		}
-	}
-	return res
-}
-
 //1108
 func defangIPaddr(address string) string {
 	return strings.Replace(address, ".", "[.]", -1 )
