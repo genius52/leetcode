@@ -153,6 +153,7 @@
 #include "graph/684. Redundant Connection.hpp"
 #include "graph/332. Reconstruct Itinerary.hpp"
 #include "graph/502. IPO.hpp"
+#include "graph/514. Freedom Trail.hpp"
 #include "string/1446. Consecutive Characters.cpp"
 #include "string/1451. Rearrange Words in a Sentence.hpp"
 #include "string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -200,14 +201,13 @@
 
 int main() {
     {
-        //1
-        //2
-        //[1,2,3]
-        //[1,1,2]
-        //1
-        //0
-        //[1,2,3]
-        //[1,1,2]
+        Solution_514 s514;
+        std::string ring = "godding";
+        std::string key = "gd";
+        auto res = s514.findRotateSteps(ring,key);
+        std::cout<<"502 res = "<<res<<std::endl;
+    }
+    {
         Solution_502 s502;
         int k = 1;
         int W = 0;
