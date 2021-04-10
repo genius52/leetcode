@@ -404,36 +404,6 @@ func countAndSay(n int) string {
 }
 
 
-//494
-//Input: nums is [1, 1, 1, 1, 1], S is 3.
-//Output: 5
-//Explanation:
-//
-//-1+1+1+1+1 = 3
-//+1-1+1+1+1 = 3
-//+1+1-1+1+1 = 3
-//+1+1+1-1+1 = 3
-//+1+1+1+1-1 = 3
-func dp_findTargetSumWays(nums []int,cur_pos int,cur_sum int,S int)int{
-	if cur_pos > len(nums){
-		return 0
-	}
-	if cur_pos == len(nums){
-		if cur_sum == S{
-			return 1
-		}else{
-			return 0
-		}
-	}
-	cnt := dp_findTargetSumWays(nums,cur_pos + 1,cur_sum + nums[cur_pos],S)
-	cnt += dp_findTargetSumWays(nums,cur_pos + 1,cur_sum - nums[cur_pos],S)
-	return cnt
-}
-
-func findTargetSumWays(nums []int, S int) int {
-	return dp_findTargetSumWays(nums,0,0,S)
-}
-
 //1346
 //Input: arr = [10,2,5,3]
 //Output: true

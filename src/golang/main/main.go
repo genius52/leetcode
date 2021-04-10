@@ -21,6 +21,12 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		input := []int{1,2,1}
+		target := 0
+		res := number.FindTargetSumWays(input,target)
+		fmt.Println(res)
+	}
+	{
 		var num int = 123
 		res := number.FindComplement(num)
 		fmt.Println(res)
@@ -3023,12 +3029,6 @@ func main(){
 	//	input := [][]int{{1,1,0,0,0},{1,1,1,1,0},{1,0,0,0,0},{1,1,0,0,0},{1,1,1,1,1}}
 	//	k := 3
 	//	res := kWeakestRows(input,k)
-	//	fmt.Println(res)
-	//}
-	//{
-	//	input := []int{1,1,1,1,1}
-	//	target := 3
-	//	res := findTargetSumWays(input,target)
 	//	fmt.Println(res)
 	//}
 	//{
