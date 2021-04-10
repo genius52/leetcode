@@ -152,6 +152,7 @@
 #include "graph/787. Cheapest Flights Within K Stops.hpp"
 #include "graph/684. Redundant Connection.hpp"
 #include "graph/332. Reconstruct Itinerary.hpp"
+#include "graph/502. IPO.hpp"
 #include "string/1446. Consecutive Characters.cpp"
 #include "string/1451. Rearrange Words in a Sentence.hpp"
 #include "string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -198,6 +199,23 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        //1
+        //2
+        //[1,2,3]
+        //[1,1,2]
+        //1
+        //0
+        //[1,2,3]
+        //[1,1,2]
+        Solution_502 s502;
+        int k = 1;
+        int W = 0;
+        std::vector<int> Profits{1,2,3};
+        std::vector<int> Capital{1,1,2};
+        auto res = s502.findMaximizedCapital(k,W,Profits,Capital);
+        std::cout<<"502 res = "<<res<<std::endl;
+    }
     {
         Solution_493 s493;
         std::vector<int> nums{1,3,2,3,1};
