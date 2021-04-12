@@ -114,6 +114,7 @@
 #include "number/363. Max Sum of Rectangle No Larger Than K.hpp"
 #include "number/414. Third Maximum Number.hpp"
 #include "number/378. Kth Smallest Element in a Sorted Matrix.hpp"
+#include "number/1823. Find the Winner of the Circular Game.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
@@ -154,6 +155,7 @@
 #include "graph/332. Reconstruct Itinerary.hpp"
 #include "graph/502. IPO.hpp"
 #include "graph/514. Freedom Trail.hpp"
+#include "graph/1824. Minimum Sideway Jumps.hpp"
 #include "string/1446. Consecutive Characters.cpp"
 #include "string/1451. Rearrange Words in a Sentence.hpp"
 #include "string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -199,7 +201,87 @@
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 
+
+#include <queue>
+#include <deque>
+class MKAverage {
+public:
+    int m_ = 0;
+    int k_ = 0;
+    int cur_size = 0;
+    std::deque<int> total;
+    std::priority_queue<int,std::deque<int>, std::greater<int>> small_top;
+    std::priority_queue<int,std::deque<int>, std::less<int> > big_top;
+    int cur_sum = 0;
+    int small_sum = 0;
+    int big_sum = 0;
+    MKAverage(int m, int k) {
+        m_ = m;
+        k_ = k;
+    }
+
+    void addElement(int num) {
+        cur_sum += num;
+        if(cur_size < m_){
+            total.push_back(num);
+            if(cur_size < k_){
+                small_top.push(num);
+                big_top.push(num);
+                small_sum += num;
+                big_sum += num;
+            }else{
+                if(num > small_top.top()){
+                    small_sum -= small_top.top();
+                    small_top.pop();
+                    small_top.push(num);
+                    small_sum += num;
+                }
+                if(num < big_top.top()){
+                    big_sum -= big_top.top();
+                    big_top.pop();
+                    big_top.push(num);
+                    big_sum += num;
+                }
+            }
+            cur_size++;
+        }else{
+            cur_sum -= total.front();
+            total.pop_front();
+            total.push_back(num);
+            cur_size++;
+        }
+    }
+
+    int calculateMKAverage() {
+        if(cur_size < m_)
+            return -1;
+        double res = double(cur_sum - big_sum - small_sum)/ double(m_ - k_ * 2);
+        return res;
+    }
+};
+
+
 int main() {
+    {
+        MKAverage mk(3,1);
+        mk.addElement(3);
+        mk.addElement(1);
+        auto res = mk.calculateMKAverage();
+        std::cout<<"1825 res = "<<res<<std::endl;
+    }
+    {
+        Solution_1824 s1824;
+        std::vector<int> obstacles{0,2,2,1,0,3,0,3,0,1,3,1,1,0,1,3,1,1,1,0,2,0,0,3,3,0,3,2,2,0,0,3,3,3,0,0,2,0,0,3,3,0,3,3,0,0,3,1,0,1,0,2,3,1,1,0,3,3,0,3,1,3,0,2,2,0,1,3,0,1,0,3,0,1,3,1,2,2,0,0,3,0,1,3,2,3,2,1,0,3,2,2,0,3,3,0,3,0,0,1,0,2,0,0,0,2,1,2,0,2,2,3,3,3,0,0,1,1,3,0,0,0,1,2,2,1,2,1,3,2,2,3,1,3,0,1,1,1,3,0,0,0,2,0,2,0,3,1,2,3,3,2,2,2,0,0,0,1,0,0,0,0,3,0,0,0,3,0,2,1,2,3,1,0,3,3,2,0,1,1,0,1,0,2,2,2,1,3,0,3,0,2,1,1,3,1,0,1,2,2,0,2,2,0,0,3,3,1,3,0,1,1,0,3,0,2,1,2,2,0,0,0,1,2,3,1,2,1,1,2,2,1,1,0,2,3,3,3,0,2,3,2,0,0,0,1,0,2,2,0,0,2,0,2,0,1,1,0,3,1,3,3,0,1,0,3,0,3,1,2,3,1,0,0,2,3,2,0,0,3,1,2,3,2,2,3,1,3,3,2,0,1,3,0,3,2,2,3,2,1,2,2,0,3,2,0,2,1,2,2,3,1,3,2,2,0,0,1,0,3,1,3,3,0,0,2,2,2,2,0,1,0,3,1,3,3,3,0,2,3,2,0,3,3,3,3,3,3,2,2,1,1,0,3,1,3,2,3,0,0,0,2,1,1,3,1,3,2,1,3,0,1,1,3,2,2,1,0,0,3,2,1,3,2,3,3,2,1,2,0,2,2,0,2,2,3,2,0,2,3,3,1,1,2,0,1,1,1,2,3,2,1,2,1,0,2,3,1,1,3,3,2,0,1,3,2,3,3,0,1,2,3,2,1,1,2,1,0,0,1,0,3,1,1,1,0,2,0,2,2,3,0,1,0,2,0,0,3,1,1,2,0,0,2,1,1,0,2,2,2,3,1,2,0,1,2,0,1,2,1,2,3,1,1,1,1,0,3,3,2,1,0,0,1,0,3,0,0,2,2,2,1,1,2,1,2,1,1,2,0,3,1,3,2,1,2,2,3,1,0,1,1,1,0,0,0,1,3,3,2,2,1,2,0,0,0,3,1,3,2,3,1,3,2,3,1,3,2,0,1,2,1,1,2,1,3,0,1,1,1,3,3,1,0,0,3,2,2,3,1,1,0,3,0,0,3,0,3,1,2,0,2,3,2,3,0,3,2,3,0,2,2,3,0,3,3,3,1,0,1,2,2,0,3,3,1,3,2,2,3,2,1,1,0,0,0,0,2,1,0,1,1,1,1,0,3,0,1,0,0,1,0,2,0,0,1,2,0,0,0,3,3,1,0,3,2,1,2,3,2,0,3,3,0,2,3,1,1,0,2,2,3,3,0,1,0,0,3,1,2,3,0,1,2,3,2,2,0,1,2,0,3,0,3,0,1,1,3,2,2,2,3,1,2,0,0,3,0,2,3,3,1,0,3,3,0,0,0,3,2,1,1,3,1,1,1,1,1,1,3,3,3,0,0,1,1,1,1,2,2,0,1,0,2,2,0,2,1,3,1,1,1,2,1,1,0,3,1,0,2,3,0,1,2,0,0,3,1,2,3,0,0,3,1,0,2,2,0,1,1,2,2,1,3,1,2,1,0,1,2,3,2,3,0,3,1,3,0,2,0,3,1,1,0,3,2,0,3,0,2,0,0,3,3,1,1,1,0,0,1,1,1,2,3,1,3,1,2,0,0,3,3,0,3,3,0,0,0,3,3,0,3,3,2,3,3,3,3,1,1,1,3,1,1,3,3,1,0,0,3,1,2,0,2,0,3,0,2,1,0,1,0,2,3,3,3,2,3,3,2,0,0,0,2,2,3,0,0,3,0,2,3,0,1,3,2,1,2,0,1,3,2,2,0,1,1,3,3,0,2,3,0,3,3,1,2,3,2,1,0,2,3,2,2,2,3,0,1,1,3,1,0,2,1,3,2,2,2,3,3,1,1,1,3,2,3,1,0,2,3,0,2,3,0,1,3,3,1,1,1,1,0,1,1,2,2,0,2,1,1,0,1,0,3,1,1,1,3,3,2,1,2,3,2,2,3,1,0,3,2,0,1,0,1,3,3,3,0,3,3,2,3,1,2,2,1,1,0,0,3,0};
+        auto res = s1824.minSideJumps(obstacles);
+        std::cout<<"1824 res = "<<res<<std::endl;
+    }
+    {
+        Solution_1823 s1823;
+        int n = 6;
+        int k = 5;
+        auto res = s1823.findTheWinner(n,k);
+        std::cout<<"1823 res = "<<res<<std::endl;
+    }
     {
         Solution_514 s514;
         std::string ring = "godding";
