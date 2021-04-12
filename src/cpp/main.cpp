@@ -156,6 +156,7 @@
 #include "graph/502. IPO.hpp"
 #include "graph/514. Freedom Trail.hpp"
 #include "graph/1824. Minimum Sideway Jumps.hpp"
+#include "graph/497. Random Point in Non-overlapping Rectangles.hpp"
 #include "string/1446. Consecutive Characters.cpp"
 #include "string/1451. Rearrange Words in a Sentence.hpp"
 #include "string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -262,6 +263,12 @@ public:
 
 
 int main() {
+    {
+        std::vector<std::vector<int>> rects{{-2,-2,-1,-1},{1,0,3,0}};
+        Solution_497 s497(rects);
+        auto res = s497.pick();
+        std::cout<<"497 res = "<<res[0]<<std::endl;
+    }
     {
         MKAverage mk(3,1);
         mk.addElement(3);
