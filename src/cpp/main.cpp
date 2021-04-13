@@ -199,6 +199,7 @@
 #include "list/352. Data Stream as Disjoint Intervals.hpp"
 #include "list/460. LFU Cache.hpp"
 #include "list/432. All O`one Data Structure.hpp"
+#include "list/503. Next Greater Element II.hpp"
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 
@@ -263,6 +264,12 @@ public:
 
 
 int main() {
+    {
+        Solution_503 s503;
+        std::vector<int> nums{1,2,3,4,3};
+        auto res = s503.nextGreaterElements(nums);
+        std::cout<<"503 res = "<<res[0]<<std::endl;
+    }
     {
         std::vector<std::vector<int>> rects{{-2,-2,-1,-1},{1,0,3,0}};
         Solution_497 s497(rects);
