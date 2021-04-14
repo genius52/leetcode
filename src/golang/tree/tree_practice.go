@@ -287,39 +287,6 @@ func mctFromLeafValues(arr []int) int {
 	return dp_arr(arr,max_records,memo,0,len(arr)-1)
 }
 
-//513
-func level_visit(node *TreeNode,level_num int,record *map[int][]int){
-	if nil == node{
-		return
-	}
-	if _,ok := (*record)[level_num];ok{
-		(*record)[level_num] = append((*record)[level_num],node.Val)
-		fmt.Println((*record)[level_num])
-	}else{
-		(*record)[level_num] = []int{node.Val}
-		fmt.Println("clean map")
-		fmt.Println(len((*record)))
-	}
-	level_visit(node.Left,level_num + 1,record)
-	level_visit(node.Right,level_num + 1,record)
-}
-
-func findBottomLeftValue(root *TreeNode) int {
-	if nil == root{
-		return 0
-	}
-	var record map[int][]int = make(map[int][]int)
-	level_visit(root,0,&record)
-
-	var max_level = -1
-	for level_num,_ := range record{
-		if level_num > max_level{
-			max_level = level_num
-		}
-	}
-	fmt.Println(len(record))
-	return record[max_level][0]
-}
 
 //1261
 type FindElements struct {
