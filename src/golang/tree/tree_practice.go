@@ -740,31 +740,6 @@ func flipEquiv(root1 *TreeNode, root2 *TreeNode) bool {
 }
 
 
-//515
-func preorder_search_max(node *TreeNode,record *[]int,level int){
-	if nil == node{
-		return
-	}
-	if level == len(*record){
-		*record = append(*record, node.Val)
-	}else{
-		if node.Val > (*record)[level]{
-			(*record)[level] = node.Val
-		}
-	}
-	preorder_search_max(node.Left,record,level + 1)
-	preorder_search_max(node.Right,record,level + 1)
-}
-
-func largestValues(root *TreeNode) []int {
-	var res []int
-	if nil == root{
-		return res
-	}
-	preorder_search_max(root,&res,0)
-	return res
-}
-
 //no recursive pre_visit
 func Preorder_visit_norecursive(root *TreeNode){
 	var q list.List
