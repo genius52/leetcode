@@ -265,6 +265,12 @@ public:
 
 int main() {
     {
+        Solution_507 s507;
+        int num = 6;
+        auto res = s507.checkPerfectNumber(num);
+        std::cout<<"507 res = "<<res<<std::endl;
+    }
+    {
         Solution_503 s503;
         std::vector<int> nums{1,2,3,4,3};
         auto res = s503.nextGreaterElements(nums);
@@ -1338,12 +1344,6 @@ int main() {
         int k = 0;
         auto res = s532.findPairs(input,k);
         std::cout<<"532 res = "<<res<<std::endl;
-    }
-    {
-        Solution_507 s507;
-        int num = 6;
-        auto res = s507.checkPerfectNumber(num);
-        std::cout<<"507 res = "<<res<<std::endl;
     }
     {
         Solution_492 s492;

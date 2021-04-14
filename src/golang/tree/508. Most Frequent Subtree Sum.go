@@ -8,29 +8,27 @@ package tree
  *     Right *TreeNode
  * }
  */
-func post_FindFrequentTreeSum(node *TreeNode,record map[int]int) int{
+func post_FindFrequentTreeSum(node *TreeNode,record map[int]int,max_count *int) int{
 	if node == nil{
 		return 0
 	}
 	var sum int = node.Val
-	sum += post_FindFrequentTreeSum(node.Left,record)
-	sum += post_FindFrequentTreeSum(node.Right,record)
+	sum += post_FindFrequentTreeSum(node.Left,record,max_count)
+	sum += post_FindFrequentTreeSum(node.Right,record,max_count)
 	record[sum]++
+	if record[sum] > *max_count{
+		*max_count = record[sum]
+	}
 	return sum
 }
 
 func FindFrequentTreeSum(root *TreeNode) []int {
 	var record map[int]int = make(map[int]int)
-	post_FindFrequentTreeSum(root,record)
+	var max_count int = 0
+	post_FindFrequentTreeSum(root,record,&max_count)
 	var res []int
-	var max_occurs int = 0
-	for _,cnt := range record{
-		if cnt > max_occurs{
-			max_occurs = cnt
-		}
-	}
 	for sum,cnt := range record{
-		if cnt == max_occurs{
+		if cnt == max_count{
 			res = append(res,sum)
 		}
 	}
