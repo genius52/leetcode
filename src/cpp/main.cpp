@@ -115,6 +115,7 @@
 #include "number/414. Third Maximum Number.hpp"
 #include "number/378. Kth Smallest Element in a Sorted Matrix.hpp"
 #include "number/1823. Find the Winner of the Circular Game.hpp"
+#include "number/518. Coin Change 2.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
@@ -188,6 +189,7 @@
 #include "string/752. Open the Lock.hpp"
 #include "string/1768. Merge Strings Alternately.hpp"
 #include "string/242. Valid Anagram.hpp"
+#include "string/516. Longest Palindromic Subsequence.hpp"
 #include "list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "list/445. Add Two Numbers II.hpp"
 #include "list/138. Copy List with Random Pointer.hpp"
@@ -262,8 +264,20 @@ public:
     }
 };
 
-
 int main() {
+    {
+        Solution_518 s518;
+        int amount = 5;
+        std::vector<int> coins{1,2,5};
+        auto res = s518.change(amount,coins);
+        std::cout<<"518 res = "<<res<<std::endl;
+    }
+    {
+        Solution_516 s516;
+        std::string s = "bbbab";
+        auto res = s516.longestPalindromeSubseq(s);
+        std::cout<<"516 res = "<<res<<std::endl;
+    }
     {
         Solution_507 s507;
         int num = 6;
