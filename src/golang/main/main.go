@@ -21,6 +21,11 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var matrix [][]int = [][]int{{0,0,0},{0,1,0}, {1,1,1}}
+		res := array.UpdateMatrix(matrix)
+		fmt.Println(res)
+	}
+	{
 		var s string = "abcdefg"
 		var k int = 2
 		res := string_issue.ReverseStr(s,k)
@@ -2014,11 +2019,6 @@ func main(){
 	{
 		var n int = 123
 		res := number.NextGreaterElement(n)
-		fmt.Println(res)
-	}
-	{
-		var matrix [][]int = [][]int{{0,0,0},{0,1,0},{0,0,0}}
-		res := array.UpdateMatrix(matrix)
 		fmt.Println(res)
 	}
 	{
