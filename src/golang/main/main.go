@@ -21,6 +21,11 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var nums []int = []int{1,1,2}
+		res := array.SingleNonDuplicate(nums)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{23,2,4,6,6}
 		var k int = 7
 		res := array.CheckSubarraySum(nums,k)
