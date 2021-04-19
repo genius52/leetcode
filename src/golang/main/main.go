@@ -21,6 +21,12 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var s string = "abcdefg"
+		var k int = 2
+		res := string_issue.ReverseStr(s,k)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{1,1,2}
 		res := array.SingleNonDuplicate(nums)
 		fmt.Println(res)
