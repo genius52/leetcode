@@ -21,6 +21,16 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var n int = 1
+		res := string_issue.CheckRecord2(n)
+		fmt.Println(res)
+	}
+	{
+		var boxes []int = []int{1,3,2,2,2,3,4,3,1,3,3,2,2,1,1,4,6,6,7,7,7,7,7,3,3,3,2,1,3,2,2,2,3,4,3,1,3,3,2,2,1,1,4,6,6,7,7,7,7,7,3,3,3,2,1,3,2,2,2,3,4,3,1,3,3,2,2,1,1,4,6,6,7,7,7,7,7,3,3,3,2}
+		res := array.RemoveBoxes(boxes)
+		fmt.Println(res)
+	}
+	{
 		var matrix [][]int = [][]int{{0,0,0},{0,1,0}, {1,1,1}}
 		res := array.UpdateMatrix(matrix)
 		fmt.Println(res)
