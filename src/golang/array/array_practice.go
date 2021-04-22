@@ -1895,30 +1895,6 @@ func decodeString2(s string) string {
 	return dfs_decodeString2(s,&pos)
 }
 
-//560
-//Input:nums = [1,1,1], k = 2
-//Output: 2
-func subarraySum(nums []int, k int) int {
-	var res int = 0
-	var record map[int]int = make(map[int]int)
-	var sum int = 0
-	for _,n := range nums{
-		sum += n
-		if sum == k{
-			res += 1
-		}
-		if _,ok := record[sum - k];ok{
-			res += record[sum - k]
-		}
-		if _,ok := record[sum];ok{
-			record[sum]++
-		} else{
-			record[sum] = 1
-		}
-	}
-	return res
-}
-
 //1314
 //Input: nums = [1,2,3,4]
 //Output: [2,4,4,4]

@@ -21,6 +21,12 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		input := []int{0,0,0,0,0,0,0,0,0,0}
+		target := 0
+		res := array.SubarraySum(input,target)
+		fmt.Println(res)
+	}
+	{
 		var n int = 2147483476
 		res := number.NextGreaterElement2(n)
 		fmt.Println(res)
@@ -3029,12 +3035,6 @@ func main(){
 	//	//intervel := 2
 	//	//res := leastInterval(input,intervel)
 	//	//fmt.Println(res)
-	//}
-	//{
-	//	input := []int{0,0,0,0,0,0,0,0,0,0}
-	//	target := 0
-	//	res := subarraySum(input,target)
-	//	fmt.Println(res)
 	//}
 	//{
 	//	input := 3
