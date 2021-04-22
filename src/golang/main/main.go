@@ -21,6 +21,11 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var n int = 2147483476
+		res := number.NextGreaterElement2(n)
+		fmt.Println(res)
+	}
+	{
 		var n int = 1
 		res := string_issue.CheckRecord2(n)
 		fmt.Println(res)
@@ -2024,11 +2029,6 @@ func main(){
 		p3 := []int{1,0}
 		p4 := []int{0,1}
 		res := diagram.ValidSquare(p1,p2,p3,p4)
-		fmt.Println(res)
-	}
-	{
-		var n int = 123
-		res := number.NextGreaterElement(n)
 		fmt.Println(res)
 	}
 	{

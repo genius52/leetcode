@@ -1,6 +1,50 @@
 package number
 
-import "math"
+import (
+	"math"
+	"sort"
+)
+
+func NextGreaterElement2(n int) int{
+	var num []int
+	for n > 0{
+		num = append([]int{n%10},num...)
+		n = n / 10
+	}
+	var find bool = false
+	var l int = len(num)
+	for i := l - 2;i >= 0;i--{
+		var min_num int = math.MaxInt32
+		var min_index int = 0
+		for j := i + 1;j < l;j++{
+			if num[i] < num[j]{
+				if num[j] < min_num{
+					min_num = num[j]
+					min_index = j
+					find = true
+				}
+			}
+		}
+		if find{
+			num[i],num[min_index] = num[min_index],num[i]
+			find = true
+			sort.Ints(num[i+1:])
+			break
+		}
+	}
+	if !find{
+		return -1
+	}
+	var res int64 = 0
+	for _,n := range num{
+		res *= 10
+		res += int64(n)
+	}
+	if res > math.MaxInt32{
+		return -1
+	}
+	return int(res)
+}
 
 func NextGreaterElement(n int) int {
 	var num []int
