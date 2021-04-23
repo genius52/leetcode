@@ -21,9 +21,14 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
-		//[[]]
-		//2
-		//2
+		//"adc"
+		//"dcda"
+		var s1 string = "adc"
+		var s2 string = "dcda"
+		res := string_issue.CheckInclusion(s1,s2)
+		fmt.Println(res)
+	}
+	{
 		var nums [][]int = [][]int{{1,2,3,4}}
 		var r int = 2
 		var c int = 2
