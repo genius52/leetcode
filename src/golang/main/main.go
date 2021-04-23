@@ -21,6 +21,16 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		//[[]]
+		//2
+		//2
+		var nums [][]int = [][]int{{1,2,3,4}}
+		var r int = 2
+		var c int = 2
+		res := array.MatrixReshape(nums,r,c)
+		fmt.Println(res)
+	}
+	{
 		input := []int{0,0,0,0,0,0,0,0,0,0}
 		target := 0
 		res := array.SubarraySum(input,target)
