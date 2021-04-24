@@ -100,31 +100,6 @@ func pruneTree(root *TreeNode) *TreeNode {
 	return root
 }
 
-func isSametree(t1 *TreeNode, t2 *TreeNode) bool{
-	if nil == t1 && nil == t2{
-		return true
-	}
-	if nil == t1 || nil == t2{
-		return false
-	}
-	if t1.Val != t2.Val{
-		return false
-	}
-	return isSametree(t1.Left,t2.Left) && isSametree(t1.Right,t2.Right);
-}
-
-func isSubtree(s *TreeNode, t *TreeNode) bool {
-	if nil == t{
-		return true
-	}
-	if nil == s{
-		return false
-	}
-	if  isSametree(s,t){
-		return true
-	}
-	return isSametree(s.Left,t) || isSametree(s.Right,t);
-}
 
 func depth_visit(node *TreeNode,cnt_map map[int]int){
 	if nil == node{
