@@ -3,7 +3,7 @@ package tree
 import "container/list"
 type Node2 struct {
 	Val int
-	Children []*Node
+	Children []*Node2
 }
 
 func levelOrder429(root *Node2) [][]int {
