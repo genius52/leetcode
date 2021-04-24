@@ -116,6 +116,7 @@
 #include "number/378. Kth Smallest Element in a Sorted Matrix.hpp"
 #include "number/1823. Find the Winner of the Circular Game.hpp"
 #include "number/518. Coin Change 2.hpp"
+#include "number/575. Distribute Candies.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
@@ -265,6 +266,12 @@ public:
 };
 
 int main() {
+    {
+        Solution_575 s575;
+        std::vector<int> candyType{1,1,2,3};
+        auto res = s575.distributeCandies(candyType);
+        std::cout<<"575 res = "<<res<<std::endl;
+    }
     {
         Solution_518 s518;
         int amount = 5;
