@@ -21,6 +21,17 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var flowerbed []int = []int{0,0,1,0,1}
+		var n int = 1
+		res := array.CanPlaceFlowers(flowerbed, n)
+		fmt.Println(res)
+	}
+	{
+		var n int = 5
+		res := number.FindIntegers(n)
+		fmt.Println(res)
+	}
+	{
 		//"adc"
 		//"dcda"
 		var s1 string = "adc"
