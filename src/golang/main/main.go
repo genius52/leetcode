@@ -21,6 +21,12 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var paths []string = []string{"root/a 1.txt(abcd) 2.txt(efgh)","root/c 3.txt(abcd)",
+			"root/c/d 4.txt(efgh)", "root 4.txt(efgh)"}
+		res := string_issue.FindDuplicate(paths)
+		fmt.Println(res)
+	}
+	{
 		var flowerbed []int = []int{0,0,1,0,1}
 		var n int = 1
 		res := array.CanPlaceFlowers(flowerbed, n)
