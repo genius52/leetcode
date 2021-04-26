@@ -21,6 +21,12 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var nums []int = []int{2,3,4,7}
+		var maximumBit int = 3
+		res := number.GetMaximumXor(nums,maximumBit)
+		fmt.Println(res)
+	}
+	{
 		var points [][]int = [][]int{{1,3},{3,3},{5,3},{2,2}}
 		var queries [][]int = [][]int{{2,3,1},{4,3,1},{1,1,2}}
 		res := diagram.CountPoints(points,queries)
