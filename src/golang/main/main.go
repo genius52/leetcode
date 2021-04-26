@@ -21,6 +21,12 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var points [][]int = [][]int{{1,3},{3,3},{5,3},{2,2}}
+		var queries [][]int = [][]int{{2,3,1},{4,3,1},{1,1,2}}
+		res := diagram.CountPoints(points,queries)
+		fmt.Println(res)
+	}
+	{
 		var paths []string = []string{"root/a 1.txt(abcd) 2.txt(efgh)","root/c 3.txt(abcd)",
 			"root/c/d 4.txt(efgh)", "root 4.txt(efgh)"}
 		res := string_issue.FindDuplicate(paths)
