@@ -117,6 +117,7 @@
 #include "number/1823. Find the Winner of the Circular Game.hpp"
 #include "number/518. Coin Change 2.hpp"
 #include "number/575. Distribute Candies.hpp"
+#include "number/1834. Single-Threaded CPU.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
@@ -266,6 +267,12 @@ public:
 };
 
 int main() {
+    {
+        Solution_1834 s1834;
+        std::vector<std::vector<int>> tasks{{7,10},{7,12},{7,5},{7,4},{7,2}};
+        auto res = s1834.getOrder(tasks);
+        std::cout<<"1834 res = "<<res.size()<<std::endl;
+    }
     {
         Solution_575 s575;
         std::vector<int> candyType{1,1,2,3};
