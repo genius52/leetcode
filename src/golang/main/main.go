@@ -5,6 +5,7 @@ import (
 	"../diagram"
 	"../list_queue"
 	"../number"
+	"../other"
 	"../stack"
 	"../string_issue"
 	"../tree"
@@ -20,6 +21,9 @@ func truncateSentence(s string, k int) string {
 }
 
 func main(){
+	{
+		other.Context_timout_test()
+	}
 	{
 		var nums []int = []int{2,3,4,7}
 		var maximumBit int = 3
