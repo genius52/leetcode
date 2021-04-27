@@ -118,6 +118,7 @@
 #include "number/518. Coin Change 2.hpp"
 #include "number/575. Distribute Candies.hpp"
 #include "number/1834. Single-Threaded CPU.hpp"
+#include "number/1838. Frequency of the Most Frequent Element.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
@@ -192,6 +193,7 @@
 #include "string/1768. Merge Strings Alternately.hpp"
 #include "string/242. Valid Anagram.hpp"
 #include "string/516. Longest Palindromic Subsequence.hpp"
+#include "string/1839. Longest Substring Of All Vowels in Order.hpp"
 #include "list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "list/445. Add Two Numbers II.hpp"
 #include "list/138. Copy List with Random Pointer.hpp"
@@ -267,6 +269,19 @@ public:
 };
 
 int main() {
+    {
+        Solution_1839 s1839;
+        std::string word = "aeiaaioaaaaeiiiiouuuooaauuaeiu";
+        auto res = s1839.longestBeautifulSubstring(word);
+        std::cout<<"1839 res = "<<res<<std::endl;
+    }
+    {
+        Solution_1838 s1838;
+        std::vector<int> nums{1,4,4,4,4,4,4,13};
+        int k = 5;
+        auto res = s1838.maxFrequency(nums,k);
+        std::cout<<"1838 res = "<<res<<std::endl;
+    }
     {
         Solution_1834 s1834;
         std::vector<std::vector<int>> tasks{{7,10},{7,12},{7,5},{7,4},{7,2}};
