@@ -119,6 +119,7 @@
 #include "number/575. Distribute Candies.hpp"
 #include "number/1834. Single-Threaded CPU.hpp"
 #include "number/1838. Frequency of the Most Frequent Element.hpp"
+#include "number/629. K Inverse Pairs Array.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
@@ -269,6 +270,13 @@ public:
 };
 
 int main() {
+    {
+        Solution_629 s629;
+        int n = 10;
+        int k = 8;
+        auto res = s629.kInversePairs(n,k);
+        std::cout<<"629 res = "<<res<<std::endl;
+    }
     {
         Solution_1839 s1839;
         std::string word = "aeiaaioaaaaeiiiiouuuooaauuaeiu";
