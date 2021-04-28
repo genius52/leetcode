@@ -120,6 +120,7 @@
 #include "number/1834. Single-Threaded CPU.hpp"
 #include "number/1838. Frequency of the Most Frequent Element.hpp"
 #include "number/629. K Inverse Pairs Array.hpp"
+#include "number/632. Smallest Range Covering Elements from K Lists.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
@@ -271,6 +272,12 @@ public:
 };
 
 int main() {
+    {
+        Solution_632 s632;
+        std::vector<std::vector<int>> nums{{4,10,15,24,26},{0,9,12,20},{5,18,22,30}};
+        auto res = s632.smallestRange(nums);
+        std::cout<<"632 res = "<<res[0]<<std::endl;
+    }
     {
         Solution_630 s630;
         //[[100, 200], [200, 1300], [1000, 1250], [2000, 3200]]
