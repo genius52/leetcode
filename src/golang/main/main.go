@@ -22,6 +22,18 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var nums []int = []int{1,12,-5,-6,50,3}
+		var k int = 4
+		res := array.FindMaxAverage(nums,k)
+		fmt.Println(res)
+	}
+	{
+		var n int = 1
+		var logs []string = []string{"0:start:0","0:start:2","0:end:5","0:start:6","0:end:6","0:end:7"}
+		res := list_queue.ExclusiveTime(n,logs)
+		fmt.Println(res)
+	}
+	{
 		other.Context_timout_test()
 	}
 	{
