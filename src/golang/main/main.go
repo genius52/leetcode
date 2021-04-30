@@ -22,6 +22,11 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var nums []int = []int{8,7,3,5,3,6,1,4}
+		res := number.FindErrorNums(nums)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{1,12,-5,-6,50,3}
 		var k int = 4
 		res := array.FindMaxAverage(nums,k)
