@@ -1277,33 +1277,6 @@ func singleNumber(nums []int) []int {
 	return []int{first_num,second_num}
 }
 
-//647
-func try_palindromic(s string,start int,end int) int{
-	var cnt int = 0
-	for start >= 0 && end < len(s){
-		if s[start] == s[end]{
-			cnt++
-		}else{
-			break
-		}
-		start--
-		end++
-	}
-	return cnt
-}
-
-//647
-func countSubstrings(s string) int {
-	var res int = 0
-	for start := 0;start < len(s);start++{
-		res += try_palindromic(s,start,start)
-		fmt.Println(res)
-		res += try_palindromic(s,start,start+1)
-		fmt.Println(res)
-	}
-	return res
-}
-
 //1281
 func subtractProductAndSum(n int) int {
 	var sum int = 0
