@@ -209,6 +209,7 @@
 #include "list/460. LFU Cache.hpp"
 #include "list/432. All O`one Data Structure.hpp"
 #include "list/503. Next Greater Element II.hpp"
+#include "list/649. Dota2 Senate.hpp"
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 
@@ -272,6 +273,12 @@ public:
 };
 
 int main() {
+    {
+        Solution_649 s649;
+        std::string senate = "DRRDRDRDRDDRDRDR";
+        auto res = s649.predictPartyVictory(senate);
+        std::cout<<"649 res = "<<res<<std::endl;
+    }
     {
         Solution_632 s632;
         std::vector<std::vector<int>> nums{{4,10,15,24,26},{0,9,12,20},{5,18,22,30}};
