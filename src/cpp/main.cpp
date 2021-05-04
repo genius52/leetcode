@@ -121,6 +121,7 @@
 #include "number/1838. Frequency of the Most Frequent Element.hpp"
 #include "number/629. K Inverse Pairs Array.hpp"
 #include "number/632. Smallest Range Covering Elements from K Lists.hpp"
+#include "number/1850. Minimum Adjacent Swaps to Reach the Kth Smallest Number.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
@@ -273,6 +274,13 @@ public:
 };
 
 int main() {
+    {
+        Solution_1850 s1850;
+        std::string num = "5489355142";
+        int k = 4;
+        auto res = s1850.getMinSwaps(num,k);
+        std::cout<<"1850 res = "<<res<<std::endl;
+    }
     {
         Solution_649 s649;
         std::string senate = "DRRDRDRDRDDRDRDR";
