@@ -22,6 +22,11 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var s string = "1234"
+		res := string_issue.SplitString(s)
+		fmt.Println(res)
+	}
+	{
 		var s string = "1*1"
 		res := number.NumDecodings(s)
 		fmt.Println(res)
