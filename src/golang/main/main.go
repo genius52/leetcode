@@ -22,6 +22,21 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var t1 tree.TreeNode
+		var t2 tree.TreeNode
+		var t3 tree.TreeNode
+		var t4 tree.TreeNode
+		t1.Val = 1
+		t2.Val = 2
+		t3.Val = 3
+		t4.Val = 4
+		t1.Left = &t2
+		//t1.Right = &t3
+		//t2.Right = &t4
+		res := tree.PrintTree(&t1)
+		fmt.Println(res)
+	}
+	{
 		var s string = "1234"
 		res := string_issue.SplitString(s)
 		fmt.Println(res)

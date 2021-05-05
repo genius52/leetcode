@@ -1,6 +1,6 @@
 package tree
 
-import "container/list"
+import "strconv"
 
 //[["", "", "", "1", "", "", ""],
 // ["", "2", "", "", "", "3", ""],
@@ -16,25 +16,32 @@ func preorder_printTree(node *TreeNode,cur_depth int,left int,right int,res [][]
 	if node == nil{
 		return
 	}
-
+	cur_pos := (left + right)/2
+	res[cur_depth][cur_pos] = strconv.Itoa(node.Val)
+	preorder_printTree(node.Left,cur_depth + 1,left,cur_pos - 1,res)
+	preorder_printTree(node.Right,cur_depth + 1,cur_pos + 1,right,res)
 }
 
 //depth i + 1 = (depth i * 2) + 1
-func printTree(root *TreeNode) [][]string {
+func PrintTree(root *TreeNode) [][]string {
 	var res [][]string
 	if root == nil{
 		return res
 	}
 	depth := get_depth(root)
-
+	var columns int = 1
+	for i := 1;i < depth;i++{
+		columns = columns * 2 + 1
+	}
 	res = make([][]string,depth)
 	for i := 0;i < depth;i++{
-		res[i] = make([]string,depth * 2 + 1)
+		res[i] = make([]string,columns)
 	}
-	var q list.List
-	q.PushBack(root)
-	for q.Len() > 0{
-
-	}
+	preorder_printTree(root,0,0,columns - 1,res)
+	//var q list.List
+	//q.PushBack(root)
+	//for q.Len() > 0{
+	//
+	//}
 	return res
 }
