@@ -275,6 +275,12 @@ public:
 
 int main() {
     {
+        Solution_661 s661;
+        std::vector<std::vector<int>> input{{1,1,1},{1,0,1},{1,1,1}};
+        auto res = s661.imageSmoother(input);
+        std::cout<<"661 res = "<<res.size()<<std::endl;
+    }
+    {
         Solution_1850 s1850;
         std::string num = "5489355142";
         int k = 4;
@@ -1404,12 +1410,6 @@ int main() {
         KthLargest s703(k,input);
         auto res = s703.add(3);
         std::cout<<"703 res = "<<res<<std::endl;
-    }
-    {
-        Solution_661 s661;
-        std::vector<std::vector<int>> input{{1,1,1},{1,0,1},{1,1,1}};
-        auto res = s661.imageSmoother(input);
-        std::cout<<"661 res = "<<res.size()<<std::endl;
     }
     {
         Solution_598 s598;
