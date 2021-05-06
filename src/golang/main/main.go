@@ -22,6 +22,11 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var nums []int = []int{4,2,1}
+		res := array.CheckPossibility(nums)
+		fmt.Println(res)
+	}
+	{
 		//var arr []int = []int{1,7,9,11,19,25}
 		//var k int = 4
 		//var x int = 10
