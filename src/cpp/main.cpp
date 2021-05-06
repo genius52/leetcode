@@ -122,6 +122,7 @@
 #include "number/629. K Inverse Pairs Array.hpp"
 #include "number/632. Smallest Range Covering Elements from K Lists.hpp"
 #include "number/1850. Minimum Adjacent Swaps to Reach the Kth Smallest Number.hpp"
+#include "number/667. Beautiful Arrangement II.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
@@ -274,6 +275,13 @@ public:
 };
 
 int main() {
+    {
+        Solution_667 s667;
+        int n = 10;
+        int k = 5;
+        auto res = s667.constructArray(n,k);
+        std::cout<<"667 res = "<<res.size()<<std::endl;
+    }
     {
         Solution_661 s661;
         std::vector<std::vector<int>> input{{1,1,1},{1,0,1},{1,1,1}};
