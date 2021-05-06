@@ -22,6 +22,16 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		//var arr []int = []int{1,7,9,11,19,25}
+		//var k int = 4
+		//var x int = 10
+		var arr []int = []int{1,2,3,4,5}
+		var k int = 4
+		var x int = 3
+		res := array.FindClosestElements2(arr,k,x)
+		fmt.Println(res)
+	}
+	{
 		var t1 tree.TreeNode
 		var t2 tree.TreeNode
 		var t3 tree.TreeNode
@@ -2046,13 +2056,6 @@ func main(){
 	{
 		var mat [][]int = [][]int{{1,0,0},{0,0,1},{1,0,0}}
 		res := array.NumSpecial(mat)
-		fmt.Println(res)
-	}
-	{
-		var arr []int = []int{1,7,9,11,19,25}
-		var k int = 4
-		var x int = 10
-		res := array.FindClosestElements(arr,k,x)
 		fmt.Println(res)
 	}
 	{

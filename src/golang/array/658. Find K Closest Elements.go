@@ -1,6 +1,9 @@
 package array
 
-import "sort"
+import (
+	"math"
+	"sort"
+)
 
 //Input: arr = [1,2,3,4,5], k = 4, x = 3
 //Output: [1,2,3,4]
@@ -38,5 +41,23 @@ func FindClosestElements(arr []int, k int, x int) []int {
 		k--
 	}
 	sort.Ints(res)
+	return res
+}
+
+func FindClosestElements2(arr []int, k int, x int) []int{
+	var l int = len(arr)
+	var left int = 0
+	var right int = l - 1
+	for (right - left) >= k{
+		if math.Abs(float64(arr[left] - x)) <= math.Abs(float64(arr[right] - x)){
+			right--
+		}else{
+			left++
+		}
+	}
+	var res []int
+	for i := left;i <= right;i++{
+		res = append(res,arr[i])
+	}
 	return res
 }

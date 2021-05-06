@@ -22,7 +22,6 @@ func preorder_printTree(node *TreeNode,cur_depth int,left int,right int,res [][]
 	preorder_printTree(node.Right,cur_depth + 1,cur_pos + 1,right,res)
 }
 
-//depth i + 1 = (depth i * 2) + 1
 func PrintTree(root *TreeNode) [][]string {
 	var res [][]string
 	if root == nil{
@@ -38,10 +37,5 @@ func PrintTree(root *TreeNode) [][]string {
 		res[i] = make([]string,columns)
 	}
 	preorder_printTree(root,0,0,columns - 1,res)
-	//var q list.List
-	//q.PushBack(root)
-	//for q.Len() > 0{
-	//
-	//}
 	return res
 }
