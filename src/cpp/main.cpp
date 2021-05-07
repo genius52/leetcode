@@ -123,6 +123,7 @@
 #include "number/632. Smallest Range Covering Elements from K Lists.hpp"
 #include "number/1850. Minimum Adjacent Swaps to Reach the Kth Smallest Number.hpp"
 #include "number/667. Beautiful Arrangement II.hpp"
+#include "number/672. Bulb Switcher II.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
@@ -275,6 +276,13 @@ public:
 };
 
 int main() {
+    {
+        Solution_672 s672;
+        int n = 1000;
+        int presses = 1000;
+        auto res = s672.flipLights(n,presses);
+        std::cout<<"672 res = "<<res<<std::endl;
+    }
     {
         Solution_667 s667;
         int n = 10;
