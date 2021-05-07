@@ -22,6 +22,35 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var t1 tree.TreeNode
+		t1.Val = 5
+		var t2 tree.TreeNode
+		t2.Val = 8
+		var t3 tree.TreeNode
+		t3.Val = 5
+		t1.Left = &t2
+		t1.Right = &t3
+		res := tree.FindSecondMinimumValue(&t1)
+		fmt.Println(res)
+	}
+	//{
+	//	var t1 tree.TreeNode
+	//	t1.Val = 1
+	//	var t2 tree.TreeNode
+	//	t2.Val = 2
+	//	var t3 tree.TreeNode
+	//	t3.Val = 3
+	//	var t4 tree.TreeNode
+	//	t4.Val = 4
+	//	t3.Left = &t1
+	//	t3.Right = &t4
+	//	t1.Right = &t2
+	//	var low int = 1
+	//	var high int = 2
+	//	res := tree.TrimBST(&t3,low,high)
+	//	fmt.Println(res)
+	//}
+	{
 		var nums []int = []int{4,2,1}
 		res := array.CheckPossibility(nums)
 		fmt.Println(res)
