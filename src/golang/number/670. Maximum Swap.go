@@ -1,7 +1,39 @@
 package number
 
+import "strconv"
+
+//9923
 //Input: 2736
 //Output: 7236
+func MaximumSwap2(num int) int{
+	var s string = strconv.Itoa(num)
+	var l int = len(s)
+	var max_digit int = -1
+	var max_index int = -1
+	var left_index int = -1
+	var right_index int = -1
+	for i := l - 1;i >= 0;i--{
+		cur_digit := int(s[i] - '0')
+		if cur_digit > max_digit{
+			max_digit = cur_digit
+			max_index = i
+		}
+		if cur_digit < max_digit{
+			left_index = i
+			right_index = max_index
+		}
+	}
+	if left_index == -1{
+		return num
+	}
+	c := []byte(s)  // 将字符串 s 转换为 []byte 类型
+	c[left_index],c[right_index] = c[right_index],c[left_index]
+	s = string(c)  // 再转换回 string 类型
+	res,_ := strconv.Atoi(s)
+	return res
+}
+
+
 func MaximumSwap(num int) int {
 	if num <= 9{
 		return num
