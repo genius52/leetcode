@@ -167,6 +167,7 @@
 #include "graph/1824. Minimum Sideway Jumps.hpp"
 #include "graph/497. Random Point in Non-overlapping Rectangles.hpp"
 #include "graph/630. Course Schedule III.hpp"
+#include "graph/675. Cut Off Trees for Golf Event.hpp"
 #include "string/1446. Consecutive Characters.cpp"
 #include "string/1451. Rearrange Words in a Sentence.hpp"
 #include "string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -276,6 +277,12 @@ public:
 };
 
 int main() {
+    {
+        Solution_675 S675;
+        std::vector<std::vector<int>> forest{{1,2,3},{0,1,0},{7,6,5}};
+        auto res = S675.cutOffTree(forest);
+        std::cout<<"675 res = "<<res<<std::endl;
+    }
     {
         Solution_672 s672;
         int n = 1000;
