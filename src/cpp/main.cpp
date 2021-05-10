@@ -124,6 +124,7 @@
 #include "number/1850. Minimum Adjacent Swaps to Reach the Kth Smallest Number.hpp"
 #include "number/667. Beautiful Arrangement II.hpp"
 #include "number/672. Bulb Switcher II.hpp"
+#include "number/1854. Maximum Population Year.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
@@ -277,6 +278,12 @@ public:
 };
 
 int main() {
+    {
+        Solution_1854 s1854;
+        std::vector<std::vector<int>> logs{{1993,1999},{2000,2010}};
+        auto res = s1854.maximumPopulation(logs);
+        std::cout<<"1854 res = "<<res<<std::endl;
+    }
     {
         Solution_675 S675;
         std::vector<std::vector<int>> forest{{1,2,3},{0,1,0},{7,6,5}};
