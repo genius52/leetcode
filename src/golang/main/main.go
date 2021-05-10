@@ -22,6 +22,11 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var cards []int = []int{4,1,8,7}
+		res := number.JudgePoint24(cards)
+		fmt.Println(res)
+	}
+	{
 		var equation string = "x=x+2"
 		res := number.SolveEquation(equation)
 		fmt.Println(res)
