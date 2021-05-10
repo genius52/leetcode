@@ -22,6 +22,18 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var equation string = "x=x+2"
+		res := number.SolveEquation(equation)
+		fmt.Println(res)
+	}
+	{
+		var m int = 1
+		var n int = 3
+		var k int = 2
+		res := number.FindKthNumber2(m,n,k)
+		fmt.Println(res)
+	}
+	{
 		var t1 tree.TreeNode
 		t1.Val = 5
 		var t2 tree.TreeNode
