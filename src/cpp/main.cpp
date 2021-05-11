@@ -218,66 +218,14 @@
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 
-
-#include <queue>
-#include <deque>
-class MKAverage {
-public:
-    int m_ = 0;
-    int k_ = 0;
-    int cur_size = 0;
-    std::deque<int> total;
-    std::priority_queue<int,std::deque<int>, std::greater<int>> small_top;
-    std::priority_queue<int,std::deque<int>, std::less<int> > big_top;
-    int cur_sum = 0;
-    int small_sum = 0;
-    int big_sum = 0;
-    MKAverage(int m, int k) {
-        m_ = m;
-        k_ = k;
-    }
-
-    void addElement(int num) {
-        cur_sum += num;
-        if(cur_size < m_){
-            total.push_back(num);
-            if(cur_size < k_){
-                small_top.push(num);
-                big_top.push(num);
-                small_sum += num;
-                big_sum += num;
-            }else{
-                if(num > small_top.top()){
-                    small_sum -= small_top.top();
-                    small_top.pop();
-                    small_top.push(num);
-                    small_sum += num;
-                }
-                if(num < big_top.top()){
-                    big_sum -= big_top.top();
-                    big_top.pop();
-                    big_top.push(num);
-                    big_sum += num;
-                }
-            }
-            cur_size++;
-        }else{
-            cur_sum -= total.front();
-            total.pop_front();
-            total.push_back(num);
-            cur_size++;
-        }
-    }
-
-    int calculateMKAverage() {
-        if(cur_size < m_)
-            return -1;
-        double res = double(cur_sum - big_sum - small_sum)/ double(m_ - k_ * 2);
-        return res;
-    }
-};
-
 int main() {
+    {
+        Solution_684 s684;
+        //std::vector<std::vector<int>> edges{{9,10},{5,8},{2,6},{1,5},{3,8},{4,9},{8,10},{4,10},{6,8},{7,9}};
+        std::vector<std::vector<int>> edges{{1,5},{3,4},{3,5},{4,5},{2,4}};
+        auto res = s684.findRedundantConnection(edges);
+        std::cout << "684 res = " << res[0] << std::endl;
+    }
     {
         Solution_1854 s1854;
         std::vector<std::vector<int>> logs{{1993,1999},{2000,2010}};
@@ -398,13 +346,6 @@ int main() {
         Solution_497 s497(rects);
         auto res = s497.pick();
         std::cout<<"497 res = "<<res[0]<<std::endl;
-    }
-    {
-        MKAverage mk(3,1);
-        mk.addElement(3);
-        mk.addElement(1);
-        auto res = mk.calculateMKAverage();
-        std::cout<<"1825 res = "<<res<<std::endl;
     }
     {
         Solution_1824 s1824;
@@ -754,13 +695,6 @@ int main() {
         int c = 0;
         auto res = s688.knightProbability(N,K,r,c);
         std::cout << "688 res = " << res<< std::endl;
-    }
-    {
-        Solution_684 s684;
-        //std::vector<std::vector<int>> edges{{9,10},{5,8},{2,6},{1,5},{3,8},{4,9},{8,10},{4,10},{6,8},{7,9}};
-        std::vector<std::vector<int>> edges{{1,5},{3,4},{3,5},{4,5},{2,4}};
-        auto res = s684.findRedundantConnection(edges);
-        std::cout << "684 res = " << res[0] << std::endl;
     }
     {
         Solution_97 s97;
