@@ -24,7 +24,7 @@ func main(){
 	{
 		var nums []int = []int{1,2,1,2,6,7,5,1}
 		var k int = 2
-		res := array.MaxSumOfThreeSubarrays(nums,k)
+		res := array.MaxSumOfThreeSubarrays2(nums,k)
 		fmt.Println(res)
 	}
 	{
