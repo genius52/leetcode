@@ -1,7 +1,5 @@
 package array
 
-import "fmt"
-
 //Input: nums = [1,2,1,2,6,7,5,1], k = 2
 //Output: [0,3,5]
 //Explanation: Subarrays [1, 2], [2, 6], [7, 5] correspond to the starting indices [0, 3, 5].
@@ -96,9 +94,6 @@ func MaxSumOfThreeSubarrays2(nums []int, k int) []int{
 	for i := k + 1;i <= l - k * 2;i++{
 		mid_sum = mid_sum - nums[i - 1] + nums[i - 1 + k]
 		cur_sum := left_max[i - 1].val + mid_sum  + right_max[i + k].val
-		if i == 16419 || i == 16420{
-			fmt.Println("i = ",i ,",sum = ",cur_sum,",leftmax = ",left_max[i - 1].val,",mid = ",mid_sum ,",rightmax = ",right_max[i + k].val)
-		}
 		if cur_sum > max_sum{
 			max_sum = cur_sum
 			res = []int{left_max[i - 1].start,i,right_max[i + k].start}

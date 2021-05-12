@@ -22,6 +22,12 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var stickers []string = []string{"with","example","science"}
+		var target string = "thehat"
+		res := string_issue.MinStickers(stickers,target)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{1,2,1,2,6,7,5,1}
 		var k int = 2
 		res := array.MaxSumOfThreeSubarrays2(nums,k)
