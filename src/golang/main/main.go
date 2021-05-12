@@ -22,6 +22,17 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var nums []int = []int{1,2,1,2,6,7,5,1}
+		var k int = 2
+		res := array.MaxSumOfThreeSubarrays(nums,k)
+		fmt.Println(res)
+	}
+	{
+		var edges [][]int = [][]int{{2,1},{3,1},{4,2},{1,4}}
+		res := diagram.FindRedundantDirectedConnection(edges)
+		fmt.Println(res)
+	}
+	{
 		var cards []int = []int{4,1,8,7}
 		res := number.JudgePoint24(cards)
 		fmt.Println(res)
