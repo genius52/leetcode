@@ -22,6 +22,9 @@ func dfs_canPartitionKSubsets(nums []int,target int,total_set int,cur_set int,cu
 			}
 			visited[i] = false
 		}
+		if cur_sum == 0 && cur_set != total_set{
+			break
+		}
 	}
 	return false
 }

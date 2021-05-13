@@ -22,6 +22,12 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var nums []int = []int{4, 3, 2, 3, 5, 2, 1}
+		var k int = 4
+		res := array.CanPartitionKSubsets(nums,k)
+		fmt.Println(res)
+	}
+	{
 		var s string = "00110011"
 		res := string_issue.CountBinarySubstrings(s)
 		fmt.Println(res)
@@ -2078,12 +2084,6 @@ func main(){
 		var prices []int = []int{1,3,2,8,4,56,35,13,56,22,26,41,9}
 		var fee int = 2
 		res := array.MaxProfit4(prices,fee)
-		fmt.Println(res)
-	}
-	{
-		var nums []int = []int{4, 3, 2, 3, 5, 2, 1}
-		var k int = 4
-		res := array.CanPartitionKSubsets(nums,k)
 		fmt.Println(res)
 	}
 	{
