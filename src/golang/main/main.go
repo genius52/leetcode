@@ -22,6 +22,11 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var s string = "00110011"
+		res := string_issue.CountBinarySubstrings(s)
+		fmt.Println(res)
+	}
+	{
 		var stickers []string = []string{"with","example","science"}
 		var target string = "thehat"
 		res := string_issue.MinStickers(stickers,target)
@@ -3307,10 +3312,6 @@ func main(){
 	//	fmt.Println(res)
 	//}
 	//{
-	//	res := countBinarySubstrings("00110011")
-	//	fmt.Println(res)
-	//}
-	//{
 	//	var input [][]int = [][]int{{2,1,1},{1,1,0},{0,1,1}}
 	//	res := orangesRotting(input)
 	//	fmt.Println(res)
@@ -3580,10 +3581,6 @@ func main(){
 	//	largest := make([]int, 4, 4)
 	//	copy(largest,nums[0:4])
 	//	fmt.Println(largest)
-	//}
-	//{
-	//	res := countBinarySubstrings(  "00110011")
-	//	fmt.Println(res)
 	//}
 	//{
 	//	var input [][]int = [][]int{{1,3},{2,3},{3,1}}
