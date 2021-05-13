@@ -169,6 +169,7 @@
 #include "graph/497. Random Point in Non-overlapping Rectangles.hpp"
 #include "graph/630. Course Schedule III.hpp"
 #include "graph/675. Cut Off Trees for Golf Event.hpp"
+#include "graph/699. Falling Squares.hpp"
 #include "string/1446. Consecutive Characters.cpp"
 #include "string/1451. Rearrange Words in a Sentence.hpp"
 #include "string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -219,6 +220,12 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_699 s699;
+        std::vector<std::vector<int>> positions{{9,7},{1,9},{3,1}};
+        auto res = s699.fallingSquares(positions);
+        std::cout << "699 res = " << res[0] << std::endl;
+    }
     {
         Solution_684 s684;
         //std::vector<std::vector<int>> edges{{9,10},{5,8},{2,6},{1,5},{3,8},{4,9},{8,10},{4,10},{6,8},{7,9}};
