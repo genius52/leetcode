@@ -216,10 +216,19 @@
 #include "list/432. All O`one Data Structure.hpp"
 #include "list/503. Next Greater Element II.hpp"
 #include "list/649. Dota2 Senate.hpp"
+#include "list/705. Design HashSet.hpp"
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        MyHashSet s705;
+        s705.add(1);      // set = [1]
+        s705.add(2);      // set = [1, 2]
+        auto res = s705.contains(1); // return True
+        res = s705.contains(3); // return False, (not found)
+        s705.add(2);      // set = [1, 2]
+    }
     {
         Solution_699 s699;
         std::vector<std::vector<int>> positions{{9,7},{1,9},{3,1}};
