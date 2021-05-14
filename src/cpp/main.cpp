@@ -218,10 +218,46 @@
 #include "list/649. Dota2 Senate.hpp"
 #include "list/705. Design HashSet.hpp"
 #include "list/706. Design HashMap.hpp"
+#include "list/707. Design Linked List.hpp"
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+//        MyLinkedList* myLinkedList = new MyLinkedList();
+//        myLinkedList->addAtHead(1);
+//        myLinkedList->addAtTail(3);
+//        myLinkedList->addAtIndex(1, 2);    // linked list becomes 1->2->3
+//        auto res = myLinkedList->get(1);              // return 2
+//        myLinkedList->deleteAtIndex(1);    // now the linked list is 1->3
+//        res = myLinkedList->get(1);              // return 3
+
+//        MyLinkedList* myLinkedList = new MyLinkedList();
+//        myLinkedList->addAtIndex(0,10);
+//        myLinkedList->addAtIndex(0,20);
+//        myLinkedList->addAtIndex(1, 30);    // linked list becomes 1->2->3
+//        auto res = myLinkedList->get(0);              // return 2         // return 3
+
+//        MyLinkedList* myLinkedList = new MyLinkedList();
+//        myLinkedList->addAtHead(0);
+//        myLinkedList->addAtIndex(1,4);
+//        myLinkedList->addAtTail(8);
+//        myLinkedList->addAtHead(5);
+//        myLinkedList->addAtIndex(4,3);
+//        myLinkedList->addAtTail(0);
+//        myLinkedList->addAtTail(5);
+//        myLinkedList->addAtIndex(6,3);
+//        myLinkedList->deleteAtIndex(7);
+//        myLinkedList->deleteAtIndex(5);
+//        myLinkedList->addAtTail(4);    // linked list becomes 1->2->3
+
+        //["MyLinkedList","addAtHead","addAtIndex","get"]
+        //[[],[2],[0,1],[1]]
+        MyLinkedList* myLinkedList = new MyLinkedList();
+        myLinkedList->addAtHead(2);
+        myLinkedList->addAtIndex(0,1);
+        auto res = myLinkedList->get(1);
+    }
     {
         MyHashMap s706;
         s706.put(1, 1); // The map is now [[1,1]]
