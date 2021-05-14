@@ -217,10 +217,18 @@
 #include "list/503. Next Greater Element II.hpp"
 #include "list/649. Dota2 Senate.hpp"
 #include "list/705. Design HashSet.hpp"
+#include "list/706. Design HashMap.hpp"
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        MyHashMap s706;
+        s706.put(1, 1); // The map is now [[1,1]]
+        s706.put(2, 2); // The map is now [[1,1], [2,2]]
+        auto res = s706.get(1);    // return 1, The map is now [[1,1], [2,2]]
+        res = s706.get(3);
+    }
     {
         MyHashSet s705;
         s705.add(1);      // set = [1]
