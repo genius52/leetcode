@@ -8,10 +8,14 @@ public:
         kth = k;
         int len = nums.size();
         for(auto n : nums){
-            q.push(n);
-        }
-        for(int i = 0;i < len - k;i++){
-            q.pop();
+            if(q.size() < k){
+                q.push(n);
+            }else{
+                if(n > q.top()){
+                    q.pop();
+                    q.push(n);
+                }
+            }
         }
     }
     int add(int val) {
