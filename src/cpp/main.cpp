@@ -219,10 +219,18 @@
 #include "list/705. Design HashSet.hpp"
 #include "list/706. Design HashMap.hpp"
 #include "list/707. Design Linked List.hpp"
+#include "list/710. Random Pick with Blacklist.hpp"
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        int n = 5;
+        std::vector<int> blacklist{2,1,0};
+        Solution_710 s710(n,blacklist);
+        auto res = s710.pick();
+        std::cout << "710 res = " << res << std::endl;
+    }
     {
 //        MyLinkedList* myLinkedList = new MyLinkedList();
 //        myLinkedList->addAtHead(1);
