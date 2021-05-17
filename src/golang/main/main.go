@@ -22,6 +22,12 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var memory1 int = 2
+		var memory2 int = 2
+		res := number.MemLeak(memory1,memory2)
+		fmt.Println(res)
+	}
+	{
 		var cards []int = []int{4,1,8,7}
 		exp := number.JudgePoint24ex(cards)
 		fmt.Println(exp)
