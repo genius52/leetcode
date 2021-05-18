@@ -22,6 +22,11 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var nums []int = []int{2,5,4,2,4,5,3,1,2,4}
+		res := number.MaxSumMinProduct(nums)
+		fmt.Println(res)
+	}
+	{
 		var memory1 int = 2
 		var memory2 int = 2
 		res := number.MemLeak(memory1,memory2)
