@@ -4,21 +4,18 @@ package number
 //Output: 8
 func NumSubarrayProductLessThanK(nums []int, k int) int {
 	var l int = len(nums)
-	if l == 0{
-		return 0
-	}
+	var left int = 0
+	var right int = 0
+	var sum int = 1
 	var res int = 0
-	var begin int = 0
-	var end int = 0
-	product := 1
-	for begin < l && end < l{
-		product *= nums[end]
-		for begin <= end && product >= k{
-			product /= nums[begin]
-			begin++
+	for left < l && right < l{
+		sum *= nums[right]
+		for left < l &&  sum >= k{
+			sum /= nums[left]
+			left++
 		}
-		res += end - begin + 1
-		end++
+		res += right - left + 1
+		right++
 	}
 	return res
 }
