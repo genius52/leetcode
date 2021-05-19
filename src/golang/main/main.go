@@ -22,6 +22,13 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var box [][]byte = [][]byte{{'#','#','*','.','*','.'},
+		{'#','#','#','*','.','.'},
+		{'#','#','#','.','#','.'}}
+		res := array.RotateTheBox(box)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{2,5,4,2,4,5,3,1,2,4}
 		res := number.MaxSumMinProduct(nums)
 		fmt.Println(res)
