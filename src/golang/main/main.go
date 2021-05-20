@@ -22,6 +22,11 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var source []string = []string{"a/*/b//*c","blank","d//*e/*/f"}
+		res := string_issue.RemoveComments(source)
+		fmt.Println(res)
+	}
+	{
 		var A []int = []int{9,1,2,8,1,2,3,4,5,9}
 		var B []int = []int{0,1,2,1,4,1,2,3,4,5,0}
 		res := array.FindLength(A,B)
