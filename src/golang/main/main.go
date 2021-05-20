@@ -22,6 +22,11 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var nums []int = []int{1,7,3,6,5,6}
+		res := number.PivotIndex(nums)
+		fmt.Println(res)
+	}
+	{
 		var source []string = []string{"a/*/b//*c","blank","d//*e/*/f"}
 		res := string_issue.RemoveComments(source)
 		fmt.Println(res)
