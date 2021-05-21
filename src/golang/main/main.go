@@ -22,6 +22,12 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var left int = 1
+		var right int = 22
+		res := number.SelfDividingNumbers(left,right)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{1,7,3,6,5,6}
 		res := number.PivotIndex(nums)
 		fmt.Println(res)
