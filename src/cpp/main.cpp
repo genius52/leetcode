@@ -203,6 +203,7 @@
 #include "string/242. Valid Anagram.hpp"
 #include "string/516. Longest Palindromic Subsequence.hpp"
 #include "string/1839. Longest Substring Of All Vowels in Order.hpp"
+#include "string/726. Number of Atoms.hpp"
 #include "list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "list/445. Add Two Numbers II.hpp"
 #include "list/138. Copy List with Random Pointer.hpp"
@@ -220,10 +221,33 @@
 #include "list/706. Design HashMap.hpp"
 #include "list/707. Design Linked List.hpp"
 #include "list/710. Random Pick with Blacklist.hpp"
+#include "list/715. Range Module.hpp"
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_726 s726;
+        std::string formula = "K4(ON(SO3)2)2";
+        auto res = s726.countOfAtoms(formula);
+        std::cout << "726 res = " << res << std::endl;
+    }
+    {
+        //addRange(10, 20): null
+        //removeRange(14, 16): null
+        //queryRange(10, 14): true (Every number in [10, 14) is being tracked)
+        //queryRange(13, 15): false (Numbers like 14, 14.03, 14.17 in [13, 15) are not being tracked)
+        //queryRange(16, 17): true (The number 16 in [16, 17) is still being tracked, despite the remove operation)
+
+//        RangeModule s715;
+//        s715.addRange(10,20);
+//        s715.addRange(1,2);
+//        s715.removeRange(14,16);
+//        auto res = s715.queryRange(10,14);
+//        res = s715.queryRange(13,15);
+//        res = s715.queryRange(16,17);
+//        std::cout << "715 res = " << res << std::endl;
+    }
     {
         int n = 5;
         std::vector<int> blacklist{2,1,0};
