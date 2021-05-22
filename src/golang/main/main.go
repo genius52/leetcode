@@ -22,6 +22,11 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		input := []int{73, 74, 75, 71, 69, 72, 76, 73}
+		res := list_queue.DailyTemperatures(input)
+		fmt.Println(res)
+	}
+	{
 		var N int = 984
 		res := number.MonotoneIncreasingDigits(N)
 		fmt.Println(res)
@@ -2948,11 +2953,6 @@ func main(){
 	//{
 	//	input := []int{4,2,0,3,2,5}
 	//	res := largestRectangleArea(input)
-	//	fmt.Println(res)
-	//}
-	//{
-	//	input := []int{73, 74, 75, 71, 69, 72, 76, 73}
-	//	res := dailyTemperatures(input)
 	//	fmt.Println(res)
 	//}
 	//{
