@@ -6,21 +6,18 @@ func MonotoneIncreasingDigits(N int) int {
 	var data []int
 	for N > 0{
 		rest := N % 10
-		data = append(data,rest)
+		data = append([]int{rest},data...)
 		N = N / 10
 	}
 	var l int = len(data)
-	for i := 0;i < l/2;i++{
-		data[i],data[l - 1 - i] = data[l - 1 - i],data[i]
-	}
-	var pos int = l
+	var change_pos int = l
 	for i := l - 1;i > 0;i--{
 		if data[i] < data[i - 1]{
 			data[i - 1] = data[i - 1] - 1
-			pos = i
+			change_pos = i
 		}
 	}
-	for i := pos;i < l;i++{
+	for i := change_pos;i < l;i++{
 		data[i] = 9
 	}
 	var res int = 0

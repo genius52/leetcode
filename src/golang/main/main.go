@@ -22,6 +22,11 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var N int = 984
+		res := number.MonotoneIncreasingDigits(N)
+		fmt.Println(res)
+	}
+	{
 		var asteroids []int = []int{1,-2,-2,-2}
 		res := list_queue.AsteroidCollision(asteroids)
 		fmt.Println(res)
@@ -2082,11 +2087,6 @@ func main(){
 	{
 		var nums []int = []int{3,4,2,324,432,233,2332,2234,7766,5544,3334,3,9,88,19}
 		res := array.DeleteAndEarn2(nums)
-		fmt.Println(res)
-	}
-	{
-		var N int = 1234
-		res := number.MonotoneIncreasingDigits(N)
 		fmt.Println(res)
 	}
 	{
