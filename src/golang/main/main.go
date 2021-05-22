@@ -22,6 +22,11 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var asteroids []int = []int{1,-2,-2,-2}
+		res := list_queue.AsteroidCollision(asteroids)
+		fmt.Println(res)
+	}
+	{
 		var left int = 1
 		var right int = 22
 		res := number.SelfDividingNumbers(left,right)
