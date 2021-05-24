@@ -22,6 +22,19 @@ func truncateSentence(s string, k int) string {
 
 func main(){
 	{
+		var dist []int = []int{1,3,2}
+		var hour float64 = 2.1
+		res := number.MinSpeedOnTime(dist,hour)
+		fmt.Println(res)
+	}
+	{
+
+		var grid [][]int = [][]int{{1,1,1,1,0,0,0},{0,0,0,1,0,0,0},
+			{0,0,0,1,0,0,1},{1,0,0,1,0,0,0},{0,0,0,1,0,0,0},{0,0,0,1,0,0,0},{0,0,0,1,1,1,1}}
+		res := array.CherryPickup(grid)
+		fmt.Println(res)
+	}
+	{
 		input := []int{73, 74, 75, 71, 69, 72, 76, 73}
 		res := list_queue.DailyTemperatures(input)
 		fmt.Println(res)
