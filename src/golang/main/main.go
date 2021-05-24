@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var input []byte = []byte{'c', 'f', 'j'}
+		res := string_issue.NextGreatestLetter(input,'c')
+		fmt.Println(res)
+	}
+	{
 		var times [][]int = [][]int{{2,1,1},{2,3,1},{3,4,1}}
 		var N int = 4
 		var K int = 2
@@ -3603,11 +3608,6 @@ func main(){
 	//{
 	//	var input []int = []int{1,1,1,1,2,2,2,2,2,2}
 	//	res := hasGroupsSizeX(input)
-	//	fmt.Println(res)
-	//}
-	//{
-	//	var input []byte = []byte{'c', 'f', 'j'}
-	//	res := nextGreatestLetter(input,'c')
 	//	fmt.Println(res)
 	//}
 	//{
