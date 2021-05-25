@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var cost []int = []int{10,15,20}
+		res := array.MinCostClimbingStairs2(cost)
+		fmt.Println(res)
+	}
+	{
 		var input []byte = []byte{'c', 'f', 'j'}
 		res := string_issue.NextGreatestLetter(input,'c')
 		fmt.Println(res)
