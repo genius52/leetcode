@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var target int = 2
+		res := number.ReachNumber(target)
+		fmt.Println(res)
+	}
+	{
 		var cost []int = []int{10,15,20}
 		res := array.MinCostClimbingStairs2(cost)
 		fmt.Println(res)
