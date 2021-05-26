@@ -15,7 +15,7 @@ import (
 
 func main(){
 	{
-		var target int = 2
+		var target int = 5
 		res := number.ReachNumber(target)
 		fmt.Println(res)
 	}

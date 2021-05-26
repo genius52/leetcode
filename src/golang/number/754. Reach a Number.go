@@ -18,6 +18,7 @@ func ReachNumber(target int) int {
 	for (total - target) % 2 != 0{
 		steps++
 		total += each_step
+		each_step++
 	}
 	return steps
 }
