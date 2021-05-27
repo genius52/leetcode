@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		var bottom string = "CCC"
+		var allowed []string = []string{"CBB","ACB","ABD","CDB","BDC","CBC","DBA","DBB","CAB","BCB","BCC","BAA","CCD","BDD","DDD","CCA","CAA","CCC","CCB"}
+		res := diagram.PyramidTransition(bottom,allowed)
+		fmt.Println(res)
+	}
+	{
 		var target int = 5
 		res := number.ReachNumber(target)
 		fmt.Println(res)
