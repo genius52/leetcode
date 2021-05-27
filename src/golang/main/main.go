@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var intervals [][]int = [][]int{{2,10},{3,7},{3,15},{4,11},{6,12},{6,16},{7,8},{7,11},{7,15},{11,12}}
+		res := array.IntersectionSizeTwo(intervals)
+		fmt.Println(res)
+	}
+	{
 		var bottom string = "CCC"
 		var allowed []string = []string{"CBB","ACB","ABD","CDB","BDC","CBC","DBA","DBB","CAB","BCB","BCC","BAA","CCD","BDD","DDD","CCA","CAA","CCC","CCB"}
 		res := diagram.PyramidTransition(bottom,allowed)
