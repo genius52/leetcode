@@ -205,6 +205,7 @@
 #include "string/1839. Longest Substring Of All Vowels in Order.hpp"
 #include "string/726. Number of Atoms.hpp"
 #include "string/745. Prefix and Suffix Search.hpp"
+#include "string/767. Reorganize String.hpp"
 #include "list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "list/445. Add Two Numbers II.hpp"
 #include "list/138. Copy List with Random Pointer.hpp"
@@ -227,6 +228,12 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_767 s767;
+        std::string s = "aabbac";
+        auto res = s767.reorganizeString(s);
+        std::cout << "767 res = " << res << std::endl;
+    }
     {
         vector<string> words{"apple"};
         WordFilter s745(words);
