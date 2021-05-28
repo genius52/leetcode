@@ -319,38 +319,6 @@ func numPairsDivisibleBy60(time []int) int {
 	return res
 }
 
-//744
-func nextGreatestLetter(letters []byte, target byte) byte {
-	var low int = 0
-	var high int = len(letters) - 1
-	if target < letters[low] || target > letters[high]{
-		return letters[low]
-	}
-	var res byte = 0
-	for low < high{
-		var mid int = (low + high)/2
-		if letters[mid] == target{
-			if mid + 1 <= high{
-				res = letters[mid+1]
-			}
-			break
-		}else if letters[mid] < target{
-			low = mid
-			if letters[low] > target{
-				res = letters[low]
-				break
-			}
-		}else{
-			high = mid
-			if letters[high] < target{
-				res = letters[mid]
-				break
-			}
-		}
-	}
-	return res
-}
-
 func get_value(n int) int {
 	if n == 0{
 		return 1
@@ -392,32 +360,6 @@ func numEquivDominoPairs(dominoes [][]int) int {
 		if num >= 2{
 			res += gen_last_value(num,2)
 		}
-	}
-	return res
-}
-
-//763 eager way
-func partitionLabels(S string) []int {
-	var res []int
-	var dict [26]int
-	for pos,e := range S{
-		dict[e - 'a'] = pos
-	}
-	l := len(S)
-	i := 0
-	start := 0
-	last := 0
-	for i < l {
-		if dict[S[i] - 'a'] > last{
-			last = dict[S[i] - 'a']
-		}
-		if last == i{
-			if last == i{
-				res = append(res, last - start + 1)
-				start = i + 1
-			}
-		}
-		i++
 	}
 	return res
 }
