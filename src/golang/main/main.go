@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var arr []int = []int{1,2,3,4,5,0}
+		res := array.MaxChunksToSorted(arr)
+		fmt.Println(res)
+	}
+	{
 		input := "ababcbacadefegdehijhklij"
 		res := string_issue.PartitionLabels(input)
 		fmt.Println(res)
