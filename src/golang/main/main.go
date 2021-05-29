@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var arr []int = []int{2,1,3,4,4}
+		res := array.MaxChunksToSorted2(arr)
+		fmt.Println(res)
+	}
+	{
 		var arr []int = []int{1,2,3,4,5,0}
 		res := array.MaxChunksToSorted(arr)
 		fmt.Println(res)
