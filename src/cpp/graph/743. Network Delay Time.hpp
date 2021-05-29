@@ -53,6 +53,40 @@ public:
         return max_distance;
     }
 
+    //Floyd
+    int networkDelayTime2(vector<vector<int>>& times, int n, int k){
+        std::vector<int> distance_from_k(n + 1,2147483647);
+        std::vector<std::vector<int>> graph(n + 1,std::vector<int>(n + 1,-1));
+        for(auto t : times){
+            graph[t[0]][t[1]] = t[2];
+            if(t[0] == k){
+                distance_from_k[t[1]] = t[2];
+            }
+        }
+
+        for(int mid = 1;mid <= n;mid++){
+            for(int i = 1;i <= n;i++){
+                for(int j = 1;j <= n;j++){
+                    if(graph[i][mid] != -1 && graph[mid][j] != -1){
+                        if(graph[i][j] == -1 || graph[i][mid] + graph[mid][j] < graph[i][j]){
+                            graph[i][j] = graph[i][mid] + graph[mid][j];
+                        }
+                    }
+                };
+            };
+        };
+        int res = 0;
+        for(int i = 1;i <= n;i++){
+            if(i == k)
+                continue;
+            if(graph[k][i] == -1)
+                return -1;
+            if(graph[k][i] > res)
+                res = graph[k][i];
+        }
+        return res;
+    }
+
     //bellman ford
 //    int networkDelayTime(vector<vector<int>>& times, int n, int k) {
 //        std::vector<int> dis(n + 1,2147483647);

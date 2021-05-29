@@ -229,6 +229,14 @@
 
 int main() {
     {
+        Solution_743 s743;
+        std::vector<std::vector<int>> times{{1,2,1},{2,3,2},{1,3,4}};
+        int n = 3;
+        int k = 1;
+        auto res = s743.networkDelayTime2(times,n,k);
+        std::cout << "743 res = " << res << std::endl;
+    }
+    {
         Solution_767 s767;
         std::string s = "aabbac";
         auto res = s767.reorganizeString(s);
@@ -239,14 +247,6 @@ int main() {
         WordFilter s745(words);
         auto res = s745.f("a", "e");
         std::cout << "745 res = " << res << std::endl;
-    }
-    {
-        Solution_743 s743;
-        std::vector<std::vector<int>> times{{1,2,1},{2,3,2},{1,3,4}};
-        int n = 3;
-        int k = 1;
-        auto res = s743.networkDelayTime(times,n,k);
-        std::cout << "743 res = " << res << std::endl;
     }
     {
         Solution_726 s726;
