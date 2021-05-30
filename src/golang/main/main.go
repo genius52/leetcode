@@ -15,6 +15,19 @@ import (
 
 func main(){
 	{
+		n := "-13"
+		x := 2
+		res := number.MaxValue(n,x)
+		fmt.Println(res)
+	}
+	{
+		firstWord := "acb"
+		secondWord := "cba"
+		targetWord := "cdb"
+		res := string_issue.IsSumEqual(firstWord,secondWord,targetWord)
+		fmt.Println(res)
+	}
+	{
 		var board [][]int = [][]int{{1,2,3},{4,0,5}}
 		res := diagram.SlidingPuzzle(board)
 		fmt.Println(res)
