@@ -49,67 +49,28 @@ public:
         return 1;
     }
 
-//    int dfs_swimInWater(vector<vector<int>>& grid,int rows,int columns,int r,int c,int last_height,int cur_time,
-//                        std::vector<std::vector<int>>& visited,std::vector<std::vector<std::vector<int>>>& memo){
-//        if(r < 0 || r >= rows || c < 0 || c >= columns){
-//            return -1;
-//        }
-//        if(r == rows - 1 && c == columns - 1){
-//            if(last_height >= grid[r][c])
-//                return 0;
-//            else{
-//                return grid[r][c] - last_height;
-//            }
-//        }
-//        if(visited[r][c])
-//            return -1;
-//        if(memo[r][c][cur_time] != 0)
-//            return memo[r][c][cur_time];
-//        visited[r][c] = true;
-//        int res = 0;
-//        int wait_time = 0;
-//        if(r != 0 || c != 0){
-//            if(last_height != grid[r][c]) {
-//                int high = max(grid[r][c],last_height);
-//                if(high > cur_time){
-//                    wait_time = int(abs(high - cur_time));
-//                }
-//                cur_time += wait_time;
-//            }
-//        }
-//
-//        int next_steps = 2147483647;
-//        int steps1 = dfs_swimInWater(grid,rows,columns,r + 1,c,max(grid[r][c],last_height),cur_time,visited,memo);
-//        if(steps1 != -1){
-//            next_steps = min(next_steps,steps1);
-//        }
-//        int steps2 = dfs_swimInWater(grid,rows,columns,r - 1,c,max(grid[r][c],last_height),cur_time,visited,memo);
-//        if(steps2 != -1){
-//            next_steps = min(next_steps,steps2);
-//        }
-//        int steps3 = dfs_swimInWater(grid,rows,columns,r,c - 1,max(grid[r][c],last_height),cur_time,visited,memo);
-//        if(steps3 != -1){
-//            next_steps = min(next_steps,steps3);
-//        }
-//        int steps4 = dfs_swimInWater(grid,rows,columns,r,c + 1,max(grid[r][c],last_height),cur_time,visited,memo);
-//        if(steps4 != -1){
-//            next_steps = min(next_steps,steps4);
-//        }
-//        if(next_steps == 2147483647){
-//            res = -1;
-//        }else{
-//            res = next_steps + wait_time;
-//        }
-//        visited[r][c] = false;
-//        memo[r][c][cur_time] = res;
-//        return res;
-//    }
-//
-//    int swimInWater(vector<vector<int>>& grid){
-//        int rows = grid.size();
-//        int columns = grid[0].size();
-//        std::vector<std::vector<int>> visited(rows,std::vector<int>(columns));
-//        std::vector<std::vector<std::vector<int>>> memo(rows,std::vector<std::vector<int>>(columns,std::vector<int>(rows * columns)));
-//        return dfs_swimInWater(grid,rows,columns,0,0,-1,0,visited,memo);
-//    }
+    std::vector<std::vector<int>> dirs{{-1,0},{1,0},{0,-1},{0,1}};
+    void dfs_swimInWater(vector<vector<int>>& grid,int rows,int columns,int r,int c,int last_height,std::vector<std::vector<int>>& dp){
+        if(r < 0 || r >= rows || c < 0 || c >= columns){
+            return;
+        }
+        if(max(grid[r][c],last_height) >= dp[r][c])
+            return;
+
+        dp[r][c] = max(last_height,grid[r][c]);
+
+        for(auto d : dirs){
+            int i = r + d[0];
+            int j = c + d[1];
+            dfs_swimInWater(grid,rows,columns,i,j,dp[r][c],dp);
+        }
+    }
+
+    int swimInWater2(vector<vector<int>>& grid){
+        int rows = grid.size();
+        int columns = grid[0].size();
+        std::vector<std::vector<int>> dp(rows,std::vector<int>(columns,2147483647));
+        dfs_swimInWater(grid,rows,columns,0,0,grid[0][0],dp);
+        return dp[rows - 1][columns - 1];
+    }
 };

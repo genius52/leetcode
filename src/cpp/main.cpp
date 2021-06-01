@@ -236,7 +236,7 @@ int main() {
         //std::vector<std::vector<int>> grid{{3,2},{1,0}};
         std::vector<std::vector<int>> grid{{3,19,34,15,7,21},{31,25,8,0,16,27},{4,1,13,18,28,17},
         {6,2,24,23,10,35},{20,5,22,12,32,29},{33,11,9,14,30,26}};
-        auto res = s778.swimInWater(grid);
+        auto res = s778.swimInWater2(grid);
         std::cout << "778 res = " << res << std::endl;
     }
     {
