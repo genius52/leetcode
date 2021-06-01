@@ -9,8 +9,8 @@ func recursive_kthGrammar(N int,K int)int{
 	if N == 1{
 		return 0
 	}
-	last := recursive_kthGrammar(N - 1,(K + 1)/2)
-	if last == 0{
+	parent_val := recursive_kthGrammar(N - 1,(K + 1)/2)
+	if parent_val == 0{
 		if K % 2 == 0{
 			return  1
 		}else{
