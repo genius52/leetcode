@@ -170,6 +170,8 @@
 #include "graph/630. Course Schedule III.hpp"
 #include "graph/675. Cut Off Trees for Golf Event.hpp"
 #include "graph/699. Falling Squares.hpp"
+#include "graph/1882. Process Tasks Using Servers.hpp"
+#include "graph/778. Swim in Rising Water.hpp"
 #include "string/1446. Consecutive Characters.cpp"
 #include "string/1451. Rearrange Words in a Sentence.hpp"
 #include "string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -228,6 +230,28 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_778 s778;
+        //std::vector<std::vector<int>> grid{{0,1,2,3,4},{24,23,22,21,5},{12,13,14,15,16},{11,17,18,19,20},{10,9,8,7,6}};
+        //std::vector<std::vector<int>> grid{{3,2},{1,0}};
+        std::vector<std::vector<int>> grid{{3,19,34,15,7,21},{31,25,8,0,16,27},{4,1,13,18,28,17},
+        {6,2,24,23,10,35},{20,5,22,12,32,29},{33,11,9,14,30,26}};
+        auto res = s778.swimInWater(grid);
+        std::cout << "778 res = " << res << std::endl;
+    }
+    {
+        //[10,63,95,16,85,57,83,95,6,29,71]
+        //[70,31,83,15,32,67,98,65,56,48,38,90,5]
+        Solution_1882 s1882;
+//        std::vector<int> servers{10,63,95,16,85,57,83,95,6,29,71};
+//        std::vector<int> tasks{70,31,83,15,32,67,98,65,56,48,38,90,5};
+//        std::vector<int> servers{3,3,2};
+//        std::vector<int> tasks{1,2,3,2,1,2};
+        std::vector<int> servers{31,96,73,90,15,11,1,90,72,9,30,88};
+        std::vector<int> tasks{87,10,3,5,76,74,38,64,16,64,93,95,60,79,54,26,30,44,64,71};
+        auto res = s1882.assignTasks(servers,tasks);
+        std::cout << "743 res = " << res[0] << std::endl;
+    }
     {
         Solution_743 s743;
         std::vector<std::vector<int>> times{{1,2,1},{2,3,2},{1,3,4}};
