@@ -231,6 +231,12 @@
 
 int main() {
     {
+        Solution_781 s781;
+        std::vector<int> answers{3, 3, 3,3,3};
+        auto res = s781.numRabbits(answers);
+        std::cout << "781 res = " << res << std::endl;
+    }
+    {
         Solution_778 s778;
         //std::vector<std::vector<int>> grid{{0,1,2,3,4},{24,23,22,21,5},{12,13,14,15,16},{11,17,18,19,20},{10,9,8,7,6}};
         //std::vector<std::vector<int>> grid{{3,2},{1,0}};
@@ -1265,12 +1271,6 @@ int main() {
         Solution_1619 s1619;
         std::vector<int> arr{ 6,0,7,0,7,5,7,8,3,4,0,7,8,1,6,8,1,1,2,4,8,1,9,5,4,3,8,5,10,8,6,6,1,0,6,10,8,2,3,4 };
         auto res = s1619.trimMean(arr);
-        std::cout << "781 res = " << res << std::endl;
-    }
-    {
-        Solution_781 s781;
-        std::vector<int> answers{};
-        auto res = s781.numRabbits(answers);
         std::cout << "781 res = " << res << std::endl;
     }
     {
