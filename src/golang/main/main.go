@@ -15,6 +15,25 @@ import (
 
 func main(){
 	{
+		//[1,0,48,null,null,12,49]
+		var t1 tree.TreeNode
+		t1.Val = 1
+		var t2 tree.TreeNode
+		t2.Val = 0
+		var t3 tree.TreeNode
+		t3.Val = 48
+		var t4 tree.TreeNode
+		t4.Val = 12
+		var t5 tree.TreeNode
+		t5.Val = 49
+		t1.Left = &t2
+		t1.Right = &t3
+		t3.Left = &t4
+		t3.Right = &t5
+		res := tree.MinDiffInBST(&t1)
+		fmt.Println(res)
+	}
+	{
 		n := "-13"
 		x := 2
 		res := number.MaxValue(n,x)
