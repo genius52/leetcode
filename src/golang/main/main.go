@@ -15,6 +15,21 @@ import (
 
 func main(){
 	{
+		//var n int = 5
+		//var edges [][]int = [][]int{{0,1,100},{0,2,100},{0,3,10},{1,2,100},{1,4,10},{2,1,10},{2,3,100},{2,4,100},{3,2,10},{3,4,100}}
+		//var src int = 0
+		//var dst int = 4
+		//var k int = 3
+
+		var n int = 3
+		var edges [][]int = [][]int{{0,1,100},{1,2,100},{0,2,500}}
+		var src int = 0
+		var dst int = 2
+		var k int = 1
+		res := diagram.FindCheapestPrice(n,edges,src,dst,k)
+		fmt.Println(res)
+	}
+	{
 		//[1,0,48,null,null,12,49]
 		var t1 tree.TreeNode
 		t1.Val = 1
@@ -2083,20 +2098,6 @@ func main(){
 		var k int = 34
 		res := diagram.NumberOfSets(n,k)
 		fmt.Println(res)
-	}
-	{
-		//5
-		//[[0,1,100],[0,2,100],[0,3,10],[1,2,100],[1,4,10],[2,1,10],[2,3,100],[2,4,100],[3,2,10],[3,4,100]]
-		//0
-		//4
-		//3
-		//var n int = 5
-		//var edges [][]int = [][]int{{0,1,100},{0,2,100},{0,3,10},{1,2,100},{1,4,10},{2,1,10},{2,3,100},{2,4,100},{3,2,10},{3,4,100}}
-		//var src int = 0
-		//var dst int = 4
-		//var k int = 3
-		//res := diagram.FindCheapestPrice(n,edges,src,dst,k)
-		//fmt.Println(res)
 	}
 	{
 		//var graph [][]int = [][]int{{1},{0,3},{3},{1,2}}
