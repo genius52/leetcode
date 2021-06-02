@@ -125,6 +125,7 @@
 #include "number/667. Beautiful Arrangement II.hpp"
 #include "number/672. Bulb Switcher II.hpp"
 #include "number/1854. Maximum Population Year.hpp"
+#include "number/786. K-th Smallest Prime Fraction.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
@@ -230,6 +231,13 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_786 s786;
+        std::vector<int> arr{1,2,3,5};
+        int k = 3;
+        auto res = s786.kthSmallestPrimeFraction(arr,k);
+        std::cout << "786 res = " << res[0] << std::endl;
+    }
     {
         Solution_781 s781;
         std::vector<int> answers{3, 3, 3,3,3};

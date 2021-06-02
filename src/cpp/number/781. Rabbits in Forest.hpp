@@ -28,7 +28,7 @@ public:
         }
         return cnt;
     }
-    
+
 //    int numRabbits(vector<int>& answers) {
 //        std::unordered_map<int,int> record;
 //        for(auto a : answers){
