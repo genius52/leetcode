@@ -56,7 +56,48 @@ import "container/list"
 //	return true
 //}
 
-func IsBipartite(graph [][]int) bool {
+//Our goal is trying to use two colors to color the graph and see
+//if there are any adjacent nodes having the same color.
+//dfs
+//group1 = 1
+//group2 = -1
+//相邻节点颜色不能相同，否则edge属于同一个组
+func make_color(graph [][]int,node int,color_group []int,color int)bool{
+	if color_group[node] == -color {
+		return false
+	}
+	color_group[node] = color
+	for _,neighbour := range graph[node]{
+		if color_group[neighbour] == 0{
+			res := make_color(graph,neighbour,color_group,-color)
+			if !res{
+				return false
+			}
+		}else{
+			if color_group[neighbour] == color{
+				return false
+			}
+		}
+	}
+	return true
+}
+
+func IsBipartite(graph [][]int) bool{
+	var l int = len(graph)
+	var color_group []int = make([]int,l)
+	for i := 0;i < l;i++{
+		if color_group[i] != 0{
+			continue
+		}
+		if !make_color(graph,i,color_group,1){
+			return false
+		}
+	}
+	return true
+}
+
+//bfs solution
+func IsBipartite2(graph [][]int) bool {
 	var l int = len(graph)
 	var relation [][]bool = make([][]bool,l)
 	for i := 0;i < l;i++{
