@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		var S string = "cbsdf"
+		var T string = "abckw"
+		res := string_issue.CustomSortString(S,T)
+		fmt.Println(res)
+	}
+	{
 		var N int = 4
 		res := diagram.NumTilings(N)
 		fmt.Println(res)
@@ -3621,10 +3627,6 @@ func main(){
 	//}
 	//{
 	//	res := maxSumAfterPartitioning([]int{1,15,7,9,2,5,10},3)
-	//	fmt.Println(res)
-	//}
-	//{
-	//	res := customSortString("cba","abcd")
 	//	fmt.Println(res)
 	//}
 	//{
