@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var N int = 4
+		res := diagram.NumTilings(N)
+		fmt.Println(res)
+	}
+	{
 		//var n int = 5
 		//var edges [][]int = [][]int{{0,1,100},{0,2,100},{0,3,10},{1,2,100},{1,4,10},{2,1,10},{2,3,100},{2,4,100},{3,2,10},{3,4,100}}
 		//var src int = 0
@@ -2087,11 +2092,6 @@ func main(){
 		var words []string = []string{"a", "bb", "acd", "ace"}
 		res := string_issue.NumMatchingSubseq(S,words)
 		fmt.Println(res)
-	}
-	{
-		//var N int = 4
-		//res := diagram.NumTilings(N)
-		//fmt.Println(res)
 	}
 	{
 		var n int = 999
