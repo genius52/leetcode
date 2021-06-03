@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var board []string = []string{"XOX","OXO","XOX"}
+		res := diagram.ValidTicTacToe(board)
+		fmt.Println(res)
+	}
+	{
 		var S string = "cbsdf"
 		var T string = "abckw"
 		res := string_issue.CustomSortString(S,T)
