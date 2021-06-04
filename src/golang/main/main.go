@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		var s string = "abcde"
+		var goal string = "abced"
+		res := string_issue.RotateString(s,goal)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{2,1,4,3}
 		var left int = 3
 		var right int = 6
