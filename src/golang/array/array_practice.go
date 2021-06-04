@@ -703,36 +703,6 @@ func intervalIntersection(A [][]int, B [][]int) [][]int {
 	return res
 }
 
-// 791
-// S = "cba"
-// T = "abcd"
-// Output: "cbad"
-func customSortString(S string, T string) string {
-	var records map[int32]int = make(map[int32]int)
-	for i,val := range S{
-		records[val] = i
-	}
-
-	for i := 1;i < len(T) - 1;i++{
-		for j := 0; j < len(T) - i;j++{
-			var first_score,second_score int = -1,-1
-			if _,ok := records[int32(T[j])];ok{
-				first_score = records[int32(T[j])]
-			}
-			if _,ok := records[int32(T[j+1])];ok{
-				second_score = records[int32(T[j+1])]
-			}
-			if first_score > second_score{
-				c := []byte(T)  // 将字符串 s 转换为 []byte 类型
-				c[j] = T[j+1]
-				c[j+1] = T[j]
-				T = string(c)
-			}
-		}
-	}
-	return T
-}
-
 //1043
 func max_int_slice(nums []int) int{
 	var max int = 0

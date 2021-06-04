@@ -15,6 +15,13 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{2,1,4,3}
+		var left int = 3
+		var right int = 6
+		res := array.NumSubarrayBoundedMax(nums,left,right)
+		fmt.Println(res)
+	}
+	{
 		var board []string = []string{"XOX","OXO","XOX"}
 		res := diagram.ValidTicTacToe(board)
 		fmt.Println(res)
