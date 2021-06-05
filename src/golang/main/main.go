@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var A []int = []int{1, 3, 0, 2, 4}
+		res := array.BestRotation(A)
+		fmt.Println(res)
+	}
+	{
 		var s string = "abcde"
 		var goal string = "abced"
 		res := string_issue.RotateString(s,goal)
