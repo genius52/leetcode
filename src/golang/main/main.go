@@ -15,6 +15,14 @@ import (
 
 func main(){
 	{
+		//var mat [][]int = [][]int{{0,0,0},{0,1,0},{1,1,1}}
+		//var target [][]int = [][]int{{1,1,1},{0,1,0},{0,0,0}}
+		var mat [][]int = [][]int{{1,1},{0,1}}
+		var target [][]int = [][]int{{1,1},{1,0}}
+		res := array.FindRotation(mat,target)
+		fmt.Println(res)
+	}
+	{
 		var A []int = []int{1, 3, 0, 2, 4}
 		res := array.BestRotation(A)
 		fmt.Println(res)
