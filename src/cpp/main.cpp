@@ -62,6 +62,7 @@
 #include "array/1818. Minimum Absolute Sum Difference.hpp"
 #include "array/480. Sliding Window Median.hpp"
 #include "array/493. Reverse Pairs.hpp"
+#include "array/1887. Reduction Operations to Make the Array Elements Equal.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
@@ -231,6 +232,12 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_1887 s1887;
+        std::vector<int> nums{1,1,1};
+        auto res = s1887.reductionOperations(nums);
+        std::cout << "1887 res = " << res << std::endl;
+    }
     {
         Solution_786 s786;
         std::vector<int> arr{1,2,3,5};
