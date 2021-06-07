@@ -15,6 +15,19 @@ import (
 
 func main(){
 	{
+		var s string = "01001001101"
+		res := string_issue.MinFlips(s)
+		fmt.Println(res)
+	}
+	{
+		//[[1,0,0,0],[1,1,0,0]]
+		//[[1,1],[1,0]]
+		var grid [][]int = [][]int{{1,0,0,0},{1,1,0,0}}
+		var hits [][]int = [][]int{{1,1},{1,0}}
+		res := diagram.HitBricks(grid,hits)
+		fmt.Println(res)
+	}
+	{
 		//var mat [][]int = [][]int{{0,0,0},{0,1,0},{1,1,1}}
 		//var target [][]int = [][]int{{1,1,1},{0,1,0},{0,0,0}}
 		var mat [][]int = [][]int{{1,1},{0,1}}
