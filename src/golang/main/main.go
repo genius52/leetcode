@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{1,2,3,4,5,6,7,8}
+		res := array.SplitArraySameAverage(nums)
+		fmt.Println(res)
+	}
+	{
 		var s string = "01001001101"
 		res := string_issue.MinFlips(s)
 		fmt.Println(res)
