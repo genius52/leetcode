@@ -15,6 +15,14 @@ import (
 
 func main(){
 	{
+		//"heeellooo"
+		//["hello", "hi", "helo"]
+		var S string = "heeellooo"
+		var words []string = []string{"hello", "hi", "helo"}
+		res := string_issue.ExpressiveWords(S,words)
+		fmt.Println(res)
+	}
+	{
 		var N int = 60
 		res := number.SoupServings(N)
 		fmt.Println(res)
