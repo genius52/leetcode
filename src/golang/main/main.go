@@ -15,6 +15,13 @@ import (
 
 func main(){
 	{
+		var routes [][]int = [][]int{{1,2,7},{3,6,7}}
+		var source int = 1
+		var target int = 6
+		res := diagram.NumBusesToDestination(routes,source,target)
+		fmt.Println(res)
+	}
+	{
 		input := []string{"900 google.mail.com", "50 yahoo.com", "1 intel.mail.com", "5 wiki.org"}
 		res := string_issue.SubdomainVisits(input)
 		fmt.Println(res)
