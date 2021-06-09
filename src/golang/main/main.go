@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var N int = 60
+		res := number.SoupServings(N)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{1,2,3,4,5,6,7,8}
 		res := array.SplitArraySameAverage(nums)
 		fmt.Println(res)
