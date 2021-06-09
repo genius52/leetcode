@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		input := []string{"900 google.mail.com", "50 yahoo.com", "1 intel.mail.com", "5 wiki.org"}
+		res := string_issue.SubdomainVisits(input)
+		fmt.Println(res)
+	}
+	{
 		//"heeellooo"
 		//["hello", "hi", "helo"]
 		var S string = "heeellooo"
@@ -3698,11 +3703,6 @@ func main(){
 	//}
 	//{
 	//	res := pathInZigZagTree(14)
-	//	fmt.Println(res)
-	//}
-	//{
-	//	input := []string_issue{"900 google.mail.com", "50 yahoo.com", "1 intel.mail.com", "5 wiki.org"}
-	//	res := subdomainVisits(input)
 	//	fmt.Println(res)
 	//}
 	//{
