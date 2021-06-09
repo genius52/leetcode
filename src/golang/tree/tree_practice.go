@@ -81,26 +81,6 @@ func inorder_tree(node *tree_node){
 	inorder_tree(node.right)
 }
 
-
-func pruneTree(root *TreeNode) *TreeNode {
-	if(nil == root){
-		return root;
-	}
-	if(nil != root.Left){
-		root.Left = pruneTree(root.Left)
-	}
-	if(nil != root.Right){
-		root.Right = pruneTree(root.Right)
-	}
-	if(0 == root.Val){
-		if(nil == root.Left && nil == root.Right){
-			return nil
-		}
-	}
-	return root
-}
-
-
 func depth_visit(node *TreeNode,cnt_map map[int]int){
 	if nil == node{
 		return
