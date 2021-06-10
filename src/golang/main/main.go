@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		var paragraph string = "Bob hit a ball, the hit BALL flew far after it was hit."
+		var banned []string = []string{"hit"}
+		res := string_issue.MostCommonWord(paragraph,banned)
+		fmt.Println(res)
+	}
+	{
 		var routes [][]int = [][]int{{1,2,7},{3,6,7}}
 		var source int = 1
 		var target int = 6
