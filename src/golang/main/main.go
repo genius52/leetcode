@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var grid [][]int = [][]int{{1,1},{1,0}}
+		res := diagram.LargestIsland(grid)
+		fmt.Println(res)
+	}
+	{
 		var paragraph string = "Bob hit a ball, the hit BALL flew far after it was hit."
 		var banned []string = []string{"hit"}
 		res := string_issue.MostCommonWord(paragraph,banned)
