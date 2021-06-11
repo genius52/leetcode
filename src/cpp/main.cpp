@@ -174,6 +174,7 @@
 #include "graph/699. Falling Squares.hpp"
 #include "graph/1882. Process Tasks Using Servers.hpp"
 #include "graph/778. Swim in Rising Water.hpp"
+#include "graph/826. Most Profit Assigning Work.hpp"
 #include "string/1446. Consecutive Characters.cpp"
 #include "string/1451. Rearrange Words in a Sentence.hpp"
 #include "string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -232,6 +233,14 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_826 s826;
+        std::vector<int> difficulty{2,4,6,8,10};
+        std::vector<int> profit{10,20,30,40,50};
+        std::vector<int> worker{4,5,6,7};
+        auto res = s826.maxProfitAssignment(difficulty,profit,worker);
+        std::cout << "826 res = " << res << std::endl;
+    }
     {
         Solution_1887 s1887;
         std::vector<int> nums{1,1,1};
