@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var s string = "ABC"
+		res := string_issue.UniqueLetterString(s)
+		fmt.Println(res)
+	}
+	{
 		var grid [][]int = [][]int{{1,1},{1,0}}
 		res := diagram.LargestIsland(grid)
 		fmt.Println(res)
