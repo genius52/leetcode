@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var n int = 5
+		res := number.ConsecutiveNumbersSum(n)
+		fmt.Println(res)
+	}
+	{
 		var s string = "ABC"
 		res := string_issue.UniqueLetterString(s)
 		fmt.Println(res)
