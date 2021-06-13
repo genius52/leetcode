@@ -16,6 +16,11 @@ import (
 
 func main(){
 	{
+		var image [][]int = [][]int{{1,1,0,0},{1,0,0,1},{0,1,1,1},{1,0,1,0}}
+		res := array.FlipAndInvertImage(image)
+		fmt.Println(res)
+	}
+	{
 		var triplets [][]int = [][]int{{7,15,15},{11,8,3},{5,3,4},{12,9,9},{5,12,10},{7,15,10},
 			{7,6,4},{3,9,8},{2,13,1},{14,2,3}}
 		var target []int = []int{14,6,4}
