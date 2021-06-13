@@ -13,7 +13,31 @@ import (
 	"strings"
 )
 
+
 func main(){
+	{
+		var triplets [][]int = [][]int{{7,15,15},{11,8,3},{5,3,4},{12,9,9},{5,12,10},{7,15,10},
+			{7,6,4},{3,9,8},{2,13,1},{14,2,3}}
+		var target []int = []int{14,6,4}
+		res := array.MergeTriplets(triplets,target)
+		fmt.Println(res)
+	}
+	{
+		//s = "abcacb", p = "ab", removable = [3,1,0]
+		//var s = "cdijywkabpzxph"
+		//var p = "iwpph"
+		//var removable []int = []int{11,0,1,8,6}
+		var s = "abcbddddd"
+		var p = "abcd"
+		var removable []int = []int{3,2,1,4,5,6}
+		res := string_issue.MaximumRemovals(s,p,removable)
+		fmt.Println(res)
+	}
+	{
+		var words []string = []string{"abc","aabc","bc"}
+		res := string_issue.MakeEqual(words)
+		fmt.Println(res)
+	}
 	{
 		var n int = 5
 		res := number.ConsecutiveNumbersSum(n)
