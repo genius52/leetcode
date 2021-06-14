@@ -16,6 +16,12 @@ import (
 
 func main(){
 	{
+		var img1 [][]int = [][]int{{1,1,0},{0,1,0},{0,1,0}}
+		var img2 [][]int = [][]int{{0,0,0},{0,1,1},{0,0,1}}
+		res := array.LargestOverlap(img1, img2)
+		fmt.Println(res)
+	}
+	{
 		//var s string = "abzzcdqq"
 		//var indexes []int = []int{0, 2}
 		//var sources []string = []string{"ab","ec"}
