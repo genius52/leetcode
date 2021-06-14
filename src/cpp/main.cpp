@@ -211,6 +211,7 @@
 #include "string/726. Number of Atoms.hpp"
 #include "string/745. Prefix and Suffix Search.hpp"
 #include "string/767. Reorganize String.hpp"
+#include "string/833. Find And Replace in String.hpp"
 #include "list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "list/445. Add Two Numbers II.hpp"
 #include "list/138. Copy List with Random Pointer.hpp"
@@ -233,6 +234,19 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        //"vmokgggqzp"
+        //[3,5,1]
+        //["kg","ggq","mo"]
+        //["s","so","bfr"]
+        Solution_833 s833;
+        std::string s = "vmokgggqzp";
+        std::vector<int> indexes{3,5,1};
+        std::vector<std::string> sources{"kg","ggq","mo"};
+        std::vector<std::string> targets{"s","so","bfr"};
+        auto res = s833.findReplaceString(s,indexes,sources,targets);
+        std::cout << "833 res = " << res << std::endl;
+    }
     {
         Solution_826 s826;
         std::vector<int> difficulty{2,4,6,8,10};

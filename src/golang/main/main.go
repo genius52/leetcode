@@ -16,6 +16,19 @@ import (
 
 func main(){
 	{
+		//var s string = "abzzcdqq"
+		//var indexes []int = []int{0, 2}
+		//var sources []string = []string{"ab","ec"}
+		//var targets []string = []string{"eee", "ffff"}
+
+		var s string = "abcd"
+		var indexes []int = []int{0, 2}
+		var sources []string = []string{"a","cd"}
+		var targets []string = []string{"eee", "ffff"}
+		res := string_issue.FindReplaceString(s,indexes,sources,targets)
+		fmt.Println(res)
+	}
+	{
 		var image [][]int = [][]int{{1,1,0,0},{1,0,0,1},{0,1,1,1},{1,0,1,0}}
 		res := array.FlipAndInvertImage(image)
 		fmt.Println(res)
