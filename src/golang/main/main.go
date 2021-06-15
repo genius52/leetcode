@@ -16,6 +16,19 @@ import (
 
 func main(){
 	{
+		//var n int = 21
+		//var k int = 17
+		//var maxPts int = 10
+//6707
+		//6047
+		//9446
+		var n int = 6707
+		var k int = 6047
+		var maxPts int = 9446
+		res := number.New21Game(n,k,maxPts)
+		fmt.Println(res)
+	}
+	{
 		var ranges [][]int = [][]int{{2,4}}
 		var left int = 1
 		var right int = 3
