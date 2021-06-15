@@ -16,6 +16,12 @@ import (
 
 func main(){
 	{
+		var rec1 []int = []int{-1,0,1,1}
+		var rec2 []int = []int{0,-1,0,1}
+		res := diagram.IsRectangleOverlap(rec1,rec2)
+		fmt.Println(res)
+	}
+	{
 		var img1 [][]int = [][]int{{1,1,0},{0,1,0},{0,1,0}}
 		var img2 [][]int = [][]int{{0,0,0},{0,1,1},{0,0,1}}
 		res := array.LargestOverlap(img1, img2)
