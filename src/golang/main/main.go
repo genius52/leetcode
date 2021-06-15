@@ -16,6 +16,13 @@ import (
 
 func main(){
 	{
+		var ranges [][]int = [][]int{{2,4}}
+		var left int = 1
+		var right int = 3
+		res := array.IsCovered(ranges,left,right)
+		fmt.Println(res)
+	}
+	{
 		var rec1 []int = []int{-1,0,1,1}
 		var rec2 []int = []int{0,-1,0,1}
 		res := diagram.IsRectangleOverlap(rec1,rec2)
