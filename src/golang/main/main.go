@@ -16,6 +16,11 @@ import (
 
 func main(){
 	{
+		var grid [][]int = [][]int{{1,1,1,4},{4,6,9,2}}
+		res := array.LargestMagicSquare(grid)
+		fmt.Println(res)
+	}
+	{
 		//var n int = 21
 		//var k int = 17
 		//var maxPts int = 10
