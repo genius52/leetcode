@@ -706,38 +706,6 @@ func maxSumAfterPartitioning(A []int, K int) int {
 	return max_sum(A,0,K,records)
 }
 
-//841
-// [[1],[2],[3],[]]
-//  [[1,3,2],[2,3],[2,1,3,1],[]]
-//  [[1,3],[3,0,1],[2],[0]]
-func canVisitAllRooms(rooms [][]int) bool {
-	var room_num int = len(rooms)
-	var visited map[int]bool = make(map[int]bool,room_num)
-	for i := 0; i < room_num;i++{
-		visited[i] = false
-	}
-	var target int = (room_num - 1) * room_num / 2
-	var cur_num int = 0
-	l := list.New()
-	l.PushBack(0)
-	for l.Len() != 0{
-		ele := l.Back()
-		val := ele.Value.(int)
-		for i := 0; i < len(rooms[val]);i++{
-			if !visited[rooms[val][i]]{
-				cur_num += rooms[val][i]
-				visited[rooms[val][i]] = true
-				l.PushBack(rooms[val][i])
-			}
-		}
-		l.Remove(ele)
-		if cur_num >= target{
-			return true
-		}
-	}
-	return false
-}
-
 //1219
 func max_int(a,b int)int{
 	if a > b {
