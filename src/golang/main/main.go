@@ -562,9 +562,9 @@ func main(){
 		fmt.Println(res)
 	}
 	{
-		var boxes []int = []int{1,3,2,2,2,3,4,3,1,3,3,2,2,1,1,4,6,6,7,7,7,7,7,3,3,3,2,1,3,2,2,2,3,4,3,1,3,3,2,2,1,1,4,6,6,7,7,7,7,7,3,3,3,2,1,3,2,2,2,3,4,3,1,3,3,2,2,1,1,4,6,6,7,7,7,7,7,3,3,3,2}
-		res := array.RemoveBoxes(boxes)
-		fmt.Println(res)
+		//var boxes []int = []int{1,3,2,2,2,3,4,3,1,3,3,2,2,1,1,4,6,6,7,7,7,7,7,3,3,3,2,1,3,2,2,2,3,4,3,1,3,3,2,2,1,1,4,6,6,7,7,7,7,7,3,3,3,2,1,3,2,2,2,3,4,3,1,3,3,2,2,1,1,4,6,6,7,7,7,7,7,3,3,3,2}
+		//res := array.RemoveBoxes(boxes)
+		//fmt.Println(res)
 	}
 	{
 		var matrix [][]int = [][]int{{0,0,0},{0,1,0}, {1,1,1}}
@@ -868,11 +868,11 @@ func main(){
 		res := string_issue.BeautySum(s)
 		fmt.Println(res)
 	}
-	{
-		var n int = 2147483647
-		res := number.CheckPowersOfThree(n)
-		fmt.Println(res)
-	}
+	//{
+	//	var n int = 2147483647
+	//	res := number.CheckPowersOfThree(n)
+	//	fmt.Println(res)
+	//}
 	{
 		var nums []int = []int{1,2,3,4}
 		res := number.ProductExceptSelf(nums)
@@ -1159,9 +1159,9 @@ func main(){
 	}
 	{
 		//var nums []int = []int{0,0,1,1,1,2,2,3,3,4,4}
-		var nums []int = []int{0,1,2,3}
-		res := array.RemoveDuplicates(nums)
-		fmt.Println(res)
+		//var nums []int = []int{0,1,2,3}
+		//res := array.RemoveDuplicates(nums)
+		//fmt.Println(res)
 	}
 	{
 		board := [][]byte{{'A'}}
@@ -2180,7 +2180,7 @@ func main(){
 		fmt.Println(res)
 	}
 	{
-		var dominoes string = "RR.L."
+		var dominoes string = ".L.R...LR..L.."
 		res := diagram.PushDominoes(dominoes)
 		fmt.Println(res)
 	}
