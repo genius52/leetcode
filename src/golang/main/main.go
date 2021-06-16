@@ -16,6 +16,11 @@ import (
 
 func main(){
 	{
+		var rooms [][]int = [][]int{{1,3,2},{2,3},{2,1,3,1},{}}
+		res := diagram.CanVisitAllRooms(rooms)
+		fmt.Println(res)
+	}
+	{
 		var grid [][]int = [][]int{{1,1,1,4},{4,6,9,2}}
 		res := array.LargestMagicSquare(grid)
 		fmt.Println(res)
