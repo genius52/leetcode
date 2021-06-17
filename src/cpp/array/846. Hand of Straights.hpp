@@ -1,5 +1,6 @@
 #include <vector>
 #include <map>
+#include <set>
 using namespace std;
 
 class Solution_846 {
@@ -27,6 +28,29 @@ public:
         }
         if(record.size() != 0)
             return false;
+        return true;
+    }
+
+    bool isNStraightHand2(vector<int>& hand, int W){
+        std::multiset<int> s;
+        for(auto n: hand){
+            s.insert(n);
+        }
+        int len = s.size();
+        if(len % W != 0 || len < W){
+            return false;
+        }
+        while(!s.empty()){
+            int first = *s.begin();
+            for(int i = first;i < first + W;i++){
+                auto it = s.find(i);
+                if(it == s.end())
+                    return false;
+                else{
+                    s.erase(it);
+                }
+            }
+        }
         return true;
     }
 };

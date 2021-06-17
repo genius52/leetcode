@@ -235,6 +235,13 @@
 
 int main() {
     {
+        Solution_846 s846;
+        std::vector<int> hand{1,2,3,6,2,3,4,7,8};
+        int W = 3;
+        auto res = s846.isNStraightHand2(hand,W);
+        std::cout << "846 res = " << res << std::endl;
+    }
+    {
         //"vmokgggqzp"
         //[3,5,1]
         //["kg","ggq","mo"]
@@ -1297,13 +1304,6 @@ int main() {
         std::vector<int> speed{3,2};
         auto res = s853.carFleet(target,position,speed);
         std::cout << "853 res = " << res << std::endl;
-    }
-    {
-        Solution_846 s846;
-        std::vector<int> hand{1,2,3,6,2,3,4,7,8};
-        int W = 3;
-        auto res = s846.isNStraightHand(hand,W);
-        std::cout << "846 res = " << res << std::endl;
     }
     {
         Solution_1619 s1619;
