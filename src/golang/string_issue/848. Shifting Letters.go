@@ -21,3 +21,14 @@ func ShiftingLetters(S string, shifts []int) string {
 	}
 	return res
 }
+
+func ShiftingLetters2(S string, shifts []int) string{
+	var pre_shifts int = 0
+	var l int = len(shifts)
+	var res string
+	for i := l - 1;i >= 0;i--{
+		res = string((int(S[i] - 'a') + shifts[i] + pre_shifts)% 26 + 97) + res
+		pre_shifts += shifts[i]
+	}
+	return res
+}
