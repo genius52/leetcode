@@ -176,6 +176,7 @@
 #include "graph/778. Swim in Rising Water.hpp"
 #include "graph/826. Most Profit Assigning Work.hpp"
 #include "graph/851. Loud and Rich.hpp"
+#include "graph/847. Shortest Path Visiting All Nodes.hpp"
 #include "string/1446. Consecutive Characters.cpp"
 #include "string/1451. Rearrange Words in a Sentence.hpp"
 #include "string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -235,6 +236,12 @@
 #include "thread/1116. Print Zero Even Odd.hpp"
 
 int main() {
+    {
+        Solution_847 s847;
+        std::vector<std::vector<int>> graph{{1,2,3},{0},{0},{0}};
+        auto res = s847.shortestPathLength(graph);
+        std::cout << "847 res = " << res << std::endl;
+    }
     {
         std::vector<std::vector<int>> richer{{1,0},{2,1},{3,1},{3,7},{4,3},{5,3},{6,3}};
         std::vector<int> quiet{3,2,5,4,6,1,7,0};
