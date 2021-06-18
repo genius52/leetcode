@@ -16,6 +16,16 @@ import (
 
 func main(){
 	{
+		var arr []int = []int{3,5,3,2,0}
+		res := array.PeakIndexInMountainArray(arr)
+		fmt.Println(res)
+	}
+	{
+		var rectangles [][]int = [][]int{{39,31,70,52},{2,8,86,31},{28,5,78,80},{45,96,62,100},{17,64,72,67},{20,41,66,68}}
+		res := diagram.RectangleArea(rectangles)
+		fmt.Println(res)
+	}
+	{
 		var rooms [][]int = [][]int{{1,3,2},{2,3},{2,1,3,1},{}}
 		res := diagram.CanVisitAllRooms(rooms)
 		fmt.Println(res)
