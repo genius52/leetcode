@@ -16,6 +16,14 @@ import (
 
 func main(){
 	{
+		//"aabcaabcabcbaabcc"
+		//"bcabacabcabcabcaa"
+		var s1 string = "aabcaabcabcbaabcc"
+		var s2 string = "bcabacabcabcabcaa"
+		res := string_issue.KSimilarity(s1,s2)
+		fmt.Println(res)
+	}
+	{
 		var arr []int = []int{3,5,3,2,0}
 		res := array.PeakIndexInMountainArray(arr)
 		fmt.Println(res)

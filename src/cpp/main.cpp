@@ -6,6 +6,13 @@
 
 int main() {
     {
+        Solution_854 s854;
+        std::string s1 = "aabcaabcabcbaabcc";
+        std::string s2 = "bcabacabcabcabcaa";
+        auto res = s854.kSimilarity(s1,s2);
+        std::cout << "854 res = " << res << std::endl;
+    }
+    {
         ExamRoom s855(10);
         auto res = s855.seat();
         res = s855.seat();
