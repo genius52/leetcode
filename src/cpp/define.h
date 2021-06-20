@@ -230,6 +230,7 @@ struct ListNode {
 #include "string/745. Prefix and Suffix Search.hpp"
 #include "string/767. Reorganize String.hpp"
 #include "string/833. Find And Replace in String.hpp"
+#include "string/854. K-Similar Strings.hpp"
 #include "list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "list/445. Add Two Numbers II.hpp"
 #include "list/138. Copy List with Random Pointer.hpp"
