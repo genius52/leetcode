@@ -10,11 +10,34 @@ import (
 	"../string_issue"
 	"../tree"
 	"fmt"
+	"math"
 	"strings"
 )
 
-
 func main(){
+	{
+		var nums []int = []int{8,1,1,8}
+		var queries [][]int = [][]int{{0,1},{1,2},{2,3},{0,3}}
+		res := minDifference(nums,queries)
+		fmt.Println(res)
+	}
+	{
+		var grid1 [][]int = [][]int{{1,1,1,0,0},{0,1,1,1,1},{0,0,0,0,0},{1,0,0,0,0},{1,1,0,1,1}}
+		var grid2 [][]int = [][]int{{1,1,1,0,0},{0,0,1,1,1},{0,1,0,0,0},{1,0,1,1,0},{0,1,0,1,0}}
+		res := diagram.CountSubIslands(grid1,grid2)
+		fmt.Println(res)
+	}
+	{
+		var startTime string = "22:45"
+		var finishTime string = "23:44"
+		res := number.NumberOfRounds(startTime,finishTime)
+		fmt.Println(res)
+	}
+	{
+		num := "1246"
+		res := number.LargestOddNumber(num)
+		fmt.Println(res)
+	}
 	{
 		//"aabcaabcabcbaabcc"
 		//"bcabacabcabcabcaa"
