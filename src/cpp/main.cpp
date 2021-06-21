@@ -6,6 +6,14 @@
 
 int main() {
     {
+        Solution_857 s857;
+        std::vector<int> quality{10,20,5};
+        std::vector<int> wage{70,50,30};
+        int k = 2;
+        auto res = s857.mincostToHireWorkers(quality,wage,k);
+        std::cout << "857 res = " << res << std::endl;
+    }
+    {
         Solution_854 s854;
         std::string s1 = "aabcaabcabcbaabcc";
         std::string s2 = "bcabacabcabcabcaa";
