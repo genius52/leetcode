@@ -1,7 +1,6 @@
 package string_issue
 
-//import "container/list"
-
+//recursive solution
 func rec_scoreOfParentheses(S string,l int,pos int)(int,int){
 	if pos >= l{
 		return 0,pos

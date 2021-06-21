@@ -10,7 +10,6 @@ import (
 	"../string_issue"
 	"../tree"
 	"fmt"
-	"math"
 	"strings"
 )
 
@@ -18,7 +17,7 @@ func main(){
 	{
 		var nums []int = []int{8,1,1,8}
 		var queries [][]int = [][]int{{0,1},{1,2},{2,3},{0,3}}
-		res := minDifference(nums,queries)
+		res := array.MinDifference(nums,queries)
 		fmt.Println(res)
 	}
 	{
