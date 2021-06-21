@@ -1,6 +1,6 @@
 package array
 
-func minDifference(nums []int, queries [][]int) []int {
+func MinDifference(nums []int, queries [][]int) []int {
 	var l int = len(nums)
 	var dp [][101]int = make([][101]int,l + 1)
 	for i := 0;i < l;i++{
