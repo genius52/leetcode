@@ -78,6 +78,7 @@ struct ListNode {
 #include "array/1818. Minimum Absolute Sum Difference.hpp"
 #include "array/480. Sliding Window Median.hpp"
 #include "array/493. Reverse Pairs.hpp"
+#include "array/862. Shortest Subarray with Sum at Least K.hpp"
 #include "array/1887. Reduction Operations to Make the Array Elements Equal.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"

@@ -6,6 +6,13 @@
 
 int main() {
     {
+        Solution_862 s862;
+        std::vector<int> nums{2,-1,2};
+        int k = 3;
+        auto res = s862.shortestSubarray(nums,k);
+        std::cout << "862 res = " << res << std::endl;
+    }
+    {
         Solution_857 s857;
         std::vector<int> quality{10,20,5};
         std::vector<int> wage{70,50,30};
