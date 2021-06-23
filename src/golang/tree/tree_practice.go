@@ -651,38 +651,6 @@ func maxAncestorDiff(root *TreeNode) int {
 	return pre_visit(root,root.Val,root.Val,0)
 }
 
-
-//865
-func level_visit_865(node *TreeNode,level int)(max_depth int,res *TreeNode){
-	if nil == node{
-		return level,node
-	}
-	level++
-	left_max_depth,leftnode := level_visit_865(node.Left,level)
-	right_max_depth,rightnode := level_visit_865(node.Right,level)
-	if left_max_depth > right_max_depth {
-		if left_max_depth >level {
-			return left_max_depth,leftnode
-		}
-		return level,node
-	}else if left_max_depth < right_max_depth{
-		if right_max_depth > level{
-			return right_max_depth,rightnode
-		}
-		return level,node
-	}else{
-		return left_max_depth,node
-	}
-}
-
-func subtreeWithAllDeepest(root *TreeNode) *TreeNode {
-	if nil == root{
-		return root
-	}
-	_,res :=  level_visit_865(root,0)
-	return res
-}
-
 //951
 func flipEquiv(root1 *TreeNode, root2 *TreeNode) bool {
 	if nil == root1 && nil == root2{
