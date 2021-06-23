@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var grid []string = []string{"Dd#b@",".fE.e","##.B.","#.cA.","aF.#C"}
+		res := diagram.ShortestPathAllKeys(grid)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{8,1,1,8}
 		var queries [][]int = [][]int{{0,1},{1,2},{2,3},{0,3}}
 		res := array.MinDifference(nums,queries)
