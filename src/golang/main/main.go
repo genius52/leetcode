@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var N int = 22
+		res := number.BinaryGap(N)
+		fmt.Println(res)
+	}
+	{
 		var grid []string = []string{"Dd#b@",".fE.e","##.B.","#.cA.","aF.#C"}
 		res := diagram.ShortestPathAllKeys(grid)
 		fmt.Println(res)
