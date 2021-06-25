@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var piles []int = []int{5,3,4,5}
+		res := number.StoneGame(piles)
+		fmt.Println(res)
+	}
+	{
 		var N int = 22
 		res := number.BinaryGap(N)
 		fmt.Println(res)
