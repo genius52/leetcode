@@ -1,7 +1,7 @@
 package array
 
+import "sort"
 
-//128
 //Input: [100, 4, 200, 1, 3, 2]    [9,1,4,7,3,-1,0,5,8,-1,6]
 //Output: 4
 //Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.
@@ -39,4 +39,31 @@ func longestConsecutive(nums []int) int {
 		}
 	}
 	return max
+}
+
+func LongestConsecutive2(nums []int) int {
+	sort.Ints(nums)
+	var l int = len(nums)
+	var res int = 0
+	var left int = 0
+	for left < l{
+		var right int = left + 1
+		var dup_cnt int = 0
+		for right < l {
+			if nums[right - 1] == nums[right]{
+				right++
+				dup_cnt++
+			}else if (nums[right - 1] + 1) == nums[right]{
+				right++
+			}else{
+				break
+			}
+		}
+		cur_len := right - left - dup_cnt
+		if cur_len > res{
+			res = cur_len
+		}
+		left = right
+	}
+	return res
 }

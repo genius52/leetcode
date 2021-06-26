@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		input := []int{9,1,4,7,3,-1,0,5,8,-1,6}
+		res := array.LongestConsecutive2(input)
+		fmt.Println(res)
+	}
+	{
 		//1000000000
 		//40000
 		//29999
@@ -3739,11 +3744,6 @@ func main(){
 	//{
 	//	input := []int{3,0,2,1,2}
 	//	res := canReach(input,2)
-	//	fmt.Println(res)
-	//}
-	//{
-	//	input := []int{9,1,4,7,3,-1,0,5,8,-1,6}
-	//	res := longestConsecutive(input)
 	//	fmt.Println(res)
 	//}
 	//{
