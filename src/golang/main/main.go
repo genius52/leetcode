@@ -15,6 +15,16 @@ import (
 
 func main(){
 	{
+		//1000000000
+		//40000
+		//29999
+		n := 1000000000
+		a := 40000
+		b := 29999
+		res := number.NthMagicalNumber(n,a,b)
+		fmt.Println(res)
+	}
+	{
 		var piles []int = []int{5,3,4,5}
 		res := number.StoneGame(piles)
 		fmt.Println(res)
