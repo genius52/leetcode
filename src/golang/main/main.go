@@ -15,6 +15,29 @@ import (
 
 func main(){
 	{
+		var word string = "aba"
+		res := string_issue.WonderfulSubstrings(word)
+		fmt.Println(res)
+	}
+	{
+		var grid [][]int = [][]int{{40,10},{30,20}}
+		var k int = 1
+		res := array.RotateGrid(grid, k)
+		fmt.Println(res)
+	}
+	{
+		//64
+		//0
+		//[80, 40]
+		//[88, 88]
+		n := 5
+		minProfit := 3
+		var group []int = []int{2,2}
+		var profit []int = []int{2,3}
+		res := diagram.ProfitableSchemes(n,minProfit,group,profit)
+		fmt.Println(res)
+	}
+	{
 		input := []int{9,1,4,7,3,-1,0,5,8,-1,6}
 		res := array.LongestConsecutive2(input)
 		fmt.Println(res)
