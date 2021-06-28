@@ -1,44 +1,34 @@
 package string_issue
 
+
 func DecodeAtIndex(S string, K int) string{
-	var diff int = 0
-	for i := 0;diff < K;i++{
+	var cur_len int = 0
+	var l int = len(S)
+	var i int = 0
+	for ;i < l;i++{
 		if S[i] >= '0' && S[i] <= '9'{
-			diff = diff * int((S[i] - uint8('0')))
+			cur_len *= int(S[i] - '0')
 		}else{
-			diff++
+			cur_len++
+		}
+		if cur_len >= K{
+			break
+		}
+	}
+	for j := i;j >= 0;j--{
+		///abcdabcdabcdabcdabcdabcd ,cur_len = 24,cnt = 6
+		//k = 15
+		if S[j] >= '0' && S[j] <= '9'{
+			cnt := int(S[j] - '0')
+			cur_len = cur_len / cnt
+			K = K % cur_len //这两个位置字符必定相同
+			//abcd，len = 4,k = 3
+		}else{
+			if K % cur_len == 0{//???
+				return string(S[j])
+			}
+			cur_len--
 		}
 	}
 	return ""
 }
-
-//func DecodeAtIndex(S string, K int) string {
-//	var data []uint8 = make([]uint8,K)
-//	var index int = 0
-//	var l int = len(S)
-//	for i := 0;i < l;i++{
-//		if S[i] >= '0' && S[i] <= '9'{
-//			cnt,_ := strconv.Atoi(string(S[i]))
-//			var end int = index - 1
-//			for i := 0;i < cnt - 1;i++{
-//				for j := 0;j <= end;j++{
-//					data[index] = data[j]
-//					if index == K - 1 {
-//						return string(data[index])
-//					}
-//					index++
-//				}
-//			}
-//		}else{
-//			if index == K{
-//				break
-//			}
-//			data[index] = S[i]
-//			index++
-//			if index == K{
-//				break
-//			}
-//		}
-//	}
-//	return string(data[K - 1])
-//}

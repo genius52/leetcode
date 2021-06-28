@@ -196,6 +196,7 @@ struct ListNode {
 #include "graph/851. Loud and Rich.hpp"
 #include "graph/847. Shortest Path Visiting All Nodes.hpp"
 #include "graph/871. Minimum Number of Refueling Stops.hpp"
+#include "graph/882. Reachable Nodes In Subdivided Graph.hpp"
 #include "string/1446. Consecutive Characters.cpp"
 #include "string/1451. Rearrange Words in a Sentence.hpp"
 #include "string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
