@@ -15,6 +15,14 @@ import (
 
 func main(){
 	{
+		//var N int = 10
+		//var dislikes [][]int= [][]int{{4,7},{4,8},{5,6},{1,6},{3,7},{2,5},{5,8},{1,2},{4,9},{6,10},{8,10},{3,6},{2,10},{9,10},{3,9},{2,3},{1,9},{4,6},{5,7},{3,8},{1,8},{1,7},{2,4}}
+		var N int = 4
+		var dislikes [][]int= [][]int{{1,2},{1,3},{2,4}}
+		res := diagram.PossibleBipartition(N,dislikes)
+		fmt.Println(res)
+	}
+	{
 		var S string = "leet2code3"
 		var K int = 10
 		res := string_issue.DecodeAtIndex(S,K)
@@ -2229,12 +2237,6 @@ func main(){
 		var r0 int = 1
 		var c0 int = 4
 		res := array.SpiralMatrixIII(R,C,r0,c0)
-		fmt.Println(res)
-	}
-	{
-		var N int = 10
-		var dislikes [][]int= [][]int{{4,7},{4,8},{5,6},{1,6},{3,7},{2,5},{5,8},{1,2},{4,9},{6,10},{8,10},{3,6},{2,10},{9,10},{3,9},{2,3},{1,9},{4,6},{5,7},{3,8},{1,8},{1,7},{2,4}}
-		res := diagram.PossibleBipartition(N,dislikes)
 		fmt.Println(res)
 	}
 	{
