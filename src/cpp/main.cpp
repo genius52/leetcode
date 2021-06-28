@@ -6,6 +6,14 @@
 
 int main() {
     {
+        Solution_882 s882;
+        std::vector<std::vector<int>> edges{{0,1,10},{0,2,1},{1,2,2}};
+        int maxMoves = 6;
+        int n = 3;
+        auto res = s882.reachableNodes(edges,maxMoves,n);
+        std::cout<<res<<std::endl;
+    }
+    {
         Solution_871 s871;
         int target = 1000000000;
         int startFuel = 145267354;

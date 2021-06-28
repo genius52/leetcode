@@ -14,7 +14,7 @@ using namespace std;
 class Solution_871 {
 public:
     //DP from bottom to top   TO DO
-    
+
     //BFS
     int minRefuelStops(int target, int startFuel, vector<vector<int>>& stations) {
         int len = stations.size();
