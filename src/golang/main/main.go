@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		var S string = "leet2code3"
+		var K int = 10
+		res := string_issue.DecodeAtIndex(S,K)
+		fmt.Println(res)
+	}
+	{
 		var word string = "aba"
 		res := string_issue.WonderfulSubstrings(word)
 		fmt.Println(res)
@@ -2236,14 +2242,6 @@ func main(){
 		var limit int = 10
 		res := number.NumRescueBoats(people,limit)
 		fmt.Println(res)
-	}
-	{
-		//"cpmxv8ewnfk3xxcilcmm68d2ygc88daomywc3imncfjgtwj8nrxjtwhiem5nzqnicxzo248g52y72v3yujqpvqcssrofd99lkovg"
-		//480551547
-		//var S string = "cpmxv8ewnfk3xxcilcmm68d2ygc88daomywc3imncfjgtwj8nrxjtwhiem5nzqnicxzo248g52y72v3yujqpvqcssrofd99lkovg"
-		//var K int = 480551547
-		//res := string_issue.DecodeAtIndex(S,K)
-		//fmt.Println(res)
 	}
 	{
 		var piles []int = []int{30,11,23,4,20}
