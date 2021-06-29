@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		var aliceSizes []int = []int{1,1}
+		var bobSizes []int = []int{2,2}
+		res := number.FairCandySwap(aliceSizes,bobSizes)
+		fmt.Println(res)
+	}
+	{
 		//var N int = 10
 		//var dislikes [][]int= [][]int{{4,7},{4,8},{5,6},{1,6},{3,7},{2,5},{5,8},{1,2},{4,9},{6,10},{8,10},{3,6},{2,10},{9,10},{3,9},{2,3},{1,9},{4,6},{5,7},{3,8},{1,8},{1,7},{2,4}}
 		var N int = 4
