@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		k := 2
+		n := 9
+		res := number.SuperEggDrop(k,n)
+		fmt.Println(res)
+	}
+	{
 		var aliceSizes []int = []int{1,1}
 		var bobSizes []int = []int{2,2}
 		res := number.FairCandySwap(aliceSizes,bobSizes)
