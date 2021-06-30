@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		words := []string{"abc","deq","mee","aqq","dkd","ccc"}
+		pattern := "abb"
+		res := string_issue.FindAndReplacePattern(words,pattern)
+		fmt.Println(res)
+	}
+	{
 		k := 2
 		n := 9
 		res := number.SuperEggDrop(k,n)
