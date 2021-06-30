@@ -3,6 +3,15 @@ package diagram
 import (
 	"math"
 )
+
+func min_int(a,b int)int{
+	if a < b {
+		return a
+	}else{
+		return b
+	}
+}
+
 func min_int_number(nums ...int)int{
 	var min int = math.MaxInt32
 	for _,n := range nums{
