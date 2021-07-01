@@ -416,42 +416,6 @@ func getAllElements(root1 *TreeNode, root2 *TreeNode) []int {
 	return merge_array(record1,record2)
 }
 
-//894
-func allPossibleFBT(N int)[]*TreeNode{
-	var res []*TreeNode
-	if N % 2 == 0{
-		return res
-	}
-	if N == 1{
-		var node TreeNode
-		node.Val = 0
-		res = append(res,&node)
-		return res
-	}
-	for left := 1; left < N - 1;left += 2{
-		left_nodes := allPossibleFBT(left)
-		right_nodes := allPossibleFBT(N - left - 1)
-		for _,ln := range left_nodes{
-			for _,rn := range right_nodes{
-				var node TreeNode
-				node.Val = 0
-				node.Left = ln
-				node.Right = rn
-				res = append(res, &node)
-			}
-		}
-	}
-	return res
-}
-
-//func allPossibleFBT(N int) []*TreeNode {
-//	var record []*TreeNode
-//	if N % 2 == 0{
-//		return record
-//	}
-//	return divide(N)
-//}
-
 //
 func previsit_balanceBST(node *TreeNode,record *[]*TreeNode){
 	if node == nil{
