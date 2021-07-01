@@ -15,6 +15,19 @@ import (
 
 func main(){
 	{
+		var t1 tree.TreeNode
+		t1.Val = 5
+		var t2 tree.TreeNode
+		t2.Val = 1
+		var t3 tree.TreeNode
+		t3.Val = 7
+		t1.Left = &t2
+		t1.Right = &t3
+		res := tree.IncreasingBST(&t1)
+		fmt.Println(res)
+
+	}
+	{
 		var N int = 7
 		res := tree.AllPossibleFBT(N)
 		fmt.Println(len(res))
