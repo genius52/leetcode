@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var N int = 7
+		res := tree.AllPossibleFBT(N)
+		fmt.Println(len(res))
+	}
+	{
 		words := []string{"abcd","cdab","cbad","xyzz","zzxy","zzyx"}
 		res := string_issue.NumSpecialEquivGroups(words)
 		fmt.Println(res)
@@ -3450,10 +3455,6 @@ func main(){
 	//	input := [][]int{{1,2,3},{4,5,6},{7,8,9}}
 	//	res := matrixBlockSum(input,1)
 	//	fmt.Println(res)
-	//}
-	//{
-	//	res := allPossibleFBT(7)
-	//	fmt.Println(len(res))
 	//}
 	//{
 	//	input := [][]int{{3,3,1,1},{2,2,1,2},{1,1,1,2}}
