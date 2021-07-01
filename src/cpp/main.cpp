@@ -6,6 +6,22 @@
 
 int main() {
     {
+        FreqStack s895;
+        s895.push(5);
+        s895.push(7);
+        s895.push(5);
+        s895.push(7);
+        s895.push(4);
+        s895.push(5);
+        auto res = s895.pop();
+        res = s895.pop();
+        res = s895.pop();
+        res = s895.pop();
+        res = s895.pop();
+        res = s895.pop();
+        std::cout<<res<<std::endl;
+    }
+    {
         Solution_882 s882;
         std::vector<std::vector<int>> edges{{0,1,10},{0,2,1},{1,2,2}};
         int maxMoves = 6;
