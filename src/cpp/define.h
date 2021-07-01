@@ -254,6 +254,7 @@ struct ListNode {
 #include "list/710. Random Pick with Blacklist.hpp"
 #include "list/715. Range Module.hpp"
 #include "list/855. Exam Room.hpp"
+#include "list/895. Maximum Frequency Stack.hpp"
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 

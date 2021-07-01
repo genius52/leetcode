@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		s := "baaca"
+		k := 1
+		res := string_issue.OrderlyQueue(s,k)
+		fmt.Println(res)
+	}
+	{
 		var t1 tree.TreeNode
 		t1.Val = 5
 		var t2 tree.TreeNode
