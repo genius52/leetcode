@@ -15,6 +15,16 @@ import (
 
 func main(){
 	{
+//["1","2","3","4","6","7","9"]
+		//333
+		//["3","4","5","6"]
+		//66
+		var digits []string = []string{"7"}
+		var n int = 7
+		res := number.AtMostNGivenDigitSet(digits,n)
+		fmt.Println(res)
+	}
+	{
 		s := "baaca"
 		k := 1
 		res := string_issue.OrderlyQueue(s,k)
