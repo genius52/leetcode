@@ -15,6 +15,21 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{3,4,1,2}
+		res := array.SortArrayByParity(nums)
+		fmt.Println(res)
+	}
+	{
+		s := "DID"
+		res := array.NumPermsDISequence(s)
+		fmt.Println(res)
+	}
+	{
+		var fruits []int = []int{3,3,3,1,2,1,1,2,3,3,4}
+		res := array.TotalFruit(fruits)
+		fmt.Println(res)
+	}
+	{
 //["1","2","3","4","6","7","9"]
 		//333
 		//["3","4","5","6"]

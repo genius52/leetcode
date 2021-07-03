@@ -11,7 +11,7 @@ type RLEIterator struct {
 	length int
 }
 
-func Constructor908(encoding []int) RLEIterator {
+func Constructor900(encoding []int) RLEIterator {
 	var l int = len(encoding)
 	var obj RLEIterator
 	obj.data = make([]int,l)
