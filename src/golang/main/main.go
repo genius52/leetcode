@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var A []int = []int{1,1,1,0,6,12}
+		res := array.PartitionDisjoint(A)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{5,1,1,2,0,0}
 		res := array.SortArray(nums)
 		fmt.Println(res)
@@ -2292,11 +2297,6 @@ func main(){
 		var B []string = []string{"e","oo"}
 		//["facebook","leetcode"]
 		res := array.WordSubsets(A,B)
-		fmt.Println(res)
-	}
-	{
-		var A []int = []int{5,0,3,8,6}
-		res := array.PartitionDisjoint(A)
 		fmt.Println(res)
 	}
 	{
