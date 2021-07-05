@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{5,1,1,2,0,0}
+		res := array.SortArray(nums)
+		fmt.Println(res)
+	}
+	{
 		//var board [][]int = [][]int{
 		//		{-1,-1,-1,-1,-1,-1},
 		//		{-1,-1,-1,-1,-1,-1},
