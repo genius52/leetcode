@@ -15,6 +15,13 @@ import (
 
 func main(){
 	{
+		N := 25
+		L := 28
+		K := 5
+		res := number.NumMusicPlaylists(N,L,K)
+		fmt.Println(res)
+	}
+	{
 		s := "Test1ng-Leet=code-Q!"
 		res := string_issue.ReverseOnlyLetters(s)
 		fmt.Println(res)
