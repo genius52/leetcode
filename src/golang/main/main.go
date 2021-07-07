@@ -15,6 +15,14 @@ import (
 
 func main(){
 	{
+		//"alex"
+		//"aaleexeex"
+		name := "alex"
+		typed := "aaleexeex"
+		res := string_issue.IsLongPressedName(name,typed)
+		fmt.Println(res)
+	}
+	{
 		//[[1,0,0],[0,1,0],[0,0,1]]
 		// [0,2]
 		//graph := [][]int{{1,0,0},{0,1,1},{0,1,1}}
