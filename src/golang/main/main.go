@@ -15,6 +15,21 @@ import (
 
 func main(){
 	{
+		//[[1,0,0],[0,1,0],[0,0,1]]
+		// [0,2]
+		//graph := [][]int{{1,0,0},{0,1,1},{0,1,1}}
+		//initial := []int{0,1}
+
+		//graph := [][]int{{1,1,0},{1,1,0},{0,0,1}}
+		//initial := []int{0,1,2}
+
+
+		graph := [][]int{{1,1,1},{1,1,1},{1,1,1}}
+		initial := []int{1,2}
+		res := diagram.MinMalwareSpread(graph,initial)
+		fmt.Println(res)
+	}
+	{
 		var data []int = []int{1,1,2,2,3,3,4,4,5,5}
 		var target int = 8
 		res := array.ThreeSumMulti(data,target)
