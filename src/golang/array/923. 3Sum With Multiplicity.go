@@ -9,29 +9,56 @@ package array
 //(2, 2, 4) occurs 2 times;
 //(2, 3, 3) occurs 2 times.
 func ThreeSumMulti(A []int, target int) int{
-	var record map[int]int = make(map[int]int)
-	var res int = 0
 	var l int = len(A)
+	var sum_cnt map[int]int = make(map[int]int)
+	var num_cnt map[int]int = make(map[int]int)
+	var res int = 0
 	for i := 0;i < l;i++{
-		cur_tar := target - A[i]
-		if cnt,ok := record[cur_tar];ok{
+		cur_target := target - A[i]
+		if cnt,ok := sum_cnt[cur_target];ok{
 			res += cnt
-			res = res % 1000000007
+			res %= 1000000007
 		}
-		for j := 0;j < i;j++{
-			if i == j{
-				continue
-			}
-			cur_sum := A[i] + A[j]
-			if _,ok := record[cur_sum];ok{
-				record[cur_sum]++
+		for n,cnt := range num_cnt{
+			if _,ok := sum_cnt[n + A[i]];ok{
+				sum_cnt[n + A[i]] += cnt
 			}else{
-				record[cur_sum] = 1
+				sum_cnt[n + A[i]] = cnt
 			}
+		}
+		if _,ok := num_cnt[A[i]];ok{
+			num_cnt[A[i]]++
+		}else{
+			num_cnt[A[i]] = 1
 		}
 	}
-	return res
+	return res % 1000000007
 }
+
+//func ThreeSumMulti(A []int, target int) int{
+//	var record map[int]int = make(map[int]int)
+//	var res int = 0
+//	var l int = len(A)
+//	for i := 0;i < l;i++{
+//		cur_tar := target - A[i]
+//		if cnt,ok := record[cur_tar];ok{
+//			res += cnt
+//			res = res % 1000000007
+//		}
+//		for j := 0;j < i;j++{
+//			if i == j{
+//				continue
+//			}
+//			cur_sum := A[i] + A[j]
+//			if _,ok := record[cur_sum];ok{
+//				record[cur_sum]++
+//			}else{
+//				record[cur_sum] = 1
+//			}
+//		}
+//	}
+//	return res
+//}
 
 //func ThreeSumMulti(A []int, target int) int {
 //	var record map[int]int = make(map[int]int)

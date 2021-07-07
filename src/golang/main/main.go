@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		var data []int = []int{1,1,2,2,3,3,4,4,5,5}
+		var target int = 8
+		res := array.ThreeSumMulti(data,target)
+		fmt.Println(res)
+	}
+	{
 		N := 25
 		L := 28
 		K := 5
@@ -2241,12 +2247,6 @@ func main(){
 	{
 		var s string = "01"
 		res := string_issue.MinFlipsMonoIncr(s)
-		fmt.Println(res)
-	}
-	{
-		var data []int = []int{1,1,2,2,3,3,4,4,5,5}
-		var target int = 8
-		res := array.ThreeSumMulti(data,target)
 		fmt.Println(res)
 	}
 	{
