@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var s string = "11011"
+		res := string_issue.MinFlipsMonoIncr(s)
+		fmt.Println(res)
+	}
+	{
 		//"alex"
 		//"aaleexeex"
 		name := "alex"
@@ -2265,11 +2270,6 @@ func main(){
 		var A []int = []int{1,0,1,0,1}
 		var S int = 2
 		res := array.NumSubarraysWithSum2(A,S)
-		fmt.Println(res)
-	}
-	{
-		var s string = "01"
-		res := string_issue.MinFlipsMonoIncr(s)
 		fmt.Println(res)
 	}
 	{
