@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		arr := []int{0,1,0,1,1}
+		res := number.ThreeEqualParts(arr)
+		fmt.Println(res)
+	}
+	{
 		var s string = "11011"
 		res := string_issue.MinFlipsMonoIncr(s)
 		fmt.Println(res)
