@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		var graph [][]int = [][]int{{1,1,0},{1,1,0},{0,0,1}}
+		var initial []int = []int{0,1}
+		res := diagram.MinMalwareSpread2(graph,initial)
+		fmt.Println(res)
+	}
+	{
 		arr := []int{0,1,0,1,1}
 		res := number.ThreeEqualParts(arr)
 		fmt.Println(res)
