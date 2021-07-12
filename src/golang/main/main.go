@@ -15,6 +15,16 @@ import (
 
 func main(){
 	{
+		var A [][]int = [][]int{{0,1,0},{0,0,0},{0,0,1}}
+		res := diagram.ShortestBridge(A)
+		fmt.Println(res)
+	}
+	//{
+	//	num := "25??"
+	//	res := number.SumGame(num)
+	//	fmt.Println(res)
+	//}
+	{
 		//maze := [][]byte{{'+','+','.','+'},{'.','.','.','+'},{'+','+','+','.'}}
 		maze := [][]byte{{'+','+','+'},{'.','.','.'},{'+','+','+'}}
 		entrance := []int{1,0}
@@ -2288,11 +2298,6 @@ func main(){
 	{
 		var n int = 2
 		res := diagram.KnightDialer(n)
-		fmt.Println(res)
-	}
-	{
-		var A [][]int = [][]int{{1,1,1,1,1},{1,0,0,0,1},{1,0,1,0,1},{1,0,0,0,1},{1,1,1,1,1}}
-		res := diagram.ShortestBridge(A)
 		fmt.Println(res)
 	}
 	{
