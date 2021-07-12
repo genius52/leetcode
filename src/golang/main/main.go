@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var n int = 3
+		res := diagram.KnightDialer(n)
+		fmt.Println(res)
+	}
+	{
 		var A [][]int = [][]int{{0,1,0},{0,0,0},{0,0,1}}
 		res := diagram.ShortestBridge(A)
 		fmt.Println(res)
@@ -2293,11 +2298,6 @@ func main(){
 	{
 		var A []int = []int{1,1,1,2,2,2}
 		res := array.MinIncrementForUnique(A)
-		fmt.Println(res)
-	}
-	{
-		var n int = 2
-		res := diagram.KnightDialer(n)
 		fmt.Println(res)
 	}
 	{
