@@ -893,43 +893,6 @@ func closedIsland(grid [][]int) int {
 	return 0
 }
 
-//931
-func dp_minpath(A [][]int,i int,j int,memo [][]int)int{
-	if i >= len(A) || i < 0 || j >= len(A[0]) || j < 0 {
-		return 0
-	}
-	if memo[i][j] != 0{
-		return memo[i][j]
-	}
-	var res int = math.MaxInt32
-	res = int(math.Min(float64(A[i][j] + dp_minpath(A,i+1,j,memo)),float64(res)))
-	if (j + 1) < len(A[0]) {
-		res = int(math.Min(float64(A[i][j]+dp_minpath(A, i+1, j+1,memo)), float64(res)))
-	}
-	if (j - 1) >= 0 {
-		res = int(math.Min(float64(A[i][j]+dp_minpath(A, i+1, j-1,memo)), float64(res)))
-	}
-	memo[i][j] = res
-	return res
-}
-
-func minFallingPathSum(A [][]int) int {
-	var res int
-	var memo [][]int = make([][]int,len(A))
-	for i := 0; i < len(A);i++{
-		memo[i] = make([]int,len(A[0]))
-	}
-	for j := 0; j < len(A[0]);j++{
-		res = int(math.Min(float64(dp_minpath(A,0,j,memo)),float64(math.MaxInt32)))
-	}
-	for _,v := range memo[0]{
-		if v < res{
-			res = v
-		}
-	}
-	return res
-}
-
 //1260
 // [[3,8,1,9],[19,7,2,5],[4,6,11,10],[12,0,21,13]] K = 4
 func shiftGrid(grid [][]int, k int) [][]int {
