@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		arr := []int{9,7,3}
+		res := array.ValidMountainArray(arr)
+		fmt.Println(res)
+	}
+	{
 		var n int = 3
 		res := diagram.KnightDialer(n)
 		fmt.Println(res)
