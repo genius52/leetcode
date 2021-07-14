@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		s := "aba"
+		res := string_issue.DistinctSubseqII(s)
+		fmt.Println(res)
+	}
+	{
 		arr := []int{9,7,3}
 		res := array.ValidMountainArray(arr)
 		fmt.Println(res)
