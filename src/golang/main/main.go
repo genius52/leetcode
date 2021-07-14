@@ -15,6 +15,17 @@ import (
 
 func main(){
 	{
+		var pushed []int = []int{1,2,3,4,5}
+		var popped []int = []int{4,5,3,2,1}
+		res := stack.ValidateStackSequences2(pushed,popped)
+		fmt.Println(res)
+	}
+	{
+		var A []int = []int{1,1,1,2,2,2}
+		res := array.MinIncrementForUnique2(A)
+		fmt.Println(res)
+	}
+	{
 		s := "aba"
 		res := string_issue.DistinctSubseqII(s)
 		fmt.Println(res)
@@ -102,13 +113,13 @@ func main(){
 		res := array.ThreeSumMulti(data,target)
 		fmt.Println(res)
 	}
-	{
-		N := 25
-		L := 28
-		K := 5
-		res := number.NumMusicPlaylists(N,L,K)
-		fmt.Println(res)
-	}
+	//{
+	//	N := 25
+	//	L := 28
+	//	K := 5
+	//	res := number.NumMusicPlaylists(N,L,K)
+	//	fmt.Println(res)
+	//}
 	{
 		s := "Test1ng-Leet=code-Q!"
 		res := string_issue.ReverseOnlyLetters(s)
@@ -2284,12 +2295,6 @@ func main(){
 		fmt.Println(res)
 	}
 	{
-		var pushed []int = []int{1,2,3,4,5}
-		var popped []int = []int{4,5,3,2,1}
-		res := stack.ValidateStackSequences(pushed,popped)
-		fmt.Println(res)
-	}
-	{
 		var points [][]int = [][]int{{1,1},{1,3},{3,1},{3,3},{4,1},{4,3}}
 		res := diagram.MinAreaRect(points)
 		fmt.Println(res)
@@ -2304,11 +2309,6 @@ func main(){
 		var k int = 26
 		res := string_issue.GetSmallestString(n,k)
 		fmt.Print(res)
-	}
-	{
-		var A []int = []int{1,1,1,2,2,2}
-		res := array.MinIncrementForUnique(A)
-		fmt.Println(res)
 	}
 	{
 		var A []int = []int{1,0,1,0,1}

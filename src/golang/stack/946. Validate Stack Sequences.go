@@ -53,3 +53,17 @@ func ValidateStackSequences(pushed []int, popped []int) bool {
 	}
 	return pos_push == pos_pop
 }
+
+func ValidateStackSequences2(pushed []int, popped []int) bool{
+	var q list.List
+	var l int = len(pushed)
+	j := 0
+	for i := 0;i < l;i++{
+		q.PushBack(pushed[i])
+		for q.Len() > 0 && q.Back().Value.(int) == popped[j]{
+			q.Remove(q.Back())
+			j++
+		}
+	}
+	return q.Len() == 0
+}
