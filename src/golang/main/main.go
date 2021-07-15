@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var deck []int = []int{17,13,11,2,3,5,7}
+		res := array.DeckRevealedIncreasing(deck)
+		fmt.Println(res)
+	}
+	{
 		var stones [][]int = [][]int{{0,0},{0,1},{1,0},{1,2},{2,1},{2,2}}
 		res := diagram.RemoveStones(stones)
 		fmt.Println(res)
