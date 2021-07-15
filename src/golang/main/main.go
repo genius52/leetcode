@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var stones [][]int = [][]int{{0,0},{0,1},{1,0},{1,2},{2,1},{2,2}}
+		res := diagram.RemoveStones(stones)
+		fmt.Println(res)
+	}
+	{
 		var pushed []int = []int{1,2,3,4,5}
 		var popped []int = []int{4,5,3,2,1}
 		res := stack.ValidateStackSequences2(pushed,popped)
