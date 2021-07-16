@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		strs := []string{"ca","bb","ac"}
+		res := string_issue.MinDeletionSize(strs)
+		fmt.Println(res)
+	}
+	{
 		words := []string{"hello","leetcode"}
 		order := "hlabcdefgijkmnopqrstuvwxyz"
 		res := string_issue.IsAlienSorted(words,order)

@@ -6,11 +6,10 @@ import "math"
 //Output: 4
 
 //func find_root(groups []int,i int)int {
-//	if groups[i] == i{
-//		return i
+//	if groups[i] != i{
+//		groups[i] = find_root(groups,groups[i])
 //	}
-//	parent := find_root(groups,groups[i])
-//	return parent
+//	return groups[i]
 //}
 
 

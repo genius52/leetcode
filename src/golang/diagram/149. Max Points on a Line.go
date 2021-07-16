@@ -2,12 +2,11 @@ package diagram
 
 import "strconv"
 
-func gcd(num1 int,num2 int)int{
-	if num1 != 0{
-		return gcd(num2 % num1, num2)
-	}else{
-		return num2
+func gcd(a int,b int)int{
+	if b == 0 {
+		return a
 	}
+	return gcd(b, a%b)
 }
 
 func MaxPoints(points [][]int) int {
