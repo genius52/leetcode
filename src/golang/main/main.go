@@ -15,6 +15,18 @@ import (
 
 func main(){
 	{
+		words := []string{"hello","leetcode"}
+		order := "hlabcdefgijkmnopqrstuvwxyz"
+		res := string_issue.IsAlienSorted(words,order)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{2,3,6,7,4,12,21,39}
+		//nums := []int{20,50,9,63}
+		res := diagram.LargestComponentSize(nums)
+		fmt.Println(res)
+	}
+	{
 		var deck []int = []int{17,13,11,2,3,5,7}
 		res := array.DeckRevealedIncreasing(deck)
 		fmt.Println(res)
