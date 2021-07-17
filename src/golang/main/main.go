@@ -15,6 +15,16 @@ import (
 
 func main(){
 	{
+		//cells := []int{0,1,1,1,0,0,0,0}
+		//n := 99
+		cells := []int{1,0,0,1,0,0,1,0}
+		n := 1000000000
+		//cells := []int{1,1,0,1,1,0,1,1}
+		//n := 6
+		res := array.PrisonAfterNDays(cells,n)
+		fmt.Println(res)
+	}
+	{
 		strs := []string{"ca","bb","ac"}
 		res := string_issue.MinDeletionSize(strs)
 		fmt.Println(res)
