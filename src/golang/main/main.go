@@ -10,10 +10,81 @@ import (
 	"../string_issue"
 	"../tree"
 	"fmt"
+	"math"
 	"strings"
 )
 
+func max_int(a,b int)int{
+	if a > b {
+		return a
+	}else{
+		return b
+	}
+}
+
+type val_idx struct{
+	val int
+	idx int
+}
+func maxPoints(points [][]int) int64 {
+	var rows int = len(points)
+	var columns int = len(points[0])
+	var max_val int = 0
+	for j := 0;j < columns;j++{
+		if max_val < points[0][j]{
+			max_val = points[0][j]
+		}
+	}
+	var pre []val_idx
+	for j := 0;j < columns;j++ {
+		if points[0][j] < (max_val - columns){
+			continue
+		}
+		var obj val_idx
+		obj.val = points[0][j]
+		obj.idx = j
+		pre = append(pre,obj)
+	}
+	for i := 1;i < rows;i++{
+		var l int = len(pre)
+		var max_val int = 0
+		var tmp []int = make([]int,columns)
+		for j := 0;j < columns;j++{
+			for k := 0;k < l;k++ {
+				tmp[j] = max_int(tmp[j],points[i][j] + pre[k].val - int(math.Abs(float64(j - pre[k].idx))))
+				if tmp[j] > max_val{
+					max_val = tmp[j]
+				}
+			}
+		}
+		var cur []val_idx
+		for j := 0;j < columns;j++{
+			if tmp[j] < (max_val - columns){
+				continue
+			}
+			var obj val_idx
+			obj.val = tmp[j]
+			obj.idx = j
+			cur = append(cur,obj)
+		}
+		pre = cur
+	}
+	var res int64 = 0
+	for i := 0;i < len(pre);i++{
+		if int64(pre[i].val) > res{
+			res = int64(pre[i].val)
+		}
+	}
+	return res
+}
+
 func main(){
+	{
+		rungs := []int{4,8,12,16}
+		dist := 3
+		res := array.AddRungs(rungs,dist)
+		fmt.Println(res)
+	}
 	{
 		//cells := []int{0,1,1,1,0,0,0,0}
 		//n := 99
