@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		strs := []string{"a"}
+		res := string_issue.MinDeletionSize3(strs)
+		fmt.Println(res)
+	}
+	{
 		rods := []int{1,2,3,6,7,8,9,10,12,14,15,44,22,33,16,13,76,33,24,42}
 		res := number.TallestBillboard(rods)
 		fmt.Println(res)
