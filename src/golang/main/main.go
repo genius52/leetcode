@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		points := [][]int{{0,1},{2,1},{1,1},{1,0},{2,0}}
+		res := diagram.MinAreaFreeRect(points)
+		fmt.Println(res)
+	}
+	{
 		strs := []string{"a"}
 		res := string_issue.MinDeletionSize3(strs)
 		fmt.Println(res)
