@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		input := []int{3,2,4,1}
+		res := array.PancakeSort2(input)
+		fmt.Println(res)
+	}
+	{
 		wordlist := []string{"KiTe","kite","hare","Hare"}
 		queries := []string{"kite","Kite","KiTe","Hare","HARE","Hear","hear","keti","keet","keto"}
 		res := string_issue.Spellchecker(wordlist,queries)
@@ -3445,11 +3450,6 @@ func main(){
 	//{
 	//	input := []int{4,6,7,7}
 	//	res := findSubsequences(input)
-	//	fmt.Println(res)
-	//}
-	//{
-	//	input := []int{3,2,4,1}
-	//	res := pancakeSort(input)
 	//	fmt.Println(res)
 	//}
 	//{
