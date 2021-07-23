@@ -6,6 +6,13 @@
 
 int main() {
     {
+        Solution_973 s973;
+        std::vector<std::vector<int>> points{{3,3},{5,-1},{-2,4}};
+        int k = 2;
+        auto res = s973.kClosest(points,k);
+        std::cout<<res.size()<<std::endl;
+    }
+    {
         FreqStack s895;
         s895.push(5);
         s895.push(7);
