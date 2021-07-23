@@ -15,6 +15,25 @@ import (
 
 func main(){
 	{
+		var t1 tree.TreeNode
+		t1.Val = 1
+		var t2 tree.TreeNode
+		t2.Val = 2
+		var t3 tree.TreeNode
+		t3.Val = 3
+		var t4 tree.TreeNode
+		t4.Val = 4
+		var t5 tree.TreeNode
+		t5.Val = 5
+		t5.Left = &t1
+		t5.Right = &t2
+		t2.Left = &t4
+		t2.Right = &t3
+		voyage := []int{5,2,3,4,1}
+		res := tree.FlipMatchVoyage(&t5,voyage)
+		fmt.Println(res)
+	}
+	{
 		input := []int{3,2,4,1}
 		res := array.PancakeSort2(input)
 		fmt.Println(res)
