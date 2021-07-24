@@ -44,12 +44,12 @@ func main(){
 		res := string_issue.Spellchecker(wordlist,queries)
 		fmt.Println(res)
 	}
-	{
-		x := 5
-		target := 501
-		res := number.LeastOpsExpressTarget(x,target)
-		fmt.Println(res)
-	}
+	//{
+	//	x := 5
+	//	target := 501
+	//	res := number.LeastOpsExpressTarget(x,target)
+	//	fmt.Println(res)
+	//}
 	{
 		points := [][]int{{0,1},{2,1},{1,1},{1,0},{2,0}}
 		res := diagram.MinAreaFreeRect(points)
