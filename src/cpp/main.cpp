@@ -6,6 +6,12 @@
 
 int main() {
     {
+        Solution_975 s975;
+        std::vector<int> arr{5,1,3,4,2};
+        auto res = s975.oddEvenJumps(arr);
+        std::cout<<res<<std::endl;
+    }
+    {
         Solution_973 s973;
         std::vector<std::vector<int>> points{{3,3},{5,-1},{-2,4}};
         int k = 2;

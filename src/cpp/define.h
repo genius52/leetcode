@@ -80,6 +80,7 @@ struct ListNode {
 #include "array/493. Reverse Pairs.hpp"
 #include "array/862. Shortest Subarray with Sum at Least K.hpp"
 #include "array/1887. Reduction Operations to Make the Array Elements Equal.hpp"
+#include "array/975. Odd Even Jump.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
@@ -255,6 +256,7 @@ struct ListNode {
 #include "list/715. Range Module.hpp"
 #include "list/855. Exam Room.hpp"
 #include "list/895. Maximum Frequency Stack.hpp"
+#include "list/973. K Closest Points to Origin.hpp"
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 
