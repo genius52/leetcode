@@ -9,10 +9,27 @@ package number
 //In total, you spent $11 and covered all the days of your travel.
 func mincostTickets(days []int, costs []int) int {
 	var l int = len(days)
-	var last int = days[l - 1]
-	var dp []int = make([]int,last + 1)//dp[i] = min cost on 'i'th day
-	for i := 1;i <= last;i++{
-
+	var dp []int = make([]int,days[l - 1] + 1)//dp[i] = min cost on 'i'th day
+	var record map[int]bool = make(map[int]bool)
+	for _,d := range days{
+		record[d] = true
 	}
-	return dp[last]
+	for i := 1;i <= days[l - 1];i++{
+		if _,ok := record[i];!ok{
+			dp[i] = dp[i - 1]
+		}else{
+			dp[i] = costs[0] + dp[i - 1]
+			if i >= 7{
+				dp[i] = min_int(dp[i],costs[1] + dp[i - 7])
+			}else{
+				dp[i] = min_int(dp[i],costs[1] + dp[0])
+			}
+			if i >= 30{
+				dp[i] = min_int(dp[i],costs[2] + dp[i - 30])
+			}else{
+				dp[i] = min_int(dp[i],costs[2] + dp[0])
+			}
+		}
+	}
+	return dp[days[l - 1]]
 }
