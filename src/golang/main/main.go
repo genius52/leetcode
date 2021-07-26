@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		A := []int{8,-10,10,-7,4,-2}
+		queries := [][]int{{6,4},{-7,0},{-3,5},{6,1},{-8,1},{-10,2}}
+		res := number.SumEvenAfterQueries(A,queries)
+		fmt.Println(res)
+	}
+	{
 		var t1 tree.TreeNode
 		t1.Val = 1
 		var t2 tree.TreeNode
