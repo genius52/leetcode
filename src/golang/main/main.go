@@ -15,6 +15,14 @@ import (
 
 func main(){
 	{
+		//[1,2,1,3,4]
+		//3
+		nums := []int{1,2,1,2,3}
+		k := 2
+		res := array.SubarraysWithKDistinct(nums,k)
+		fmt.Println(res)
+	}
+	{
 		A := []int{8,-10,10,-7,4,-2}
 		queries := [][]int{{6,4},{-7,0},{-3,5},{6,1},{-8,1},{-10,2}}
 		res := number.SumEvenAfterQueries(A,queries)
