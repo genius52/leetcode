@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var input [][]int = [][]int{{2,1,1},{1,1,0},{0,1,1}}
+		res := diagram.OrangesRotting(input)
+		fmt.Println(res)
+	}
+	{
 		//[1,2,1,3,4]
 		//3
 		nums := []int{1,2,1,2,3}
@@ -3984,11 +3989,6 @@ func main(){
 	//	A := "aa"
 	//	B := "aaaaa"
 	//	res := repeatedStringMatch(A,B)
-	//	fmt.Println(res)
-	//}
-	//{
-	//	var input [][]int = [][]int{{2,1,1},{1,1,0},{0,1,1}}
-	//	res := orangesRotting(input)
 	//	fmt.Println(res)
 	//}
 	//{
