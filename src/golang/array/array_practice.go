@@ -160,29 +160,6 @@ func lemonadeChange(bills []int) bool {
 	return true
 }
 
-//Input: N = 4, trust = [[1,3],[1,4],[2,3],[2,4],[4,3]]
-//Output: 3
-//3
-//[[[1,3],[2,3],[3,1]]
-func findJudge(N int, trust [][]int) int {
-	var len int = len(trust)
-	var record []int = make([]int,N+1)
-	var i int = 0
-	for i < len{
-		record[trust[i][0]] = -1
-		if record[trust[i][1]] != -1{
-			record[trust[i][1]]++
-		}
-		i++
-	}
-	for index,e := range record{
-		if e == (N-1){
-			return index
-		}
-	}
-	return -1
-}
-
 func is_binary_string(s string,len int) bool{
 	start := 0
 	end := len-1

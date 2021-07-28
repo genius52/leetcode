@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		nums := []int{0,0,0,1,0,1,1,0}
+		k := 3
+		res := array.MinKBitFlips(nums,k)
+		fmt.Println(res)
+	}
+	{
 		var input [][]int = [][]int{{2,1,1},{1,1,0},{0,1,1}}
 		res := diagram.OrangesRotting(input)
 		fmt.Println(res)
