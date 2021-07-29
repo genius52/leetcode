@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		words := []string{"bella","label","roller"}
+		res := string_issue.CommonChars(words)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{1,1,8,1,8}
 		res := array.NumSquarefulPerms(nums)
 		fmt.Println(res)
