@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		nums := []int{1,1,8,1,8}
+		res := array.NumSquarefulPerms(nums)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{0,0,0,1,0,1,1,0}
 		k := 1
 		res := array.MinKBitFlips(nums,k)
