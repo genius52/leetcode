@@ -15,6 +15,16 @@ import (
 
 func main(){
 	{
+		//var A []int = []int{0,0,1,1,1}
+		//var K int = 2
+		//var A []int = []int{1,1,1,0,0,0,1,1,1,1,0}
+		//var K int = 2
+		var A []int = []int{0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1}
+		var K int = 3
+		res := array.LongestOnes2(A,K)
+		fmt.Println(res)
+	}
+	{
 		words := []string{"bella","label","roller"}
 		res := string_issue.CommonChars(words)
 		fmt.Println(res)
@@ -2377,16 +2387,6 @@ func main(){
 		var A []int = []int{1,2,1,1,1,2,2,2}
 		var B []int = []int{2,1,2,2,2,2,2,2}
 		res := array.MinDominoRotations(A,B)
-		fmt.Println(res)
-	}
-	{
-		//var A []int = []int{0,0,1,1,1}
-		//var K int = 2
-		//var A []int = []int{1,1,1,0,0,0,1,1,1,1,0}
-		//var K int = 2
-		var A []int = []int{0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1}
-		var K int = 3
-		res := array.LongestOnes(A,K)
 		fmt.Println(res)
 	}
 	{

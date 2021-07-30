@@ -38,3 +38,27 @@ func LongestOnes(A []int, K int) int {
 	}
 	return max_len
 }
+
+func LongestOnes2(A []int, K int) int {
+	var l int = len(A)
+	var begin int = 0
+	var end int = 0
+	var res int = 0
+	for begin < l && end < l{
+		if A[end] == 0{
+			K--
+		}
+		for K < 0{
+			if A[begin] == 0{
+				K++
+			}
+			begin++
+		}
+		cur_len := end - begin + 1
+		if cur_len > res{
+			res = cur_len
+		}
+		end++
+	}
+	return res
+}
