@@ -6,6 +6,13 @@
 
 int main() {
     {
+        Solution_1005 s1005;
+        std::vector<int> A{3,-1,0,2};
+        int K = 3;
+        auto res = s1005.largestSumAfterKNegations(A,K);
+        std::cout<<res<<std::endl;
+    }
+    {
         Solution_975 s975;
         std::vector<int> arr{5,1,3,4,2};
         auto res = s975.oddEvenJumps(arr);
