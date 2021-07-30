@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		n := 4
+		res := number.Clumsy(n)
+		fmt.Println(res)
+	}
+	{
 		//var A []int = []int{0,0,1,1,1}
 		//var K int = 2
 		//var A []int = []int{1,1,1,0,0,0,1,1,1,1,0}
