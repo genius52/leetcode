@@ -4,6 +4,7 @@
 #include <condition_variable>
 #include "define.h"
 
+
 int main() {
     {
         Solution_1005 s1005;
