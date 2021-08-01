@@ -15,6 +15,16 @@ import (
 
 func main(){
 	{
+		//n := 5
+		//lamps := [][]int{{0,0},{4,4}}
+		//queries := [][]int{{1,1},{1,0}}
+		n := 6
+		lamps := [][]int{{2,5},{4,2},{0,3},{0,5},{1,4},{4,2},{3,3},{1,0}}
+		queries := [][]int{{4,3},{3,1},{5,3},{0,5},{4,4},{3,3}}
+		res := diagram.GridIllumination(n,lamps,queries)
+		fmt.Println(res)
+	}
+	{
 		var neededApples int64 = 1000000000
 		res := number.MinimumPerimeter(neededApples)
 		fmt.Println(res)
