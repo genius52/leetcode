@@ -7,6 +7,34 @@ import "math"
 //Explanation:
 //The first figure represents the dominoes as given by A and B: before we do any rotations.
 //If we rotate the second and fourth dominoes, we can make every value in the top row equal to 2, as indicated by the second figure.
+func MinDominoRotations2(A []int, B []int) int{
+	var countA []int = make([]int,7)
+	var countB []int = make([]int,7)
+	var same_cnt []int = make([]int,7)
+	var l int = len(A)
+	for i := 0;i < l;i++{
+		if A[i] == B[i]{
+			same_cnt[A[i]]++
+		}
+		countA[A[i]]++
+		countB[B[i]]++
+	}
+	var res int = 2147483647
+	for i := 1;i <= 6;i++{
+		if countA[i] + countB[i] - same_cnt[i] < l{
+			continue
+		}
+		swaps := min_int(countA[i] - same_cnt[i],countB[i] - same_cnt[i])
+		if swaps < res{
+			res = swaps
+		}
+	}
+	if res == 2147483647{
+		return -1
+	}
+	return res
+}
+
 func MinDominoRotations(A []int, B []int) int {
 	var l int = len(A)
 	if l <= 1{

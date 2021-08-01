@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var neededApples int64 = 1000000000
+		res := number.MinimumPerimeter(neededApples)
+		fmt.Println(res)
+	}
+	{
 		n := 4
 		res := number.Clumsy(n)
 		fmt.Println(res)
