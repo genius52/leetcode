@@ -5,10 +5,26 @@ import "math"
 //Input: [8,1,5,2,6]
 //Output: 11
 //Explanation: i = 0, j = 2, A[i] + A[j] + i - j = 8 + 5 + 0 - 2 = 11
+func MaxScoreSightseeingPair2(A []int) int{
+	var l int = len(A)
+	var res int = 0
+	var pre_max int = A[0]
+	for i := 1;i < l;i++{
+		cur := pre_max + A[i] - i
+		if cur > res{
+			res = cur
+		}
+		if pre_max < (A[i] + i){
+			pre_max = A[i] + i
+		}
+	}
+	return res
+}
+
 func MaxScoreSightseeingPair(A []int) int {
 	var l int = len(A)
-	var add_index []int = make([]int,l)
-	var minus_index []int = make([]int,l)
+	var add_index []int = make([]int,l) //add_index[i]:如果左边选择位置i的得分
+	var minus_index []int = make([]int,l)//minus_index[i]:如果右边选择位置i的得分
 	for i := 0;i < l;i++{
 		add_index[i] = A[i] + i
 		minus_index[i] = A[i] - i
