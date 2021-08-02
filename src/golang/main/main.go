@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		preorder := []int{4,2}
+		res := tree.BstFromPreorder(preorder)
+		fmt.Println(res)
+	}
+	{
 		//n := 5
 		//lamps := [][]int{{0,0},{4,4}}
 		//queries := [][]int{{1,1},{1,0}}
