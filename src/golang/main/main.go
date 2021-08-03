@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		S := "110101011011000011011111000000"
+		N := 15
+		res := string_issue.QueryString(S,N)
+		fmt.Println(res)
+	}
+	{
 		var K int = 1243
 		res := number.SmallestRepunitDivByK(K)
 		fmt.Println(res)
