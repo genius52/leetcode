@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var K int = 1243
+		res := number.SmallestRepunitDivByK(K)
+		fmt.Println(res)
+	}
+	{
 		preorder := []int{4,2}
 		res := tree.BstFromPreorder(preorder)
 		fmt.Println(res)
