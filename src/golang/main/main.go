@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		clips := [][]int{{0,1},{6,8},{0,2},{5,6},{0,4},{0,3},{6,7},{1,3},{4,7},{1,4},{2,5},{2,6},{3,4},{4,5},{5,7},{6,9}}
+		time := 9
+		res := array.VideoStitching(clips,time)
+		fmt.Println(res)
+	}
+	{
 		N := 3
 		res := number.BaseNeg2(N)
 		res2 := -5 / -2
