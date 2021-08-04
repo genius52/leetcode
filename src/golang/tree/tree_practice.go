@@ -487,27 +487,6 @@ func lcaDeepestLeaves(root *TreeNode) *TreeNode {
 	return ret
 }
 
-//1026
-func pre_visit(node *TreeNode,min int,max int,max_diff int)int{
-	if nil == node{
-		return 0
-	}
-	diff := int(math.Max(math.Abs(float64(node.Val - min)),math.Abs(float64(node.Val - max))))
-	max_diff = int(math.Max(float64(max_diff),float64(diff)))
-	min = int(math.Min(float64(node.Val),float64(min)))
-	max = int(math.Max(float64(node.Val),float64(max)))
-	res := int(math.Max(float64(pre_visit(node.Left,min,max,max_diff)),float64(pre_visit(node.Right,min,max,max_diff))))
-	res = int(math.Max(float64(res),float64(max_diff)))
-	return res
-}
-
-func maxAncestorDiff(root *TreeNode) int {
-	if nil == root{
-		return 0
-	}
-	return pre_visit(root,root.Val,root.Val,0)
-}
-
 //no recursive pre_visit
 func Preorder_visit_norecursive(root *TreeNode){
 	var q list.List
