@@ -15,6 +15,13 @@ import (
 
 func main(){
 	{
+		N := 3
+		res := number.BaseNeg2(N)
+		res2 := -5 / -2
+		fmt.Println(res2)
+		fmt.Println(res)
+	}
+	{
 		S := "110101011011000011011111000000"
 		N := 15
 		res := string_issue.QueryString(S,N)
