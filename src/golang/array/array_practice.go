@@ -92,36 +92,6 @@ func distributeCandies(candies int, num_people int) []int {
 	return res
 }
 
-
-//[[518,518],[71,971],[121,862],[967,607],[138,754],[513,337],[499,873],[337,387],[647,917],[76,417]]
-//
-func twoCitySchedCost(costs [][]int) int {
-	var res int = 0
-	var num int = len(costs)
-	if num <= 1{
-		return res
-	}
-	var a_cnt int = 0
-	var b_cnt int = 0
-	for i := 0;i < num;i++{
-		for j := 1;j < num - i;j++{
-			if math.Abs(float64(costs[j][0] - costs[j][1])) > math.Abs(float64(costs[j-1][0] - costs[j-1][1])){
-				costs[j],costs[j-1] = costs[j-1],costs[j]
-			}
-		}
-	}
-	for _,ele := range costs{
-		if ele[0] > ele[1] && b_cnt < num/2 {
-			res += ele[1]
-			b_cnt++
-		} else{
-			res += ele[0]
-			a_cnt++
-		}
-	}
-	return res
-}
-
 func lemonadeChange(bills []int) bool {
 	var change map[int]int = make(map[int]int)
 	for _,pay  := range bills{
