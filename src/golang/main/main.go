@@ -15,6 +15,13 @@ import (
 
 func main(){
 	{
+		blocked := [][]int{{1,1}}
+		source := []int{0,0}
+		target := []int{99999,99999}
+		res := diagram.IsEscapePossible(blocked,source,target)
+		fmt.Println(res)
+	}
+	{
 		A := []int{69,22,21,27,26,62,69,81,55,85,95,40,91,33,72,88,86}
 		res := number.MinScoreTriangulation(A)
 		fmt.Println(res)
