@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		A := []int{69,22,21,27,26,62,69,81,55,85,95,40,91,33,72,88,86}
+		res := number.MinScoreTriangulation(A)
+		fmt.Println(res)
+	}
+	{
 		clips := [][]int{{0,1},{6,8},{0,2},{5,6},{0,4},{0,3},{6,7},{1,3},{4,7},{1,4},{2,5},{2,6},{3,4},{4,5},{5,7},{6,9}}
 		time := 9
 		res := array.VideoStitching(clips,time)
