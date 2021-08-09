@@ -7,6 +7,12 @@
 
 int main() {
     {
+        Solution_1964 s1964;
+        std::vector<int> obstacles{3,1,5,6,4,2};
+        auto res = s1964.longestObstacleCourseAtEachPosition(obstacles);
+        std::cout<<res[0]<<std::endl;
+    }
+    {
         Solution_1005 s1005;
         std::vector<int> A{3,-1,0,2};
         int K = 3;

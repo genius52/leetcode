@@ -81,6 +81,7 @@ struct ListNode {
 #include "array/862. Shortest Subarray with Sum at Least K.hpp"
 #include "array/1887. Reduction Operations to Make the Array Elements Equal.hpp"
 #include "array/975. Odd Even Jump.hpp"
+#include "array/1964. Find the Longest Valid Obstacle Course at Each Position.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
