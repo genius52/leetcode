@@ -7,6 +7,19 @@
 
 int main() {
     {
+        Solution_1909 s1909;
+        std::vector<int> nums{1,1,1};
+        auto res = s1909.canBeIncreasing(nums);
+        std::cout<<res<<std::endl;
+    }
+    {
+        Solution_1942 s1942;
+        std::vector<std::vector<int>> times{{33889,98676},{80071,89737},{44118,52565},{52992,84310},{78492,88209},{21695,67063},{84622,95452},{98048,98856},{98411,99433},{55333,56548},{65375,88566},{55011,62821},{48548,48656},{87396,94825},{55273,81868},{75629,91467}};
+        int targetFriend = 6;
+        auto res = s1942.smallestChair(times,targetFriend);
+        std::cout<<res<<std::endl;
+    }
+    {
         Solution_1964 s1964;
         std::vector<int> obstacles{3,1,5,6,4,2};
         auto res = s1964.longestObstacleCourseAtEachPosition(obstacles);
