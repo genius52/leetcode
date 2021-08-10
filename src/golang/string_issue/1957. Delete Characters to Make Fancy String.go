@@ -1,0 +1,23 @@
+package string_issue
+
+func makeFancyString(s string) string {
+	var l int = len(s)
+	var left int = 0
+	var res string
+	for left < l{
+		var right int = left + 1
+		for right < l && s[left] == s[right]{
+			right++
+		}
+		cnt := right - left
+		if cnt >= 3{
+			cnt = 2
+		}
+		for cnt > 0{
+			res += string(s[left])
+			cnt--
+		}
+		left = right
+	}
+	return res
+}

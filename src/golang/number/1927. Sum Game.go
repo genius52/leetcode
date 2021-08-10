@@ -4,6 +4,7 @@ package number
 //For Bob to win, the sum of the digits in the first half of num must be equal to the sum of the digits in the second half.
 //For Alice to win, the sums must not be equal.
 //Assuming Alice and Bob play optimally, return true if Alice will win and false if Bob will win.
+//Alice first,return true if not equal
 func SumGame(num string) bool {
 	var tag1 int = 0
 	var tag2 int = 0
@@ -25,23 +26,8 @@ func SumGame(num string) bool {
 			}
 		}
 	}
-	if tag1 == 0 && tag2 == 0{
+	if tag1 == tag2{
 		return sum1 != sum2
 	}
-	if (tag1 + tag2) % 2 == 1{
-		return true
-	}
-
-	if sum1 > sum2{
-		if tag1 >= tag2{
-			return true
-		}
-	}else if sum1 < sum2{
-		if tag1 <= tag2{
-			return true
-		}
-	}else{
-		return false
-	}
-	return false
+	return !(((sum1 - sum2) * 2) == (9  * (tag2 - tag1)))
 }
