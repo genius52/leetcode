@@ -83,6 +83,7 @@ struct ListNode {
 #include "array/975. Odd Even Jump.hpp"
 #include "array/1909. Remove One Element to Make the Array Strictly Increasing.hpp"
 #include "array/1964. Find the Longest Valid Obstacle Course at Each Position.hpp"
+#include "array/1943. Describe the Painting.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"

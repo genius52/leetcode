@@ -7,6 +7,12 @@
 
 int main() {
     {
+        std::vector<std::vector<int>> segments{{1,4,5},{1,4,7},{4,7,1},{4,7,11}};
+        Solution_1943 s1943;
+        auto res = s1943.splitPainting(segments);
+        std::cout<<res.size()<<std::endl;
+    }
+    {
         Solution_1909 s1909;
         std::vector<int> nums{1,1,1};
         auto res = s1909.canBeIncreasing(nums);
