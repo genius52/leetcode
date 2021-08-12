@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		nums := []int{1,2,4}
+		k := 5
+		res := number.MaxFrequency(nums,k)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{10,20,15,30,20}
 		k := 2
 		res := array.MinSpaceWastedKResizing(nums, k)
