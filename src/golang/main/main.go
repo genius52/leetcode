@@ -15,6 +15,13 @@ import (
 
 func main(){
 	{
+		s := "011010"
+		minJump := 2
+		maxJump := 3
+		res := string_issue.CanReach(s,minJump,maxJump)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{1,2,4}
 		k := 5
 		res := number.MaxFrequency(nums,k)
