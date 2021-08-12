@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		nums := []int{10,20,15,30,20}
+		k := 2
+		res := array.MinSpaceWastedKResizing(nums, k)
+		fmt.Println(res)
+	}
+	{
 		blocked := [][]int{{1,1}}
 		source := []int{0,0}
 		target := []int{99999,99999}
