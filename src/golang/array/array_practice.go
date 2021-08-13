@@ -25,28 +25,11 @@ type ListNode struct {
 	Next *ListNode
 }
 
-//func remove_duplicated_sorted_array(arr []int)  []int{
-//	result := make([]int,0)
-//	len := len(arr)
-//	cur := arr[0]
-//	result = append(result, cur)
-//	for i := 1;i<len;i++{
-//		if arr[i] == cur{
-//			i++
-//		}else{
-//			result = append(result, arr[i])
-//			cur = arr[i]
-//		}
-//	}
-//	return result
-//}
-
 func remove_duplicated_sorted_array(arr []int)(length int){
 	len := len(arr)
 	if len <= 1{
 		return
 	}
-	//cur_val := arr[0]
 	cur_pos := 0
 	for i := 1 ;i<len;i++{
 		if arr[cur_pos] != arr[i]{
@@ -67,9 +50,6 @@ func maxArea(height []int) int {
 		if cap > max_cap{
 			max_cap = cap
 		}
-
-		//var left_cap int = int(math.Abs(float64(high - low - 1)) * math.Min(float64(height[high]),float64(height[low+1])))
-		//var right_cap int = int(math.Abs(float64(high - low - 1)) * math.Min(float64(height[high - 1]),float64(height[low])))
 		if (height[high - 1] >= height[low+1]){
 			high--
 		} else{
@@ -450,46 +430,6 @@ func findOcurrences(text string, first string, second string) []string {
 		}
 	}
 	return res
-}
-
-//1043
-func max_int_slice(nums []int) int{
-	var max int = 0
-	for _,val := range nums{
-		if val > max{
-			max = val
-		}
-	}
-	return max
-}
-
-func max_sum(A []int,begin int,K int,records map[int]int) int{
-	var max int = 0
-	if begin >= len(A) {
-		return max
-	}
-	for i := 1;i <= K;i++{
-		if (begin + i)  > len(A) {
-			break
-		}
-		var sum int = 0
-		if val,ok := records[begin+i];ok{
-			sum = val
-		}else{
-			sum = max_sum(A,begin + i,K,records)
-			records[begin + i] = sum
-		}
-		cur_sum := max_int_slice(A[begin:begin+i]) * (i) + sum
-		if cur_sum > max{
-			max = cur_sum
-		}
-	}
-	return max
-}
-
-func maxSumAfterPartitioning(A []int, K int) int {
-	var records map[int]int = make(map[int]int,len(A))
-	return max_sum(A,0,K,records)
 }
 
 //1219
@@ -1129,84 +1069,6 @@ func repeatedStringMatch(A string, B string) int {
 }
 
 //322
-//Input: coins = [1, 2, 5], amount = 11
-//Output: 3
-//Explanation: 11 = 5 + 5 + 1
-//Top to bottom
-//func dp_coinChange(coins []int,amount int,rest int,cur_index int,memo map[int]int)int{
-//	if cur_index >= len(coins) || rest < 0 {
-//		return math.MaxInt32
-//	}
-//	if rest == 0{
-//		return 1
-//	}
-//	//if _,ok := memo[rest];ok{
-//	//	return memo[rest]
-//	//}
-//	steps := math.MaxInt32
-//	//choose current coin and continue
-//	l1 := 1 + dp_coinChange(coins,amount,rest - coins[cur_index],cur_index,memo)
-//	if l1 < steps{
-//		steps = l1
-//	}
-//	//choose current coin and move to next
-//	l2  := 1 + dp_coinChange(coins,amount,rest - coins[cur_index],cur_index + 1,memo)
-//	if l2 < steps{
-//		steps = l2
-//	}
-//	//skip current coin and move to next
-//	l3 := dp_coinChange(coins,amount,rest,cur_index + 1,memo)
-//	if l3 < steps{
-//		steps = l3
-//	}
-//	if steps != math.MaxInt32 {
-//		if val,ok := memo[rest];ok{
-//			if steps < val{
-//				memo[rest] = steps
-//			}
-//		}else{
-//			memo[rest] = steps
-//		}
-//	}
-//	return steps
-//}
-//
-//func coinChange(coins []int, amount int) int {
-//	sort.Ints(coins)
-//	for i := 0;i < len(coins)/2;i++{
-//		coins[i],coins[len(coins)-i-1] = coins[len(coins)-i-1],coins[i]
-//	}
-//	var memo map[int]int = make(map[int]int)
-//	res :=  dp_coinChange(coins,amount,amount,0,memo)
-//	return res
-//}
-
-//func coinChange(coins []int, amount int) int {
-//	var memo []int = make([]int,amount + 1)//memo[i] means the min step from 0 to i
-//	for i,_ := range memo{
-//		memo[i] = math.MaxInt32
-//	}
-//	memo[0] = 0
-//	// var steps int = 0
-//	for i := 1;i <= amount;i++{
-//		min_steps := math.MaxInt32
-//		for _,c := range coins{
-//			if (i - c) >= 0{
-//				if memo[i-c] < min_steps{
-//					min_steps = memo[i-c]
-//				}
-//			}
-//		}
-//		if min_steps != math.MaxInt32{
-//			memo[i] = 1 + min_steps
-//		}
-//	}
-//	if memo[amount] == math.MaxInt32{
-//		return - 1
-//	}
-//	return memo[amount]
-//}
-
 func coinChange(coins []int, amount int) int {
 	var dp []int = make([]int,amount + 1)
 	for i := 0;i < len(dp);i++{
