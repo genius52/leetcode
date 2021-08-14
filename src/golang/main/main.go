@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		s := "aa"
+		res := string_issue.LongestDupSubstring(s)
+		fmt.Println(res)
+	}
+	{
 		s := "011010"
 		minJump := 2
 		maxJump := 3
