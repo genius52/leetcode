@@ -1,5 +1,4 @@
-from functools import cmp_to_key
-from array import *
+from arraytype.array import *
 from tree import *
 from other import *
 from Longest_Absolute_File_Path import *

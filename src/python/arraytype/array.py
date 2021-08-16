@@ -658,7 +658,7 @@ class Solution_5:
             end += 1
         return res
 
-# Given array nums = [-1, 0, 1, 2, -1, -4],
+# Given arraytype nums = [-1, 0, 1, 2, -1, -4],
 # A solution set is:
 # [
 #   [-1, 0, 1],
@@ -753,7 +753,7 @@ class Solution_15ex:
             head += 1
         return res
 
-# Given array nums = [-1, 2, 1, -4], and target = 1.
+# Given arraytype nums = [-1, 2, 1, -4], and target = 1.
 # The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
 class Solution_16:
     def threeSumClosest(self, nums, target: int) -> int:

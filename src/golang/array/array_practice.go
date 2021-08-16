@@ -206,13 +206,6 @@ func numEquivDominoPairs(dominoes [][]int) int {
 	return res
 }
 
-//1051
-func heightChecker(heights []int) int {
-	var cnt int = 0
-
-	return cnt
-}
-
 func check_balance(s string) bool{
 	var L_cnt int = 0
 	var R_cnt int = 0

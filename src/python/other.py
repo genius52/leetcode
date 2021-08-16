@@ -143,7 +143,7 @@ class Solution_33:
                     low = mid + 1
         return -1
 
-# You are given an array coordinates, coordinates[i] = [x, y], where [x, y] represents the coordinate of a point.
+# You are given an arraytype coordinates, coordinates[i] = [x, y], where [x, y] represents the coordinate of a point.
 # Check if these points make a straight line in the XY plane.
 class Solution_1232:
     #def checkStraightLine(self, coordinates: List[List[int]]) -> bool:
@@ -408,3 +408,10 @@ class Solution_61:
             move = move.next
         move.next = head
         return new_head
+
+class Solution_1969:
+    def minNonZeroProduct(self, p: int) -> int:
+        biggest = 2 ** p - 1
+        pair = 2 ** p - 2
+        times = 2 ** (p - 1) - 1
+        return (biggest * pow(pair, times, 10 ** 9 + 7)) % (10 ** 9 + 7)

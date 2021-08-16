@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		arr := []int{1,9,4,6,7}
+		res := array.PrevPermOpt1(arr)
+		fmt.Println(res)
+	}
+	{
 		s := "aa"
 		res := string_issue.LongestDupSubstring(s)
 		fmt.Println(res)
