@@ -15,6 +15,14 @@ import (
 
 func main(){
 	{
+		//"ABABCCABAB"
+		//"ABAB"
+		str1 := "ABCABC"
+		str2 := "ABC"
+		res := string_issue.GcdOfStrings(str1,str2)
+		fmt.Println(res)
+	}
+	{
 		arr := []int{1,9,4,6,7}
 		res := array.PrevPermOpt1(arr)
 		fmt.Println(res)
