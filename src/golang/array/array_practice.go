@@ -407,24 +407,6 @@ func oddCells(n int, m int, indices [][]int) int {
 	return res
 }
 
-
-//1078
-func findOcurrences(text string, first string, second string) []string {
-	var res []string
-	var words []string = strings.Split(text," ")
-	if len(words) <= 1{
-		return res
-	}
-	for slow := 0; slow < len(words) - 2;slow++{
-		if words[slow] == first{
-			if words[slow+1] == second{
-				res = append(res, words[slow+2])
-			}
-		}
-	}
-	return res
-}
-
 //1219
 func max_int(a,b int)int{
 	if a > b {
@@ -718,19 +700,6 @@ func minRemoveToMakeValid(s string) string {
 	}
 	res3 := res[0:i+1] + reverse(res2)
 	return res3
-}
-
-//1074
-//Input: matrix = [[1,-1],[-1,1]], target = 0
-//Output: 5
-func numSubmatrixSumTarget(matrix [][]int, target int) int {
-	var res int = 0
-	for row := 0;row < len(matrix);row++{
-		for col := 0;col < len(matrix[0]);col++{
-
-		}
-	}
-	return res
 }
 
 //260

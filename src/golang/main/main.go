@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		matrix := [][]int{{0,1,0},{1,1,1},{0,1,0}}
+		target := 0
+		res := array.NumSubmatrixSumTarget(matrix,target)
+		fmt.Println(res)
+	}
+	{
 		row := 2
 		col := 6
 		cells := [][]int{{1,4},{1,3},{2,1},{2,5},{2,2},{1,5},{2,4},{1,2},{1,6},{2,3},{2,6},{1,1}}
