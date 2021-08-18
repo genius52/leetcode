@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		s := "cbaacabcaaccaacababa"
+		res := string_issue.SmallestSubsequence(s)
+		fmt.Println(res)
+	}
+	{
 		matrix := [][]int{{0,1,0},{1,1,1},{0,1,0}}
 		target := 0
 		res := array.NumSubmatrixSumTarget(matrix,target)
