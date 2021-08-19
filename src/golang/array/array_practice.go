@@ -59,19 +59,6 @@ func maxArea(height []int) int {
 	return max_cap
 }
 
-
-func distributeCandies(candies int, num_people int) []int {
-	var res []int = make([]int,num_people,num_people)
-	var cnt int = 1
-	for candies > cnt{
-		res[(cnt - 1) % num_people] += cnt
-		candies -= cnt
-		cnt++
-	}
-	res[(cnt - 1) % num_people] += candies
-	return res
-}
-
 func lemonadeChange(bills []int) bool {
 	var change map[int]int = make(map[int]int)
 	for _,pay  := range bills{
