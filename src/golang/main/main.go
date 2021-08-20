@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		expression := "|(&(t,f,t),!(t))"
+		res := string_issue.ParseBoolExpr(expression)
+		fmt.Println(res)
+	}
+	{
 		str1 := "abac"
 		str2 := "cab"
 		res := string_issue.ShortestCommonSupersequence(str1,str2)
