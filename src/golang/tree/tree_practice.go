@@ -120,41 +120,7 @@ func reachNumber(target int) int {
 	return res
 }
 
-//1110
-func inorder_visit(node **TreeNode,init bool,to_delete []int,res *[]*TreeNode){
-	var should_delete bool = false
-	if nil == *node{
-		return
-	}
-	for _,val := range to_delete{
-		if val == (*node).Val{
-			should_delete = true
-			break
-		}
-	}
-	temp := *node
-	if should_delete{
-		*node = nil
-		init = true
-	}else{
-		if init{
-			*res = append(*res, *node)
-			init = false
-		}
-	}
-	inorder_visit(&(temp.Left),init,to_delete,res)
-	inorder_visit(&(temp.Right),init,to_delete,res)
-}
-
-func delNodes(root *TreeNode, to_delete []int) []*TreeNode {
-	var res []*TreeNode
-	inorder_visit(&root,true,to_delete,&res)
-	return res
-}
-
-
 //1130
-
 func dp_arr(arr []int,max_records [][]int,memo [][]int,left,right int)int{
 	if left >= right{
 		return 0
