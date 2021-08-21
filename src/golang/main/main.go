@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		arr1 := []int{28,6,22,8,44,17}
+		arr2 := []int{22,28,8,6}
+		res := array.RelativeSortArray2(arr1,arr2)
+		fmt.Println(res)
+	}
+	{
 		var bookings [][]int = [][]int{{1,2,10},{2,3,20},{2,5,25}}
 		var n int = 5
 		res := diagram.CorpFlightBookings2(bookings,n)
