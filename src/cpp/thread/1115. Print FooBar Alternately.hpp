@@ -9,7 +9,7 @@ private:
     int n;
     std::mutex allow_;
     std::condition_variable cond_;
-    static bool start;
+    bool start_ = true;
 public:
     FooBar(int n) {
         this->n = n;
@@ -19,10 +19,10 @@ public:
         for (int i = 0; i < n; i++) {
             std::unique_lock<std::mutex> lk(allow_);
             cond_.wait(lk,[this](){
-                return start;
+                return start_;
             });
             printFoo();
-            start = false;
+            start_ = false;
             cond_.notify_one();
         }
     }
@@ -31,13 +31,11 @@ public:
         for (int i = 0; i < n; i++) {
             std::unique_lock<std::mutex> lk(allow_);
             cond_.wait(lk,[this](){
-                return !start;
+                return !start_;
             });
             printBar();
-            start = true;
+            start_ = true;
             cond_.notify_one();
         }
     }
 };
-
-bool FooBar::start = true;
