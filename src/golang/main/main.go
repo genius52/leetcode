@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		word := "fd"
+		res := string_issue.MinTimeToType(word)
+		fmt.Println(res)
+	}
+	{
 		req_skills := []string{"algorithms","math","java","reactjs","csharp","aws"}
 		people := [][]string{{"algorithms","math","java"},{"algorithms","math","reactjs"},
 					{"java","csharp","aws"},{"reactjs","csharp"},{"csharp","math"},{"aws","java"}}
