@@ -15,6 +15,19 @@ import (
 
 func main(){
 	{
+		req_skills := []string{"algorithms","math","java","reactjs","csharp","aws"}
+		people := [][]string{{"algorithms","math","java"},{"algorithms","math","reactjs"},
+					{"java","csharp","aws"},{"reactjs","csharp"},{"csharp","math"},{"aws","java"}}
+		res := diagram.SmallestSufficientTeam(req_skills,people)
+		fmt.Println(res)
+	}
+	{
+		var hours []int = []int{9,9,6,0,6,6,9}
+		//var hours []int = []int{6,6,9,0,9,9,6}
+		res := array.LongestWPI(hours)
+		fmt.Println(res)
+	}
+	{
 		arr1 := []int{28,6,22,8,44,17}
 		arr2 := []int{22,28,8,6}
 		res := array.RelativeSortArray2(arr1,arr2)
@@ -2414,12 +2427,6 @@ func main(){
 		var red_edges [][]int = [][]int{{4,1},{3,5},{5,2},{1,4},{4,2},{0,0},{2,0},{1,1}}
 		var blue_edges [][]int = [][]int{{5,5},{5,0},{4,4},{0,3},{1,0}}
 		res := diagram.ShortestAlternatingPaths(n,red_edges,blue_edges)
-		fmt.Println(res)
-	}
-	{
-		//var hours []int = []int{9,9,6,0,6,6,9}
-		var hours []int = []int{6,6,9,0,9,9,6}
-		res := array.LongestWPI(hours)
 		fmt.Println(res)
 	}
 	{
