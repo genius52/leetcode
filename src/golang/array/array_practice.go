@@ -148,50 +148,6 @@ func (this *KthLargest) Add(val int) int {
 	return this.nums[this.k - 1]
 }
 
-func get_value(n int) int {
-	if n == 0{
-		return 1
-	}else if n == 1 {
-		return n
-	}else{
-		return n * get_value(n - 1)
-	}
-}
-
-func gen_last_value(n, m int) int{
-	first := get_value(n)
-	second := get_value(m)
-	third := get_value((n - m))
-	return first / (second * third)
-}
-
-func numEquivDominoPairs(dominoes [][]int) int {
-	var res int = 0
-	var dict map[[2]int]int = make(map[[2]int]int)
-	for _,ele := range dominoes{
-		var max,min int
-		if ele[0] > ele[1]{
-			max = ele[0]
-			min = ele[1]
-		}else{
-			max = ele[1]
-			min = ele[0]
-		}
-
-		var key [2]int = [2]int{min,max}
-		if _,ok := dict[key];ok{
-			dict[key] += 1
-		}else{
-			dict[key] = 1
-		}
-	}
-	for _,num := range dict{
-		if num >= 2{
-			res += gen_last_value(num,2)
-		}
-	}
-	return res
-}
 
 func check_balance(s string) bool{
 	var L_cnt int = 0
