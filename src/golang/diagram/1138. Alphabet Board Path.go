@@ -5,11 +5,52 @@ package diagram
 //'L' moves our position left one column, if the position exists on the board;
 //'R' moves our position right one column, if the position exists on the board;
 //'!' adds the character board[r][c] at our current position (r, c) to the answer.
+func AlphabetBoardPath2(target string) string{
+	var res string
+	var pre_row int = 0
+	var pre_col int = 0
+	var l int = len(target)
+	for i := 0;i < l;i++{
+		var cur_row int = int((target[i] - 'a')/5)
+		var cur_col int = int((target[i] - 'a')%5)
+		//if go up
+		if cur_row < pre_row{
+			steps := pre_row - cur_row
+			for i := 0;i < steps;i++{
+				res += "U"
+			}
+			pre_row = cur_row
+		}
+		//if go left
+		if cur_col < pre_col{
+			steps := pre_col - cur_col
+			for i := 0;i < steps;i++{
+				res += "L"
+			}
+			pre_col = cur_col
+		}
+//if go down
+		if cur_row > pre_row{
+			steps := cur_row - pre_row
+			for i := 0;i < steps;i++{
+				res += "D"
+			}
+			pre_row = cur_row
+		}
+//if go right
+		if cur_col > pre_col{
+			steps := cur_col - pre_col
+			for i := 0;i < steps;i++{
+				res += "R"
+			}
+			pre_col = cur_col
+		}
+		res += "!"
+	}
+	return res
+}
+
 func alphabetBoardPath(target string) string {
-	//char <-> position
-	// row = (char - 'a') / 5
-	// column = (char - 'a') % 5
-	//var dirs []string = []string{"U","D","L","R"}
 	var res string
 	var pre_row int = 0
 	var pre_col int = 0

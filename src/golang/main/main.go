@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		target := "leetcode"
+		res := diagram.AlphabetBoardPath2(target)
+		fmt.Println(res)
+	}
+	{
 		//6
 		//[[4,1],[3,5],[5,2],[1,4],[4,2],[0,0],[2,0],[1,1]]
 		//[[5,5],[5,0],[4,4],[0,3],[1,0]]
