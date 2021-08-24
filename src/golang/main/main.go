@@ -15,6 +15,20 @@ import (
 
 func main(){
 	{
+		//6
+		//[[4,1],[3,5],[5,2],[1,4],[4,2],[0,0],[2,0],[1,1]]
+		//[[5,5],[5,0],[4,4],[0,3],[1,0]]
+		//var n int = 6
+		//var red_edges [][]int = [][]int{{4,1},{3,5},{5,2},{1,4},{4,2},{0,0},{2,0},{1,1}}
+		//var blue_edges [][]int = [][]int{{5,5},{5,0},{4,4},{0,3},{1,0}}
+		//n = 3, red_edges = [[0,1],[1,2]], blue_edges = []
+		var n int = 3
+		var red_edges [][]int = [][]int{{0,1},{1,2}}
+		var blue_edges [][]int = [][]int{}
+		res := diagram.ShortestAlternatingPaths(n,red_edges,blue_edges)
+		fmt.Println(res)
+	}
+	{
 		word := "fd"
 		res := string_issue.MinTimeToType(word)
 		fmt.Println(res)
@@ -2422,16 +2436,6 @@ func main(){
 		var grid [][]int = [][]int{{0,1,1,1},{1,1,1,1},{1,0,0,1},{1,1,1,1},{1,0,1,1},{1,1,0,1}}
 		//var grid [][]int = [][]int{{1,1,1},{1,0,1},{1,1,1}}
 		res := array.Largest1BorderedSquare(grid)
-		fmt.Println(res)
-	}
-	{
-		//6
-		//[[4,1],[3,5],[5,2],[1,4],[4,2],[0,0],[2,0],[1,1]]
-		//[[5,5],[5,0],[4,4],[0,3],[1,0]]
-		var n int = 6
-		var red_edges [][]int = [][]int{{4,1},{3,5},{5,2},{1,4},{4,2},{0,0},{2,0},{1,1}}
-		var blue_edges [][]int = [][]int{{5,5},{5,0},{4,4},{0,3},{1,0}}
-		res := diagram.ShortestAlternatingPaths(n,red_edges,blue_edges)
 		fmt.Println(res)
 	}
 	{
