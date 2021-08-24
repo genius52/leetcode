@@ -120,37 +120,6 @@ func reachNumber(target int) int {
 	return res
 }
 
-//1130
-func dp_arr(arr []int,max_records [][]int,memo [][]int,left,right int)int{
-	if left >= right{
-		return 0
-	}
-	if memo[left][right] != 0{
-		return memo[left][right]
-	}
-	var res int = 1<<30
-	for i := left;i < right;i++{
-		res = int(math.Min(float64(res),float64(max_records[left][i] * max_records[i+1][right] + dp_arr(arr,max_records,memo,left,i) + dp_arr(arr,max_records,memo,i+1,right))))
-	}
-	memo[left][right] = res
-	return res
-}
-
-func mctFromLeafValues(arr []int) int {
-	var memo [][]int = make([][]int,len(arr))
-	var max_records [][]int = make([][]int,len(arr))
-	for i := 0;i < len(arr);i++{
-		max_records[i] = make([]int,len(arr))
-		memo[i] = make([]int,len(arr))
-		max_records[i][i] = arr[i]
-		for j := i+1;j < len(arr);j++{
-			max_records[i][j] = int(math.Max(float64(arr[j]),float64(max_records[i][j-1])))
-		}
-	}
-	return dp_arr(arr,max_records,memo,0,len(arr)-1)
-}
-
-
 //1261
 type FindElements struct {
 	root *TreeNode
