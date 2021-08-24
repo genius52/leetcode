@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		piles := []int{2,7,9,4,4}
+		res := number.StoneGameII(piles)
+ 		fmt.Println(res)
+	}
+	{
 		target := "leetcode"
 		res := diagram.AlphabetBoardPath2(target)
 		fmt.Println(res)
