@@ -8,7 +8,7 @@ class TreeNode(object):
 class Codec_297:
 
     def serialize(self, root):
-        """Encodes a tree to a single string.
+        """Encodes a tree to a single stringissue.
 
         :type root: TreeNode
         :rtype: str

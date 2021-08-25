@@ -2,8 +2,13 @@ from arraytype.array import *
 from tree import *
 from other import *
 from Longest_Absolute_File_Path import *
+from stringissue.Solution1147 import *
 
 if __name__ == '__main__':
+    s1147 = Solution_1147()
+    text = "ghiabcdefhelloadamhelloabcdefghi"
+    res = s1147.longestDecomposition(text)
+
     s388 = Solution_388()
     res = s388.lengthLongestPath("dir")
 
