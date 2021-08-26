@@ -2,13 +2,51 @@ package diagram
 
 import "container/list"
 
-//Input: grid = [[1,0,0],[0,0,0],[0,0,0]]
-//Output: 4
-//type point struct {
-//	x int
-//	y int
-//}
+//BFS solution
+func MaxDistance2(grid [][]int) int{
+	var rows int = len(grid)
+	var columns int = len(grid[0])
+	var q list.List
+	for i := 0;i < rows;i++{
+		for j := 0;j < columns;j++{
+			if grid[i][j] == 1{
+				var p point = point{i,j}
+				q.PushBack(p)
+			}
+		}
+	}
+	if q.Len() == 0 || q.Len() == rows * columns{
+		return -1
+	}
+	var dirs [][]int = [][]int{{-1,0},{1,0},{0,-1},{0,1}}
+	var distance int = 1
+	var max_distance int = 0
+	for q.Len() > 0{
+		var l int = q.Len()
+		for i := 0;i < l;i++{
+			cur := q.Front().Value.(point)
+			q.Remove(q.Front())
+			for _,dir := range dirs{
+				var next point
+				next.x = cur.x + dir[0]
+				next.y = cur.y + dir[1]
+				if next.x < 0 || next.y < 0 || next.x >= rows || next.y >= columns{
+					continue
+				}
+				if grid[next.x][next.y] != 0{
+					continue
+				}
+				q.PushBack(next)
+				grid[next.x][next.y] = distance
+				max_distance = distance
+			}
+		}
+		distance++
+	}
+	return max_distance
+}
 
+//DFS solution
 func search_neighbour(p point,grid [][]int,rows int,columns int,q *list.List){
 	if p.x - 1 >= 0{
 		if grid[p.x - 1][p.y] == 0{

@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var grid [][]int = [][]int{{1,0,1}, {0, 0, 0}, {1,0,1}}
+		res := diagram.MaxDistance2(grid)
+		fmt.Println(res)
+	}
+	{
 		piles := []int{2,7,9,4,4}
 		res := number.StoneGameII(piles)
  		fmt.Println(res)
@@ -2404,11 +2409,6 @@ func main(){
 
 		res := list_queue.RemoveZeroSumSublists(&l1)
 		fmt.Println(res.Val)
-	}
-	{
-		var grid [][]int = [][]int{{1, 0, 0}, {0, 0, 0}, {0, 0, 0}}
-		res := diagram.MaxDistance(grid)
-		fmt.Println(res)
 	}
 	{
 		var text string = "aaaaa"
