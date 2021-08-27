@@ -15,6 +15,39 @@ import (
 
 func main(){
 	{
+		//[1,3,2,-3,-2,5,5,-5,1]
+		var l1 list_queue.ListNode
+		l1.Val = 1
+		var l2 list_queue.ListNode
+		l2.Val = 3
+		var l3 list_queue.ListNode
+		l3.Val = 2
+		var l4 list_queue.ListNode
+		l4.Val = -3
+		var l5 list_queue.ListNode
+		l5.Val = -2
+		var l6 list_queue.ListNode
+		l6.Val = 5
+		var l7 list_queue.ListNode
+		l7.Val = 5
+		var l8 list_queue.ListNode
+		l8.Val = -5
+		var l9 list_queue.ListNode
+		l9.Val = 1
+
+		l1.Next = &l2
+		l2.Next = &l3
+		l3.Next = &l4
+		l4.Next = &l5
+		l5.Next = &l6
+		l6.Next = &l7
+		l7.Next = &l8
+		l8.Next = &l9
+
+		res := list_queue.RemoveZeroSumSublists2(&l1)
+		fmt.Println(res.Val)
+	}
+	{
 		var grid [][]int = [][]int{{1,0,1}, {0, 0, 0}, {1,0,1}}
 		res := diagram.MaxDistance2(grid)
 		fmt.Println(res)
@@ -2376,39 +2409,6 @@ func main(){
 		var queries [][]int = [][]int{{3,3,0},{1,2,0},{0,3,1},{0,3,2},{0,4,1}}
 		res := string_issue.CanMakePaliQueries(s,queries)
 		fmt.Println(res)
-	}
-	{
-		//[1,3,2,-3,-2,5,5,-5,1]
-		var l1 list_queue.ListNode
-		l1.Val = 0
-		var l2 list_queue.ListNode
-		l2.Val = 1
-		var l3 list_queue.ListNode
-		l3.Val = 0
-		var l4 list_queue.ListNode
-		l4.Val = 3
-		var l5 list_queue.ListNode
-		l5.Val = 1
-		//var l6 list_queue.ListNode
-		//l6.Val = 5
-		//var l7 list_queue.ListNode
-		//l7.Val = 5
-		//var l8 list_queue.ListNode
-		//l8.Val = -5
-		//var l9 list_queue.ListNode
-		//l9.Val = 1
-
-		l1.Next = &l2
-		l2.Next = &l3
-		//l3.Next = &l4
-		//l4.Next = &l5
-		//l5.Next = &l6
-		//l6.Next = &l7
-		//l7.Next = &l8
-		//l8.Next = &l9
-
-		res := list_queue.RemoveZeroSumSublists(&l1)
-		fmt.Println(res.Val)
 	}
 	{
 		var text string = "aaaaa"
