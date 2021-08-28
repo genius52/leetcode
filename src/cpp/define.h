@@ -262,6 +262,7 @@ struct ListNode {
 #include "list/855. Exam Room.hpp"
 #include "list/895. Maximum Frequency Stack.hpp"
 #include "list/973. K Closest Points to Origin.hpp"
+#include "list/1172. Dinner Plate Stacks.hpp"
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 

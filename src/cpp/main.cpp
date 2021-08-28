@@ -7,6 +7,24 @@
 
 int main() {
     {
+        DinnerPlates s1172(1);
+        s1172.push(1);
+        s1172.push(2);
+        s1172.push(3);
+//        s1172.push(4);
+//        s1172.push(5);
+        auto res = s1172.popAtStack(1);
+//        s1172.push(20);
+//        s1172.push(21);
+//        res = s1172.popAtStack(0);
+//        res = s1172.popAtStack(2);
+        res = s1172.pop();
+        res = s1172.pop();
+        res = s1172.pop();
+        res = s1172.pop();
+        res = s1172.pop();
+    }
+    {
         std::vector<std::vector<int>> segments{{1,4,5},{1,4,7},{4,7,1},{4,7,11}};
         Solution_1943 s1943;
         auto res = s1943.splitPainting(segments);
