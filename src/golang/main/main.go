@@ -15,6 +15,13 @@ import (
 
 func main(){
 	{
+		distance := []int{1,2,3,4}
+		start := 0
+		destination := 3
+		res := diagram.DistanceBetweenBusStops(distance,start,destination)
+		fmt.Println(res)
+	}
+	{
 		//[1,3,2,-3,-2,5,5,-5,1]
 		var l1 list_queue.ListNode
 		l1.Val = 1
