@@ -2,6 +2,36 @@ package array
 
 //Input: arr = [1,-2,-2,3]
 //Output: 3
+func maximumSum(arr []int) int{
+	var l int = len(arr)
+	var prefix []int = make([]int,l)
+	var suffix []int = make([]int,l)
+	prefix[0] = arr[0]
+	suffix[l - 1] = arr[l - 1]
+	for i := 1;i < l;i++{
+		prefix[i] = max_int_number(arr[i],arr[i] + prefix[i - 1])
+	}
+	for i := l - 2;i >= 0;i--{
+		suffix[i] = max_int_number(arr[i],arr[i] + suffix[i + 1])
+	}
+	var res int = -2147483648
+	for i := 0;i < l;i++{
+		var cur int = 0
+		if i == 0{
+			cur = suffix[i]
+		}else if i == (l - 1){
+			cur = prefix[i]
+		}else{
+			cur = max_int_number(arr[i] + prefix[i - 1] + suffix[i + 1],prefix[i - 1] + suffix[i + 1],
+				arr[i] + prefix[i - 1],arr[i] + suffix[i + 1],arr[i])
+		}
+		if cur > res{
+			res = cur
+		}
+	}
+	return res
+}
+
 func MaximumSum(arr []int) int {
 	var l int = len(arr)
 	if l == 1{
