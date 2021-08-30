@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		tasks := []int{1,2,3,4,5,1,2,3,4,5,1,2,3,4,5}
+		sessionTime := 15
+		res := array.MinSessions(tasks,sessionTime)
+		fmt.Println(res)
+	}
+	{
 		distance := []int{1,2,3,4}
 		start := 0
 		destination := 3
