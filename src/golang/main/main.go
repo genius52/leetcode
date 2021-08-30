@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		s := "(ed(et(oc))el)"
+		res := string_issue.ReverseParentheses(s)
+		fmt.Println(res)
+	}
+	{
 		tasks := []int{1,2,3,4,5,1,2,3,4,5,1,2,3,4,5}
 		sessionTime := 15
 		res := array.MinSessions(tasks,sessionTime)
