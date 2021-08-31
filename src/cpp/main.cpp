@@ -7,6 +7,14 @@
 
 int main() {
     {
+        //arr1 = [1,5,3,6,7], arr2 = [1,3,2,4]
+        Solution_1187 s1187;
+        std::vector<int> arr1{1,5,3,6,7};
+        std::vector<int> arr2{1,6,3,3};
+        auto res = s1187.makeArrayIncreasing(arr1,arr2);
+        std::cout<<res<<std::endl;
+    }
+    {
         DinnerPlates s1172(1);
         s1172.push(1);
         s1172.push(2);

@@ -15,6 +15,14 @@ import (
 
 func main(){
 	{
+		//[-5,4,-4,-3,5,-3]
+		//3
+		arr := []int{-9,13,4,-16,-12,-16,3,-7,5,-16,16,8,-1,-13,15,3}
+		k := 6
+		res := array.KConcatenationMaxSum2(arr,k)
+		fmt.Println(res)
+	}
+	{
 		s := "(ed(et(oc))el)"
 		res := string_issue.ReverseParentheses(s)
 		fmt.Println(res)

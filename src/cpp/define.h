@@ -47,6 +47,7 @@ struct ListNode {
 #include "array/1024. Video Stitching.hpp"
 #include "array/1049. Last Stone Weight II.hpp"
 #include "array/1054. Distant Barcodes.hpp"
+#include "array/1187. Make Array Strictly Increasing.hpp"
 #include "array/1488. Avoid Flood in The City.hpp"
 #include "array/1509. Minimum Difference Between Largest and Smallest Value in Three Moves.hpp"
 #include "array/1626. Best Team With No Conflicts.hpp"
