@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		s := "pbbcggttciiippooaais"
+		k := 2
+		res := string_issue.RemoveDuplicates2(s,k)
+		fmt.Println(res)
+	}
+	{
 		n := 4
 		connections := [][]int{{0,1},{1,2},{2,3}}
 		res := diagram.CriticalConnections(n,connections)
