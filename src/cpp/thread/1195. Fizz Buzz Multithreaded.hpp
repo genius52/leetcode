@@ -17,7 +17,6 @@ private:
     int n;
     int cur_num = 1;
     std::mutex mtx;
-    //std::mutex mtx_change_num;
     std::condition_variable cv;
 public:
     FizzBuzz(int n) {
@@ -36,7 +35,6 @@ public:
                 break;
             printFizz();
             this->cur_num++;
-            lock.unlock();
             cv.notify_all();
         }
     }
@@ -52,7 +50,6 @@ public:
                 break;
             printBuzz();
             this->cur_num++;
-            //lock.unlock();
             cv.notify_all();
         }
     }
@@ -68,7 +65,6 @@ public:
                 break;
             printFizzBuzz();
             this->cur_num++;
-            //lock.unlock();
             cv.notify_all();
         }
     }
@@ -84,7 +80,6 @@ public:
                 break;
             printNumber(cur_num);
             this->cur_num++;
-            //lock.unlock();
             cv.notify_all();
         }
     }

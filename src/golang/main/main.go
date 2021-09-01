@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		n := 4
+		connections := [][]int{{0,1},{1,2},{2,3}}
+		res := diagram.CriticalConnections(n,connections)
+		fmt.Println(res)
+	}
+	{
 		//[-5,4,-4,-3,5,-3]
 		//3
 		arr := []int{-9,13,4,-16,-12,-16,3,-7,5,-16,16,8,-1,-13,15,3}

@@ -1,7 +1,5 @@
 package array
 
-import "fmt"
-
 //Input: arr = [1,2], k = 3
 //Output: 9
 //Example 2:
@@ -93,9 +91,6 @@ func KConcatenationMaxSum(arr []int, k int) int {
 		}
 	}
 	var max_circle_sum int = total - min_sum
-	fmt.Println(max_prefix)
-	fmt.Println(max_suffix)
-	fmt.Println(total)
 	if k == 1{
 		return max_sum
 	}else{
