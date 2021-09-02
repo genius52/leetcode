@@ -32,6 +32,16 @@ func max_int_number(nums ...int)int{
 	return max
 }
 
+
+func max_int(a,b int)int{
+	if a > b {
+		return a
+	}else{
+		return b
+	}
+}
+
+
 //85
 //Input:
 //[

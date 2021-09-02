@@ -15,6 +15,16 @@ import (
 
 func main(){
 	{
+		grid := [][]int{{0,0,0,0,0,1},
+						{1,1,0,0,1,0},
+						{0,0,0,0,1,1},
+						{0,0,1,0,1,0},
+						{0,1,1,0,0,0},
+						{0,1,1,0,0,0}}
+		res := diagram.MinimumMoves(grid)
+		fmt.Println(res)
+	}
+	{
 		s := "pbbcggttciiippooaais"
 		k := 2
 		res := string_issue.RemoveDuplicates2(s,k)
