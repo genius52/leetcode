@@ -156,39 +156,6 @@ func (this *KthLargest) Add(val int) int {
 	return this.nums[this.k - 1]
 }
 
-
-func check_balance(s string) bool{
-	var L_cnt int = 0
-	var R_cnt int = 0
-	for i := 0 ;i < len(s);i++{
-		if s[i] == 'L'{
-			L_cnt++
-		}else{
-			R_cnt++
-		}
-	}
-	return L_cnt == R_cnt
-}
-
-//1221
-//"RLRRLLRLRL"
-func balancedStringSplit(s string) int {
-	var cnt int = 0
-	begin := 0
-	cur := 2
-	for ;begin < len(s) && cur <= len(s);{
-		sub := s[begin:cur]
-		if check_balance(sub) {
-			begin = cur
-			cur = begin + 1
-			cnt++
-		}else{
-				cur++
-		}
-	}
-	return cnt
-}
-
 //1222
 func check_point_inline(start []int,end []int,third []int) bool{
 

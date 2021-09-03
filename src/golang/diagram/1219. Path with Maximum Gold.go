@@ -1,15 +1,16 @@
 package diagram
 
-func dfs_getMaximumGold(grid [][]int,rows int,columns int,r int,c int,visited [][]bool)int{
-	if r < 0 || r >= rows || c < 0 || c >= columns || grid[r][c] == 0 || visited[r][c]{
+func dfs_getMaximumGold(grid [][]int,rows int,columns int,r int,c int)int{
+	if r < 0 || r >= rows || c < 0 || c >= columns || grid[r][c] == 0 {
 		return 0
 	}
-	visited[r][c] = true
-	var res int = grid[r][c] + max_int_number(dfs_getMaximumGold(grid,rows,columns,r - 1,c,visited),
-		dfs_getMaximumGold(grid,rows,columns,r + 1,c,visited),
-		dfs_getMaximumGold(grid,rows,columns,r,c - 1,visited),
-		dfs_getMaximumGold(grid,rows,columns,r,c + 1,visited))
-	visited[r][c] = false
+	origin := grid[r][c]
+	grid[r][c] = 0
+	var res int = origin + max_int_number(dfs_getMaximumGold(grid,rows,columns,r - 1,c),
+		dfs_getMaximumGold(grid,rows,columns,r + 1,c),
+		dfs_getMaximumGold(grid,rows,columns,r,c - 1),
+		dfs_getMaximumGold(grid,rows,columns,r,c + 1))
+	grid[r][c] = origin
 	return res
 }
 
@@ -20,14 +21,10 @@ func GetMaximumGold(grid [][]int) int{
 	var res int = 0
 	for i := 0;i < rows;i++{
 		for j := 0;j < columns;j++{
-			var visited [][]bool = make([][]bool,rows)
-			for i := 0;i < rows;i++{
-				visited[i] = make([]bool,columns)
-			}
 			if grid[i][j] == 0{
 				continue
 			}
-			cur := dfs_getMaximumGold(grid,rows,columns,i,j,visited)
+			cur := dfs_getMaximumGold(grid,rows,columns,i,j)
 			if cur > res{
 				res = cur
 			}
