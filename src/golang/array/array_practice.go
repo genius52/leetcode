@@ -11,6 +11,14 @@ import (
 	"strings"
 )
 
+func max_int(a,b int)int{
+	if a > b {
+		return a
+	}else{
+		return b
+	}
+}
+
 func min_int(a,b int)int{
 	if a < b {
 		return a
@@ -326,60 +334,6 @@ func oddCells(n int, m int, indices [][]int) int {
 	}
 	fmt.Println(matrix)
 	return res
-}
-
-//1219
-func max_int(a,b int)int{
-	if a > b {
-		return a
-	}else{
-		return b
-	}
-}
-
-func dfs_gold(grid [][]int,x int,y int,record [][]int)int{
-	if x >= len(grid) || y >= len(grid[0]) || x < 0 || y < 0{
-		return 0
-	}
-	if grid[x][y] == 0 || record[x][y] != 0{
-		return 0
-	}
-	record[x][y] = 1
-	var dup_record1,dup_record2,dup_record3,dup_record4 [][]int = make([][]int,len(grid)),make([][]int,len(grid)),make([][]int,len(grid)),make([][]int,len(grid))
-	for i := 0;i < len(grid);i++ {
-		dup_record1[i] = make([]int,len(grid[i]))
-		dup_record2[i] = make([]int,len(grid[i]))
-		dup_record3[i] = make([]int,len(grid[i]))
-		dup_record4[i] = make([]int,len(grid[i]))
-		for j := 0; j < len(grid[i]); j++ {
-			dup_record1[i][j] = record[i][j]
-			dup_record2[i][j] = record[i][j]
-			dup_record3[i][j] = record[i][j]
-			dup_record4[i][j] = record[i][j]
-
-		}
-	}
-	var res int = 0
-	res = max_int(grid[x][y] + dfs_gold(grid,x - 1,y,dup_record1),grid[x][y] + dfs_gold(grid,x,y-1,dup_record2))
-	res = max_int(res,grid[x][y] + dfs_gold(grid,x + 1,y,dup_record3))
-	res = max_int(res,grid[x][y] + dfs_gold(grid,x,y + 1,dup_record4))
-	return res
-}
-
-func getMaximumGold(grid [][]int) int {
-	var max int = 0
-	for i := 0;i < len(grid);i++{
-		for j := 0;j < len(grid[i]);j++{
-			if grid[i][j] != 0{
-				var record [][]int = make([][]int,len(grid))
-				for row := 0; row < len(grid);row++{
-					record[row] = make([]int,len(grid[i]))
-				}
-				max = max_int(max,dfs_gold(grid,i,j,record))
-			}
-		}
-	}
-	return max
 }
 
 //973
