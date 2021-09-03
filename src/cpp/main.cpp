@@ -7,6 +7,18 @@
 
 int main() {
     {
+        Skiplist s1206;
+        s1206.add(1);
+        s1206.add(2);
+        s1206.add(3);
+        auto res = s1206.search(0);
+        s1206.add(4);
+        res = s1206.search(1);
+        res = s1206.erase(0);
+        res = s1206.erase(1);
+        std::cout<<res<<std::endl;
+    }
+    {
         //arr1 = [1,5,3,6,7], arr2 = [1,3,2,4]
         Solution_1187 s1187;
         std::vector<int> arr1{1,5,3,6,7};
