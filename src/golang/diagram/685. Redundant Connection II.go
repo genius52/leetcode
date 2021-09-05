@@ -2,64 +2,60 @@ package diagram
 
 //Input: edges = [[1,2],[2,3],[3,4],[4,1],[1,5]]
 //Output: [4,1]
-func find_group(group []int,i int)int {
-	if group[i] != i{
-		group[i] = find_group(group,group[i]);
+func union_find(groups []int,cur int)int{
+	if groups[cur] != cur{
+		groups[cur] = union_find(groups,groups[cur])
 	}
-	return group[i];
+	return groups[cur]
+}
+
+func check_loop(edges [][]int,delete_edge []int)[]int{
+	//find circle
+	var  l int = len(edges)
+	var groups []int = make([]int,l + 1)
+	for i := 1; i <= l; i++{
+		groups[i] = i
+	}
+	for _,edge := range edges{
+		if len(delete_edge) > 0{
+			if edge[0] == delete_edge[0] && edge[1] == delete_edge[1]{
+				continue
+			}
+		}
+		parent := edge[0]
+		child := edge[1]
+		parent_group := union_find(groups,parent)
+		child_group := union_find(groups,child)
+		if parent_group == child_group{
+			return edge
+		}else{
+			groups[child] = parent_group
+		}
+	}
+	return []int{}
 }
 
 func FindRedundantDirectedConnection(edges [][]int) []int {
 	var l int = len(edges)
-	var group []int = make([]int,l + 1)
-	for i := 0;i <= l;i++{
-		group[i] = i
-	}
-	var indegree map[int]int = make(map[int]int)
-	var indegree_two int = -1
-	var circle [][]int
-	var circle_num int = -1
+	var graph [][]int = make([][]int,l + 1)//graph[child][parent]:
+	var dup_edge [][]int
+	//find indegree equal 2
 	for _,edge := range edges{
-		if _,ok := indegree[edge[1]];!ok{
-			indegree[edge[1]] = 1
-		}else{
-			indegree[edge[1]]++
-			indegree_two = edge[1]
-		}
-		group1 := find_group(group,edge[0])
-		group2 := find_group(group,edge[1])
-		if group1 == group2 {
-			//circle = append(circle,edge)
-			circle_num = group1
-		}else{
-			group[group1] = group2
-		}
-	}
-	var indegree_res [][]int
-	for _,edge := range edges{
-		if indegree_two != -1{
-			if edge[1] == indegree_two{
-				indegree_res = append(indegree_res,edge)
-			}
-		}
-		if circle_num != -1{
-			if edge[0] == circle_num && edge[1] == circle_num{
-				circle = append(circle,edge)
-			}
+		graph[edge[1]] = append(graph[edge[1]],edge[0])
+		if len(graph[edge[1]]) == 2{
+			dup_edge = append(dup_edge,[]int{graph[edge[1]][0],edge[1]})
+			dup_edge = append(dup_edge,edge)
 		}
 	}
 
-	if len(circle) == 0{
-		if len(indegree_res) > 0{
-			return indegree_res[1]
+	if len(dup_edge) == 0{
+		return check_loop(edges,[]int{})
+	}else{
+		res := check_loop(edges,dup_edge[1])
+		if len(res) == 0{
+			return dup_edge[1]
+		}else{
+			return dup_edge[0]
 		}
 	}
-	for _,in := range indegree_res{
-		for _,c := range circle{
-			if in[0] == c[0] && in[1] == c[1]{
-				return in
-			}
-		}
-	}
-	return circle[len(circle) - 1]
 }

@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		//var edges [][]int = [][]int{{2,1},{3,1},{4,2},{1,4}}
+		var edges [][]int = [][]int{{1,2},{2,3},{3,4},{4,1},{1,5}}
+		res := diagram.FindRedundantDirectedConnection(edges)
+		fmt.Println(res)
+	}
+	{
 		coordinates := [][]int{{1,2},{2,3},{3,4},{4,5},{5,6},{6,7}}
 		res := diagram.CheckStraightLine(coordinates)
 		fmt.Println(res)
@@ -1156,11 +1162,6 @@ func main(){
 		var nums []int = []int{1,2,1,2,6,7,5,1}
 		var k int = 2
 		res := array.MaxSumOfThreeSubarrays2(nums,k)
-		fmt.Println(res)
-	}
-	{
-		var edges [][]int = [][]int{{2,1},{3,1},{4,2},{1,4}}
-		res := diagram.FindRedundantDirectedConnection(edges)
 		fmt.Println(res)
 	}
 	{
