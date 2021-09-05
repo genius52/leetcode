@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		coordinates := [][]int{{1,2},{2,3},{3,4},{4,5},{5,6},{6,7}}
+		res := diagram.CheckStraightLine(coordinates)
+		fmt.Println(res)
+	}
+	{
 		n := 3
 		rollMax := []int{1,1,1,2,2,3}
 		res := number.DieSimulator2(n,rollMax)
