@@ -7,6 +7,14 @@
 
 int main() {
     {
+        Solution_1235 s1235;
+        std::vector<int> startTime{1,2,3,3};
+        std::vector<int> endTime{3,4,5,6};
+        std::vector<int> profit{50,10,40,70};
+        auto res = s1235.jobScheduling(startTime,endTime,profit);
+        std::cout<<res<<std::endl;
+    }
+    {
         Skiplist s1206;
         s1206.add(1);
         s1206.add(2);

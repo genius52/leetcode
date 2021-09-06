@@ -151,6 +151,7 @@ struct ListNode {
 #include "number/786. K-th Smallest Prime Fraction.hpp"
 #include "number/857. Minimum Cost to Hire K Workers.hpp"
 #include "number/1005. Maximize Sum Of Array After K Negations.hpp"
+#include "number/1235. Maximum Profit in Job Scheduling.hpp"
 #include "number/1942. The Number of the Smallest Unoccupied Chair.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"

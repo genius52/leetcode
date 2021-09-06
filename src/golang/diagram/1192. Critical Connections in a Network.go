@@ -1,5 +1,6 @@
 package diagram
 
+//tarjan
 func dfs_criticalConnections(graph [][]int,cur int,parent int,id int,groups []int,res *[][]int){
 	groups[cur] = id
 	for _,neighbour := range graph[cur]{
