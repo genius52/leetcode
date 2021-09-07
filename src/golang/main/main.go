@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		n := 3
+		start := 2
+		res := number.CircularPermutation(n,start)
+		fmt.Println(res)
+	}
+	{
 		//var edges [][]int = [][]int{{2,1},{3,1},{4,2},{1,4}}
 		var edges [][]int = [][]int{{1,2},{2,3},{3,4},{4,1},{1,5}}
 		res := diagram.FindRedundantDirectedConnection(edges)
