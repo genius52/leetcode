@@ -7,6 +7,12 @@
 
 int main() {
     {
+        std::vector<std::string> arr{"abcdefghijklmnopqrstuvwxyz"};
+        Solution_1239 s1239;
+        auto res = s1239.maxLength(arr);
+        std::cout<<res<<std::endl;
+    }
+    {
         Solution_1235 s1235;
         std::vector<int> startTime{1,2,3,3};
         std::vector<int> endTime{3,4,5,6};

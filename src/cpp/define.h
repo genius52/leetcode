@@ -243,6 +243,7 @@ struct ListNode {
 #include "string/767. Reorganize String.hpp"
 #include "string/833. Find And Replace in String.hpp"
 #include "string/854. K-Similar Strings.hpp"
+#include "string/1239. Maximum Length of a Concatenated String with Unique Characters.hpp"
 #include "list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "list/445. Add Two Numbers II.hpp"
 #include "list/138. Copy List with Random Pointer.hpp"
