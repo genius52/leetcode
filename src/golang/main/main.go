@@ -15,6 +15,13 @@ import (
 
 func main(){
 	{
+		words := []string{"dog","cat","dad","good"}
+		letters := []byte{'a','a','c','d','d','d','g','o','o'}
+		score := []int{1,0,9,5,0,0,3,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0}
+		res := number.MaxScoreWords(words,letters,score)
+		fmt.Println(res)
+	}
+	{
 		input := [][]int{{0,1},{1,1}}
 		res := array.OddCells(2,3,input)
 		fmt.Println(res)
