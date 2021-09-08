@@ -350,28 +350,6 @@ func closedIsland(grid [][]int) int {
 	return 0
 }
 
-//1260
-// [[3,8,1,9],[19,7,2,5],[4,6,11,10],[12,0,21,13]] K = 4
-func shiftGrid(grid [][]int, k int) [][]int {
-	var row_num int = len(grid)
-	var col_num int = len(grid[0])
-	var total = row_num * col_num
-	var res []int = make([]int,total)
-	for i := 0;i < row_num;i++{
-		for j := 0;j < col_num;j++{
-			res[(i * col_num + j + k) % total] = grid[i][j]
-		}
-	}
-	var grid2 [][]int = make([][]int,len(grid))
-	for i := 0;i < row_num;i++{
-		grid2[i] = make([]int,len(grid[0]))
-		for j := 0;j < col_num;j++{
-			grid2[i][j] = res[i * col_num + j]
-		}
-	}
-	return grid2
-}
-
 //260
 //Input:  [1,2,1,3,2,5]
 //Output: [3,5]
