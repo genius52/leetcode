@@ -171,35 +171,6 @@ func maxScoreWords(words []string, letters []byte, score []int) int {
 	return res
 }
 
-//1252
-//n = 2, m = 3, indices = [[0,1],[1,1]]
-func oddCells(n int, m int, indices [][]int) int {
-	var res int = 0
-	var matrix [][]int = make([][]int,n)
-	for i := 0; i < len(matrix); i++ {
-		matrix[i] = make([]int, m)
-	}
-	for i:= 0; i < len(indices);i++{
-		row := indices[i][0]
-		for c:= 0; c < m;c++{
-			matrix[row][c]++
-		}
-		column := indices[i][1]
-		for r := 0;r < n;r++{
-			matrix[r][column]++
-		}
-	}
-	for i := 0; i < n;i++{
-		for j := 0;j < m;j++{
-			if matrix[i][j]%2 == 1{
-				res++
-			}
-		}
-	}
-	fmt.Println(matrix)
-	return res
-}
-
 //973
 //func compare_distance(x1 int,y1 int,x2 int,y2 int) bool{
 //	return (x1 * x1 + y1 * y1) - (x2 * x2 + y2 * y2) >= 0

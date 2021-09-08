@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		input := [][]int{{0,1},{1,1}}
+		res := array.OddCells(2,3,input)
+		fmt.Println(res)
+	}
+	{
 		//[1,1,2,1,1]
 		//3
 		var nums []int = []int{1,1,2,1,1}
@@ -4420,11 +4425,6 @@ func main(){
 	//}
 	//{
 	//	res := maxSumAfterPartitioning([]int{1,15,7,9,2,5,10},3)
-	//	fmt.Println(res)
-	//}
-	//{
-	//	input := [][]int{{0,1},{1,1}}
-	//	res := oddCells(2,3,input)
 	//	fmt.Println(res)
 	//}
 	//{
