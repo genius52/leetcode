@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		s := "())()((("
+		res := string_issue.MinRemoveToMakeValid(s)
+		fmt.Println(res)
+	}
+	{
 		n := 3
 		start := 2
 		res := number.CircularPermutation(n,start)

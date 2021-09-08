@@ -401,46 +401,6 @@ func shiftGrid(grid [][]int, k int) [][]int {
 	return grid2
 }
 
-//1249
-// "())()((("
-func reverse(s string) string {
-	s1 := []rune(s)
-	for i := 0; i < len(s1)/2; i++ {
-		tmp := s1[i]
-		s1[i] = s1[len(s1)-1-i]
-		s1[len(s1)-1-i] = tmp
-	}
-	return string(s1)
-}
-
-func minRemoveToMakeValid(s string) string {
-	var res string
-	var start_tag int = 0
-	for i := 0; i < len(s);i++{
-		if s[i] == '('{
-			start_tag++
-		}else if s[i] == ')'{
-				if start_tag <= 0{
-					continue
-				}else{
-					start_tag--
-				}
-		}
-		res += string(s[i])
-	}
-	var res2 string
-	i := len(res) - 1
-	for ; i >= 0 && start_tag > 0;i--{
-		if res[i] == '('{
-			start_tag--
-			continue
-		}
-		res2 += string(res[i])
-	}
-	res3 := res[0:i+1] + reverse(res2)
-	return res3
-}
-
 //260
 //Input:  [1,2,1,3,2,5]
 //Output: [3,5]
