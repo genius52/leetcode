@@ -15,6 +15,14 @@ import (
 
 func main(){
 	{
+		//[1,1,2,1,1]
+		//3
+		var nums []int = []int{1,1,2,1,1}
+		var k int = 3
+		res := array.NumberOfSubarrays(nums,k)
+		fmt.Println(res)
+	}
+	{
 		s := "())()((("
 		res := string_issue.MinRemoveToMakeValid(s)
 		fmt.Println(res)
@@ -2399,12 +2407,6 @@ func main(){
 		var lower int = 3
 		var colsum []int = []int{2,2,1,1}
 		res := array.ReconstructMatrix(upper,lower,colsum)
-		fmt.Println(res)
-	}
-	{
-		var nums []int = []int{2,2,2,1,2,2,1,2,2,2,1}
-		var k int = 2
-		res := array.NumberOfSubarrays(nums,k)
 		fmt.Println(res)
 	}
 	{
