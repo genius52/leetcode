@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{1,2,3,4,4}
+		res := array.MaxSumDivThree(nums)
+		fmt.Println(res)
+	}
+	{
 		words := []string{"dog","cat","dad","good"}
 		letters := []byte{'a','a','c','d','d','d','g','o','o'}
 		score := []int{1,0,9,5,0,0,3,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0}
@@ -2401,11 +2406,6 @@ func main(){
 		var boxTypes [][]int = [][]int{{5,10},{2,5},{4,7},{3,9}}
 		var truckSize int = 10
 		res := array.MaximumUnits(boxTypes,truckSize)
-		fmt.Println(res)
-	}
-	{
-		var nums []int = []int{3,6,5,1,8}
-		res := array.MaxSumDivThree(nums)
 		fmt.Println(res)
 	}
 	{
