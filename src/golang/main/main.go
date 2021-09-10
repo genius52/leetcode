@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		steps := 300
+		arrLen := 9999
+		res := number.NumWays(steps,arrLen)
+		fmt.Println(res)
+	}
+	{
 		var moves [][]int = [][]int{{0,0},{1,1},{2,0},{1,0},{1,2},{2,1},{0,1},{0,2},{2,2}}
 		res := diagram.Tictactoe(moves)
 		fmt.Println(res)
