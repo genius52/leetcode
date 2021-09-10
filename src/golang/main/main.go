@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var moves [][]int = [][]int{{0,0},{1,1},{2,0},{1,0},{1,2},{2,1},{0,1},{0,2},{2,2}}
+		res := diagram.Tictactoe(moves)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{1,2,3,4,4}
 		res := array.MaxSumDivThree(nums)
 		fmt.Println(res)
