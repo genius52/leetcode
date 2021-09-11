@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		s := "faagaabbclagedtaabbcwnejzpaabbcuarkgwgoaabbcefwra"
+		k := 27
+		res := string_issue.PalindromePartition(s,k)
+		fmt.Println(res)
+	}
+	{
 		steps := 300
 		arrLen := 9999
 		res := number.NumWays(steps,arrLen)
