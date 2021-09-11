@@ -367,19 +367,6 @@ func singleNumber(nums []int) []int {
 	return []int{first_num,second_num}
 }
 
-//1281
-func subtractProductAndSum(n int) int {
-	var sum int = 0
-	var times int = 1
-	for n > 0{
-		val := n % 10
-		sum += val
-		times *= val
-		n = n/10
-	}
-	return times - sum
-}
-
 func abs_int(n int)int{
 	if n < 0{
 		return -n
@@ -888,35 +875,6 @@ func generateTheString(n int) string {
 		res += "b"
 		return res
 	}
-}
-
-//1282
-//Input: groupSizes = [3,3,3,3,3,1,3]
-//Output: [[5],[0,1,2],[3,4,6]]
-//Explanation:
-//Other possible solutions are [[2,1,6],[5],[0,4,3]] and [[5],[0,6,2],[4,3,1]].
-func groupThePeople(groupSizes []int) [][]int {
-	//save the array index by size
-	var record map[int][] int = make(map[int][]int)
-	for i,s := range groupSizes{
-		if _,ok := record[s];ok{
-			record[s] = append(record[s], i)
-		}else{
-			record[s] = []int{i}
-		}
-	}
-	var res [][]int
-	for length,nums := range record{
-		var collection []int
-		for i := 0;i < len(nums);i++{
-			collection = append(collection, nums[i])
-			if i % length == length - 1{
-				res = append(res, collection)
-				collection = []int{}
-			}
-		}
-	}
-	return res
 }
 
 //1329
