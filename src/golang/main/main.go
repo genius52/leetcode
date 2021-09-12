@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		grid := [][]int{{1,2,3},{4,5,6},{7,8,9}}
+		res := array.MinFallingPathSum2(grid)
+		fmt.Println(res)
+	}
+	{
 		s := "faagaabbclagedtaabbcwnejzpaabbcuarkgwgoaabbcefwra"
 		k := 27
 		res := string_issue.PalindromePartition(s,k)
