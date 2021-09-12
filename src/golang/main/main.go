@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		grid := [][]int{{0,1,1},{1,1,1},{1,0,0}}
+		k := 2
+		res := diagram.ShortestPath(grid,k)
+		fmt.Println(res)
+	}
+	{
 		grid := [][]int{{1,2,3},{4,5,6},{7,8,9}}
 		res := array.MinFallingPathSum2(grid)
 		fmt.Println(res)
