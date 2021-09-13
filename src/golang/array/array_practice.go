@@ -374,17 +374,6 @@ func abs_int(n int)int{
 	return n
 }
 
-//1295
-func findNumbers(nums []int) int {
-	var res int = 0
-	for i := 0;i < len(nums);i++{
-		if len(strconv.Itoa(nums[i])) % 2 == 0{
-			res++
-		}
-	}
-	return res
-}
-
 //1299
 //Input: arr = [17,18,5,4,6,1]
 //Output: [18,6,6,6,1,-1]
