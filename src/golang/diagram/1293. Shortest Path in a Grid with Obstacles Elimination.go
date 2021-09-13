@@ -24,25 +24,18 @@ func dfs_shortestPath(grid *[][]int,rows int,columns int,r int,c int,k int,memo 
 	(*grid)[r][c] = 2
 	var res bool = false
 	var steps int = 2147483647
-	res1,steps1 := dfs_shortestPath(grid,rows,columns,r - 1,c,k,memo)
-	res2,steps2 := dfs_shortestPath(grid,rows,columns,r + 1,c,k,memo)
-	res3,steps3 := dfs_shortestPath(grid,rows,columns,r,c - 1,k,memo)
-	res4,steps4 := dfs_shortestPath(grid,rows,columns,r,c + 1,k,memo)
+	var dirs [][]int = [][]int{{-1,0},{1,0},{0,-1},{0,1}}
+	for _,dir := range dirs{
+		next_r := r + dir[0]
+		next_c := c + dir[1]
+		cur_res,cur_steps := dfs_shortestPath(grid,rows,columns,next_r,next_c,k,memo)
+		if cur_res{
+			res = true
+			steps = min_int(steps,1 + cur_steps)
+		}
+	}
 	(*grid)[r][c] = old
-	res = res1 || res2 || res3 || res4
 	if res{
-		if steps1 >= 0{
-			steps = min_int(steps,1 + steps1)
-		}
-		if steps2 >= 0{
-			steps = min_int(steps,1 + steps2)
-		}
-		if steps3 >= 0{
-			steps = min_int(steps,1 + steps3)
-		}
-		if steps4 >= 0{
-			steps = min_int(steps,1 + steps4)
-		}
 		(*memo)[k][r][c] = steps
 		return true,steps
 	}else{
