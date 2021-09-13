@@ -15,6 +15,14 @@ import (
 
 func main(){
 	{
+		//[1547,83230,57084,93444,70879]
+		//71237
+		var arr []int = []int{1547,83230,57084,93444,70879}
+		var target int = 71237
+		res := number.FindBestValue(arr, target)
+		fmt.Println(res)
+	}
+	{
 		grid := [][]int{{0,1,1},{1,1,1},{1,0,0}}
 		k := 2
 		res := diagram.ShortestPath(grid,k)
@@ -2388,12 +2396,6 @@ func main(){
 		var n int = 5
 		var connections [][]int = [][]int{{0,1},{0,2},{3,4},{2,3}}
 		res := diagram.MakeConnected(n,connections)
-		fmt.Println(res)
-	}
-	{
-		var arr []int = []int{60864, 25176, 27249, 21296, 20204}
-		var target int = 56803
-		res := number.FindBestValue(arr, target)
 		fmt.Println(res)
 	}
 	{
