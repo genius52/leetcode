@@ -4,8 +4,13 @@
 #include <condition_variable>
 #include "define.h"
 
-
 int main() {
+    {
+        Solution_2002 s2002;
+        std::string s = "leetcodecom";
+        auto res = s2002.maxProduct(s);
+        std::cout<<"2002:"<<res<<std::endl;
+    }
     {
         std::vector<std::string> arr{"abcdefghijklmnopqrstuvwxyz"};
         Solution_1239 s1239;
