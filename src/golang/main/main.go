@@ -15,6 +15,32 @@ import (
 
 func main(){
 	{
+		//status := []int{1,0,1,0}
+		//candies := []int{7,5,4,100}
+		//keys := [][]int{{},{},{1},{}}
+		//containedBoxes := [][]int{{1,2},{3},{},{}}
+		//initialBoxes := []int{0}
+
+		//status := []int{1,0,0,0,0,0}
+		//candies := []int{1,1,1,1,1,1}
+		//keys := [][]int{{1,2,3,4,5},{},{},{},{},{}}
+		//containedBoxes := [][]int{{1,2,3,4,5},{},{},{},{},{}}
+		//initialBoxes := []int{0}
+
+		status := []int{1,0,0,0}
+		candies := []int{1,2,3,4}
+		keys := [][]int{{1,2},{3},{},{}}
+		containedBoxes := [][]int{{2},{3},{1},{}}
+		initialBoxes := []int{0}
+		//[1,0,0,0]
+		//[1,2,3,4]
+		//[[1,2],[3],[],[]]
+		//[[2],[3],[1],[]]
+		//[0]
+		res := number.MaxCandies(status,candies,keys,containedBoxes,initialBoxes)
+		fmt.Println(res)
+	}
+	{
 		//[1547,83230,57084,93444,70879]
 		//71237
 		var arr []int = []int{1547,83230,57084,93444,70879}
