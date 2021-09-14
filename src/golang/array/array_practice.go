@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"container/heap"
 	"container/list"
-	"fmt"
 	"math"
 	"sort"
 	"strconv"
@@ -297,102 +296,11 @@ func min_byte_number(nums ...byte)byte{
 	return min
 }
 
-//14
-func longestCommonPrefix(strs []string) string {
-	l := len(strs)
-	if l == 0{
-		return ""
-	}else if l == 1{
-		return strs[0]
-	}
-	var res string = strs[0]
-	for i := 1;i < l;i++{
-		for j:= 0;j < len(strs[i]) && j < len(res);j++{
-			if strs[i][j] != res[j]{
-				if j == 0{
-					return ""
-				}
-				res = res[0:j]
-				break
-			}
-		}
-	}
-	return res
-}
-
-//1143
-//Input: text1 = "abcde", text2 = "ace"
-//Output: 3
-func longestCommonSubsequence(text1 string, text2 string) int {
-	return 0
-}
-
-//1254
-func closedIsland(grid [][]int) int {
-	return 0
-}
-
-//260
-//Input:  [1,2,1,3,2,5]
-//Output: [3,5]
-func singleNumber(nums []int) []int {
-	var val int = 0
-	for i := 0;i < len(nums);i++{
-		val = val ^ nums[i]
-	}
-	var tag int = 1
-	for i := 1;i < 32;i++{
-		if val | tag == val{
-			break
-		}else{
-			tag = tag << 1
-		}
-	}
-	fmt.Println(tag)
-	var group [][]int = make([][]int,2)
-	for i := 0;i < len(nums);i++{
-		if nums[i] | tag == nums[i]{
-			group[0] = append(group[0],nums[i])
-		}else{
-			group[1] = append(group[1],nums[i])
-		}
-	}
-	var first_num,second_num int = 0,0
-	for i := 0;i < len(group[0]);i++{
-		first_num ^= group[0][i]
-	}
-	for i := 0;i < len(group[1]);i++{
-		second_num ^= group[1][i]
-	}
-	return []int{first_num,second_num}
-}
-
 func abs_int(n int)int{
 	if n < 0{
 		return -n
 	}
 	return n
-}
-
-//1299
-//Input: arr = [17,18,5,4,6,1]
-//Output: [18,6,6,6,1,-1]
-func replaceElements(arr []int) []int {
-	if len(arr) == 0{
-		return arr
-	}
-	var biggest int = arr[len(arr) - 1]
-	arr[len(arr) - 1] = -1
-	for i := len(arr) - 2;i >= 0;i--{
-		if arr[i] > biggest{
-			tmp := arr[i]
-			arr[i] = biggest
-			biggest = tmp
-		}else{
-			arr[i] = biggest
-		}
-	}
-	return arr
 }
 
 //1306

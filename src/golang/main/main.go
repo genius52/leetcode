@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		board := []string{"E23","2X2","12S"}
+		res := diagram.PathsWithMaxScore2(board)
+		fmt.Println(res)
+	}
+	{
 		//status := []int{1,0,1,0}
 		//candies := []int{7,5,4,100}
 		//keys := [][]int{{},{},{1},{}}
