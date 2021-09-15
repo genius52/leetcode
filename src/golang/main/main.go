@@ -15,6 +15,14 @@ import (
 
 func main(){
 	{
+		watchedVideos := [][]string{{"A","B"},{"C"},{"B","C"},{"D"}}
+		friends := [][]int{{1,2},{0,3},{0,3},{1,2}}
+		id := 0
+		level := 1
+		res := diagram.WatchedVideosByFriends(watchedVideos,friends,id,level)
+		fmt.Println(res)
+	}
+	{
 		s := "1326#"
 		res := string_issue.FreqAlphabets(s)
 		fmt.Println(res)

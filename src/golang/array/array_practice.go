@@ -303,33 +303,6 @@ func abs_int(n int)int{
 	return n
 }
 
-//1306
-//Input: arr = [4,2,3,0,3,1,2], start = 5
-//Output: true
-//All possible ways to reach at index 3 with value 0 are:
-//index 5 -> index 4 -> index 1 -> index 3
-//index 5 -> index 6 -> index 4 -> index 1 -> index 3
-func dfs_canReach(arr []int,start int,dp []int)bool{
-	if start < 0 || start >= len(arr){
-		return false
-	}
-	if dp[start] == 1{
-		return false
-	}
-	if arr[start] == 0{
-		return true
-	}
-	dp[start] = 1
-	forward_res := dfs_canReach(arr,start + arr[start],dp)
-	backward_res := dfs_canReach(arr,start - arr[start],dp)
-	return forward_res || backward_res
-}
-
-func canReach(arr []int, start int) bool {
-	var dp []int = make([]int,len(arr))
-	return dfs_canReach(arr,start,dp)
-}
-
 //[2,3,1,1,4]
 //bfs solution
 func jump2(nums []int) int{
