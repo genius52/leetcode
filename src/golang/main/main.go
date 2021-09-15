@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		s := "1326#"
+		res := string_issue.FreqAlphabets(s)
+		fmt.Println(res)
+	}
+	{
 		arr := []int{3,0,2,1,2}
 		start := 2
 		res := array.CanReach(arr,start)
