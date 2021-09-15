@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		arr := []int{3,0,2,1,2}
+		start := 2
+		res := array.CanReach(arr,start)
+		fmt.Println(res)
+	}
+	{
 		board := []string{"E23","2X2","12S"}
 		res := diagram.PathsWithMaxScore2(board)
 		fmt.Println(res)
