@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		s := "noob"
+		res := string_issue.MinInsertions1312(s)
+		fmt.Println(res)
+	}
+	{
 		watchedVideos := [][]string{{"A","B"},{"C"},{"B","C"},{"D"}}
 		friends := [][]int{{1,2},{0,3},{0,3},{1,2}}
 		id := 0
