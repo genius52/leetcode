@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		text := "abcabcabc"
+		res := string_issue.DistinctEchoSubstrings(text)
+		fmt.Println(res)
+	}
+	{
 		s := "noob"
 		res := string_issue.MinInsertions1312(s)
 		fmt.Println(res)
