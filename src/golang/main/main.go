@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		word := "YEAR"
+		res := diagram.MinimumDistance(word)
+		fmt.Println(res)
+	}
+	{
 		text := "abcabcabc"
 		res := string_issue.DistinctEchoSubstrings(text)
 		fmt.Println(res)
