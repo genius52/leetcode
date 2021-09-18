@@ -172,35 +172,6 @@ func combinationSum(candidates []int, target int) [][]int {
 	return res
 }
 
-//1323
-//Input: num = 9669
-//Output: 9969
-func maximum69Number (num int) int {
-	var rest int= 0
-	if 1000 < num && num < 10000{
-		if (num / 1000) == 6{
-			return num + 3000
-		}
-		rest = num % 1000
-	}else if 100 < num && num < 1000{
-		if (num /100) == 6 {
-			return num + 300
-		}
-		rest = num % 100
-	}else if 10 < num && num < 100{
-		if (num / 10 ) == 6{
-			return num + 30
-		}
-		rest = num % 10
-	}else{
-		if num == 6{
-			return 9
-		}
-		return num
-	}
-	return num - rest + maximum69Number(rest)
-}
-
 //1331
 func arrayRankTransform(arr []int) []int {
 	l := len(arr)

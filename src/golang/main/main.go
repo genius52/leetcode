@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		num := 6
+		res := number.Maximum69Number(num)
+		fmt.Println(res)
+	}
+	{
 		word := "YEAR"
 		res := diagram.MinimumDistance(word)
 		fmt.Println(res)
