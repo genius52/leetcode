@@ -120,35 +120,6 @@ func reachNumber(target int) int {
 	return res
 }
 
-//1325
-func postvisit_removeLeafNodes(node *TreeNode,target int)bool{
-	if nil == node{
-		return true
-	}
-	left_res :=  postvisit_removeLeafNodes(node.Left,target)
-	right_res := postvisit_removeLeafNodes(node.Right,target)
-	if left_res{
-		node.Left = nil
-	}
-	if right_res{
-		node.Right = nil
-	}
-	if left_res && right_res{
-		if node.Val == target{
-			return true
-		}
-	}
-	return false
-}
-
-func removeLeafNodes(root *TreeNode, target int) *TreeNode {
-	if postvisit_removeLeafNodes(root,target){
-		return nil
-	}else{
-		return root
-	}
-}
-
 //1361
 //Input: n = 4, leftChild = [1,-1,3,-1], rightChild = [2,-1,-1,-1]
 //Output: true
