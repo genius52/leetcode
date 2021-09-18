@@ -723,29 +723,6 @@ func generateTheString(n int) string {
 	}
 }
 
-//1329
-func diagonalSort(mat [][]int) [][]int {
-	rows := len(mat)
-	if rows <= 1{
-		return mat
-	}
-	columns := len(mat[0])
-	if columns <= 1{
-		return mat
-	}
-	for r := rows - 1;r >= 0;r--{
-		for i := 0;i < r;i++{
-			for j := 0;j < columns - 1;j++{
-				if mat[i][j] > mat[i + 1][j + 1]{
-					mat[i][j], mat[i + 1][j + 1] = mat[i + 1][j + 1],mat[i][j]
-				}
-			}
-		}
-	}
-	return mat
-}
-
-//
 func luckyNumbers (matrix [][]int) []int {
 	var rows int = len(matrix)
 	var columns int = len(matrix[0])

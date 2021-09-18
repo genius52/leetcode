@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		mat := [][]int{{3,3,1,1},{2,2,1,2},{1,1,1,2}}
+		res := array.DiagonalSort(mat)
+		fmt.Println(res)
+	}
+	{
 		palindrome := "aba"
 		res := string_issue.BreakPalindrome(palindrome)
 		fmt.Println(res)
