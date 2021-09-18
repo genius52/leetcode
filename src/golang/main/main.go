@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		palindrome := "aba"
+		res := string_issue.BreakPalindrome(palindrome)
+		fmt.Println(res)
+	}
+	{
 		num := 6
 		res := number.Maximum69Number(num)
 		fmt.Println(res)
