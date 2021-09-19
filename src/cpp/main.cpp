@@ -6,6 +6,13 @@
 
 int main() {
     {
+        Solution_1326 s1326;
+        int n = 17;
+        std::vector<int> ranges{0,3,3,2,2,4,2,1,5,1,0,1,2,3,0,3,1,1};
+        auto res = s1326.minTaps(n,ranges);
+        std::cout<<"1326:"<<res<<std::endl;
+    }
+    {
         Solution_2002 s2002;
         std::string s = "leetcodecom";
         auto res = s2002.maxProduct(s);
