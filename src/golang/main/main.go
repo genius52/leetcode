@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		arr := []int{37,37,12,28,9,100,56,80,5,12}
+		res := array.ArrayRankTransform(arr)
+		fmt.Println(res)
+	}
+	{
 		mat := [][]int{{3,3,1,1},{2,2,1,2},{1,1,1,2}}
 		res := array.DiagonalSort(mat)
 		fmt.Println(res)
