@@ -834,32 +834,6 @@ func findSubsequences(nums []int) [][]int {
 	return res
 }
 
-//1332
-//Input: s = "baabb"
-//Output: 2
-//Explanation: "baabb" -> "b" -> "".
-//Remove palindromic subsequence "baab" then "b".
-func is_palindromic(s string)bool{
-	l := len(s)
-	begin := 0
-	end := l - 1
-	for begin < end{
-		if s[begin] != s[end]{
-			return false;
-		}
-	}
-	return true
-}
-func removePalindromeSub(s string) int {
-	if len(s) == 0{
-		return 0
-	}
-	if is_palindromic(s){
-		return 1
-	}
-	return 2
-}
-
 //6 ZigZag Conversion
 //Input: s = "PAYPALISHIRING", numRows = 4
 //Output: "PINALSIGYAHRPI"
