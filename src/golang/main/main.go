@@ -15,6 +15,19 @@ import (
 
 func main(){
 	{
+		restaurants := [][]int{{1,4,1,40,10},{2,8,0,50,5},{3,8,1,30,4},{4,10,0,10,3},{5,1,1,15,1}}
+		veganFriendly := 1
+		maxPrice := 50
+		maxDistance := 10
+		res := number.FilterRestaurants(restaurants,veganFriendly,maxPrice,maxDistance)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{2,4,9,24,2,1,10}
+		res := array.MaxValueAfterReverse(nums)
+		fmt.Println(res)
+	}
+	{
 		arr := []int{37,37,12,28,9,100,56,80,5,12}
 		res := array.ArrayRankTransform(arr)
 		fmt.Println(res)
