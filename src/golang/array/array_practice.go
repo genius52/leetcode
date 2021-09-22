@@ -507,54 +507,6 @@ func compress(chars []byte) int {
 	return len(chars)
 }
 
-//1337
-//Input: mat =
-//[[1,1,0,0,0],
-//[1,1,1,1,0],
-//[1,0,0,0,0],
-//[1,1,0,0,0],
-//[1,1,1,1,1]],
-//k = 3
-//Output: [2,0,3]
-func kWeakestRows(mat [][]int, k int) []int {
-	var rows = len(mat)
-	if rows == 0{
-		return []int{}
-	}
-	var columns = len(mat[0])
-	var record map[int][]int = make(map[int][]int)
-	for i := 0;i < rows;i++{
-		j := 0
-		for ;j < columns;j++ {
-			if mat[i][j] == 0 {
-				break
-			}
-		}
-		if _,ok := record[j];ok{
-			record[j] = append(record[j], i)
-		}else{
-			record[j] = []int{i}
-		}
-	}
-	var keys []int
-	for l := range record {
-		keys = append(keys, l)
-	}
-	sort.Ints(keys)
-	var res []int
-	var i int = 0
-	for _,num := range keys{
-		for _,row := range record[num]{
-			res = append(res,row)
-			i++
-			if i == k{
-				return res
-			}
-		}
-	}
-	return res
-}
-
 func dfs_decodeString2(s string,pos *int)string{
 	var word string
 	var num int = 0

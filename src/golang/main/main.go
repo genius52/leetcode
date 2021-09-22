@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		input := [][]int{{1,1,0,0,0},{1,1,1,1,0},{1,0,0,0,0},{1,1,0,0,0},{1,1,1,1,1}}
+		k := 3
+		res := array.KWeakestRows(input,k)
+		fmt.Println(res)
+	}
+	{
 		jobDifficulty := []int{11,111,22,222,33,333,44,444}
 		d := 6
 		res := number.MinDifficulty(jobDifficulty,d)
@@ -4302,12 +4308,6 @@ func main(){
 	//	input := "3[a]2[bc]"
 	//	//res := decodeString(input)
 	//	res := decodeString2(input)
-	//	fmt.Println(res)
-	//}
-	//{
-	//	input := [][]int{{1,1,0,0,0},{1,1,1,1,0},{1,0,0,0,0},{1,1,0,0,0},{1,1,1,1,1}}
-	//	k := 3
-	//	res := kWeakestRows(input,k)
 	//	fmt.Println(res)
 	//}
 	//{
