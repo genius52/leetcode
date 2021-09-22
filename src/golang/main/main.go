@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		jobDifficulty := []int{11,111,22,222,33,333,44,444}
+		d := 6
+		res := number.MinDifficulty(jobDifficulty,d)
+		fmt.Println(res)
+	}
+	{
 		restaurants := [][]int{{1,4,1,40,10},{2,8,0,50,5},{3,8,1,30,4},{4,10,0,10,3},{5,1,1,15,1}}
 		veganFriendly := 1
 		maxPrice := 50
