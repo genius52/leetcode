@@ -291,19 +291,6 @@ func checkIfExist(arr []int) bool {
 	return false
 }
 
-//1342
-func numberOfSteps(num int) int{
-	if num <= 1{
-		return num
-	}
-	var rest int = num % 2
-	var step int = 0
-	if rest == 1{
-		step += 1
-	}
-	return step + 1 + numberOfSteps(num >> 1)
-}
-
 //1362
 //Input: num = 8
 //Output: [3,3]
