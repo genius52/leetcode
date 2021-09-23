@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		arr := []int{7,7,2,1,7,7,7,3,4,1}
+		res := array.MinJumps(arr)
+		fmt.Println(res)
+	}
+	{
 		arr := []int{13,9,7,10,6,12}
 		d := 3
 		res := array.MaxJumps(arr,d)
