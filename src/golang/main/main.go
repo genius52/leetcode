@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		arr := []int{13,9,7,10,6,12}
+		d := 3
+		res := array.MaxJumps(arr,d)
+		fmt.Println(res)
+	}
+	{
 		input := [][]int{{1,1,0,0,0},{1,1,1,1,0},{1,0,0,0,0},{1,1,0,0,0},{1,1,1,1,1}}
 		k := 3
 		res := array.KWeakestRows(input,k)
