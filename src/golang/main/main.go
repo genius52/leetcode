@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		grid := [][]int{{4,3,2,-1},{3,2,1,-1},{1,1,-1,-2},{-1,-1,-2,-3}}
+		res := array.CountNegatives(grid)
+		fmt.Println(res)
+	}
+	{
 		arr := []int{7,7,2,1,7,7,7,3,4,1}
 		res := array.MinJumps(arr)
 		fmt.Println(res)

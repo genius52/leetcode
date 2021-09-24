@@ -6,6 +6,15 @@
 
 int main() {
     {
+        TweetCounts s1348;
+        s1348.recordTweet("tweet3",0);
+        s1348.recordTweet("tweet3",10);
+        s1348.recordTweet("tweet3",60);
+        auto res = s1348.getTweetCountsPerFrequency("minute","tweet3",0,59);
+        res = s1348.getTweetCountsPerFrequency("minute","tweet3",0,60);
+        std::cout<<res[0]<<std::endl;
+    }
+    {
         Solution_1326 s1326;
         int n = 17;
         std::vector<int> ranges{0,3,3,2,2,4,2,1,5,1,0,1,2,3,0,3,1,1};
