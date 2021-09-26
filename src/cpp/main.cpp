@@ -6,6 +6,27 @@
 
 int main() {
     {
+        int n = 3;
+        int discount = 50;
+        std::vector<int> products{1,2,3,4,5,6,7};
+        std::vector<int> prices{100,200,300,400,300,200,100};
+        Cashier s1357(n,discount,products,prices);
+        auto res = s1357.getBill({1,2},{1,2});
+        std::cout<<res<<std::endl;
+    }
+    {
+        Solution_1354 s1354;
+        std::vector<int> target{2};
+        auto res = s1354.isPossible(target);
+        std::cout<<res<<std::endl;
+    }
+    {
+        Solution_1353 s1353;
+        std::vector<std::vector<int>> events{{1,100000}};
+        auto res = s1353.maxEvents(events);
+        std::cout<<res<<std::endl;
+    }
+    {
         TweetCounts s1348;
         s1348.recordTweet("tweet3",0);
         s1348.recordTweet("tweet3",10);
