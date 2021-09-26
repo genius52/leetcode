@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var s string = "aabcaa"
+		res := string_issue.NumberOfSubstrings(s)
+		fmt.Println(res)
+	}
+	{
 		//seats := [][]byte{{'#','.','#','#','.','#'},
 		//			{'.','#','#','#','#','.'},
 		//			{'#','.','#','#','.','#'}}
@@ -2509,11 +2514,6 @@ func main(){
 		t5.Right = &t7
 		t7.Right = &t8
 		res := tree.LongestZigZag(&t1)
-		fmt.Println(res)
-	}
-	{
-		var s string = "abab"
-		res := string_issue.NumberOfSubstrings(s)
 		fmt.Println(res)
 	}
 	{
