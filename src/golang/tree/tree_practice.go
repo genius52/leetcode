@@ -120,40 +120,6 @@ func reachNumber(target int) int {
 	return res
 }
 
-//1361
-//Input: n = 4, leftChild = [1,-1,3,-1], rightChild = [2,-1,-1,-1]
-//Output: true
-//Input: n = 6, leftChild = [1,-1,-1,4,-1,-1], rightChild = [2,-1,-1,5,-1,-1]
-//Output: false
-func validateBinaryTreeNodes(n int, leftChild []int, rightChild []int) bool {
-	var record map[int]int = make(map[int]int)
-	for i := 0;i < n;i++{
-		left_node := leftChild[i]
-		right_node := rightChild[i]
-		if (left_node != -1 && left_node < i) || (right_node != -1 && right_node < i){
-			return false
-		}
-		if _,ok := record[left_node];ok{
-			return false
-		}
-		if _,ok := record[right_node];ok{
-			return false
-		}
-		if left_node != -1{
-			record[left_node] = 1
-		}
-		if right_node != -1{
-			record[right_node] = 1
-		}
-	}
-	for i := 1;i < n;i++{
-		if _,ok := record[i];!ok{
-			return false
-		}
-	}
-	return true
-}
-
 func previsit_balanceBST(node *TreeNode,record *[]*TreeNode){
 	if node == nil{
 		return

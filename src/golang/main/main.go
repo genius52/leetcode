@@ -15,6 +15,22 @@ import (
 
 func main(){
 	{
+		//4
+		//[3,-1,1,-1]
+		//[-1,-1,0,-1]
+		n := 4
+		left := []int{3,-1,1,-1}
+		right := []int{-1,-1,0,-1}
+		res := tree.ValidateBinaryTreeNodes(n,left,right)
+		fmt.Println(res)
+	}
+	{
+		board := [][]byte{{'#', ' ', '#'}, {' ', ' ', '#'}, {'#', 'c', ' '}}
+		word := "abc"
+		res := diagram.PlaceWordInCrossword(board,word)
+		fmt.Println(res)
+	}
+	{
 		var s string = "aabcaa"
 		res := string_issue.NumberOfSubstrings(s)
 		fmt.Println(res)
@@ -4239,13 +4255,6 @@ func main(){
 	//}
 	//{
 	//	res := closestDivisors(208656121)
-	//	fmt.Println(res)
-	//}
-	//{
-	//	n := 4
-	//	left := []int{1,-1,3,-1}
-	//	right := []int{2,-1,-1,-1}
-	//	res := validateBinaryTreeNodes(n,left,right)
 	//	fmt.Println(res)
 	//}
 	//{
