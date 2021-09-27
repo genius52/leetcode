@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		n := 3
+		res := number.CountOrders(n)
+		fmt.Println(res)
+	}
+	{
 		//4
 		//[3,-1,1,-1]
 		//[-1,-1,0,-1]
