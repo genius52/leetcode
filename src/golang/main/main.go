@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		votes := []string{"BCA","CAB","CBA","ABC","ACB","BAC"}
+		res := number.RankTeams(votes)
+		fmt.Println(res)
+	}
+	{
 		//ret := number.Cmp_largestMultipleOfThree("112","111")
 		//fmt.Println(ret)
 		digits := []int{5,2,3}
