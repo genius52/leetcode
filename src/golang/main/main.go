@@ -15,6 +15,13 @@ import (
 
 func main(){
 	{
+		//ret := number.Cmp_largestMultipleOfThree("112","111")
+		//fmt.Println(ret)
+		digits := []int{5,2,3}
+		res := number.LargestMultipleOfThree(digits)
+		fmt.Println(res)
+	}
+	{
 		n := 3
 		res := number.CountOrders(n)
 		fmt.Println(res)
