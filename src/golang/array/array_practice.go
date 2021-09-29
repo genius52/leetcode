@@ -535,45 +535,6 @@ func decodeString2(s string) string {
 	return dfs_decodeString2(s,&pos)
 }
 
-//1356
-type sortBit []int
-
-func (s sortBit) Less(i, j int) bool {
-	var bit_cnt1 int = 0
-	var bit_cnt2 int = 0
-	var move int = 1
-	for s[i] >= move{
-		if (s[i] | move) == s[i]{
-			bit_cnt1++
-		}
-		move = move << 1
-	}
-	move = 1
-	for s[j] >= move{
-		if (s[j] | move) == s[j]{
-			bit_cnt2++
-		}
-		move = move << 1
-	}
-	if bit_cnt1 == bit_cnt2{
-		return s[i] < s[j]
-	}
-	return bit_cnt1 < bit_cnt2
-}
-
-func (s sortBit) Swap(i, j int) {
-	s[i], s[j] = s[j], s[i]
-}
-
-func (s sortBit) Len() int {
-	return len(s)
-}
-
-func sortByBits(arr []int) []int {
-	sort.Sort(sortBit(arr))
-	return arr
-}
-
 //678
 func checkValidString(s string) bool {
 	var left []int
@@ -607,55 +568,6 @@ func checkValidString(s string) bool {
 		return false
 	}
 	return true
-}
-
-//1370
-//Input: s = "aaaabbbbcccc"
-//Output: "abccbaabccba"
-func sortString(s string) string {
-	var record [26]int
-	for _,c := range s{
-		record[c-'a']++
-	}
-	var head_to_tail bool = true
-	var res string
-	head,tail := 0,25;
-	for head <= tail {
-		if record[head] == 0{
-			head++
-			continue
-		}
-		if record[tail] == 0{
-			tail--
-			continue
-		}
-		i := head
-		j := tail
-		for i <= j{
-			if head_to_tail{
-				if record[i] == 0{
-					i++
-					continue
-				}
-			}else{
-				if record[j] == 0{
-					j--
-					continue
-				}
-			}
-			if head_to_tail{
-				res += string(i + 'a')
-				record[i]--
-				i++
-			}else{
-				res += string(j + 'a')
-				record[j]--
-				j--
-			}
-		}
-		head_to_tail = !head_to_tail
-	}
-	return res
 }
 
 //1374

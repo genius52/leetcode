@@ -7,25 +7,10 @@ import (
 
 //Input: dictionary = ["a", "aa", "aaa", "aaaa"], sentence = "a aa a aaaa aaa aaa aaa aaaaaa bbb baba ababa"
 //Output: "a a a a a a a a bbb baba a"
-type sortString []string
-
-func (s sortString) Less(i, j int) bool {
-	if len(s[i]) < len(s[j]){
-		return true
-	}
-	return false
-}
-
-func (s sortString) Swap(i, j int) {
-	s[i], s[j] = s[j], s[i]
-}
-
-func (s sortString) Len() int {
-	return len(s)
-}
-
 func ReplaceWords(dictionary []string, sentence string) string {
-	sort.Sort(sortString(dictionary))
+	sort.Slice(dictionary, func(i, j int) bool {
+		return len(dictionary[i]) < len(dictionary[j])
+	})
 	words := strings.Split(sentence," ")
 	var res string
 	for _,word := range words{
