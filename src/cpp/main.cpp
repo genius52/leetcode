@@ -6,6 +6,12 @@
 
 int main() {
     {
+        Solution_1368 s1368;
+        vector<vector<int>> grid{{1,1,1,1},{2,2,2,2},{1,1,1,1},{2,2,2,2}};
+        auto res = s1368.minCost(grid);
+        std::cout<<res<<std::endl;
+    }
+    {
         int n = 3;
         int discount = 50;
         std::vector<int> products{1,2,3,4,5,6,7};
