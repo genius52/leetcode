@@ -570,23 +570,6 @@ func checkValidString(s string) bool {
 	return true
 }
 
-//1374
-func generateTheString(n int) string {
-	var res string
-	if n % 2 == 1{
-		for i := 0;i < n;i++{
-			res += "a"
-		}
-		return res
-	}else{
-		for i := 0;i < n - 1;i++{
-			res += "a"
-		}
-		res += "b"
-		return res
-	}
-}
-
 func luckyNumbers (matrix [][]int) []int {
 	var rows int = len(matrix)
 	var columns int = len(matrix[0])
