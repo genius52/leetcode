@@ -15,6 +15,63 @@ import (
 
 func main(){
 	{
+		//[5,4,8,3,null,6,3]
+		//var t1 tree.TreeNode
+		//t1.Val = 4
+		//var t2 tree.TreeNode
+		//t2.Val = 8
+		//var t3 tree.TreeNode
+		//t3.Val = 6
+		//var t4 tree.TreeNode
+		//t4.Val = 1
+		//var t5 tree.TreeNode
+		//t5.Val = 9
+		//var t6 tree.TreeNode
+		//t6.Val = -5
+		//var t7 tree.TreeNode
+		//t7.Val = 4
+		//var t8 tree.TreeNode
+		//t8.Val = -3
+		//var t9 tree.TreeNode
+		//t9.Val = 10
+		//t1.Left = &t2
+		//t2.Left = &t3
+		//t2.Right = &t4
+		//t3.Left = &t5
+		//t4.Left = &t6
+		//t4.Right = &t7
+		//t6.Right = &t8
+		//t7.Right = &t9
+
+		var t1 tree.TreeNode
+		t1.Val = 4
+		var t2 tree.TreeNode
+		t2.Val = -3
+		var t3 tree.TreeNode
+		t3.Val = 6
+		var t4 tree.TreeNode
+		t4.Val = -5
+		var t5 tree.TreeNode
+		t5.Val = -2
+		var t6 tree.TreeNode
+		t6.Val = 5
+		var t7 tree.TreeNode
+		t7.Val = 9
+		t1.Left = &t2
+		t1.Right = &t3
+		t2.Left = &t4
+		t2.Right = &t5
+		t3.Left = &t6
+		t3.Right = &t7
+		res := tree.MaxSumBST(&t1)
+		fmt.Println(res)
+	}
+	{
+		s := "leetcode"
+		res := string_issue.SortString(s)
+		fmt.Println(res)
+	}
+	{
 		votes := []string{"BCA","CAB","CBA","ABC","ACB","BAC"}
 		res := number.RankTeams(votes)
 		fmt.Println(res)
