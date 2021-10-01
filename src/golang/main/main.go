@@ -15,6 +15,14 @@ import (
 
 func main(){
 	{
+		n := 7
+		edges := [][]int{{1,2},{1,3},{1,7},{2,4},{2,6},{3,5}}
+		t := 2
+		target := 4
+		res := diagram.FrogPosition(n, edges, t, target)
+		fmt.Println(res)
+	}
+	{
 		//11
 		//4
 		//[5,9,6,10,-1,8,9,1,9,3,4]
