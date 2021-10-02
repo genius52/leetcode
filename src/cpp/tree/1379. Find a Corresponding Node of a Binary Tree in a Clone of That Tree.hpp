@@ -4,6 +4,20 @@ using namespace std;
 
 class Solution_1379 {
 public:
+    TreeNode* getTargetCopy2(TreeNode *original, TreeNode *cloned, TreeNode *target){
+        if(original == nullptr)
+            return nullptr;
+        if(original == target)
+            return cloned;
+        auto res = getTargetCopy2(original->left,cloned->left,target);
+        if(res != nullptr)
+            return res;
+        res = getTargetCopy2(original->right,cloned->right,target);
+        if(res != nullptr)
+            return res;
+        return nullptr;
+    }
+
     TreeNode* getTargetCopy(TreeNode *original, TreeNode *cloned, TreeNode *target) {
         if (original == nullptr || target == nullptr) {
             return nullptr;

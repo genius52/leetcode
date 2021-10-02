@@ -570,38 +570,6 @@ func checkValidString(s string) bool {
 	return true
 }
 
-func luckyNumbers (matrix [][]int) []int {
-	var rows int = len(matrix)
-	var columns int = len(matrix[0])
-	var res []int
-	for i := 0;i < rows;i++{
-		var min_num_column int = 0
-		var cur_row_min int = matrix[i][0]
-		for j := 0;j < columns;j++{
-			if matrix[i][j] < cur_row_min{
-				cur_row_min = matrix[i][j]
-				min_num_column = j
-			}
-		}
-
-		var pass bool = true
-		for j := 0;j < rows;j++{
-			if j == i{
-				continue
-			}
-			if matrix[j][min_num_column] > matrix[i][min_num_column]{
-				pass = false
-				break
-			}
-		}
-		if pass{
-			res = append(res, matrix[i][min_num_column])
-		}
-	}
-	return res
-}
-
-//
 type CustomStack struct {
 	data []int
 	max_size int
