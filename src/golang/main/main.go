@@ -15,6 +15,18 @@ import (
 
 func main(){
 	{
+		//r2 := 64 | 240
+		//fmt.Println(r2)
+		//n := 3
+		//reservedSeats := [][]int{{1,2},{1,3},{1,8},{2,6},{3,1},{3,10}}
+		//2
+		//[[2,1],[1,8],[2,6]]
+		n := 2
+		reservedSeats := [][]int{{2,1},{1,8},{2,6}}
+		res := array.MaxNumberOfFamilies(n,reservedSeats)
+		fmt.Println(res)
+	}
+	{
 		n := 7
 		edges := [][]int{{1,2},{1,3},{1,7},{2,4},{2,6},{3,5}}
 		t := 2
