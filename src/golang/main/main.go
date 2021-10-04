@@ -15,6 +15,19 @@ import (
 
 func main(){
 	{
+		//10
+		//[[2,3,6],[8,9,8],[5,9,7],[8,9,1],[2,9,2],[9,10,6],[7,10,10],[6,7,9],[4,9,7],[2,3,1]]
+		n := 10
+		rides := [][]int{{2,3,6},{8,9,8},{5,9,7},{8,9,1},{2,9,2},{9,10,6},{7,10,10},{6,7,9},{4,9,7},{2,3,1}}
+		res := diagram.MaxTaxiEarnings(n,rides)
+		fmt.Println(res)
+	}
+	{
+		changed := []int{1,3,4,2,6,8,1,2}
+		res := array.FindOriginalArray(changed)
+		fmt.Println(res)
+	}
+	{
 		//r2 := 64 | 240
 		//fmt.Println(r2)
 		//n := 3

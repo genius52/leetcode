@@ -6,6 +6,15 @@
 
 int main() {
     {
+        Solution_1383 s1383;
+        int n = 6;
+        std::vector<int> speed{2,10,3,1,5,8};
+        std::vector<int> efficiency{5,4,3,9,7,2};
+        int k = 4;
+        auto res = s1383.maxPerformance(n,speed,efficiency,k);
+        std::cout<< res << std::endl;
+    }
+    {
         Solution_1368 s1368;
         vector<vector<int>> grid{{1,1,1,1},{2,2,2,2},{1,1,1,1},{2,2,2,2}};
         auto res = s1368.minCost(grid);

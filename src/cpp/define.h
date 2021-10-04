@@ -156,6 +156,7 @@ struct ListNode {
 #include "number/1942. The Number of the Smallest Unoccupied Chair.hpp"
 #include "number/1354. Construct Target Array With Multiple Sums.hpp"
 #include "number/1357. Apply Discount Every n Orders.hpp"
+#include "number/1383. Maximum Performance of a Team.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
