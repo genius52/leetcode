@@ -15,6 +15,18 @@ import (
 
 func main(){
 	{
+		answerKey := "FFFTTFTTFT"
+		k := 3
+		res := string_issue.MaxConsecutiveAnswers(answerKey,k)
+		fmt.Println(res)
+	}
+	{
+		nums := []string{"777","7","77","77"}
+		target := "7777"
+		res := string_issue.NumOfPairs(nums,target)
+		fmt.Println(res)
+	}
+	{
 		//10
 		//[[2,3,6],[8,9,8],[5,9,7],[8,9,1],[2,9,2],[9,10,6],[7,10,10],[6,7,9],[4,9,7],[2,3,1]]
 		n := 10
