@@ -6,6 +6,13 @@
 
 int main() {
     {
+        UndergroundSystem s1396;
+        s1396.checkIn(45,"Leyton",3);
+        s1396.checkOut(45,"Waterloo",15);
+        auto res = s1396.getAverageTime("Leyton","Waterloo");
+        std::cout<<res << std::endl;
+    }
+    {
         Solution_1383 s1383;
         int n = 6;
         std::vector<int> speed{2,10,3,1,5,8};
