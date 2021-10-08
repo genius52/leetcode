@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		n := 13
+		res := number.CountLargestGroup(n)
+		fmt.Println(res)
+	}
+	{
 		grid := [][]int{{4,1,3},{6,1,2}}
 		res := diagram.HasValidPath(grid)
 		fmt.Println(res)
