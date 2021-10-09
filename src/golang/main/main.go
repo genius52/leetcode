@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		satisfaction := []int{-2,5,-1,0,3,-3}
+		res := number.MaxSatisfaction(satisfaction)
+		fmt.Println(res)
+	}
+	{
 		n := 13
 		res := number.CountLargestGroup(n)
 		fmt.Println(res)
