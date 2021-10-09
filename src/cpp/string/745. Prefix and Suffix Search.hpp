@@ -28,7 +28,7 @@ public:
             return -1;
         }
         for(auto it11 = prefix_map[prefix].rbegin();it11 != prefix_map[prefix].rend();it11++){
-            if(suffix_map[suffix].find(*it11) != suffix_map[suffix].rend())
+            if(suffix_map[suffix].find(*it11) != suffix_map[suffix].end())
                 return *it11;
         }
         return -1;
