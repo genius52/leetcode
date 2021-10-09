@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		s := "1101"
+		res := number.NumSteps(s)
+		fmt.Println(res)
+	}
+	{
 		satisfaction := []int{-2,5,-1,0,3,-3}
 		res := number.MaxSatisfaction(satisfaction)
 		fmt.Println(res)
