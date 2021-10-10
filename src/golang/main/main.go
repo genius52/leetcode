@@ -15,6 +15,17 @@ import (
 
 func main(){
 	{
+		grid := [][]int{{1,5},{2,3}}
+		x := 1
+		res := number.MinOperations(grid,x)
+		fmt.Println(res)
+	}
+	{
+		values := []int{-1,-2,-3}
+		res := number.StoneGameIII(values)
+		fmt.Println(res)
+	}
+	{
 		s := "1101"
 		res := number.NumSteps(s)
 		fmt.Println(res)
