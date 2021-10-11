@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		words := []string{"mass","as","hero","superhero"}
+		res := string_issue.StringMatching(words)
+		fmt.Println(res)
+	}
+	{
 		grid := [][]int{{1,5},{2,3}}
 		x := 1
 		res := number.MinOperations(grid,x)
