@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		s := "1234567890"
+		k := 90
+		res := number.NumberOfArrays(s,k)
+		fmt.Println(res)
+	}
+	{
 		words := []string{"mass","as","hero","superhero"}
 		res := string_issue.StringMatching(words)
 		fmt.Println(res)
