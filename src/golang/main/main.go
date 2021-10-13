@@ -15,6 +15,17 @@ import (
 
 func main(){
 	{
+		input := [][]int{{1,2,3,4,5},{6,7},{8},{9,10,11,13,14},{12,13}}
+		res := array.FindDiagonalOrder(input)
+		fmt.Println(res)
+	}
+	{
+		input := []int{1,1000,1}
+		k := 1
+		res := number.MaxScore2(input,k)
+		fmt.Println(res)
+	}
+	{
 		input := "0100"
 		res := number.MaxScore(input)
 		fmt.Println(res)
@@ -3861,17 +3872,6 @@ func main(){
 		input := []int{0,0,0,0}
 		target := 0
 		res := number.FourSum(input,target)
-		fmt.Println(res)
-	}
-	{
-		input := [][]int{{1,2,3,4,5},{6,7},{8},{9,10,11},{12,13,14,15,16}}
-		res := array.FindDiagonalOrder(input)
-		fmt.Println(res)
-	}
-	{
-		input := []int{1,79,80,1,1,1,200,1}
-		k := 6
-		res := number.MaxScore2(input,k)
 		fmt.Println(res)
 	}
 	{
