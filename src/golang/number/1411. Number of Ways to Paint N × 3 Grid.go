@@ -1,9 +1,10 @@
 package number
+
 //Input: n = 1
 //Output: 12
 func NumOfWays(n int) int {
-	var diff3 []int = make([]int,n)
-	var same2 []int = make([]int,n)
+	var diff3 []int = make([]int,n)///3 * 2 * 1
+	var same2 []int = make([]int,n)//3 * 2
 	diff3[0] = 6
 	same2[0] = 6
 	for i := 1;i < n;i++{
