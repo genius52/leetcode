@@ -15,6 +15,14 @@ import (
 
 func main(){
 	{
+//"vqglqavmsnmktsxwxcpxhuujuanxueuymzifycytalizwnvrjeoipfoqbiqdxsnclcvoafqwfwcmuwitjgqghkicc"
+		//"wqvloqrxbfjuxwriltxhmrmfpzitkwhitwhvatmknyhzigcuxfsosxetioqfeyewoljymhdwgwvjcdhmkpdfbbzta"
+		s1 := "vqglqavmsnmktsxwxcpxhuujuanxueuymzifycytalizwnvrjeoipfoqbiqdxsnclcvoafqwfwcmuwitjgqghkicc"
+		s2 := "wqvloqrxbfjuxwriltxhmrmfpzitkwhitwhvatmknyhzigcuxfsosxetioqfeyewoljymhdwgwvjcdhmkpdfbbzta"
+		res := string_issue.CheckIfCanBreak3(s1,s2)
+		fmt.Println(res)
+	}
+	{
 		num := 123456
 		res := number.MaxDiff(num)
 		fmt.Println(res)
@@ -3855,12 +3863,6 @@ func main(){
 		input := "9,3,4,#,#,1,#,#,2,#,6,#,#"
 		res := tree.IsValidSerialization(input)
 		fmt.Println(res)
-	}
-	{
-		s1 := "abe"
-		s2 := "acd"
-		res := string_issue.CheckIfCanBreak2(s1,s2)
-		fmt.Print(res)
 	}
 	{
 		n := 12

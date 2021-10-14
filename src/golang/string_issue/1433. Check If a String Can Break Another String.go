@@ -1,5 +1,7 @@
 package string_issue
 
+import "sort"
+
 //Input: s1 = "abc", s2 = "xya"
 //Output: true
 //Explanation: "ayx" is a permutation of s2="xya" which can break to string_issue "abc" which is a permutation of s1="abc".
@@ -85,4 +87,41 @@ func CheckIfCanBreak2(s1 string, s2 string) bool {
 		}
 	}
 	return (s1_large_num == l || s2_large_num == l)
+}
+
+func CheckIfCanBreak3(s1 string, s2 string) bool{
+	var l int = len(s1)
+	if l == 1{
+		return true
+	}
+	b1 := []byte(s1)
+	sort.Slice(b1, func(i, j int) bool {
+		return b1[i] <= b1[j]
+	})
+	b2 := []byte(s2)
+	sort.Slice(b2, func(i, j int) bool {
+		return b2[i] <= b2[j]
+	})
+	if l == 2{
+		return (b1[0] <= b2[0] && b1[1] <= b2[1]) || (b1[0] >= b2[0] && b1[1] >= b2[1])
+	}
+	var meet1 bool = true
+	for i := 1;i < l - 1;i++{
+		if (b1[i - 1] <= b2[i - 1] && b1[i] <= b2[i] && b1[i + 1] <= b2[i + 1]){
+			continue
+		}else{
+			meet1 = false
+			break
+		}
+	}
+	var meet2 bool = true
+	for i := 1;i < l - 1;i++{
+		if (b1[i - 1] >= b2[i - 1] && b1[i] >= b2[i] && b1[i + 1] >= b2[i + 1]){
+			continue
+		}else{
+			meet1 = false
+			break
+		}
+	}
+	return meet1 || meet2
 }
