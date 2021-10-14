@@ -15,6 +15,13 @@ import (
 
 func main(){
 	{
+
+		nums := []int{10,2,-10,5,20}
+		k := 2
+		res := array.ConstrainedSubsetSum(nums,k)
+		fmt.Println(res)
+	}
+	{
 		input := [][]int{{1,2,3,4,5},{6,7},{8},{9,10,11,13,14},{12,13}}
 		res := array.FindDiagonalOrder(input)
 		fmt.Println(res)
