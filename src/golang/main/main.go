@@ -15,7 +15,11 @@ import (
 
 func main(){
 	{
-
+		num := 123456
+		res := number.MaxDiff(num)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{10,2,-10,5,20}
 		k := 2
 		res := array.ConstrainedSubsetSum(nums,k)
