@@ -15,16 +15,16 @@ import (
 
 func main(){
 	{
+		hats := [][]int{{1,2,3},{2,3,5,6},{1,3,7,9},{1,8,9},{2,5,7}}
+		res := diagram.NumberWays(hats)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{1,0,0,0,1,0,0,1}
 		k := 2
 		res := array.KLengthApart(nums,k)
 		fmt.Println(res)
 	}
-	//{
-	//	hats := [][]int{{1,2,3},{2,3,5,6},{1,3,7,9},{1,8,9},{2,5,7}}
-	//	res := number.NumberWays(hats)
-	//	fmt.Println(res)
-	//}
 	{
 //"vqglqavmsnmktsxwxcpxhuujuanxueuymzifycytalizwnvrjeoipfoqbiqdxsnclcvoafqwfwcmuwitjgqghkicc"
 		//"wqvloqrxbfjuxwriltxhmrmfpzitkwhitwhvatmknyhzigcuxfsosxetioqfeyewoljymhdwgwvjcdhmkpdfbbzta"
