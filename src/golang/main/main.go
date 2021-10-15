@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		arr := []int{1,3,5,7,9}
+		res := array.CountTriplets(arr)
+		fmt.Println(res)
+	}
+	{
 		hats := [][]int{{1,2,3},{2,3,5,6},{1,3,7,9},{1,8,9},{2,5,7}}
 		res := diagram.NumberWays(hats)
 		fmt.Println(res)
