@@ -6,6 +6,16 @@
 
 int main() {
     {
+        std::vector<std::vector<std::string>> favoriteCompanies{{"arrtztkotazhufrsfczr","knzgidixqgtnahamebxf","zibvccaoayyihidztflj"},
+                                                                {"cffiqfviuwjowkppdajm","owqvnrhuzwqohquamvsz"},
+                                                                {"knzgidixqgtnahamebxf","owqvnrhuzwqohquamvsz","qzeqyrgnbplsrgqnplnl"},
+                                                                {"arrtztkotazhufrsfczr","cffiqfviuwjowkppdajm"},
+                                                                {"arrtztkotazhufrsfczr","knzgidixqgtnahamebxf","owqvnrhuzwqohquamvsz","qzeqyrgnbplsrgqnplnl","zibvccaoayyihidztflj"}};
+        Solution_1452 s1452;
+        auto res = s1452.peopleIndexes(favoriteCompanies);
+        std::cout<<res.size()<<std::endl;
+    }
+    {
         //[[1,3,11],[2,4,6]]
         Solution_1439 s1439;
         std::vector<std::vector<int>> mat{{1,1,10},{2,2,9}};
