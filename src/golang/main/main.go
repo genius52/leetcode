@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		s := "1 box has 3 blue 4 red 6 green and 12 yellow marbles"
+		res := string_issue.AreNumbersAscending(s)
+		fmt.Println(res)
+	}
+	{
 		arr := []int{1,3,5,7,9}
 		res := array.CountTriplets(arr)
 		fmt.Println(res)
