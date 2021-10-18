@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		cost := []int{4,3,2,5,6,7,2,5,5}
+		target := 5000
+		res := number.LargestNumber2(cost,target)
+		fmt.Println(res)
+	}
+	{
 		s := "1 box has 3 blue 4 red 6 green and 12 yellow marbles"
 		res := string_issue.AreNumbersAscending(s)
 		fmt.Println(res)
