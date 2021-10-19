@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		sentence := "i love eating burger"
+		searchWord := "burg"
+		res := string_issue.IsPrefixOfWord(sentence,searchWord)
+		fmt.Println(res)
+	}
+	{
 		cost := []int{4,3,2,5,6,7,2,5,5}
 		target := 5000
 		res := number.LargestNumber2(cost,target)
