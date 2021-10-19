@@ -15,6 +15,14 @@ import (
 
 func main(){
 	{
+		//[-5,-1,-2]
+		//[3,3,5,5]
+		nums1 := []int{-5,-1,-2}
+		nums2 := []int{3,3,5,5}
+		res := array.MaxDotProduct2(nums1,nums2)
+		fmt.Println(res)
+	}
+	{
 		sentence := "i love eating burger"
 		searchWord := "burg"
 		res := string_issue.IsPrefixOfWord(sentence,searchWord)
