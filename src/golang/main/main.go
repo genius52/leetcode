@@ -15,6 +15,13 @@ import (
 
 func main(){
 	{
+		var n int = 3
+		var prerequisites [][]int = [][]int{{1,0},{2,0}}
+		var queries [][]int = [][]int{{0,1},{2,0}}
+		res := diagram.CheckIfPrerequisite(n,prerequisites,queries)
+		fmt.Println(res)
+	}
+	{
 		//[-5,-1,-2]
 		//[3,3,5,5]
 		nums1 := []int{-5,-1,-2}
@@ -2726,13 +2733,6 @@ func main(){
 		var left []int = []int{5}
 		var right []int = []int{4}
 		res := array.GetLastMoment(n,left,right)
-		fmt.Println(res)
-	}
-	{
-		var n int = 3
-		var prerequisites [][]int = [][]int{{1,0},{2,0}}
-		var queries [][]int = [][]int{{0,1},{2,0}}
-		res := diagram.CheckIfPrerequisite(n,prerequisites,queries)
 		fmt.Println(res)
 	}
 	{
