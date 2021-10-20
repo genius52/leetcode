@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		grid := [][]int{{3,1,1},{2,5,1},{1,5,5},{2,1,1}}
+		res := array.CherryPickup2(grid)
+		fmt.Println(res)
+	}
+	{
 		var n int = 3
 		var prerequisites [][]int = [][]int{{1,0},{2,0}}
 		var queries [][]int = [][]int{{0,1},{2,0}}
