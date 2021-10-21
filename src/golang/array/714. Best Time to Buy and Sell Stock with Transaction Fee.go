@@ -1,7 +1,5 @@
 package array
 
-import "math"
-
 //Input: prices = [1, 3, 2, 8, 4, 9], fee = 2
 //Output: 8
 //Explanation: The maximum profit can be achieved by:
@@ -39,6 +37,18 @@ func dp_maxProfit4(prices []int,pos int,fee int,has_stock bool,memo map[int]int)
 	return profit
 }
 
+func MaxProfit4(prices []int, fee int) int{
+	var l int = len(prices)
+	var have_stock []int = make([]int,l)
+	var have_no_stock []int = make([]int,l)
+	have_stock[0] = -prices[0] - fee
+	have_no_stock[0] = 0
+	for i := 1;i < l;i++{
+		have_stock[i] = max_int(have_stock[i - 1],have_no_stock[i - 1] - prices[i] - fee)
+		have_no_stock[i] = max_int(have_no_stock[i - 1],have_stock[i - 1] + prices[i])
+	}
+	return max_int(have_stock[l - 1],have_no_stock[l - 1])
+}
 //func MaxProfit4(prices []int, fee int) int {
 //	var memo map[int]int = make(map[int]int)
 //	buy := dp_maxProfit4(prices,1,fee,true,memo) - prices[0] - fee
@@ -48,23 +58,3 @@ func dp_maxProfit4(prices []int,pos int,fee int,has_stock bool,memo map[int]int)
 //	}
 //	return not_buy
 //}
-
-func MaxProfit4(prices []int, fee int) int {
-	var l int = len(prices)
-	var buy []int = make([]int,l)
-	var sell []int = make([]int,l)
-	var res int = 0
-	buy[0] = -prices[0] - fee
-	sell[0] = 0
-	for i := 1;i < l;i++{
-		buy[i] = int(math.Max(float64(sell[i - 1] - prices[i] - fee),float64(buy[i - 1])))
-		sell[i] = int(math.Max(float64(buy[i - 1] + prices[i]),float64(sell[i - 1])))
-		if buy[i] > res{
-			res = buy[i]
-		}
-		if sell[i] > res{
-			res = sell[i]
-		}
-	}
-	return res
-}

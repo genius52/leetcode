@@ -1,11 +1,44 @@
 package array
 
-import "math"
+import (
+	"container/list"
+	"math"
+)
 
 //Input: [6,0,8,2,1,5]
 //Output: 4
 //Explanation:
 //The maximum width ramp is achieved at (i, j) = (1, 5): A[1] = 0 and A[5] = 5.
+
+func MaxWidthRamp2(A []int) int{
+	var l int = len(A)
+	if l <= 1{
+		return 0
+	}
+	var res int = 0
+	var q list.List
+	for i := 0;i < l;i++{
+		if q.Len() == 0{
+			q.PushBack(i)
+		}else{
+			top := q.Back().Value.(int)
+			if A[i] < A[top]{
+				q.PushBack(i)
+			}else{
+				visit := q.Front()
+				for A[visit.Value.(int)] > A[i]{
+					visit = visit.Next()
+				}
+				dis := i - visit.Value.(int)
+				if dis > res{
+					res = dis
+				}
+			}
+		}
+	}
+	return res
+}
+
 func MaxWidthRamp(A []int) int{
 	var l int = len(A)
 	if l <= 1{

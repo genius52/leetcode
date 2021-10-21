@@ -21,20 +21,12 @@ func PartitionDisjoint(A []int) int {
 			right[l - 1 - i] = right[l - i]
 		}
 	}
-	end := l - 2
-	for end >= 0{
-		if A[end] == A[end + 1]{
-			end--
-		}else{
-			break
-		}
-	}
 	visit := 0
-	for visit <= end{
-		if left[visit] > right[visit + 1]{
-			visit++
-		}else{
+	for visit < l{
+		if left[visit] <= right[visit + 1]{//左边最大值 小于 右边最小值
 			break
+		}else{
+			visit++
 		}
 	}
 	return visit + 1

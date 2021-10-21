@@ -45,50 +45,31 @@ func CherryPickup2(grid [][]int) int{
 //func cherryPickup(grid [][]int) int {
 //	var rows int = len(grid)
 //	var columns int = len(grid[0])
-//	var dp_left [][]int = make([][]int,rows)
-//	var dp_right [][]int = make([][]int,rows)
+//	var dp [][][]int = make([][][]int,rows)
 //	for i := 0;i < rows;i++{
-//		dp_left[i] = make([]int,columns)
-//		dp_right[i] = make([]int,columns)
-//	}
-//	dp_left[0][0] = grid[0][0]
-//	dp_right[0][columns - 1] = grid[0][columns - 1]
-//	for i := 0;i < rows - 1;i++{
+//		dp[i] = make([][]int,columns)
 //		for j := 0;j < columns;j++{
-//			if dp_left[i][j] == 0{
-//				break
-//			}
-//			dp_left[i + 1][j] = max_int(dp_left[i + 1][j],dp_left[i][j] + grid[i + 1][j])
-//			if j < columns - 1{
-//				dp_left[i + 1][j + 1] = max_int(dp_left[i][j + 1],dp_left[i][j] + grid[i + 1][j + 1])
-//			}
-//			if j > 0{
-//				dp_left[i + 1][j - 1] = max_int(dp_left[i][j - 1],dp_left[i][j] + grid[i + 1][j - 1])
-//			}
+//			dp[i][j] = make([]int,columns)
 //		}
 //	}
-//	for i := 0;i < rows - 1;i++{
-//		for j := columns - 1;j >= 0;j--{
-//			if dp_right[i][j] == 0{
-//				break
+//	dp[0][0][columns - 1] = grid[0][0] + grid[0][columns]
+//	for i := 1;i < rows;i++{
+//		for left := 0;left < columns;left++{
+//			for right := columns - 1;right >= 0;right--{
+//				for dir1 := -1;dir1 <= 1;dir1++{
+//					for dir2 := -1;dir2 <= 1;dir2++{
+//						last_c1 := left + dir1
+//						last_c2 := right + dir2
+//						if last_c1 >= 0 && last_c1 < columns && last_c2 >= 0 && last_c2 < columns{
+//							if left == right{
+//								dp[i][left][right] = max_int(dp[i][left][right],grid[i][left] + dp[i - 1][])
+//							}
+//							 = 0
+//						}
+//					}
+//				}
 //			}
-//			dp_right[i + 1][j] = max_int(dp_right[i + 1][j],dp_right[i][j] + grid[i + 1][j])
-//			if j < columns - 1{
-//				dp_right[i + 1][j + 1] = max_int(dp_right[i][j + 1],dp_right[i][j] + grid[i + 1][j + 1])
-//			}
-//			if j > 0{
-//				dp_right[i + 1][j - 1] = max_int(dp_right[i][j - 1],dp_right[i][j] + grid[i + 1][j - 1])
-//			}
-//		}
-//	}
-//	var dp_total [][][2]int = make([][][2]int,rows)
-//	for i := 0;i < rows;i++{
-//		dp_total[i] = make([][2]int,columns)
-//	}
-//	for i := 0;i < rows - 1;i++{
-//		//var max_sum int = 0
-//		for j := 0;j < columns;j++{
-//			//max_sum = max_int(max_sum,)
+//
 //		}
 //	}
 //	return 0
