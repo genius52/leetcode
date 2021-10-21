@@ -1,15 +1,15 @@
 package main
 
 import (
-	"../array"
-	"../diagram"
-	"../list_queue"
-	"../number"
-	"../other"
-	"../stack"
-	"../string_issue"
-	"../tree"
 	"fmt"
+	"oj/array"
+	"oj/diagram"
+	"oj/list_queue"
+	"oj/number"
+	"oj/other"
+	"oj/stack"
+	"oj/string_issue"
+	"oj/tree"
 	"strings"
 )
 
