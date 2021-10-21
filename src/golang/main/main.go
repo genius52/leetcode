@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		n := 6
+		connections := [][]int{{0,1},{1,3},{2,3},{4,0},{4,5}}
+		res := diagram.MinReorder(n,connections)
+		fmt.Println(res)
+	}
+	{
 		grid := [][]int{{3,1,1},{2,5,1},{1,5,5},{2,1,1}}
 		res := array.CherryPickup2(grid)
 		fmt.Println(res)
