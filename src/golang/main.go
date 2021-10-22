@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		prices := []int{8,4,6,2,3}
+		res := array.FinalPrices(prices)
+		fmt.Println(res)
+	}
+	{
 		n := 6
 		connections := [][]int{{0,1},{1,3},{2,3},{4,0},{4,5}}
 		res := diagram.MinReorder(n,connections)
