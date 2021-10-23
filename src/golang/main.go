@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		arr := []int{7,3,4,7}
+		target := 7
+		res := array.MinSumOfLengths(arr,target)
+		fmt.Println(res)
+	}
+	{
 		prices := []int{8,4,6,2,3}
 		res := array.FinalPrices(prices)
 		fmt.Println(res)
