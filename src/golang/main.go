@@ -15,6 +15,15 @@ import (
 
 func main(){
 	{
+		houses := []int{0,2,1,2,0}
+		cost := [][]int{{1,10},{10,1},{10,1},{1,10},{5,1}}
+		m := 5
+		n := 2
+		target := 3
+		res := diagram.MinCost1473(houses,cost,m,n,target)
+		fmt.Println(res)
+	}
+	{
 		arr := []int{7,3,4,7}
 		target := 7
 		res := array.MinSumOfLengths(arr,target)
