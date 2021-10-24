@@ -1,7 +1,7 @@
 #include <random>
 
 
-int MAX_LEVEL = 16;
+const int MAX_LEVEL = 16;
 
 class Skiplist {
     class ListNode{
