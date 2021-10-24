@@ -15,6 +15,13 @@ import (
 
 func main(){
 	{
+		//houses = [1,4,8,10,20], k = 3
+		houses := []int{1,4,8,10,20}
+		k := 3
+		res := array.MinDistance(houses,k)
+		fmt.Println(res)
+	}
+	{
 		parents := []int{-1,0,3,0,3,1}
 		res := tree.CountHighestScoreNodes(parents)
 		fmt.Println(res)
