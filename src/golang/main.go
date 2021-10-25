@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		names := []string{"kaido","kaido(1)","kaido","kaido(1)"}
+		res := string_issue.GetFolderNames(names)
+		fmt.Println(res)
+	}
+	{
 		//houses = [1,4,8,10,20], k = 3
 		houses := []int{1,4,8,10,20}
 		k := 3
