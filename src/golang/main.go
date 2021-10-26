@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		//nums := []int{0,1,1,1,0,1,1,0,1}
+		nums := []int{0,0,0}
+		res := array.LongestSubarray(nums)
+		fmt.Println(res)
+	}
+	{
 		rains := []int{1,0,2,0,3,0,2,0,0,0,1,2,3}
 		res := array.AvoidFlood(rains)
 		fmt.Println(res)
