@@ -15,6 +15,14 @@ import (
 
 func main(){
 	{
+		//[-1,1,-2,2,-3,3,-4,4]
+		//3
+		arr := []int{-1,1,-2,2,-3,3,-4,4}
+		k := 3
+		res := number.CanArrange(arr,k)
+		fmt.Println(res)
+	}
+	{
 		//nums := []int{0,1,1,1,0,1,1,0,1}
 		nums := []int{0,0,0}
 		res := array.LongestSubarray(nums)

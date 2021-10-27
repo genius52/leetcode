@@ -6,6 +6,26 @@
 
 int main() {
     {
+        Solution_1496 s1496;
+        std::string path = "NESWW";
+        auto res = s1496.isPathCrossing(path);
+        std::cout << "1496 res = "<<res<<std::endl;
+    }
+    {
+        int n = 5;
+        std::vector<std::vector<int>> edges{{0,1,1},{1,2,1},{2,3,2},{0,3,2},{0,4,3},{3,4,3},{1,4,6}};
+        Solution_1489 s1489;
+        auto res = s1489.findCriticalAndPseudoCriticalEdges(n,edges);
+        std::cout<<"1489 res = "<<res.size() << std::endl;
+    }
+    {
+        int n = 7;
+        std::vector<int> input{-1, 0, 0, 1, 1, 2, 2};
+        TreeAncestor tree(n,input);
+        auto res = tree.getKthAncestor(6,3);
+        std::cout<<"1475 res = "<<res << std::endl;
+    }
+    {
         std::vector<std::vector<std::string>> favoriteCompanies{{"arrtztkotazhufrsfczr","knzgidixqgtnahamebxf","zibvccaoayyihidztflj"},
                                                                 {"cffiqfviuwjowkppdajm","owqvnrhuzwqohquamvsz"},
                                                                 {"knzgidixqgtnahamebxf","owqvnrhuzwqohquamvsz","qzeqyrgnbplsrgqnplnl"},
@@ -1633,12 +1653,6 @@ int main() {
         std::cout << "1497 res = "<<res<<std::endl;
     }
     {
-        Solution_1496 s1496;
-        std::string path = "W";
-        auto res = s1496.isPathCrossing(path);
-        std::cout << "1496 res = "<<res<<std::endl;
-    }
-    {
         Solution_1493 s1493;
         std::vector<int> input{0,1,1,1,0,1,1,0,1};
         auto res = s1493.longestSubarray(input);
@@ -1723,13 +1737,6 @@ int main() {
         query.updateSubrectangle(0,0,3,2,5);
         auto res = query.getValue(1,2);
         std::cout<<"1476 res = "<<res << std::endl;
-    }
-    {
-        int n = 7;
-        std::vector<int> input{-1, 0, 0, 1, 1, 2, 2};
-        TreeAncestor tree(n,input);
-        auto res = tree.getKthAncestor(6,3);
-        std::cout<<"1475 res = "<<res << std::endl;
     }
     {
         Solution_1475 s1475;
