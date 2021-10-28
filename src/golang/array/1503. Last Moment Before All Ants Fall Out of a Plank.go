@@ -1,5 +1,20 @@
 package array
 
+func getLastMoment(n int, left []int, right []int) int{
+	var res int = 0
+	for _,i := range left{
+		if i > res{
+			res = i
+		}
+	}
+	for _,i := range right{
+		if n - i > res{
+			res = n - i
+		}
+	}
+	return res
+}
+
 func GetLastMoment(n int, left []int, right []int) int {
 	var to_left int = 0
 	var to_right int = n
