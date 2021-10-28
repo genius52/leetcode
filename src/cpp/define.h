@@ -215,6 +215,7 @@ struct ListNode {
 #include "graph/1348. Tweet Counts Per Frequency.hpp"
 #include "graph/1368. Minimum Cost to Make at Least One Valid Path in a Grid.hpp"
 #include "graph/1489. Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree.hpp"
+#include "graph/1494. Parallel Courses II.hpp"
 #include "string/1446. Consecutive Characters.cpp"
 #include "string/1451. Rearrange Words in a Sentence.hpp"
 #include "string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"

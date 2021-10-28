@@ -6,6 +6,17 @@
 
 int main() {
     {
+        //12
+        //[[11,10],[6,3],[2,5],[9,2],[4,12],[8,7],[9,5],[6,2],[7,2],[7,4],[9,3],[11,1],[4,3]]
+        //3
+        int n = 12;
+        std::vector<std::vector<int>> dependencies{{11,10},{6,3},{2,5},{9,2},{4,12},{8,7},{9,5},{6,2},{7,2},{7,4},{9,3},{11,1},{4,3}};
+        int k = 3;
+        Solution_1494 s1494;
+        auto res = s1494.minNumberOfSemesters(n,dependencies,k);
+        std::cout << "1494 res = "<<res<<std::endl;
+    }
+    {
         Solution_1496 s1496;
         std::string path = "NESWW";
         auto res = s1496.isPathCrossing(path);
@@ -36,7 +47,7 @@ int main() {
         std::cout<<res.size()<<std::endl;
     }
     {
-        //[[1,3,11],[2,4,6]]
+        //[[1,3,11},{2,4,6]]
         Solution_1439 s1439;
         std::vector<std::vector<int>> mat{{1,1,10},{2,2,9}};
         int k = 7;
