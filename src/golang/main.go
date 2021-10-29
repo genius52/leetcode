@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		n := 17
+		res := number.WinnerSquareGame(n)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{6,6,0,1,1,4,6}
 		res := array.MinDifference1509(nums)
 		fmt.Println(res)
