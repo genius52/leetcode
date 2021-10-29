@@ -159,6 +159,7 @@ struct ListNode {
 #include "number/1357. Apply Discount Every n Orders.hpp"
 #include "number/1383. Maximum Performance of a Team.hpp"
 #include "number/1396. Design Underground System.hpp"
+#include "number/1505. Minimum Possible Integer After at Most K Adjacent Swaps On Digits.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"

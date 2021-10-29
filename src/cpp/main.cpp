@@ -6,6 +6,13 @@
 
 int main() {
     {
+        Solution_1505 s1505;
+        std::string num = "4321";
+        int k = 4;
+        auto res = s1505.minInteger(num,k);
+        std::cout << "1505 res = "<<res<<std::endl;
+    }
+    {
         //12
         //[[11,10],[6,3],[2,5],[9,2],[4,12],[8,7],[9,5],[6,2],[7,2],[7,4],[9,3],[11,1],[4,3]]
         //3

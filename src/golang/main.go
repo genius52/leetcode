@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		nums := []int{6,6,0,1,1,4,6}
+		res := array.MinDifference1509(nums)
+		fmt.Println(res)
+	}
+	{
 		//[-1,1,-2,2,-3,3,-4,4]
 		//3
 		arr := []int{-1,1,-2,2,-3,3,-4,4}
