@@ -15,7 +15,7 @@ import (
 
 func main(){
 	{
-		n := 17
+		n := 8
 		res := number.WinnerSquareGame(n)
 		fmt.Println(res)
 	}

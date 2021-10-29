@@ -35,10 +35,6 @@ func count_numSubmat(mat [][]int,row int,column int)int{
 func NumSubmat(mat [][]int) int {
 	var rows int = len(mat)
 	var columns int = len(mat[0])
-	var dp [][]int = make([][]int,rows)
-	for i := 0;i < rows;i++{
-		dp[i] = make([]int,columns)
-	}
 	var res int = 0
 	for i := 0;i < rows;i++{
 		for j := 0;j < columns;j++{

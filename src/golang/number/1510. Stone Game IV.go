@@ -28,3 +28,50 @@ func WinnerSquareGame(n int) bool {
 	var memo map[int]bool = make(map[int]bool)
 	return dp_winnerSquareGame(n,memo)
 }
+
+func dfs_winnerSquareGame(n int,is_alice bool,memo [][2]int)bool{
+	if n == 0{
+		return !is_alice //current player lose
+	}
+	if is_alice{
+		if memo[n][1] != -1{
+			return memo[n][1] == 1
+		}
+	}else{
+		if memo[n][0] != -1{
+			return memo[n][0] == 1
+		}
+	}
+	var res bool = false
+	for i := 1;i * i <= n;i++{
+		res = dfs_winnerSquareGame(n - i * i,!is_alice,memo)
+		if is_alice{
+			if res{ //Alice can win
+				break
+			}
+		}else{
+			if !res{ //Bob will win = Alice will lose
+				break
+			}
+		}
+	}
+	var val int = 0
+	if res{
+		val = 1
+	}
+	if is_alice{
+		memo[n][1] = val
+	}else{
+		memo[n][0] = val
+	}
+	return res
+}
+
+func winnerSquareGame(n int) bool {
+	var memo [][2]int = make([][2]int,n + 1)
+	for i := 0;i <= n;i++{
+		memo[i][0] = -1
+		memo[i][1] = -1
+	}
+	return dfs_winnerSquareGame(n,true,memo)
+}
