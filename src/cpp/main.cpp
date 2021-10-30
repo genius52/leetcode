@@ -6,6 +6,16 @@
 
 int main() {
     {
+        Solution_1514 s1514;
+        int n = 3;
+        std::vector<std::vector<int>> edges{{0,1},{1,2},{0,2}};
+        std::vector<double> succProb{0.5,0.5,0.2};
+        int start = 0;
+        int end = 2;
+        auto res = s1514.maxProbability(n,edges,succProb,start,end);
+        std::cout << "1514 res = "<<res<<std::endl;
+    }
+    {
         Solution_1505 s1505;
         std::string num = "4321";
         int k = 4;
