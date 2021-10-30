@@ -6,6 +6,23 @@ package string_issue
 //"1" -> 5 times.
 //"11" -> 3 times.
 //"111" -> 1 time.
+func numSub(s string) int{
+	s += "0"
+	var l int = len(s)
+	var res int = 0
+	var one_len int = 0
+	for i := 0;i < l;i++{
+		if s[i] == '1'{
+			one_len++
+			res += one_len
+			res = res % (1e9 + 7)
+		}else{
+			one_len = 0
+		}
+	}
+	return res
+}
+
 func NumSub(s string) int {
 	s += "0"
 	var l int = len(s)
