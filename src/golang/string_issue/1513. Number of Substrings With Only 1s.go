@@ -7,7 +7,6 @@ package string_issue
 //"11" -> 3 times.
 //"111" -> 1 time.
 func numSub(s string) int{
-	s += "0"
 	var l int = len(s)
 	var res int = 0
 	var one_len int = 0

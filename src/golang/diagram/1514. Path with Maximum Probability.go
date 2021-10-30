@@ -24,9 +24,6 @@ func MaxProbability(n int, edges [][]int, succProb []float64, start int, end int
 	}
 	var fromstart []float64 = make([]float64,n)
 	fromstart[start] = 1.0
-	//for i := 0;i < n;i++{
-	//	fromstart[i] =
-	//}
 	if _,ok := graph[start];ok{
 		if _,ok2 := graph[start][end];ok2{
 			fromstart[end] = graph[start][end]
