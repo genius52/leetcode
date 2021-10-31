@@ -15,6 +15,13 @@ import (
 
 func main(){
 	{
+		n := 7
+		edges := [][]int{{0,1},{0,2},{1,4},{1,5},{2,3},{2,6}}
+		labels := "abaedcd"
+		res := tree.CountSubTrees(n,edges,labels)
+		fmt.Println(res)
+	}
+	{
 		n := 8
 		res := number.WinnerSquareGame(n)
 		fmt.Println(res)
