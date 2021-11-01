@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		arr := []int{9,12,3,7,15}
+		target := 5
+		res := number.ClosestToTarget(arr,target)
+		fmt.Println(res)
+	}
+	{
 		n := 7
 		edges := [][]int{{0,1},{0,2},{1,4},{1,5},{2,3},{2,6}}
 		labels := "abaedcd"
