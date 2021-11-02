@@ -27,7 +27,6 @@ func numSplits(s string) int{
 		c := s[i] - 'a'
 		if cur[c] == 0{
 			cur_kinds++
-
 		}
 		cur[c]++
 		if record[c] == cur[c]{
