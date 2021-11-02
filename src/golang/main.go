@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var arr []int = []int{2,1,4}
+		res := array.NumOfSubarrays2(arr)
+		fmt.Println(res)
+	}
+	{
 		arr := []int{9,12,3,7,15}
 		target := 5
 		res := number.ClosestToTarget(arr,target)
@@ -2797,11 +2802,6 @@ func main(){
 	{
 		var s string = "((()))())()()()))))"
 		res := string_issue.MinInsertions(s)
-		fmt.Println(res)
-	}
-	{
-		var arr []int = []int{1,2,3,4,5,6,7}
-		res := array.NumOfSubarrays(arr)
 		fmt.Println(res)
 	}
 	{

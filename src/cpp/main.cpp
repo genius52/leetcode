@@ -6,6 +6,12 @@
 
 int main() {
     {
+        std::vector<std::vector<int>> events{{1,5,5},{1,3,2},{4,5,2}};
+        Solution_2054 s2054;
+        auto res = s2054.maxTwoEvents(events);
+        std::cout << "2054 res = "<<res<<std::endl;
+    }
+    {
         Solution_1514 s1514;
         int n = 3;
         std::vector<std::vector<int>> edges{{0,1},{1,2},{0,2}};
