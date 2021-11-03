@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		var arr []int = []int{4,7,11}
+		var k int = 5
+		res := number.FindKthPositive(arr,k)
+		fmt.Println(res)
+	}
+	{
 		nums1 := []int{4,5,8,10,23,45}
 		nums2 := []int{4,8,23,44,45,99}
 		res := array.MaxSum(nums1,nums2)
@@ -3843,12 +3849,6 @@ func main(){
 		//obj.Update(6,8)
 		//res = obj.SumRange(4,6)
 		//fmt.Println(res)
-	}
-	{
-		var arr []int = []int{1,2,3,4}
-		var k int = 2
-		res := number.FindKthPositive(arr,k)
-		fmt.Println(res)
 	}
 	{
 		var citations []int = []int{0,1,3,5,6}
