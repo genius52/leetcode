@@ -5,8 +5,8 @@ using namespace std;
 class Solution_1536 {
 public:
     int minSwaps(vector<vector<int>>& grid) {
-        std::map<int,int> graph;//line number <-> zero count
         int rows = grid.size();
+        std::vector<int> record(rows);//line number <-> zero count
         int columns = grid[0].size();
         for(int i = 0;i < rows;i++){
             int l = 0;
@@ -17,7 +17,7 @@ public:
                     break;
                 }
             }
-            graph[i] = l;
+            record[i] = l;
         }
         int res = 0;
         for (int i = 0; i < rows - 1; ++i) {
@@ -26,7 +26,7 @@ public:
             int j = i;
             bool find = false;
             for(;j < rows;j++){
-                if(graph[j] >= target){
+                if(record[j] >= target){
                     find = true;
                     break;
                 }
@@ -35,7 +35,7 @@ public:
                 return -1;
             res += j - i;
             for(int k = j;k > i;k--){
-                graph[k] = graph[k - 1];
+                record[k] = record[k - 1];
             }
         }
         return res;
