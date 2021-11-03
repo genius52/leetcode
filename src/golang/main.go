@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		nums1 := []int{4,5,8,10,23,45}
+		nums2 := []int{4,8,23,44,45,99}
+		res := array.MaxSum(nums1,nums2)
+		fmt.Println(res)
+	}
+	{
 		s := "aaabcccabccbcadacbbcbcdabcdcd"
 		k := 5
 		res := string_issue.GetLengthOfOptimalCompression(s,k)
