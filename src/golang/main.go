@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		s := "aaabcccabccbcadacbbcbcdabcdcd"
+		k := 5
+		res := string_issue.GetLengthOfOptimalCompression(s,k)
+		fmt.Println(res)
+	}
+	{
 		var arr []int = []int{2,1,4}
 		res := array.NumOfSubarrays2(arr)
 		fmt.Println(res)
