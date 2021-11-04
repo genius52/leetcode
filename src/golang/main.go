@@ -15,6 +15,14 @@ import (
 
 func main(){
 	{
+		//var n int = 20
+		//var k int = 1048575
+		var n int = 3
+		var k int = 6
+		res := string_issue.FindKthBit(n,k)
+		fmt.Println(res)
+	}
+	{
 		s := "3242415"
 		res := string_issue.LongestAwesome(s)
 		fmt.Println(res)
@@ -3848,12 +3856,6 @@ func main(){
 	{
 		var s string = "xsi"
 		res := string_issue.OriginalDigits(s)
-		fmt.Println(res)
-	}
-	{
-		var n int = 20
-		var k int = 1048575
-		res := string_issue.FindKthBit(n,k)
 		fmt.Println(res)
 	}
 	{
