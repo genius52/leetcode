@@ -2,16 +2,22 @@ package array
 
 func MaxNonOverlapping(nums []int, target int) int {
 	var l int = len(nums)
-	//var dp []int = make([]int,l + 1)//dp[i] = max count from index [0 to i)
-	var record map[int]int = make(map[int]int)
+	var record map[int]bool = make(map[int]bool)
 	var res int = 0
-	var sum int = 0
+	var cur_sum int = 0
 	for i := 0;i < l;i++{
-		sum += nums[i]
-		if cnt,ok := record[target - sum];ok{
-			res += cnt
+		cur_sum += nums[i]
+		if cur_sum == target{
+			res++
+			cur_sum = 0
+			record = make(map[int]bool)
+		}else if _,ok := record[cur_sum - target];ok{
+			res++
+			cur_sum = 0
+			record = make(map[int]bool)
+		}else{
+			record[cur_sum] = true
 		}
-		record[sum]++
 	}
-	return res;
+	return res
 }
