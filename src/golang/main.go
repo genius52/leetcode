@@ -15,6 +15,13 @@ import (
 
 func main(){
 	{
+		//[["a","a","c","a"],["a","b","d","a"],["a","b","b","a"],["a","a","a","a"]]
+		//grid := [][]byte{{'a','a','a','a'},{'a','b','b','a'},{'a','b','b','a'},{'a','a','a','a'}}
+		grid := [][]byte{{'a','a','a','a'},{'a','b','d','a'},{'a','b','b','a'},{'a','a','a','a'}}
+		res := array.ContainsCycle(grid)
+		fmt.Println(res)
+	}
+	{
 		var n int = 3
 		res := array.MinOperations(n)
 		fmt.Println(res)
