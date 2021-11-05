@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		var n int = 3
+		res := array.MinOperations(n)
+		fmt.Println(res)
+	}
+	{
 		//var n int = 20
 		//var k int = 1048575
 		var n int = 3
@@ -3837,11 +3842,6 @@ func main(){
 		//var target int = 0
 		//res := array.MaxNonOverlapping(nums,target)
 		//fmt.Println(res)
-	}
-	{
-		var n int = 6
-		res := array.MinOperations(n)
-		fmt.Println(res)
 	}
 	{
 		var nums []int = []int{-1,-2,-3,-4,-5}
