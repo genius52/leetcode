@@ -5,6 +5,32 @@ package array
 //Explanation: All sub-arrays are [[1],[1,3],[1,3,5],[3],[3,5],[5]]
 //All sub-arrays sum are [1,4,9,3,8,5].
 //Odd sums are [1,9,3,5] so the answer is 4.
+func NumOfSubarrays2(arr []int) int{
+	var pre_odd_cnt int = 0
+	var pre_even_cnt = 0
+	var res int = 0
+	if arr[0] | 1 == arr[0]{
+		pre_odd_cnt = 1
+		res = 1
+	}else{
+		pre_even_cnt = 1
+	}
+	var l int = len(arr)
+	for i := 1;i < l;i++{
+		if (arr[i] | 1) == arr[i]{//当前是奇数
+			cur_odd_cnt := pre_even_cnt + 1 //还要加上自己
+			res += cur_odd_cnt
+			cur_even_cnt := pre_odd_cnt
+			pre_odd_cnt = cur_odd_cnt
+			pre_even_cnt = cur_even_cnt
+		}else{//当前是偶数
+			res += pre_odd_cnt
+			pre_even_cnt++
+		}
+		res = res % (1e9 + 7)
+	}
+	return res
+}
 
 func NumOfSubarrays(arr []int) int {
 	var l int = len(arr)

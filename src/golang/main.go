@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		var n int = 4
+		var rounds []int = []int{1,3,1,2}
+		res := diagram.MostVisited(n,rounds)
+		fmt.Println(res)
+	}
+	{
 		n := 7
 		cuts := []int{1,3,4,5}
 		res := number.MinCost2(n,cuts)
@@ -3784,12 +3790,6 @@ func main(){
 		var m int = 1
 		var k int = 5
 		res := diagram.ContainsPattern(arr,m,k)
-		fmt.Println(res)
-	}
-	{
-		var n int = 3
-		var rounds []int = []int{3,2,1}
-		res := diagram.MostVisited(n,rounds)
 		fmt.Println(res)
 	}
 	{
