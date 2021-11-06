@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		n := 7
+		cuts := []int{1,3,4,5}
+		res := number.MinCost2(n,cuts)
+		fmt.Println(res)
+	}
+	{
 		//[["a","a","c","a"],["a","b","d","a"],["a","b","b","a"],["a","a","a","a"]]
 		//grid := [][]byte{{'a','a','a','a'},{'a','b','b','a'},{'a','b','b','a'},{'a','a','a','a'}}
 		grid := [][]byte{{'a','a','a','a'},{'a','b','d','a'},{'a','b','b','a'},{'a','a','a','a'}}
