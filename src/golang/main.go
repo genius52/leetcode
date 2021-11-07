@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		n := 1
+		quantities := []int{100000}
+		res := number.MinimizedMaximum(n,quantities)
+		fmt.Println(res)
+	}
+	{
 		var n int = 4
 		var rounds []int = []int{1,3,1,2}
 		res := diagram.MostVisited(n,rounds)
