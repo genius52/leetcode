@@ -6,6 +6,17 @@
 
 int main() {
     {
+        //[1,2,3,4]
+        // [[0,1,10],[1,2,11],[2,3,12],[1,3,13]]
+        //50
+        Solution_2065 s2065;
+        std::vector<int> values{1,2,3,4};
+        std::vector<std::vector<int>> edges{{0,1,10},{1,2,11},{2,3,12},{1,3,13}};
+        int maxTime = 50;
+        auto res = s2065.maximalPathQuality(values,edges,maxTime);
+        std::cout << "2065 res = "<<res<<std::endl;
+    }
+    {
         std::vector<std::vector<int>> events{{1,5,5},{1,3,2},{4,5,2}};
         Solution_2054 s2054;
         auto res = s2054.maxTwoEvents(events);

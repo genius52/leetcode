@@ -219,6 +219,7 @@ struct ListNode {
 #include "graph/1489. Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree.hpp"
 #include "graph/1494. Parallel Courses II.hpp"
 #include "graph/1514. Path with Maximum Probability.hpp"
+#include "graph/2065. Maximum Path Quality of a Graph.hpp"
 #include "string/1446. Consecutive Characters.cpp"
 #include "string/1451. Rearrange Words in a Sentence.hpp"
 #include "string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"

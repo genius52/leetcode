@@ -15,6 +15,14 @@ import (
 
 func main(){
 	{
+		//[3,5,1,2,4]
+		//1
+		arr := []int{3,2,5,6,10,8,9,4,1,7}
+		m := 3
+		res := number.FindLatestStep(arr,m)
+		fmt.Println(res)
+	}
+	{
 		n := 1
 		quantities := []int{100000}
 		res := number.MinimizedMaximum(n,quantities)
