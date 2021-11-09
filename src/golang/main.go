@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		stoneValue := []int{6,2,3,4,5,5}
+		//stoneValue := []int{1,2,3}
+		res := array.StoneGameV(stoneValue)
+		fmt.Println(res)
+	}
+	{
 		//var arr []int = []int{6,3,5,5,5,5,1,5,6,2,5,1,2,5,3,5,1,3,5,5,6,4,1,2}
 		//var m int = 1
 		//var k int = 5
