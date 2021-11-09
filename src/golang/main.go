@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		grid := [][]int{{1,0,0},{1,1,0},{1,0,0}}
+		res := diagram.MinDays(grid)
+		fmt.Println(res)
+	}
+	{
 		//var nums []int = []int{5,-20,-20,-39,-5,0,0,0,36,-32,0,-7,-10,-7,21,20,-12,-34,26,2}
 		var nums []int = []int{1,2,3,5,-6,4,0,10}
 		res := array.GetMaxLen(nums)
