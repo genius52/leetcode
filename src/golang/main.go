@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		//var nums []int = []int{5,-20,-20,-39,-5,0,0,0,36,-32,0,-7,-10,-7,21,20,-12,-34,26,2}
+		var nums []int = []int{1,2,3,5,-6,4,0,10}
+		res := array.GetMaxLen(nums)
+		fmt.Println(res)
+	}
+	{
 		stoneValue := []int{6,2,3,4,5,5}
 		//stoneValue := []int{1,2,3}
 		res := array.StoneGameV(stoneValue)
@@ -3808,11 +3814,6 @@ func main(){
 		var s string = "abpcplea"
 		var d []string = []string{"b","c","a"}
 		res := string_issue.FindLongestWord(s,d)
-		fmt.Println(res)
-	}
-	{
-		var nums []int = []int{1,2,3,5,-6,4,0,10}
-		res := array.GetMaxLen(nums)
 		fmt.Println(res)
 	}
 	{
