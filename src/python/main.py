@@ -5,6 +5,10 @@ from Longest_Absolute_File_Path import *
 from stringissue.Solution1147 import *
 
 if __name__ == '__main__':
+    s1569 = Solution_1569()
+    nums = [31,23,14,24,15,12,25,28,5,35,17,6,9,11,1,27,18,20,2,3,33,10,13,4,7,36,32,29,8,30,26,19,34,22,21,16]
+    res = s1569.numOfWays(nums)
+
     s1147 = Solution_1147()
     text = "ghiabcdefhelloadamhelloabcdefghi"
     res = s1147.longestDecomposition(text)

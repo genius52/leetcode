@@ -1,4 +1,6 @@
 # Definition for a binary tree node.
+import math
+
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
@@ -149,3 +151,39 @@ class Solution_95:
             self.dfs_pre(root,root,nums,res)
             i += 1
         return res
+
+
+#	var l int = len(nums)
+	# var less []int
+	# var greater []int
+	# for i := 1;i < l;i++{
+	# 	if nums[i] < nums[0]{
+	# 		less = append(less,nums[i])
+	# 	}
+	# 	if nums[i] > nums[0]{
+	# 		greater = append(greater,nums[i])
+	# 	}
+	# }
+	# if len(less) == 0 || len(greater) == 0{
+	# 	return 1
+	# }
+
+class Solution_1569:
+    def dfs(self,nums):
+        l = len(nums)
+        if l <= 2:
+            return 1
+        less = []
+        greater = []
+        i = 1
+        while i < l:
+            if nums[i] > nums[0]:
+                greater.append(nums[i])
+            else:
+                less.append(nums[i])
+            i += 1
+        total = math.comb(l - 1,len(less)) * self.dfs(less) * self.dfs(greater)
+        return total
+
+    def numOfWays(self, nums) -> int:
+        return (self.dfs(nums) - 1) % (10**9+7)
