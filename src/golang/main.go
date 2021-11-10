@@ -15,6 +15,14 @@ import (
 
 func main(){
 	{
+		locations := []int{1,2,3}
+		start := 0
+		finish := 2
+		fuel := 40
+		res := diagram.CountRoutes(locations,start,finish,fuel)
+		fmt.Println(res)
+	}
+	{
 		grid := [][]int{{1,0,0},{1,1,0},{1,0,0}}
 		res := diagram.MinDays(grid)
 		fmt.Println(res)
