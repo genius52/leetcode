@@ -2,6 +2,24 @@ package diagram
 
 //Input: s = "aabaa", cost = [1,2,3,4,1]
 //Output: 2
+func minCost(s string, cost []int) int{
+	var l int = len(s)
+	var res int = 0
+	last_cost := cost[0]
+	for i := 1;i < l;i++{
+		if s[i] == s[i - 1]{
+			if cost[i] > last_cost{
+				res += last_cost
+				last_cost = cost[i]
+			}else{
+				res += cost[i]
+			}
+		}else{
+			last_cost = cost[i]
+		}
+	}
+	return res
+}
 
 func MinCost(s string, cost []int) int {
 	var l int = len(s)
