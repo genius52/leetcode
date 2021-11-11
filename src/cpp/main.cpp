@@ -6,6 +6,12 @@
 
 int main() {
     {
+        Solution_1584 s1584;
+        std::vector<std::vector<int>> points{{0,0},{1,1},{1,0},{-1,1}};
+        auto res = s1584.minCostConnectPoints(points);
+        std::cout << "1584 res = " << res << std::endl;
+    }
+    {
         //[1,2,3,4]
         // [[0,1,10],[1,2,11],[2,3,12],[1,3,13]]
         //50
@@ -1217,12 +1223,6 @@ int main() {
         std::vector<int> ages{811,364,124,873,790,656,581,446,885,134};
         auto res = s1626.bestTeamScore(scores,ages);
         std::cout << "1626 res = " << res << std::endl;
-    }
-    {
-        Solution_1584 s1584;
-        std::vector<std::vector<int>> points{{0,0},{2,2},{3,10},{5,2},{7,0}};
-        auto res = s1584.minCostConnectPoints(points);
-        std::cout << "1584 res = " << res << std::endl;
     }
     {
         Solution_1509 s1509;

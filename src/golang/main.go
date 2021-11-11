@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		points := [][]int{{0,0},{1,1},{1,0},{-1,1}}
+		res := diagram.MinCostConnectPoints(points)
+		fmt.Println(res)
+	}
+	{
 		locations := []int{1,2,3}
 		start := 0
 		finish := 2
