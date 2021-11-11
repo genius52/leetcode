@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{1,2,3,4,5}
+		var requests [][]int = [][]int{{1,3},{0,1}}
+		res := array.MaxSumRangeQuery(nums,requests)
+		fmt.Println(res)
+	}
+	{
 		points := [][]int{{0,0},{1,1},{1,0},{-1,1}}
 		res := diagram.MinCostConnectPoints(points)
 		fmt.Println(res)
@@ -2876,12 +2882,6 @@ func main(){
 		var nums []int = []int{12,7,16,4,4,13,13,8}
 		var p int = 61
 		res := number.MinSubarray(nums,p)
-		fmt.Println(res)
-	}
-	{
-		var nums []int = []int{1,2,3,4,5}
-		var requests [][]int = [][]int{{1,3},{0,1}}
-		res := array.MaxSumRangeQuery(nums,requests)
 		fmt.Println(res)
 	}
 	{
