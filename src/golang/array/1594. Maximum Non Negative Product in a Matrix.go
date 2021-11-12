@@ -57,37 +57,37 @@ func max_int64_number(nums ...int64)int64{
 	return max
 }
 
+//DP from bottom to top
 func MaxProductPath2(grid [][]int) int {
 	rows := len(grid)
 	columns := len(grid[0])
-	var dp_min [][]int64 = make([][]int64,rows)
-	var dp_max [][]int64 = make([][]int64,rows)
+	var dp [][][2]int64 = make([][][2]int64,rows)
 	for i := 0;i < rows;i++{
-		dp_min[i] = make([]int64,columns)
-		dp_max[i] = make([]int64,columns)
+		dp[i] = make([][2]int64,columns)
 	}
-	dp_min[0][0] = int64(grid[0][0])
-	dp_max[0][0] = int64(grid[0][0])
+	dp[0][0][0] = int64(grid[0][0])//min product
+	dp[0][0][1] = int64(grid[0][0])//max product
+	var MOD int = 1e9 + 7
 	for i := 1;i < rows;i++{
-		dp_min[i][0] = dp_min[i - 1][0] * int64(grid[i][0])
-		dp_max[i][0] = dp_max[i - 1][0] * int64(grid[i][0])
+		dp[i][0][0] = min_int64_number(dp[i - 1][0][0] * int64(grid[i][0]),dp[i - 1][0][1] * int64(grid[i][0]))
+		dp[i][0][1] = max_int64_number(dp[i - 1][0][0] * int64(grid[i][0]),dp[i - 1][0][1] * int64(grid[i][0]))
 	}
 	for i := 1;i < columns;i++{
-		dp_min[0][i] = dp_min[0][i - 1] * int64(grid[0][i])
-		dp_max[0][i] = dp_max[0][i - 1] * int64(grid[0][i])
+		dp[0][i][0] = min_int64_number(dp[0][i - 1][0] * int64(grid[0][i]),dp[0][i - 1][1] * int64(grid[0][i]))
+		dp[0][i][1] = max_int64_number(dp[0][i - 1][0] * int64(grid[0][i]),dp[0][i - 1][1] * int64(grid[0][i]))
 	}
 	for i := 1;i < rows;i++{
 		for j := 1;j < columns;j++{
-			dp_min[i][j] = min_int64_number(int64(grid[i][j]) * dp_min[i - 1][j],
-				int64(grid[i][j]) * dp_min[i][j - 1],int64(grid[i][j]) * dp_max[i - 1][j],
-				int64(grid[i][j]) * dp_max[i][j - 1]) % 1000000007
-			dp_max[i][j] = max_int64_number(int64(grid[i][j]) * dp_min[i - 1][j],
-				int64(grid[i][j]) * dp_min[i][j - 1],int64(grid[i][j]) * dp_max[i - 1][j],
-				int64(grid[i][j]) * dp_max[i][j - 1]) % 1000000007
+			dp[i][j][0] = min_int64_number(int64(grid[i][j]) * dp[i - 1][j][0],
+				int64(grid[i][j]) * dp[i][j - 1][0],int64(grid[i][j]) * dp[i - 1][j][1],
+				int64(grid[i][j]) * dp[i][j - 1][1])
+			dp[i][j][1] = max_int64_number(int64(grid[i][j]) * dp[i - 1][j][0],
+				int64(grid[i][j]) * dp[i][j - 1][0],int64(grid[i][j]) * dp[i - 1][j][1],
+				int64(grid[i][j]) * dp[i][j - 1][1])
 		}
 	}
-	if dp_max[rows - 1][columns - 1] < 0{
+	if dp[rows - 1][columns - 1][1] < 0{
 		return -1
 	}
-	return int(dp_max[rows - 1][columns - 1]) % 1000000007
+	return int(dp[rows - 1][columns - 1][1]) % MOD
 }
