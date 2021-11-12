@@ -2,6 +2,42 @@ package string_issue
 
 import "strings"
 
+func reorderSpaces(text string) string{
+	var l int = len(text)
+	var total_space int = 0
+	var words []string = strings.Fields(text)
+	var word_cnt int = len(words)
+	for i := 0;i < l;i++{
+		if text[i] == ' '{
+			total_space++
+		}
+	}
+	var each_space int = 0
+	var mod int = 0
+	if word_cnt > 1{
+		each_space = total_space / (word_cnt - 1)
+		mod = total_space % (word_cnt - 1)
+	}else{
+		each_space = 0
+		mod = total_space
+	}
+	var span string
+	for i := 0;i < each_space;i++{
+		span += " "
+	}
+	var res string
+	for i := 0;i < word_cnt;i++{
+		if len(res) != 0{
+			res += span
+		}
+		res += words[i]
+	}
+	for i := 0;i < mod;i++{
+		res += " "
+	}
+	return res
+}
+
 func ReorderSpaces(text string) string {
 	var l int = len(text)
 	var space_cnt int = 0
