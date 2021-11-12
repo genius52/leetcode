@@ -15,6 +15,14 @@ import (
 
 func main(){
 	{
+		//var nums []int = []int{12,7,16,4,4,13,13,8}
+		//var p int = 61
+		var nums []int = []int{3,1,4,2}
+		var p int = 6
+		res := number.MinSubarray(nums,p)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{1,2,3,4,5}
 		var requests [][]int = [][]int{{1,3},{0,1}}
 		res := array.MaxSumRangeQuery(nums,requests)
@@ -2876,12 +2884,6 @@ func main(){
 		var s string = "a"
 		var t string = "a"
 		res := string_issue.CountSubstrings(s,t)
-		fmt.Println(res)
-	}
-	{
-		var nums []int = []int{12,7,16,4,4,13,13,8}
-		var p int = 61
-		res := number.MinSubarray(nums,p)
 		fmt.Println(res)
 	}
 	{
