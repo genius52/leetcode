@@ -15,6 +15,19 @@ import (
 
 func main(){
 	{
+		customers := []int{10,10,6,4,7}
+		boardingCost := 3
+		runningCost := 8
+		res := number.MinOperationsMaxProfit(customers,boardingCost,runningCost)
+		fmt.Println(res)
+	}
+	{
+		//cost := [][]int{{1, 3, 5}, {4, 1, 1}, {1, 5, 3}}
+		cost := [][]int{{15, 96}, {36, 2}}
+		res := diagram.ConnectTwoGroups(cost)
+		fmt.Println(res)
+	}
+	{
 		//var nums []int = []int{12,7,16,4,4,13,13,8}
 		//var p int = 61
 		var nums []int = []int{3,1,4,2}
