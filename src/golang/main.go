@@ -15,6 +15,14 @@ import (
 
 func main(){
 	{
+		//["daniel","daniel","daniel","luis","luis","luis","luis"]
+		//["10:00","10:40","11:00","09:00","11:00","13:00","15:00"]
+		keyName := []string{"daniel","daniel","daniel","luis","luis","luis","luis"}
+		keyTime := []string{"10:00","10:40","11:00","09:00","11:00","13:00","15:00"}
+		res := number.AlertNames(keyName,keyTime)
+		fmt.Println(res)
+	}
+	{
 		//输入：n = 3, restrictions = [[0,1]], requests = [[0,2],[2,1]]
 		//输出：[true,false]
 		n := 5
