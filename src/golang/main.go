@@ -15,6 +15,16 @@ import (
 
 func main(){
 	{
+		n := 5
+		requests := [][]int{{0,1},{1,0},{0,1},{1,2},{2,0},{3,4}}
+		//n := 3
+		//requests := [][]int{{0,0},{1,2},{2,1}}
+		//n := 3
+		//requests := [][]int{{1,1}}
+		res := diagram.MaximumRequests(n,requests)
+		fmt.Println(res)
+	}
+	{
 		customers := []int{10,10,6,4,7}
 		boardingCost := 3
 		runningCost := 8
