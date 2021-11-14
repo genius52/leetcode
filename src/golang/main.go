@@ -15,6 +15,15 @@ import (
 
 func main(){
 	{
+		//输入：n = 3, restrictions = [[0,1]], requests = [[0,2],[2,1]]
+		//输出：[true,false]
+		n := 5
+		restrictions := [][]int{{0,1},{1,2},{2,3}}
+		requests := [][]int{{0,4},{1,2},{3,1},{3,4}}
+		res := diagram.FriendRequests(n,restrictions,requests)
+		fmt.Println(res)
+	}
+	{
 		n := 5
 		requests := [][]int{{0,1},{1,0},{0,1},{1,2},{2,0},{3,4}}
 		//n := 3
