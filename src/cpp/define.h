@@ -284,6 +284,7 @@ struct ListNode {
 #include "list/973. K Closest Points to Origin.hpp"
 #include "list/1172. Dinner Plate Stacks.hpp"
 #include "list/1206. Design Skiplist.hpp"
+#include "list/1606. Find Servers That Handled Most Number of Requests.hpp"
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 

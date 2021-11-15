@@ -6,6 +6,15 @@
 
 int main() {
     {
+        //[1,2,3,4,8,9,10], load = [5,2,10,3,1,2,2]
+        int k = 1;
+        std::vector<int> arrival{1};
+        std::vector<int> load{1};
+        Solution_1606 s1606;
+        auto res = s1606.busiestServers(k,arrival,load);
+        std::cout << "1606 res = " << res.size() << std::endl;
+    }
+    {
         Solution_1584 s1584;
         std::vector<std::vector<int>> points{{0,0},{1,1},{1,0},{-1,1}};
         auto res = s1584.minCostConnectPoints(points);
