@@ -1,18 +1,5 @@
 package string_issue
 
-//func check_palindrome(s string) bool{
-//	var left int = 0
-//	var right int = len(s) - 1
-//	for left < right{
-//		if s[left] != s[right]{
-//			return false
-//		}
-//		left++
-//		right--
-//	}
-//	return true
-//}
-
 func recursive_checkPalindromeFormation(s1 string,l1 int,left int,s2 string,l2 int,right int)bool{
 	if left != 0 && left >= right{
 		return true
