@@ -18,6 +18,14 @@ import (
 
 func main(){
 	{
+		//"pvhmupgqeltozftlmfjjde"
+		//"yjgpzbezspnnpszebzmhvp"
+		a := "x"
+		b := "y"
+		res := string_issue.CheckPalindromeFormation(a,b)
+		fmt.Println(res)
+	}
+	{
 		//["daniel","daniel","daniel","luis","luis","luis","luis"]
 		//["10:00","10:40","11:00","09:00","11:00","13:00","15:00"]
 		keyName := []string{"daniel","daniel","daniel","luis","luis","luis","luis"}
