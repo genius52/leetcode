@@ -220,6 +220,7 @@ struct ListNode {
 #include "graph/1494. Parallel Courses II.hpp"
 #include "graph/1514. Path with Maximum Probability.hpp"
 #include "graph/2065. Maximum Path Quality of a Graph.hpp"
+#include "graph/1631. Path With Minimum Effort.hpp"
 #include "string/1446. Consecutive Characters.cpp"
 #include "string/1451. Rearrange Words in a Sentence.hpp"
 #include "string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
@@ -285,6 +286,7 @@ struct ListNode {
 #include "list/1172. Dinner Plate Stacks.hpp"
 #include "list/1206. Design Skiplist.hpp"
 #include "list/1606. Find Servers That Handled Most Number of Requests.hpp"
+#include "list/1622. Fancy Sequence.hpp"
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 

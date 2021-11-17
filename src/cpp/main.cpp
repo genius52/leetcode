@@ -6,6 +6,25 @@
 
 int main() {
     {
+        std::vector<std::vector<int>> heights{{1,2,3},{3,8,4},{5,3,5}};
+        Solution_1631 s1631;
+        auto res = s1631.minimumEffortPath(heights);
+        std::cout << "1631 res = " << res << std::endl;
+    }
+    {
+        //[1,3,7,3,2,4,10,7,5]
+        //[4,5,2,1,1,2,4,1,4]
+        //[9,2,8,8,2]
+        //[4,1,3,3,5]
+        //[1,1,1,1,1,1,1,1,1,1]
+        //[811,364,124,873,790,656,581,446,885,134]
+        Solution_1626 s1626;
+        std::vector<int> scores{1,1,1,1,1,1,1,1,1,1};
+        std::vector<int> ages{811,364,124,873,790,656,581,446,885,134};
+        auto res = s1626.bestTeamScore(scores,ages);
+        std::cout << "1626 res = " << res << std::endl;
+    }
+    {
         //[1,2,3,4,8,9,10], load = [5,2,10,3,1,2,2]
         int k = 1;
         std::vector<int> arrival{1};
@@ -1219,19 +1238,6 @@ int main() {
         std::vector<std::vector<int>> matrix{{0,0,1},{1,1,1},{1,0,1}};
         auto res = s1727.largestSubmatrix(matrix);
         std::cout << "1727 res = " << res << std::endl;
-    }
-    {
-        //[1,3,7,3,2,4,10,7,5]
-        //[4,5,2,1,1,2,4,1,4]
-        //[9,2,8,8,2]
-        //[4,1,3,3,5]
-        //[1,1,1,1,1,1,1,1,1,1] 
-        //[811,364,124,873,790,656,581,446,885,134] 
-        Solution_1626 s1626;
-        std::vector<int> scores{1,1,1,1,1,1,1,1,1,1};
-        std::vector<int> ages{811,364,124,873,790,656,581,446,885,134};
-        auto res = s1626.bestTeamScore(scores,ages);
-        std::cout << "1626 res = " << res << std::endl;
     }
     {
         Solution_1509 s1509;
