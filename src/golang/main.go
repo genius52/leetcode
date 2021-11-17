@@ -18,6 +18,22 @@ import (
 
 func main(){
 	{
+		//[[1,2,5],[2,1,7],[3,1,9]]
+		//2
+		//[[30,34,31],[10,44,24],[14,28,23],[50,38,1],[40,13,6],[16,27,9],[2,22,23],[1,6,41],[34,22,40],[40,10,11]]
+		//20
+		towers := [][]int{{30,34,31},{10,44,24},{14,28,23},{50,38,1},{40,13,6},{16,27,9},{2,22,23},{1,6,41},{34,22,40},{40,10,11}}
+		radius := 20
+		res := diagram.BestCoordinate(towers, radius)
+		fmt.Println(res)
+	}
+	{
+		n := 4
+		edges := [][]int{{1,2},{2,3},{2,4}}
+		res := diagram.CountSubgraphsForEachDiameter(n,edges)
+		fmt.Println(res)
+	}
+	{
 		//"pvhmupgqeltozftlmfjjde"
 		//"yjgpzbezspnnpszebzmhvp"
 		a := "x"
