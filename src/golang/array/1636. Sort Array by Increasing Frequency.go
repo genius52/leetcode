@@ -4,6 +4,21 @@ import "sort"
 
 //Input: nums = [1,1,2,2,2,3]
 //Output: [3,1,1,2,2,2]
+func frequencySort(nums []int) []int{
+	var cnt [201]int
+	for _,n := range nums{
+		cnt[n + 100]++
+	}
+	sort.Slice(nums, func(i, j int) bool {
+		if cnt[nums[i] + 100] == cnt[nums[j] + 100]{
+			return nums[i] > nums[j]
+		}else{
+			return cnt[nums[i] + 100] < cnt[nums[j] + 100]
+		}
+	})
+	return nums
+}
+
 func FrequencySort(nums []int) []int {
 	var record map[int]int = make(map[int]int)
 	var l int = len(nums)
