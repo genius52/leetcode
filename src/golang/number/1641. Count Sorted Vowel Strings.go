@@ -1,5 +1,23 @@
 package number
 
+
+//将 n 个小球放到 5 个盒子里，盒子可以为空
+func countVowelStrings(n int) int{
+	var cnt [5]int = [5]int{1,1,1,1,1}
+	for i := 1;i < n;i++{
+		var cur_cnt [5]int
+		for j := 0;j < 5;j++{
+			cur := 0
+			for k := 0;k <= j;k++{
+				cur += cnt[k]
+			}
+			cur_cnt[j] = cur
+		}
+		cnt[0],cnt[1],cnt[2],cnt[3],cnt[4] = cur_cnt[0],cur_cnt[1],cur_cnt[2],cur_cnt[3],cur_cnt[4]
+	}
+	return cnt[0] + cnt[1] + cnt[2] + cnt[3] + cnt[4]
+}
+
 func CountVowelStrings(n int) int {
 	var dp [][]int = make([][]int,n)
 	for i := 0;i < n;i++{
