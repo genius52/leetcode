@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		s := "bbcebab"
+		res := string_issue.MinDeletions(s)
+		fmt.Println(res)
+	}
+	{
 		words := []string{"abab","baba","abba","baab"}
 		target := "abba"
 		res := string_issue.NumWays1639(words,target)
@@ -3580,13 +3585,13 @@ func main(){
 		res := diagram.PushDominoes(dominoes)
 		fmt.Println(res)
 	}
-	{
-		var heights []int= []int{4,2,7,6,9,14,12}
-		var bricks int = 5
-		var ladders int = 1
-		res := array.FurthestBuilding(heights,bricks,ladders)
-		fmt.Println(res)
-	}
+	//{
+	//	var heights []int= []int{4,2,7,6,9,14,12}
+	//	var bricks int = 5
+	//	var ladders int = 1
+	//	res := array.FurthestBuilding(heights,bricks,ladders)
+	//	fmt.Println(res)
+	//}
 	{
 		var n int = 3
 		res := number.CountVowelStrings(n)
