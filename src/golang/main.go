@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		s := "aababbab"
+		res := string_issue.MinimumDeletions(s)
+		fmt.Println(res)
+	}
+	{
 		inventory := []int{2,8,4,10,6}
 		orders := 20
 		//inventory := []int{1000000000}
