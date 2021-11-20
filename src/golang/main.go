@@ -15,6 +15,14 @@ import (
 
 func main(){
 	{
+		inventory := []int{2,8,4,10,6}
+		orders := 20
+		//inventory := []int{1000000000}
+		//orders := 1000000000
+		res := array.MaxProfit1648(inventory,orders)
+		fmt.Println(res)
+	}
+	{
 		s := "bbcebab"
 		res := string_issue.MinDeletions(s)
 		fmt.Println(res)
