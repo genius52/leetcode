@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		k := 3
+		n := 7
+		res := number.KMirror(k, n)
+		fmt.Println(res)
+	}
+	{
 		s := "aababbab"
 		res := string_issue.MinimumDeletions(s)
 		fmt.Println(res)
