@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		nums := []int{1,1,2,2}
+		quantity := []int{2,2}
+		res := number.CanDistribute(nums,quantity)
+		fmt.Println(res)
+	}
+	{
 		k := 3
 		n := 7
 		res := number.KMirror(k, n)
