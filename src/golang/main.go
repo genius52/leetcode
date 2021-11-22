@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		var n int = 5
+		var k int = 73
+		res := string_issue.GetSmallestString(n,k)
+		fmt.Print(res)
+	}
+	{
 		nums := []int{1,1,2,2}
 		quantity := []int{2,2}
 		res := number.CanDistribute(nums,quantity)
@@ -3451,12 +3457,6 @@ func main(){
 		var nums []int = []int{2,1,6,4}
 		res := array.WaysToMakeFair(nums)
 		fmt.Println(res)
-	}
-	{
-		var n int = 1
-		var k int = 26
-		res := string_issue.GetSmallestString(n,k)
-		fmt.Print(res)
 	}
 	{
 		var A []int = []int{1,0,1,0,1}
