@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		tasks := [][]int{{1,3},{2,4},{10,11},{10,12},{8,9}}
+		res := array.MinimumEffort(tasks)
+		fmt.Println(res)
+	}
+	{
 		sequence := "bbaabaabaabaaabbbaaabaababbabbaabbabbbabbabbabbbbabaababbbaaaababbbabbaababababbabbbaabbaabbbb"
 		word := "bba"
 		res := string_issue.MaxRepeating(sequence,word)
