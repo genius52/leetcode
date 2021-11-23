@@ -15,8 +15,6 @@ import (
 
 func main(){
 	{
-		//"bbaabaabaabaaabbbaaabaababbabbaabbabbbabbabbabbbbabaababbbaaaababbbabbaababababbabbbaabbaabbbb"
-		//"bba"
 		sequence := "bbaabaabaabaaabbbaaabaababbabbaabbabbbabbabbabbbbabaababbbaaaababbbabbaababababbabbbaabbaabbbb"
 		word := "bba"
 		res := string_issue.MaxRepeating(sequence,word)
