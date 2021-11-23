@@ -15,6 +15,14 @@ import (
 
 func main(){
 	{
+		//"bbaabaabaabaaabbbaaabaababbabbaabbabbbabbabbabbbbabaababbbaaaababbbabbaababababbabbbaabbaabbbb"
+		//"bba"
+		sequence := "bbaabaabaabaaabbbaaabaababbabbaabbabbbabbabbabbbbabaababbbaaaababbbabbaababababbabbbaabbaabbbb"
+		word := "bba"
+		res := string_issue.MaxRepeating(sequence,word)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{2,1,6,4}
 		res := array.WaysToMakeFair(nums)
 		fmt.Println(res)
