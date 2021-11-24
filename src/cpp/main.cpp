@@ -6,6 +6,12 @@
 
 int main() {
     {
+        std::vector<int> nums{4,1,5,20,3};
+        Solution_1675 s1675;
+        auto res = s1675.minimumDeviation(nums);
+        std::cout<<res<<std::endl;
+    }
+    {
         std::vector<std::vector<int>> heights{{1,2,3},{3,8,4},{5,3,5}};
         Solution_1631 s1631;
         auto res = s1631.minimumEffortPath(heights);
