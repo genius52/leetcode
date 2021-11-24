@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		//[100,92,89,77,74,66,64,66,64]
+		nums := []int{100,92,89,77,74,66,64,66,64}
+		res := array.MinimumMountainRemovals(nums)
+		fmt.Println(res)
+	}
+	{
 		tasks := [][]int{{1,3},{2,4},{10,11},{10,12},{8,9}}
 		res := array.MinimumEffort(tasks)
 		fmt.Println(res)
