@@ -15,6 +15,14 @@ import (
 
 func main(){
 	{
+		//[71,18,52,29,55,73,24,42,66,8,80,2]
+		//3
+		nums := []int{71,18,52,29,55,73,24,42,66,8,80,2}
+		k := 3
+		res := array.MostCompetitive(nums,k)
+		fmt.Println(res)
+	}
+	{
 		//[100,92,89,77,74,66,64,66,64]
 		nums := []int{100,92,89,77,74,66,64,66,64}
 		res := array.MinimumMountainRemovals(nums)
