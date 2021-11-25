@@ -15,6 +15,22 @@ import (
 
 func main(){
 	{
+		//[9,8,3,8]
+		//[10,6,9,5]
+		aliceValues := []int{9,8,3,8}
+		bobValues := []int{10,6,9,5}
+		res := number.StoneGameVI(aliceValues,bobValues)
+		fmt.Println(res)
+	}
+	{
+		//[7,3,16,15,1,13,1,2,14,5,3,10,6,2,7,15]
+		//8
+		nums := []int{7,3,16,15,1,13,1,2,14,5,3,10,6,2,7,15}
+		k := 8
+		res := array.MinimumIncompatibility(nums,k)
+		fmt.Println(res)
+	}
+	{
 		//[28,50,76,80,64,30,32,84,53,8]
 		//84
 		//[1,2,4,3]
