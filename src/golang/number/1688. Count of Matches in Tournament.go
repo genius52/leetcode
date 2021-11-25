@@ -8,3 +8,8 @@ func numberOfMatches(n int) int {
 	}
 	return res
 }
+
+//Lose game number
+func numberOfMatches2(n int) int{
+	return n - 1
+}
