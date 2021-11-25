@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		stones := []int{7,90,5,1,100,10,10,2}
+		res := array.StoneGameVII(stones)
+		fmt.Println(res)
+	}
+	{
 		//[9,8,3,8]
 		//[10,6,9,5]
 		aliceValues := []int{9,8,3,8}
