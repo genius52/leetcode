@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		number := "1234567"
+		res := string_issue.ReformatNumber(number)
+		fmt.Println(res)
+	}
+	{
 		stones := []int{7,90,5,1,100,10,10,2}
 		res := array.StoneGameVII(stones)
 		fmt.Println(res)
