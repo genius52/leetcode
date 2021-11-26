@@ -9,6 +9,20 @@ import "strconv"
 //
 //Input: n = "82734"
 //Output: 8
+func minPartitions2(n string) int{
+	var res int = 0
+	for _,c := range n{
+		num := c - '0'
+		if int(num) > res{
+			res = int(num)
+			if res == 9{
+				break
+			}
+		}
+	}
+	return res
+}
+
 func minPartitions(n string) int {
 	var l int = len(n)
 	var res int = 0

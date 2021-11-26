@@ -15,6 +15,16 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{4,2,4,5,6}
+		res := array.MaximumUniqueSubarray(nums)
+		fmt.Println(res)
+	}
+	{
+		cuboids := [][]int{{7,11,17},{7,17,11},{11,7,17},{11,17,7},{17,7,11},{17,11,7}}
+		res := array.MaxHeight(cuboids)
+		fmt.Println(res)
+	}
+	{
 		number := "1234567"
 		res := string_issue.ReformatNumber(number)
 		fmt.Println(res)
@@ -3345,11 +3355,6 @@ func main(){
 		var nums []int = []int{1,-5,-20,4,-1,3,-6,-3}
 		var k int = 2
 		res := array.MaxResult(nums,k)
-		fmt.Println(res)
-	}
-	{
-		var nums []int = []int{4,4}
-		res := array.MaximumUniqueSubarray(nums)
 		fmt.Println(res)
 	}
 	{
