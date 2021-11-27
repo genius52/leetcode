@@ -15,6 +15,13 @@ import (
 
 func main(){
 	{
+		n := 3
+		edgeList := [][]int{{0,1,2},{1,2,4},{2,0,8},{1,0,16}}
+		queries := [][]int{{0,1,2},{0,2,5}}
+		res := diagram.DistanceLimitedPathsExist(n,edgeList,queries)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{10,-5,-2,4,0,3}
 		var k int = 3
 		res := array.MaxResult(nums,k)
