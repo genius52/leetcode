@@ -2,29 +2,30 @@ package array
 
 //Input: students = [1,1,0,0], sandwiches = [0,1,0,1]
 //Output: 0
+//students = [1,1,1,0,0,1], sandwiches = [1,0,0,0,1,1]
 func CountStudents2(students []int, sandwiches []int) int {
-	var zero_cnt int = 0
-	var one_cnt int = 0
+	var zero_students int = 0
+	var one_students int = 0
 	for _,n := range students{
 		if n == 0{
-			zero_cnt++
+			zero_students++
 		}else{
-			one_cnt++
+			one_students++
 		}
 	}
 	var l int = len(sandwiches)
 	var pos int = 0
 	for pos < l{
 		if sandwiches[pos] == 0{
-			if zero_cnt == 0{
+			if zero_students == 0{
 				break
 			}
-			zero_cnt--
+			zero_students--
 		}else{
-			if one_cnt == 0{
+			if one_students == 0{
 				break
 			}
-			one_cnt--
+			one_students--
 		}
 		pos++
 	}

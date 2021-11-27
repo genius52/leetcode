@@ -15,6 +15,12 @@ import (
 
 func main(){
 	{
+		var nums []int = []int{10,-5,-2,4,0,3}
+		var k int = 3
+		res := array.MaxResult(nums,k)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{4,2,4,5,6}
 		res := array.MaximumUniqueSubarray(nums)
 		fmt.Println(res)
@@ -3349,12 +3355,6 @@ func main(){
 	{
 		var text string = "aaaaa"
 		res := string_issue.MaxRepOpt1(text)
-		fmt.Println(res)
-	}
-	{
-		var nums []int = []int{1,-5,-20,4,-1,3,-6,-3}
-		var k int = 2
-		res := array.MaxResult(nums,k)
 		fmt.Println(res)
 	}
 	{
