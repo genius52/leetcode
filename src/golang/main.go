@@ -15,6 +15,18 @@ import (
 
 func main(){
 	{
+		//[2,2]
+		//[1,4]
+		//[1,0,21,18]
+		//[9,4,1,2,13,18,14,23]
+		startPos := []int{2,2}
+		homePos := []int{1,4}
+		rowCosts := []int{1,0,21,18}
+		colCosts := []int{9,4,1,2,13,18,14,23}
+		res := array.MinCost(startPos,homePos,rowCosts,colCosts)
+		fmt.Println(res)
+	}
+	{
 		n := 3
 		edgeList := [][]int{{0,1,2},{1,2,4},{2,0,8},{1,0,16}}
 		queries := [][]int{{0,1,2},{0,2,5}}
