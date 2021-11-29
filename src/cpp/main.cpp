@@ -6,6 +6,17 @@
 
 int main() {
     {
+        Solution_1705 s1705;
+//        std::vector<int> apples{1,2,3,5,2};
+//        std::vector<int> days{3,2,1,4,2};
+        std::vector<int> apples{3,0,0,0,0,2};
+        std::vector<int> days{3,0,0,0,0,2};
+//        std::vector<int> apples{5,2,3};
+//        std::vector<int> days{6,9,10};
+        auto res = s1705.eatenApples(apples,days);
+        std::cout << "1705 res = " << res << std::endl;
+    }
+    {
         std::vector<int> nums{4,1,5,20,3};
         Solution_1675 s1675;
         auto res = s1675.minimumDeviation(nums);
@@ -1055,17 +1066,6 @@ int main() {
         std::string p = "a*cb";
         auto res = s44.isMatch(s,p);
         std::cout << "44 res = " << res << std::endl;
-    }
-    {
-        Solution_1705 s1705;
-//        std::vector<int> apples{1,2,3,5,2};
-//        std::vector<int> days{3,2,1,4,2};
-//        std::vector<int> apples{3,0,0,0,0,2};
-//        std::vector<int> days{3,0,0,0,0,2};
-        std::vector<int> apples{5,2,3};
-        std::vector<int> days{6,9,10};
-        auto res = s1705.eatenApples(apples,days);
-        std::cout << "1705 res = " << res << std::endl;
     }
     {
         Solution_787 s787;
