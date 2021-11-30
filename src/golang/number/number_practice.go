@@ -68,39 +68,6 @@ func canThreePartsEqualSum(A []int) bool {
 	return false;
 }
 
-//1122
-// Input: arr1 = [2,3,1,3,2,4,6,7,9,2,19], arr2 = [2,1,4,3,9,6]
-// Output: [2,2,2,1,4,3,3,9,6,7,19]
-func relativeSortArray(arr1 []int, arr2 []int) []int {
-	var res []int
-	for _,val2 := range arr2{		for _,val1 := range arr1{
-		if val1 == val2{
-			res = append(res, val1)
-		}
-	}
-	}
-	var rest []int
-	for _,val1 := range arr1{
-		var find bool = false
-		for _,val2 := range arr2{
-			if val1 == val2{
-				find = true
-				break
-			}
-		}
-		if !find {
-			rest = append(rest,val1)
-		}
-	}
-	sort.Ints(rest)
-	res = append(res,rest...)
-	return res
-}
-
-//Input: s1 = "ab" s2 = "eidbaooo"
-//Output: True
-//Explanation: s2 contains one permutation of s1 ("ba").
-
 func perm(s string,begin int,end int,target string) bool {
 	if(begin > end){
 		if strings.Contains(target,s){
@@ -121,6 +88,9 @@ func perm(s string,begin int,end int,target string) bool {
 	return false
 }
 
+//Input: s1 = "ab" s2 = "eidbaooo"
+//Output: True
+//Explanation: s2 contains one permutation of s1 ("ba").
 func checkInclusion(s1 string, s2 string) bool {
 	var len1 int = len(s1)
 	var len2 int = len(s2)
@@ -172,70 +142,12 @@ func combinationSum(candidates []int, target int) [][]int {
 	return res
 }
 
-//1331
-func arrayRankTransform(arr []int) []int {
-	l := len(arr)
-	var res []int = make([]int,l)
-	var record map[int][]int = make(map[int][]int)
-	for i,v := range arr{
-		if _,ok := record[v];ok{
-			record[v] = append(record[v], i)
-		}else{
-			record[v] = make([]int,1)
-			record[v][0] = i
-		}
-	}
-	sort.Ints(arr)
-	rank := 1
-	for i := 0;i < l;i++{
-		if i > 0 && arr[i] == arr[i-1]{
-			continue
-		}
-		cnt := 1
-		for _,pos := range record[arr[i]]{
-			res[pos] = rank
-		}
-		rank += cnt
-	}
-	return res
-}
-
 //38
 //1.     1
 //2.     11
 //3.     21
 //4.     1211
 //5.     111221
-//func countAndSay(n int) string {
-//	if n <= 1{
-//		return "1"
-//	}
-//	var last string = "1"
-//	for i := 2;i <= n;i++{
-//		slow := 0
-//		fast := slow + 1
-//		var cur string
-//		l := len(last)
-//		for fast <= l{
-//			if fast < len(last) && last[slow] == last[fast]{
-//				fast++
-//			}else{
-//				l := fast - slow
-//				cnt := strconv.Itoa(l)
-//				num := string(last[slow])
-//				cur += cnt + num
-//				slow = fast
-//				fast++
-//			}
-//		}
-//		last = cur
-//		if i == n{
-//			return last
-//		}
-//	}
-//	return last
-//}
-
 func countAndSay(n int) string {
 	if n <= 1{
 		return "1"
@@ -274,36 +186,6 @@ func countAndSay(n int) string {
 //Output: [3,3]
 //Input: num = 123
 //Output: [5,25]
-//func dp_closestDivisors(target int,low int,high int) (int,int){
-//	if low > high{
-//		return 1,target
-//	}
-//	product := low * high
-//	if product == target{
-//		l,h := dp_closestDivisors(target,low + 1,high - 1)
-//		if (h - l) < (high - low){
-//			return l,h
-//		}else{
-//			return low,high
-//		}
-//	}else if product > target{
-//		new_high := math.Ceil(float64(high * target)/(float64)(product))
-//		return dp_closestDivisors(target,low,int(new_high))
-//	}else{
-//		return dp_closestDivisors(target,low + 1,high)
-//	}
-//}
-//
-//func closestDivisors(num int) []int {
-//	l1,h1 := dp_closestDivisors(num + 1,1,num + 1)
-//	l2,h2 := dp_closestDivisors(num + 2,1,num + 2)
-//	if (h1 - l1) < (h2 - l2){
-//		return []int{l1,h1}
-//	}else{
-//		return []int{l2,h2}
-//	}
-//}
-
 func dp_closestDivisors(num int,low int,high int)(int,int){
 	if low <= 0 || high > num{
 		return 1,high
@@ -453,28 +335,6 @@ func largestRectangleArea(heights []int) int {
 	return max
 }
 
-//739
-//For example, given the list_queue of temperatures
-//T = [73, 74, 75, 71, 69, 72, 76, 73],
-//your output should be [1, 1, 4, 2, 1, 1, 0, 0].
-func dailyTemperatures(T []int) []int {
-	l := len(T)
-	var s []int
-	var res []int = make([]int,l)
-	for i := 0;i < l;i++{
-		if len(s) == 0{
-			s = append(s,i)
-			continue
-		}
-		for len(s) > 0 && T[i] > T[s[len(s) - 1]]{
-			res[s[len(s) - 1]] = i - s[len(s) - 1]
-			s = s[0:len(s) - 1]
-		}
-		s = append(s,i)
-	}
-	return res
-}
-
 //1387
 func dfs(num int,record map[int]int)int{
 	if num == 1{
@@ -613,17 +473,6 @@ func dp_longestValidParentheses(s string) int{
 	return max
 }
 
-//xiaoxiaole
-//	1,2,3,3,3,2,2
-//func xiaoxiaole(nums []int)[]int{
-//	l := len(nums)
-//	var res []int
-//	for i := 0;i < l;i++{
-//
-//	}
-//}
-
-
 //166
 //Input: numerator = 2, denominator = 3
 //Output: "0.(6)"
@@ -648,63 +497,6 @@ func fractionToDecimal(numerator int, denominator int) string {
 		}
 	}
 	return strconv.Itoa(integer) + result
-}
-
-//491
-func dfs_findSubsequences(nums []int,cur_pos int,cur_nums *[]int,record map[string]bool){
-	l := len(*cur_nums)
-	if l >= 2{
-		var data string
-		for _,n := range *cur_nums{
-			if len(data) != 0{
-				data += ","
-			}
-			data += strconv.Itoa(n)
-		}
-		record[data] = true
-	}
-
-	if cur_pos >= len(nums){
-		return
-	}
-	if l > 0 {
-		if nums[cur_pos] >= (*cur_nums)[l - 1]{
-			var add_cur_nums []int
-			add_cur_nums  = make([]int,l)
-			copy(add_cur_nums,*cur_nums)
-			add_cur_nums = append(add_cur_nums,nums[cur_pos])
-			dfs_findSubsequences(nums,cur_pos+1,&add_cur_nums,record)
-		}
-		dfs_findSubsequences(nums,cur_pos+1,cur_nums,record)
-	}else{
-		var start_cur_nums []int
-		start_cur_nums = append(start_cur_nums,nums[cur_pos])
-		dfs_findSubsequences(nums,cur_pos+1,&start_cur_nums,record)
-		var ignore_cur_nums []int
-		dfs_findSubsequences(nums,cur_pos+1,&ignore_cur_nums,record)
-	}
-}
-
-func findSubsequences(nums []int) [][]int {
-	var res [][]int
-	if len(nums) <= 0{
-		return res
-	}
-	var cur_nums []int
-	var record map[string]bool = make(map[string]bool)
-	dfs_findSubsequences(nums,0,&cur_nums,record)
-	for  r,_ := range record{
-		var data_list []string = strings.Split(r,",")
-		var tmp []int
-		for i := 0;i < len(data_list);i++{
-			d , err := strconv.ParseInt(data_list[i],10,64)
-			if err == nil{
-				tmp = append(tmp, int(d))
-			}
-		}
-		res = append(res, tmp)
-	}
-	return res
 }
 
 //6 ZigZag Conversion
