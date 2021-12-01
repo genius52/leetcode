@@ -15,6 +15,16 @@ import (
 
 func main(){
 	{
+		//[5,1,2,4,3]
+		//[1,5,4,2,3]
+		//[[0,4],[4,2],[1,3],[1,4]]
+		var source []int = []int{5,1,2,4,3}
+		var target []int = []int{1,5,4,2,3}
+		var allowedSwaps [][]int = [][]int{{0,4},{4,2},{1,3},{1,4}}
+		res := diagram.MinimumHammingDistance(source,target,allowedSwaps)
+		fmt.Println(res)
+	}
+	{
 		target := []int{6,4,8,1,3,2}
 		arr := []int{4,7,6,2,3,8,6,1}
 		res := array.MinOperations1713(target,arr)
@@ -3069,13 +3079,6 @@ func main(){
 	{
 		var s  string = "eleetminicoworoep"
 		res := string_issue.FindTheLongestSubstring(s)
-		fmt.Println(res)
-	}
-	{
-		var source []int = []int{1,2,3,4}
-		var target []int = []int{2,1,4,5}
-		var allowedSwaps [][]int = [][]int{{0,1},{2,3}}
-		res := diagram.MinimumHammingDistance(source,target,allowedSwaps)
 		fmt.Println(res)
 	}
 	{
