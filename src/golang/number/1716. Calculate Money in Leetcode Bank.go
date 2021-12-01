@@ -1,19 +1,16 @@
 package number
 
-func totalMoney(n int) int {
-	var weeks int = n/7
-	var days int = n%7
-	var init_week int = 1+2+3+4+5+6+7
-	var res int = init_week * weeks
-	var increase int = 7
-	for i := 1;i < weeks;i++{
-		res += increase
-		increase += 7
+func totalMoney(n int) int{
+	var days int = 0
+	var cur int = 1
+	var total int = 0
+	for days < n{
+		if days != 0 && days % 7 == 0{
+			cur -= 6
+		}
+		total += cur
+		days++
+		cur++
 	}
-	var start int = weeks + 1
-	for i := 0;i <= days;i++{
-		res += start
-		start++
-	}
-	return res
+	return total
 }
