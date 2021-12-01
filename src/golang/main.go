@@ -15,14 +15,14 @@ import (
 
 func main(){
 	{
-		input := []int{0,1,0,3,2,3}
-		res := array.LengthOfLIS(input)
-		fmt.Println(res)
-	}
-	{
 		target := []int{6,4,8,1,3,2}
 		arr := []int{4,7,6,2,3,8,6,1}
 		res := array.MinOperations1713(target,arr)
+		fmt.Println(res)
+	}
+	{
+		input := []int{0,1,0,3,2,3}
+		res := array.LengthOfLIS(input)
 		fmt.Println(res)
 	}
 	{
