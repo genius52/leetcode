@@ -15,6 +15,17 @@ import (
 
 func main(){
 	{
+		input := []int{0,1,0,3,2,3}
+		res := array.LengthOfLIS(input)
+		fmt.Println(res)
+	}
+	{
+		target := []int{6,4,8,1,3,2}
+		arr := []int{4,7,6,2,3,8,6,1}
+		res := array.MinOperations1713(target,arr)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{8892,2631,7212,1188,6580,1690,5950,7425,8787,4361,9849,4063,9496,9140,9986,1058,2734,6961,8855,2567,7683,4770,40,850,72,2285,9328,6794,8632,9163,3928,6962,6545,6920,926,8885,1570,4454,6876,7447,8264,3123,2980,7276,470,8736,3153,3924,3129,7136,1739,1354,661,1309,6231,9890,58,4623,3555,3100,3437}
 		res := array.WaysToSplit(nums)
 		fmt.Println(res)
@@ -2548,11 +2559,6 @@ func main(){
 	{
 		s := "()())()"
 		res := string_issue.RemoveInvalidParentheses(s)
-		fmt.Println(res)
-	}
-	{
-		input := []int{10,9,2,5,3,4}
-		res := array.LengthOfLIS(input)
 		fmt.Println(res)
 	}
 	{
