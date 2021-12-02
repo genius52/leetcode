@@ -32,99 +32,12 @@ func max_int_number(nums ...int)int{
 	return max
 }
 
-
 func max_int(a,b int)int{
 	if a > b {
 		return a
 	}else{
 		return b
 	}
-}
-
-
-//85
-//Input:
-//[
-//  ["1","0","1","0","0"],
-//  ["1","0","1","1","1"],
-//  ["1","1","1","1","1"],
-//  ["1","0","0","1","0"]
-//]
-//Output: 6
-const VERTICAL = 0
-const HORIZONTAL = 1
-func maximalRectangle(matrix [][]byte) int {
-	rows := len(matrix)
-	if rows == 0{
-		return 0
-	}
-	columns := len(matrix[0])
-	var dp [][][]int = make([][][]int,rows)
-	for i:= 0;i < rows;i++{
-		dp[i] = make([][]int,columns)
-		for j := 0;j < columns;j++{
-			dp[i][j] = make([]int,2)
-		}
-	}
-	//0: vertical direction 垂直方向
-	//1: horizon direction 水平方向
-	if matrix[0][0] == '0'{
-		dp[0][0][VERTICAL] = 0
-		dp[0][0][HORIZONTAL] = 0
-	}else{
-		dp[0][0][VERTICAL] = 1
-		dp[0][0][HORIZONTAL] = 1
-	}
-	for i := 1;i < rows;i++{
-		dp[i][0][HORIZONTAL] = 0
-		if matrix[i][0] == '0'{
-			dp[i][0][VERTICAL] = 0
-		}else{
-			dp[i][0][VERTICAL] = 1 + dp[i - 1][0][VERTICAL]
-		}
-	}
-	for j := 1;j < columns;j++{
-		dp[0][j][VERTICAL] = 0
-		if matrix[0][j] == '0'{
-			dp[0][j][HORIZONTAL] = 0
-		}else{
-			dp[0][j][HORIZONTAL] = 1 + dp[0][j - 1][HORIZONTAL]
-		}
-	}
-	var max int = 0
-	for i := 1;i < rows;i++{
-		for j := 1;j < columns;j++{
-			if matrix[i][j] == '0'{
-				continue
-			}
-			if (dp[i-1][j][HORIZONTAL] == 0 || dp[i-1][j][VERTICAL] == 0) && (dp[i][j-1][HORIZONTAL] == 0 ||dp[i][j-1][VERTICAL] == 0){
-				dp[i][j][VERTICAL] = 1
-				dp[i][j][HORIZONTAL] = 1
-				if max < 1{
-					max = 1
-				}
-				continue
-			}
-			if dp[i-1][j-1][HORIZONTAL] == 0 || dp[i-1][j-1][VERTICAL] == 0 {
-				dp[i][j][VERTICAL] = 1 + dp[i][j - 1][VERTICAL]
-				dp[i][j][HORIZONTAL] = 1 + dp[i - 1][j][HORIZONTAL]
-			}else{
-					dp[i][j][VERTICAL] = 1 + dp[i][j-1][VERTICAL]
-				dp[i][j][HORIZONTAL] = 1 + dp[i-1][j][VERTICAL]
-			}
-
-			//else if dp[i - 1][j] != 0 && dp[i][j-1] != 0{
-			//	dp[i][j] = 1 + dp[i-1][j] + dp[i][j-1] - dp[i-1][j-1]
-			//}else{
-			//	dp[i][j] = max_int(dp[i-1][j],dp[i][j-1]) - dp[i-1][j-1] + 1
-			//}
-			//if dp[i][j] > max{
-			//	max = dp[i][j]
-			//}
-		}
-	}
-	//fmt.Println(dp)
-	return max
 }
 
 //621

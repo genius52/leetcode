@@ -15,6 +15,11 @@ import (
 
 func main(){
 	{
+		input := [][]byte{{'1','0','1','0','0'},{'1','0','1','1','1'},{'1','1','1','1','1'},{'1','0','0','1','0'}}
+		res := array.MaximalRectangle(input)
+		fmt.Println(res)
+	}
+	{
 		//[5,1,2,4,3]
 		//[1,5,4,2,3]
 		//[[0,4],[4,2],[1,3],[1,4]]
@@ -4737,11 +4742,6 @@ func main(){
 	//	//	least_eat_speed++
 	//	//}
 	//	//fmt.Println(least_eat_speed)
-	//}
-	//{
-	//	input := [][]byte{{'1','0','1','0','0'},{'1','0','1','1','1'},{'1','1','1','1','1'},{'1','0','0','1','0'}}
-	//	res := maximalRectangle(input)
-	//	fmt.Println(res)
 	//}
 	//{
 	//	//word1 := "horse"
