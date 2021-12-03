@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		encoded := []int{6, 5, 4, 6}
+		res := number.Decode2(encoded)
+		fmt.Println(res)
+	}
+	{
 		n := 2
 		languages := [][]int{{1}, {2}, {1, 2}}
 		friendships := [][]int{{1, 2}, {1, 3}, {2, 3}}
