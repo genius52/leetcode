@@ -15,6 +15,13 @@ import (
 
 func main() {
 	{
+		n := 2
+		languages := [][]int{{1}, {2}, {1, 2}}
+		friendships := [][]int{{1, 2}, {1, 3}, {2, 3}}
+		res := diagram.MinimumTeachings(n, languages, friendships)
+		fmt.Println(res)
+	}
+	{
 		jobs := []int{1, 2, 4, 7, 8}
 		k := 2
 		res := number.MinimumTimeRequired(jobs, k)
