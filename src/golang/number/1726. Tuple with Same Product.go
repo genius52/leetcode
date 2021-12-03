@@ -9,11 +9,7 @@ func TupleSameProduct(nums []int) int {
 	for i := 0;i < l;i++{
 		for j := i + 1;j < l;j++{
 			product := nums[i] * nums[j]
-			if _,ok := record[product];ok{
-				record[product]++
-			}else{
-				record[product] = 1
-			}
+			record[product]++
 		}
 	}
 	var res int = 0
@@ -21,7 +17,7 @@ func TupleSameProduct(nums []int) int {
 		if count == 1{
 			continue
 		}
-		res +=  2 * 2 * count * (count - 1)
+		res +=  4 * count * (count - 1)
 	}
 	return res
 }
