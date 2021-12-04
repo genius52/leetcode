@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		a := "dee"
+		b := "a"
+		res := string_issue.MinCharacters(a, b)
+		fmt.Println(res)
+	}
+	{
 		encoded := []int{6, 5, 4, 6}
 		res := number.Decode2(encoded)
 		fmt.Println(res)
