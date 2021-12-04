@@ -1,6 +1,6 @@
 package array
 
-func MinMoves(nums []int, limit int) int {
+func minMoves(nums []int, limit int) int {
 	var l int = len(nums)
 	var record []int = make([]int,limit * 2 + 2)//record[i]: nums[i] + nums[l - 1 - i] = i时,move的次数
 	for i := 0;i < l/2;i++{
