@@ -15,6 +15,39 @@ import (
 
 func main() {
 	{
+		//[7,11,5,3,8]
+		//[[2,2,6],[4,2,4],[2,13,1000000000]]
+		candiesCount := []int{7, 11, 5, 3, 8}
+		queries := [][]int{{2, 2, 6}, {4, 2, 4}, {2, 13, 1000000000}}
+		res := number.CanEat(candiesCount, queries)
+		fmt.Println(res)
+	}
+	{
+		//Root = [5,1,2,3,null,6,4]
+
+		var t1 tree.TreeNode
+		t1.Val = 1
+		var t2 tree.TreeNode
+		t2.Val = 2
+		var t3 tree.TreeNode
+		t3.Val = 3
+		var t4 tree.TreeNode
+		t4.Val = 4
+		var t5 tree.TreeNode
+		t5.Val = 5
+		var t6 tree.TreeNode
+		t6.Val = 6
+		t5.Left = &t1
+		t5.Right = &t2
+		t1.Left = &t3
+		t2.Left = &t6
+		t2.Right = &t4
+		start := 3
+		dest := 6
+		res := tree.GetDirections(&t5, start, dest)
+		fmt.Println(res)
+	}
+	{
 		a := "dee"
 		b := "a"
 		res := string_issue.MinCharacters(a, b)
