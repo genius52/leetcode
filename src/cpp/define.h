@@ -132,7 +132,6 @@ struct ListNode {
 #include "number/357. Count Numbers with Unique Digits.hpp"
 #include "number/486. Predict the Winner.hpp"
 #include "number/1742. Maximum Number of Balls in a Box.hpp"
-#include "number/1760. Minimum Limit of Balls in a Bag.hpp"
 #include "number/1774. Closest Dessert Cost.hpp"
 #include "number/1792. Maximum Average Pass Ratio.hpp"
 #include "number/347. Top K Frequent Elements.hpp"

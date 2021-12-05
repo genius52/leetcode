@@ -964,13 +964,6 @@ int main() {
         std::cout << "1 res = " << res << std::endl;
     }
     {
-//        Solution_1760 s1760;
-//        std::vector<int> nums{9};
-//        int maxOperations = 2;
-//        auto res = s1760.minimumSize(nums,maxOperations);
-//        std::cout << "1760 res = " << res<< std::endl;
-    }
-    {
         Solution_752 s752;
         std::vector<std::string> deadends{"0000"};
         std::string target = "0202";
