@@ -221,6 +221,7 @@ struct ListNode {
 #include "graph/1514. Path with Maximum Probability.hpp"
 #include "graph/2065. Maximum Path Quality of a Graph.hpp"
 #include "graph/1631. Path With Minimum Effort.hpp"
+#include "graph/1786. Number of Restricted Paths From First to Last Node.hpp"
 #include "string/1446. Consecutive Characters.cpp"
 #include "string/1451. Rearrange Words in a Sentence.hpp"
 #include "string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"

@@ -6,6 +6,13 @@
 
 int main() {
     {
+        Solution_1786 s1786;
+        int n = 5;
+        std::vector<std::vector<int>> edges{ {1,2,3},{1,3,3},{2,3,1},{1,4,2},{5,2,2},{3,5,1},{5,4,10} };
+        auto res = s1786.countRestrictedPaths(n, edges);
+        std::cout << "5699 res = " << res << std::endl;
+    }
+    {
         Solution_1705 s1705;
 //        std::vector<int> apples{1,2,3,5,2};
 //        std::vector<int> days{3,2,1,4,2};
@@ -879,13 +886,6 @@ int main() {
         auto res = s242.isAnagram(s,t);
         std::cout << "242 res = " << res << std::endl;
     }
-//    {
-//        Solution5699 s5699;
-//        int n = 5;
-//        std::vector<std::vector<int>> edges{ {1,2,3},{1,3,3},{2,3,1},{1,4,2},{5,2,2},{3,5,1},{5,4,10} };
-//        auto res = s5699.countRestrictedPaths(n, edges);
-//        std::cout << "5699 res = " << res << std::endl;
-//    }
     {
         Solution_239 s239;
         std::vector<int> nums{1,3,-1,-3,5,3,6,7};
