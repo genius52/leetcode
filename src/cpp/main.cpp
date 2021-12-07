@@ -6,6 +6,15 @@
 
 int main() {
     {
+        Solution_1792 s1792;
+        std::vector<std::vector<int>> classes{{2,4},{3,9},{4,5},{2,10}};
+        int extraStudents = 4;
+//        std::vector<std::vector<int>> classes{{1,2},{3,5},{2,2}};
+//        int extraStudents = 2;
+        auto res = s1792.maxAverageRatio(classes,extraStudents);
+        std::cout << "1792 res = " << res << std::endl;
+    }
+    {
         Solution_1786 s1786;
         int n = 5;
         std::vector<std::vector<int>> edges{ {1,2,3},{1,3,3},{2,3,1},{1,4,2},{5,2,2},{3,5,1},{5,4,10} };
@@ -871,13 +880,6 @@ int main() {
         std::vector<std::vector<std::string>> input{{"MUC","LHR"},{"JFK","MUC"},{"SFO","SJC"},{"LHR","SFO"}};
         auto res = s332.findItinerary(input);
         std::cout << "332 res = "<< res.size() <<std::endl;
-    }
-    {
-        Solution_1792 s1792;
-        std::vector<std::vector<int>> classes{{2,4},{3,9},{4,5},{2,10}};
-        int extraStudents = 4;
-        auto res = s1792.maxAverageRatio(classes,extraStudents);
-        std::cout << "1792 res = " << res << std::endl;
     }
     {
         std::string s = "anagram";

@@ -15,6 +15,16 @@ import (
 
 func main() {
 	{
+		var s string = "aabbbaa"
+		res := string_issue.MinimumLength(s)
+		fmt.Println(res)
+	}
+	{
+		var nums []int = []int{2, -5, 1, -4, 3, -2}
+		res := number.MaxAbsoluteSum(nums)
+		fmt.Println(res)
+	}
+	{
 		var groups [][]int = [][]int{{1, -1, -1}, {3, -2, 0}}
 		var nums []int = []int{1, -1, 0, 1, -1, -1, 3, -2, 0, 1}
 		//var groups [][]int = [][]int{{6636698, 4693069, -2178984, -2253405, -2732131, 8550889, -2324014, -2561263}, {-8973571, -9146179, 7704305, -1063430, -6569826}, {2791091}, {-9691134, 651171, 9835817, 4163881, 4944714, 8166788, -9025553, -9250995, 1599781}}
@@ -3059,16 +3069,6 @@ func main() {
 	{
 		var nums []int = []int{2, 1, 3, 4}
 		res := array.Check(nums)
-		fmt.Println(res)
-	}
-	{
-		var s string = "abbbbbbbaaa"
-		res := string_issue.MinimumLength(s)
-		fmt.Println(res)
-	}
-	{
-		var nums []int = []int{2, -5, 1, -4, 3, -2}
-		res := number.MaxAbsoluteSum(nums)
 		fmt.Println(res)
 	}
 	{
