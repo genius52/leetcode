@@ -6,6 +6,13 @@
 
 int main() {
     {
+        Solution_1751 s1751;
+        std::vector<std::vector<int>> events{{1,2,4},{3,4,3},{2,3,10}};
+        int k = 2;
+        auto res = s1751.maxValue(events,k);
+        std::cout << "1751 res = " << res << std::endl;
+    }
+    {
         Solution_1792 s1792;
         std::vector<std::vector<int>> classes{{2,4},{3,9},{4,5},{2,10}};
         int extraStudents = 4;

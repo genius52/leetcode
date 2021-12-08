@@ -61,6 +61,7 @@ struct ListNode {
 #include "array/1508. Range Sum of Sorted Subarray Sums.hpp"
 #include "array/322. Coin Change.hpp"
 #include "array/1743. Restore the Array From Adjacent Pairs.hpp"
+#include "array/1751. Maximum Number of Events That Can Be Attended II.hpp"
 #include "array/1546. Maximum Number of Non-Overlapping Subarrays With Sum Equals Target.hpp"
 #include "array/1705. Maximum Number of Eaten Apples.hpp"
 #include "array/37. Sudoku Solver.hpp"
