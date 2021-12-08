@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		nums := []int{7, -9, 15, -2}
+		goal := -5
+		res := array.MinAbsDifference(nums, goal)
+		fmt.Println(res)
+	}
+	{
 		s := "abcbdd"
 		res := string_issue.CheckPartitioning(s)
 		fmt.Println(res)
