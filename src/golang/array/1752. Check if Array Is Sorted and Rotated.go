@@ -1,6 +1,6 @@
 package array
 
-func check(nums []int) bool {
+func Check(nums []int) bool {
 	var l int = len(nums)
 	var cnt int = 0
 	for i := 1; i < l; i++ {

@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		s := "abcbdd"
+		res := string_issue.CheckPartitioning(s)
+		fmt.Println(res)
+	}
+	{
 		var s string = "aabbbaa"
 		res := string_issue.MinimumLength(s)
 		fmt.Println(res)
