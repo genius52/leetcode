@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		var s string = "YazaAay"
+		res := string_issue.LongestNiceSubstring(s)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{7, -9, 15, -2}
 		goal := -5
 		res := array.MinAbsDifference(nums, goal)
@@ -2909,11 +2914,6 @@ func main() {
 	{
 		var isWater [][]int = [][]int{{0, 0}, {1, 1}, {1, 0}}
 		res := array.HighestPeak(isWater)
-		fmt.Println(res)
-	}
-	{
-		var s string = "YazaAay"
-		res := string_issue.LongestNiceSubstring(s)
 		fmt.Println(res)
 	}
 	{

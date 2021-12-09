@@ -7,59 +7,42 @@ import "container/list"
 func HighestPeak(isWater [][]int) [][]int {
 	var rows int = len(isWater)
 	var columns int = len(isWater[0])
-	var res [][]int = make([][]int,rows)
-	var visited [][]bool = make([][]bool,rows)
-	for i := 0;i < rows;i++{
-		res[i] = make([]int,columns)
-		visited[i] = make([]bool,columns)
+	var res [][]int = make([][]int, rows)
+	for i := 0; i < rows; i++ {
+		res[i] = make([]int, columns)
+		for j := 0; j < columns; j++ {
+			res[i][j] = -1
+		}
 	}
 	var q list.List
-	for i := 0;i < rows;i++{
-		for j := 0;j < columns;j++{
-			if isWater[i][j] == 1{
+	for i := 0; i < rows; i++ {
+		for j := 0; j < columns; j++ {
+			if isWater[i][j] == 1 {
 				var p point
 				p.x = i
 				p.y = j
 				q.PushBack(p)
-				visited[i][j] = true
+				res[i][j] = 0
 			}
 		}
 	}
-
-	var height int = 0
-	for q.Len() > 0{
+	var dirs [][]int = [][]int{{-1, 0}, {1, 0}, {0, -1}, {0, 1}}
+	var height int = 1
+	for q.Len() > 0 {
 		var l int = q.Len()
-		for i := 0;i < l;i++{
-			var p point = q.Front().Value.(point)
+		for i := 0; i < l; i++ {
+			var cur point = q.Front().Value.(point)
 			q.Remove(q.Front())
-			res[p.x][p.y] = height
-			if p.x - 1 >= 0 && !visited[p.x - 1][p.y]{
-				var p1 point
-				p1.x = p.x - 1
-				p1.y = p.y
-				q.PushBack(p1)
-				visited[p1.x][p1.y] = true
-			}
-			if p.x + 1 < rows && !visited[p.x + 1][p.y]{
-				var p1 point
-				p1.x = p.x + 1
-				p1.y = p.y
-				q.PushBack(p1)
-				visited[p1.x][p1.y] = true
-			}
-			if p.y - 1 >= 0 && !visited[p.x][p.y - 1]{
-				var p1 point
-				p1.x = p.x
-				p1.y = p.y - 1
-				q.PushBack(p1)
-				visited[p1.x][p1.y] = true
-			}
-			if p.y + 1 < columns && !visited[p.x][p.y + 1]{
-				var p1 point
-				p1.x = p.x
-				p1.y = p.y + 1
-				q.PushBack(p1)
-				visited[p1.x][p1.y] = true
+			for _, dir := range dirs {
+				next := cur
+				next.x += dir[0]
+				next.y += dir[1]
+				if next.x >= 0 && next.x < rows && next.y >= 0 && next.y < columns {
+					if res[next.x][next.y] == -1 {
+						res[next.x][next.y] = height
+						q.PushBack(next)
+					}
+				}
 			}
 		}
 		height++
