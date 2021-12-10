@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		boxes := "110"
+		res := number.MinOperations2(boxes)
+		fmt.Println(res)
+	}
+	{
 		var s string = "YazaAay"
 		res := string_issue.LongestNiceSubstring(s)
 		fmt.Println(res)
