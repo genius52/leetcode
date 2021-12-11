@@ -15,6 +15,16 @@ import (
 
 func main() {
 	{
+		//[2,3]
+		//[4,5,100]
+		//18
+		baseCosts := []int{2, 3}
+		toppingCosts := []int{4, 5, 100}
+		target := 18
+		res := number.ClosestCost(baseCosts, toppingCosts, target)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{5, 6, 10, 2, 3, 6, 15}
 		edges := [][]int{{0, 1}, {0, 2}, {1, 3}, {1, 4}, {2, 5}, {2, 6}}
 		res := tree.GetCoprimes(nums, edges)
