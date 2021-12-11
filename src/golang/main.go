@@ -15,6 +15,23 @@ import (
 
 func main() {
 	{
+		nums := []int{5, 6, 10, 2, 3, 6, 15}
+		edges := [][]int{{0, 1}, {0, 2}, {1, 3}, {1, 4}, {2, 5}, {2, 6}}
+		res := tree.GetCoprimes(nums, edges)
+		fmt.Println(res)
+	}
+	{
+		ch := make(chan int, 10)
+		for i := 0; i < 10; i++ {
+			select {
+			case x := <-ch:
+				fmt.Println(x)
+			case ch <- i:
+				fmt.Println("--", i)
+			}
+		}
+	}
+	{
 		boxes := "110"
 		res := number.MinOperations2(boxes)
 		fmt.Println(res)
