@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		cars := [][]int{{1, 2}, {2, 1}, {4, 3}, {7, 2}}
+		res := number.GetCollisionTimes(cars)
+		fmt.Println(res)
+	}
+	{
 		word1 := "cacb"
 		word2 := "cbba"
 		res := string_issue.LongestPalindrome1771(word1, word2)
