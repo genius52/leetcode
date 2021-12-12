@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		word1 := "cacb"
+		word2 := "cbba"
+		res := string_issue.LongestPalindrome1771(word1, word2)
+		fmt.Println(res)
+	}
+	{
 		//[2,3]
 		//[4,5,100]
 		//18
