@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		var n int = 12
+		res := number.CheckPowersOfThree(n)
+		fmt.Println(res)
+	}
+	{
 		cars := [][]int{{1, 2}, {2, 1}, {4, 3}, {7, 2}}
 		res := number.GetCollisionTimes(cars)
 		fmt.Println(res)
@@ -2767,11 +2772,6 @@ func main() {
 		res := string_issue.BeautySum(s)
 		fmt.Println(res)
 	}
-	//{
-	//	var n int = 2147483647
-	//	res := number.CheckPowersOfThree(n)
-	//	fmt.Println(res)
-	//}
 	{
 		var nums []int = []int{1, 2, 3, 4}
 		res := number.ProductExceptSelf(nums)
