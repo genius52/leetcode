@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		nums := []int{1, 2, 3, 4, 5, 6}
+		res := number.MaxScore1799(nums)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{1, 4, 3, 7, 4, 5}
 		k := 3
 		res := array.MaximumScore(nums, k)
