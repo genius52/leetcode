@@ -15,6 +15,17 @@ import (
 
 func main() {
 	{
+		nums := []int{1, 4, 3, 7, 4, 5}
+		k := 3
+		res := array.MaximumScore(nums, k)
+		fmt.Println(res)
+	}
+	{
+		coins := []int{1, 3}
+		res := number.GetMaximumConsecutive(coins)
+		fmt.Println(res)
+	}
+	{
 		var n int = 12
 		res := number.CheckPowersOfThree(n)
 		fmt.Println(res)
