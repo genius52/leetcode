@@ -15,6 +15,16 @@ import (
 
 func main() {
 	{
+		//9
+		//5
+		//24
+		n := 9
+		index := 5
+		maxSum := 24
+		res := array.MaxValue(n, index, maxSum)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{1, 2, 3, 4, 5, 6}
 		res := number.MaxScore1799(nums)
 		fmt.Println(res)
