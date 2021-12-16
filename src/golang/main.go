@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		n := 2
+		res := array.ReinitializePermutation(n)
+		fmt.Println(res)
+	}
+	{
 		//9
 		//5
 		//24
