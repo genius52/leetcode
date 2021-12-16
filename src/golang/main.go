@@ -15,6 +15,18 @@ import (
 
 func main() {
 	{
+		//"Game is ON"
+		//"Game are ON"
+		//"URhnaPlQqSx h"
+		//"URhnaPlQqSx RpASX h"
+		sentence1 := "Game is ON"
+		sentence2 := "Game are ON"
+		//sentence1 := "URhnaPlQqSx h"
+		//sentence2 := "URhnaPlQqSx RpASX h"
+		res := string_issue.AreSentencesSimilar(sentence1, sentence2)
+		fmt.Println(res)
+	}
+	{
 		n := 2
 		res := array.ReinitializePermutation(n)
 		fmt.Println(res)
