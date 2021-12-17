@@ -6,6 +6,13 @@
 
 int main() {
     {
+        Solution_1815 s1815;
+        int batchSize = 3;
+        std::vector<int> groups{1,2,3,4,5,6};
+        auto res = s1815.maxHappyGroups(batchSize,groups);
+        std::cout << "1815 res = " << res << std::endl;
+    }
+    {
         Solution_1801 s1801;
         std::vector<vector<int>> orders{{26,7,0},{16,1,1},{14,20,0},{23,15,1},{24,26,0},{19,4,1},{1,1,0}};
         auto res = s1801.getNumberOfBacklogOrders(orders);
