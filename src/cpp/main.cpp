@@ -6,6 +6,13 @@
 
 int main() {
     {
+        Solution_1818 s1818;
+        std::vector<int> nums1{1,10,4,4,2,7};
+        std::vector<int> nums2{9,3,5,1,7,4};
+        auto res = s1818.minAbsoluteSumDiff(nums1,nums2);
+        std::cout<<"5724 res = "<<res<<std::endl;
+    }
+    {
         Solution_1815 s1815;
         int batchSize = 3;
         std::vector<int> groups{1,2,3,4,5,6};
@@ -766,13 +773,6 @@ int main() {
         int k = 1;
         auto res = s378.kthSmallest(matrix,k);
         std::cout<<"378 res = "<<res<<std::endl;
-    }
-    {
-        Solution_1818 s1818;
-        std::vector<int> nums1{1,10,4,4,2,7};
-        std::vector<int> nums2{9,3,5,1,7,4};
-        auto res = s1818.minAbsoluteSumDiff(nums1,nums2);
-        std::cout<<"5724 res = "<<res<<std::endl;
     }
     {
         Solution_1817 s1817;
