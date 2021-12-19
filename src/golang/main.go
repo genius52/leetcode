@@ -15,6 +15,27 @@ import (
 
 func main() {
 	{
+		//[12,6,12,6,14,2,13,17,3,8,11,7,4,11,18,8,8,3]
+		//1
+		//[2,2,2,2,2,1,1,4,4,3,3,3,3,3]
+		//1
+		arr := []int{2, 2, 2, 2, 2, 1, 1, 4, 4, 3, 3, 3, 3, 3}
+		k := 1
+		res := array.KIncreasing(arr, k)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{6, 9}
+		res := number.CountDifferentSubsequenceGCDs(nums)
+		fmt.Println(res)
+	}
+	{
+		security := []int{5, 3, 3, 3, 5, 6, 2}
+		time := 2
+		res := number.GoodDaysToRobBank(security, time)
+		fmt.Println(res)
+	}
+	{
 		//"Game is ON"
 		//"Game are ON"
 		//"URhnaPlQqSx h"
