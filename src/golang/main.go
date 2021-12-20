@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		obstacles := []int{0, 1, 2, 3, 0}
+		res := diagram.MinSideJumps2(obstacles)
+		fmt.Println(res)
+	}
+	{
 		//[12,6,12,6,14,2,13,17,3,8,11,7,4,11,18,8,8,3]
 		//1
 		//[2,2,2,2,2,1,1,4,4,3,3,3,3,3]
