@@ -7,52 +7,47 @@ using namespace std;
 class Solution_1882 {
 public:
     vector<int> assignTasks(vector<int>& servers, vector<int>& tasks) {
-        std::priority_queue<std::pair<int,int>,std::vector<std::pair<int,int>>,std::greater<std::pair<int,int>>> free_q;//weight : index
+        auto my_cmp = [](const std::pair<int,int>& p1,const std::pair<int,int>& p2)->bool {
+            if(p1.first == p2.first){
+                return p1.second > p2.second;
+            }else{
+                return p1.first > p2.first;
+            }
+        };
+        std::priority_queue<std::pair<int,int>,std::vector<std::pair<int,int>>, decltype(my_cmp)>  free_server(my_cmp);//weight : index
+        auto my_cmp2 = [](const std::pair<int,std::pair<int,int>>& p1,const std::pair<int,std::pair<int,int>>& p2)->bool {
+            if(p1.first == p2.first){
+                if(p1.second.first == p2.second.first)
+                    return p1.second.second > p2.second.second;
+                else
+                    return p1.second.first > p2.second.first;
+            }else{
+                return p1.first > p2.first;
+            }
+        };
+        std::priority_queue<std::pair<int,std::pair<int,int>>,std::vector<std::pair<int,std::pair<int,int>>>, decltype(my_cmp2)> busy_server(my_cmp2);//timestamp:server_weight,server_index;
+        std::list<std::pair<int,int>> wait_task;//index,duration
         int ser_len = servers.size();
         for(int i = 0;i < ser_len;i++){
-            free_q.push({servers[i],i});
+            free_server.push({servers[i],i});
         }
-        std::map<int,std::list<std::pair<int,int>>> busy_q;//timstamp: weight,index
-        int seconds = tasks.size();
-        std::vector<int> res(seconds);
-        int cur_time = 0;
-        //        std::vector<int> servers{31,96,73,90,15,11,1,90,72,9,30,88};
-        //        std::vector<int> tasks{87,10,3,5,76,74,38,64,16,64,93,95,60,79,54,26,30,44,64,71};
-        for(int i = 0;i < seconds;){
-            auto it_timestamp = busy_q.upper_bound(cur_time);//move busy machine to free queue before current timestamp
-            if(it_timestamp != busy_q.begin()){
-                for(auto it = busy_q.begin();it != it_timestamp;){
-                    for(auto it2 = (*it).second.begin();it2 != (*it).second.end();it2++){
-                        free_q.push(*it2);
-                    }
-                    busy_q.erase(it++);
-                }
+        int task_len = tasks.size();
+        std::vector<int> res(task_len);
+        for(int i = 0;i < task_len;i++){
+            while(!busy_server.empty() && busy_server.top().first <= i){
+                free_server.push(busy_server.top().second);
+                busy_server.pop();
             }
-
-            if(!free_q.empty()){
-                std::pair<int,int> cur = free_q.top();
-                free_q.pop();
-                res[i] = cur.second;
-                busy_q[cur_time + tasks[i]].push_back(cur);
-                cur_time++;
-                i++;
+            if(free_server.empty()){
+                auto top = busy_server.top();
+                busy_server.pop();
+                res[i] = top.second.second;
+                busy_server.push({top.first + tasks[i],top.second});
             }else{
-                //get a machine from begining of busy queue then set into next timestamp
-//                auto it = busy_q.begin();
-//
-//                cur_time = max(cur_time,(*it).first);
-//                auto find = (*it).second.begin();
-//                std::pair<int,int> p;
-//                p.first = (*find).first;
-//                p.second = (*find).second;
-//                res[i] = (*find).second;
-//                (*it).second.erase(find);
-//                if((*it).second.size() == 0){
-//                    busy_q.erase(it);
-//                }
-//                busy_q[cur_time + tasks[i]].push_back(p);
-                auto it = busy_q.begin();
-                cur_time = max(cur_time,(*it).first);
+                auto top = free_server.top();
+                free_server.pop();
+                res[i] = top.second;
+                busy_server.push({i + tasks[i],top});
             }
         }
         return res;

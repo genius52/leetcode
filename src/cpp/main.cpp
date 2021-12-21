@@ -6,6 +6,36 @@
 
 int main() {
     {
+        Solution_1882 s1882;
+//        std::vector<int> servers{10,63,95,16,85,57,83,95,6,29,71};
+//        std::vector<int> tasks{70,31,83,15,32,67,98,65,56,48,38,90,5};
+        std::vector<int> servers{3,3,2};
+        std::vector<int> tasks{1,2,3,2,1,2};
+//        std::vector<int> servers{31,96,73,90,15,11,1,90,72,9,30,88};
+//        std::vector<int> tasks{87,10,3,5,76,74,38,64,16,64,93,95,60,79,54,26,30,44,64,71};
+        auto res = s1882.assignTasks(servers,tasks);
+        std::cout << "743 res = " << res[0] << std::endl;
+    }
+    {
+        //["MKAverage", "addElement", "addElement", "calculateMKAverage", "addElement", "calculateMKAverage", "addElement", "addElement", "addElement", "calculateMKAverage"]
+        //[[3, 1], [3], [1], [], [10], [], [5], [5], [5], []]
+
+        //["MKAverage","addElement","addElement","calculateMKAverage","addElement","addElement","calculateMKAverage","addElement","addElement","calculateMKAverage","addElement"]
+        //[[3,1],[17612],[74607],[],[8272],[33433],[],[15456],[64938],[],[99741]]
+        MKAverage mk(3,1);
+        mk.addElement(17612);
+        mk.addElement(74607);
+        auto res = mk.calculateMKAverage();
+        mk.addElement(8272);
+        mk.addElement(33433);
+        res = mk.calculateMKAverage();
+        mk.addElement(15456);
+        mk.addElement(64938);
+        res = mk.calculateMKAverage();
+        mk.addElement(99741);
+        std::cout<<"1825:"<<res << std::endl;
+    }
+    {
         Solution_1818 s1818;
         std::vector<int> nums1{1,10,4,4,2,7};
         std::vector<int> nums2{9,3,5,1,7,4};
@@ -476,19 +506,6 @@ int main() {
         {6,2,24,23,10,35},{20,5,22,12,32,29},{33,11,9,14,30,26}};
         auto res = s778.swimInWater2(grid);
         std::cout << "778 res = " << res << std::endl;
-    }
-    {
-        //[10,63,95,16,85,57,83,95,6,29,71]
-        //[70,31,83,15,32,67,98,65,56,48,38,90,5]
-        Solution_1882 s1882;
-//        std::vector<int> servers{10,63,95,16,85,57,83,95,6,29,71};
-//        std::vector<int> tasks{70,31,83,15,32,67,98,65,56,48,38,90,5};
-//        std::vector<int> servers{3,3,2};
-//        std::vector<int> tasks{1,2,3,2,1,2};
-        std::vector<int> servers{31,96,73,90,15,11,1,90,72,9,30,88};
-        std::vector<int> tasks{87,10,3,5,76,74,38,64,16,64,93,95,60,79,54,26,30,44,64,71};
-        auto res = s1882.assignTasks(servers,tasks);
-        std::cout << "743 res = " << res[0] << std::endl;
     }
     {
         Solution_743 s743;

@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		grid := [][]int{{3, 4, 5, 1, 3}, {3, 3, 4, 2, 3}, {20, 30, 200, 40, 10}, {1, 5, 5, 4, 1}, {4, 3, 2, 2, 5}}
+		res := array.GetBiggestThree(grid)
+		fmt.Println(res)
+	}
+	{
 		obstacles := []int{0, 1, 2, 3, 0}
 		res := diagram.MinSideJumps2(obstacles)
 		fmt.Println(res)
