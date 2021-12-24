@@ -6,6 +6,22 @@
 
 int main() {
     {
+        //int n = 10;
+        //std::vector<std::vector<int>> restrictions{{8,5},{9,0},{6,2},{4,0},{3,2},{10,0},{5,3},{7,3},{2,4}};
+        int n = 10;
+        std::vector<std::vector<int>> restrictions;
+        Solution_1840 s1840;
+        auto res = s1840.maxBuilding(n,restrictions);
+        std::cout<<"1840 res = "<<res<<std::endl;
+    }
+    {
+        Solution_1834 s1834;
+        //std::vector<std::vector<int>> tasks{{7,10},{7,12},{7,5},{7,4},{7,2}};
+        std::vector<std::vector<int>> tasks{{1,2},{2,4},{3,2},{4,1}};
+        auto res = s1834.getOrder2(tasks);
+        std::cout<<"1834 res = "<<res.size()<<std::endl;
+    }
+    {
         Solution_1882 s1882;
 //        std::vector<int> servers{10,63,95,16,85,57,83,95,6,29,71};
 //        std::vector<int> tasks{70,31,83,15,32,67,98,65,56,48,38,90,5};
@@ -696,12 +712,6 @@ int main() {
         int k = 5;
         auto res = s1838.maxFrequency(nums,k);
         std::cout<<"1838 res = "<<res<<std::endl;
-    }
-    {
-        Solution_1834 s1834;
-        std::vector<std::vector<int>> tasks{{7,10},{7,12},{7,5},{7,4},{7,2}};
-        auto res = s1834.getOrder(tasks);
-        std::cout<<"1834 res = "<<res.size()<<std::endl;
     }
     {
         Solution_575 s575;
