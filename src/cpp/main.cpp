@@ -6,6 +6,13 @@
 
 int main() {
     {
+        std::vector<std::vector<int>> rooms{{2,2},{1,2},{3,2}};
+        std::vector<std::vector<int>> queries{{3,1},{3,3},{5,2}};
+        Solution_1847 s1847;
+        auto res = s1847.closestRoom(rooms,queries);
+        std::cout<<"1847 res = "<<res.size()<<std::endl;
+    }
+    {
         //int n = 10;
         //std::vector<std::vector<int>> restrictions{{8,5},{9,0},{6,2},{4,0},{3,2},{10,0},{5,3},{7,3},{2,4}};
         int n = 10;
