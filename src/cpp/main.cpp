@@ -6,6 +6,12 @@
 
 int main() {
     {
+        std::vector<int> nums{5,435};
+        Solution_2122 s2122;
+        auto res = s2122.recoverArray(nums);
+        std::cout<<"2122 res = "<<res.size()<<std::endl;
+    }
+    {
         std::vector<std::vector<int>> rooms{{2,2},{1,2},{3,2}};
         std::vector<std::vector<int>> queries{{3,1},{3,3},{5,2}};
         Solution_1847 s1847;

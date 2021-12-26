@@ -88,6 +88,7 @@ struct ListNode {
 #include "array/1943. Describe the Painting.hpp"
 #include "array/1439. Find the Kth Smallest Sum of a Matrix With Sorted Rows.hpp"
 #include "array/2054. Two Best Non-Overlapping Events.hpp"
+#include "array/2122. Recover the Original Array.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
