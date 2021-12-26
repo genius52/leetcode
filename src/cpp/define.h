@@ -165,6 +165,7 @@ struct ListNode {
 #include "number/1801. Number of Orders in the Backlog.hpp"
 #include "number/1815. Maximum Number of Groups Getting Fresh Donuts.hpp"
 #include "number/1840. Maximum Building Height.hpp"
+#include "number/1847. Closest Room.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
