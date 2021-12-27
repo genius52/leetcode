@@ -15,7 +15,14 @@ import (
 
 func main() {
 	{
-		word := "aeeeiiiioooauuuaeiou"
+		recipes := []string{"bread", "sandwich"}
+		ingredients := [][]string{{"yeast", "flour"}, {"bread", "meat"}}
+		supplies := []string{"yeast", "flour", "meat"}
+		res := diagram.FindAllRecipes(recipes, ingredients, supplies)
+		fmt.Println(res)
+	}
+	{
+		word := "aeiou"
 		res := string_issue.LongestBeautifulSubstring(word)
 		fmt.Println(res)
 	}
