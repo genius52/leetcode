@@ -6,6 +6,13 @@
 
 int main() {
     {
+        Solution_1851 s1851;
+        std::vector<std::vector<int>> intervals{{1,4},{2,4},{3,6},{4,4}};
+        std::vector<int> queries{2,3,4,5};
+        auto res = s1851.minInterval(intervals,queries);
+        std::cout<<"1851 res = "<<res.size()<<std::endl;
+    }
+    {
         std::vector<int> nums{5,435};
         Solution_2122 s2122;
         auto res = s2122.recoverArray(nums);

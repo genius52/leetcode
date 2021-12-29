@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		s := "())(()(()(())()())(())((())(()())((())))))(((((((())(()))))("
+		locked := "100011110110011011010111100111011101111110000101001101001111"
+		res := string_issue.CanBeValid(s, locked)
+		fmt.Println(res)
+	}
+	{
 		recipes := []string{"bread", "sandwich"}
 		ingredients := [][]string{{"yeast", "flour"}, {"bread", "meat"}}
 		supplies := []string{"yeast", "flour", "meat"}
