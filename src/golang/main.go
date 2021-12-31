@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		nums := []int{2, 5, 9}
+		res := number.SumOfFlooredPairs(nums)
+		fmt.Println(res)
+	}
+	{
 		//"rrrde"
 		//[[4,2],[3,4],[0,3],[1,0],[2,1]]
 		//"iiiiii"
