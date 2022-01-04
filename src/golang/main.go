@@ -15,6 +15,29 @@ import (
 
 func main() {
 	{
+		n := "13"
+		x := 2
+		res := number.MaxValue(n, x)
+		fmt.Println(res)
+	}
+	{
+		nums1 := []int{1, 0, 3}
+		nums2 := []int{5, 3, 4}
+		res := number.MinimumXORSum(nums1, nums2)
+		fmt.Println(res)
+	}
+	{
+		n := 5
+		k := 3
+		res := number.RearrangeSticks(n, k)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{1, 3}
+		res := array.SubsetXORSum(nums)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{2, 5, 9}
 		res := number.SumOfFlooredPairs(nums)
 		fmt.Println(res)
@@ -2257,12 +2280,6 @@ func main() {
 		t3.Left = &t4
 		t3.Right = &t5
 		res := tree.MinDiffInBST(&t1)
-		fmt.Println(res)
-	}
-	{
-		n := "-13"
-		x := 2
-		res := number.MaxValue(n, x)
 		fmt.Println(res)
 	}
 	{
