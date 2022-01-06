@@ -15,6 +15,24 @@ import (
 
 func main() {
 	{
+		packages := []int{2, 3, 5}
+		boxes := [][]int{{4, 8}, {2, 8}}
+		res := number.MinWastedSpace(packages, boxes)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{1, 1, 2, 2, 3}
+		res := array.ReductionOperations(nums)
+		fmt.Println(res)
+	}
+	{
+		dist := []int{7, 3, 5, 5}
+		speed := 2
+		hoursBefore := 10
+		res := number.MinSkips(dist, speed, hoursBefore)
+		fmt.Println(res)
+	}
+	{
 		n := "13"
 		x := 2
 		res := number.MaxValue(n, x)
