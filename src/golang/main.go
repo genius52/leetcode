@@ -15,6 +15,21 @@ import (
 
 func main() {
 	{
+		nums := []int{1, 2, 10, 5, 7}
+		res := array.CanBeIncreasing(nums)
+		fmt.Println(res)
+	}
+	{
+		n := 11
+		firstPlayer := 2
+		secondPlayer := 4
+		//n := 5
+		//firstPlayer := 1
+		//secondPlayer := 5
+		res := number.EarliestAndLatest(n, firstPlayer, secondPlayer)
+		fmt.Println(res)
+	}
+	{
 		packages := []int{2, 3, 5}
 		boxes := [][]int{{4, 8}, {2, 8}}
 		res := number.MinWastedSpace(packages, boxes)
