@@ -15,6 +15,47 @@ import (
 
 func main() {
 	{
+		plantTime := []int{1, 4, 3}
+		growTime := []int{2, 3, 1}
+		res := number.EarliestFullBloom(plantTime, growTime)
+		fmt.Println(res)
+	}
+	{
+		//["mox","bj","rsy","jqsh"]
+		//["trk","vjb","jkr"]
+		//["lhum","bim","cyjhm","h","a","ljxd","run","zrl","dmf","y"]
+		//["da","lzkr","uzc","jdxlz","yt","emdf"]
+		startWords := []string{"g", "vf", "ylpuk", "nyf", "gdj", "j", "fyqzg", "sizec"}
+		targetWords := []string{"r", "am", "jg", "umhjo", "fov", "lujy", "b", "uz", "y"}
+		res := string_issue.WordCount(startWords, targetWords)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{1, 1, 1, 0, 1}
+		res := array.MinSwaps(nums)
+		fmt.Println(res)
+	}
+	{
+		words := []string{"ll", "lb", "bb", "bx", "xx", "lx", "xx", "lx", "ll", "xb", "bx", "lb", "bb", "lb", "bl", "bb", "bx", "xl", "lb", "xx"}
+		res := string_issue.LongestPalindrome2131(words)
+		fmt.Println(res)
+	}
+	{
+		var l1 list_queue.ListNode
+		l1.Val = 5
+		var l2 list_queue.ListNode
+		l2.Val = 4
+		var l3 list_queue.ListNode
+		l3.Val = 2
+		var l4 list_queue.ListNode
+		l4.Val = 1
+		l1.Next = &l2
+		l2.Next = &l3
+		l3.Next = &l4
+		res := list_queue.PairSum(&l1)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{1, 2, 10, 5, 7}
 		res := array.CanBeIncreasing(nums)
 		fmt.Println(res)
