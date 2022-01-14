@@ -15,6 +15,14 @@ import (
 
 func main() {
 	{
+		//[1,1,2,3]
+		//[1,1,1,1]
+		dist := []int{1, 1, 2, 3}
+		speed := []int{1, 1, 1, 1}
+		res := array.EliminateMaximum(dist, speed)
+		fmt.Println(res)
+	}
+	{
 		plantTime := []int{1, 4, 3}
 		growTime := []int{2, 3, 1}
 		res := number.EarliestFullBloom(plantTime, growTime)

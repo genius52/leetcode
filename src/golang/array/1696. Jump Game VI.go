@@ -3,6 +3,7 @@ package array
 //Input: nums = [10,-5,-2,4,0,3], k = 3
 //Output: 17
 //Explanation: You can choose your jumps forming the subsequence [10,4,3]
+//optimized dp solution
 func dp_maxResult(nums []int,l int,pos int,k int,momo map[int]int)int{
 	if pos >= l{
 		return 0
