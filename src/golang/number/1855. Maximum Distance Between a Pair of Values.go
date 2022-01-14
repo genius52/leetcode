@@ -22,15 +22,22 @@ func maxDistance(nums1 []int, nums2 []int) int {
 	var index1 int = 0
 	var index2 int = 0
 	var res int = 0
-	for index1 < l1 && index2 < l2{
-		if nums1[index1] <= nums2[index2]{
+	for index1 < l1 && index2 < l2 {
+		if nums1[index1] <= nums2[index2] {
 			var dis int = index2 - index1
-			if dis >= res{
+			if dis >= res {
 				res = dis
 			}
 			index2++
-		}else{
+		} else {
 			index1++
+			if index1 > index2 {
+				index2 = index1 + 1
+			}
+			rest_distance := l2 - 1 - index1
+			if rest_distance <= res {
+				break
+			}
 		}
 	}
 	return res
