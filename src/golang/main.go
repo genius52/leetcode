@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		var n int64 = 100
+		res := number.CountGoodNumbers(n)
+		fmt.Println(res)
+	}
+	{
 		//[1,1,2,3]
 		//[1,1,1,1]
 		dist := []int{1, 1, 2, 3}
