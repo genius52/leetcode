@@ -6,6 +6,13 @@
 
 int main() {
     {
+        int n = 3;
+        vector<vector<int>> entries{{0, 1, 5}, {0, 2, 6}, {0, 3, 7}, {1, 1, 4}, {1, 2, 7}, {2, 1, 5}};
+        MovieRentingSystem s1912(n,entries);
+        auto res = s1912.search(1);
+        std::cout<<"1912 res = "<<res.size()<<std::endl;
+    }
+    {
         Solution_1851 s1851;
         std::vector<std::vector<int>> intervals{{1,4},{2,4},{3,6},{4,4}};
         std::vector<int> queries{2,3,4,5};

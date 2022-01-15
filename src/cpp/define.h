@@ -296,6 +296,7 @@ struct ListNode {
 #include "list/1606. Find Servers That Handled Most Number of Requests.hpp"
 #include "list/1622. Fancy Sequence.hpp"
 #include "list/1825. Finding MK Average.hpp"
+#include "list/1912. Design Movie Rental System.hpp"
 #include "thread/1115. Print FooBar Alternately.hpp"
 #include "thread/1116. Print Zero Even Odd.hpp"
 
