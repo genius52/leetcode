@@ -15,6 +15,14 @@ import (
 
 func main() {
 	{
+		n := 5
+		//paths := [][]int{{0,1,2,3,4}, {2,3,4}, {4,0,1,2,3}}
+		//paths := [][]int{{0,1,2,3,4}, {4,3,2,1,0}}
+		paths := [][]int{{0,1,0,1,0,1,0,1,0},{0,1,3,0,1,4,0,1,0}}
+		res := diagram.LongestCommonSubpath(n,paths)
+		fmt.Println(res)
+	}
+	{
 		var n int64 = 100
 		res := number.CountGoodNumbers(n)
 		fmt.Println(res)
