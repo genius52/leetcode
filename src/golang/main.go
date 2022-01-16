@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		var points [][]int = [][]int{{1,2,3},{1,5,1},{3,1,1}}
+		res := array.MaxPoints(points)
+		fmt.Println(res)
+	}
+	{
 		n := 5
 		//paths := [][]int{{0,1,2,3,4}, {2,3,4}, {4,0,1,2,3}}
 		//paths := [][]int{{0,1,2,3,4}, {4,3,2,1,0}}
@@ -3083,11 +3088,6 @@ func main() {
 		input := []string{"4", "13", "5", "/", "+"}
 		res := number.EvalRPN2(input)
 		fmt.Println(res)
-	}
-	{
-		//var points [][]int = [][]int{{2,3},{3,2},{5,3},{4,1},{1,1},{1,4}}
-		//res := diagram.MaxPoints(points)
-		//fmt.Println(res)
 	}
 	{
 		//-1->5->3->4->0
