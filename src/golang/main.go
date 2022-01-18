@@ -15,6 +15,17 @@ import (
 
 func main() {
 	{
+		n := 2
+		batteries := []int{3,3,3}
+		res := number.MaxRunTime(n,batteries)
+		fmt.Println(res)
+	}
+	{
+		s := "aabca"
+		res := string_issue.CountPalindromicSubsequence(s)
+		fmt.Println(res)
+	}
+	{
 		var points [][]int = [][]int{{1,2,3},{1,5,1},{3,1,1}}
 		res := array.MaxPoints(points)
 		fmt.Println(res)
