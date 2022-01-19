@@ -1,5 +1,16 @@
 package array
 
+func addRungs(rungs []int, dist int) int {
+	var l int = len(rungs)
+	var pre int = 0
+	var res int = 0
+	for i := 0;i < l;i++{
+		res += (rungs[i] - pre - 1)/dist
+		pre = rungs[i]
+	}
+	return res
+}
+
 func AddRungs(rungs []int, dist int) int {
 	var l int = len(rungs)
 	var cur int = 0
