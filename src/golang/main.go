@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		m := 5
+		n := 5
+		res := array.ColorTheGrid(m,n)
+		fmt.Println(res)
+	}
+	{
 		n := 2
 		batteries := []int{3,3,3}
 		res := number.MaxRunTime(n,batteries)
