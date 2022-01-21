@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		segments := [][]int{{4,16,12},{9,10,15},{18,19,13},{3,13,20},{12,16,3},{2,10,10},{3,11,4},{13,16,6}}
+		res := array.SplitPainting(segments)
+		fmt.Println(res)
+	}
+	{
 		m := 5
 		n := 5
 		res := array.ColorTheGrid(m,n)
