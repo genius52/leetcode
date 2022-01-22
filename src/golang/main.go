@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		heights := []int{5,1,2,3,10}
+		res := array.CanSeePersonsCount(heights)
+		fmt.Println(res)
+	}
+	{
 		segments := [][]int{{4,16,12},{9,10,15},{18,19,13},{3,13,20},{12,16,3},{2,10,10},{3,11,4},{13,16,6}}
 		res := array.SplitPainting(segments)
 		fmt.Println(res)

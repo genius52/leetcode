@@ -6,6 +6,14 @@
 
 int main() {
     {
+        Solution_1928 s1928;
+        int maxTime = 30;
+        std::vector<std::vector<int>> edges{{0,1,10},{1,2,10},{2,5,10},{0,3,1},{3,4,10},{4,5,15}};
+        std::vector<int> passingFees{5,1,2,20,20,3};
+        auto res = s1928.minCost(maxTime,edges,passingFees);
+        std::cout<<"1928 res = "<<res<<std::endl;
+    }
+    {
         int n = 3;
         vector<vector<int>> entries{{0, 1, 5}, {0, 2, 6}, {0, 3, 7}, {1, 1, 4}, {1, 2, 7}, {2, 1, 5}};
         MovieRentingSystem s1912(n,entries);
