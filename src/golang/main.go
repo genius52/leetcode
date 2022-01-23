@@ -15,6 +15,19 @@ import (
 
 func main() {
 	{
+		grid := [][]int{{1,2,0,1},{1,3,3,1},{0,2,5,1}}
+		pricing := []int{2,3}
+		start := []int{2,3}
+		k := 2
+		res := array.HighestRankedKItems(grid,pricing,start,k)
+		fmt.Println(res)
+	}
+	{
+		cost := []int{6}
+		res := number.MinimumCost(cost)
+		fmt.Println(res)
+	}
+	{
 		heights := []int{5,1,2,3,10}
 		res := array.CanSeePersonsCount(heights)
 		fmt.Println(res)
