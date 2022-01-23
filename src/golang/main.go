@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		statements := [][]int{{2,1,2},{1,2,2},{2,0,2}}
+		res := number.MaximumGood(statements)
+		fmt.Println(res)
+	}
+	{
 		grid := [][]int{{1,2,0,1},{1,3,3,1},{0,2,5,1}}
 		pricing := []int{2,3}
 		start := []int{2,3}
