@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		nums := []int{0,1,2,2}
+		res := array.CountSpecialSubsequences(nums)
+		fmt.Println(res)
+	}
+	{
 		statements := [][]int{{2,1,2},{1,2,2},{2,0,2}}
 		res := number.MaximumGood(statements)
 		fmt.Println(res)
