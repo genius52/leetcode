@@ -30,9 +30,9 @@ func MinSpaceWastedKResizing(nums []int, k int) int {
 	var l int = len(nums)
 	var memo [][]int = make([][]int,l + 1)
 	for i := 0;i < l;i++{
-		memo[i] = make([]int,l + 1)
-		for k := 0;k <= l;k++{
-			memo[i][k] = -1
+		memo[i] = make([]int,k + 1)
+		for j := 0;j <= l;j++{
+			memo[i][j] = -1
 		}
 	}
 	return dp_minSpaceWastedKResizing(nums,0,k,memo)
