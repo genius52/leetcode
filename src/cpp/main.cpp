@@ -6,6 +6,14 @@
 
 int main() {
     {
+        int n = 200;
+        std::vector<std::vector<int>> roads{{0,6,7},{0,1,2},{1,2,3},{1,3,3},{6,3,3},{3,5,1},
+                                            {6,5,1},{2,5,1},{0,4,5},{4,6,2}};
+        Solution_1976 s1976;
+        auto res = s1976.countPaths(n,roads);
+        std::cout<<"1976 res = "<<res<<std::endl;
+    }
+    {
         Solution_1928 s1928;
         int maxTime = 30;
         std::vector<std::vector<int>> edges{{0,1,10},{1,2,10},{2,5,10},{0,3,1},{3,4,10},{4,5,15}};
@@ -72,7 +80,7 @@ int main() {
         //[[3, 1], [3], [1], [], [10], [], [5], [5], [5], []]
 
         //["MKAverage","addElement","addElement","calculateMKAverage","addElement","addElement","calculateMKAverage","addElement","addElement","calculateMKAverage","addElement"]
-        //[[3,1],[17612],[74607],[],[8272],[33433],[],[15456],[64938],[],[99741]]
+        //[[3,1},{17612},{74607},{},{8272},{33433},{},{15456},{64938},{},{99741]]
         MKAverage mk(3,1);
         mk.addElement(17612);
         mk.addElement(74607);
@@ -182,7 +190,7 @@ int main() {
     }
     {
         //[1,2,3,4]
-        // [[0,1,10],[1,2,11],[2,3,12],[1,3,13]]
+        // [[0,1,10},{1,2,11},{2,3,12},{1,3,13]]
         //50
         Solution_2065 s2065;
         std::vector<int> values{1,2,3,4};
@@ -216,7 +224,7 @@ int main() {
     }
     {
         //12
-        //[[11,10],[6,3],[2,5],[9,2],[4,12],[8,7],[9,5],[6,2],[7,2],[7,4],[9,3],[11,1],[4,3]]
+        //[[11,10},{6,3},{2,5},{9,2},{4,12},{8,7},{9,5},{6,2},{7,2},{7,4},{9,3},{11,1},{4,3]]
         //3
         int n = 12;
         std::vector<std::vector<int>> dependencies{{11,10},{6,3},{2,5},{9,2},{4,12},{8,7},{9,5},{6,2},{7,2},{7,4},{9,3},{11,1},{4,3}};
@@ -636,7 +644,7 @@ int main() {
 //        myLinkedList->addAtTail(4);    // linked list becomes 1->2->3
 
         //["MyLinkedList","addAtHead","addAtIndex","get"]
-        //[[],[2],[0,1],[1]]
+        //[[},{2},{0,1},{1]]
         MyLinkedList* myLinkedList = new MyLinkedList();
         myLinkedList->addAtHead(2);
         myLinkedList->addAtIndex(0,1);
@@ -953,8 +961,8 @@ int main() {
         std::cout << "347 res = "<< res.size() <<std::endl;
     }
     {
-        //        //[["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]
-        //        //[["JFK","KUL"],["JFK","NRT"],["NRT","JFK"]]
+        //        //[["JFK","SFO"},{"JFK","ATL"},{"SFO","ATL"},{"ATL","JFK"},{"ATL","SFO"]]
+        //        //[["JFK","KUL"},{"JFK","NRT"},{"NRT","JFK"]]
         Solution_332 s332;
         //std::vector<std::vector<std::string>> input = {std::vector<std::string>{"JFK","KUL"}, std::vector<std::string>{"JFK","NRT"},
 
@@ -1010,7 +1018,7 @@ int main() {
         std::cout << "1774 res = " << res << std::endl;
     }
     {
-        //[[2],[1,1],[2,2],[1],[3,3],[2],[4,4],[1],[3],[4]]
+        //[[2},{1,1},{2,2},{1},{3,3},{2},{4,4},{1},{3},{4]]
         LRUCache lRUCache(2);
         lRUCache.put(1, 1);
         lRUCache.put(2, 2);
@@ -1343,7 +1351,7 @@ int main() {
     }
     {
 //Input: ["SnapshotArray","set","snap","set","get"]
-//[[3],[0,5],[],[0,6],[0,0]]
+//[[3},{0,5},{},{0,6},{0,0]]
 //Output: [null,null,0,null,5]
         SnapshotArray s1146(1);
         s1146.set(0,15);
@@ -1447,7 +1455,7 @@ int main() {
         std::cout << "981 res = " << res << std::endl;
     }
     {
-        //"love","high",10],["love","low",20]
+        //"love","high",10},{"love","low",20]
         TimeMap s981;
 
         s981.set("love","high",10);
@@ -2041,7 +2049,7 @@ int main() {
     }
     {
         //["Twitter","postTweet","follow","follow","getNewsFeed","postTweet","getNewsFeed","getNewsFeed","unfollow","getNewsFeed","getNewsFeed","unfollow","getNewsFeed","getNewsFeed"]
-        //[[],[1,5],[1,2],[2,1],[2],[2,6],[1],[2],[2,1],[1],[2],[1,2],[1],[2]]
+        //[[},{1,5},{1,2},{2,1},{2},{2,6},{1},{2},{2,1},{1},{2},{1,2},{1},{2]]
         Twitter twitter;
         twitter.postTweet(1, 5);
 

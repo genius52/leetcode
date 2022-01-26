@@ -230,6 +230,7 @@ struct ListNode {
 #include "graph/1631. Path With Minimum Effort.hpp"
 #include "graph/1786. Number of Restricted Paths From First to Last Node.hpp"
 #include "graph/1928. Minimum Cost to Reach Destination in Time.hpp"
+#include "graph/1976. Number of Ways to Arrive at Destination.hpp"
 #include "string/1446. Consecutive Characters.cpp"
 #include "string/1451. Rearrange Words in a Sentence.hpp"
 #include "string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
