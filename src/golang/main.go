@@ -15,6 +15,14 @@ import (
 
 func main() {
 	{
+		//[2,3,3,4,4,4,5,6,7,10]
+		//12
+		tasks := []int{2,3,3,4,4,4,5,6,7,10}
+		sessionTime := 12
+		res := array.MinSessions(tasks, sessionTime)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{0,1,2,2}
 		res := array.CountSpecialSubsequences(nums)
 		fmt.Println(res)
@@ -1502,12 +1510,6 @@ func main() {
 	{
 		s := "(ed(et(oc))el)"
 		res := string_issue.ReverseParentheses(s)
-		fmt.Println(res)
-	}
-	{
-		tasks := []int{1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5}
-		sessionTime := 15
-		res := array.MinSessions(tasks, sessionTime)
 		fmt.Println(res)
 	}
 	{
