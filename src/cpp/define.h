@@ -175,6 +175,7 @@ struct ListNode {
 #include "tree/987. Vertical Order Traversal of a Binary Tree.hpp"
 #include "tree/988. Smallest String Starting From Leaf.hpp"
 #include "tree/297. Serialize and Deserialize Binary Tree.hpp"
+#include "tree/1993. Operations on Tree.hpp"
 #include "graph/207. Course Schedule.hpp"
 #include "graph/210. Course Schedule II.hpp"
 #include "graph/1444. Number of Ways of Cutting a Pizza.hpp"

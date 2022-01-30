@@ -6,6 +6,20 @@
 
 int main() {
     {
+        //["LockingTree","unlock","unlock","upgrade","upgrade","upgrade"]
+        //[[[-1,0,1,1,0]],[2,1],[3,10],[2,9],[4,1],[1,5]]
+        //0->1,4
+        //1->2,3
+        std::vector<int> parent{-1,0,1,1,0};
+        LockingTree s1993(parent);
+        auto res = s1993.unlock(2,1);
+        res = s1993.unlock(3,10);
+        res = s1993.upgrade(2,9);
+        res = s1993.upgrade(4,1);
+        res = s1993.upgrade(1,5);
+        std::cout<<"1993 res = "<<res<<std::endl;
+    }
+    {
         int n = 200;
         std::vector<std::vector<int>> roads{{0,6,7},{0,1,2},{1,2,3},{1,3,3},{6,3,3},{3,5,1},
                                             {6,5,1},{2,5,1},{0,4,5},{4,6,2}};
