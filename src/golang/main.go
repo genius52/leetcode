@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		nextVisit := []int{0,0,2}
+		res := number.FirstDayBeenInAllRooms(nextVisit)
+		fmt.Println(res)
+	}
+	{
 		//[2,3,3,4,4,4,5,6,7,10]
 		//12
 		tasks := []int{2,3,3,4,4,4,5,6,7,10}
