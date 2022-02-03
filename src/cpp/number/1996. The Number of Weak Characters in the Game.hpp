@@ -8,14 +8,14 @@ public:
     int numberOfWeakCharacters(vector<vector<int>>& properties) {
         int len = properties.size();
         //攻击力从小到大排序。攻击力相同时，防御力从大到小排序
-std::sort(properties.begin(),properties.end(),[](const std::vector<int>& v1,const  std::vector<int>& v2)->bool{
-    if(v1[0] < v2[0])
-        return true;
-    else if(v1[0] > v2[0])
-        return false;
-    else
-        return v1[1] > v2[1];//避免[5,2],[5,4]这种顺序
-});
+        std::sort(properties.begin(),properties.end(),[](const std::vector<int>& v1,const  std::vector<int>& v2)->bool{
+            if(v1[0] < v2[0])
+                return true;
+            else if(v1[0] > v2[0])
+                return false;
+            else
+                return v1[1] > v2[1];//避免[5,2],[5,4]这种顺序
+        });
         int res = 0;
         int max_def = -2147483648;//记录最大的防御指数
         //if j > i,properties[j] 不可能比 properties[i]弱小
@@ -28,27 +28,4 @@ std::sort(properties.begin(),properties.end(),[](const std::vector<int>& v1,cons
         }
         return res;
     }
-//    int numberOfWeakCharacters(vector<vector<int>>& properties) {
-//        int len = properties.size();
-//        std::sort(properties.begin(),properties.end(),[](const std::vector<int>& v1,const  std::vector<int>& v2)->bool{
-//            if(v1[0] < v2[0])
-//                return true;
-//            else if(v1[0] > v2[0])
-//                return false;
-//            else
-//                return v1[1] < v2[1];
-//        });
-//        int res = 0;
-//        for(int i = 0;i < len;i++){
-//            for(int j = i + 1;j < len;j++){
-//                if(properties[i][0] == properties[j][0])
-//                    continue;
-//                if(properties[i][1] < properties[j][1]){
-//                    res++;
-//                    break;
-//                }
-//            }
-//        }
-//        return res;
-//    }
 };
