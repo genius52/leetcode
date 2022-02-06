@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		nums := []int{1,10,100,1000}
+		res := array.MinOperations2009(nums)
+		fmt.Println(res)
+	}
+	{
 		nextVisit := []int{0,0,2}
 		res := number.FirstDayBeenInAllRooms(nextVisit)
 		fmt.Println(res)
