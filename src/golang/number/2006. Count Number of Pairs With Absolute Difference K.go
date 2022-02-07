@@ -1,5 +1,17 @@
 package number
 
+func countKDifference2(nums []int, k int) int{
+	var cnt [101]int
+	for _,n := range nums{
+		cnt[n]++
+	}
+	var res int = 0
+	for i := 1 + k;i <= 100;i++{
+		res += cnt[i] * cnt[i - k]
+	}
+	return res
+}
+
 func countKDifference(nums []int, k int) int {
 	var l int = len(nums)
 	var res int = 0

@@ -15,6 +15,16 @@ import (
 
 func main() {
 	{
+		var num int64 = -7605
+		res := number.SmallestNumber(num)
+		fmt.Println(res)
+	}
+	{
+		var nums []int = []int{4,1,2,3}
+		res := array.SortEvenOdd(nums)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{1,10,100,1000}
 		res := array.MinOperations2009(nums)
 		fmt.Println(res)
