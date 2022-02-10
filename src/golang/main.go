@@ -15,6 +15,15 @@ import (
 
 func main() {
 	{
+		//"1+2*3+4" [13,21,11,15]
+		//s = "6+0*1", answers = [12,9,6,4,8,6]
+		//s = "3+5*2", answers = [13,0,10,13,13,16,16]
+		s := "4+1+3*5+1*3+1+1*1+6*1+0*3+5*4+4"
+		answers := []int{13,21,11,15}
+		res := number.ScoreOfStudents(s,answers)
+		fmt.Println(res)
+	}
+	{
 		var num int64 = -7605
 		res := number.SmallestNumber(num)
 		fmt.Println(res)
