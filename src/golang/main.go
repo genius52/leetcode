@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		stones := []int{2}
+		res := number.StoneGameIX(stones)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30827,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 		k := 0
 		res := array.WaysToPartition(nums,k)
