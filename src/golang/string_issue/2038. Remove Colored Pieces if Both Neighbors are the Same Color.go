@@ -1,5 +1,19 @@
 package string_issue
 
+func winnerOfGame2(colors string) bool{
+	var l int = len(colors)
+	var a_cnt int = 0
+	for i := 1;i < l - 1;i++{
+		if colors[i - 1] == 'A' && colors[i] == 'A' && colors[i + 1] == 'A'{
+			a_cnt++
+		}
+		if colors[i - 1] == 'B' && colors[i] == 'B' && colors[i + 1] == 'B'{
+			a_cnt--
+		}
+	}
+	return a_cnt > 0
+}
+
 func winnerOfGame(colors string) bool {
 	var l int = len(colors)
 	var a_cnt int = 0
