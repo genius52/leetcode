@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		beans := []int{2,10,3,2}
+		res := array.MinimumRemoval(beans)
+		fmt.Println(res)
+	}
+	{
 		edges := [][]int{{0,1},{1,2}}
 		patience := []int{0,2,1}
 		res := diagram.NetworkBecomesIdle(edges,patience)
