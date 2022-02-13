@@ -15,6 +15,21 @@ import (
 
 func main() {
 	{
+		edges := [][]int{{0,1},{1,2}}
+		patience := []int{0,2,1}
+		res := diagram.NetworkBecomesIdle(edges,patience)
+		fmt.Println(res)
+	}
+	{
+		//s = "leetcode", k = 4, letter = "e", repetition = 2
+		s := "facfffkfnffoppfffzfz"
+		k := 9
+		var letter byte = 'f'
+		repetition := 9
+		res := string_issue.SmallestSubsequence2(s,k,letter,repetition)
+		fmt.Println(res)
+	}
+	{
 		stones := []int{2}
 		res := number.StoneGameIX(stones)
 		fmt.Println(res)
