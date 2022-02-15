@@ -5,6 +5,23 @@ import (
 	"strings"
 )
 
+func areNumbersAscending(s string) bool{
+	var record []string = strings.Split(s," ")
+	var l int = len(record)
+	var pre_num int = -1
+	for i := 0;i < l;i++{
+		n,err := strconv.Atoi(record[i])
+		if err != nil{
+			continue
+		}
+		if n <= pre_num{
+			return false
+		}
+		pre_num = n
+	}
+	return true
+}
+
 func AreNumbersAscending(s string) bool {
 	var record []string = strings.Split(s," ")
 	var l int = len(record)
