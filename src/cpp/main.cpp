@@ -6,6 +6,19 @@
 
 int main() {
     {
+        Solution_2045 s2045;
+//        int n = 5;
+//        std::vector<std::vector<int>> edges{{1,2},{1,3},{1,4},{3,4},{4,5}};
+//        int time = 3;
+//        int change = 5;
+        int n = 2;
+        std::vector<std::vector<int>> edges{{1,2}};
+        int time = 3;
+        int change = 2;
+        auto res = s2045.secondMinimum(n,edges,time,change);
+        std::cout<<"2045 res = "<<res<<std::endl;
+    }
+    {
         std::vector<long long> v{10, 100, 20, 50, 30};
         Bank bank(v);
         auto res = bank.withdraw(3, 10);    // 返回 true ，账户 3 的余额是 $20 ，所以可以取款 $10 。
