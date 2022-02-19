@@ -6,6 +6,15 @@
 
 int main() {
     {
+        //n = 5, relations = [[1,5],[2,5],[3,5],[3,4],[4,5]], time = [1,2,3,4,5]
+        Solution_2050 s2050;
+        int n = 5;
+        std::vector<std::vector<int>> relations{{1,5},{2,5},{3,5},{3,4},{4,5}};
+        std::vector<int> time{1,2,3,4,5};
+        auto res = s2050.minimumTime(n,relations,time);
+        std::cout<<"2050 res = "<<res<<std::endl;
+    }
+    {
         Solution_2045 s2045;
 //        int n = 5;
 //        std::vector<std::vector<int>> edges{{1,2},{1,3},{1,4},{3,4},{4,5}};
