@@ -15,6 +15,17 @@ import (
 
 func main() {
 	{
+		var finalSum int64 = 28
+		res := number.MaximumEvenSplit(finalSum)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{3,1,2,2,2,1,3}
+		var k int = 2
+		res := array.CountPairs(nums,k)
+		fmt.Println(res)
+	}
+	{
 		beans := []int{2,10,3,2}
 		res := array.MinimumRemoval(beans)
 		fmt.Println(res)

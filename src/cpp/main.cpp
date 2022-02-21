@@ -6,6 +6,14 @@
 
 int main() {
     {
+        //s = "**|**|***|", queries = [[2,5],[5,9]]
+        Solution_2055 s2055;
+        std::string s = "**|**|***|";
+        std::vector<std::vector<int>> queries{{2,5},{5,9}};
+        auto res = s2055.platesBetweenCandles(s,queries);
+        std::cout<<"2055 res = "<<res[0]<<std::endl;
+    }
+    {
         //n = 5, relations = [[1,5],[2,5],[3,5],[3,4],[4,5]], time = [1,2,3,4,5]
         Solution_2050 s2050;
         int n = 5;
