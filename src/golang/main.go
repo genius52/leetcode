@@ -15,6 +15,14 @@ import (
 
 func main() {
 	{
+		//"aabkljajfjzxcvlfjlsajfaljflbvcxfjsljflsajfldsfsdfzvcxzabab"
+		//3
+		s := "aabklazxcvllsaallbvcxsllsaldssdzvcxzabab"
+		repeatLimit := 3
+		res := string_issue.RepeatLimitedString(s,repeatLimit)
+		fmt.Println(res)
+	}
+	{
 		var finalSum int64 = 28
 		res := number.MaximumEvenSplit(finalSum)
 		fmt.Println(res)
