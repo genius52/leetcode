@@ -15,6 +15,22 @@ import (
 
 func main() {
 	{
+		obj := diagram.Constructor2069(6,3)
+
+		obj.Step(28)
+		//obj.Step(19)
+		//obj.Step(8)
+		//obj.Step(36)
+		pos := obj.GetPos()
+		dir := obj.GetDir()
+
+		obj.Step(4)
+		pos = obj.GetPos()
+		dir = obj.GetDir()
+		fmt.Println(pos)
+		fmt.Println(dir)
+	}
+	{
 		//"aabkljajfjzxcvlfjlsajfaljflbvcxfjsljflsajfldsfsdfzvcxzabab"
 		//3
 		s := "aabklazxcvllsaallbvcxsllsaldssdzvcxzabab"
