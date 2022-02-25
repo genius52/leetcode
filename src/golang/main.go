@@ -15,6 +15,13 @@ import (
 
 func main() {
 	{
+		values := []int{0,32,10,43}
+		edges := [][]int{{0,1,10},{1,2,15},{0,3,10}}
+		maxTime := 49
+		res := diagram.MaximalPathQuality(values,edges,maxTime)
+		fmt.Println(res)
+	}
+	{
 		obj := diagram.Constructor2069(6,3)
 
 		obj.Step(28)
