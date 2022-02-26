@@ -15,6 +15,22 @@ import (
 
 func main() {
 	{
+//[10,15,30]
+		//[0,10,10,10,10]
+		//3
+		//10
+		tasks := []int{10,15,30}
+		workers := []int{0,10,10,10,10}
+		pills := 3
+		strength := 10
+		//tasks := []int{3,2,1}
+		//workers := []int{0,3,3}
+		//pills := 1
+		//strength := 1
+		res := number.MaxTaskAssign(tasks,workers,pills,strength)
+		fmt.Println(res)
+	}
+	{
 		values := []int{0,32,10,43}
 		edges := [][]int{{0,1,10},{1,2,15},{0,3,10}}
 		maxTime := 49
