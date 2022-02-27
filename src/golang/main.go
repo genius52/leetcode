@@ -15,10 +15,12 @@ import (
 
 func main() {
 	{
-//[10,15,30]
-		//[0,10,10,10,10]
-		//3
-		//10
+		items := [][]int{{1,2},{3,2},{2,4},{5,6},{3,5}}
+		queries := []int{1,2,3,4,5,6}
+		res := array.MaximumBeauty(items,queries)
+		fmt.Println(res)
+	}
+	{
 		tasks := []int{10,15,30}
 		workers := []int{0,10,10,10,10}
 		pills := 3
