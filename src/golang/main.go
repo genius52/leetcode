@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		time := []int{1}
+		totalTrips := 1
+		res := number.MinimumTime(time,totalTrips)
+		fmt.Println(res)
+	}
+	{
 		items := [][]int{{1,2},{3,2},{2,4},{5,6},{3,5}}
 		queries := []int{1,2,3,4,5,6}
 		res := array.MaximumBeauty(items,queries)
