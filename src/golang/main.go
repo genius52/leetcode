@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		nums := []int{7,4,3,9,1,8,5,2,6}
+		k := 3
+		res := array.GetAverages(nums,k)
+		fmt.Println(res)
+	}
+	{
 		grid := [][]int{{1,1,1,1,0},{1,1,1,1,1},{1,1,1,1,1},{0,1,0,0,1}}
 		res := diagram.CountPyramids(grid)
 		fmt.Println(res)
