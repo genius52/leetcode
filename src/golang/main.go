@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		grid := [][]int{{1,1,1,1,0},{1,1,1,1,1},{1,1,1,1,1},{0,1,0,0,1}}
+		res := diagram.CountPyramids(grid)
+		fmt.Println(res)
+	}
+	{
 		time := []int{1}
 		totalTrips := 1
 		res := number.MinimumTime(time,totalTrips)

@@ -32,3 +32,20 @@ func NumberOfSets(n int, k int) int {
 	}
 	return dfs_numberOfSets(n,k,memo)
 }
+
+//func numberOfSets(n int, k int) int{
+//	var dp [][]int = make([][]int,n + 1)//dp[i][j]: 使用i个点，有j个线段的方案数
+//	for i := 0;i <= n;i++{
+//		dp[i] = make([]int,k + 1)
+//	}
+//	for i := 2;i <= n;i++{ //i个点，一个线段的方案数
+//		dp[i][1] = i * (i - 1)/2
+//	}
+//	var MOD int = 1e9 + 7
+//	for i := 3;i <= n;i++{
+//		for j := 2;j < i && j < k;j++{
+//			dp[i][j] =
+//		}
+//	}
+//	return dp[n][k]
+//}

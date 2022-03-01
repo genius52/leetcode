@@ -63,12 +63,10 @@ func numSimilarGroups(strs []string) int {
 
 //Union find solution
 func find_root(groups []int,i int)int {
-	if groups[i] == i{
-		return i
+	if groups[i] != i{
+		groups[i] = find_root(groups,groups[i])
 	}
-	parent := find_root(groups,groups[i])
-	//groups[i] = parent
-	return parent
+	return groups[i]
 }
 
 func numSimilarGroups2(strs []string) int {

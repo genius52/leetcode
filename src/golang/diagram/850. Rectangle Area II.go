@@ -1,7 +1,5 @@
 package diagram
 
-import "fmt"
-
 //Input: rectangles = [[0,0,2,2],[1,0,2,3],[1,0,3,1]]
 //Output: 6
 func isRectangleOverlap(rec1 []int, rec2 []int) bool {
@@ -61,32 +59,39 @@ func add_to_no_overlap(no_overlap *[][]int,rect []int){
 				add[3] = top1
 				new_add = append(new_add,add)
 			}
+			//for k := 0;k < len(new_add);k++{
+			//	ret := isRectangleOverlap(new_add[k],(*no_overlap)[i])
+			//	if ret{
+			//		fmt.Println("fail")
+			//	}
+			//}
 			to_check = append(to_check[:j],to_check[j + 1:]...)
 			check_len = len(to_check)
+
 		}
 		to_check = append(to_check,new_add...)
 	}
-	if len(*no_overlap) == 0{
-		(*no_overlap) = append((*no_overlap),to_check...)
-	}else{
-		var cur_len int = len(*no_overlap)
-		for i := 0;i < len(to_check);i++{
-			var overlap bool = false
-			for j := 0;j < cur_len;j++{
-				ret := isRectangleOverlap((*no_overlap)[j],to_check[i])
-				if ret{
-					overlap = true
-					break
-				}
-			}
-			if !overlap{
-				(*no_overlap) = append((*no_overlap),to_check[i])
-			}else{
-				fmt.Println("fail")
-			}
-		}
-	}
-	//(*no_overlap) = append((*no_overlap),to_check...)
+	//if len(*no_overlap) == 0{
+	//	(*no_overlap) = append((*no_overlap),to_check...)
+	//}else{
+	//	var cur_len int = len(*no_overlap)
+	//	for i := 0;i < len(to_check);i++{
+	//		var overlap bool = false
+	//		for j := 0;j < cur_len;j++{
+	//			ret := isRectangleOverlap((*no_overlap)[j],to_check[i])
+	//			if ret{
+	//				overlap = true
+	//				break
+	//			}
+	//		}
+	//		if !overlap{
+	//			(*no_overlap) = append((*no_overlap),to_check[i])
+	//		}else{
+	//			fmt.Println("fail")
+	//		}
+	//	}
+	//}
+	(*no_overlap) = append((*no_overlap),to_check...)
 }
 
 func RectangleArea(rectangles [][]int) int {
@@ -99,14 +104,6 @@ func RectangleArea(rectangles [][]int) int {
 	for i := 0;i < len(no_overlap);i++{
 		res += (no_overlap[i][2] - no_overlap[i][0]) * (no_overlap[i][3] - no_overlap[i][1])
 		res %= 1000000007
-	}
-	for i := 0;i < len(no_overlap);i++{
-		for j := i + 1;j < len(no_overlap);j++{
-			ret := isRectangleOverlap(no_overlap[i],no_overlap[j])
-			if ret{
-				fmt.Println(ret)
-			}
-		}
 	}
 	return res
 }
