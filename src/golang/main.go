@@ -15,6 +15,20 @@ import (
 
 func main() {
 	{
+		n := 8
+		edgeList := [][]int{{0,3},{0,4},{1,3},{2,4},{2,7},{3,5},{3,6},{3,7},{4,6}}
+		res := diagram.GetAncestors(n,edgeList)
+		fmt.Println(res)
+	}
+	{
+		//[9,8,7,6,5,4,3,2,1,0]
+		//[0,1,2,3,4,5,6,7,8,9]
+		mapping := []int{9,8,7,6,5,4,3,2,1,0}
+		nums := []int{0,1,2,3,4,5,6,7,8,9}
+		res := number.SortJumbled(mapping,nums)
+		fmt.Println(res)
+	}
+	{
 		bombs := [][]int{{1,2,3},{2,3,1},{3,4,2},{4,5,3},{5,6,4}}
 		res := diagram.MaximumDetonation(bombs)
 		fmt.Println(res)
