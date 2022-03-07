@@ -15,6 +15,24 @@ import (
 
 func main() {
 	{
+		fruits := [][]int{{0,9},{4,1},{5,7},{6,2},{7,4},{10,9}}
+		startPos := 5
+		k := 4
+		res := number.MaxTotalFruits(fruits,startPos,k)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{5,6}
+		k := 6
+		res := number.MinimalKSum(nums,k)
+		fmt.Println(res)
+	}
+	{
+		s := "K1:L2"
+		res := string_issue.CellsInRange(s)
+		fmt.Println(res)
+	}
+	{
 		n := 8
 		edgeList := [][]int{{0,3},{0,4},{1,3},{2,4},{2,7},{3,5},{3,6},{3,7},{4,6}}
 		res := diagram.GetAncestors(n,edgeList)
