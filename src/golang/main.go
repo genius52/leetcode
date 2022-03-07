@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		descriptions := [][]int{{20,15,1},{20,17,0},{50,20,1},{50,80,0},{80,19,1}}
+		res := tree.CreateBinaryTree(descriptions)
+		fmt.Println(res)
+	}
+	{
 		fruits := [][]int{{0,9},{4,1},{5,7},{6,2},{7,4},{10,9}}
 		startPos := 5
 		k := 4
