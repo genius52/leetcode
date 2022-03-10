@@ -15,6 +15,21 @@ import (
 
 func main() {
 	{
+		corridor := "SSPPSPS"
+		res := number.NumberOfWays(corridor)
+		fmt.Println(res)
+	}
+	{
+		//[[0,0,1,1],[0,0,1,1]]
+		//2
+		//1
+		grid := [][]int{{0,0,1,1},{0,0,1,1}}
+		stampHeight := 2
+		stampWidth := 1
+		res := array.PossibleToStamp(grid,stampHeight,stampWidth)
+		fmt.Println(res)
+	}
+	{
 		descriptions := [][]int{{20,15,1},{20,17,0},{50,20,1},{50,80,0},{80,19,1}}
 		res := tree.CreateBinaryTree(descriptions)
 		fmt.Println(res)
