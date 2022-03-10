@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		words := []string{"ghnv","uip","tenv","hvepx","e","ktc","byjdt","ulm","cae","ea"}
+		res := string_issue.GroupStrings(words)
+		fmt.Println(res)
+	}
+	{
 		corridor := "SSPPSPS"
 		res := number.NumberOfWays(corridor)
 		fmt.Println(res)
