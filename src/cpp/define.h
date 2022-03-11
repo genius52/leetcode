@@ -91,6 +91,7 @@ struct ListNode {
 #include "array/2122. Recover the Original Array.hpp"
 #include "array/1851. Minimum Interval to Include Each Query.hpp"
 #include "array/2055. Plates Between Candles.hpp"
+#include "array/2163. Minimum Difference in Sums After Removal of Elements.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"

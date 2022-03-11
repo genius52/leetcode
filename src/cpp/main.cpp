@@ -6,6 +6,12 @@
 
 int main() {
     {
+        Solution_2163 s2163;
+        std::vector<int> nums{16,46,43,41,42,14,36,49,50,28,38,25,17,5,18,11,14,21,23,39,23};
+        auto res = s2163.minimumDifference(nums);
+        std::cout<<res<<std::endl;
+    }
+    {
         SORTracker tracker;
         tracker.add("bradford", 2); // 添加 name="bradford" 且 score=2 的景点。
         tracker.add("branford", 3); // 添加 name="branford" 且 score=3 的景点。
