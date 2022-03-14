@@ -15,6 +15,20 @@ import (
 
 func main() {
 	{
+		n := 2
+		artifacts := [][]int{{0,0,0,0},{0,1,1,1}}
+		dig := [][]int{{0,0},{0,1}}
+		res := array.DigArtifacts(n , artifacts, dig)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{2,2,2,2,2}
+		key := 2
+		k := 2
+		res := array.FindKDistantIndices(nums,key,k)
+		fmt.Println(res)
+	}
+	{
 		words := []string{"ghnv","uip","tenv","hvepx","e","ktc","byjdt","ulm","cae","ea"}
 		res := string_issue.GroupStrings(words)
 		fmt.Println(res)
