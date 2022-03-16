@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		s := "1100101"
+		res := string_issue.MinimumTime(s)
+		fmt.Println(res)
+	}
+	{
 		n := 2
 		artifacts := [][]int{{0,0,0,0},{0,1,1,1}}
 		dig := [][]int{{0,0},{0,1}}

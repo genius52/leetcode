@@ -172,6 +172,7 @@ struct ListNode {
 #include "number/1847. Closest Room.hpp"
 #include "number/2043. Simple Bank System.hpp"
 #include "number/2102. Sequentially Ordinal Rank Tracker.hpp"
+#include "number/2166. Design Bitset.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
