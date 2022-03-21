@@ -15,6 +15,42 @@ import (
 
 func main() {
 	{
+		numArrows := 9
+		aliceArrows := []int{1,1,0,1,0,0,2,1,0,1,2,0}
+		res := number.MaximumBobPoints(numArrows,aliceArrows)
+		fmt.Println(res)
+	}
+	{
+		directions := "RLRSLL"
+		res := diagram.CountCollisions(directions)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{6,6,5,5,4,1}
+		res := array.CountHillValley(nums)
+		fmt.Println(res)
+	}
+	{
+		//[[99,7]]
+		//85
+		//95
+		//tires = [[2,3],[3,4]], changeTime = 5, numLaps = 4
+		tires := [][]int{{99,7}}
+		changeTime := 85
+		numLaps := 95
+		//tires := [][]int{{2,3},{3,4}}
+		//changeTime := 5
+		//numLaps := 4
+		res := number.MinimumFinishTime(tires,changeTime,numLaps)
+		fmt.Println(res)
+	}
+	{
+		text := "b"
+		pattern := "bc"
+		res := string_issue.MaximumSubsequenceCount(text,pattern)
+		fmt.Println(res)
+	}
+	{
 		s := "1100101"
 		res := string_issue.MinimumTime(s)
 		fmt.Println(res)
