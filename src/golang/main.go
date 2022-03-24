@@ -15,6 +15,18 @@ import (
 
 func main() {
 	{
+		var nums []int = []int{4}
+		var target int = 2
+		res := array.SearchInsert(nums, target)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{5}
+		target := 5
+		res := array.Search(nums,target)
+		fmt.Println(res)
+	}
+	{
 		s := "tssaaaa"
 		res := string_issue.MinMovesToMakePalindrome(s)
 		fmt.Println(res)
@@ -3673,12 +3685,6 @@ func main() {
 	{
 		var nums []int = []int{1, 2, 3, 2}
 		res := number.SumOfUnique(nums)
-		fmt.Println(res)
-	}
-	{
-		var nums []int = []int{1, 3}
-		var target int = 4
-		res := array.SearchInsert(nums, target)
 		fmt.Println(res)
 	}
 	{
