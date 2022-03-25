@@ -15,6 +15,13 @@ import (
 
 func main() {
 	{
+		floor := "10110101"
+		numCarpets := 2
+		carpetLen := 2
+		res := string_issue.MinimumWhiteTiles(floor,numCarpets,carpetLen)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{4}
 		var target int = 2
 		res := array.SearchInsert(nums, target)
