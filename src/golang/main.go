@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		nums := []int{1,2,3,4,5,6,7}
+		k := 3
+		array.Rotate189(nums,k)
+		fmt.Println(nums)
+	}
+	{
 		floor := "10110101"
 		numCarpets := 2
 		carpetLen := 2

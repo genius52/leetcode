@@ -8,20 +8,17 @@ func sortedSquares(nums []int) []int {
 	var index int = l - 1
 	for low <= high{
 		if nums[low] >= 0{
-			break
-		}
-		if nums[high] > -nums[low]{
 			res[index] = nums[high] * nums[high]
 			high--
 		}else{
-			res[index] = nums[low] * nums[low]
-			low++
+			if nums[high] > -nums[low]{
+				res[index] = nums[high] * nums[high]
+				high--
+			}else{
+				res[index] = nums[low] * nums[low]
+				low++
+			}
 		}
-		index--
-	}
-	for low <= high{
-		res[index] = nums[high] * nums[high]
-		high--
 		index--
 	}
 	return res
