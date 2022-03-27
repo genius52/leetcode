@@ -6,6 +6,18 @@
 
 int main() {
     {
+        //"geuqjmt"
+        //"bgemoegklm"
+        //[3,4,2,6,5,6,5,4,3,2]
+        //s = "abyzz", queryCharacters = "aa", queryIndices = [2,1]
+        Solution_2213 s2213;
+        std::string s = "mef";
+        std::string queryCharacters = "dmdaucfak";
+        std::vector<int> queryIndices{2,0,0,1,2,0,2,0,2};
+        auto res = s2213.longestRepeating(s,queryCharacters,queryIndices);
+        std::cout<<res.size()<<std::endl;
+    }
+    {
         int n = 6;
         std::vector<std::vector<int>> edges{{0,2,2},{0,5,6},{1,0,3},{1,4,5},{2,1,1},{2,3,3},{2,3,4},{3,4,2},{4,5,1}};
         int src1 = 0;
