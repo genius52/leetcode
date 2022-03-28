@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		queries := []int{1,2,3,4,5,90}
+		intLength := 3
+		res := number.KthPalindrome(queries,intLength)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{1,2,3,4,5,6,7}
 		k := 3
 		array.Rotate189(nums,k)
