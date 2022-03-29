@@ -15,6 +15,24 @@ import (
 
 func main() {
 	{
+		s := "leetcode"
+		res := string_issue.FirstUniqChar(s)
+		fmt.Println(res)
+	}
+	{
+		//"ab"
+		//"eidboaoo"
+		var s1 string = "ab"
+		var s2 string = "eidboaoo"
+		res := string_issue.CheckInclusion(s1, s2)
+		fmt.Println(res)
+	}
+	{
+		input := "abcabcabc"
+		res := string_issue.LengthOfLongestSubstring(input)
+		fmt.Println(res)
+	}
+	{
 		queries := []int{1,2,3,4,5,90}
 		intLength := 3
 		res := number.KthPalindrome(queries,intLength)
@@ -3021,14 +3039,6 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		//"adc"
-		//"dcda"
-		var s1 string = "adc"
-		var s2 string = "dcda"
-		res := string_issue.CheckInclusion(s1, s2)
-		fmt.Println(res)
-	}
-	{
 		var nums [][]int = [][]int{{1, 2, 3, 4}}
 		var r int = 2
 		var c int = 2
@@ -5386,11 +5396,6 @@ func main() {
 	//{
 	//	input := "ac"
 	//	res := longestPalindrome(input)
-	//	fmt.Println(res)
-	//}
-	//{
-	//	input := "abcabcabc"
-	//	res := lengthOfLongestSubstring(input)
 	//	fmt.Println(res)
 	//}
 	//{

@@ -8,6 +8,35 @@ func max_int(a,b int)int{
 	}
 }
 
+func LengthOfLongestSubstring(s string) int{
+	var l int = len(s)
+	var res int = 0
+	var left int = 0
+	var right int = 0
+	var record map[uint8]int = make(map[uint8]int)
+	for left < l{
+		for right < l && len(record) == right - left{
+			record[s[right]]++
+			res = max_int(res,right - left)
+			right++
+		}
+		if right == l {
+			if len(record) == right - left{
+				res = max_int(res,right - left)
+			}
+			break
+		}
+		for left < right && len(record) < (right - left){
+			record[s[left]]--
+			if record[s[left]] == 0{
+				delete(record,s[left])
+			}
+			left++
+		}
+	}
+	return res
+}
+
 func lengthOfLongestSubstring(s string) int {
 	var start int = 0
 	var end int = 0
