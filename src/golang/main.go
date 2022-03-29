@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		piles := [][]int{{1,100,3},{7,8,9}}
+		k := 2
+		res := number.MaxValueOfCoins(piles, k)
+		fmt.Println(res)
+	}
+	{
 		s := "leetcode"
 		res := string_issue.FirstUniqChar(s)
 		fmt.Println(res)
