@@ -4,15 +4,12 @@ func dfs_maxAreaOfIsland(grid [][]int,rows int,columns int,r int,c int)int{
 	if r < 0 || c < 0 || r >= rows || c >= columns{
 		return 0
 	}
-	if grid[r][c] == 0 || grid[r][c] == 2{
+	if grid[r][c] == 0{
 		return 0
 	}
-	if grid[r][c] == 1{
-		grid[r][c] = 2
-		return 1 + dfs_maxAreaOfIsland(grid,rows,columns,r - 1,c) + dfs_maxAreaOfIsland(grid,rows,columns,r + 1,c) +
-			dfs_maxAreaOfIsland(grid,rows,columns,r,c - 1) + dfs_maxAreaOfIsland(grid,rows,columns,r,c + 1)
-	}
-	return 0
+	grid[r][c] = 0
+	return 1 + dfs_maxAreaOfIsland(grid,rows,columns,r - 1,c) + dfs_maxAreaOfIsland(grid,rows,columns,r + 1,c) +
+		dfs_maxAreaOfIsland(grid,rows,columns,r,c - 1) + dfs_maxAreaOfIsland(grid,rows,columns,r,c + 1)
 }
 
 func maxAreaOfIsland(grid [][]int) int {

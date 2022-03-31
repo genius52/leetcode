@@ -15,6 +15,50 @@ import (
 
 func main() {
 	{
+		var t1 tree.Node
+		t1.Val = 1
+		var t2 tree.Node
+		t2.Val = 2
+		var t3 tree.Node
+		t3.Val = 3
+		var t4 tree.Node
+		t4.Val = 4
+		var t5 tree.Node
+		t5.Val = 5
+		var t6 tree.Node
+		t6.Val = 6
+		var t7 tree.Node
+		t7.Val = 7
+		t1.Left = &t2
+		t1.Right = &t3
+		t2.Left = &t4
+		t2.Right = &t5
+		t3.Left = &t6
+		t3.Right = &t7
+		res := tree.Connect(&t1)
+		fmt.Println(res)
+	}
+	{
+		//"mississippi"
+		//"mis*is*ip*."
+
+		//"mississippi"
+		//"mis*is*p*."
+
+		//"aaa"
+		//"ab*a"
+
+		//"aab"
+		//"c*a*b"
+
+		//"a"
+		//".*..a*"
+		s := "a"
+		p := ".*..a*"
+		res := string_issue.IsMatch(s,p)
+		fmt.Println(res)
+	}
+	{
 		piles := [][]int{{1,100,3},{7,8,9}}
 		k := 2
 		res := number.MaxValueOfCoins(piles, k)
