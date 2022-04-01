@@ -26,6 +26,25 @@ func min_int(a,b int)int{
 	}
 }
 
+func min_int_number(nums ...int)int{
+	var min int = math.MaxInt32
+	for _,n := range nums{
+		if n < min{
+			min = n
+		}
+	}
+	return min
+}
+
+func max_int_number(nums ...int)int{
+	var max int = math.MinInt32
+	for _,n := range nums{
+		if n > max{
+			max = n
+		}
+	}
+	return max
+}
 //Definition for singly-linked list_queue.
 type ListNode struct {
 	Val int
@@ -254,35 +273,6 @@ func kClosest2(points [][]int, K int) [][]int{
 		}
 	}
 	return points[0:K]
-}
-
-
-//1277
-// Input: matrix =
-// [
-//  [0,1,1,1],
-//  [1,1,1,1],
-//  [0,1,1,1]
-// ]
-// Output: 15
-func min_int_number(nums ...int)int{
-	var min int = math.MaxInt32
-	for _,n := range nums{
-		if n < min{
-			min = n
-		}
-	}
-	return min
-}
-
-func max_int_number(nums ...int)int{
-	var max int = math.MinInt32
-	for _,n := range nums{
-		if n > max{
-			max = n
-		}
-	}
-	return max
 }
 
 //221

@@ -10,6 +10,7 @@ type point struct {
 	y int
 }
 
+//BFS solution
 func UpdateMatrix(matrix [][]int) [][]int{
 	var rows int = len(matrix)
 	var columns int = len(matrix[0])
@@ -52,6 +53,49 @@ func UpdateMatrix(matrix [][]int) [][]int{
 	return res
 }
 
+//DP solution
+func updateMatrix(matrix [][]int) [][]int{
+	var rows int = len(matrix)
+	var columns int = len(matrix[0])
+	var res [][]int = make([][]int,rows)
+	for i := 0;i < rows;i++{
+		res[i] = make([]int,columns)
+	}
+	//from left-top to right-bottom
+	for i := 0;i < rows;i++{
+		for j := 0;j < columns;j++{
+			if matrix[i][j] == 0{
+				continue
+			}
+			top_dis := rows + columns
+			left_dis := rows + columns
+			if i > 0{
+				top_dis = res[i - 1][j]
+			}
+			if j > 0{
+				left_dis = res[i][j - 1]
+			}
+			res[i][j] = min_int(top_dis,left_dis) + 1
+		}
+	}
+	for i := rows - 1;i >= 0;i--{
+		for j := columns - 1;j >= 0;j--{
+			if matrix[i][j] == 0{
+				continue
+			}
+			bottom_dis := rows + columns
+			right_dis := rows + columns
+			if i + 1 < rows{
+				bottom_dis = res[i + 1][j]
+			}
+			if j + 1 < columns{
+				right_dis = res[i][j + 1]
+			}
+			res[i][j] = min_int_number(res[i][j],bottom_dis + 1,right_dis + 1)
+		}
+	}
+	return res
+}
 //func UpdateMatrix(matrix [][]int) [][]int {
 //	var rows int = len(matrix)
 //	var columns int = len(matrix[0])
