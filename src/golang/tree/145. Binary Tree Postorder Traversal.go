@@ -22,3 +22,18 @@ func postorderTraversal(root *TreeNode) []int {
 	}
 	return res
 }
+
+func recursive_postorderTraversal(node *TreeNode,res *[]int){
+	if node == nil{
+		return
+	}
+	recursive_postorderTraversal(node.Left,res)
+	recursive_postorderTraversal(node.Right,res)
+	*res = append(*res,node.Val)
+}
+
+func postorderTraversal2(root *TreeNode) []int {
+	var res []int
+	recursive_postorderTraversal(root,&res)
+	return res
+}

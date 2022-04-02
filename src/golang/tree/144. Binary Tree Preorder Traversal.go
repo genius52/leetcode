@@ -2,6 +2,21 @@ package tree
 
 import "container/list"
 
+func recursive_preorderTraversal(node *TreeNode,res *[]int){
+	if node == nil{
+		return
+	}
+	*res = append(*res,node.Val)
+	recursive_preorderTraversal(node.Left,res)
+	recursive_preorderTraversal(node.Right,res)
+}
+
+func preorderTraversal2(root *TreeNode) []int{
+	var res []int
+	recursive_preorderTraversal(root,&res)
+	return res
+}
+
 func preorderTraversal(root *TreeNode) []int {
 	var res []int
 	if root == nil{

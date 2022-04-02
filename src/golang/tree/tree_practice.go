@@ -54,16 +54,6 @@ func min_int_number(nums ...int)int{
 
 var prev *tree_node = nil
 
-func inorder_visit2(root *TreeNode){
-	if root == nil{
-		return
-	}
-	node := root
-	for node != nil{
-
-	}
-}
-
 func inorder_tree(node *tree_node){
 	if node == nil {
 		return
