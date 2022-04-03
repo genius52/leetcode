@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		nums := []int{1,2,3}
+		res := array.Permute(nums)
+		fmt.Println(res)
+	}
+	{
 		//var n int = 21
 		//var k int = 17
 		//var maxPts int = 10

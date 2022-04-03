@@ -10,7 +10,7 @@ func dfs_isSymmetric(left *TreeNode,right *TreeNode)bool{
 	if left.Val != right.Val{
 		return false
 	}
-	return dfs_isSymmetric(left.Left,right.Right) || dfs_isSymmetric(left.Right,right.Left)
+	return dfs_isSymmetric(left.Left,right.Right) && dfs_isSymmetric(left.Right,right.Left)
 }
 
 func isSymmetric(root *TreeNode) bool {
