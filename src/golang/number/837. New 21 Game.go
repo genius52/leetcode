@@ -9,39 +9,57 @@ package number
 //Output: 0.60000
 //Input: n = 21, k = 17, maxPts = 10
 //Output: 0.73278
-func New21Game(N int, K int, maxPts int) float64 {
-	var dp []float64 = make([]float64,30000)
-	dp[0] = 1.0
-	var rate float64 = 1/float64(maxPts)
-	var cur int = 1
-	for cur < K{
-		for i := 1;i <= maxPts;i++{
-			if (cur - i) < 0{
-				break
-			}
-			dp[cur] += (dp[cur - i] * rate)
-		}
-		cur++
+
+func New21Game(N int, K int, maxPts int) float64{
+	if N < K || K == 0 || K + maxPts <= N{
+		return 1
 	}
-	for cur < (K + maxPts){
-		var i int = maxPts
-		if (cur - i) < 0{
-			i = cur
-		}
-		for ;i >= 1;i--{
-			if (cur - i) < 0{
-				continue
-			}
-			if (cur - i) >= K{
-				break
-			}
-			dp[cur] += (dp[cur - i] * rate)
-		}
-		cur++
-	}
-	var res float64
+	var dp []float64 = make([]float64,K + maxPts)
+	var sum float64 = 0
 	for i := N;i >= K;i--{
-		res += dp[i]
+		dp[i] = 1
+		sum += 1
 	}
-	return res
+	for i := K - 1;i >= 0;i--{
+		dp[i] = sum / float64(maxPts)
+		sum += dp[i] - dp[i + maxPts]
+	}
+	return dp[0]
 }
+
+//func New21Game(N int, K int, maxPts int) float64 {
+//	var dp []float64 = make([]float64,30000)
+//	dp[0] = 1.0
+//	var rate float64 = 1/float64(maxPts)
+//	var cur int = 1
+//	for cur < K{
+//		for i := 1;i <= maxPts;i++{
+//			if (cur - i) < 0{
+//				break
+//			}
+//			dp[cur] += (dp[cur - i] * rate)
+//		}
+//		cur++
+//	}
+//	for cur < (K + maxPts){
+//		var i int = maxPts
+//		if (cur - i) < 0{
+//			i = cur
+//		}
+//		for ;i >= 1;i--{
+//			if (cur - i) < 0{
+//				continue
+//			}
+//			if (cur - i) >= K{
+//				break
+//			}
+//			dp[cur] += (dp[cur - i] * rate)
+//		}
+//		cur++
+//	}
+//	var res float64
+//	for i := N;i >= K;i--{
+//		res += dp[i]
+//	}
+//	return res
+//}

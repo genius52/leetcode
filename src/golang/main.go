@@ -15,6 +15,19 @@ import (
 
 func main() {
 	{
+		//var n int = 21
+		//var k int = 17
+		//var maxPts int = 10
+		//6707
+		//6047
+		//9446
+		var n int = 6707
+		var k int = 6047
+		var maxPts int = 9446
+		res := number.New21Game(n, k, maxPts)
+		fmt.Println(res)
+	}
+	{
 		var t1 tree.Node
 		t1.Val = 1
 		var t2 tree.Node
@@ -2587,19 +2600,6 @@ func main() {
 	{
 		var grid [][]int = [][]int{{1, 1, 1, 4}, {4, 6, 9, 2}}
 		res := array.LargestMagicSquare(grid)
-		fmt.Println(res)
-	}
-	{
-		//var n int = 21
-		//var k int = 17
-		//var maxPts int = 10
-		//6707
-		//6047
-		//9446
-		var n int = 6707
-		var k int = 6047
-		var maxPts int = 9446
-		res := number.New21Game(n, k, maxPts)
 		fmt.Println(res)
 	}
 	{
