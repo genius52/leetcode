@@ -11,22 +11,21 @@ func SwapNodes(head *ListNode, k int) *ListNode {
 	if head == nil || head.Next == nil{
 		return head
 	}
-	var node1 *ListNode = nil
-	var node2 *ListNode = nil
+	var left *ListNode = nil
+	var right *ListNode = nil
 	var i int = 0
 	var visit *ListNode = head
 	for visit != nil{
-		if node2 != nil{
-			node2 = node2.Next
+		if right != nil{
+			right = right.Next
 		}
 		i++
 		if i == k{
-			node1 = visit
-			node2 = head
+			left = visit
+			right = head
 		}
-
 		visit = visit.Next
 	}
-	node1.Val,node2.Val = node2.Val,node1.Val
+	left.Val,right.Val = right.Val,left.Val
 	return head
 }

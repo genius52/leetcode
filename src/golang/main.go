@@ -15,6 +15,17 @@ import (
 
 func main() {
 	{
+		candies := []int{1}
+		var k int64 = 1
+		res := number.MaximumCandies(candies,k)
+		fmt.Println(res)
+	}
+	{
+		var triangle [][]int = [][]int{{-1},{-2,-3}}
+		res := number.MinimumTotal3(triangle)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{1,2,3}
 		res := array.Permute(nums)
 		fmt.Println(res)

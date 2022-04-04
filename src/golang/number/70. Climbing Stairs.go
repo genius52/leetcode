@@ -13,3 +13,21 @@ func climbStairs(n int) int {
 	}
 	return dp[n]
 }
+
+func climbStairs2(n int) int {
+	if n == 1{
+		return 1
+	}
+	if n == 2{
+		return 2
+	}
+	var onestep_before int = 2//start with n == 2
+	var twostep_before int = 1//start with n == 1
+	var cur int = 0
+	for i := 3;i <= n;i++{
+		cur = onestep_before + twostep_before
+		twostep_before = onestep_before
+		onestep_before = cur
+	}
+	return cur
+}
