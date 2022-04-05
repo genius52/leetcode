@@ -16,3 +16,14 @@ func hammingWeight(num uint32) int {
 	}
 	return res
 }
+
+func hammingWeight2(num uint32) int{
+	var res int = 0
+	for num > 0{
+		if (num | 1) == num{
+			res++
+		}
+		num >>= 1
+	}
+	return res
+}
