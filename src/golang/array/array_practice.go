@@ -66,25 +66,6 @@ func remove_duplicated_sorted_array(arr []int)(length int){
 	return cur_pos + 1
 }
 
-func maxArea(height []int) int {
-	var length int = len(height)
-	var low int = 0
-	var high int = length - 1
-	var max_cap int = 0
-	for low < high  {
-		var cap int = int(math.Abs(float64(high - low)) * math.Min(float64(height[high]),float64(height[low])))
-		if cap > max_cap{
-			max_cap = cap
-		}
-		if (height[high - 1] >= height[low+1]){
-			high--
-		} else{
-			low++
-		}
-	}
-	return max_cap
-}
-
 func lemonadeChange(bills []int) bool {
 	var change map[int]int = make(map[int]int)
 	for _,pay  := range bills{

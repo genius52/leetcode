@@ -15,6 +15,26 @@ import (
 
 func main() {
 	{
+		//keys := []byte{'a','b','c','d'}
+		//values := []string{"ei","zf","ei","am"}
+		//dictionary := []string{"abcd","acbd","adbc","badc","dacb","cadb","cbda","abad"}
+
+		keys := []byte{'b'}
+		values := []string{"ca"}
+		dictionary := []string{"aaa","cacbc","bbaba","bb"}
+		obj := string_issue.Constructor2227(keys,values,dictionary)
+		//["abcd"],["eizfeiam"]
+		res1 := obj.Encrypt("bbb")
+		fmt.Println(res1)
+		res2 := obj.Decrypt("cacaca")
+		fmt.Println(res2)
+	}
+	{
+		floor := []int{1,2,4,3}
+		var res int = array.MaxArea(floor)
+		fmt.Println(res)
+	}
+	{
 		candies := []int{1}
 		var k int64 = 1
 		res := number.MaximumCandies(candies,k)
@@ -6050,11 +6070,6 @@ func main() {
 	//	var input []string_issue = []string_issue{"Hello","Alaska", "Dad", "Peace"}
 	//	ret := findWords(input)
 	//	fmt.Println(ret)
-	//}
-	//{
-	//	floor := []int{2,3,4,5,18,17,6}
-	//	var res int = maxArea(floor)
-	//	fmt.Println(res)
 	//}
 	//{
 	//	generate(5)
