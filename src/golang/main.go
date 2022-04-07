@@ -15,6 +15,26 @@ import (
 
 func main() {
 	{
+		//[5,7,7,8,8,10]
+		//8
+		nums := []int{1,2,3}
+		target := 2
+		res := array.SearchRange(nums,target)
+		fmt.Println(res)
+	}
+	{
+		//[4,5,6,7,8,1,2,3]
+		//8
+		nums := []int{4,5,6,7,8,1,2,3}
+		target := 8
+		//nums := []int{4,5,6,7,0,1,2}
+		//target := 0
+		//nums := []int{1,3}
+		//target := 1
+		res := array.Search33(nums,target)
+		fmt.Println(res)
+	}
+	{
 		var n uint32 = 43261596
 		res := number.ReverseBits(n)
 		fmt.Println(res)

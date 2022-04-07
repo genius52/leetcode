@@ -1,5 +1,7 @@
 package number
 
+import "sort"
+
 //Input: nums = [2,2,1,1,1,2,2]
 //Output: 2
 func MajorityElement1(nums []int) int {
@@ -24,4 +26,9 @@ func MajorityElement1(nums []int) int {
 		}
 	}
 	return int(res)
+}
+
+func majorityElement(nums []int) int{
+	sort.Ints(nums)
+	return nums[len(nums)/2]
 }

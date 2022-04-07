@@ -16,7 +16,7 @@ func guess(num int) int{
 func guessNumber(n int) int {
 	var low int = 1
 	var high int = n
-	for low <= high{
+	for low < high{
 		var mid int = low + (high - low)/2
 		ret := guess(mid)
 		if ret == 0{
