@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		var n uint32 = 43261596
+		res := number.ReverseBits(n)
+		fmt.Println(res)
+	}
+	{
 		//keys := []byte{'a','b','c','d'}
 		//values := []string{"ei","zf","ei","am"}
 		//dictionary := []string{"abcd","acbd","adbc","badc","dacb","cadb","cbda","abad"}
