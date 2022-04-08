@@ -5,7 +5,6 @@ import (
 	"container/heap"
 	"container/list"
 	"math"
-	"sort"
 	"strconv"
 	"strings"
 )
@@ -127,32 +126,6 @@ func is_point_in_rectangle(px int,py int,rec []int) bool{
 
 func isRectangleOverlap(rec1 []int, rec2 []int) bool {
 	return rec1[0]<rec2[2] && rec2[0] < rec1[2] && rec1[3] > rec2[1] && rec1[1] < rec2[3];
-}
-
-type KthLargest struct {
-	k int
-	nums []int
-	largest []int
-}
-
-
-func ConstructorK(k int, nums []int) KthLargest {
-	var ele KthLargest = KthLargest{
-		k:k,
-		nums:nums,
-	}
-	sort.Ints(ele.nums)
-	ele.largest = make([]int, k, k)
-	copy(ele.largest,ele.nums[0:k])
-	return ele
-}
-
-func (this *KthLargest) Add(val int) int {
-	this.nums = append(this.nums, val)
-	this.largest = append(this.largest, val)
-	sort.Ints(this.largest)
-	this.largest = this.largest[0:this.k]
-	return this.nums[this.k - 1]
 }
 
 //1255
