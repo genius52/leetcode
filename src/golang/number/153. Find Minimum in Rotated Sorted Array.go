@@ -7,17 +7,17 @@ func findMin(nums []int) int {
 	if l == 1{
 		return nums[0]
 	}
-	var low int = 0
-	var high int = l - 1
+	var left int = 0
+	var right int = l - 1
 	var min_num int = 1<<31
-	for low < high{
-		mid := low + (high - low)/2
-		if nums[mid] > nums[high]{
-			low = mid + 1
-			min_num = nums[low]
+	for left < right{
+		mid := left + (right - left)/2
+		if nums[mid] > nums[right]{
+			left = mid + 1
+			min_num = nums[left]
 		}else{
-			high = mid
-			min_num = nums[high]
+			right = mid
+			min_num = nums[right]
 		}
 	}
 	return min_num
