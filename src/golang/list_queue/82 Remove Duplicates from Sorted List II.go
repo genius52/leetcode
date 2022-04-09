@@ -69,3 +69,28 @@ func DeleteDuplicates2(head *ListNode) *ListNode{
 		return next
 	}
 }
+
+func deleteDuplicates2(head *ListNode) *ListNode{
+	var left *ListNode = head
+	var pre *ListNode
+	var new_head *ListNode = nil
+	for left != nil{
+		var right *ListNode = left.Next
+		for right != nil && right.Val == left.Val{
+			right = right.Next
+		}
+		if right == left.Next{
+			if new_head == nil{
+				new_head = left
+			}
+			if pre == nil{
+				pre = left
+			}else{
+				pre.Next = left
+				pre = left
+			}
+		}
+		left = right
+	}
+	return new_head
+}
