@@ -15,6 +15,20 @@ import (
 
 func main() {
 	{
+		flowers := []int{1,3,1,1}
+		var newFlowers int64 = 7
+		target := 6
+		full := 12
+		partial := 1
+		res := number.MaximumBeauty(flowers , newFlowers , target , full , partial)
+		fmt.Println(res)
+	}
+	{
+		expression :="247+38"
+		res := number.MinimizeResult(expression)
+		fmt.Println(res)
+	}
+	{
 		var matrix [][]int = [][]int{{1,4},{2,5}}
 		var target int = 2
 		res := array.SearchMatrix(matrix, target)
