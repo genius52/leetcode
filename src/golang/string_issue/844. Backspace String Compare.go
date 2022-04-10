@@ -40,3 +40,45 @@ func backspaceCompare(s string, t string) bool {
 	}
 	return true
 }
+
+//func BackspaceCompare(s string, t string) bool{
+//	var l1 int = len(s)
+//	var l2 int = len(t)
+//	var idx1 int = l1 - 1
+//	var idx2 int = l2 - 1
+//	var cnt1 int = 0
+//	var cnt2 int = 0
+//	for idx1 >= 0 || idx2 >= 0{
+//		for idx1 >= 0 && s[idx1] == '#'{
+//			cnt1++
+//			idx1--
+//		}
+//		for cnt1 > 0 {
+//			idx1--
+//			cnt1--
+//		}
+//		if idx1 > 0 && s[idx1] == '#'{
+//			continue
+//		}
+//
+//		for idx2 >= 0 && t[idx2] == '#'{
+//			cnt2++
+//			idx2--
+//		}
+//		for cnt2 > 0{
+//			idx2--
+//			cnt2--
+//		}
+//		if idx2 > 0 && t[idx2] == '#'{
+//			continue
+//		}
+//		for idx1 >= 0 && s[idx1] != '#' && idx2 >= 0 && t[idx2] != '#'{
+//			if s[idx1] != t[idx2]{
+//				return false
+//			}
+//			idx1--
+//			idx2--
+//		}
+//	}
+//	return idx1 <= -1 && idx2 <= -1
+//}
