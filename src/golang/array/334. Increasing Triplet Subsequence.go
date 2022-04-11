@@ -22,7 +22,7 @@ func increasingTriplet(nums []int) bool {
 			min = nums[i]
 		}
 	}
-	return false;
+	return false
 }
 
 func IncreasingTriplet2(nums []int) bool {

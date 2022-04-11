@@ -14,11 +14,7 @@ func SubarraySum(nums []int, k int) int {
 		if _,ok := record[sum - k];ok{
 			res += record[sum - k]
 		}
-		if _,ok := record[sum];ok{
-			record[sum]++
-		} else{
-			record[sum] = 1
-		}
+		record[sum]++
 	}
 	return res
 }

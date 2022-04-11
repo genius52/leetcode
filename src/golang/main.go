@@ -15,6 +15,20 @@ import (
 
 func main() {
 	{
+		target := 7
+		nums := []int{2,3,1,2,4,3}
+		res := array.MinSubArrayLen3(target,nums)
+		fmt.Println(res)
+	}
+	{
+		//[57,44,92,28,66,60,37,33,52,38,29,76,8,75,22]
+		//18
+		var nums []int = []int{57,44,92,28,66,60,37,33,52,38,29,76,8,75,22}
+		var k int = 18
+		res := number.NumSubarrayProductLessThanK(nums, k)
+		fmt.Println(res)
+	}
+	{
 		flowers := []int{1,3,1,1}
 		var newFlowers int64 = 7
 		target := 6
@@ -3826,12 +3840,6 @@ func main() {
 	{
 		var matrix [][]int = [][]int{{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}}
 		res := array.SpiralOrder(matrix)
-		fmt.Println(res)
-	}
-	{
-		var nums []int = []int{1, 2, 3}
-		var k int = 0
-		res := number.NumSubarrayProductLessThanK(nums, k)
 		fmt.Println(res)
 	}
 	{

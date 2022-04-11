@@ -69,3 +69,32 @@ func MinSubArrayLen2(s int, nums []int) int {
 	}
 	return min
 }
+
+func MinSubArrayLen3(target int, nums []int) int{
+	var l int = len(nums)
+	var min_len int = l + 1
+	var left int = 0
+	var right int = 0
+	var cur_sum int = 0
+	for left < l{
+		for right < l && cur_sum < target{
+			cur_sum += nums[right]
+			right++
+		}
+		if cur_sum >= target{
+			cur_len :=  right - left
+			if cur_len < min_len{
+				min_len = cur_len
+				if min_len == 1{
+					break
+				}
+			}
+		}
+		cur_sum -= nums[left]
+		left++
+	}
+	if min_len == l + 1{
+		return 0
+	}
+	return min_len
+}

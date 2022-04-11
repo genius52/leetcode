@@ -22,3 +22,36 @@ func ProductExceptSelf(nums []int) []int {
 	}
 	return res
 }
+
+func productExceptSelf(nums []int) []int{
+	var l int = len(nums)
+	var res []int = make([]int,l)
+	var left_sum int = 1
+	var left_zero_idx int = -1
+	for i := 0;i < l;i++{
+		if nums[i] == 0{
+			left_zero_idx = i
+			break
+		}
+		left_sum *= nums[i]
+	}
+	var right_sum int = 1
+	var right_zero_idx int = -1
+	for i := l - 1;i >= 0;i--{
+		if nums[i] == 0{
+			right_zero_idx = i
+			break
+		}
+		right_sum *= nums[i]
+	}
+	if left_zero_idx == -1{
+		for i := 0;i < l;i++{
+			res[i] = left_sum / nums[i]
+		}
+	}else{
+		if left_zero_idx == right_zero_idx{
+			res[left_zero_idx] = left_sum * right_sum
+		}
+	}
+	return res
+}
