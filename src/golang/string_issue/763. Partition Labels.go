@@ -35,23 +35,21 @@ func PartitionLabels(S string) []int{
 
 func partitionLabels(S string) []int {
 	var res []int
-	var dict [26]int
+	var last_pos [26]int
 	for pos,e := range S{
-		dict[e - 'a'] = pos
+		last_pos[e - 'a'] = pos
 	}
 	l := len(S)
 	i := 0
-	start := 0
-	last := 0
+	left := 0
+	right := 0
 	for i < l {
-		if dict[S[i] - 'a'] > last{
-			last = dict[S[i] - 'a']
+		if last_pos[S[i] - 'a'] > right{
+			right = last_pos[S[i] - 'a']
 		}
-		if last == i{
-			if last == i{
-				res = append(res, last - start + 1)
-				start = i + 1
-			}
+		if right == i{
+			res = append(res, right - left + 1)
+			left = i + 1
 		}
 		i++
 	}
