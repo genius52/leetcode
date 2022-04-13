@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		isConnected := [][]int{{1,0,0,1},{0,1,1,0},{0,1,1,1},{1,0,1,1}}
+		res := diagram.FindCircleNum(isConnected)
+		fmt.Println(res)
+	}
+	{
 		target := 7
 		nums := []int{2,3,1,2,4,3}
 		res := array.MinSubArrayLen3(target,nums)

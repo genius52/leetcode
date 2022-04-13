@@ -26,7 +26,7 @@ func FindKthPositive(arr []int, k int) int{
 
 func FindKthPositive2(arr []int, k int) int {
 	var l int = len(arr)
-	var pos int = 0
+	var pos int =
 	var number int = 1
 	for pos < l{
 		for arr[pos] != number{

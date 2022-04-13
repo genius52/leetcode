@@ -14,11 +14,9 @@ func longestPalindrome409(s string) int {
 	var has_odd bool = false
 	for i := 0;i < 255;i++{
 		if (record[i] | 1) == record[i]{
-			total += record[i] - 1
 			has_odd = true
-		}else{
-			total += record[i]
 		}
+		total += record[i] & ^1
 	}
 	if has_odd{
 		total++
