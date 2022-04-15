@@ -1,6 +1,9 @@
 package number
 
-import "strconv"
+import (
+	"strconv"
+	"strings"
+)
 
 //43
 //Input: num1 = "123", num2 = "456"
@@ -47,7 +50,6 @@ func multiply(num1 string, num2 string) string {
 		res += strconv.Itoa(bit_sum[0] % 10)
 	}else{
 		res += strconv.Itoa(bit_sum[0])
-
 	}
 
 	for i := 1;i < len(bit_sum);i++{
@@ -62,4 +64,28 @@ func multiply(num1 string, num2 string) string {
 		res = strconv.Itoa(upgrade) + res
 	}
 	return res
+}
+
+func Multiply(num1 string, num2 string) string{
+	if num1 == "0" || num2 == "0"{
+		return "0"
+	}
+	var l1 int = len(num1)
+	var l2 int = len(num2)
+	var data []byte = make([]byte,l1 + l2)
+	for i := l1 - 1;i >= 0;i--{
+		for j := l2 - 1;j >= 0;j--{
+			val := (num1[i] - '0') * (num2[j] - '0')
+			data[i + j + 1] += val
+			if data[i + j + 1] >= 10{
+				data[i + j] += data[i + j + 1] / 10
+				data[i + j + 1] %= 10
+			}
+		}
+	}
+	var ss string
+	for i := 0;i < l1 + l2;i++{
+		ss += strconv.Itoa(int(data[i]))
+	}
+	return strings.TrimLeft(ss,"0")
 }

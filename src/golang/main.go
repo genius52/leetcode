@@ -15,6 +15,22 @@ import (
 
 func main() {
 	{
+		//"9990"
+		//"999000"
+		res := number.Multiply("2","3")
+		fmt.Println(res)
+	}
+	{
+		grid := [][]int{{4, 3, 2, -1}, {3, 2, 1, -1}, {1, 1, -1, -2}, {-1, -1, -2, -3}}
+		res := array.CountNegatives(grid)
+		fmt.Println(res)
+	}
+	{
+		var grid [][]int = [][]int{{0,1},{1,0}}
+		res := diagram.ShortestPathBinaryMatrix(grid)
+		fmt.Println(res)
+	}
+	{
 		isConnected := [][]int{{1,0,0,1},{0,1,1,0},{0,1,1,1},{1,0,1,1}}
 		res := diagram.FindCircleNum(isConnected)
 		fmt.Println(res)
@@ -1749,11 +1765,6 @@ func main() {
 			{'.', '.', '.', '.', '.', '.', '.', '.'}, {'.', '.', '#', '.', '.', '.', '.', '.'},
 			{'.', '.', '.', '.', '.', '.', '.', '.'}, {'.', '.', '.', '#', '.', '.', '#', '.'}}
 		res := diagram.MaxStudents(seats)
-		fmt.Println(res)
-	}
-	{
-		grid := [][]int{{4, 3, 2, -1}, {3, 2, 1, -1}, {1, 1, -1, -2}, {-1, -1, -2, -3}}
-		res := array.CountNegatives(grid)
 		fmt.Println(res)
 	}
 	{
@@ -4288,11 +4299,6 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		var grid [][]int = [][]int{{0}}
-		res := diagram.ShortestPathBinaryMatrix(grid)
-		fmt.Println(res)
-	}
-	{
 		var customers []int = []int{1}
 		var grumpy []int = []int{0}
 		var X int = 1
@@ -5926,10 +5932,6 @@ func main() {
 	//{
 	//	input := [][]byte{{'O','X','X','O','X'},{'X','O','O','X','O'},{'X','O','X','O','X'},{'O','X','O','O','O'},{'X','X','O','X','O'}}
 	//	solve(input)
-	//}
-	//{
-	//	res := multiply("111","222")
-	//	fmt.Println(res)
 	//}
 	//{
 	//	input := []int{1,1,2,5,2,3,4}

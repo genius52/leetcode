@@ -10,25 +10,27 @@ import "sort"
 //  ["bat"]
 //]
 
-type sortRunes []rune
-
-func (s sortRunes) Less(i, j int) bool {
-	return s[i] < s[j]
-}
-
-func (s sortRunes) Swap(i, j int) {
-	s[i], s[j] = s[j], s[i]
-}
-
-func (s sortRunes) Len() int {
-	return len(s)
-}
+//type sortRunes []rune
+//
+//func (s sortRunes) Less(i, j int) bool {
+//	return s[i] < s[j]
+//}
+//
+//func (s sortRunes) Swap(i, j int) {
+//	s[i], s[j] = s[j], s[i]
+//}
+//
+//func (s sortRunes) Len() int {
+//	return len(s)
+//}
 
 func groupAnagrams(strs []string) [][]string {
-	var m map[string][]string
+	var m map[string][]string = make(map[string][]string)
 	for i := 0;i < len(strs);i++{
 		data := []rune(strs[i])
-		sort.Sort(sortRunes(data))
+		sort.Slice(data, func(i, j int) bool {
+			return data[i] < data[j]
+		})
 		var s string = string(data[:])
 		m[s] = append(m[s],strs[i])
 	}

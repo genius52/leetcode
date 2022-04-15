@@ -50,6 +50,7 @@ func allPathsSourceTarget2(graph [][]int) [][]int {
 	dfs(target,0,graph,route,&res)
 	return res
 }
+
 func dfs(target int,cur_pos int,graph [][]int,route []int,res *[][]int) {
 	if cur_pos == target{
 		route = append(route, target)
@@ -64,4 +65,3 @@ func dfs(target int,cur_pos int,graph [][]int,route []int,res *[][]int) {
 		}
 	}
 }
-
