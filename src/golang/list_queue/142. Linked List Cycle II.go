@@ -33,3 +33,24 @@ func detectCycle(head *ListNode) *ListNode {
 	}
 	return res
 }
+
+func detectCycle2(head *ListNode) *ListNode {
+	var slow *ListNode = head
+	var fast *ListNode = head
+	for fast != nil && fast.Next != nil{
+		slow = slow.Next
+		fast = fast.Next.Next
+		if slow == fast{
+			break
+		}
+	}
+	if fast == nil || fast.Next == nil{
+		return nil
+	}
+	var start *ListNode = head
+	for start != slow{
+		start = start.Next
+		slow = slow.Next
+	}
+	return start
+}

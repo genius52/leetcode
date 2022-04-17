@@ -15,11 +15,7 @@ func findRepeatedDnaSequences(s string) []string {
 	var record map[string]int = make(map[string]int)
 	for i := 0;i < l - 9;i++{
 		sub := s[i:i+10]
-		if _,ok := record[sub];ok{
-			record[sub]++
-		}else{
-			record[sub] = 1
-		}
+		record[sub]++
 	}
 	for k,v := range record{
 		if v > 1{

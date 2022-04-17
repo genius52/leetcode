@@ -100,48 +100,6 @@ func checkInclusion(s1 string, s2 string) bool {
 	return perm(s1,0,len1 - 1,s2)
 }
 
-//39
-//Input: candidates = [2,3,6,7], target = 7,
-//A solution set is:
-//[
-//  [7],
-//  [2,2,3]
-//]
-func dfs_sum(candidates []int,cur_pos int,cur_sum int,target int,cur_nums []int,res *[][]int){
-	if cur_sum > target{
-		return
-	}
-	if cur_sum == target{
-		var b = make([]int, len(cur_nums))
-		copy(b, cur_nums)
-		*res = append(*res,b)
-		return
-	}
-	if cur_pos >= len(candidates){
-		return
-	}
-	//add current element
-	cur_nums = append(cur_nums,candidates[cur_pos])
-	dfs_sum(candidates,cur_pos,cur_sum + candidates[cur_pos],target,cur_nums,res)
-	cur_nums = cur_nums[:len(cur_nums)-1]
-	//ignore current element
-	dfs_sum(candidates,cur_pos+1,cur_sum,target,cur_nums,res)
-}
-
-func combinationSum(candidates []int, target int) [][]int {
-	for i := 0;i < len(candidates);i++{
-		for j := 1;j < len(candidates) - i;j++{
-			if candidates[j] < candidates[j-1]{
-				candidates[j] , candidates[j-1] = candidates[j-1],candidates[j]
-			}
-		}
-	}
-	var res [][]int
-	var cur_nums []int
-	dfs_sum(candidates,0,0,target,cur_nums,&res)
-	return res
-}
-
 //38
 //1.     1
 //2.     11

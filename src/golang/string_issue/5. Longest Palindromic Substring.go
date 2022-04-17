@@ -45,10 +45,10 @@ func longestPalindrome2(s string) string {
 	if l == 1{
 		return s
 	}
-	var dp [][]int = make([][]int,l)
+	var dp [][]bool = make([][]bool,l)
 	for i := 0;i < l;i++{
-		dp[i] = make([]int,l)
-		dp[i][i] = 1
+		dp[i] = make([]bool,l)
+		dp[i][i] = true
 	}
 	var res string = s[0:1]
 	var max int = 0
@@ -56,14 +56,14 @@ func longestPalindrome2(s string) string {
 		for j := i - 1 ;j >= 0;j--{
 			if s[i] == s[j] {
 				if (i - j) == 1{
-					dp[j][i] = 1
+					dp[j][i] = true
 					if (i - j + 1) > max {
 						max = i - j + 1
 						res = s[j : i+1]
 					}
 				}else{
-					if dp[j + 1][i - 1] == 1{
-						dp[j][i] = 1
+					if dp[j + 1][i - 1] {
+						dp[j][i] = true
 						if (i - j + 1) > max{
 							max = i - j + 1
 							res = s[j:i+1]

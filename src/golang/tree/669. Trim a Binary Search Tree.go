@@ -6,7 +6,7 @@ func trimBST(root *TreeNode, low int, high int) *TreeNode {
 	}
 	left := trimBST(root.Left,low,high)
 	right := trimBST(root.Right,low,high)
-	if root.Val < low || root.Val > high{//
+	if root.Val < low || root.Val > high{
 		if left != nil{
 			return left
 		}else{

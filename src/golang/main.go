@@ -15,6 +15,34 @@ import (
 
 func main() {
 	{
+		candidates := []int{2,3,6,7}
+		target := 7
+		res := array.CombinationSum(candidates,target)
+		fmt.Println(res)
+	}
+	{
+		var t1 tree.TreeNode
+		t1.Val = 1
+		var t2 tree.TreeNode
+		t2.Val = 2
+		var t3 tree.TreeNode
+		t3.Val = 3
+		t2.Left = &t1
+		t2.Right = &t3
+		res := tree.ConvertBST(&t2)
+		fmt.Println(res)
+	}
+	{
+		var nums []int = []int{1, 2, 2,3}
+		res := array.SubsetsWithDup(nums)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{1,2,3}
+		res := array.Subsets(nums)
+		print(res)
+	}
+	{
 		//"9990"
 		//"999000"
 		res := number.Multiply("2","3")
@@ -3738,11 +3766,6 @@ func main() {
 	{
 		var s string = "10"
 		res := string_issue.NumDecodings(s)
-		fmt.Println(res)
-	}
-	{
-		var nums []int = []int{1, 2, 2}
-		res := array.SubsetsWithDup(nums)
 		fmt.Println(res)
 	}
 	{
