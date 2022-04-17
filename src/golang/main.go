@@ -15,6 +15,18 @@ import (
 
 func main() {
 	{
+		var t1 tree.TreeNode
+		t1.Val = 1
+		var t2 tree.TreeNode
+		t2.Val = 2
+		var t3 tree.TreeNode
+		t3.Val = 3
+		t1.Left = &t2
+		t1.Right = &t3
+		res := tree.IncreasingBST(&t1)
+		fmt.Println(res)
+	}
+	{
 		candidates := []int{2,3,6,7}
 		target := 7
 		res := array.CombinationSum(candidates,target)
@@ -2591,19 +2603,6 @@ func main() {
 		k := 1
 		res := string_issue.OrderlyQueue(s, k)
 		fmt.Println(res)
-	}
-	{
-		var t1 tree.TreeNode
-		t1.Val = 5
-		var t2 tree.TreeNode
-		t2.Val = 1
-		var t3 tree.TreeNode
-		t3.Val = 7
-		t1.Left = &t2
-		t1.Right = &t3
-		res := tree.IncreasingBST(&t1)
-		fmt.Println(res)
-
 	}
 	{
 		var N int = 7
