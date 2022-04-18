@@ -1,6 +1,6 @@
 package array
 
-func dfs_canJump(nums []int,start int,dp []int)bool{
+func dfs_canJump(nums []int,start int,visited []bool)bool{
 	if start >= len(nums) - 1 {
 		return true
 	}
@@ -8,25 +8,25 @@ func dfs_canJump(nums []int,start int,dp []int)bool{
 	if max_steps == 0{
 		return false
 	}
-	if dp[start] == 1{
+	if visited[start]{
 		return false
 	}
 	for i := 1;i <= max_steps;i++{
-		if dp[start+i] == 1{
+		if visited[start+i] {
 			continue
 		}
-		res := dfs_canJump(nums,start + i,dp)
+		res := dfs_canJump(nums,start + i,visited)
 		if res{
 			return true
 		}
-		dp[start + i] = 1
+		visited[start + i] = true
 	}
 	return false
 }
 
 func canJump(nums []int) bool {
-	var dp []int = make([]int,len(nums))
-	return dfs_canJump(nums,0,dp)
+	var visited []bool = make([]bool,len(nums))
+	return dfs_canJump(nums,0,visited)
 }
 
 //55
@@ -49,6 +49,9 @@ func CanJump(nums []int) bool{
 		var cur_longest int = longest_pos
 		for visit <= longest_pos{
 			cur_longest = max_int(cur_longest,visit + nums[visit])
+			if cur_longest >= l - 1{
+				return true
+			}
 			visit++
 		}
 		if cur_longest <= longest_pos{

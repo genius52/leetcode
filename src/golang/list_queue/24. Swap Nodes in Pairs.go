@@ -20,3 +20,12 @@ func swapPairs(head *ListNode) *ListNode {
 	head.Next = ret
 	return new_head
 }
+
+func swapPairs2(head *ListNode) *ListNode{
+	var visit *ListNode = head
+	for visit != nil && visit.Next != nil{
+		visit.Val,visit.Next.Val = visit.Next.Val,visit.Val
+		visit = visit.Next.Next
+	}
+	return head
+}
