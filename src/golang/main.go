@@ -15,6 +15,24 @@ import (
 
 func main() {
 	{
+		//ATM atm = new ATM();
+		//atm.deposit([0,0,1,2,1]); // Deposits 1 $100 banknote, 2 $200 banknotes,
+		//// and 1 $500 banknote.
+		//atm.withdraw(600);
+		//["ATM","deposit","withdraw","deposit","withdraw","withdraw"]
+		//[[],[[0,0,1,2,1]],[600],[[0,1,0,1,1]],[600],[550]]
+
+		//["ATM","deposit","withdraw"]
+		//[[],[[0,10,0,3,0]],[500]]
+	 	obj := number.Constructor2242()
+		obj.Deposit([]int{0,10,0,3,0})
+		res := obj.Withdraw(500)
+		obj.Deposit([]int{0,1,0,1,1})
+		res = obj.Withdraw(600)
+		res = obj.Withdraw(550)
+		fmt.Println(res)
+	}
+	{
 		var t1 tree.TreeNode
 		t1.Val = 1
 		var t2 tree.TreeNode
