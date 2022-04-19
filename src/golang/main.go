@@ -15,15 +15,11 @@ import (
 
 func main() {
 	{
-		//ATM atm = new ATM();
-		//atm.deposit([0,0,1,2,1]); // Deposits 1 $100 banknote, 2 $200 banknotes,
-		//// and 1 $500 banknote.
-		//atm.withdraw(600);
-		//["ATM","deposit","withdraw","deposit","withdraw","withdraw"]
-		//[[],[[0,0,1,2,1]],[600],[[0,1,0,1,1]],[600],[550]]
-
-		//["ATM","deposit","withdraw"]
-		//[[],[[0,10,0,3,0]],[500]]
+		grid := [][]int{{23,17,15,3,20},{8,1,20,27,11},{9,4,6,2,21},{40,9,1,10,6},{22,7,4,5,3}}
+		res := diagram.MaxTrailingZeros(grid)
+		fmt.Println(res)
+	}
+	{
 	 	obj := number.Constructor2242()
 		obj.Deposit([]int{0,10,0,3,0})
 		res := obj.Withdraw(500)
