@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		parent := []int{-1,0,1}
+		s := "aab"
+		res := tree.LongestPath(parent,s)
+		fmt.Println(res)
+	}
+	{
 		n := 5
 		k := 2
 		res := list_queue.FindTheWinner(n,k)
