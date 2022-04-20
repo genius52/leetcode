@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		n := 5
+		k := 2
+		res := list_queue.FindTheWinner(n,k)
+		fmt.Println(res)
+	}
+	{
 		grid := [][]int{{23,17,15,3,20},{8,1,20,27,11},{9,4,6,2,21},{40,9,1,10,6},{22,7,4,5,3}}
 		res := diagram.MaxTrailingZeros(grid)
 		fmt.Println(res)

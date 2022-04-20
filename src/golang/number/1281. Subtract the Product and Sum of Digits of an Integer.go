@@ -1,7 +1,5 @@
 package number
 
-
-//1281
 func subtractProductAndSum(n int) int {
 	var sum int = 0
 	var times int = 1

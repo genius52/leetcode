@@ -35,3 +35,18 @@ func MinCostClimbingStairs2(cost []int) int {
 	}
 	return min_int(dp[l - 1],dp[l - 2])
 }
+
+func minCostClimbingStairs2(cost []int) int {
+	var l int = len(cost)
+	if l <= 1{
+		return 0
+	}
+	var cost_last_last int = cost[0]
+	var cost_last int = cost[1]
+	for i := 2;i < l;i++{
+		cur := min_int(cost_last_last + cost[i],cost_last + cost[i])
+		cost_last_last = cost_last
+		cost_last = cur
+	}
+	return min_int(cost_last,cost_last_last)
+}

@@ -19,3 +19,20 @@ func jump(nums []int) int {
 	}
 	return dp[0]
 }
+
+func jump3(nums []int) int {
+	var l int = len(nums)
+	var steps int = 0
+	var start int = 0
+	var end int = 0
+	var max_pos int = 0
+	for max_pos < l - 1{
+		for i := start;i <= end;i++{
+			max_pos = max_int(max_pos,i + nums[i])
+		}
+		start = end + 1
+		end = max_pos
+		steps++
+	}
+	return steps
+}
