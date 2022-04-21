@@ -15,6 +15,18 @@ import (
 
 func main() {
 	{
+		obj := list_queue.Constructor705()
+		obj.Add(1)
+		obj.Add(2)
+		res := obj.Contains(1)
+		res = obj.Contains(3)
+		obj.Add(2)
+		res = obj.Contains(2)
+		obj.Remove(2)
+		res = obj.Contains(2)
+		fmt.Println(res)
+	}
+	{
 		parent := []int{-1,0,1}
 		s := "aab"
 		res := tree.LongestPath(parent,s)

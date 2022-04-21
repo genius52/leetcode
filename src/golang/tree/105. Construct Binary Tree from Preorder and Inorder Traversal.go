@@ -15,21 +15,16 @@ func recursive_buildTree(preorder []int,pre_start int,pre_end int,inorder []int,
 	if pre_start > pre_end || in_start> in_end {
 		return nil
 	}
-
 	var node *TreeNode = new(TreeNode)
 	node.Val = preorder[pre_start]
-	find_inorder_index:= in_start
-	var find bool = false
+	find_inorder_index := in_start
 	for ;find_inorder_index <= in_end;find_inorder_index++{
 		if preorder[pre_start] == inorder[find_inorder_index]{
-			find = true
 			break
 		}
 	}
-	if find{
-		node.Left = recursive_buildTree(preorder,pre_start + 1,pre_end,inorder,in_start,find_inorder_index-1)
-		node.Right = recursive_buildTree(preorder,pre_start + 1 - in_start + find_inorder_index ,pre_end,inorder,find_inorder_index+1,in_end)
-	}
+	node.Left = recursive_buildTree(preorder,pre_start + 1,pre_end,inorder,in_start,find_inorder_index-1)
+	node.Right = recursive_buildTree(preorder,pre_start + 1 - in_start + find_inorder_index ,pre_end,inorder,find_inorder_index+1,in_end)
 	return node
 }
 

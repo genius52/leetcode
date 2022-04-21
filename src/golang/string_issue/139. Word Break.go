@@ -8,7 +8,7 @@ import "strings"
 //Note that you are allowed to reuse a dictionary word.
 //Input: s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"]
 //Output: false
-func dfs_wordBreak(s string,wordDict []string,cur_pos int,memo map[int]bool)bool{
+func dfs_wordBreak(s string,dict map[string]bool,cur_pos int,memo map[int]bool)bool{
 	if cur_pos >= len(s){
 		return true
 	}
@@ -16,9 +16,9 @@ func dfs_wordBreak(s string,wordDict []string,cur_pos int,memo map[int]bool)bool
 		return false
 	}
 	sub := s[cur_pos:]
-	for _,w := range wordDict{
+	for w,_ := range dict{
 		if strings.HasPrefix(sub,w){
-			if dfs_wordBreak(s,wordDict,cur_pos + len(w),memo){
+			if dfs_wordBreak(s,dict,cur_pos + len(w),memo){
 				return true
 			}
 		}
@@ -29,5 +29,9 @@ func dfs_wordBreak(s string,wordDict []string,cur_pos int,memo map[int]bool)bool
 
 func wordBreak(s string, wordDict []string) bool {
 	var record map[int]bool = make(map[int]bool)
-	return dfs_wordBreak(s,wordDict,0,record)
+	var dict map[string]bool = make(map[string]bool)
+	for _,w := range wordDict{
+		dict[w] = true
+	}
+	return dfs_wordBreak(s,dict,0,record)
 }
