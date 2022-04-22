@@ -15,6 +15,31 @@ import (
 
 func main() {
 	{
+		//nums1 = [4,1,2], nums2 = [1,3,4,2].
+		nums1 := []int{4,1,2}
+		nums2 := []int{1,3,4,2}
+		res := array.NextGreaterElement(nums1,nums2)
+		fmt.Println(res)
+	}
+	{
+		var t1 tree.TreeNode
+		t1.Val = 1
+		var t2 tree.TreeNode
+		t2.Val = 2
+		var t3 tree.TreeNode
+		t3.Val = 3
+		var t4 tree.TreeNode
+		t4.Val = 4
+		var t5 tree.TreeNode
+		t5.Val = 5
+		t1.Left = &t2
+		t1.Right = &t3
+		//t2.Left = &t4
+		//t2.Right = &t5
+		res := tree.PathSum2(&t1, 3)
+		fmt.Println(res)
+	}
+	{
 		obj := list_queue.Constructor705()
 		obj.Add(1)
 		obj.Add(2)
@@ -5412,24 +5437,6 @@ func main() {
 	}
 	{
 		res := number.NumOfWays(5000)
-		fmt.Println(res)
-	}
-	{
-		var t1 tree.TreeNode
-		t1.Val = 1
-		var t2 tree.TreeNode
-		t2.Val = 2
-		var t3 tree.TreeNode
-		t3.Val = 3
-		var t4 tree.TreeNode
-		t4.Val = 4
-		var t5 tree.TreeNode
-		t5.Val = 5
-		t1.Left = &t2
-		t1.Right = &t3
-		t2.Left = &t4
-		t2.Right = &t5
-		res := tree.PathSum2(nil, 22)
 		fmt.Println(res)
 	}
 	{
