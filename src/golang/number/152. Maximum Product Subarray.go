@@ -62,3 +62,27 @@ func MaxProduct2(nums []int) int{
 	}
 	return max
 }
+
+
+func MaxProduct3(nums []int) int{
+	l := len(nums)
+	if l == 0{
+		return 0
+	}
+	if l == 1{
+		return nums[0]
+	}
+	var pre_min int = nums[0]//nums[0:i] =  子数组乘积的最小值
+	var pre_max int = nums[0]//nums[0:i] =  子数组乘积的最大值
+	var max int = nums[0]
+	for i := 1;i < l;i++{
+		product1 := nums[i] * pre_min
+		product2 := nums[i] * pre_max
+		pre_min = min_int_number(nums[i],product1,product2)
+		pre_max = max_int_number(nums[i],product1,product2)
+		if pre_max > max{
+			max = pre_max
+		}
+	}
+	return max
+}

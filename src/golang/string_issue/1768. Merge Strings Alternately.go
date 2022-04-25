@@ -7,23 +7,16 @@ func mergeAlternately(word1 string, word2 string) string {
 	var l2 int = len(word2)
 	var i int = 0
 	var j int = 0
-	var data []string = make([]string, l1+l2)
-	var idx int = 0
-	for i < l1 && j < l2 {
-		data[idx] = string(word1[i])
-		idx++
-		data[idx] = string(word2[j])
-		idx++
+	var data strings.Builder
+	for i < l1 || j < l2 {
+		if i < l1{
+			data.WriteByte(word1[i])
+			i++
+		}
+		if j < l2{
+			data.WriteByte(word2[j])
+			j++
+		}
 	}
-	for i < l1 {
-		data[idx] = string(word1[i])
-		i++
-		idx++
-	}
-	for j < l2 {
-		data[idx] = string(word2[j])
-		j++
-		idx++
-	}
-	return strings.Join(data, "")
+	return data.String()
 }

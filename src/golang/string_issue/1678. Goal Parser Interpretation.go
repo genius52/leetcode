@@ -9,3 +9,21 @@ func interpret(command string) string {
 	res = strings.ReplaceAll(res,"(al)","al")
 	return res
 }
+
+func interpret2(command string) string{
+	var res strings.Builder
+	var l int = len(command)
+	for i := 0;i < l;{
+		if command[i] == 'G'{
+			res.WriteByte('G')
+			i++
+		}else if command[i] == '(' && command[i + 1] == ')'{
+			res.WriteString("o")
+			i += 2
+		}else{
+			res.WriteString("al")
+			i += 4
+		}
+	}
+	return res.String()
+}

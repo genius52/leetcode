@@ -28,3 +28,26 @@ func LongestCommonSubsequence(text1 string, text2 string) int {
 	}
 	return res
 }
+
+func LongestCommonSubsequence2(text1 string, text2 string) int {
+	var l1 int = len(text1)
+	var l2 int = len(text2)
+	var dp [][]int = make([][]int,l1 + 1)//dp[i][j] = the length of longest from text1[0:i] and text2[0:j]
+	for i := 0;i <= l1;i++{
+		dp[i] = make([]int,l2 + 1)
+	}
+	var res int = 0
+	for i := 0;i < l1;i++{
+		for j := 0;j < l2;j++{
+			if text1[i] == text2[j]{
+				dp[i + 1][j + 1] = 1 + dp[i][j]
+			}else{
+				dp[i + 1][j + 1] = max_int(dp[i][j + 1],dp[i + 1][j])
+			}
+			if dp[i + 1][j + 1] > res{
+				res = dp[i + 1][j + 1]
+			}
+		}
+	}
+	return res
+}

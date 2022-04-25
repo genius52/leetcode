@@ -18,7 +18,6 @@ func GetMaxLen(nums []int) int{
 				}else{
 					dp_neg[i] = 1
 				}
-
 				if dp_neg[i - 1] > 0{
 					dp_pos[i] = 1 + dp_neg[i - 1]
 				}
@@ -34,6 +33,41 @@ func GetMaxLen(nums []int) int{
 			}
 		}
 		res = max_int(res,dp_pos[i])
+	}
+	return res
+}
+
+func GetMaxLen2(nums []int) int{
+	var l int = len(nums)
+	var pre_neg_len int = 0//上一个位置乘积为负数的最大长度
+	var pre_pos_len int = 0//上一个位置乘积为正数的最大长度
+	if nums[0] > 0{
+		pre_pos_len = 1
+	}else if nums[0] < 0{
+		pre_neg_len = 1
+	}
+	var res int = 0
+	for i := 1;i < l;i++{
+		if nums[i] == 0{
+			pre_neg_len = 0
+			pre_pos_len = 0
+		}else if nums[i] > 0{
+			if pre_neg_len > 0{
+				pre_neg_len++
+			}
+			pre_pos_len++
+		}else if nums[i] < 0{
+			tmp := pre_neg_len
+			pre_neg_len = 1 + pre_pos_len
+			if tmp > 0{
+				pre_pos_len = tmp + 1
+			}else{
+				pre_pos_len = 0
+			}
+		}
+		if pre_pos_len > res{
+			res = pre_pos_len
+		}
 	}
 	return res
 }

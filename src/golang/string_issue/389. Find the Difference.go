@@ -12,6 +12,7 @@ func findTheDifference(s string, t string) byte {
 	for i := 0;i < 26;i++{
 		if cnt[i] == 1{
 			res = byte(i) + byte('a')
+			break
 		}
 	}
 	return res

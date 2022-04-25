@@ -29,8 +29,8 @@ func CanVisitAllRooms(rooms [][]int) bool {
 }
 
 //dfs solution
-func dfs_canVisitAllRooms(rooms [][]int,cur int,visited map[int]bool){
-	if _,ok := visited[cur];ok{
+func dfs_canVisitAllRooms(rooms [][]int,cur int,visited []bool){
+	if visited[cur]{
 		return
 	}
 	visited[cur] = true
@@ -42,7 +42,12 @@ func dfs_canVisitAllRooms(rooms [][]int,cur int,visited map[int]bool){
 
 func canVisitAllRooms2(rooms [][]int) bool {
 	var l int = len(rooms)
-	var visited map[int]bool = make(map[int]bool)
+	var visited []bool = make([]bool,l)
 	dfs_canVisitAllRooms(rooms,0,visited)
-	return len(visited) == l
+	for i := 0;i < l;i++{
+		if !visited[i]{
+			return false
+		}
+	}
+	return true
 }
