@@ -15,6 +15,22 @@ import (
 
 func main() {
 	{
+		//flowers := [][]int{{28,37},{23,33},{39,39},{49,50},{41,45},{14,47}}
+		//persons := []int{44,41}
+		//flowers := [][]int{{1,10},{3,3}}
+		//persons := []int{3,3,2}
+		flowers := [][]int{{50,50},{19,27},{40,46},{42,48},{22,46},{41,50},{11,36},{14,29}}
+		persons := []int{38}
+		res := number.FullBloomFlowers(flowers,persons)
+		fmt.Println(res)
+	}
+	{
+		rectangles := [][]int{{1,2},{2,3},{2,5}}
+		points := [][]int{{2,1},{1,4}}
+		res := diagram.CountRectangles(rectangles,points)
+		fmt.Println(res)
+	}
+	{
 		left := 0
 		right := 0
 		res := number.RangeBitwiseAnd(left,right)
