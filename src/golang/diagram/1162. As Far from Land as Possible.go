@@ -7,11 +7,13 @@ func MaxDistance2(grid [][]int) int{
 	var rows int = len(grid)
 	var columns int = len(grid[0])
 	var q list.List
+	var zero_cnt int = rows * columns
 	for i := 0;i < rows;i++{
 		for j := 0;j < columns;j++{
 			if grid[i][j] == 1{
 				var p point = point{i,j}
 				q.PushBack(p)
+				zero_cnt--
 			}
 		}
 	}
@@ -20,7 +22,6 @@ func MaxDistance2(grid [][]int) int{
 	}
 	var dirs [][]int = [][]int{{-1,0},{1,0},{0,-1},{0,1}}
 	var distance int = 1
-	var max_distance int = 0
 	for q.Len() > 0{
 		var l int = q.Len()
 		for i := 0;i < l;i++{
@@ -38,12 +39,15 @@ func MaxDistance2(grid [][]int) int{
 				}
 				q.PushBack(next)
 				grid[next.x][next.y] = distance
-				max_distance = distance
+				zero_cnt--
 			}
+		}
+		if zero_cnt == 0{
+			break
 		}
 		distance++
 	}
-	return max_distance
+	return distance
 }
 
 //DFS solution
