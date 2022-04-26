@@ -6,6 +6,13 @@
 
 int main() {
     {
+        Solution_215 s215;
+        std::vector<int> nums{3,2,1,5,6,4};
+        int k = 2;
+        auto res = s215.findKthLargest2(nums,k);
+        std::cout<<res<<std::endl;
+    }
+    {
         //"geuqjmt"
         //"bgemoegklm"
         //[3,4,2,6,5,6,5,4,3,2]

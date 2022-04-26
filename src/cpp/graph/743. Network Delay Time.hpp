@@ -6,7 +6,7 @@ using namespace std;
 
 class Solution_743 {
 public:
-    //djkstra
+    //dijkstra
     int networkDelayTime(vector<vector<int>>& times, int n, int k){
         std::vector<int> distance_from_k(n + 1,2147483647);
         std::unordered_map<int,std::unordered_map<int,int>> graph;

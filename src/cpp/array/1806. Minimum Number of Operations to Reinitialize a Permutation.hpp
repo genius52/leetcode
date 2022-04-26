@@ -23,7 +23,6 @@ public:
                 }else{
                     data[i] = old[i/2];
                 }
-
             }
             bool match = true;
             for(int i = 0;i < n;i++){

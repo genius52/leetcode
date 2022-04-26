@@ -1,13 +1,15 @@
 package string_issue
 
+import "strings"
+
 func toLowerCase(str string) string {
-	var res string
+	var res strings.Builder
 	for _,c := range str{
 		if c >= 'A' && c <= 'Z'{
-			res += string(c + 32)
+			res.WriteByte(byte(c + 32))
 		}else{
-			res += string(c)
+			res.WriteByte(byte(c))
 		}
 	}
-	return res
+	return res.String()
 }

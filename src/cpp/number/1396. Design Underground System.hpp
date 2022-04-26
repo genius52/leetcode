@@ -22,8 +22,6 @@ public:
     }
 
     double getAverageTime(string startStation, string endStation) {
-        //double res = 0.0;
-        //record_[startStation][endStation];
         return double(record_[startStation][endStation].first) / double(record_[startStation][endStation].second);
     }
 };

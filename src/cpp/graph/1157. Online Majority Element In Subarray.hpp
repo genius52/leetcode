@@ -26,6 +26,8 @@ public:
             if(it->second.size() < threshold)
                 continue;
             auto l = std::lower_bound(std::begin(it->second),std::end(it->second),left);//大于等于left
+            if(l == it->second.end())
+                continue;
             auto r = std::upper_bound(std::begin(it->second),std::end(it->second),right);//大于right
             if(std::distance(l,r) >= threshold){
                 return it->first;

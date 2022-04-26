@@ -3,24 +3,17 @@
 using namespace std;
 
 class TreeAncestor {
-    std::vector<std::vector<int>> record;
+    std::vector<std::vector<int>> record;//record[i][j]: node i's jth ancestor
 public:
     TreeAncestor(int n, vector<int>& parent) {
         record.resize(n);
-        for (int i = 0; i < n; i++) {
-            auto par = parent[i];
-            while (par != -1) {
-                record[i].push_back(par);
-                par = parent[par];
-            }
+        for(int i = 0;i < n;i++){
+            record[i].push_back(parent[i]);
         }
+
     }
 
     int getKthAncestor(int node, int k) {
-        int len = record[node].size();
-        if (len < k)
-            return -1;
-        else
-            return record[node][k - 1];
+
     }
 };
