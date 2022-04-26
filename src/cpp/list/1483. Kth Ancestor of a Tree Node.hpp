@@ -14,6 +14,6 @@ public:
     }
 
     int getKthAncestor(int node, int k) {
-
+        return 0;
     }
 };
