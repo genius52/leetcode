@@ -11,8 +11,8 @@ func gcd(a int,b int)int{
 
 func MaxPoints(points [][]int) int {
 	var l int = len(points)
-	if l < 3{
-		return 2
+	if l <= 2{
+		return l
 	}
 	var record map[string]int = make(map[string]int)
 	var max_cnt int = 0
@@ -27,9 +27,10 @@ func MaxPoints(points [][]int) int {
 			c := points[j][0] * points[i][1] - points[i][0] * points[j][1]
 			//a, b, c = y2 - y1, x1 - x2, x2 * y1 - x1 * y2
 			g := gcd(a,b)
-			a /= g
-			b /= g
-			//c /= c
+			g2 := gcd(g,c)
+			a /= g2
+			b /= g2
+			c /= g2
 			key := strconv.Itoa(a) + "," + strconv.Itoa(b) + "," + strconv.Itoa(c)
 			if _,ok := record[key];ok{
 				continue

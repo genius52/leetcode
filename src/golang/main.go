@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		points := [][]int{{9,-25},{-4,1},{-1,5},{-7,7}}
+		res := diagram.MaxPoints(points)
+		fmt.Println(res)
+	}
+	{
 		//var s = "cba"
 		//var pairs [][int = [][]int{{0, 1}, {1, 2}}
 		// s = "dcab", pairs = [[0,3],[1,2]]
