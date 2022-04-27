@@ -57,3 +57,42 @@ func SmallestStringWithSwaps(s string, pairs [][]int) string {
 	}
 	return strings.Join(res,"")
 }
+
+func SmallestStringWithSwaps2(s string, pairs [][]int) string{
+	var l int = len(s)
+	var groups []int = make([]int,l)
+	for i := 0;i < l;i++{
+		groups[i] = i
+	}
+	for _,pair := range pairs{
+		i := pair[0]
+		j := pair[1]
+		group1 := get_parent(groups,i)
+		group2 := get_parent(groups,j)
+		if group1 != group2{
+			if group1 < group2{
+				groups[group2] = group1
+			}else{
+				groups[group1] = group2
+			}
+		}
+	}
+	var record [][]int = make([][]int,l) //将同一组的索引放在一起
+	var ss [][]string = make([][]string,l)
+	for i := 0;i < l;i++{
+		group := get_parent(groups,i)
+		record[group] = append(record[group],i)
+		ss[group] = append(ss[group],string(s[i]))
+	}
+	var res []string = make([]string,l)
+	for idx,r := range record{
+		if len(r) == 0{
+			continue
+		}
+		sort.Strings(ss[idx])
+		for i := 0;i < len(r);i++{
+			res[r[i]] = ss[idx][i]
+		}
+	}
+	return strings.Join(res,"")
+}

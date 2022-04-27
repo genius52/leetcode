@@ -25,3 +25,13 @@ func maximalSquare(matrix [][]byte) int {
 	}
 	return res * res
 }
+
+func min_byte_number(nums ...byte)byte{
+	var min byte = 127
+	for _,n := range nums{
+		if n < min{
+			min = n
+		}
+	}
+	return min
+}

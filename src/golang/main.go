@@ -15,6 +15,15 @@ import (
 
 func main() {
 	{
+		//var s = "cba"
+		//var pairs [][int = [][]int{{0, 1}, {1, 2}}
+		// s = "dcab", pairs = [[0,3],[1,2]]
+		var s = "dcab"
+		var pairs [][]int = [][]int{{0,3},{1,2}}
+		res := diagram.SmallestStringWithSwaps2(s, pairs)
+		fmt.Println(res)
+	}
+	{
 		//flowers := [][]int{{28,37},{23,33},{39,39},{49,50},{41,45},{14,47}}
 		//persons := []int{44,41}
 		//flowers := [][]int{{1,10},{3,3}}
@@ -4342,12 +4351,6 @@ func main() {
 		var t string = "nxargkbydxmsgby"
 		var maxCost int = 14
 		res := string_issue.EqualSubstring(s, t, maxCost)
-		fmt.Println(res)
-	}
-	{
-		var s = "cba"
-		var pairs [][]int = [][]int{{0, 1}, {1, 2}}
-		res := diagram.SmallestStringWithSwaps(s, pairs)
 		fmt.Println(res)
 	}
 	{
