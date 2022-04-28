@@ -53,15 +53,16 @@ func allPathsSourceTarget2(graph [][]int) [][]int {
 
 func dfs(target int,cur_pos int,graph [][]int,route []int,res *[][]int) {
 	if cur_pos == target{
-		route = append(route, target)
-		*res = append(*res, route)
+		var new_route []int = make([]int,len(route))
+		copy(new_route,route)
+		new_route = append(new_route,cur_pos)
+		*res = append(*res, new_route)
 		return
 	}else{
+		route = append(route,cur_pos)
 		for i := 0; i < len(graph[cur_pos]);i++{
-			var new_route []int = make([]int,len(route))
-			copy(new_route,route)
-			new_route = append(new_route, cur_pos)
-			dfs(target,graph[cur_pos][i],graph,new_route,res)
+			dfs(target,graph[cur_pos][i],graph,route,res)
 		}
+		route = route[:len(route) - 1]
 	}
 }
