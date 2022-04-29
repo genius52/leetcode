@@ -5,9 +5,15 @@ package diagram
 type Point struct{
 	x int
 	y int
+}
+
+type Point2 struct{
+	x int
+	y int
 	left_step int
 }
-func dfs_findPaths(i int,j int,rows int,columns int,cur_steps int,N int,record map[Point]int) int{
+
+func dfs_findPaths(i int,j int,rows int,columns int,cur_steps int,N int,record map[Point2]int) int{
 	if i < 0 || i >= rows || j < 0 || j >= columns{
 		return 1
 	}
@@ -18,7 +24,7 @@ func dfs_findPaths(i int,j int,rows int,columns int,cur_steps int,N int,record m
 	if ((i - rest_step) >= 0 && (i + rest_step) < rows) && ((j - rest_step) >= 0 && (j + rest_step) < columns){
 		return 0
 	}
-	var p Point = Point{i,j,rest_step}
+	var p Point2 = Point2{i,j,rest_step}
 	if _,ok := record[p];ok{
 		return record[p]
 	}
@@ -29,6 +35,6 @@ func dfs_findPaths(i int,j int,rows int,columns int,cur_steps int,N int,record m
 }
 
 func FindPaths(m int, n int, N int, i int, j int) int {
-	var record map[Point]int = make(map[Point]int)
+	var record map[Point2]int = make(map[Point2]int)
 	return dfs_findPaths(i,j,m,n,0,N,record)
 }

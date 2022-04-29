@@ -11,7 +11,9 @@ func MaxDistance2(grid [][]int) int{
 	for i := 0;i < rows;i++{
 		for j := 0;j < columns;j++{
 			if grid[i][j] == 1{
-				var p point = point{i,j}
+				var p Point
+				p.x = i
+				p.y = j
 				q.PushBack(p)
 				zero_cnt--
 			}
@@ -25,10 +27,10 @@ func MaxDistance2(grid [][]int) int{
 	for q.Len() > 0{
 		var l int = q.Len()
 		for i := 0;i < l;i++{
-			cur := q.Front().Value.(point)
+			cur := q.Front().Value.(Point)
 			q.Remove(q.Front())
 			for _,dir := range dirs{
-				var next point
+				var next Point
 				next.x = cur.x + dir[0]
 				next.y = cur.y + dir[1]
 				if next.x < 0 || next.y < 0 || next.x >= rows || next.y >= columns{
@@ -51,24 +53,24 @@ func MaxDistance2(grid [][]int) int{
 }
 
 //DFS solution
-func search_neighbour(p point,grid [][]int,rows int,columns int,q *list.List){
+func search_neighbour(p Point,grid [][]int,rows int,columns int,q *list.List){
 	if p.x - 1 >= 0{
 		if grid[p.x - 1][p.y] == 0{
-			q.PushBack(point{p.x - 1,p.y})
+			q.PushBack(Point{p.x - 1,p.y})
 			grid[p.x - 1][p.y] = 1
 		}
 	}
 	if p.y - 1 >= 0 && grid[p.x][p.y - 1] == 0{
-		q.PushBack(point{p.x,p.y - 1})
+		q.PushBack(Point{p.x,p.y - 1})
 		grid[p.x][p.y - 1] = 1
 	}
 	if p.y + 1 < columns && grid[p.x][p.y + 1] == 0{
-		q.PushBack(point{p.x,p.y + 1})
+		q.PushBack(Point{p.x,p.y + 1})
 		grid[p.x][p.y + 1] = 1
 	}
 	if p.x + 1 < rows{
 		if grid[p.x + 1][p.y] == 0{
-			q.PushBack(point{p.x + 1,p.y})
+			q.PushBack(Point{p.x + 1,p.y})
 			grid[p.x + 1][p.y] = 1
 		}
 	}
@@ -81,7 +83,7 @@ func MaxDistance(grid [][]int) int {
 	for i := 0;i < rows;i++{
 		for j := 0;j < columns;j++{
 			if grid[i][j] == 1{
-				var p point = point{i,j}
+				var p Point = Point{i,j}
 				q.PushBack(p)
 			}
 		}
@@ -93,7 +95,7 @@ func MaxDistance(grid [][]int) int {
 	for q.Len() > 0{
 		var q_len int = q.Len()
 		for i := 0;i < q_len;i++{
-			var p point = q.Front().Value.(point)
+			var p Point = q.Front().Value.(Point)
 			q.Remove(q.Front())
 			search_neighbour(p,grid,rows,columns,&q)
 		}

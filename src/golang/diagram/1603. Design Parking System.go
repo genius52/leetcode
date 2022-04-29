@@ -28,4 +28,3 @@ func (this *ParkingSystem) AddCar(carType int) bool {
 	this.slots[carType - 1]--
 	return true
 }
-

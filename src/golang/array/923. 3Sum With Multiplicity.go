@@ -1,5 +1,7 @@
 package array
 
+import "sort"
+
 //Input: A = [1,1,2,2,3,3,4,4,5,5], target = 8
 //Output: 20
 //Explanation:
@@ -26,13 +28,50 @@ func ThreeSumMulti(A []int, target int) int{
 				sum_cnt[n + A[i]] = cnt
 			}
 		}
-		if _,ok := num_cnt[A[i]];ok{
-			num_cnt[A[i]]++
-		}else{
-			num_cnt[A[i]] = 1
-		}
+		num_cnt[A[i]]++
 	}
 	return res % 1000000007
+}
+
+func ThreeSumMulti2(arr []int, target int) int{
+	sort.Ints(arr)
+	var l int = len(arr)
+	var res int = 0
+	var MOD int = 1e9 + 7
+	for left := 0;left < l - 2;left++{
+		var mid int = left + 1
+		var right int = l - 1
+		for mid < right{
+			cur_sum := arr[left] + arr[mid] + arr[right]
+			if cur_sum == target{
+				if arr[mid] != arr[right]{
+					cnt1 := 1
+					for (mid + 1) < right && (arr[mid] == arr[mid + 1]){
+						mid++
+						cnt1++
+					}
+					cnt2 := 1
+					for mid < (right - 1) && (arr[right - 1] == arr[right]){
+						right--
+						cnt2++
+					}
+					res += cnt1 * cnt2
+					res %= MOD
+					mid++
+					right--
+				}else{
+					res += ((right - mid + 1) * (right - mid)) /2
+					res %= MOD
+					break
+				}
+			}else if cur_sum < target{
+				mid++
+			}else if cur_sum > target{
+				right--
+			}
+		}
+	}
+	return res
 }
 
 //func ThreeSumMulti(A []int, target int) int{

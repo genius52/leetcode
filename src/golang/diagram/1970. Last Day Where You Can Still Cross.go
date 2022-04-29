@@ -15,7 +15,7 @@ func bfs_latestDayToCross(row int,col int,cells [][]int,days int)bool{
 	var q list.List
 	for i := 0;i < col;i++{
 		if graph[0][i] != 1{
-			var p point
+			var p Point
 			p.x = 0
 			p.y = i
 			q.PushBack(p)
@@ -26,13 +26,13 @@ func bfs_latestDayToCross(row int,col int,cells [][]int,days int)bool{
 	for q.Len() > 0{
 		var l int = q.Len()
 		for i := 0;i < l;i++{
-			cur := q.Front().Value.(point)
+			cur := q.Front().Value.(Point)
 			q.Remove(q.Front())
 			if cur.x == (row - 1){
 				return true
 			}
 			for _,dir := range dirs{
-				var next point
+				var next Point
 				next.x = cur.x + dir[0]
 				next.y = cur.y + dir[1]
 				if next.x >= 0 && next.x < row && next.y >= 0 && next.y < col && graph[next.x][next.y] != 1{

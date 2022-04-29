@@ -15,7 +15,7 @@ func OrangesRotting(grid [][]int) int{
 				fresh++
 			}
 			if grid[i][j] == 2{
-				var p point
+				var p Point
 				p.x = i
 				p.y = j
 				q.PushBack(p)
@@ -30,10 +30,10 @@ func OrangesRotting(grid [][]int) int{
 	for q.Len() > 0{
 		var l int = q.Len()
 		for i := 0;i < l;i++{
-			var cur point = q.Front().Value.(point)
+			var cur Point = q.Front().Value.(Point)
 			q.Remove(q.Front())
 			for _,d := range dirs{
-				var next point
+				var next Point
 				next.x = cur.x + d[0]
 				next.y = cur.y + d[1]
 				if next.x < 0 || next.x >= rows || next.y < 0 || next.y >= columns || grid[next.x][next.y] != 1{

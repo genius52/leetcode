@@ -56,7 +56,7 @@ func ShortestPathBinaryMatrix(grid [][]int) int {
 	}
 	var dirs [][]int = [][]int{[]int{-1,-1},[]int{-1,0},[]int{-1,1},[]int{0,-1},[]int{0,1},[]int{1,-1},[]int{1,0},[]int{1,1}}
 	var q list.List
-	var p point
+	var p Point
 	p.x = 0
 	p.y = 0
 	q.PushFront(p)
@@ -65,13 +65,13 @@ func ShortestPathBinaryMatrix(grid [][]int) int {
 	for q.Len() > 0{
 		cur_len := q.Len()
 		for i := 0;i < cur_len;i++{
-			cur := q.Front().Value.(point)
+			cur := q.Front().Value.(Point)
 			q.Remove(q.Front())
 			if cur.x == rows - 1 && cur.y == columns - 1{
 				return steps
 			}
 			for _,dir := range dirs{
-				var next point
+				var next Point
 				next.x = cur.x + dir[0]
 				next.y = cur.y + dir[1]
 				if next.x >= 0 && next.x < rows && next.y >= 0 && next.y < columns && grid[next.x][next.y] == 0{

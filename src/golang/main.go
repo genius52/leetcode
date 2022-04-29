@@ -15,6 +15,14 @@ import (
 
 func main() {
 	{
+		//var data []int = []int{1, 1, 2, 2, 3, 3, 4, 4, 5, 5}
+		//var target int = 8
+		var data []int = []int{1,1,2,2,2,2}
+		var target int = 5
+		res := array.ThreeSumMulti2(data, target)
+		fmt.Println(res)
+	}
+	{
 		points := [][]int{{9,-25},{-4,1},{-1,5},{-7,7}}
 		res := diagram.MaxPoints(points)
 		fmt.Println(res)
@@ -2629,12 +2637,6 @@ func main() {
 		graph := [][]int{{1, 1, 1}, {1, 1, 1}, {1, 1, 1}}
 		initial := []int{1, 2}
 		res := diagram.MinMalwareSpread(graph, initial)
-		fmt.Println(res)
-	}
-	{
-		var data []int = []int{1, 1, 2, 2, 3, 3, 4, 4, 5, 5}
-		var target int = 8
-		res := array.ThreeSumMulti(data, target)
 		fmt.Println(res)
 	}
 	//{

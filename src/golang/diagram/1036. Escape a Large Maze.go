@@ -8,7 +8,7 @@ import "container/list"
 func check_isEscapePossible(forbid map[int64]bool, source []int, target []int)bool{
 	var visited map[int64]bool = make(map[int64]bool)
 	var q list.List
-	var start point
+	var start Point
 	start.x = source[0]
 	start.y = source[1]
 	q.PushBack(start)
@@ -16,13 +16,13 @@ func check_isEscapePossible(forbid map[int64]bool, source []int, target []int)bo
 	for q.Len() > 0{
 		var l int = q.Len()
 		for i := 0;i < l;i++{
-			var cur point = q.Front().Value.(point)
+			var cur Point = q.Front().Value.(Point)
 			if cur.x == target[0] && cur.y == target[1]{
 				return true
 			}
 			q.Remove(q.Front())
 			for _,dir := range dirs{
-				var next point
+				var next Point
 				next.x = cur.x + dir[0]
 				next.y = cur.y + dir[1]
 				if next.x < 0 || next.x >= 1000000 || next.y < 0 || next.y >= 1000000{
