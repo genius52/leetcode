@@ -15,6 +15,14 @@ import (
 
 func main() {
 	{
+		//var n int = 5
+		//var connections [][]int = [][]int{{0, 1}, {0, 2}, {3, 4}, {2, 3}}
+		var n int = 4
+		var connections [][]int = [][]int{{0,1},{0,2},{1,2}}
+		res := diagram.MakeConnected2(n, connections)
+		fmt.Println(res)
+	}
+	{
 		//var data []int = []int{1, 1, 2, 2, 3, 3, 4, 4, 5, 5}
 		//var target int = 8
 		var data []int = []int{1,1,2,2,2,2}
@@ -4252,12 +4260,6 @@ func main() {
 	{
 		var s string = "CONTEST IS COMING"
 		res := string_issue.PrintVertically(s)
-		fmt.Println(res)
-	}
-	{
-		var n int = 5
-		var connections [][]int = [][]int{{0, 1}, {0, 2}, {3, 4}, {2, 3}}
-		res := diagram.MakeConnected(n, connections)
 		fmt.Println(res)
 	}
 	{
