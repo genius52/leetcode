@@ -36,3 +36,33 @@ func MinReorder(n int, connections [][]int) int {
 	}
 	return res
 }
+
+
+//DFS
+func dfs_minReorder(cur int,last int,graph [][]int,start_end []map[int]bool,res *int){
+	for _,next := range graph[cur]{
+		if next == last{
+			continue
+		}
+		if _,ok := start_end[cur][next];ok{
+			*res++
+		}
+		dfs_minReorder(next,cur,graph,start_end,res)
+	}
+}
+
+func MinReorder2(n int, connections [][]int) int {
+	var graph [][]int = make([][]int,n)
+	var start_end []map[int]bool = make([]map[int]bool,n)
+	for i := 0;i < n;i++{
+		start_end[i] = make(map[int]bool)
+	}
+	for _,con := range connections{
+		graph[con[0]] = append(graph[con[0]],con[1])
+		graph[con[1]] = append(graph[con[1]],con[0])
+		start_end[con[0]][con[1]] = true
+	}
+	var res int = 0
+	dfs_minReorder(0,-1,graph,start_end,&res)
+	return res
+}

@@ -2,33 +2,33 @@ package diagram
 
 import "container/list"
 
-//DFS solution
+//DFS
 //Input: n = 7, headID = 6, manager = [1,2,3,4,5,6,-1], informTime = [0,6,5,4,3,2,1]
-//func dfs_numOfMinutes(cur_id int,graph map[int][]int,informTime []int)int{
-//	if _,ok := graph[cur_id];!ok{
-//		return 0
-//	}
-//	var max_duration int = 0
-//	for _,sub_id := range graph[cur_id]{
-//		cur := informTime[cur_id] + dfs_numOfMinutes(sub_id,graph,informTime)
-//		if cur > max_duration{
-//			max_duration = cur
-//		}
-//	}
-//	return max_duration
-//}
-//
-//func NumOfMinutes(n int, headID int, manager []int, informTime []int) int{
-//	var graph map[int][]int = make(map[int][]int)
-//	var l int = len(manager)
-//	for i := 0;i < l;i++{
-//		if manager[i] != -1{
-//			graph[manager[i]] = append(graph[manager[i]],i)
-//		}
-//	}
-//	return dfs_numOfMinutes(headID,graph,informTime)
-//}
+func dfs_numOfMinutes(cur_id int,graph [][]int,informTime []int)int{
+	if len(graph[cur_id]) == 0{
+		return 0
+	}
+	var max_duration int = 0
+	for _,sub_id := range graph[cur_id]{
+		cur := informTime[cur_id] + dfs_numOfMinutes(sub_id,graph,informTime)
+		if cur > max_duration{
+			max_duration = cur
+		}
+	}
+	return max_duration
+}
 
+func numOfMinutes(n int, headID int, manager []int, informTime []int) int{
+	var graph [][]int = make([][]int,n)
+	for cur,parent := range manager{
+		if parent != -1{
+			graph[parent] = append(graph[parent],cur)
+		}
+	}
+	return dfs_numOfMinutes(headID,graph,informTime)
+}
+
+//BFS
 type Durantion_id struct {
 	duration int
 	id int

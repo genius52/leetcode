@@ -15,6 +15,18 @@ import (
 
 func main() {
 	{
+		n := 6
+		connections := [][]int{{0, 1}, {1, 3}, {2, 3}, {4, 0}, {4, 5}}
+		res := diagram.MinReorder2(n, connections)
+		fmt.Println(res)
+	}
+	{
+		//var graph [][]int = [][]int{{1,2},{2,3},{5},{0},{5},{},{}}
+		var graph [][]int = [][]int{{1,2},{2,3},{5},{0},{5},{},{}}
+		res := diagram.EventualSafeNodes2(graph)
+		fmt.Println(res)
+	}
+	{
 		//var n int = 5
 		//var connections [][]int = [][]int{{0, 1}, {0, 2}, {3, 4}, {2, 3}}
 		var n int = 4
@@ -1613,12 +1625,6 @@ func main() {
 	{
 		prices := []int{8, 4, 6, 2, 3}
 		res := array.FinalPrices(prices)
-		fmt.Println(res)
-	}
-	{
-		n := 6
-		connections := [][]int{{0, 1}, {1, 3}, {2, 3}, {4, 0}, {4, 5}}
-		res := diagram.MinReorder(n, connections)
 		fmt.Println(res)
 	}
 	{
@@ -4760,12 +4766,6 @@ func main() {
 		var A []int = []int{4, 1, 7, 5, 6, 2, 3}
 		var K int = 4
 		res := array.LargestSumOfAverages(A, K)
-		fmt.Println(res)
-	}
-	{
-		//var graph [][]int = [][]int{{1,2},{2,3},{5},{0},{5},{},{}}
-		var graph [][]int = [][]int{{}, {2}, {3, 4}, {4}, {}}
-		res := diagram.EventualSafeNodes(graph)
 		fmt.Println(res)
 	}
 	{

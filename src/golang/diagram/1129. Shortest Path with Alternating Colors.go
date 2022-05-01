@@ -66,10 +66,9 @@ func ShortestAlternatingPaths(n int, red_edges [][]int, blue_edges [][]int) []in
 		blue_graph[blue[0]][blue[1]] = true
 	}
 	var res []int = make([]int,n)
-	for i := 0;i < n;i++{
+	for i := 1;i < n;i++{
 		res[i] = -1
 	}
-	res[0] = 0
 	bfs_shortestAlternatingPaths(n,red_graph,blue_graph,true,res)
 	bfs_shortestAlternatingPaths(n,red_graph,blue_graph,false,res)
 	return res
