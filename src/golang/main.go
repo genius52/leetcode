@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		nums := []int{4,2,0}
+		res := array.MinimumAverageDifference(nums)
+		fmt.Println(res)
+	}
+	{
 		n := 6
 		connections := [][]int{{0, 1}, {1, 3}, {2, 3}, {4, 0}, {4, 5}}
 		res := diagram.MinReorder2(n, connections)

@@ -5,17 +5,17 @@ import "math"
 //Input: [8,1,5,2,6]
 //Output: 11
 //Explanation: i = 0, j = 2, A[i] + A[j] + i - j = 8 + 5 + 0 - 2 = 11
-func MaxScoreSightseeingPair2(A []int) int{
-	var l int = len(A)
+func MaxScoreSightseeingPair2(values []int) int{
+	var l int = len(values)
 	var res int = 0
-	var pre_max int = A[0]
+	var pre_max int = values[0]
 	for i := 1;i < l;i++{
-		cur := pre_max + A[i] - i
+		cur := pre_max + values[i] - i
 		if cur > res{
 			res = cur
 		}
-		if pre_max < (A[i] + i){
-			pre_max = A[i] + i
+		if pre_max < (values[i] + i){
+			pre_max = values[i] + i
 		}
 	}
 	return res
