@@ -28,3 +28,28 @@ func MinEatingSpeed(piles []int, H int) int {
 	}
 	return least_speed
 }
+
+func minEatingSpeed(piles []int, h int) int{
+	var l int = len(piles)
+	var left int = 1
+	var right int = 0
+	for i := 0;i < l;i++{
+		right += piles[i]
+	}
+	for left < right{
+		mid := (left + right)/2
+		var hours int = 0
+		for i := 0;i < l;i++{
+			hours += piles[i]/ mid
+			if piles[i] % mid != 0{
+				hours++
+			}
+		}
+		if hours > h{
+			left = mid + 1
+		}else{
+			right = mid
+		}
+	}
+	return left
+}

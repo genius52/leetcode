@@ -8,13 +8,13 @@ func HIndex2(citations []int) int {
 	end := l - 1
 	for begin <= end{
 		var mid int = begin + (end - begin)/2
-		if(citations[mid] >= (l - mid)){
-			if(mid - 1 >= 0 && citations[mid - 1] < (l - mid + 1)){
+		if citations[mid] >= (l - mid){
+			if mid - 1 >= 0 && citations[mid - 1] < (l - mid + 1){
 				return l - mid
 			}
 			end = mid - 1
 		}else{
-			if((mid + 1) < l && citations[mid + 1] >= (l - mid - 1)){
+			if (mid + 1) < l && citations[mid + 1] >= (l - mid - 1){
 				return l - mid - 1
 			}
 			begin = mid + 1

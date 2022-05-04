@@ -1,20 +1,20 @@
 package array
 
-func MinFallingPathSum(A [][]int) int{
-	var rows int = len(A)
-	var columns int = len(A[0])
+func MinFallingPathSum(matrix [][]int) int{
+	var rows int = len(matrix)
+	var columns int = len(matrix[0])
 	var pre []int = make([]int,columns)
 
-	copy(pre,A[0])
+	copy(pre,matrix[0])
 	for i := 1;i < rows;i++{
 		var cur []int = make([]int,columns)
 		for j := 0;j < columns;j++{
 			if j == 0{
-				cur[j] = A[i][j] + min_int_number(pre[j],pre[j + 1])
+				cur[j] = matrix[i][j] + min_int_number(pre[j],pre[j + 1])
 			}else if j == (columns - 1){
-				cur[j] = A[i][j] + min_int_number(pre[j - 1],pre[j])
+				cur[j] = matrix[i][j] + min_int_number(pre[j - 1],pre[j])
 			}else{
-				cur[j] = A[i][j] + min_int_number(pre[j - 1],pre[j],pre[j + 1])
+				cur[j] = matrix[i][j] + min_int_number(pre[j - 1],pre[j],pre[j + 1])
 			}
 		}
 		pre = cur

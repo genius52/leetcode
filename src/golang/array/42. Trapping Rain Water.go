@@ -61,5 +61,5 @@ func trap2(height []int) int{
 
 //By columns
 func trap3(height []int) int{
-
+	return 0
 }

@@ -6,28 +6,20 @@ func UniquePathsWithObstacles(obstacleGrid [][]int) int {
 	var rows int = len(obstacleGrid)
 	var columns int = len(obstacleGrid[0])
 	var dp [][]int = make([][]int,rows)
-	var find_block bool = false
 	for i := 0;i < rows;i++{
 		dp[i] = make([]int,columns)
-		if obstacleGrid[i][0] == 1{
-			find_block = true
-		}
-		if find_block{
-			dp[i][0] = 0
-		}else{
-			dp[i][0] = 1
-		}
 	}
-	find_block = false
+	for i := 0;i < rows;i++{
+		if obstacleGrid[i][0] == 1{
+			break
+		}
+		dp[i][0] = 1
+	}
 	for i := 0;i < columns;i++{
 		if obstacleGrid[0][i] == 1{
-			find_block = true
+			break
 		}
-		if find_block{
-			dp[0][i] = 0
-		}else{
-			dp[0][i] = 1
-		}
+		dp[0][i] = 1
 	}
 	for i := 1;i < rows;i++{
 		for j := 1;j < columns;j++{

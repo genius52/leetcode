@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		nums1 := []int{1,7,5}
+		nums2 := []int{2,3,5}
+		res := array.MinAbsoluteSumDiff(nums1,nums2)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{4,2,0}
 		res := array.MinimumAverageDifference(nums)
 		fmt.Println(res)

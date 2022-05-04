@@ -8,18 +8,20 @@ func FindDuplicate(nums []int) int{
 	var l int = len(nums)
 	var res int = 0
 	for i := 0;i < 32;i++{
-		var index_one_cnt int = 0
-		var number_one_cnt int = 0
+		var cur_cnt int = 0
+		var expect_cnt int = 0
 		var mask int = 1 << i
-		for i := 0;i < l;i++{
-			if (i & mask) != 0{
-				index_one_cnt++
-			}
-			if (nums[i] & mask) != 0{
-				number_one_cnt++
+		for j := 1;j < l;j++{
+			if (j & mask) != 0{
+				expect_cnt++
 			}
 		}
-		if number_one_cnt > index_one_cnt{
+		for j := 0;j < l;j++{
+			if (nums[j] & mask) != 0{
+				cur_cnt++
+			}
+		}
+		if cur_cnt > expect_cnt{
 			res |= mask
 		}
 	}

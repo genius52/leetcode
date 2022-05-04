@@ -24,7 +24,7 @@ func smallestDivisor(nums []int, threshold int) int {
 			high = nums[i]
 		}
 	}
-	for low < high{//after loop, high sis the biggest
+	for low < high{//after loop, high is the biggest
 		var mid = (low + high)/2
 		ret := cal_smallestDivisor(nums,mid)
 		if ret <= threshold{
@@ -34,5 +34,5 @@ func smallestDivisor(nums []int, threshold int) int {
 			low = mid + 1
 		}
 	}
-	return high
+	return low
 }

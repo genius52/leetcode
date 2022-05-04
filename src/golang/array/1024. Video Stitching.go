@@ -59,7 +59,7 @@ func VideoStitching(clips [][]int, T int) int {
 //	if _,ok := memo[pre_end];ok{
 //		return memo[pre_end]
 //	}
-//	var res int = 2147483647
+//	var res int = `2147483647`
 //	for i := pos;i < l;i++{
 //		if clips[i][1] <= pre_end{
 //			continue
