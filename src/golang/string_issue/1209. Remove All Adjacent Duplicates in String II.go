@@ -1,6 +1,9 @@
 package string_issue
 
-import "container/list"
+import (
+	"container/list"
+	"strings"
+)
 
 type char_cnt struct {
 	c uint8
@@ -32,14 +35,14 @@ func RemoveDuplicates2(s string, k int) string {
 			}
 		}
 	}
-	var res string
+	var res strings.Builder
 	for q.Len() > 0{
 		cur := q.Front().Value.(char_cnt)
 		for cur.cnt > 0{
-			res += string(cur.c)
+			res.WriteByte(cur.c)
 			cur.cnt--
 		}
 		q.Remove(q.Front())
 	}
-	return res
+	return res.String()
 }

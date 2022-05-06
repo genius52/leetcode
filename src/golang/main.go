@@ -15,6 +15,23 @@ import (
 
 func main() {
 	{
+		nums := []int{3,5,6,7}
+		target := 9
+		res := array.NumSubseq(nums,target)
+		fmt.Println(res)
+	}
+	{
+		//["MyStack","push","push","top","pop","empty"]
+		//[[],[1],[2],[],[],[]]
+		var obj list_queue.MyStack = list_queue.Constructor225()
+		obj.Push(1)
+		obj.Push(2)
+		res := obj.Top()
+		res = obj.Pop()
+		res2 := obj.Empty()
+		fmt.Println(res,res2)
+	}
+	{
 		nums1 := []int{1,7,5}
 		nums2 := []int{2,3,5}
 		res := array.MinAbsoluteSumDiff(nums1,nums2)

@@ -7,13 +7,13 @@ package array
 func FindLengthOfShortestSubarray(arr []int) int {
 	var l int = len(arr)
 	var left int = 1
-	var right int = l - 2
 	for left < l && arr[left] >= arr[left - 1]{
 		left++
 	}
 	if left >= l{
 		return 0
 	}
+	var right int = l - 2
 	for right >= 0 && arr[right] <= arr[right + 1]{
 		right--
 	}

@@ -7,6 +7,9 @@ package string_issue
 func isSubsequence(s string, t string) bool {
 	var l1 int = len(s)
 	var l2 int = len(t)
+	if l1 > l2{
+		return false
+	}
 	var pos1 int = 0
 	var pos2 int = 0
 	for pos1 < l1 && pos2 < l2{

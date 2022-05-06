@@ -5,20 +5,19 @@ func FindMin(nums []int) int {
 	if l == 1{
 		return nums[0]
 	}
-	var low int = 0
-	var high int = l - 1
+	var left int = 0
+	var right int = l - 1
 	var min_num int = nums[0]
-	for low < high{
-		mid := low + (high - low)/2
-		if nums[mid] > nums[high]{
-			low = mid + 1
-			min_num = nums[low]
-		}else if nums[mid] < nums[high]{
-			high = mid
-			min_num = nums[high]
+	for left < right{
+		mid := left + (right - left)/2
+		if nums[mid] > nums[right]{
+			left = mid + 1
+			min_num = nums[left]
+		}else if nums[mid] < nums[right]{
+			right = mid
+			min_num = nums[right]
 		}else{
-			high--;
-			//min_num = nums[high]
+			right--
 		}
 	}
 	return min_num
