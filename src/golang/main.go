@@ -15,6 +15,30 @@ import (
 
 func main() {
 	{
+		//["TimeMap","set","set","get","get","get","get","get"]
+		//[[],["love","high",10],["love","low",20],["love",5],["love",10],["love",15],["love",20],["love",25]]
+		obj := list_queue.Constructor981()
+		obj.Set("love","high",10)
+		obj.Set("love","low",20)
+		res := obj.Get("love",5)
+		res = obj.Get("love",10)
+		res = obj.Get("love",15)
+		res = obj.Get("love",20)
+		res = obj.Get("love",25)
+		fmt.Println(res)
+	}
+	{
+		var amount int = 5
+		var coins []int = []int{1, 2, 5}
+		res := number.Change(amount, coins)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{1,4,0,-1,-2,-3,-1,-2}
+		res := array.Find132pattern(nums)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{3,5,6,7}
 		target := 9
 		res := array.NumSubseq(nums,target)
@@ -5079,12 +5103,6 @@ func main() {
 		fmt.Println(res)
 		s.Reset()
 		res = s.Flip()
-		fmt.Println(res)
-	}
-	{
-		var amount int = 5
-		var coins []int = []int{1, 2, 5}
-		res := number.Change2(amount, coins)
 		fmt.Println(res)
 	}
 	{
