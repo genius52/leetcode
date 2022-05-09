@@ -26,6 +26,7 @@ public:
         });
         releaseHydrogen();
         h_count_++;
+        reset();
         cv_.notify_all();
     }
 
@@ -36,6 +37,13 @@ public:
         });
         releaseOxygen();
         o_count_++;
+        reset();
         cv_.notify_all();
     }
+    void reset(){
+        if(h_count_ == 2 && o_count_ == 1){
+            h_count_ = 0;
+            o_count_ = 0;
+        }
+    };
 };

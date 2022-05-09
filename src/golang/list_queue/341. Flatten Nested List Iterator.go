@@ -12,7 +12,7 @@ func (n *NestedInteger) SetInteger(value int) {}
 
 func (this *NestedInteger) Add(elem NestedInteger) {}
 
-func (this NestedInteger) GetList() []*NestedInteger {return []*NestedInteger}
+func (this NestedInteger) GetList() []*NestedInteger {return []*NestedInteger{}}
 
 
 type NestedIterator struct {
