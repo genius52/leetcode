@@ -55,8 +55,6 @@ func ShortestAlternatingPaths(n int, red_edges [][]int, blue_edges [][]int) []in
 	var blue_graph [][]bool = make([][]bool, n)
 	for i := 0; i < n; i++ {
 		red_graph[i] = make([]bool, n)
-	}
-	for i := 0; i < n; i++ {
 		blue_graph[i] = make([]bool, n)
 	}
 	for _, red := range red_edges {

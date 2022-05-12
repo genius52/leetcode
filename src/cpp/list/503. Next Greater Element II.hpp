@@ -9,14 +9,12 @@ public:
     vector<int> nextGreaterElements(vector<int>& nums) {
         int len = nums.size();
         std::stack<int> s;//store index with decrease order
-        std::vector<int> res(len);
+        std::vector<int> res(len,-1);
         for(int i = 0;i < len * 2;i++){
             int index = i;
             if(index >= len){
                 index = index % len;
             }
-            if(i < len)
-                res[index] = -1;
             if(s.empty()){
                 if(i < len)
                     s.push(index);

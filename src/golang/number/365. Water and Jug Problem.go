@@ -1,5 +1,4 @@
 package number
-import "strconv"
 
 func dfs_CanMeasureWater(target int,choose []int)bool{
 	if(target == 0){
@@ -32,10 +31,10 @@ func CanMeasureWater(x int, y int, z int) bool {
 	if(z > small_bottle + big_bottle){
 		return false
 	}
-	var record map[string]bool = make(map[string]bool)
+	var record map[int64]bool = make(map[int64]bool)
 	var q [][]int
 	q = append(q, []int{0,0})
-	record["0,0"] = true
+	record[0] = true
 	for len(q) != 0{
 		ele := q[0]
 		q = append(q[:0],q[1:]...)
@@ -68,7 +67,7 @@ func CanMeasureWater(x int, y int, z int) bool {
 		}
 		possible = append(possible,[]int{0,ele[0]})
 		for _, p := range possible{
-			k := strconv.Itoa(p[0]) + "," + strconv.Itoa(p[1])
+			k := int64(p[0]) * 1000000 + int64(p[1])
 			if _,ok := record[k];!ok{
 				record[k] = true
 				q = append(q,p)

@@ -39,3 +39,53 @@ func SpiralOrder(matrix [][]int) []int {
 	}
 	return res
 }
+
+func spiralOrder(matrix [][]int) []int{
+	var rows int = len(matrix)
+	var columns int = len(matrix[0])
+	var res []int = make([]int, rows * columns)
+	var idx int = 0
+	var r_start int = 0
+	var c_start int = 0
+	var r_end int = rows - 1
+	var c_end int = columns - 1
+	for idx < rows * columns{
+		//To right
+		for j := c_start;j <= c_end;j++{
+			res[idx] = matrix[r_start][j]
+			idx++
+		}
+		r_start++
+		if r_start > r_end{
+			break
+		}
+		//To bottom
+		for i := r_start;i <= r_end;i++{
+			res[idx] = matrix[i][c_end]
+			idx++
+		}
+		c_end--
+		if c_end < c_start{
+			break
+		}
+		//To left
+		for j := c_end;j >= c_start;j--{
+			res[idx] = matrix[r_end][j]
+			idx++
+		}
+		r_end--
+		if r_end < r_start{
+			break
+		}
+		//To top
+		for i := r_end;i >= r_start;i--{
+			res[idx] = matrix[i][c_start]
+			idx++
+		}
+		c_start++
+		if c_start > c_end{
+			break
+		}
+	}
+	return res
+}

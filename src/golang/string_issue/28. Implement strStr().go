@@ -1,5 +1,6 @@
 package string_issue
 
+//My KMP
 //s = abaabab
 func make_next(s string)[]int{
 	var l int = len(s)

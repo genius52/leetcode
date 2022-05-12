@@ -40,7 +40,6 @@ func evalRPN(tokens []string) int {
 func EvalRPN2(tokens []string) int{
 	var l int = len(tokens)
 	var q list.List
-
 	for i := 0;i < l;i++{
 		if tokens[i] != "+" && tokens[i] != "-" && tokens[i] != "*" && tokens[i] != "/"{
 			n,err := strconv.Atoi(tokens[i])
@@ -64,6 +63,39 @@ func EvalRPN2(tokens []string) int{
 				result = num1 / num2
 			}
 			q.PushBack(result)
+		}
+	}
+	return q.Back().Value.(int)
+}
+
+func EvalRPN3(tokens []string) int{
+	var l int = len(tokens)
+	var char_opt map[string]func(i int,j int)int = make(map[string]func(i int,j int)int)
+	char_opt["+"] = func(i int, j int) int {
+		return i + j
+	}
+	char_opt["-"] = func(i int, j int) int {
+		return i - j
+	}
+	char_opt["*"] = func(i int, j int) int {
+		return i * j
+	}
+	char_opt["/"] = func(i int, j int) int {
+		return i / j
+	}
+	var q list.List
+	for i := 0;i < l;i++{
+		if tokens[i] != "+" && tokens[i] != "-" && tokens[i] != "*" && tokens[i] != "/"{
+			n,err := strconv.Atoi(tokens[i])
+			if err == nil{
+				q.PushBack(n)
+			}
+		}else{
+			num2 := q.Back().Value.(int)
+			q.Remove(q.Back())
+			num1 := q.Back().Value.(int)
+			q.Remove(q.Back())
+			q.PushBack(char_opt[tokens[i]](num1,num2))
 		}
 	}
 	return q.Back().Value.(int)
