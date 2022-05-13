@@ -20,11 +20,9 @@ public:
         Node* v1 = head;
         Node* root = nullptr;
         Node* pre = nullptr;
-        std::unordered_map<Node*,Node*> dup_origin;
         std::unordered_map<Node*, Node*> origin_dup;
         while(v1){
             Node* v2 = new Node(v1->val);
-            dup_origin.insert(std::make_pair(v2,v1));
             origin_dup.insert({v1,v2});
             if (root == nullptr){
                 root = v2;
@@ -34,19 +32,11 @@ public:
             pre = v2;
             v1 = v1->next;
         }
+        v1 = head;
         Node* v2 = root;
-        while (v2){
-            auto origin_node = dup_origin[v2];
-            if (nullptr != origin_node->random){
-                origin_node->random
-                auto it = dup_origin.cbegin();
-                for (;it != dup_origin.cend();it++) {
-                    if (origin_node->random == (*it).second){
-                        break;
-                    }
-                }
-                v2->random = (*it).first;
-            }
+        while (v1 != nullptr){
+            v2->random = origin_dup[v1->random];
+            v1 = v1->next;
             v2 = v2->next;
         }
         return root;
