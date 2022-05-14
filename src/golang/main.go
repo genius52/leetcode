@@ -15,6 +15,18 @@ import (
 
 func main() {
 	{
+		graph := [][]int{{1,2,3},{0},{0},{0}}
+		res := diagram.ShortestPathLength(graph)
+		fmt.Println(res)
+	}
+	{
+		var x int = 3
+		var y int = 5
+		var z int = 4
+		res := number.CanMeasureWater(x, y, z)
+		fmt.Println(res)
+	}
+	{
 		//["TimeMap","set","set","get","get","get","get","get"]
 		//[[],["love","high",10],["love","low",20],["love",5],["love",10],["love",15],["love",20],["love",25]]
 		obj := list_queue.Constructor981()
@@ -4521,13 +4533,6 @@ func main() {
 	{
 		var A []int = []int{0, 0, 0, 0}
 		res := array.LongestArithSeqLength(A)
-		fmt.Println(res)
-	}
-	{
-		var x int = 5
-		var y int = 9
-		var z int = 12
-		res := number.CanMeasureWater(x, y, z)
 		fmt.Println(res)
 	}
 	{
