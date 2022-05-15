@@ -4,6 +4,7 @@ import "container/list"
 
 //Input: n = 4, dislikes = [[1,2],[1,3],[2,4]]
 //Output: true
+//DFS
 func dfs_possibleBipartition(cur_node int,val int,relation map[int]map[int]bool,group []int)bool{
 	if group[cur_node] == -val{
 		return false
@@ -46,17 +47,13 @@ func PossibleBipartition(N int, dislikes [][]int) bool{
 	}
 	return true
 }
+
+//BFS
 func PossibleBipartition2(N int, dislikes [][]int) bool {
-	var relation map[int]map[int]bool = make(map[int]map[int]bool)
+	var relation map[int][]int = make(map[int][]int)
 	for _, r := range dislikes {
-		if _, ok := relation[r[0]]; !ok {
-			relation[r[0]] = make(map[int]bool)
-		}
-		relation[r[0]][r[1]] = true
-		if _, ok := relation[r[1]]; !ok {
-			relation[r[1]] = make(map[int]bool)
-		}
-		relation[r[1]][r[0]] = true
+		relation[r[0]] = append(relation[r[0]],r[1])
+		relation[r[1]] = append(relation[r[1]],r[0])
 	}
 	var group []int = make([]int,N + 1)
 	for i := 1;i <= N;i++{
@@ -71,7 +68,7 @@ func PossibleBipartition2(N int, dislikes [][]int) bool {
 			for i := 0;i < l;i++{
 				var cur int = q.Front().Value.(int)
 				q.Remove(q.Front())
-				for r,_ := range relation[cur]{
+				for _,r := range relation[cur]{
 					if group[r] == group[cur]{
 						return false
 					}
@@ -88,6 +85,7 @@ func PossibleBipartition2(N int, dislikes [][]int) bool {
 	}
 	return true
 }
+
 //func dfs_PossibleBipartition(last int,cur int,N int,relation [][]int,group []int)bool{
 //	if group[cur] == group[last] {
 //		return false

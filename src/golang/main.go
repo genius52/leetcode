@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		deadends := []string{"0201","0101","0102","1212","2002"}
+		target := "0202"
+		res := diagram.OpenLock(deadends,target)
+		fmt.Println(res)
+	}
+	{
 		graph := [][]int{{1,2,3},{0},{0},{0}}
 		res := diagram.ShortestPathLength(graph)
 		fmt.Println(res)
