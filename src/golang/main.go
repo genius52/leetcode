@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		pressedKeys := "22233"
+		res := number.CountTexts(pressedKeys)
+		fmt.Println(res)
+	}
+	{
 		deadends := []string{"0201","0101","0102","1212","2002"}
 		target := "0202"
 		res := diagram.OpenLock(deadends,target)

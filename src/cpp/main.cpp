@@ -6,6 +6,14 @@
 
 int main() {
     {
+        std::vector<int> nums{2,3,3,2,2};
+        int k = 2;
+        int p = 2;
+        Solution_2261 s2261;
+        auto res = s2261.countDistinct(nums,k,p);
+        std::cout<<res<<std::endl;
+    }
+    {
         Solution_215 s215;
         std::vector<int> nums{3,2,1,5,6,4};
         int k = 2;

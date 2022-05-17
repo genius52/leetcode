@@ -69,44 +69,6 @@ func remove_duplicated_sorted_array(arr []int)(length int){
 	return cur_pos + 1
 }
 
-func lemonadeChange(bills []int) bool {
-	var change map[int]int = make(map[int]int)
-	for _,pay  := range bills{
-		if pay == 5 {
-			if _,ok := change[pay];ok{
-				change[pay]++
-			}else{
-				change[pay] = 1
-			}
-		}else if pay == 10{
-			if val,ok := change[5]; !ok || val <= 0{
-				return false
-			}
-			change[5]--
-			if _,ok := change[pay];ok{
-				change[pay]++
-			}else{
-				change[pay] = 1
-			}
-		}else if pay == 20{
-			if val,ok := change[5]; !ok || val <= 0{
-				return false
-			}
-			if val,ok := change[10]; ok && val > 0{
-				change[10]--
-				change[5]--
-			}else{
-				if change[5] < 3{
-					return false
-				} else{
-					change[5] -= 3
-				}
-			}
-		}
-	}
-	return true
-}
-
 func is_binary_string(s string,len int) bool{
 	start := 0
 	end := len-1
