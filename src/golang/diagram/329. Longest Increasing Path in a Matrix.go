@@ -10,11 +10,15 @@ func dfs_longestIncreasingPath(matrix [][]int,rows int,columns int,r int,c int,l
 	if dp[r][c] != 0{
 		return dp[r][c]
 	}
-	v1 := dfs_longestIncreasingPath(matrix,rows,columns,r - 1,c,matrix[r][c],dp)
-	v2 := dfs_longestIncreasingPath(matrix,rows,columns,r + 1,c,matrix[r][c],dp)
-	v3 := dfs_longestIncreasingPath(matrix,rows,columns,r,c - 1,matrix[r][c],dp)
-	v4 := dfs_longestIncreasingPath(matrix,rows,columns,r,c + 1,matrix[r][c],dp)
-	dp[r][c] = 1 + max_int_number(v1,v2,v3,v4)
+	var dirs [][]int = [][]int{{-1,0},{1,0},{0,-1},{0,1}}
+	var res int = 0
+	for _,dir := range dirs{
+		cur := dfs_longestIncreasingPath(matrix,rows,columns,r + dir[0],c + dir[1],matrix[r][c],dp)
+		if cur > res{
+			res = cur
+		}
+	}
+	dp[r][c] = 1 + res
 	return dp[r][c]
 }
 

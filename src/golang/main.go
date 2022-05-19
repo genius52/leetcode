@@ -15,6 +15,19 @@ import (
 
 func main() {
 	{
+		bottom := 2
+		top := 9
+		special := []int{4,6}
+		res := number.MaxConsecutive(bottom,top,special)
+		fmt.Println(res)
+	}
+	{
+		tiles := [][]int{{1,5},{10,11},{12,18},{20,25},{30,32}}
+		carpetLen := 10
+		res := array.MaximumWhiteTiles(tiles,carpetLen)
+		fmt.Println(res)
+	}
+	{
 		pressedKeys := "22233"
 		res := number.CountTexts(pressedKeys)
 		fmt.Println(res)

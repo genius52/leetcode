@@ -6,6 +6,22 @@
 
 int main() {
     {
+        //["MyCircularQueue","enQueue","enQueue","deQueue","enQueue","deQueue","enQueue","deQueue","enQueue","deQueue", "Front"]
+        //[[2],[1],[2],[],[3],[],[3],[],[3],[],[]]
+        MyCircularQueue s622(2);
+        auto ret = s622.enQueue(1);
+        ret = s622.enQueue(2);
+        ret = s622.deQueue();
+        ret = s622.enQueue(3);
+        ret = s622.deQueue();
+        ret = s622.enQueue(3);
+        ret = s622.deQueue();
+        ret = s622.enQueue(3);
+        ret = s622.deQueue();
+        auto res = s622.Front();
+        std::cout<<res<<std::endl;
+    }
+    {
         std::vector<int> nums{2,3,3,2,2};
         int k = 2;
         int p = 2;

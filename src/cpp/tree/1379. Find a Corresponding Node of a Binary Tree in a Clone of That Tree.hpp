@@ -9,12 +9,16 @@ public:
             return nullptr;
         if(original == target)
             return cloned;
-        auto res = getTargetCopy2(original->left,cloned->left,target);
-        if(res != nullptr)
-            return res;
-        res = getTargetCopy2(original->right,cloned->right,target);
-        if(res != nullptr)
-            return res;
+        if(original->left != nullptr){
+            auto res = getTargetCopy2(original->left,cloned->left,target);
+            if(res != nullptr)
+                return res;
+        }
+        if(original->right != nullptr){
+            auto res = getTargetCopy2(original->right,cloned->right,target);
+            if(res != nullptr)
+                return res;
+        }
         return nullptr;
     }
 
@@ -22,9 +26,9 @@ public:
         if (original == nullptr || target == nullptr) {
             return nullptr;
         }
-        std::deque < TreeNode * > q;
+        std::deque<TreeNode*> q;
         q.push_back(original);
-        std::deque < TreeNode * > q2;
+        std::deque<TreeNode*> q2;
         q2.push_back(cloned);
         while (!q.empty()) {
             auto top = q.front();

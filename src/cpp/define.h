@@ -297,6 +297,7 @@ struct ListNode {
 #include "list/432. All O`one Data Structure.hpp"
 #include "list/503. Next Greater Element II.hpp"
 #include "list/649. Dota2 Senate.hpp"
+#include "list/622. Design Circular Queue.hpp"
 #include "list/705. Design HashSet.hpp"
 #include "list/706. Design HashMap.hpp"
 #include "list/707. Design Linked List.hpp"
