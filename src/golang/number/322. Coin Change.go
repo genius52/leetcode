@@ -31,8 +31,6 @@ func CoinChange(coins []int, amount int) int {
 	return dp[amount]
 }
 
-
-//322
 func coinChange(coins []int, amount int) int {
 	var dp []int = make([]int,amount + 1)
 	for i := 0;i < len(dp);i++{
