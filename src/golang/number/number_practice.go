@@ -2,7 +2,6 @@ package number
 
 import (
 	"bytes"
-	"container/list"
 	"math"
 	"sort"
 	"strconv"
