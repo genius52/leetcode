@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		s := "aaa"
+		res := string_issue.AppealSum(s)
+		fmt.Println(res)
+	}
+	{
 		grid := [][]int{{0,2,0,0,1},{0,2,0,2,2},{0,2,0,0,0},{0,0,2,2,0},{0,0,0,0,0}}
 		//grid := [][]int{{0,2,0,0,0,0,0},{0,0,0,2,2,1,0},{0,2,0,0,1,2,0},{0,0,2,2,2,0,2},{0,0,0,0,0,0,0}}
 		res := diagram.MaximumMinutes(grid)
