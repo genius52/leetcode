@@ -15,6 +15,18 @@ import (
 
 func main() {
 	{
+		sentence := "there are $1 $2 and 5$ candies in the shop"
+		discount := 50
+		res := string_issue.DiscountPrices(sentence,discount)
+		fmt.Println(res)
+	}
+	{
+		messages := []string{"How is leetcode for everyone","Leetcode is useful for practice"}
+		senders := []string{"Bob","Charlie"}
+		res := array.LargestWordCount(messages,senders)
+		fmt.Println(res)
+	}
+	{
 		s := "aaa"
 		res := string_issue.AppealSum(s)
 		fmt.Println(res)
