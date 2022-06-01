@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		//nums := []int{5,3,4,4,7,3,6,11,8,5,11}
+		nums := []int{4,5,7,7,13}
+		res := array.TotalSteps(nums)
+		fmt.Println(res)
+	}
+	{
 		sentence := "there are $1 $2 and 5$ candies in the shop"
 		discount := 50
 		res := string_issue.DiscountPrices(sentence,discount)
