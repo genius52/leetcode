@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		var n int = 4
+		res := diagram.SolveNQueens(n)
+		fmt.Println(res)
+	}
+	{
 		//nums := []int{5,3,4,4,7,3,6,11,8,5,11}
 		nums := []int{4,5,7,7,13}
 		res := array.TotalSteps(nums)
