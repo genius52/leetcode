@@ -34,3 +34,22 @@ func getIntersectionNode(headA, headB *ListNode) *ListNode {
 	}
 	return nil
 }
+
+func getIntersectionNode2(headA, headB *ListNode) *ListNode{
+	var p1 *ListNode = headA
+	var p2 *ListNode = headB
+	for p1 != nil && p2 != nil && p1 != p2{
+		p1 = p1.Next
+		p2 = p2.Next
+		if p1 == p2{
+			return p1
+		}
+		if p1 == nil{
+			p1 = headB
+		}
+		if p2 == nil{
+			p2 = headA
+		}
+	}
+	return p1
+}
