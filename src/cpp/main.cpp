@@ -6,6 +6,17 @@
 
 int main() {
     {
+        //["CountIntervals", "add", "add", "count", "add", "count"]
+        //[[], [2, 3], [7, 10], [], [5, 8], []]
+        CountIntervals s2276;
+        s2276.add(2,3);
+        s2276.add(7,10);
+        auto res = s2276.count();
+        s2276.add(5,8);
+        res = s2276.count();
+        std::cout<<res<<std::endl;
+    }
+    {
         //["MyCircularQueue","enQueue","enQueue","deQueue","enQueue","deQueue","enQueue","deQueue","enQueue","deQueue", "Front"]
         //[[2],[1],[2],[],[3],[],[3],[],[3],[],[]]
         MyCircularQueue s622(2);

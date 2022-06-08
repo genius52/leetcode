@@ -6,11 +6,14 @@ func is_palindromic(s string)bool{
 	end := l - 1
 	for begin < end{
 		if s[begin] != s[end]{
-			return false;
+			return false
 		}
+		begin++
+		end--
 	}
 	return true
 }
+
 func removePalindromeSub(s string) int {
 	if len(s) == 0{
 		return 0
