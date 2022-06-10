@@ -6,6 +6,13 @@
 
 int main() {
     {
+        //[[0,1,1],[1,1,0],[1,1,0]]
+        Solution_2290 s2290;
+        std::vector<std::vector<int>> grid{{0,1,1},{1,1,0},{1,1,0}};
+        auto res = s2290.minimumObstacles(grid);
+        std::cout<<res<<std::endl;
+    }
+    {
         //["CountIntervals", "add", "add", "count", "add", "count"]
         //[[], [2, 3], [7, 10], [], [5, 8], []]
         CountIntervals s2276;

@@ -243,6 +243,7 @@ struct ListNode {
 #include "graph/2045. Second Minimum Time to Reach Destination.hpp"
 #include "graph/2050. Parallel Courses III.hpp"
 #include "graph/2203. Minimum Weighted Subgraph With the Required Paths.hpp"
+#include "graph/2290. Minimum Obstacle Removal to Reach Corner.hpp"
 #include "string/1446. Consecutive Characters.cpp"
 #include "string/1451. Rearrange Words in a Sentence.hpp"
 #include "string/1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence.hpp"
