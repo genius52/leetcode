@@ -2,35 +2,60 @@ package array
 
 //Input: nums = [4,2,4,5,6]
 //Output: 17
-//Explanation: The optimal subarray here is [2,4,5,6].
+
 func MaximumUniqueSubarray(nums []int) int{
 	var l int = len(nums)
-	var res int = 0
-	var record [10001]int
-	for i := 0;i <= 10000;i++{
-		record[i] = -1
-	}
-	var prefix []int = make([]int,l + 1)
-	for i := 0;i < l;i++{
-		prefix[i + 1] = nums[i] + prefix[i]
-	}
 	var left int = 0
 	var right int = 0
+	var record map[int]bool = make(map[int]bool)
+	var cur_sum int = 0
+	var res int = 0
 	for left < l{
-		for right < l && record[nums[right]] < left{
-			record[nums[right]] = right
-			res = max_int(res,prefix[right + 1] - prefix[left])
+		for right < l{
+			if _,ok := record[nums[right]];ok{
+				break
+			}
+			cur_sum += nums[right]
+			record[nums[right]] = true
 			right++
+			res = max_int(res,cur_sum)
 		}
-		if right >= l{
-			break
-		}
-		left = record[nums[right]] + 1
-		record[nums[right]] = right
-		right++
+		cur_sum -= nums[left]
+		delete(record,nums[left])
+		left++
 	}
 	return res
 }
+
+//Explanation: The optimal subarray here is [2,4,5,6].
+//func MaximumUniqueSubarray(nums []int) int{
+//	var l int = len(nums)
+//	var res int = 0
+//	var record [10001]int
+//	for i := 0;i <= 10000;i++{
+//		record[i] = -1
+//	}
+//	var prefix []int = make([]int,l + 1)
+//	for i := 0;i < l;i++{
+//		prefix[i + 1] = nums[i] + prefix[i]
+//	}
+//	var left int = 0
+//	var right int = 0
+//	for left < l{
+//		for right < l && record[nums[right]] < left{
+//			record[nums[right]] = right
+//			res = max_int(res,prefix[right + 1] - prefix[left])
+//			right++
+//		}
+//		if right >= l{
+//			break
+//		}
+//		left = record[nums[right]] + 1
+//		record[nums[right]] = right
+//		right++
+//	}
+//	return res
+//}
 
 //func MaximumUniqueSubarray(nums []int) int {
 //	var l int = len(nums)

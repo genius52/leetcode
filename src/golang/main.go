@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		var nums []int = []int{4, 2, 4, 5, 6}
+		res := array.MaximumUniqueSubarray(nums)
+		fmt.Println(res)
+	}
+	{
 		//[3,2,20,1,1,3]
 		//10
 		var nums []int = []int{3,2,20,1,1,3}
@@ -1341,11 +1346,6 @@ func main() {
 		var nums []int = []int{10, -5, -2, 4, 0, 3}
 		var k int = 3
 		res := array.MaxResult(nums, k)
-		fmt.Println(res)
-	}
-	{
-		var nums []int = []int{4, 2, 4, 5, 6}
-		res := array.MaximumUniqueSubarray(nums)
 		fmt.Println(res)
 	}
 	{
