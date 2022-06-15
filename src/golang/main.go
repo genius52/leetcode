@@ -15,6 +15,28 @@ import (
 
 func main() {
 	{
+		cookies := []int{8,15,10,20,8}
+		k := 2
+		res := array.DistributeCookies(cookies,k)
+		fmt.Println(res)
+	}
+	{
+		grid := [][]int{{5,3},{4,0},{2,1}}
+		moveCost := [][]int{{9,8},{1,5},{10,12},{18,6},{2,4},{14,3}}
+		res := diagram.MinPathCost(grid,moveCost)
+		fmt.Println(res)
+	}
+	{
+		//"fool3e7bar"
+		//"leet"
+		//[["e","3"],["t","7"],["t","8"]]
+		s := "fool3e7bar"
+		sub := "leet"
+		mappings := [][]byte{{'e','3'},{'t','7'},{'t','8'}}
+		res := string_issue.MatchReplacement(s, sub, mappings)
+		fmt.Println(res)
+	}
+	{
 		var nums []int = []int{4, 2, 4, 5, 6}
 		res := array.MaximumUniqueSubarray(nums)
 		fmt.Println(res)

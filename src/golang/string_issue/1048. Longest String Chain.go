@@ -1,5 +1,7 @@
 package string_issue
 
+import "sort"
+
 //Given a list of words, each word consists of English lowercase letters.
 //
 //Let's say word1 is a predecessor of word2 if and only if we can add exactly one letter anywhere in word1 to make it equal to word2.  For example, "abc" is a predecessor of "abac".
@@ -13,6 +15,9 @@ package string_issue
 func is_predecessor(s1 string,s2 string)bool{
 	var l1 int = len(s1)
 	var l2 int = len(s2)
+	if l1 + 1 != l2{
+		return false
+	}
 	var i int = 0
 	var j int = 0
 	var diff_cnt int = 0
@@ -39,9 +44,6 @@ func dp_longestStrChain(record [17][]string,pre_string string,cur_len int)int{
 	if cnt == 0{
 		return 0
 	}
-	//if cnt,ok := memo[pre_string];ok{
-	//	return cnt
-	//}
 	var max_len int = 0
 	for i := 0;i < cnt;i++{
 		if len(pre_string) == 0 || is_predecessor(pre_string,record[cur_len][i]){
@@ -51,7 +53,6 @@ func dp_longestStrChain(record [17][]string,pre_string string,cur_len int)int{
 			}
 		}
 	}
-	//memo[pre_string] = max_len
 	return max_len
 }
 
@@ -72,4 +73,24 @@ func LongestStrChain(words []string) int {
 		}
 	}
 	return res
+}
+
+func longestStrChain(words []string) int{
+	sort.Slice(words, func(i, j int) bool {
+		return len(words[i]) < len(words[j])
+	})
+	var l int = len(words)
+	var dp []int = make([]int,l)
+	var res int = 0
+	for i := 0;i < l;i++{
+		for j := i + 1;j < l;j++{
+			if is_predecessor(words[i],words[j]){
+				dp[j] = max_int(dp[j],1 + dp[i])
+				if dp[j] > res{
+					res = dp[j]
+				}
+			}
+		}
+	}
+	return res + 1
 }
