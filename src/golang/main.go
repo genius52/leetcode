@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		nums := []int{2,1,4,3,5}
+		var k int64 = 10
+		res := array.CountSubarrays(nums,k)
+		fmt.Println(res)
+	}
+	{
 		cookies := []int{8,15,10,20,8}
 		k := 2
 		res := array.DistributeCookies(cookies,k)
