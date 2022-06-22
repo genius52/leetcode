@@ -15,6 +15,25 @@ import (
 
 func main() {
 	{
+		m := 3
+		n := 5
+		prices := [][]int{{1,4,2},{2,2,7},{2,1,3}}
+		res := diagram.SellingWood(m,n,prices)
+		fmt.Println(res)
+	}
+	{
+		s := "0011110011"
+		k := 522399436
+		res := string_issue.LongestSubsequence(s,k)
+		fmt.Println(res)
+	}
+	{
+		num := 10
+		k := 8
+		res := number.MinimumNumbers(num,k)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{2,1,4,3,5}
 		var k int64 = 10
 		res := array.CountSubarrays(nums,k)
