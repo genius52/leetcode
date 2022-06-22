@@ -16,9 +16,6 @@ func IsIsomorphic(s string, t string) bool{
 		}
 		count1[s[i]] = i + 1
 		count2[t[i]] = i + 1
-		if count1[s[i]] != count2[t[i]]{
-			return false
-		}
 	}
 	return true
 }

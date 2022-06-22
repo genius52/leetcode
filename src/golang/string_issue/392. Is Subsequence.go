@@ -20,8 +20,5 @@ func isSubsequence(s string, t string) bool {
 			pos2++
 		}
 	}
-	if pos1 < l1{
-		return false
-	}
-	return true
+	return pos1 == l1
 }
