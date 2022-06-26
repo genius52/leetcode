@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		ideas := []string{"coffee","donuts","time","toffee"}
+		res := string_issue.DistinctNames(ideas)
+		fmt.Println(res)
+	}
+	{
 		m := 3
 		n := 5
 		prices := [][]int{{1,4,2},{2,2,7},{2,1,3}}
