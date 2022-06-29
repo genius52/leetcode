@@ -15,6 +15,22 @@ import (
 
 func main() {
 	{
+		n := 3
+		res := number.DistinctSequences(n)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{3,2,4,6}
+		res := array.MaximumXOR(nums)
+		fmt.Println(res)
+	}
+	{
+		n := 3
+		edges := [][]int{{0,1},{0,2},{1,2}}
+		res := diagram.CountPairs(n,edges)
+		fmt.Println(res)
+	}
+	{
 		ideas := []string{"coffee","donuts","time","toffee"}
 		res := string_issue.DistinctNames(ideas)
 		fmt.Println(res)
