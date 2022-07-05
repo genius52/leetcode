@@ -16,10 +16,16 @@ func CharacterReplacement(s string, k int) int {
 	var left int = 0
 	var right int = 0
 	var cnt [26]int
-	var max_occur_cnt int = 0
 	for left < l && right < l{
 		cnt[s[right] - 'A']++
-		max_occur_cnt = max_occur(cnt,s,left,right)
+		if right - left + 1 <= k{
+			if right - left + 1 > max_len{
+				max_len = right - left + 1
+			}
+			right++
+			continue
+		}
+		max_occur_cnt := max_occur(cnt,s,left,right)
 		if right - left + 1 - max_occur_cnt <= k{
 			var cur_len int = right - left + 1
 			if cur_len > max_len{
@@ -27,7 +33,6 @@ func CharacterReplacement(s string, k int) int {
 			}
 		}else{
 			cnt[s[left] - 'A']--
-			max_occur_cnt = max_occur(cnt,s,left + 1,right)
 			left++
 		}
 		right++

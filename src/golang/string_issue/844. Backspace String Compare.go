@@ -41,6 +41,42 @@ func backspaceCompare(s string, t string) bool {
 	return true
 }
 
+func BackspaceCompare(s string, t string) bool{
+	var l1 int = len(s)
+	var l2 int = len(t)
+	var i int = l1 - 1
+	var j int = l2 - 1
+	for i >= 0 || j >= 0{
+		var star1 int = 0
+		for i >= 0 && (s[i] == '#' || star1 > 0){
+			if s[i] == '#'{
+				star1++
+			}else{
+				star1--
+			}
+			i--
+		}
+		var star2 int = 0
+		for j >= 0 && (t[j] == '#' || star2 > 0){
+			if t[j] == '#'{
+				star2++
+			}else{
+				star2--
+			}
+			j--
+		}
+		if i < 0 || j < 0{
+			break
+		}
+		if i >= 0 && j >= 0 &&  s[i] != t[j]{
+			return false
+		}
+		i--
+		j--
+	}
+	return i < 0 && j < 0
+}
+
 //func BackspaceCompare(s string, t string) bool{
 //	var l1 int = len(s)
 //	var l2 int = len(t)
