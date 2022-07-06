@@ -15,6 +15,19 @@ import (
 
 func main() {
 	{
+		n := 6
+		delay := 2
+		forget := 4
+		res := number.PeopleAwareOfSecret2(n,delay,forget)
+		fmt.Println(res)
+	}
+	{
+		key := "the quick brown fox jumps over the lazy dog"
+		message := "vkbs bs t suepuv"
+		res := string_issue.DecodeMessage(key,message)
+		fmt.Println(res)
+	}
+	{
 		//"a##c"
 		//"#a#c"
 		//"bxj##tw"
@@ -3002,7 +3015,7 @@ func main() {
 	}
 	{
 		input := []int{9, 1, 4, 7, 3, -1, 0, 5, 8, -1, 6}
-		res := array.LongestConsecutive2(input)
+		res := array.LongestConsecutive(input)
 		fmt.Println(res)
 	}
 	{
