@@ -1,6 +1,6 @@
 package string_issue
 
-func longestCommonPrefix(strs []string) string {
+func LongestCommonPrefix(strs []string) string {
 	l := len(strs)
 	if l == 0{
 		return ""
@@ -9,14 +9,16 @@ func longestCommonPrefix(strs []string) string {
 	}
 	var res string = strs[0]
 	for i := 1;i < l;i++{
-		for j:= 0;j < len(strs[i]) && j < len(res);j++{
+		var j int = 0
+		for j < len(strs[i]) && j < len(res){
 			if strs[i][j] != res[j]{
-				if j == 0{
-					return ""
-				}
-				res = res[0:j]
 				break
 			}
+			j++
+		}
+		res = res[0:j]
+		if j == 0{
+			return ""
 		}
 	}
 	return res

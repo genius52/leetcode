@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		strs := []string{"ab", "a"}
+		res := string_issue.LongestCommonPrefix(strs)
+		fmt.Println(res)
+	}
+	{
 		n := 6
 		delay := 2
 		forget := 4
