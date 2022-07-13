@@ -15,6 +15,24 @@ import (
 
 func main() {
 	{
+		var l1 list_queue.ListNode
+		l1.Val = 1
+		var l2 list_queue.ListNode
+		l2.Val = 2
+		var l3 list_queue.ListNode
+		l3.Val = 3
+		var l4 list_queue.ListNode
+		l4.Val = 4
+		var l5 list_queue.ListNode
+		l5.Val = 5
+		l1.Next = &l2
+		l2.Next = &l3
+		l3.Next = &l4
+		l4.Next = &l5
+		res := list_queue.OddEvenList(&l1)
+		fmt.Println(res)
+	}
+	{
 		strs := []string{"ab", "a"}
 		res := string_issue.LongestCommonPrefix(strs)
 		fmt.Println(res)

@@ -176,6 +176,7 @@ struct ListNode {
 #include "number/2166. Design Bitset.hpp"
 #include "number/215. Kth Largest Element in an Array.hpp"
 #include "number/2276. Count Integers in Intervals.hpp"
+#include "number/2333. Minimum Sum of Squared Difference.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
