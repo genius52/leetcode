@@ -15,6 +15,19 @@ import (
 
 func main() {
 	{
+		var t1 tree.TreeNode
+		//var t2 tree.TreeNode
+		//var t3 tree.TreeNode
+		//var t4 tree.TreeNode
+		//var t5 tree.TreeNode
+		//t1.Left = &t2
+		//t1.Right = &t3
+		//t2.Left = &t4
+		//t2.Right = &t5
+		res := tree.DiameterOfBinaryTree(&t1)
+		fmt.Println(res)
+	}
+	{
 		var l1 list_queue.ListNode
 		l1.Val = 1
 		var l2 list_queue.ListNode
