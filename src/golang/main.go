@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		grid := [][]int{{1,1},{3,4}}
+		res := array.CountPaths(grid)
+		fmt.Println(res)
+	}
+	{
 		var t1 tree.TreeNode
 		//var t2 tree.TreeNode
 		//var t3 tree.TreeNode
