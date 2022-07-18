@@ -15,6 +15,21 @@ import (
 
 func main() {
 	{
+		nums := []int{1,3,4,3,1}
+		threshold := 6
+		res := array.ValidSubarraySize(nums,threshold)
+		fmt.Println(res)
+	}
+	{
+		m := 2
+		n := 2
+		N := 2
+		i := 0
+		j := 0
+		res := diagram.FindPaths(m, n, N, i, j)
+		fmt.Println(res)
+	}
+	{
 		grid := [][]int{{1,1},{3,4}}
 		res := array.CountPaths(grid)
 		fmt.Println(res)
@@ -5578,15 +5593,6 @@ func main() {
 		res = obj.DeQueue()
 		res = obj.IsEmpty()
 		res = obj.IsEmpty()
-		fmt.Println(res)
-	}
-	{
-		m := 8
-		n := 50
-		N := 23
-		i := 5
-		j := 26
-		res := diagram.FindPaths(m, n, N, i, j)
 		fmt.Println(res)
 	}
 	{
