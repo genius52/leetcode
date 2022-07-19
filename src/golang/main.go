@@ -15,6 +15,29 @@ import (
 
 func main() {
 	{
+		var routes [][]int = [][]int{{1, 2, 7}, {3, 6, 7}}
+		var source int = 1
+		var target int = 6
+		res := diagram.NumBusesToDestination(routes, source, target)
+		fmt.Println(res)
+	}
+	{
+		var nums []int = []int{14,9,8,4,3,2}
+		res := array.CanPartition2(nums)
+		fmt.Println(res)
+	}
+	{
+		numCourses := 2
+		prerequisites := [][]int{{1,0}}
+		res := diagram.FindOrder(numCourses, prerequisites)
+		fmt.Println(res)
+	}
+	{
+		numRows := 5
+		res := array.Generate(numRows)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{1,3,4,3,1}
 		threshold := 6
 		res := array.ValidSubarraySize(nums,threshold)
@@ -3232,13 +3255,6 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		var routes [][]int = [][]int{{1, 2, 7}, {3, 6, 7}}
-		var source int = 1
-		var target int = 6
-		res := diagram.NumBusesToDestination(routes, source, target)
-		fmt.Println(res)
-	}
-	{
 		input := []string{"900 google.mail.com", "50 yahoo.com", "1 intel.mail.com", "5 wiki.org"}
 		res := string_issue.SubdomainVisits(input)
 		fmt.Println(res)
@@ -3769,11 +3785,6 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		var nums []int = []int{1, 5, 11, 5}
-		res := array.CanPartition2(nums)
-		fmt.Println(res)
-	}
-	{
 		var num1 string = "99"
 		var num2 string = "1"
 		res := number.AddStrings(num1, num2)
@@ -3981,12 +3992,6 @@ func main() {
 		var num string = "3456237490"
 		var target int = 9191
 		res := number.AddOperators(num, target)
-		fmt.Println(res)
-	}
-	{
-		nums := 5
-		input := [][]int{{1, 0}, {2, 0}, {3, 1}, {3, 2}}
-		res := diagram.FindOrder(nums, input)
 		fmt.Println(res)
 	}
 	{
@@ -6487,9 +6492,6 @@ func main() {
 	//	var input []string_issue = []string_issue{"Hello","Alaska", "Dad", "Peace"}
 	//	ret := findWords(input)
 	//	fmt.Println(ret)
-	//}
-	//{
-	//	generate(5)
 	//}
 	//
 	//var arr []int = []int{1,2,2,3,3,3,3,4,4,5,6,6,7,7,8}

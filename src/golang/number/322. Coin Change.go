@@ -12,6 +12,8 @@ func CoinChange(coins []int, amount int) int {
 	for i := 0;i < l;i++{
 		if coins[i] <= amount{
 			dp[coins[i]] = 1
+		}else{
+			break
 		}
 	}
 	for i := 1;i <= amount;i++{
@@ -19,8 +21,8 @@ func CoinChange(coins []int, amount int) int {
 			continue
 		}
 		dp[i] = 2147483647
-		for j := 0;j < l;j++{
-			if (i - coins[j]) >= 0 && dp[i - coins[j]] != 0{
+		for j := 0;j < l && coins[j] < amount;j++{
+			if (i - coins[j]) >= 0 && dp[i - coins[j]] != 2147483647{
 				dp[i] = min_int(dp[i],1 + dp[i - coins[j]])
 			}
 		}
@@ -55,6 +57,7 @@ func coinChange(coins []int, amount int) int {
 	return dp[amount]
 }
 
+//DFS solution
 func dfs_coinChange(coins []int, amount int,record map[int]int)int{
 	if amount == 0{
 		return 0
