@@ -44,3 +44,42 @@ func MinWindow(s string, t string) string {
 	}
 	return res
 }
+
+func minWindow(s string, t string) string{
+	var total int = len(t)
+	var target map[uint8]int = make(map[uint8]int)
+	for i := 0;i < total;i++{
+		target[t[i]]++
+	}
+	var left int = 0
+	var right int = 0
+	var l int = len(s)
+	var res string
+	var min_len int = 2147483647
+	for left < l && right < l{
+		for right < l && total > 0{
+			if cnt,ok := target[s[right]];ok{
+				if cnt > 0{
+					total--
+				}
+				target[s[right]]--
+			}
+			right++
+		}
+		for total == 0{
+			cur_len := right - left + 1
+			if cur_len < min_len{
+				min_len = cur_len
+				res = s[left:right]
+			}
+			if _,ok := target[s[left]];ok{
+				target[s[left]]++
+				if target[s[left]] > 0{
+					total++
+				}
+			}
+			left++
+		}
+	}
+	return res
+}

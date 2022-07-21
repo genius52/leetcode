@@ -13,25 +13,24 @@ func ThreeSumClosest(nums []int, target int) int {
 	sort.Ints(nums)
 	var min_gap int = 1<< 31 - 1
 	var res int = 0
-	var begin int = 0
-	var end int = l - 1
-	for begin < end - 1{
-		mid := begin + 1
-		var end2 int = end
-		for mid < end2{
-			sum := nums[begin] + nums[mid] + nums[end2]
+	var left int = 0
+	for left < l - 1{
+		mid := left + 1
+		var right int = l - 1
+		for mid < right{
+			sum := nums[left] + nums[mid] + nums[right]
 			diff := int(math.Abs(float64(sum - target)))
 			if diff < min_gap{
 				min_gap = diff
 				res = sum
 			}
 			if sum > target{
-				end2--
+				right--
 			}else{
 				mid++
 			}
 		}
-		begin++
+		left++
 	}
 	return res
 }

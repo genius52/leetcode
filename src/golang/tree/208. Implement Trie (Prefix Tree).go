@@ -39,44 +39,33 @@ func (this *Trie) Insert(word string)  {
 	if l == 0{
 		return
 	}
-	tries := this
+	visit := this
 	for i := 0;i < l;i++{
-		if tries.record[word[i] - 'a'] == nil{
+		if visit.record[word[i] - 'a'] == nil{
 			var t Trie
-			if i == l - 1{
-				t.is_word = true
-			}
-			tries.record[word[i] - 'a'] = &t
-		}else{
-			if i == l - 1{
-				tries.record[word[i] - 'a'].is_word = true
-			}
+			visit.record[word[i] - 'a'] = &t
 		}
-		tries = tries.record[word[i] - 'a']
+		visit = visit.record[word[i] - 'a']
 	}
+	visit.is_word = true
 }
 
 /** Returns if the word is in the trie. */
 func (this *Trie) Search(word string) bool {
 	l := len(word)
 	if l == 0{
-		if this.is_word{
-			return true
-		}
-		return false
+		return this.is_word
 	}
-	var word_dict *Trie = this
+	var visit *Trie = this
 	i := 0
-	for ;i < l;i++ {
-		if nil == word_dict.record[word[i] - 'a']{
+	for i < l{
+		if nil == visit.record[word[i] - 'a']{
 			return false
 		}
-		word_dict = word_dict.record[word[i] - 'a']
+		visit = visit.record[word[i] - 'a']
+		i++
 	}
-	if i != l{
-		return false
-	}
-	return word_dict.is_word
+	return visit.is_word
 }
 
 /** Returns if there is any word in the trie that starts with the given prefix. */
@@ -85,13 +74,14 @@ func (this *Trie) StartsWith(prefix string) bool {
 	if l == 0{
 		return true
 	}
-	var word_dict *Trie = this
+	var visit *Trie = this
 	i := 0
-	for ;i < l;i++ {
-		if nil == word_dict.record[prefix[i] - 'a']{
+	for i < l{
+		if nil == visit.record[prefix[i] - 'a']{
 			return false
 		}
-		word_dict = word_dict.record[prefix[i] - 'a']
+		visit = visit.record[prefix[i] - 'a']
+		i++
 	}
 	return true
 }

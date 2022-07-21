@@ -21,7 +21,7 @@ func ShortestPathLength(graph [][]int) int {
 		visited[i][1 << i] = true
 	}
 	var end int = 1 << l - 1
-	//var res int = 2147483647
+	//var res int = minWindow
 	for q.Len() > 0{
 		cur := q.Front().Value.(State)
 		q.Remove(q.Front())
