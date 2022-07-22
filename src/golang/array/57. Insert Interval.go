@@ -50,3 +50,32 @@ func Insert(intervals [][]int, newInterval []int) [][]int {
 	}
 	return res
 }
+
+func insert(intervals [][]int, newInterval []int) [][]int{
+	var l int = len(intervals)
+	var res [][]int
+	var i int = 0
+	for i < l{
+		if newInterval[0] <= intervals[i][1]{
+			break
+		}
+		res = append(res,intervals[i])
+		i++
+	}
+	if i == l{
+		res = append(res,newInterval)
+		return res
+	}
+	var left int = min_int(newInterval[0],intervals[i][0])
+	var right int = newInterval[1]
+	for i < l && newInterval[1] >= intervals[i][0]{
+		right = max_int(right,intervals[i][1])
+		i++
+	}
+	res = append(res,[]int{left,right})
+	for i < l {
+		res = append(res,intervals[i])
+		i++
+	}
+	return res
+}
