@@ -15,6 +15,22 @@ import (
 
 func main() {
 	{
+	//["NumberContainers","change","find","change","find","find","find"]
+	//[[],[1,10],[10],[1,20],[10],[20],[30]]
+		obj := number.Constructor2349()
+		obj.Change(1,10)
+		res := obj.Find(10)
+		obj.Change(1,20)
+		res = obj.Find(20)
+		fmt.Println(res)
+	}
+	{
+		nums := []string{"64333639502","65953866768","17845691654","87148775908","58954177897","70439926174","48059986638","47548857440","18418180516","06364956881","01866627626","36824890579","14672385151","71207752868"}
+		queries := [][]int{{9,4},{6,1},{3,8},{12,9},{11,4},{4,9},{2,7},{10,3},{13,1},{13,1},{6,1},{5,10}}
+		res := number.SmallestTrimmedNumbers(nums,queries)
+		fmt.Println(res)
+	}
+	{
 		var routes [][]int = [][]int{{1, 2, 7}, {3, 6, 7}}
 		var source int = 1
 		var target int = 6

@@ -11,25 +11,16 @@ func AsteroidCollision(asteroids []int) []int {
 		if q.Len() == 0{
 			q.PushBack(asteroids[i])
 		}else{
-			var last int = q.Back().Value.(int)
-			if asteroids[i] > 0 || (asteroids[i] < 0 && last < 0){
+			if asteroids[i] > 0{
 				q.PushBack(asteroids[i])
-			}else if asteroids[i] < 0 {
-				var insert bool = true
-				for q.Len() > 0 && q.Back().Value.(int) > 0{
-					if q.Back().Value.(int) < -asteroids[i]{
-						q.Remove(q.Back())
-					}else if q.Back().Value.(int) == -asteroids[i]{
-						q.Remove(q.Back())
-						insert = false
-						break
-					}else{
-						insert = false
-						break
-					}
+			}else{
+				for q.Len() > 0 && q.Back().Value.(int) > 0 && q.Back().Value.(int) < -asteroids[i]{
+					q.Remove(q.Back())
 				}
-				if insert{
+				if q.Len() == 0 || q.Back().Value.(int) < 0{
 					q.PushBack(asteroids[i])
+				}else if q.Back().Value.(int) == -asteroids[i]{
+					q.Remove(q.Back())
 				}
 			}
 		}

@@ -6,6 +6,17 @@
 
 int main() {
     {
+        //["highestRated", "highestRated", "changeRating", "highestRated", "changeRating", "highestRated"]
+        //[[ ["korean"], ["japanese"], ["sushi", 16], ["japanese"], ["ramen", 16], ["japanese"]]
+        std::vector<string> foods{"kimchi", "miso", "sushi", "moussaka", "ramen", "bulgogi"};
+        std::vector<string> cuisines{"korean", "japanese", "japanese", "greek", "japanese", "korean"};
+        std::vector<int> ratings{9, 12, 8, 15, 14, 7};
+        FoodRatings s2352(foods,cuisines,ratings);
+        auto res = s2352.highestRated("korean");
+        res = s2352.highestRated("japanese");
+        std::cout<< res << std::endl;
+    }
+    {
         //[10,10,10,11,5]
         //[1,0,6,6,1]
         //11
