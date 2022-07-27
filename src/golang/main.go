@@ -15,6 +15,14 @@ import (
 
 func main() {
 	{
+		//[1,2,3,1,10,11,22,12,32,22,44,31,23,45,64]
+		//7
+		nums := []int{1,2,3,1,10,11,22,12,32,22,44,31,23,45,64}
+		k := 7
+		res := number.CountExcellentPairs(nums,k)
+		fmt.Println(res)
+	}
+	{
 	//["NumberContainers","change","find","change","find","find","find"]
 	//[[],[1,10],[10],[1,20],[10],[20],[30]]
 		obj := number.Constructor2349()
