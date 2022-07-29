@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		s := "catsanddog"
+		wordDict := []string{"cat","cats","and","sand","dog"}
+		res := string_issue.WordBreak140(s,wordDict)
+		fmt.Println(res)
+	}
+	{
 		//[1,2,3,1,10,11,22,12,32,22,44,31,23,45,64]
 		//7
 		nums := []int{1,2,3,1,10,11,22,12,32,22,44,31,23,45,64}
@@ -4107,12 +4113,6 @@ func main() {
 		l3.Next = &l4
 		l4.Next = &l5
 		list_queue.ReorderList2(&l1)
-	}
-	{
-		//s := "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-		//wordDict := []string{"a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"}
-		//res := string_issue.WordBreak2(s,wordDict)
-		//fmt.Println(res)
 	}
 	{
 		//[1,3,null,null,2]
