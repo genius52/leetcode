@@ -1,5 +1,7 @@
 package string_issue
 
+import "strconv"
+
 //输入：words = ["abc","deq","mee","aqq","dkd","ccc"], pattern = "abb"
 //输出：["mee","aqq"]
 
@@ -32,6 +34,33 @@ func FindAndReplacePattern(words []string, pattern string) []string {
 		}
 		if same{
 			res = append(res,word)
+		}
+	}
+	return res
+}
+
+func findAndReplacePattern(words []string, pattern string) []string {
+	var res []string
+	target := convert_findAndReplacePattern(pattern)
+	for _,w := range words{
+		if convert_findAndReplacePattern(w) == target{
+			res = append(res,w)
+		}
+	}
+	return res
+}
+
+func convert_findAndReplacePattern(s string)string{
+	var res string
+	var record map[int32]int = make(map[int32]int)
+	var cnt int = 0
+	for _,c := range s{
+		if val,ok := record[c];ok{
+			res += strconv.Itoa(val)
+		}else{
+			record[c] = cnt
+			res += strconv.Itoa(cnt)
+			cnt++
 		}
 	}
 	return res
