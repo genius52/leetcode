@@ -71,6 +71,8 @@ func dp_wordBreak(s string,l int,idx int,wordDict []string,choose *[]int, res *[
 	}
 }
 
+//To be optimized by memory
+
 func WordBreak140(s string, wordDict []string) []string {
 	var l int = len(s)
 	var dict map[string]bool = make(map[string]bool)
