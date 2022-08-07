@@ -15,6 +15,17 @@ import (
 
 func main() {
 	{
+		edges := []int{-1,4,-1,2,0,4}
+		res := diagram.LongestCycle(edges)
+		fmt.Println(res)
+	}
+	{
+		var nums []int = []int{1, 3}
+		var n int = 6
+		res := number.MinPatches(nums, n)
+		fmt.Println(res)
+	}
+	{
 		s := "catsanddog"
 		wordDict := []string{"cat","cats","and","sand","dog"}
 		res := string_issue.WordBreak140(s,wordDict)
@@ -3890,14 +3901,6 @@ func main() {
 	{
 		nums := []int{0, 4, 2, 1, 0, -1, -3}
 		res := array.IncreasingTriplet2(nums)
-		fmt.Println(res)
-	}
-	{
-		//[1,2,31,33]
-		//2147483647
-		var nums []int = []int{1, 2, 31, 33}
-		var n int = 2147483647
-		res := number.MinPatches(nums, n)
 		fmt.Println(res)
 	}
 	{
