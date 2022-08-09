@@ -15,6 +15,17 @@ import (
 
 func main() {
 	{
+		s := "acfgbd"
+		k := 2
+		res := string_issue.LongestIdealString(s,k)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{3,9,3}
+		res := array.MinimumReplacement(nums)
+		fmt.Println(res)
+	}
+	{
 		edges := []int{-1,4,-1,2,0,4}
 		res := diagram.LongestCycle(edges)
 		fmt.Println(res)
