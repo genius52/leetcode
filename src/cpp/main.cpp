@@ -6,6 +6,17 @@
 
 int main() {
     {
+        //[[5,-4,-3,4],[-3,-4,4,5],[5,1,5,-4]]
+        //3
+        Solution_363 s363;
+        //std::vector<std::vector<int>> matrix{{1,0,1},{0,-2,3}};
+        //std::vector<std::vector<int>> matrix{{2,2,-1}};
+        std::vector<std::vector<int>> matrix{{5,-4,-3,4},{-3,-4,4,5},{5,1,5,-4}};
+        int k = 3;
+        auto res = s363.maxSumSubmatrix(matrix,k);
+        std::cout << "363 res = "<< res <<std::endl;
+    }
+    {
         //["highestRated", "highestRated", "changeRating", "highestRated", "changeRating", "highestRated"]
         //[[ ["korean"], ["japanese"], ["sushi", 16], ["japanese"], ["ramen", 16], ["japanese"]]
         std::vector<string> foods{"kimchi", "miso", "sushi", "moussaka", "ramen", "bulgogi"};
@@ -1119,14 +1130,6 @@ int main() {
         int k = 3;
         auto res = s373.kSmallestPairs(nums1,nums2,k);
         std::cout<<"373 res = "<<res.size()<<std::endl;
-    }
-    {
-        Solution_363 s363;
-        //std::vector<std::vector<int>> matrix{{1,0,1},{0,-2,3}};
-        std::vector<std::vector<int>> matrix{{2,2,-1}};
-        int k = 5;
-        auto res = s363.maxSumSubmatrix(matrix,k);
-        std::cout << "363 res = "<< res <<std::endl;
     }
     {
         SummaryRanges s352;
