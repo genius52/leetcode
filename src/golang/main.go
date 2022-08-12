@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		nums := []int{7,2,5,10,8}
+		m := 2
+		res := array.SplitArray(nums,m)
+		fmt.Println(res)
+	}
+	{
 		s := "acfgbd"
 		k := 2
 		res := string_issue.LongestIdealString(s,k)
