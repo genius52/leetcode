@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		n := 13
+		k := 2
+		res := number.FindKthNumber(n,k)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{7,2,5,10,8}
 		m := 2
 		res := array.SplitArray(nums,m)
