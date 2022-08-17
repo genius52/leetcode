@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		n := 99
+		res := number.CountSpecialNumbers(n)
+		fmt.Println(res)
+	}
+	{
 		grid := [][]int{{9,9,8,1},{5,6,2,6},{8,2,6,4},{6,2,2,2}}
 		res := array.LargestLocal(grid)
 		fmt.Println(res)
