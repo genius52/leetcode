@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		var stickers []string = []string{"with", "example", "science"}
+		var target string = "thehat"
+		res := string_issue.MinStickers(stickers, target)
+		fmt.Println(res)
+	}
+	{
 		n := 99
 		res := number.CountSpecialNumbers(n)
 		fmt.Println(res)
@@ -3582,12 +3588,6 @@ func main() {
 	{
 		var s string = "00110011"
 		res := string_issue.CountBinarySubstrings(s)
-		fmt.Println(res)
-	}
-	{
-		var stickers []string = []string{"with", "example", "science"}
-		var target string = "thehat"
-		res := string_issue.MinStickers(stickers, target)
 		fmt.Println(res)
 	}
 	{
