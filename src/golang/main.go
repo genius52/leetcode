@@ -15,6 +15,63 @@ import (
 
 func main() {
 	{
+		var t1 tree.TreeNode
+		t1.Val = 1
+		var t2 tree.TreeNode
+		t2.Val = 2
+		var t3 tree.TreeNode
+		t3.Val = 3
+		var t4 tree.TreeNode
+		t4.Val = 4
+		var t5 tree.TreeNode
+		t5.Val = 5
+		t1.Left = &t2
+		t2.Left = &t3
+		t3.Left = &t4
+		t4.Left = &t5
+		start := 2
+		res := tree.AmountOfTime(&t1,start)
+		fmt.Println(res)
+	}
+	{
+		num := "0000"
+		res := number.LargestPalindromic(num)
+		fmt.Println(res)
+	}
+	{
+		//1
+		//1
+		//[1,1,1,1]
+		//[1,1,1,50]
+		//100
+		//100
+		//[1,2,3,4,5,6,7,8,9]
+		//[1,2,3,1,2,3,1,2,10]
+		initialEnergy := 100
+		initialExperience := 100
+		energy := []int{1,2,3,4,5,6,7,8,9}
+		experience := []int{1,2,3,1,2,3,1,2,10}
+		res := number.MinNumberOfHours(initialEnergy,initialExperience,energy,experience)
+		fmt.Println(res)
+	}
+	{
+		s := "dztz"
+		shifts := [][]int{{0,0,0},{1,1,1}}
+		res := string_issue.ShiftingLetters3(s,shifts)
+		fmt.Println(res)
+	}
+	{
+		s := "11100"
+		res := string_issue.SecondsToRemoveOccurrences(s)
+		fmt.Println(res)
+	}
+	{
+		blocks := "WBBWWBBWBW"
+		k := 7
+		res := string_issue.MinimumRecolors(blocks,k)
+		fmt.Println(res)
+	}
+	{
 		var stickers []string = []string{"with", "example", "science"}
 		var target string = "thehat"
 		res := string_issue.MinStickers(stickers, target)
