@@ -6,6 +6,14 @@
 
 int main() {
     {
+
+        Solution_2382 s2382;
+        std::vector<int> nums{1,2,5,6,1};
+        std::vector<int> removeQueries{0,3,2,4,1};
+        auto res = s2382.maximumSegmentSum(nums,removeQueries);
+        std::cout << "2382 res = "<< res[0] <<std::endl;
+    }
+    {
         //[[5,-4,-3,4],[-3,-4,4,5],[5,1,5,-4]]
         //3
         Solution_363 s363;
