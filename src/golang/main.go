@@ -15,6 +15,21 @@ import (
 
 func main() {
 	{
+		k := 3
+		rowConditions := [][]int{{1,2},{3,2}}
+		colConditions := [][]int{{2,1},{3,2}}
+		res := diagram.BuildMatrix(k,rowConditions,colConditions)
+		fmt.Println(res)
+	}
+	{
+		//intervals = [[1,3],[1,4],[2,5],[3,5]]
+		//var intervals [][]int = [][]int{{2, 10}, {3, 7}, {3, 15}, {4, 11}, {6, 12}, {6, 16}, {7, 8}, {7, 11}, {7, 15}, {11, 12}}
+		//var intervals [][]int = [][]int{{1,3},{1,4},{2,5},{3,5}}
+		var intervals [][]int = [][]int{{1,3},{3,7},{5,7},{7,8}}
+		res := array.IntersectionSizeTwo(intervals)
+		fmt.Println(res)
+	}
+	{
 		var t1 tree.TreeNode
 		t1.Val = 1
 		var t2 tree.TreeNode
@@ -3528,11 +3543,6 @@ func main() {
 	{
 		input := "ababcbacadefegdehijhklij"
 		res := string_issue.PartitionLabels(input)
-		fmt.Println(res)
-	}
-	{
-		var intervals [][]int = [][]int{{2, 10}, {3, 7}, {3, 15}, {4, 11}, {6, 12}, {6, 16}, {7, 8}, {7, 11}, {7, 15}, {11, 12}}
-		res := array.IntersectionSizeTwo(intervals)
 		fmt.Println(res)
 	}
 	{
