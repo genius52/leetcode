@@ -15,6 +15,31 @@ import (
 
 func main() {
 	{
+		nums := []int{1,3,8,48,10}
+		res := array.LongestNiceSubarray(nums)
+		fmt.Println(res)
+	}
+	{
+		startPos := 989
+		endPos := 1000
+		k := 99
+		res := number.NumberOfWays2400(startPos,endPos,k)
+		fmt.Println(res)
+	}
+	{
+		//mat := [][]int{{1,0,0,1,0,0,1,1,1,1,0,1},{1,1,1,1,0,0,1,1,1,0,0,1},{0,1,1,0,0,0,1,1,0,1,1,1},{0,0,0,1,0,0,1,0,1,0,1,1},{0,1,1,1,0,0,0,1,1,1,1,0},{1,1,0,1,0,1,1,1,1,0,1,1},{1,1,0,0,0,1,0,0,0,0,1,1},{1,1,1,0,1,0,0,1,1,0,0,1},{1,0,1,1,1,0,1,0,0,0,1,0},{0,0,0,1,1,0,1,1,1,1,1,1},{1,1,0,1,0,0,1,1,1,0,1,1},{0,0,1,0,0,1,1,1,1,0,1,1}}
+		//cols := 11
+		mat := [][]int{{0,0,0},{1,0,1},{0,1,1},{0,0,1}}
+		cols := 2
+		res := array.MaximumRows(mat,cols)
+		fmt.Println(res)
+	}
+	{
+		n := 9
+		res := number.IsStrictlyPalindromic(n)
+		fmt.Println(res)
+	}
+	{
 		k := 3
 		rowConditions := [][]int{{1,2},{3,2}}
 		colConditions := [][]int{{2,1},{3,2}}
@@ -22,7 +47,7 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		//intervals = [[1,3],[1,4],[2,5],[3,5]]
+		//intervals = [[1,3},{1,4},{2,5},{3,5]]
 		//var intervals [][]int = [][]int{{2, 10}, {3, 7}, {3, 15}, {4, 11}, {6, 12}, {6, 16}, {7, 8}, {7, 11}, {7, 15}, {11, 12}}
 		//var intervals [][]int = [][]int{{1,3},{1,4},{2,5},{3,5}}
 		var intervals [][]int = [][]int{{1,3},{3,7},{5,7},{7,8}}
@@ -152,7 +177,7 @@ func main() {
 	}
 	{
 	//["NumberContainers","change","find","change","find","find","find"]
-	//[[],[1,10],[10],[1,20],[10],[20],[30]]
+	//[[},{1,10},{10},{1,20},{10},{20},{30]]
 		obj := number.Constructor2349()
 		obj.Change(1,10)
 		res := obj.Find(10)
@@ -331,7 +356,7 @@ func main() {
 	{
 		//"fool3e7bar"
 		//"leet"
-		//[["e","3"],["t","7"],["t","8"]]
+		//[["e","3"},{"t","7"},{"t","8"]]
 		s := "fool3e7bar"
 		sub := "leet"
 		mappings := [][]byte{{'e','3'},{'t','7'},{'t','8'}}
@@ -423,7 +448,7 @@ func main() {
 	}
 	{
 		//["TimeMap","set","set","get","get","get","get","get"]
-		//[[],["love","high",10],["love","low",20],["love",5],["love",10],["love",15],["love",20],["love",25]]
+		//[[},{"love","high",10},{"love","low",20},{"love",5},{"love",10},{"love",15},{"love",20},{"love",25]]
 		obj := list_queue.Constructor981()
 		obj.Set("love","high",10)
 		obj.Set("love","low",20)
@@ -453,7 +478,7 @@ func main() {
 	}
 	{
 		//["MyStack","push","push","top","pop","empty"]
-		//[[],[1],[2],[],[],[]]
+		//[[},{1},{2},{},{},{]]
 		var obj list_queue.MyStack = list_queue.Constructor225()
 		obj.Push(1)
 		obj.Push(2)
@@ -509,7 +534,7 @@ func main() {
 	{
 		//var s = "cba"
 		//var pairs [][int = [][]int{{0, 1}, {1, 2}}
-		// s = "dcab", pairs = [[0,3],[1,2]]
+		// s = "dcab", pairs = [[0,3},{1,2]]
 		var s = "dcab"
 		var pairs [][]int = [][]int{{0,3},{1,2}}
 		res := diagram.SmallestStringWithSwaps2(s, pairs)
@@ -745,7 +770,7 @@ func main() {
 		values := []string{"ca"}
 		dictionary := []string{"aaa","cacbc","bbaba","bb"}
 		obj := string_issue.Constructor2227(keys,values,dictionary)
-		//["abcd"],["eizfeiam"]
+		//["abcd"},{"eizfeiam"]
 		res1 := obj.Encrypt("bbb")
 		fmt.Println(res1)
 		res2 := obj.Decrypt("cacaca")
@@ -893,11 +918,11 @@ func main() {
 		//[[99,7]]
 		//85
 		//95
-		//tires = [[2,3],[3,4]], changeTime = 5, numLaps = 4
+		//tires = [[2,3},{3,4]], changeTime = 5, numLaps = 4
 		//tires := [][]int{{99,7}}
 		//changeTime := 85
 		//numLaps := 95
-		//[[1,10],[2,2],[3,4]]
+		//[[1,10},{2,2},{3,4]]
 		//6
 		//5
 		tires := [][]int{{1,10},{2,2},{3,4}}
@@ -958,7 +983,7 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		//[[0,0,1,1],[0,0,1,1]]
+		//[[0,0,1,1},{0,0,1,1]]
 		//2
 		//1
 		grid := [][]int{{0,0,1,1},{0,0,1,1}}
