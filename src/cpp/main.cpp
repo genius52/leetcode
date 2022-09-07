@@ -6,7 +6,13 @@
 
 int main() {
     {
-
+        Solution_2402 s2402;
+        int n = 4;
+        std::vector<std::vector<int>> meetings{{18,19},{3,12},{17,19},{2,13},{7,10}};
+        auto res = s2402.mostBooked(n,meetings);
+        std::cout << "2402 res = "<< res <<std::endl;
+    }
+    {
         Solution_2382 s2382;
         std::vector<int> nums{1,2,5,6,1};
         std::vector<int> removeQueries{0,3,2,4,1};
