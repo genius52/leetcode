@@ -6,6 +6,15 @@
 
 int main() {
     {
+        Solution_2398 s2398;
+        //chargeTimes = [3,6,1,3,4], runningCosts = [2,1,3,4,5], budget = 25
+        std::vector<int> chargeTimes{11,12,19};
+        std::vector<int> runningCosts{10,8,7};
+        long long budget = 19;
+        auto res = s2398.maximumRobots(chargeTimes,runningCosts,budget);
+        std::cout << "2398 res = "<< res <<std::endl;
+    }
+    {
         Solution_2402 s2402;
         int n = 4;
         std::vector<std::vector<int>> meetings{{18,19},{3,12},{17,19},{2,13},{7,10}};
