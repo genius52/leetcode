@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		nums := []int{0,1,2,2,4,4,1}
+		res := number.MostFrequentEven(nums)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{1,3,8,48,10}
 		res := array.LongestNiceSubarray(nums)
 		fmt.Println(res)
