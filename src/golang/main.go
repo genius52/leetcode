@@ -15,6 +15,13 @@ import (
 
 func main() {
 	{
+		var a int = 1 | 0b00111000
+		fmt.Println(a)
+		data := []int{230,136,145}
+		res := number.ValidUtf8(data)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{0,1,2,2,4,4,1}
 		res := number.MostFrequentEven(nums)
 		fmt.Println(res)
