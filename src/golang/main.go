@@ -15,6 +15,40 @@ import (
 
 func main() {
 	{
+		transactions := [][]int{{2,1},{5,0},{4,2}}
+		res := number.MinimumMoney(transactions)
+		fmt.Println(res)
+	}
+	{
+		var t1 tree.TreeNode
+		t1.Val = 7
+		var t2 tree.TreeNode
+		t2.Val = 13
+		var t3 tree.TreeNode
+		t3.Val = 11
+		t1.Left = &t2
+		t1.Right = &t3
+		res := tree.ReverseOddLevels(&t1)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{1,0,0}
+		res := array.SmallestSubarrays(nums)
+		fmt.Println(res)
+	}
+	{
+		arriveAlice := "09-01"
+		leaveAlice := "10-19"
+		arriveBob := "06-19"
+		leaveBob := "10-20"
+		res := number.CountDaysTogether(arriveAlice, leaveAlice, arriveBob, leaveBob)
+		fmt.Println(res)
+	}
+	{
+		var i int32 = 1 << 31 - 1
+		fmt.Println(i)
+	}
+	{
 		grid := [][]int{{1,1,1,1,0,0,0,0},{1,1,1,1,0,0,0,0},{1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1},{1,1,1,1,0,0,0,0},{1,1,1,1,0,0,0,0},{1,1,1,1,0,0,0,0},{1,1,1,1,0,0,0,0}}
 		res := tree.Construct(grid)
 		fmt.Println(res)
