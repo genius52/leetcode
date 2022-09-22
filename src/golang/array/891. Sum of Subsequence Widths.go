@@ -21,3 +21,21 @@ func SumSubseqWidths(nums []int) int {
 	}
 	return int(res + 1000000007) % 1000000007
 }
+
+func sumSubseqWidths(nums []int) int{
+	var l int = len(nums)
+	sort.Ints(nums)
+	var MOD int64 = 1e9 + 7
+	var res int64 = 0
+	var mutiple []int64 = make([]int64,l + 1)
+	mutiple[0] = 1
+	for i := 1;i <= l;i++{
+		mutiple[i] = (mutiple[i - 1] << 1) % MOD
+	}
+	for i := 0;i < l;i++{
+		smallest_cnt := l - 1 - i
+		biggest_cnt := i
+		res = (res + (mutiple[biggest_cnt] - mutiple[smallest_cnt]) * int64(nums[i])) % MOD
+	}
+	return int((res + MOD) % MOD)
+}
