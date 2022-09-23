@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		n := 12
+		res :=number.ConcatenatedBinary(n)
+		fmt.Println(res)
+	}
+	{
 		transactions := [][]int{{2,1},{5,0},{4,2}}
 		res := number.MinimumMoney(transactions)
 		fmt.Println(res)
