@@ -24,7 +24,7 @@ func dp_numMusicPlaylists(n int,l int,k int,total_song int,diff_song int,memo [1
 		}
 		return 1
 	}
-	if memo[diff_song][total_song] != 0{
+	if memo[diff_song][total_song] != -1{
 		return memo[diff_song][total_song]
 	}
 	var res int = 0
@@ -43,11 +43,11 @@ func dp_numMusicPlaylists(n int,l int,k int,total_song int,diff_song int,memo [1
 }
 
 func NumMusicPlaylists(n int, l int, k int) int {
-	//MOD := 1000000007
-	//var dp [][]int = make([][]int,l)//dp[1][1]
-	//for i := 0;i < l;i++{
-	//	dp[i] = make([]int,n)
-	//}
 	var memo [101][101]int
+	for i := 0;i < 101;i++{
+		for j := 0;j < 101;j++{
+			memo[i][j] = -1
+		}
+	}
 	return dp_numMusicPlaylists(n,l,k,0,0,memo)
 }
