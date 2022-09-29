@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		var dominoes string = ".L.R...LR..L.."
+		res := diagram.PushDominoes(dominoes)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{878724,201541,179099,98437,35765,327555,475851,598885,849470,943442}
 		k := 4
 		res := array.GoodIndices(nums, k)
@@ -5187,11 +5192,6 @@ func main() {
 	{
 		var s string = "17522"
 		res := number.SplitIntoFibonacci(s)
-		fmt.Println(res)
-	}
-	{
-		var dominoes string = ".L.R...LR..L.."
-		res := diagram.PushDominoes(dominoes)
 		fmt.Println(res)
 	}
 	//{
