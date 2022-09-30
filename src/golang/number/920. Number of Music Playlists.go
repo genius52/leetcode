@@ -17,28 +17,26 @@ package number
 //输出：2
 //解释：有 2 种可能的播放列表。[1, 2, 1]，[2, 1, 2]
 //dp[i][j] denotes the solution of i songs with j different songs. So the final answer should be dp[L][N]
-func dp_numMusicPlaylists(n int,l int,k int,total_song int,diff_song int,memo [101][101]int)int{
-	if total_song == l{
-		if diff_song < n{
+func dp_numMusicPlaylists(n int,target int,k int,total_choosed int,diff_choosed int,memo *[101][101]int)int{
+	if total_choosed == target{
+		if diff_choosed < n{
 			return 0
 		}
 		return 1
 	}
-	if memo[diff_song][total_song] != -1{
-		return memo[diff_song][total_song]
+	if target - total_choosed < n - diff_choosed{
+		return 0
+	}
+	if memo[total_choosed][diff_choosed] != -1{
+		return memo[total_choosed][diff_choosed]
 	}
 	var res int = 0
-	if diff_song < n{
-		//choose different song
-		res += (n - diff_song) * dp_numMusicPlaylists(n,l,k,total_song + 1,diff_song + 1,memo)
-		res = res % 1000000007
-	}
+	var MOD int = 1e9 + 7
+	//choose different song
+	res += (n - diff_choosed) * dp_numMusicPlaylists(n,target,k,total_choosed + 1,diff_choosed + 1,memo) % MOD
 	//choose exist song before,k should be considered
-	if diff_song >= k{
-		res += (diff_song - k) * dp_numMusicPlaylists(n,l,k,total_song + 1,diff_song,memo)
-	}
-	res = res % 1000000007
-	memo[diff_song][total_song] = res
+	res += max_int(0,diff_choosed - k) * dp_numMusicPlaylists(n,target,k,total_choosed + 1,diff_choosed,memo) % MOD
+	memo[total_choosed][diff_choosed] = res
 	return res
 }
 
@@ -49,5 +47,5 @@ func NumMusicPlaylists(n int, l int, k int) int {
 			memo[i][j] = -1
 		}
 	}
-	return dp_numMusicPlaylists(n,l,k,0,0,memo)
+	return dp_numMusicPlaylists(n,l,k,0,0,&memo)
 }

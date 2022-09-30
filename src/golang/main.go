@@ -15,6 +15,13 @@ import (
 
 func main() {
 	{
+		N := 37
+		L := 50
+		K := 8
+		res := number.NumMusicPlaylists(N,L,K)
+		fmt.Println(res)
+	}
+	{
 		var dominoes string = ".L.R...LR..L.."
 		res := diagram.PushDominoes(dominoes)
 		fmt.Println(res)
@@ -3194,13 +3201,6 @@ func main() {
 		res := diagram.MinMalwareSpread(graph, initial)
 		fmt.Println(res)
 	}
-	//{
-	//	N := 25
-	//	L := 28
-	//	K := 5
-	//	res := number.NumMusicPlaylists(N,L,K)
-	//	fmt.Println(res)
-	//}
 	{
 		s := "Test1ng-Leet=code-Q!"
 		res := string_issue.ReverseOnlyLetters(s)
