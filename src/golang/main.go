@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		num1 := 25
+		num2 := 72
+		res := number.MinimizeXor(num1,num2)
+		fmt.Println(res)
+	}
+	{
 		N := 37
 		L := 50
 		K := 8
