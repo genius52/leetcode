@@ -15,6 +15,17 @@ import (
 
 func main() {
 	{
+		s := "bac"
+		res := string_issue.RobotWithString(s)
+		fmt.Println(res)
+	}
+	{
+		n := 10
+		logs := [][]int{{0,3},{2,5},{0,9},{1,15}}
+		res := array.HardestWorker(n,logs)
+		fmt.Println(res)
+	}
+	{
 		num1 := 25
 		num2 := 72
 		res := number.MinimizeXor(num1,num2)
