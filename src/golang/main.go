@@ -15,6 +15,17 @@ import (
 
 func main() {
 	{
+		grid := [][]int{{1,5,3,7,3,2,3,5}}
+		k := 29
+		res := diagram.NumberOfPaths(grid, k)
+		fmt.Println(res)
+	}
+	{
+		s := "aaaaa"
+		res := string_issue.DeleteString(s)
+		fmt.Println(res)
+	}
+	{
 		s := "bac"
 		res := string_issue.RobotWithString(s)
 		fmt.Println(res)
