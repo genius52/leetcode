@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		str1 := "abac"
+		str2 := "cab"
+		res := string_issue.ShortestCommonSupersequence2(str1, str2)
+		fmt.Println(res)
+	}
+	{
 		grid := [][]int{{1,5,3,7,3,2,3,5}}
 		k := 29
 		res := diagram.NumberOfPaths(grid, k)
@@ -2869,12 +2875,6 @@ func main() {
 	{
 		expression := "|(&(t,f,t),!(t))"
 		res := string_issue.ParseBoolExpr(expression)
-		fmt.Println(res)
-	}
-	{
-		str1 := "abac"
-		str2 := "cab"
-		res := string_issue.ShortestCommonSupersequence(str1, str2)
 		fmt.Println(res)
 	}
 	{
