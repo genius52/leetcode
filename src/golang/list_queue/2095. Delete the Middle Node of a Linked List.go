@@ -1,6 +1,6 @@
 package list_queue
 
-func deleteMiddle(head *ListNode) *ListNode {
+func DeleteMiddle(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {
 		return nil
 	}
@@ -12,14 +12,14 @@ func deleteMiddle(head *ListNode) *ListNode {
 	}
 	var mid int = l/2 - 1
 	visit = head
-	var c int = 0
 	for visit != nil {
-		if c == mid {
+		if mid == 0 {
 			next := visit.Next
 			visit.Next = next.Next
+			break
 		}
 		visit = visit.Next
-		c++
+		mid--
 	}
 	return head
 }
