@@ -15,6 +15,36 @@ import (
 
 func main() {
 	{
+		s := "aaaaab"
+		res := string_issue.LastSubstring(s)
+		fmt.Println(res)
+	}
+	//{
+	//	// 制造一个协程泄露事件
+	//	for i := 0; i < 5; i++ {
+	//		go func() {
+	//			select {
+	//			default:
+	//				return
+	//			} // 不阻塞
+	//		}()
+	//		go func() {
+	//			select {} // 泄漏了 1000 个协程
+	//		}()
+	//	}
+	//	mux := http.NewServeMux()
+	//	mux.HandleFunc("/debug/pprof/", pprof.Index)
+	//	mux.HandleFunc("/debug/pprof/cmdline", pprof.Cmdline)
+	//	mux.HandleFunc("/debug/pprof/profile", pprof.Profile)
+	//	mux.HandleFunc("/debug/pprof/symbol", pprof.Symbol)
+	//	mux.HandleFunc("/debug/pprof/trace", pprof.Trace)
+	//
+	//	mux.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
+	//		w.Write([]byte("hello"))
+	//	})
+	//	http.ListenAndServe(":6066", mux)
+	//}
+	{
 		str1 := "abac"
 		str2 := "cab"
 		res := string_issue.ShortestCommonSupersequence2(str1, str2)
