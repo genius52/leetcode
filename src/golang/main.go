@@ -15,6 +15,32 @@ import (
 
 func main() {
 	{
+		//[1,2,1,1,1]
+		//[[0,1],[1,3],[3,4],[4,2]]
+		nums := []int{6,2,2,2,6}
+		edges := [][]int{{0,1},{1,2},{1,3},{3,4}}
+		res := diagram.ComponentValue(nums,edges)
+		fmt.Println(res)
+	}
+	{
+		num := 99
+		res := number.SumOfNumberAndReverse(num)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{3,7,1,6}
+		res := array.MinimizeArrayValue(nums)
+		fmt.Println(res)
+	}
+	{
+		//n := 15
+		//queries := [][]int{{0,1},{2,2},{0,3}}
+		n := 2
+		queries := [][]int{{0,0}}
+		res := number.ProductQueries(n,queries)
+		fmt.Println(res)
+	}
+	{
 		var l1 list_queue.ListNode
 		l1.Val = 1
 		var l2 list_queue.ListNode
