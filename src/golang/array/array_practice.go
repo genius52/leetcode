@@ -48,6 +48,15 @@ func max_int_number(nums ...int)int{
 	}
 	return max
 }
+
+func max_int64(a,b int64)int64{
+	if a > b {
+		return a
+	}else{
+		return b
+	}
+}
+
 //Definition for singly-linked list_queue.
 type ListNode struct {
 	Val int

@@ -15,6 +15,13 @@ import (
 
 func main() {
 	{
+		nums := []int{1,3,5,2,7,5}
+		minK := 1
+		maxK := 5
+		res := array.CountSubarrays2444(nums,minK,maxK)
+		fmt.Println(res)
+	}
+	{
 		//[1,2,1,1,1]
 		//[[0,1],[1,3],[3,4],[4,2]]
 		nums := []int{6,2,2,2,6}

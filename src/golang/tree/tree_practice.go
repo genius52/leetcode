@@ -84,32 +84,6 @@ func depth_visit(node *TreeNode,cnt_map map[int]int){
 	depth_visit(node.Right,cnt_map)
 }
 
-func containsNearbyDuplicate(nums []int, k int) bool {
-	var record map[int]int = make(map[int]int)
-	for index,v := range nums{
-		if pos,ok := record[v];ok{
-			if index - pos <= k{
-				return true
-			}else{
-				record[v] = index
-			}
-		}else{
-			record[v] = index
-		}
-	}
-	return false
-}
-
-//754. Reach a Number
-func reachNumber(target int) int {
-	var res int = 0
-	if target < 0 {
-		return reachNumber(-target)
-	}
-
-	return res
-}
-
 func previsit_balanceBST(node *TreeNode,record *[]*TreeNode){
 	if node == nil{
 		return

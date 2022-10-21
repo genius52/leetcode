@@ -11,13 +11,7 @@ package array
 //Input: nums = [6,2,1,2,4,5]
 //Output: 10
 //Explanation: It is optimal to choose the subsequence [6,1,5] with alternating sum (6 + 5) - 1 = 10.
-func max_int64(a,b int64)int64{
-	if a > b {
-		return a
-	}else{
-		return b
-	}
-}
+
 func dp_maxAlternatingSum(nums []int,l int,pos int,is_even int,memo [][2]int64)int64{
 	if pos >= l{
 		return 0
