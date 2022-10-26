@@ -15,6 +15,22 @@ import (
 
 func main() {
 	{
+		//[1,2,5]
+		//[4,1,3]
+		nums := []int{1,2,5}
+		target := []int{4,1,3}
+		res := array.MakeSimilar(nums,target)
+		fmt.Println(res)
+	}
+	{
+		//[15,11,5]
+		//1
+		nums := []int{19,9,9}
+		k := 1
+		res := array.SubarrayGCD(nums,k)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{1,3,5,2,7,5}
 		minK := 1
 		maxK := 5
