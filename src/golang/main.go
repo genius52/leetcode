@@ -15,6 +15,14 @@ import (
 
 func main() {
 	{
+		//[1,5,3,6,7]
+		//[1,6,3,3]
+		arr1 := []int{1,5,3,6,7}
+		arr2 := []int{1,6,3,3}
+		res := array.MakeArrayIncreasing(arr1,arr2)
+		fmt.Println(res)
+	}
+	{
 		//[1,2,5]
 		//[4,1,3]
 		nums := []int{1,2,5}
