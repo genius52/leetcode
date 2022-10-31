@@ -15,6 +15,22 @@ import (
 
 func main() {
 	{
+		var n int64 = 94598
+		target := 1
+		res := number.MakeIntegerBeautiful(n,target)
+		fmt.Println(res)
+	}
+	{
+		words := []string{"mll","edd","jii","tss","fee","dcc","nmm","abb","utt","zyy","xww","tss","wvv","xww","utt"}
+		res := string_issue.OddString(words)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{2,3,1,5,4}
+		res := array.MaxValueAfterReverse(nums)
+		fmt.Println(res)
+	}
+	{
 		//[1,5,3,6,7]
 		//[1,6,3,3]
 		arr1 := []int{1,5,3,6,7}
@@ -2652,11 +2668,6 @@ func main() {
 		maxPrice := 50
 		maxDistance := 10
 		res := number.FilterRestaurants(restaurants, veganFriendly, maxPrice, maxDistance)
-		fmt.Println(res)
-	}
-	{
-		nums := []int{2, 4, 9, 24, 2, 1, 10}
-		res := array.MaxValueAfterReverse(nums)
 		fmt.Println(res)
 	}
 	{
