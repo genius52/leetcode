@@ -96,6 +96,7 @@ struct ListNode {
 #include "array/2382. Maximum Segment Sum After Removals.hpp"
 #include "array/2386. Find the K-Sum of an Array.hpp"
 #include "array/2398. Maximum Number of Robots Within Budget.hpp"
+#include "array/2454. Next Greater Element IV.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"

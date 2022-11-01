@@ -6,6 +6,12 @@
 
 int main() {
     {
+        std::vector<int> nums{11,13,15,12,0,15,12,11,9};
+        Solution_2454 s2454;
+        auto res = s2454.secondGreaterElement(nums);
+        std::cout << "2454 res = "<< res.size() <<std::endl;
+    }
+    {
         Solution_2398 s2398;
         //chargeTimes = [3,6,1,3,4], runningCosts = [2,1,3,4,5], budget = 25
         std::vector<int> chargeTimes{11,12,19};
