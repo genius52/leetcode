@@ -15,6 +15,27 @@ import (
 
 func main() {
 	{
+		//[9,11,99,101]
+		//[[10,1],[7,1],[14,1],[100,1],[96,1],[103,1]]
+		//[0,4,6]
+		//factory =
+		//[[2,2],[6,2]]
+		robot := []int{0,4,6}
+		factory := [][]int{{2,2},{6,2}}
+		res := array.MinimumTotalDistance(robot,factory)
+		fmt.Println(res)
+	}
+	{
+		//[1,1,1,7,8,9]
+		//3
+		//[11,11,7,2,9,4,17,1]
+		//1
+		nums := []int{11,11,7,2,9,4,17,1}
+		k := 1
+		res := array.MaximumSubarraySum(nums,k)
+		fmt.Println(res)
+	}
+	{
 		var n int64 = 94598
 		target := 1
 		res := number.MakeIntegerBeautiful(n,target)

@@ -6,26 +6,12 @@ func MaxValueAfterReverse(nums []int) int {
 	for i := 1;i < l;i++{
 		sum += abs_int(nums[i] - nums[i - 1])
 	}
-	var prefix_max_diff []int = make([]int,l)
-	prefix_max_diff[1] = abs_int(nums[1] - nums[0])
-	var prefix_min_diff []int = make([]int,l)
-	prefix_min_diff[1] = abs_int(nums[1] - nums[0])
-	var suffix_max_diff []int = make([]int,l)
-	suffix_max_diff[l - 2] = abs_int(nums[l - 1] - nums[l - 2])
-	var suffix_min_diff []int = make([]int,l)
-	suffix_min_diff[l - 2] = abs_int(nums[l - 1] - nums[l - 2])
-
-	for i := 2;i < l;i++{
-		prefix_max_diff[i] = max_int(prefix_max_diff[i - 1],abs_int(nums[i] - nums[i - 1]))
-		prefix_min_diff[i] = min_int(prefix_min_diff[i - 1],abs_int(nums[i] - nums[i - 1]))
-	}
-	for i := l - 3;i >= 0;i--{
-		suffix_max_diff[i] = max_int(suffix_max_diff[i + 1],abs_int(nums[i] - nums[i + 1]))
-		suffix_min_diff[i] = min_int(suffix_min_diff[i + 1],abs_int(nums[i] - nums[i + 1]))
-	}
 	var max_profit int = 0
+	//减少的值 = |nums[i] - nums[i + 1]| + |nums[j] - nums[j - 1]|
+	//增加的值 = |nums[i] - nums[j - 1]| + |nums[j] - nums[i + 1]|
+	//变化的值 = |nums[i] - nums[j - 1]| + |nums[j] - nums[i + 1]| - ( |nums[i] - nums[i + 1]| + |nums[j] - nums[j - 1]| )
 	for i := 1;i < l - 1;i++{
-		max_profit = max_int(max_profit,prefix_max_diff[i] + suffix_max_diff[i + 1])
+
 	}
 	return sum + max_profit
 }

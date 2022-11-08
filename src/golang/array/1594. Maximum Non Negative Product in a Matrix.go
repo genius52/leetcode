@@ -1,7 +1,5 @@
 package array
 
-import "math"
-
 var mod int64 = 1000000007
 func dfs_maxProductPath(grid [][]int,rows int,columns int,r int,c int,product int64)(int64){
 	if r == rows - 1 && c == columns - 1{
@@ -35,26 +33,6 @@ func MaxProductPath(grid [][]int) int {
 		return -1
 	}
 	return int(res) % int(mod)
-}
-
-func min_int64_number(nums ...int64)int64{
-	var min int64 = math.MaxInt64
-	for _,n := range nums{
-		if n < min{
-			min = n
-		}
-	}
-	return min
-}
-
-func max_int64_number(nums ...int64)int64{
-	var max int64 = math.MinInt64
-	for _,n := range nums{
-		if n > max{
-			max = n
-		}
-	}
-	return max
 }
 
 //DP from bottom to top

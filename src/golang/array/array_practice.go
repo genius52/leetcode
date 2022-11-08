@@ -6,6 +6,34 @@ import (
 	"strconv"
 )
 
+
+func abs_int64(n int64)int64{
+	if n < 0{
+		return -n
+	}
+	return n
+}
+
+func min_int64_number(nums ...int64)int64{
+	var min int64 = math.MaxInt64
+	for _,n := range nums{
+		if n < min{
+			min = n
+		}
+	}
+	return min
+}
+
+func max_int64_number(nums ...int64)int64{
+	var max int64 = math.MinInt64
+	for _,n := range nums{
+		if n > max{
+			max = n
+		}
+	}
+	return max
+}
+
 func abs_int(n int)int{
 	if n < 0{
 		return -n

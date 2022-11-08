@@ -6,6 +6,14 @@
 
 int main() {
     {
+        Solution_2462 s2463;
+        std::vector<int> costs{1,2,4,1};
+        int k = 3;
+        int candidates = 3;
+        auto res = s2463.totalCost(costs,k,candidates);
+        std::cout << "2462 res = "<< res <<std::endl;
+    }
+    {
         std::vector<int> nums{11,13,15,12,0,15,12,11,9};
         Solution_2454 s2454;
         auto res = s2454.secondGreaterElement(nums);
