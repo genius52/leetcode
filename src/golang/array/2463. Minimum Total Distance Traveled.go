@@ -76,7 +76,7 @@ func dp_minimumTotalDistance(robot []int,l1 int,idx1 int,positions []int,l2 int,
 	return res
 }
 
-func minimumTotalDistance(robot []int, factory [][]int) int64 {
+func MinimumTotalDistance(robot []int, factory [][]int) int64 {
 	sort.Ints(robot)
 	sort.Slice(factory, func(i, j int) bool {
 		return factory[i][0] < factory[j][0]
