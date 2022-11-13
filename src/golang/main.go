@@ -15,6 +15,29 @@ import (
 
 func main() {
 	{
+		//[[0,1],[1,2],[2,3]]
+		//3
+		//[-5644,-6018,1188,-8502]
+		edges := [][]int{{0,1},{1,2},{2,3}}
+		bob := 3
+		amount := []int{-5644,-6018,1188,-8502}
+		res := diagram.MostProfitablePath(edges,bob,amount)
+		fmt.Println(res)
+	}
+	{
+		low := 2
+		high := 3
+		zero := 1
+		one := 2
+		res := number.CountGoodStrings(low, high, zero, one)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{15,77,97,26,53,41,26,13,12,18,17,42,13,33,34,70,48,65,62,78,33,60,96,53,23,14,60,70,57,41,29,12,79,65,52,30}
+		res := array.DistinctAverages(nums)
+		fmt.Println(res)
+	}
+	{
 		seats := [][]byte{{'#','.','#','#','.','#'},
 					{'.','#','#','#','#','.'},
 					{'#','.','#','#','.','#'}}
