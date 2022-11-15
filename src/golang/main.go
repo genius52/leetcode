@@ -15,6 +15,36 @@ import (
 
 func main() {
 	{
+		pizza := []string{"A..","AAA","..."}
+		k := 3
+		res := array.Ways(pizza,k)
+		fmt.Println(res)
+	}
+	{
+		nums1 := []int{4,7,6,3}
+		nums2 := []int{3,4,6,7}
+		var data_idx map[int]int = make(map[int]int)
+		var l int = len(nums1)
+		for i := 0;i < l;i++{
+			data_idx[nums1[i]] = i
+		}
+		var res int = 0
+		for i := 0;i < l;i++{
+			if nums1[i] == nums2[i]{
+				continue
+			}
+			nums1[i],nums1[data_idx[nums2[i]]] = nums2[i],nums1[i]
+			res++
+		}
+		fmt.Println(res)
+	}
+	{
+		nums := []int{3,6,2,7,1}
+		k := 6
+		res := array.SubarrayLCM(nums,k)
+		fmt.Println(res)
+	}
+	{
 		//[[0,1],[1,2],[2,3]]
 		//3
 		//[-5644,-6018,1188,-8502]
