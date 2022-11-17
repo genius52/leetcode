@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		s := "dwdwdnns"
+		k := 3
+		res := string_issue.MaxPalindromes(s,k)
+		fmt.Println(res)
+	}
+	{
 		pizza := []string{"A..","AAA","..."}
 		k := 3
 		res := array.Ways(pizza,k)
