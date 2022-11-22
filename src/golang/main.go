@@ -15,6 +15,26 @@ import (
 
 func main() {
 	{
+		s := "23542185131"
+		k := 3
+		minLength := 3
+		res := number.BeautifulPartitions(s,k,minLength)
+		fmt.Println(res)
+	}
+	{
+	//	TreeAncestor treeAncestor = new TreeAncestor(7, [-1, 0, 0, 1, 1, 2, 2]);
+	//treeAncestor.getKthAncestor(3, 1); // returns 1 which is the parent of 3
+	//treeAncestor.getKthAncestor(5, 2); // returns 0 which is the grandparent of 5
+	//treeAncestor.getKthAncestor(6, 3);
+		n := 7
+		parent := []int{-1, 0, 0, 1, 1, 2, 2}
+		obj := tree.Constructor1483(n,parent)
+		res := obj.GetKthAncestor(3,1)
+		res = obj.GetKthAncestor(5,2)
+		res = obj.GetKthAncestor(6,3)
+		fmt.Println(res)
+	}
+	{
 		s := "dwdwdnns"
 		k := 3
 		res := string_issue.MaxPalindromes(s,k)
