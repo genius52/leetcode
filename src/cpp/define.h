@@ -294,7 +294,6 @@ struct ListNode {
 #include "string/2002. Maximum Product of the Length of Two Palindromic Subsequences.hpp"
 #include "string/1452. People Whose List of Favorite Companies Is Not a Subset of Another List.hpp"
 #include "string/2213. Longest Substring of One Repeating Character.hpp"
-#include "list/1483. Kth Ancestor of a Tree Node.hpp"
 #include "list/445. Add Two Numbers II.hpp"
 #include "list/138. Copy List with Random Pointer.hpp"
 #include "list/25. Reverse Nodes in k-Group.hpp"

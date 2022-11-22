@@ -8,7 +8,7 @@ func NumSquares(n int) int {
 	for i := 1;i <= n;i++{
 		min := math.MaxInt32
 		for j := 1;(j * j) <= i;j++{
-			min = min_int_number(min,record[i - j*j] + 1)
+			min = min_int(min,record[i - j*j] + 1)
 		}
 		record[i] = min
 	}

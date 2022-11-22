@@ -489,13 +489,6 @@ int main() {
         std::cout<<"1489 res = "<<res.size() << std::endl;
     }
     {
-        int n = 7;
-        std::vector<int> input{-1, 0, 0, 1, 1, 2, 2};
-        TreeAncestor tree(n,input);
-        auto res = tree.getKthAncestor(6,3);
-        std::cout<<"1475 res = "<<res << std::endl;
-    }
-    {
         std::vector<std::vector<std::string>> favoriteCompanies{{"arrtztkotazhufrsfczr","knzgidixqgtnahamebxf","zibvccaoayyihidztflj"},
                                                                 {"cffiqfviuwjowkppdajm","owqvnrhuzwqohquamvsz"},
                                                                 {"knzgidixqgtnahamebxf","owqvnrhuzwqohquamvsz","qzeqyrgnbplsrgqnplnl"},
