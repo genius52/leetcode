@@ -15,6 +15,35 @@ import (
 
 func main() {
 	{
+		s := "0000000"
+		res := string_issue.CountPalindromes(s)
+		fmt.Println(res)
+	}
+	{
+		//[5,2,13,3,8]
+		var l1 list_queue.ListNode
+		l1.Val = 1
+		var l2 list_queue.ListNode
+		l2.Val = 1
+		var l3 list_queue.ListNode
+		l3.Val = 1
+		var l4 list_queue.ListNode
+		l4.Val = 1
+		var l5 list_queue.ListNode
+		l5.Val = 8
+		l1.Next = &l2
+		l2.Next = &l3
+		l3.Next = &l4
+		//l4.Next = &l5
+		res := list_queue.RemoveNodes(&l1)
+		fmt.Println(res.Val)
+	}
+	{
+		customers := "YYNY"
+		res := number.BestClosingTime(customers)
+		fmt.Println(res)
+	}
+	{
 		s := "23542185131"
 		k := 3
 		minLength := 3
