@@ -15,6 +15,22 @@ import (
 
 func main() {
 	{
+		//[2,5,1,4,3,6]
+		//1
+		//nums := []int{2,5,1,4,3,6}
+		//k := 1
+		nums := []int{3,2,1,4,5}
+		k := 4
+		res := array.CountSubarrays2488(nums,k)
+		fmt.Println(res)
+	}
+	{
+		n := 4
+		roads := [][]int{{1,2,9},{2,3,6},{2,4,5},{1,4,7}}
+		res := diagram.MinScore(n,roads)
+		fmt.Println(res)
+	}
+	{
 		s := "0000000"
 		res := string_issue.CountPalindromes(s)
 		fmt.Println(res)
