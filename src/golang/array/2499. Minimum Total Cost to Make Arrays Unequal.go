@@ -15,5 +15,5 @@ func minimumTotalCost(nums1 []int, nums2 []int) int64 {
 	if max_same_cnt > l/2{
 		return -1
 	}
-	
+	return 0
 }
