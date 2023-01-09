@@ -6,6 +6,13 @@
 
 int main() {
     {
+        std::vector<int> nums{1,10,3,3,3};
+        int k = 3;
+        Solution_2530 s2530;
+        auto res = s2530.maxKelements(nums,k);
+        std::cout << "2530 res = "<< res <<std::endl;
+    }
+    {
         Solution_2462 s2463;
         std::vector<int> costs{1,2,4,1};
         int k = 3;

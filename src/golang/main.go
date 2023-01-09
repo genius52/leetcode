@@ -15,6 +15,48 @@ import (
 
 func main() {
 	{
+		word1 := "aa"
+		word2 := "ab"
+		res := string_issue.IsItPossible(word1,word2)
+		fmt.Println(res)
+	}
+	{
+		s := "165462"
+		k := 60
+		res := string_issue.MinimumPartition(s,k)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{2,4,3,7,10,6}
+		res := number.DistinctPrimeFactors(nums)
+		fmt.Println(res)
+	}
+	{
+		price := []int{1,3,1}
+		k := 2
+		res := number.MaximumTastiness(price,k)
+		fmt.Println(res)
+	}
+	{
+		s := "aabaaaacaabc"
+		k := 2
+		res := string_issue.TakeCharacters(s,k)
+		fmt.Println(res)
+	}
+	{
+		divisor1 := 2
+		divisor2 := 4
+		uniqueCnt1 := 8
+		uniqueCnt2 := 2
+		res := array.MinimizeSet(divisor1,divisor2,uniqueCnt1,uniqueCnt2)
+		fmt.Println(res)
+	}
+	{
+		forts := []int{1,0,0,-1,0,0,0,0,1}
+		res := array.CaptureForts(forts)
+		fmt.Println(res)
+	}
+	{
 		//n := 11
 		//edges := [][]int{{5,9},{8,1},{2,3},{7,10},{3,6},{6,7},{7,8},{5,1},{5,7},{10,11},{3,7},{6,11},{8,11},{3,4},{8,9},{9,1},{2,10},{9,11},{5,11},{2,5},{8,10},{2,7},{4,1},{3,10},{6,1},{4,9},{4,6},{4,5},{2,4},{2,11},{5,8},{6,9},{4,10},{3,11},{4,7},{3,5},{7,1},{2,9},{6,10},{10,1},{5,6},{3,9},{2,6},{7,9},{4,11},{4,8},{6,8},{3,8},{9,10},{5,10},{2,8},{7,11}}
 		//n := 4

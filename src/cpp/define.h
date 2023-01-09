@@ -184,6 +184,7 @@ struct ListNode {
 #include "number/2333. Minimum Sum of Squared Difference.hpp"
 #include "number/2353. Design a Food Rating System.hpp"
 #include "number/2402. Meeting Rooms III.hpp"
+#include "number/2530. Maximal Score After Applying K Operations.hpp"
 #include "tree/1443. Minimum Time to Collect All Apples in a Tree.cpp"
 #include "tree/1457. Pseudo-Palindromic Paths in a Binary Tree.hpp"
 #include "tree/450. Delete Node in a BST.hpp"
