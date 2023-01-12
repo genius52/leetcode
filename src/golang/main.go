@@ -45,9 +45,9 @@ func main() {
 	}
 	{
 		divisor1 := 2
-		divisor2 := 4
-		uniqueCnt1 := 8
-		uniqueCnt2 := 2
+		divisor2 := 7
+		uniqueCnt1 := 1
+		uniqueCnt2 := 3
 		res := array.MinimizeSet(divisor1,divisor2,uniqueCnt1,uniqueCnt2)
 		fmt.Println(res)
 	}
