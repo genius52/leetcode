@@ -181,7 +181,7 @@ func decodeString2(s string) string {
 }
 
 
-func max_rectange(arr [][]int)int{
+func max_rectangle(arr [][]int)int{
 	rows := len(arr)
 	columns := len(arr[0])
 	var dp [][]int = make([][]int,rows)

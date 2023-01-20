@@ -98,6 +98,7 @@ struct ListNode {
 #include "array/2398. Maximum Number of Robots Within Budget.hpp"
 #include "array/2454. Next Greater Element IV.hpp"
 #include "array/2462. Total Cost to Hire K Workers.hpp"
+#include "array/2503. Maximum Number of Points From Grid Queries.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"

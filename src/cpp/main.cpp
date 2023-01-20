@@ -6,6 +6,13 @@
 
 int main() {
     {
+        Solution_2503 s2503;
+        std::vector<std::vector<int>> grid{{1,2,3},{2,5,7},{3,5,1}};
+        std::vector<int> queries{5,6,2};
+        auto res = s2503.maxPoints(grid,queries);
+        std::cout << "2503 res = "<< res[0] <<std::endl;
+    }
+    {
         std::vector<int> nums{1,10,3,3,3};
         int k = 3;
         Solution_2530 s2530;

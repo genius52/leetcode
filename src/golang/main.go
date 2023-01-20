@@ -15,6 +15,18 @@ import (
 
 func main() {
 	{
+		nums := []int{3,1,4,3,2,2,4}
+		k := 2
+		res := array.CountGood(nums, k)
+		fmt.Println(res)
+	}
+	{
+		n := 2
+		queries := [][]int{{0,0,1,1}}
+		res := array.RangeAddQueries(n,queries)
+		fmt.Println(res)
+	}
+	{
 		word1 := "aa"
 		word2 := "ab"
 		res := string_issue.IsItPossible(word1,word2)
