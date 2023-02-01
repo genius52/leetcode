@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		nums := []int{1,2,1,2}
+		k := 2
+		res := array.MinCost2547(nums,k)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{3,1,4,3,2,2,4}
 		k := 2
 		res := array.CountGood(nums, k)

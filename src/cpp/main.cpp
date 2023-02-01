@@ -6,6 +6,17 @@
 
 int main() {
     {
+        //[2,1,14,12]
+        //[11,7,13,6]
+        //3
+        std::vector<int> nums1{2,1,14,12};
+        std::vector<int> nums2{11,7,13,6};
+        int k = 3;
+        Solution_2542 s2542;
+        auto res = s2542.maxScore(nums1,nums2,k);
+        std::cout << "2542 res = "<< res <<std::endl;
+    }
+    {
         Solution_2503 s2503;
         std::vector<std::vector<int>> grid{{1,2,3},{2,5,7},{3,5,1}};
         std::vector<int> queries{5,6,2};
