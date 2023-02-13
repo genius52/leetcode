@@ -6,6 +6,21 @@
 
 int main() {
     {
+        Solution_2563 s2563;
+        std::vector<int> nums{0,1,7,4,4,5};
+        int lower = 3;
+        int upper = 6;
+        auto res = s2563.countFairPairs(nums,lower,upper);
+        std::cout << "2558 res = "<< res <<std::endl;
+    }
+    {
+        std::vector<int> gifts{25,64,9,4,100};
+        int k = 4;
+        Solution_2558 s2558;
+        auto res = s2558.pickGifts(gifts,k);
+        std::cout << "2558 res = "<< res <<std::endl;
+    }
+    {
         //[2,1,14,12]
         //[11,7,13,6]
         //3

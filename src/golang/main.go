@@ -15,6 +15,34 @@ import (
 
 func main() {
 	{
+		//[1,1,0,0,0,0]
+		//[1,1,1,1,1,1]
+		//[1,1,1,1,1,1]
+		//[1,1,1,1,0,1]
+		//[0,0,0,1,1,1]
+		//[0,0,0,1,0,1]
+		//[0,0,0,1,0,1]
+		//[0,0,0,1,0,1]
+		//[0,0,0,1,0,1]
+		//[0,0,0,1,1,1]]
+		grid := [][]int{{1,1,0,0,0,0},{1,1,1,1,1,1},{1,1,1,1,1,1},{1,1,1,1,0,1},{0,0,0,1,1,1},{0,0,0,1,0,1},{0,0,0,1,0,1},{0,0,0,1,0,1},{0,0,0,1,0,1},{0,0,0,1,1,1}}
+		//grid := [][]int{{1,1,1},{1,0,1},{1,1,1}}
+		res := array.IsPossibleToCutPath(grid)
+		fmt.Println(res)
+	}
+	{
+		prizePositions := []int{1,1,2,2,3,3,5}
+		k := 2
+		res := array.MaximizeWin(prizePositions,k)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{2,7,9,3,1}
+		k := 2
+		res := array.MinCapability(nums,k)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{1,2,1,2}
 		k := 2
 		res := array.MinCost2547(nums,k)
