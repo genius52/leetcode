@@ -15,6 +15,18 @@ import (
 
 func main() {
 	{
+		s := "abacaba"
+		t := "bzaa"
+		res := string_issue.MinimumScore(s,t)
+		fmt.Println(res)
+	}
+	{
+		basket1 := []int{84,80,43,8,80,88,43,14,100,88}
+		basket2 := []int{32,32,42,68,68,100,42,84,14,8}
+		res := array.MinCost2561(basket1,basket2)
+		fmt.Println(res)
+	}
+	{
 		//[1,1,0,0,0,0]
 		//[1,1,1,1,1,1]
 		//[1,1,1,1,1,1]
