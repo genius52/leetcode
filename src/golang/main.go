@@ -15,15 +15,35 @@ import (
 
 func main() {
 	{
-		s := "abacaba"
-		t := "bzaa"
-		res := string_issue.MinimumScore(s,t)
+		nums := []int{3, 4, 4, 5}
+		res := number.SquareFreeSubsets(nums)
 		fmt.Println(res)
 	}
 	{
-		basket1 := []int{84,80,43,8,80,88,43,14,100,88}
-		basket2 := []int{32,32,42,68,68,100,42,84,14,8}
-		res := array.MinCost2561(basket1,basket2)
+		n := 27
+		res := number.MinOperations2571(n)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{2, 1, 3, 4, 5, 6}
+		res := number.MinImpossibleOR(nums)
+		fmt.Println(res)
+	}
+	{
+		num := 11891
+		res := number.MinMaxDifference(num)
+		fmt.Println(res)
+	}
+	{
+		s := "abacaba"
+		t := "bzaa"
+		res := string_issue.MinimumScore(s, t)
+		fmt.Println(res)
+	}
+	{
+		basket1 := []int{84, 80, 43, 8, 80, 88, 43, 14, 100, 88}
+		basket2 := []int{32, 32, 42, 68, 68, 100, 42, 84, 14, 8}
+		res := array.MinCost2561(basket1, basket2)
 		fmt.Println(res)
 	}
 	{
@@ -37,68 +57,68 @@ func main() {
 		//[0,0,0,1,0,1]
 		//[0,0,0,1,0,1]
 		//[0,0,0,1,1,1]]
-		grid := [][]int{{1,1,0,0,0,0},{1,1,1,1,1,1},{1,1,1,1,1,1},{1,1,1,1,0,1},{0,0,0,1,1,1},{0,0,0,1,0,1},{0,0,0,1,0,1},{0,0,0,1,0,1},{0,0,0,1,0,1},{0,0,0,1,1,1}}
+		grid := [][]int{{1, 1, 0, 0, 0, 0}, {1, 1, 1, 1, 1, 1}, {1, 1, 1, 1, 1, 1}, {1, 1, 1, 1, 0, 1}, {0, 0, 0, 1, 1, 1}, {0, 0, 0, 1, 0, 1}, {0, 0, 0, 1, 0, 1}, {0, 0, 0, 1, 0, 1}, {0, 0, 0, 1, 0, 1}, {0, 0, 0, 1, 1, 1}}
 		//grid := [][]int{{1,1,1},{1,0,1},{1,1,1}}
 		res := array.IsPossibleToCutPath(grid)
 		fmt.Println(res)
 	}
 	{
-		prizePositions := []int{1,1,2,2,3,3,5}
+		prizePositions := []int{1, 1, 2, 2, 3, 3, 5}
 		k := 2
-		res := array.MaximizeWin(prizePositions,k)
+		res := array.MaximizeWin(prizePositions, k)
 		fmt.Println(res)
 	}
 	{
-		nums := []int{2,7,9,3,1}
+		nums := []int{2, 7, 9, 3, 1}
 		k := 2
-		res := array.MinCapability(nums,k)
+		res := array.MinCapability(nums, k)
 		fmt.Println(res)
 	}
 	{
-		nums := []int{1,2,1,2}
+		nums := []int{1, 2, 1, 2}
 		k := 2
-		res := array.MinCost2547(nums,k)
+		res := array.MinCost2547(nums, k)
 		fmt.Println(res)
 	}
 	{
-		nums := []int{3,1,4,3,2,2,4}
+		nums := []int{3, 1, 4, 3, 2, 2, 4}
 		k := 2
 		res := array.CountGood(nums, k)
 		fmt.Println(res)
 	}
 	{
 		n := 2
-		queries := [][]int{{0,0,1,1}}
-		res := array.RangeAddQueries(n,queries)
+		queries := [][]int{{0, 0, 1, 1}}
+		res := array.RangeAddQueries(n, queries)
 		fmt.Println(res)
 	}
 	{
 		word1 := "aa"
 		word2 := "ab"
-		res := string_issue.IsItPossible(word1,word2)
+		res := string_issue.IsItPossible(word1, word2)
 		fmt.Println(res)
 	}
 	{
 		s := "165462"
 		k := 60
-		res := string_issue.MinimumPartition(s,k)
+		res := string_issue.MinimumPartition(s, k)
 		fmt.Println(res)
 	}
 	{
-		nums := []int{2,4,3,7,10,6}
+		nums := []int{2, 4, 3, 7, 10, 6}
 		res := number.DistinctPrimeFactors(nums)
 		fmt.Println(res)
 	}
 	{
-		price := []int{1,3,1}
+		price := []int{1, 3, 1}
 		k := 2
-		res := number.MaximumTastiness(price,k)
+		res := number.MaximumTastiness(price, k)
 		fmt.Println(res)
 	}
 	{
 		s := "aabaaaacaabc"
 		k := 2
-		res := string_issue.TakeCharacters(s,k)
+		res := string_issue.TakeCharacters(s, k)
 		fmt.Println(res)
 	}
 	{
@@ -106,11 +126,11 @@ func main() {
 		divisor2 := 7
 		uniqueCnt1 := 1
 		uniqueCnt2 := 3
-		res := array.MinimizeSet(divisor1,divisor2,uniqueCnt1,uniqueCnt2)
+		res := array.MinimizeSet(divisor1, divisor2, uniqueCnt1, uniqueCnt2)
 		fmt.Println(res)
 	}
 	{
-		forts := []int{1,0,0,-1,0,0,0,0,1}
+		forts := []int{1, 0, 0, -1, 0, 0, 0, 0, 1}
 		res := array.CaptureForts(forts)
 		fmt.Println(res)
 	}
@@ -120,8 +140,8 @@ func main() {
 		//n := 4
 		//edges := [][]int{{1,2},{3,4}}
 		n := 21
-		edges := [][]int{{2,19},{16,17},{8,14},{2,16},{12,20},{12,14},{16,18},{15,16},{10,21},{3,5},{13,18},{17,20},{14,17},{9,12},{5,15},{5,6},{3,7},{2,21},{10,13},{8,16},{7,18},{4,6},{9,1},{13,21},{18,20},{7,14},{4,19},{5,8},{3,11},{11,1},{7,12},{4,7},{3,16},{13,17},{17,19},{9,13},{7,19},{10,16},{4,13},{4,5},{2,15},{12,19},{11,16},{2,9},{11,17},{17,1},{16,21},{4,10},{10,14},{14,16},{4,1},{13,20},{5,20},{4,14},{4,21},{10,20},{2,14},{8,15},{4,8},{6,19},{15,1},{19,1},{8,19},{15,21},{3,12},{11,18},{9,17},{18,19},{7,21},{3,21},{16,19},{11,15},{5,1},{8,17},{3,15},{8,1},{10,19},{3,8},{6,16},{2,8},{5,18},{11,13},{11,20},{14,21},{6,20},{4,20},{12,13},{5,12},{10,11},{9,15},{3,19},{9,20},{14,18},{21,1},{13,19},{8,21},{2,13},{3,10},{9,18},{19,21},{6,7},{3,18},{2,18},{6,14},{3,17},{5,21},{14,20},{8,9},{16,1},{3,4},{13,1},{5,9},{4,15},{17,21},{20,21},{2,17},{13,14},{11,14},{9,16},{10,18},{6,15},{6,12},{3,13},{5,11},{6,1},{12,17},{8,10},{5,10},{8,18},{4,12},{10,1},{6,13},{4,18},{7,20},{7,16},{2,6},{12,21},{4,17},{15,18},{13,16},{15,20},{7,10},{6,10},{2,20},{7,15},{18,1},{12,1},{3,20},{7,1},{14,15},{4,9},{11,19},{7,9},{5,17},{18,21},{6,21},{8,11},{6,17},{3,14},{7,11},{5,7},{7,13},{6,8},{6,9},{10,12},{5,16},{2,4},{17,18},{9,11},{12,16},{3,6},{12,18},{3,9},{11,12},{14,19},{10,15},{5,13},{8,13},{15,17},{2,10},{11,21},{20,1},{6,18},{2,12},{19,20},{6,11},{8,12},{2,3},{12,15},{2,11},{9,10},{7,17},{9,19},{13,15},{7,8},{4,11},{2,5},{5,19},{16,20},{15,19},{9,14},{14,1},{10,17},{9,21},{2,7},{8,20},{5,14},{4,16}}
-		res := diagram.IsPossible(n,edges)
+		edges := [][]int{{2, 19}, {16, 17}, {8, 14}, {2, 16}, {12, 20}, {12, 14}, {16, 18}, {15, 16}, {10, 21}, {3, 5}, {13, 18}, {17, 20}, {14, 17}, {9, 12}, {5, 15}, {5, 6}, {3, 7}, {2, 21}, {10, 13}, {8, 16}, {7, 18}, {4, 6}, {9, 1}, {13, 21}, {18, 20}, {7, 14}, {4, 19}, {5, 8}, {3, 11}, {11, 1}, {7, 12}, {4, 7}, {3, 16}, {13, 17}, {17, 19}, {9, 13}, {7, 19}, {10, 16}, {4, 13}, {4, 5}, {2, 15}, {12, 19}, {11, 16}, {2, 9}, {11, 17}, {17, 1}, {16, 21}, {4, 10}, {10, 14}, {14, 16}, {4, 1}, {13, 20}, {5, 20}, {4, 14}, {4, 21}, {10, 20}, {2, 14}, {8, 15}, {4, 8}, {6, 19}, {15, 1}, {19, 1}, {8, 19}, {15, 21}, {3, 12}, {11, 18}, {9, 17}, {18, 19}, {7, 21}, {3, 21}, {16, 19}, {11, 15}, {5, 1}, {8, 17}, {3, 15}, {8, 1}, {10, 19}, {3, 8}, {6, 16}, {2, 8}, {5, 18}, {11, 13}, {11, 20}, {14, 21}, {6, 20}, {4, 20}, {12, 13}, {5, 12}, {10, 11}, {9, 15}, {3, 19}, {9, 20}, {14, 18}, {21, 1}, {13, 19}, {8, 21}, {2, 13}, {3, 10}, {9, 18}, {19, 21}, {6, 7}, {3, 18}, {2, 18}, {6, 14}, {3, 17}, {5, 21}, {14, 20}, {8, 9}, {16, 1}, {3, 4}, {13, 1}, {5, 9}, {4, 15}, {17, 21}, {20, 21}, {2, 17}, {13, 14}, {11, 14}, {9, 16}, {10, 18}, {6, 15}, {6, 12}, {3, 13}, {5, 11}, {6, 1}, {12, 17}, {8, 10}, {5, 10}, {8, 18}, {4, 12}, {10, 1}, {6, 13}, {4, 18}, {7, 20}, {7, 16}, {2, 6}, {12, 21}, {4, 17}, {15, 18}, {13, 16}, {15, 20}, {7, 10}, {6, 10}, {2, 20}, {7, 15}, {18, 1}, {12, 1}, {3, 20}, {7, 1}, {14, 15}, {4, 9}, {11, 19}, {7, 9}, {5, 17}, {18, 21}, {6, 21}, {8, 11}, {6, 17}, {3, 14}, {7, 11}, {5, 7}, {7, 13}, {6, 8}, {6, 9}, {10, 12}, {5, 16}, {2, 4}, {17, 18}, {9, 11}, {12, 16}, {3, 6}, {12, 18}, {3, 9}, {11, 12}, {14, 19}, {10, 15}, {5, 13}, {8, 13}, {15, 17}, {2, 10}, {11, 21}, {20, 1}, {6, 18}, {2, 12}, {19, 20}, {6, 11}, {8, 12}, {2, 3}, {12, 15}, {2, 11}, {9, 10}, {7, 17}, {9, 19}, {13, 15}, {7, 8}, {4, 11}, {2, 5}, {5, 19}, {16, 20}, {15, 19}, {9, 14}, {14, 1}, {10, 17}, {9, 21}, {2, 7}, {8, 20}, {5, 14}, {4, 16}}
+		res := diagram.IsPossible(n, edges)
 		fmt.Println(res)
 	}
 	{
@@ -134,15 +154,15 @@ func main() {
 		//1
 		//nums := []int{2,5,1,4,3,6}
 		//k := 1
-		nums := []int{3,2,1,4,5}
+		nums := []int{3, 2, 1, 4, 5}
 		k := 4
-		res := array.CountSubarrays2488(nums,k)
+		res := array.CountSubarrays2488(nums, k)
 		fmt.Println(res)
 	}
 	{
 		n := 4
-		roads := [][]int{{1,2,9},{2,3,6},{2,4,5},{1,4,7}}
-		res := diagram.MinScore(n,roads)
+		roads := [][]int{{1, 2, 9}, {2, 3, 6}, {2, 4, 5}, {1, 4, 7}}
+		res := diagram.MinScore(n, roads)
 		fmt.Println(res)
 	}
 	{
@@ -178,66 +198,66 @@ func main() {
 		s := "23542185131"
 		k := 3
 		minLength := 3
-		res := number.BeautifulPartitions(s,k,minLength)
+		res := number.BeautifulPartitions(s, k, minLength)
 		fmt.Println(res)
 	}
 	{
-	//	TreeAncestor treeAncestor = new TreeAncestor(7, [-1, 0, 0, 1, 1, 2, 2]);
-	//treeAncestor.getKthAncestor(3, 1); // returns 1 which is the parent of 3
-	//treeAncestor.getKthAncestor(5, 2); // returns 0 which is the grandparent of 5
-	//treeAncestor.getKthAncestor(6, 3);
+		//	TreeAncestor treeAncestor = new TreeAncestor(7, [-1, 0, 0, 1, 1, 2, 2]);
+		//treeAncestor.getKthAncestor(3, 1); // returns 1 which is the parent of 3
+		//treeAncestor.getKthAncestor(5, 2); // returns 0 which is the grandparent of 5
+		//treeAncestor.getKthAncestor(6, 3);
 		n := 7
 		parent := []int{-1, 0, 0, 1, 1, 2, 2}
-		obj := tree.Constructor1483(n,parent)
-		res := obj.GetKthAncestor(3,1)
-		res = obj.GetKthAncestor(5,2)
-		res = obj.GetKthAncestor(6,3)
+		obj := tree.Constructor1483(n, parent)
+		res := obj.GetKthAncestor(3, 1)
+		res = obj.GetKthAncestor(5, 2)
+		res = obj.GetKthAncestor(6, 3)
 		fmt.Println(res)
 	}
 	{
 		s := "dwdwdnns"
 		k := 3
-		res := string_issue.MaxPalindromes(s,k)
+		res := string_issue.MaxPalindromes(s, k)
 		fmt.Println(res)
 	}
 	{
-		pizza := []string{"A..","AAA","..."}
+		pizza := []string{"A..", "AAA", "..."}
 		k := 3
-		res := array.Ways(pizza,k)
+		res := array.Ways(pizza, k)
 		fmt.Println(res)
 	}
 	{
-		nums1 := []int{4,7,6,3}
-		nums2 := []int{3,4,6,7}
+		nums1 := []int{4, 7, 6, 3}
+		nums2 := []int{3, 4, 6, 7}
 		var data_idx map[int]int = make(map[int]int)
 		var l int = len(nums1)
-		for i := 0;i < l;i++{
+		for i := 0; i < l; i++ {
 			data_idx[nums1[i]] = i
 		}
 		var res int = 0
-		for i := 0;i < l;i++{
-			if nums1[i] == nums2[i]{
+		for i := 0; i < l; i++ {
+			if nums1[i] == nums2[i] {
 				continue
 			}
-			nums1[i],nums1[data_idx[nums2[i]]] = nums2[i],nums1[i]
+			nums1[i], nums1[data_idx[nums2[i]]] = nums2[i], nums1[i]
 			res++
 		}
 		fmt.Println(res)
 	}
 	{
-		nums := []int{3,6,2,7,1}
+		nums := []int{3, 6, 2, 7, 1}
 		k := 6
-		res := array.SubarrayLCM(nums,k)
+		res := array.SubarrayLCM(nums, k)
 		fmt.Println(res)
 	}
 	{
 		//[[0,1},{1,2},{2,3]]
 		//3
 		//[-5644,-6018,1188,-8502]
-		edges := [][]int{{0,1},{1,2},{2,3}}
+		edges := [][]int{{0, 1}, {1, 2}, {2, 3}}
 		bob := 3
-		amount := []int{-5644,-6018,1188,-8502}
-		res := diagram.MostProfitablePath(edges,bob,amount)
+		amount := []int{-5644, -6018, 1188, -8502}
+		res := diagram.MostProfitablePath(edges, bob, amount)
 		fmt.Println(res)
 	}
 	{
@@ -249,14 +269,14 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		nums := []int{15,77,97,26,53,41,26,13,12,18,17,42,13,33,34,70,48,65,62,78,33,60,96,53,23,14,60,70,57,41,29,12,79,65,52,30}
+		nums := []int{15, 77, 97, 26, 53, 41, 26, 13, 12, 18, 17, 42, 13, 33, 34, 70, 48, 65, 62, 78, 33, 60, 96, 53, 23, 14, 60, 70, 57, 41, 29, 12, 79, 65, 52, 30}
 		res := array.DistinctAverages(nums)
 		fmt.Println(res)
 	}
 	{
-		seats := [][]byte{{'#','.','#','#','.','#'},
-					{'.','#','#','#','#','.'},
-					{'#','.','#','#','.','#'}}
+		seats := [][]byte{{'#', '.', '#', '#', '.', '#'},
+			{'.', '#', '#', '#', '#', '.'},
+			{'#', '.', '#', '#', '.', '#'}}
 		//seats := [][]byte{{'.', '.', '.', '.', '#', '.', '.', '.'}, {'.', '.', '.', '.', '.', '.', '.', '.'},
 		//	{'.', '.', '.', '.', '.', '.', '.', '.'}, {'.', '.', '.', '.', '.', '.', '#', '.'},
 		//	{'.', '.', '.', '.', '.', '.', '.', '.'}, {'.', '.', '#', '.', '.', '.', '.', '.'},
@@ -270,9 +290,9 @@ func main() {
 		//[0,4,6]
 		//factory =
 		//[[2,2},{6,2]]
-		robot := []int{0,4,6}
-		factory := [][]int{{2,2},{6,2}}
-		res := array.MinimumTotalDistance(robot,factory)
+		robot := []int{0, 4, 6}
+		factory := [][]int{{2, 2}, {6, 2}}
+		res := array.MinimumTotalDistance(robot, factory)
 		fmt.Println(res)
 	}
 	{
@@ -280,64 +300,64 @@ func main() {
 		//3
 		//[11,11,7,2,9,4,17,1]
 		//1
-		nums := []int{11,11,7,2,9,4,17,1}
+		nums := []int{11, 11, 7, 2, 9, 4, 17, 1}
 		k := 1
-		res := array.MaximumSubarraySum(nums,k)
+		res := array.MaximumSubarraySum(nums, k)
 		fmt.Println(res)
 	}
 	{
 		var n int64 = 94598
 		target := 1
-		res := number.MakeIntegerBeautiful(n,target)
+		res := number.MakeIntegerBeautiful(n, target)
 		fmt.Println(res)
 	}
 	{
-		words := []string{"mll","edd","jii","tss","fee","dcc","nmm","abb","utt","zyy","xww","tss","wvv","xww","utt"}
+		words := []string{"mll", "edd", "jii", "tss", "fee", "dcc", "nmm", "abb", "utt", "zyy", "xww", "tss", "wvv", "xww", "utt"}
 		res := string_issue.OddString(words)
 		fmt.Println(res)
 	}
 	{
-		nums := []int{2,3,1,5,4}
+		nums := []int{2, 3, 1, 5, 4}
 		res := array.MaxValueAfterReverse(nums)
 		fmt.Println(res)
 	}
 	{
 		//[1,5,3,6,7]
 		//[1,6,3,3]
-		arr1 := []int{1,5,3,6,7}
-		arr2 := []int{1,6,3,3}
-		res := array.MakeArrayIncreasing(arr1,arr2)
+		arr1 := []int{1, 5, 3, 6, 7}
+		arr2 := []int{1, 6, 3, 3}
+		res := array.MakeArrayIncreasing(arr1, arr2)
 		fmt.Println(res)
 	}
 	{
 		//[1,2,5]
 		//[4,1,3]
-		nums := []int{1,2,5}
-		target := []int{4,1,3}
-		res := array.MakeSimilar(nums,target)
+		nums := []int{1, 2, 5}
+		target := []int{4, 1, 3}
+		res := array.MakeSimilar(nums, target)
 		fmt.Println(res)
 	}
 	{
 		//[15,11,5]
 		//1
-		nums := []int{19,9,9}
+		nums := []int{19, 9, 9}
 		k := 1
-		res := array.SubarrayGCD(nums,k)
+		res := array.SubarrayGCD(nums, k)
 		fmt.Println(res)
 	}
 	{
-		nums := []int{1,3,5,2,7,5}
+		nums := []int{1, 3, 5, 2, 7, 5}
 		minK := 1
 		maxK := 5
-		res := array.CountSubarrays2444(nums,minK,maxK)
+		res := array.CountSubarrays2444(nums, minK, maxK)
 		fmt.Println(res)
 	}
 	{
 		//[1,2,1,1,1]
 		//[[0,1},{1,3},{3,4},{4,2]]
-		nums := []int{6,2,2,2,6}
-		edges := [][]int{{0,1},{1,2},{1,3},{3,4}}
-		res := diagram.ComponentValue(nums,edges)
+		nums := []int{6, 2, 2, 2, 6}
+		edges := [][]int{{0, 1}, {1, 2}, {1, 3}, {3, 4}}
+		res := diagram.ComponentValue(nums, edges)
 		fmt.Println(res)
 	}
 	{
@@ -346,7 +366,7 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		nums := []int{3,7,1,6}
+		nums := []int{3, 7, 1, 6}
 		res := array.MinimizeArrayValue(nums)
 		fmt.Println(res)
 	}
@@ -354,8 +374,8 @@ func main() {
 		//n := 15
 		//queries := [][]int{{0,1},{2,2},{0,3}}
 		n := 2
-		queries := [][]int{{0,0}}
-		res := number.ProductQueries(n,queries)
+		queries := [][]int{{0, 0}}
+		res := number.ProductQueries(n, queries)
 		fmt.Println(res)
 	}
 	{
@@ -410,7 +430,7 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		grid := [][]int{{1,5,3,7,3,2,3,5}}
+		grid := [][]int{{1, 5, 3, 7, 3, 2, 3, 5}}
 		k := 29
 		res := diagram.NumberOfPaths(grid, k)
 		fmt.Println(res)
@@ -427,21 +447,21 @@ func main() {
 	}
 	{
 		n := 10
-		logs := [][]int{{0,3},{2,5},{0,9},{1,15}}
-		res := array.HardestWorker(n,logs)
+		logs := [][]int{{0, 3}, {2, 5}, {0, 9}, {1, 15}}
+		res := array.HardestWorker(n, logs)
 		fmt.Println(res)
 	}
 	{
 		num1 := 25
 		num2 := 72
-		res := number.MinimizeXor(num1,num2)
+		res := number.MinimizeXor(num1, num2)
 		fmt.Println(res)
 	}
 	{
 		N := 37
 		L := 50
 		K := 8
-		res := number.NumMusicPlaylists(N,L,K)
+		res := number.NumMusicPlaylists(N, L, K)
 		fmt.Println(res)
 	}
 	{
@@ -450,23 +470,23 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		nums := []int{878724,201541,179099,98437,35765,327555,475851,598885,849470,943442}
+		nums := []int{878724, 201541, 179099, 98437, 35765, 327555, 475851, 598885, 849470, 943442}
 		k := 4
 		res := array.GoodIndices(nums, k)
 		fmt.Println(res)
 	}
 	{
-		nums := []int{96317,96317,96317,96317,96317,96317,96317,96317,96317,279979}
+		nums := []int{96317, 96317, 96317, 96317, 96317, 96317, 96317, 96317, 96317, 279979}
 		res := array.LongestSubarray2419(nums)
 		fmt.Println(res)
 	}
 	{
 		n := 12
-		res :=number.ConcatenatedBinary(n)
+		res := number.ConcatenatedBinary(n)
 		fmt.Println(res)
 	}
 	{
-		transactions := [][]int{{2,1},{5,0},{4,2}}
+		transactions := [][]int{{2, 1}, {5, 0}, {4, 2}}
 		res := number.MinimumMoney(transactions)
 		fmt.Println(res)
 	}
@@ -483,7 +503,7 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		nums := []int{1,0,0}
+		nums := []int{1, 0, 0}
 		res := array.SmallestSubarrays(nums)
 		fmt.Println(res)
 	}
@@ -496,28 +516,28 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		var i int32 = 1 << 31 - 1
+		var i int32 = 1<<31 - 1
 		fmt.Println(i)
 	}
 	{
-		grid := [][]int{{1,1,1,1,0,0,0,0},{1,1,1,1,0,0,0,0},{1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1},{1,1,1,1,0,0,0,0},{1,1,1,1,0,0,0,0},{1,1,1,1,0,0,0,0},{1,1,1,1,0,0,0,0}}
+		grid := [][]int{{1, 1, 1, 1, 0, 0, 0, 0}, {1, 1, 1, 1, 0, 0, 0, 0}, {1, 1, 1, 1, 1, 1, 1, 1}, {1, 1, 1, 1, 1, 1, 1, 1}, {1, 1, 1, 1, 0, 0, 0, 0}, {1, 1, 1, 1, 0, 0, 0, 0}, {1, 1, 1, 1, 0, 0, 0, 0}, {1, 1, 1, 1, 0, 0, 0, 0}}
 		res := tree.Construct(grid)
 		fmt.Println(res)
 	}
 	{
 		var a int = 1 | 0b00111000
 		fmt.Println(a)
-		data := []int{230,136,145}
+		data := []int{230, 136, 145}
 		res := number.ValidUtf8(data)
 		fmt.Println(res)
 	}
 	{
-		nums := []int{0,1,2,2,4,4,1}
+		nums := []int{0, 1, 2, 2, 4, 4, 1}
 		res := number.MostFrequentEven(nums)
 		fmt.Println(res)
 	}
 	{
-		nums := []int{1,3,8,48,10}
+		nums := []int{1, 3, 8, 48, 10}
 		res := array.LongestNiceSubarray(nums)
 		fmt.Println(res)
 	}
@@ -525,15 +545,15 @@ func main() {
 		startPos := 989
 		endPos := 1000
 		k := 99
-		res := number.NumberOfWays2400(startPos,endPos,k)
+		res := number.NumberOfWays2400(startPos, endPos, k)
 		fmt.Println(res)
 	}
 	{
 		//mat := [][]int{{1,0,0,1,0,0,1,1,1,1,0,1},{1,1,1,1,0,0,1,1,1,0,0,1},{0,1,1,0,0,0,1,1,0,1,1,1},{0,0,0,1,0,0,1,0,1,0,1,1},{0,1,1,1,0,0,0,1,1,1,1,0},{1,1,0,1,0,1,1,1,1,0,1,1},{1,1,0,0,0,1,0,0,0,0,1,1},{1,1,1,0,1,0,0,1,1,0,0,1},{1,0,1,1,1,0,1,0,0,0,1,0},{0,0,0,1,1,0,1,1,1,1,1,1},{1,1,0,1,0,0,1,1,1,0,1,1},{0,0,1,0,0,1,1,1,1,0,1,1}}
 		//cols := 11
-		mat := [][]int{{0,0,0},{1,0,1},{0,1,1},{0,0,1}}
+		mat := [][]int{{0, 0, 0}, {1, 0, 1}, {0, 1, 1}, {0, 0, 1}}
 		cols := 2
-		res := array.MaximumRows(mat,cols)
+		res := array.MaximumRows(mat, cols)
 		fmt.Println(res)
 	}
 	{
@@ -543,16 +563,16 @@ func main() {
 	}
 	{
 		k := 3
-		rowConditions := [][]int{{1,2},{3,2}}
-		colConditions := [][]int{{2,1},{3,2}}
-		res := diagram.BuildMatrix(k,rowConditions,colConditions)
+		rowConditions := [][]int{{1, 2}, {3, 2}}
+		colConditions := [][]int{{2, 1}, {3, 2}}
+		res := diagram.BuildMatrix(k, rowConditions, colConditions)
 		fmt.Println(res)
 	}
 	{
 		//intervals = [[1,3},{1,4},{2,5},{3,5]]
 		//var intervals [][]int = [][]int{{2, 10}, {3, 7}, {3, 15}, {4, 11}, {6, 12}, {6, 16}, {7, 8}, {7, 11}, {7, 15}, {11, 12}}
 		//var intervals [][]int = [][]int{{1,3},{1,4},{2,5},{3,5}}
-		var intervals [][]int = [][]int{{1,3},{3,7},{5,7},{7,8}}
+		var intervals [][]int = [][]int{{1, 3}, {3, 7}, {5, 7}, {7, 8}}
 		res := array.IntersectionSizeTwo(intervals)
 		fmt.Println(res)
 	}
@@ -572,7 +592,7 @@ func main() {
 		t3.Left = &t4
 		t4.Left = &t5
 		start := 2
-		res := tree.AmountOfTime(&t1,start)
+		res := tree.AmountOfTime(&t1, start)
 		fmt.Println(res)
 	}
 	{
@@ -591,15 +611,15 @@ func main() {
 		//[1,2,3,1,2,3,1,2,10]
 		initialEnergy := 100
 		initialExperience := 100
-		energy := []int{1,2,3,4,5,6,7,8,9}
-		experience := []int{1,2,3,1,2,3,1,2,10}
-		res := number.MinNumberOfHours(initialEnergy,initialExperience,energy,experience)
+		energy := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
+		experience := []int{1, 2, 3, 1, 2, 3, 1, 2, 10}
+		res := number.MinNumberOfHours(initialEnergy, initialExperience, energy, experience)
 		fmt.Println(res)
 	}
 	{
 		s := "dztz"
-		shifts := [][]int{{0,0,0},{1,1,1}}
-		res := string_issue.ShiftingLetters3(s,shifts)
+		shifts := [][]int{{0, 0, 0}, {1, 1, 1}}
+		res := string_issue.ShiftingLetters3(s, shifts)
 		fmt.Println(res)
 	}
 	{
@@ -610,7 +630,7 @@ func main() {
 	{
 		blocks := "WBBWWBBWBW"
 		k := 7
-		res := string_issue.MinimumRecolors(blocks,k)
+		res := string_issue.MinimumRecolors(blocks, k)
 		fmt.Println(res)
 	}
 	{
@@ -625,35 +645,35 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		grid := [][]int{{9,9,8,1},{5,6,2,6},{8,2,6,4},{6,2,2,2}}
+		grid := [][]int{{9, 9, 8, 1}, {5, 6, 2, 6}, {8, 2, 6, 4}, {6, 2, 2, 2}}
 		res := array.LargestLocal(grid)
 		fmt.Println(res)
 	}
 	{
 		n := 13
 		k := 2
-		res := number.FindKthNumber(n,k)
+		res := number.FindKthNumber(n, k)
 		fmt.Println(res)
 	}
 	{
-		nums := []int{7,2,5,10,8}
+		nums := []int{7, 2, 5, 10, 8}
 		m := 2
-		res := array.SplitArray(nums,m)
+		res := array.SplitArray(nums, m)
 		fmt.Println(res)
 	}
 	{
 		s := "acfgbd"
 		k := 2
-		res := string_issue.LongestIdealString(s,k)
+		res := string_issue.LongestIdealString(s, k)
 		fmt.Println(res)
 	}
 	{
-		nums := []int{3,9,3}
+		nums := []int{3, 9, 3}
 		res := array.MinimumReplacement(nums)
 		fmt.Println(res)
 	}
 	{
-		edges := []int{-1,4,-1,2,0,4}
+		edges := []int{-1, 4, -1, 2, 0, 4}
 		res := diagram.LongestCycle(edges)
 		fmt.Println(res)
 	}
@@ -665,32 +685,32 @@ func main() {
 	}
 	{
 		s := "catsanddog"
-		wordDict := []string{"cat","cats","and","sand","dog"}
-		res := string_issue.WordBreak140(s,wordDict)
+		wordDict := []string{"cat", "cats", "and", "sand", "dog"}
+		res := string_issue.WordBreak140(s, wordDict)
 		fmt.Println(res)
 	}
 	{
 		//[1,2,3,1,10,11,22,12,32,22,44,31,23,45,64]
 		//7
-		nums := []int{1,2,3,1,10,11,22,12,32,22,44,31,23,45,64}
+		nums := []int{1, 2, 3, 1, 10, 11, 22, 12, 32, 22, 44, 31, 23, 45, 64}
 		k := 7
-		res := number.CountExcellentPairs(nums,k)
+		res := number.CountExcellentPairs(nums, k)
 		fmt.Println(res)
 	}
 	{
-	//["NumberContainers","change","find","change","find","find","find"]
-	//[[},{1,10},{10},{1,20},{10},{20},{30]]
+		//["NumberContainers","change","find","change","find","find","find"]
+		//[[},{1,10},{10},{1,20},{10},{20},{30]]
 		obj := number.Constructor2349()
-		obj.Change(1,10)
+		obj.Change(1, 10)
 		res := obj.Find(10)
-		obj.Change(1,20)
+		obj.Change(1, 20)
 		res = obj.Find(20)
 		fmt.Println(res)
 	}
 	{
-		nums := []string{"64333639502","65953866768","17845691654","87148775908","58954177897","70439926174","48059986638","47548857440","18418180516","06364956881","01866627626","36824890579","14672385151","71207752868"}
-		queries := [][]int{{9,4},{6,1},{3,8},{12,9},{11,4},{4,9},{2,7},{10,3},{13,1},{13,1},{6,1},{5,10}}
-		res := number.SmallestTrimmedNumbers(nums,queries)
+		nums := []string{"64333639502", "65953866768", "17845691654", "87148775908", "58954177897", "70439926174", "48059986638", "47548857440", "18418180516", "06364956881", "01866627626", "36824890579", "14672385151", "71207752868"}
+		queries := [][]int{{9, 4}, {6, 1}, {3, 8}, {12, 9}, {11, 4}, {4, 9}, {2, 7}, {10, 3}, {13, 1}, {13, 1}, {6, 1}, {5, 10}}
+		res := number.SmallestTrimmedNumbers(nums, queries)
 		fmt.Println(res)
 	}
 	{
@@ -701,13 +721,13 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		var nums []int = []int{14,9,8,4,3,2}
+		var nums []int = []int{14, 9, 8, 4, 3, 2}
 		res := array.CanPartition2(nums)
 		fmt.Println(res)
 	}
 	{
 		numCourses := 2
-		prerequisites := [][]int{{1,0}}
+		prerequisites := [][]int{{1, 0}}
 		res := diagram.FindOrder(numCourses, prerequisites)
 		fmt.Println(res)
 	}
@@ -717,9 +737,9 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		nums := []int{1,3,4,3,1}
+		nums := []int{1, 3, 4, 3, 1}
 		threshold := 6
-		res := array.ValidSubarraySize(nums,threshold)
+		res := array.ValidSubarraySize(nums, threshold)
 		fmt.Println(res)
 	}
 	{
@@ -732,7 +752,7 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		grid := [][]int{{1,1},{3,4}}
+		grid := [][]int{{1, 1}, {3, 4}}
 		res := array.CountPaths(grid)
 		fmt.Println(res)
 	}
@@ -776,13 +796,13 @@ func main() {
 		n := 6
 		delay := 2
 		forget := 4
-		res := number.PeopleAwareOfSecret2(n,delay,forget)
+		res := number.PeopleAwareOfSecret2(n, delay, forget)
 		fmt.Println(res)
 	}
 	{
 		key := "the quick brown fox jumps over the lazy dog"
 		message := "vkbs bs t suepuv"
-		res := string_issue.DecodeMessage(key,message)
+		res := string_issue.DecodeMessage(key, message)
 		fmt.Println(res)
 	}
 	{
@@ -794,7 +814,7 @@ func main() {
 		//"bxj###tw"
 		s := "bxj##tw"
 		t := "bxj###tw"
-		res := string_issue.BackspaceCompare(s,t)
+		res := string_issue.BackspaceCompare(s, t)
 		fmt.Println(res)
 	}
 	{
@@ -803,56 +823,56 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		nums := []int{3,2,4,6}
+		nums := []int{3, 2, 4, 6}
 		res := array.MaximumXOR(nums)
 		fmt.Println(res)
 	}
 	{
 		n := 3
-		edges := [][]int{{0,1},{0,2},{1,2}}
-		res := diagram.CountPairs(n,edges)
+		edges := [][]int{{0, 1}, {0, 2}, {1, 2}}
+		res := diagram.CountPairs(n, edges)
 		fmt.Println(res)
 	}
 	{
-		ideas := []string{"coffee","donuts","time","toffee"}
+		ideas := []string{"coffee", "donuts", "time", "toffee"}
 		res := string_issue.DistinctNames(ideas)
 		fmt.Println(res)
 	}
 	{
 		m := 3
 		n := 5
-		prices := [][]int{{1,4,2},{2,2,7},{2,1,3}}
-		res := diagram.SellingWood(m,n,prices)
+		prices := [][]int{{1, 4, 2}, {2, 2, 7}, {2, 1, 3}}
+		res := diagram.SellingWood(m, n, prices)
 		fmt.Println(res)
 	}
 	{
 		s := "0011110011"
 		k := 522399436
-		res := string_issue.LongestSubsequence(s,k)
+		res := string_issue.LongestSubsequence(s, k)
 		fmt.Println(res)
 	}
 	{
 		num := 10
 		k := 8
-		res := number.MinimumNumbers(num,k)
+		res := number.MinimumNumbers(num, k)
 		fmt.Println(res)
 	}
 	{
-		nums := []int{2,1,4,3,5}
+		nums := []int{2, 1, 4, 3, 5}
 		var k int64 = 10
-		res := array.CountSubarrays(nums,k)
+		res := array.CountSubarrays(nums, k)
 		fmt.Println(res)
 	}
 	{
-		cookies := []int{8,15,10,20,8}
+		cookies := []int{8, 15, 10, 20, 8}
 		k := 2
-		res := array.DistributeCookies(cookies,k)
+		res := array.DistributeCookies(cookies, k)
 		fmt.Println(res)
 	}
 	{
-		grid := [][]int{{5,3},{4,0},{2,1}}
-		moveCost := [][]int{{9,8},{1,5},{10,12},{18,6},{2,4},{14,3}}
-		res := diagram.MinPathCost(grid,moveCost)
+		grid := [][]int{{5, 3}, {4, 0}, {2, 1}}
+		moveCost := [][]int{{9, 8}, {1, 5}, {10, 12}, {18, 6}, {2, 4}, {14, 3}}
+		res := diagram.MinPathCost(grid, moveCost)
 		fmt.Println(res)
 	}
 	{
@@ -861,7 +881,7 @@ func main() {
 		//[["e","3"},{"t","7"},{"t","8"]]
 		s := "fool3e7bar"
 		sub := "leet"
-		mappings := [][]byte{{'e','3'},{'t','7'},{'t','8'}}
+		mappings := [][]byte{{'e', '3'}, {'t', '7'}, {'t', '8'}}
 		res := string_issue.MatchReplacement(s, sub, mappings)
 		fmt.Println(res)
 	}
@@ -873,7 +893,7 @@ func main() {
 	{
 		//[3,2,20,1,1,3]
 		//10
-		var nums []int = []int{3,2,20,1,1,3}
+		var nums []int = []int{3, 2, 20, 1, 1, 3}
 		var x int = 10
 		res := array.MinOperations1658(nums, x)
 		fmt.Println(res)
@@ -885,20 +905,20 @@ func main() {
 	}
 	{
 		//nums := []int{5,3,4,4,7,3,6,11,8,5,11}
-		nums := []int{4,5,7,7,13}
+		nums := []int{4, 5, 7, 7, 13}
 		res := array.TotalSteps(nums)
 		fmt.Println(res)
 	}
 	{
 		sentence := "there are $1 $2 and 5$ candies in the shop"
 		discount := 50
-		res := string_issue.DiscountPrices(sentence,discount)
+		res := string_issue.DiscountPrices(sentence, discount)
 		fmt.Println(res)
 	}
 	{
-		messages := []string{"How is leetcode for everyone","Leetcode is useful for practice"}
-		senders := []string{"Bob","Charlie"}
-		res := array.LargestWordCount(messages,senders)
+		messages := []string{"How is leetcode for everyone", "Leetcode is useful for practice"}
+		senders := []string{"Bob", "Charlie"}
+		res := array.LargestWordCount(messages, senders)
 		fmt.Println(res)
 	}
 	{
@@ -907,7 +927,7 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		grid := [][]int{{0,2,0,0,1},{0,2,0,2,2},{0,2,0,0,0},{0,0,2,2,0},{0,0,0,0,0}}
+		grid := [][]int{{0, 2, 0, 0, 1}, {0, 2, 0, 2, 2}, {0, 2, 0, 0, 0}, {0, 0, 2, 2, 0}, {0, 0, 0, 0, 0}}
 		//grid := [][]int{{0,2,0,0,0,0,0},{0,0,0,2,2,1,0},{0,2,0,0,1,2,0},{0,0,2,2,2,0,2},{0,0,0,0,0,0,0}}
 		res := diagram.MaximumMinutes(grid)
 		fmt.Println(res)
@@ -915,14 +935,14 @@ func main() {
 	{
 		bottom := 2
 		top := 9
-		special := []int{4,6}
-		res := number.MaxConsecutive(bottom,top,special)
+		special := []int{4, 6}
+		res := number.MaxConsecutive(bottom, top, special)
 		fmt.Println(res)
 	}
 	{
-		tiles := [][]int{{1,5},{10,11},{12,18},{20,25},{30,32}}
+		tiles := [][]int{{1, 5}, {10, 11}, {12, 18}, {20, 25}, {30, 32}}
 		carpetLen := 10
-		res := array.MaximumWhiteTiles(tiles,carpetLen)
+		res := array.MaximumWhiteTiles(tiles, carpetLen)
 		fmt.Println(res)
 	}
 	{
@@ -931,13 +951,13 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		deadends := []string{"0201","0101","0102","1212","2002"}
+		deadends := []string{"0201", "0101", "0102", "1212", "2002"}
 		target := "0202"
-		res := diagram.OpenLock(deadends,target)
+		res := diagram.OpenLock(deadends, target)
 		fmt.Println(res)
 	}
 	{
-		graph := [][]int{{1,2,3},{0},{0},{0}}
+		graph := [][]int{{1, 2, 3}, {0}, {0}, {0}}
 		res := diagram.ShortestPathLength(graph)
 		fmt.Println(res)
 	}
@@ -952,13 +972,13 @@ func main() {
 		//["TimeMap","set","set","get","get","get","get","get"]
 		//[[},{"love","high",10},{"love","low",20},{"love",5},{"love",10},{"love",15},{"love",20},{"love",25]]
 		obj := list_queue.Constructor981()
-		obj.Set("love","high",10)
-		obj.Set("love","low",20)
-		res := obj.Get("love",5)
-		res = obj.Get("love",10)
-		res = obj.Get("love",15)
-		res = obj.Get("love",20)
-		res = obj.Get("love",25)
+		obj.Set("love", "high", 10)
+		obj.Set("love", "low", 20)
+		res := obj.Get("love", 5)
+		res = obj.Get("love", 10)
+		res = obj.Get("love", 15)
+		res = obj.Get("love", 20)
+		res = obj.Get("love", 25)
 		fmt.Println(res)
 	}
 	{
@@ -968,14 +988,14 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		nums := []int{1,4,0,-1,-2,-3,-1,-2}
+		nums := []int{1, 4, 0, -1, -2, -3, -1, -2}
 		res := array.Find132pattern(nums)
 		fmt.Println(res)
 	}
 	{
-		nums := []int{3,5,6,7}
+		nums := []int{3, 5, 6, 7}
 		target := 9
-		res := array.NumSubseq(nums,target)
+		res := array.NumSubseq(nums, target)
 		fmt.Println(res)
 	}
 	{
@@ -987,16 +1007,16 @@ func main() {
 		res := obj.Top()
 		res = obj.Pop()
 		res2 := obj.Empty()
-		fmt.Println(res,res2)
+		fmt.Println(res, res2)
 	}
 	{
-		nums1 := []int{1,7,5}
-		nums2 := []int{2,3,5}
-		res := array.MinAbsoluteSumDiff(nums1,nums2)
+		nums1 := []int{1, 7, 5}
+		nums2 := []int{2, 3, 5}
+		res := array.MinAbsoluteSumDiff(nums1, nums2)
 		fmt.Println(res)
 	}
 	{
-		nums := []int{4,2,0}
+		nums := []int{4, 2, 0}
 		res := array.MinimumAverageDifference(nums)
 		fmt.Println(res)
 	}
@@ -1008,7 +1028,7 @@ func main() {
 	}
 	{
 		//var graph [][]int = [][]int{{1,2},{2,3},{5},{0},{5},{},{}}
-		var graph [][]int = [][]int{{1,2},{2,3},{5},{0},{5},{},{}}
+		var graph [][]int = [][]int{{1, 2}, {2, 3}, {5}, {0}, {5}, {}, {}}
 		res := diagram.EventualSafeNodes2(graph)
 		fmt.Println(res)
 	}
@@ -1016,20 +1036,20 @@ func main() {
 		//var n int = 5
 		//var connections [][]int = [][]int{{0, 1}, {0, 2}, {3, 4}, {2, 3}}
 		var n int = 4
-		var connections [][]int = [][]int{{0,1},{0,2},{1,2}}
+		var connections [][]int = [][]int{{0, 1}, {0, 2}, {1, 2}}
 		res := diagram.MakeConnected2(n, connections)
 		fmt.Println(res)
 	}
 	{
 		//var data []int = []int{1, 1, 2, 2, 3, 3, 4, 4, 5, 5}
 		//var target int = 8
-		var data []int = []int{1,1,2,2,2,2}
+		var data []int = []int{1, 1, 2, 2, 2, 2}
 		var target int = 5
 		res := array.ThreeSumMulti2(data, target)
 		fmt.Println(res)
 	}
 	{
-		points := [][]int{{9,-25},{-4,1},{-1,5},{-7,7}}
+		points := [][]int{{9, -25}, {-4, 1}, {-1, 5}, {-7, 7}}
 		res := diagram.MaxPoints(points)
 		fmt.Println(res)
 	}
@@ -1038,7 +1058,7 @@ func main() {
 		//var pairs [][int = [][]int{{0, 1}, {1, 2}}
 		// s = "dcab", pairs = [[0,3},{1,2]]
 		var s = "dcab"
-		var pairs [][]int = [][]int{{0,3},{1,2}}
+		var pairs [][]int = [][]int{{0, 3}, {1, 2}}
 		res := diagram.SmallestStringWithSwaps2(s, pairs)
 		fmt.Println(res)
 	}
@@ -1047,27 +1067,27 @@ func main() {
 		//persons := []int{44,41}
 		//flowers := [][]int{{1,10},{3,3}}
 		//persons := []int{3,3,2}
-		flowers := [][]int{{50,50},{19,27},{40,46},{42,48},{22,46},{41,50},{11,36},{14,29}}
+		flowers := [][]int{{50, 50}, {19, 27}, {40, 46}, {42, 48}, {22, 46}, {41, 50}, {11, 36}, {14, 29}}
 		persons := []int{38}
-		res := number.FullBloomFlowers(flowers,persons)
+		res := number.FullBloomFlowers(flowers, persons)
 		fmt.Println(res)
 	}
 	{
-		rectangles := [][]int{{1,2},{2,3},{2,5}}
-		points := [][]int{{2,1},{1,4}}
-		res := diagram.CountRectangles(rectangles,points)
+		rectangles := [][]int{{1, 2}, {2, 3}, {2, 5}}
+		points := [][]int{{2, 1}, {1, 4}}
+		res := diagram.CountRectangles(rectangles, points)
 		fmt.Println(res)
 	}
 	{
 		left := 0
 		right := 0
-		res := number.RangeBitwiseAnd(left,right)
+		res := number.RangeBitwiseAnd(left, right)
 		fmt.Println(res)
 	}
 	{
-		coins := []int{1,2,5}
+		coins := []int{1, 2, 5}
 		amount := 11
-		res := number.CoinChange(coins,amount)
+		res := number.CoinChange(coins, amount)
 		fmt.Println(res)
 	}
 	{
@@ -1077,9 +1097,9 @@ func main() {
 	}
 	{
 		//nums1 = [4,1,2], nums2 = [1,3,4,2].
-		nums1 := []int{4,1,2}
-		nums2 := []int{1,3,4,2}
-		res := array.NextGreaterElement(nums1,nums2)
+		nums1 := []int{4, 1, 2}
+		nums2 := []int{1, 3, 4, 2}
+		res := array.NextGreaterElement(nums1, nums2)
 		fmt.Println(res)
 	}
 	{
@@ -1113,27 +1133,27 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		parent := []int{-1,0,1}
+		parent := []int{-1, 0, 1}
 		s := "aab"
-		res := tree.LongestPath(parent,s)
+		res := tree.LongestPath(parent, s)
 		fmt.Println(res)
 	}
 	{
 		n := 5
 		k := 2
-		res := list_queue.FindTheWinner(n,k)
+		res := list_queue.FindTheWinner(n, k)
 		fmt.Println(res)
 	}
 	{
-		grid := [][]int{{23,17,15,3,20},{8,1,20,27,11},{9,4,6,2,21},{40,9,1,10,6},{22,7,4,5,3}}
+		grid := [][]int{{23, 17, 15, 3, 20}, {8, 1, 20, 27, 11}, {9, 4, 6, 2, 21}, {40, 9, 1, 10, 6}, {22, 7, 4, 5, 3}}
 		res := diagram.MaxTrailingZeros(grid)
 		fmt.Println(res)
 	}
 	{
-	 	obj := number.Constructor2242()
-		obj.Deposit([]int{0,10,0,3,0})
+		obj := number.Constructor2242()
+		obj.Deposit([]int{0, 10, 0, 3, 0})
 		res := obj.Withdraw(500)
-		obj.Deposit([]int{0,1,0,1,1})
+		obj.Deposit([]int{0, 1, 0, 1, 1})
 		res = obj.Withdraw(600)
 		res = obj.Withdraw(550)
 		fmt.Println(res)
@@ -1151,9 +1171,9 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		candidates := []int{2,3,6,7}
+		candidates := []int{2, 3, 6, 7}
 		target := 7
-		res := array.CombinationSum(candidates,target)
+		res := array.CombinationSum(candidates, target)
 		fmt.Println(res)
 	}
 	{
@@ -1169,19 +1189,19 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		var nums []int = []int{1, 2, 2,3}
+		var nums []int = []int{1, 2, 2, 3}
 		res := array.SubsetsWithDup(nums)
 		fmt.Println(res)
 	}
 	{
-		nums := []int{1,2,3}
+		nums := []int{1, 2, 3}
 		res := array.Subsets(nums)
 		print(res)
 	}
 	{
 		//"9990"
 		//"999000"
-		res := number.Multiply("2","3")
+		res := number.Multiply("2", "3")
 		fmt.Println(res)
 	}
 	{
@@ -1190,72 +1210,72 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		var grid [][]int = [][]int{{0,1},{1,0}}
+		var grid [][]int = [][]int{{0, 1}, {1, 0}}
 		res := diagram.ShortestPathBinaryMatrix(grid)
 		fmt.Println(res)
 	}
 	{
-		isConnected := [][]int{{1,0,0,1},{0,1,1,0},{0,1,1,1},{1,0,1,1}}
+		isConnected := [][]int{{1, 0, 0, 1}, {0, 1, 1, 0}, {0, 1, 1, 1}, {1, 0, 1, 1}}
 		res := diagram.FindCircleNum(isConnected)
 		fmt.Println(res)
 	}
 	{
 		target := 7
-		nums := []int{2,3,1,2,4,3}
-		res := array.MinSubArrayLen3(target,nums)
+		nums := []int{2, 3, 1, 2, 4, 3}
+		res := array.MinSubArrayLen3(target, nums)
 		fmt.Println(res)
 	}
 	{
 		//[57,44,92,28,66,60,37,33,52,38,29,76,8,75,22]
 		//18
-		var nums []int = []int{57,44,92,28,66,60,37,33,52,38,29,76,8,75,22}
+		var nums []int = []int{57, 44, 92, 28, 66, 60, 37, 33, 52, 38, 29, 76, 8, 75, 22}
 		var k int = 18
 		res := number.NumSubarrayProductLessThanK(nums, k)
 		fmt.Println(res)
 	}
 	{
-		flowers := []int{1,3,1,1}
+		flowers := []int{1, 3, 1, 1}
 		var newFlowers int64 = 7
 		target := 6
 		full := 12
 		partial := 1
-		res := number.MaximumBeauty(flowers , newFlowers , target , full , partial)
+		res := number.MaximumBeauty(flowers, newFlowers, target, full, partial)
 		fmt.Println(res)
 	}
 	{
-		expression :="247+38"
+		expression := "247+38"
 		res := number.MinimizeResult(expression)
 		fmt.Println(res)
 	}
 	{
-		var matrix [][]int = [][]int{{1,4},{2,5}}
+		var matrix [][]int = [][]int{{1, 4}, {2, 5}}
 		var target int = 2
 		res := array.SearchMatrix(matrix, target)
 		fmt.Println(res)
 	}
 	{
-		var nums []int = []int{9,-9,4,12,12,0,-14,-7,10,-1,11,-10,-3,2,-9,0,8,-9,-5,-1,10,5,13,-5,-9,-12,9,-3,10,10,-10,4,8,1,-7,-2,-14,-6,6,11,8,-6,9,13,11,7,-10,-4,14,0,3,1,-10,-7,3,-12,-3,-11,0,-8,-15,5,3,8,13,11,13,-15,-9,4,3,6,5,-11,-4,-6,4,1,5,-5,-13,-7,11,-8,2,-1,-12,14,3,3,13,-5,-14,-7,11,14,-11,9,6,-13,-9,-13,1,11,-9,12,-10,2,-1,3,12,-7,3,0,0,12,6,3,3,-13,14,1,-3}
+		var nums []int = []int{9, -9, 4, 12, 12, 0, -14, -7, 10, -1, 11, -10, -3, 2, -9, 0, 8, -9, -5, -1, 10, 5, 13, -5, -9, -12, 9, -3, 10, 10, -10, 4, 8, 1, -7, -2, -14, -6, 6, 11, 8, -6, 9, 13, 11, 7, -10, -4, 14, 0, 3, 1, -10, -7, 3, -12, -3, -11, 0, -8, -15, 5, 3, 8, 13, 11, 13, -15, -9, 4, 3, 6, 5, -11, -4, -6, 4, 1, 5, -5, -13, -7, 11, -8, 2, -1, -12, 14, 3, 3, 13, -5, -14, -7, 11, 14, -11, 9, 6, -13, -9, -13, 1, 11, -9, 12, -10, 2, -1, 3, 12, -7, 3, 0, 0, 12, 6, 3, 3, -13, 14, 1, -3}
 		res := number.ThreeSum(nums)
 		fmt.Println(res)
 	}
 	{
 		//[5,7,7,8,8,10]
 		//8
-		nums := []int{1,2,3}
+		nums := []int{1, 2, 3}
 		target := 2
-		res := array.SearchRange(nums,target)
+		res := array.SearchRange(nums, target)
 		fmt.Println(res)
 	}
 	{
 		//[4,5,6,7,8,1,2,3]
 		//8
-		nums := []int{4,5,6,7,8,1,2,3}
+		nums := []int{4, 5, 6, 7, 8, 1, 2, 3}
 		target := 8
 		//nums := []int{4,5,6,7,0,1,2}
 		//target := 0
 		//nums := []int{1,3}
 		//target := 1
-		res := array.Search33(nums,target)
+		res := array.Search33(nums, target)
 		fmt.Println(res)
 	}
 	{
@@ -1270,8 +1290,8 @@ func main() {
 
 		keys := []byte{'b'}
 		values := []string{"ca"}
-		dictionary := []string{"aaa","cacbc","bbaba","bb"}
-		obj := string_issue.Constructor2227(keys,values,dictionary)
+		dictionary := []string{"aaa", "cacbc", "bbaba", "bb"}
+		obj := string_issue.Constructor2227(keys, values, dictionary)
 		//["abcd"},{"eizfeiam"]
 		res1 := obj.Encrypt("bbb")
 		fmt.Println(res1)
@@ -1279,23 +1299,23 @@ func main() {
 		fmt.Println(res2)
 	}
 	{
-		floor := []int{1,2,4,3}
+		floor := []int{1, 2, 4, 3}
 		var res int = array.MaxArea(floor)
 		fmt.Println(res)
 	}
 	{
 		candies := []int{1}
 		var k int64 = 1
-		res := number.MaximumCandies(candies,k)
+		res := number.MaximumCandies(candies, k)
 		fmt.Println(res)
 	}
 	{
-		var triangle [][]int = [][]int{{-1},{-2,-3}}
+		var triangle [][]int = [][]int{{-1}, {-2, -3}}
 		res := number.MinimumTotal3(triangle)
 		fmt.Println(res)
 	}
 	{
-		nums := []int{1,2,3}
+		nums := []int{1, 2, 3}
 		res := array.Permute(nums)
 		fmt.Println(res)
 	}
@@ -1353,11 +1373,11 @@ func main() {
 		//".*..a*"
 		s := "a"
 		p := ".*..a*"
-		res := string_issue.IsMatch(s,p)
+		res := string_issue.IsMatch(s, p)
 		fmt.Println(res)
 	}
 	{
-		piles := [][]int{{1,100,3},{7,8,9}}
+		piles := [][]int{{1, 100, 3}, {7, 8, 9}}
 		k := 2
 		res := number.MaxValueOfCoins(piles, k)
 		fmt.Println(res)
@@ -1381,22 +1401,22 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		queries := []int{1,2,3,4,5,90}
+		queries := []int{1, 2, 3, 4, 5, 90}
 		intLength := 3
-		res := number.KthPalindrome(queries,intLength)
+		res := number.KthPalindrome(queries, intLength)
 		fmt.Println(res)
 	}
 	{
-		nums := []int{1,2,3,4,5,6,7}
+		nums := []int{1, 2, 3, 4, 5, 6, 7}
 		k := 3
-		array.Rotate189(nums,k)
+		array.Rotate189(nums, k)
 		fmt.Println(nums)
 	}
 	{
 		floor := "10110101"
 		numCarpets := 2
 		carpetLen := 2
-		res := string_issue.MinimumWhiteTiles(floor,numCarpets,carpetLen)
+		res := string_issue.MinimumWhiteTiles(floor, numCarpets, carpetLen)
 		fmt.Println(res)
 	}
 	{
@@ -1408,7 +1428,7 @@ func main() {
 	{
 		nums := []int{5}
 		target := 5
-		res := array.Search(nums,target)
+		res := array.Search(nums, target)
 		fmt.Println(res)
 	}
 	{
@@ -1427,16 +1447,16 @@ func main() {
 		//[[1,10},{2,2},{3,4]]
 		//6
 		//5
-		tires := [][]int{{1,10},{2,2},{3,4}}
+		tires := [][]int{{1, 10}, {2, 2}, {3, 4}}
 		changeTime := 6
 		numLaps := 5
-		res := number.MinimumFinishTime(tires,changeTime,numLaps)
+		res := number.MinimumFinishTime(tires, changeTime, numLaps)
 		fmt.Println(res)
 	}
 	{
 		numArrows := 9
-		aliceArrows := []int{1,1,0,1,0,0,2,1,0,1,2,0}
-		res := number.MaximumBobPoints(numArrows,aliceArrows)
+		aliceArrows := []int{1, 1, 0, 1, 0, 0, 2, 1, 0, 1, 2, 0}
+		res := number.MaximumBobPoints(numArrows, aliceArrows)
 		fmt.Println(res)
 	}
 	{
@@ -1445,14 +1465,14 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		nums := []int{6,6,5,5,4,1}
+		nums := []int{6, 6, 5, 5, 4, 1}
 		res := array.CountHillValley(nums)
 		fmt.Println(res)
 	}
 	{
 		text := "b"
 		pattern := "bc"
-		res := string_issue.MaximumSubsequenceCount(text,pattern)
+		res := string_issue.MaximumSubsequenceCount(text, pattern)
 		fmt.Println(res)
 	}
 	{
@@ -1462,20 +1482,20 @@ func main() {
 	}
 	{
 		n := 2
-		artifacts := [][]int{{0,0,0,0},{0,1,1,1}}
-		dig := [][]int{{0,0},{0,1}}
-		res := array.DigArtifacts(n , artifacts, dig)
+		artifacts := [][]int{{0, 0, 0, 0}, {0, 1, 1, 1}}
+		dig := [][]int{{0, 0}, {0, 1}}
+		res := array.DigArtifacts(n, artifacts, dig)
 		fmt.Println(res)
 	}
 	{
-		nums := []int{2,2,2,2,2}
+		nums := []int{2, 2, 2, 2, 2}
 		key := 2
 		k := 2
-		res := array.FindKDistantIndices(nums,key,k)
+		res := array.FindKDistantIndices(nums, key, k)
 		fmt.Println(res)
 	}
 	{
-		words := []string{"ghnv","uip","tenv","hvepx","e","ktc","byjdt","ulm","cae","ea"}
+		words := []string{"ghnv", "uip", "tenv", "hvepx", "e", "ktc", "byjdt", "ulm", "cae", "ea"}
 		res := string_issue.GroupStrings(words)
 		fmt.Println(res)
 	}
@@ -1488,28 +1508,28 @@ func main() {
 		//[[0,0,1,1},{0,0,1,1]]
 		//2
 		//1
-		grid := [][]int{{0,0,1,1},{0,0,1,1}}
+		grid := [][]int{{0, 0, 1, 1}, {0, 0, 1, 1}}
 		stampHeight := 2
 		stampWidth := 1
-		res := array.PossibleToStamp(grid,stampHeight,stampWidth)
+		res := array.PossibleToStamp(grid, stampHeight, stampWidth)
 		fmt.Println(res)
 	}
 	{
-		descriptions := [][]int{{20,15,1},{20,17,0},{50,20,1},{50,80,0},{80,19,1}}
+		descriptions := [][]int{{20, 15, 1}, {20, 17, 0}, {50, 20, 1}, {50, 80, 0}, {80, 19, 1}}
 		res := tree.CreateBinaryTree(descriptions)
 		fmt.Println(res)
 	}
 	{
-		fruits := [][]int{{0,9},{4,1},{5,7},{6,2},{7,4},{10,9}}
+		fruits := [][]int{{0, 9}, {4, 1}, {5, 7}, {6, 2}, {7, 4}, {10, 9}}
 		startPos := 5
 		k := 4
-		res := number.MaxTotalFruits(fruits,startPos,k)
+		res := number.MaxTotalFruits(fruits, startPos, k)
 		fmt.Println(res)
 	}
 	{
-		nums := []int{5,6}
+		nums := []int{5, 6}
 		k := 6
-		res := number.MinimalKSum(nums,k)
+		res := number.MinimalKSum(nums, k)
 		fmt.Println(res)
 	}
 	{
@@ -1519,74 +1539,74 @@ func main() {
 	}
 	{
 		n := 8
-		edgeList := [][]int{{0,3},{0,4},{1,3},{2,4},{2,7},{3,5},{3,6},{3,7},{4,6}}
-		res := diagram.GetAncestors(n,edgeList)
+		edgeList := [][]int{{0, 3}, {0, 4}, {1, 3}, {2, 4}, {2, 7}, {3, 5}, {3, 6}, {3, 7}, {4, 6}}
+		res := diagram.GetAncestors(n, edgeList)
 		fmt.Println(res)
 	}
 	{
 		//[9,8,7,6,5,4,3,2,1,0]
 		//[0,1,2,3,4,5,6,7,8,9]
-		mapping := []int{9,8,7,6,5,4,3,2,1,0}
-		nums := []int{0,1,2,3,4,5,6,7,8,9}
-		res := number.SortJumbled(mapping,nums)
+		mapping := []int{9, 8, 7, 6, 5, 4, 3, 2, 1, 0}
+		nums := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+		res := number.SortJumbled(mapping, nums)
 		fmt.Println(res)
 	}
 	{
-		bombs := [][]int{{1,2,3},{2,3,1},{3,4,2},{4,5,3},{5,6,4}}
+		bombs := [][]int{{1, 2, 3}, {2, 3, 1}, {3, 4, 2}, {4, 5, 3}, {5, 6, 4}}
 		res := diagram.MaximumDetonation(bombs)
 		fmt.Println(res)
 	}
 	{
 		//[[1,2},{1,3},{2,1]]
-		pairs := [][]int{{5,13},{10,6},{11,3},{15,19},{16,19},{1,10},{19,11},{4,16},{19,9},{5,11},
-			{5,6},{13,5},{13,9},{9,15},{11,16},{6,9},{9,13},{3,1},{16,5},{6,5}}
+		pairs := [][]int{{5, 13}, {10, 6}, {11, 3}, {15, 19}, {16, 19}, {1, 10}, {19, 11}, {4, 16}, {19, 9}, {5, 11},
+			{5, 6}, {13, 5}, {13, 9}, {9, 15}, {11, 16}, {6, 9}, {9, 13}, {3, 1}, {16, 5}, {6, 5}}
 		res := diagram.ValidArrangement(pairs)
 		fmt.Println(res)
 	}
 	{
-		nums := []int{7,4,3,9,1,8,5,2,6}
+		nums := []int{7, 4, 3, 9, 1, 8, 5, 2, 6}
 		k := 3
-		res := array.GetAverages(nums,k)
+		res := array.GetAverages(nums, k)
 		fmt.Println(res)
 	}
 	{
-		grid := [][]int{{1,1,1,1,0},{1,1,1,1,1},{1,1,1,1,1},{0,1,0,0,1}}
+		grid := [][]int{{1, 1, 1, 1, 0}, {1, 1, 1, 1, 1}, {1, 1, 1, 1, 1}, {0, 1, 0, 0, 1}}
 		res := diagram.CountPyramids(grid)
 		fmt.Println(res)
 	}
 	{
 		time := []int{1}
 		totalTrips := 1
-		res := number.MinimumTime(time,totalTrips)
+		res := number.MinimumTime(time, totalTrips)
 		fmt.Println(res)
 	}
 	{
-		items := [][]int{{1,2},{3,2},{2,4},{5,6},{3,5}}
-		queries := []int{1,2,3,4,5,6}
-		res := array.MaximumBeauty(items,queries)
+		items := [][]int{{1, 2}, {3, 2}, {2, 4}, {5, 6}, {3, 5}}
+		queries := []int{1, 2, 3, 4, 5, 6}
+		res := array.MaximumBeauty(items, queries)
 		fmt.Println(res)
 	}
 	{
-		tasks := []int{10,15,30}
-		workers := []int{0,10,10,10,10}
+		tasks := []int{10, 15, 30}
+		workers := []int{0, 10, 10, 10, 10}
 		pills := 3
 		strength := 10
 		//tasks := []int{3,2,1}
 		//workers := []int{0,3,3}
 		//pills := 1
 		//strength := 1
-		res := number.MaxTaskAssign(tasks,workers,pills,strength)
+		res := number.MaxTaskAssign(tasks, workers, pills, strength)
 		fmt.Println(res)
 	}
 	{
-		values := []int{0,32,10,43}
-		edges := [][]int{{0,1,10},{1,2,15},{0,3,10}}
+		values := []int{0, 32, 10, 43}
+		edges := [][]int{{0, 1, 10}, {1, 2, 15}, {0, 3, 10}}
 		maxTime := 49
-		res := diagram.MaximalPathQuality(values,edges,maxTime)
+		res := diagram.MaximalPathQuality(values, edges, maxTime)
 		fmt.Println(res)
 	}
 	{
-		obj := diagram.Constructor2069(6,3)
+		obj := diagram.Constructor2069(6, 3)
 
 		obj.Step(28)
 		//obj.Step(19)
@@ -1606,7 +1626,7 @@ func main() {
 		//3
 		s := "aabklazxcvllsaallbvcxsllsaldssdzvcxzabab"
 		repeatLimit := 3
-		res := string_issue.RepeatLimitedString(s,repeatLimit)
+		res := string_issue.RepeatLimitedString(s, repeatLimit)
 		fmt.Println(res)
 	}
 	{
@@ -1615,20 +1635,20 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		nums := []int{3,1,2,2,2,1,3}
+		nums := []int{3, 1, 2, 2, 2, 1, 3}
 		var k int = 2
-		res := array.CountPairs(nums,k)
+		res := array.CountPairs(nums, k)
 		fmt.Println(res)
 	}
 	{
-		beans := []int{2,10,3,2}
+		beans := []int{2, 10, 3, 2}
 		res := array.MinimumRemoval(beans)
 		fmt.Println(res)
 	}
 	{
-		edges := [][]int{{0,1},{1,2}}
-		patience := []int{0,2,1}
-		res := diagram.NetworkBecomesIdle(edges,patience)
+		edges := [][]int{{0, 1}, {1, 2}}
+		patience := []int{0, 2, 1}
+		res := diagram.NetworkBecomesIdle(edges, patience)
 		fmt.Println(res)
 	}
 	{
@@ -1637,7 +1657,7 @@ func main() {
 		k := 9
 		var letter byte = 'f'
 		repetition := 9
-		res := string_issue.SmallestSubsequence2(s,k,letter,repetition)
+		res := string_issue.SmallestSubsequence2(s, k, letter, repetition)
 		fmt.Println(res)
 	}
 	{
@@ -1646,9 +1666,9 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		nums := []int{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30827,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+		nums := []int{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30827, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 		k := 0
-		res := array.WaysToPartition(nums,k)
+		res := array.WaysToPartition(nums, k)
 		fmt.Println(res)
 	}
 	{
@@ -1656,8 +1676,8 @@ func main() {
 		//s = "6+0*1", answers = [12,9,6,4,8,6]
 		//s = "3+5*2", answers = [13,0,10,13,13,16,16]
 		s := "4+1+3*5+1*3+1+1*1+6*1+0*3+5*4+4"
-		answers := []int{13,21,11,15}
-		res := number.ScoreOfStudents(s,answers)
+		answers := []int{13, 21, 11, 15}
+		res := number.ScoreOfStudents(s, answers)
 		fmt.Println(res)
 	}
 	{
@@ -1666,44 +1686,44 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		var nums []int = []int{4,1,2,3}
+		var nums []int = []int{4, 1, 2, 3}
 		res := array.SortEvenOdd(nums)
 		fmt.Println(res)
 	}
 	{
-		nums := []int{1,10,100,1000}
+		nums := []int{1, 10, 100, 1000}
 		res := array.MinOperations2009(nums)
 		fmt.Println(res)
 	}
 	{
-		nextVisit := []int{0,0,2}
+		nextVisit := []int{0, 0, 2}
 		res := number.FirstDayBeenInAllRooms(nextVisit)
 		fmt.Println(res)
 	}
 	{
 		//[2,3,3,4,4,4,5,6,7,10]
 		//12
-		tasks := []int{2,3,3,4,4,4,5,6,7,10}
+		tasks := []int{2, 3, 3, 4, 4, 4, 5, 6, 7, 10}
 		sessionTime := 12
 		res := array.MinSessions(tasks, sessionTime)
 		fmt.Println(res)
 	}
 	{
-		nums := []int{0,1,2,2}
+		nums := []int{0, 1, 2, 2}
 		res := array.CountSpecialSubsequences(nums)
 		fmt.Println(res)
 	}
 	{
-		statements := [][]int{{2,1,2},{1,2,2},{2,0,2}}
+		statements := [][]int{{2, 1, 2}, {1, 2, 2}, {2, 0, 2}}
 		res := number.MaximumGood(statements)
 		fmt.Println(res)
 	}
 	{
-		grid := [][]int{{1,2,0,1},{1,3,3,1},{0,2,5,1}}
-		pricing := []int{2,3}
-		start := []int{2,3}
+		grid := [][]int{{1, 2, 0, 1}, {1, 3, 3, 1}, {0, 2, 5, 1}}
+		pricing := []int{2, 3}
+		start := []int{2, 3}
 		k := 2
-		res := array.HighestRankedKItems(grid,pricing,start,k)
+		res := array.HighestRankedKItems(grid, pricing, start, k)
 		fmt.Println(res)
 	}
 	{
@@ -1712,25 +1732,25 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		heights := []int{5,1,2,3,10}
+		heights := []int{5, 1, 2, 3, 10}
 		res := array.CanSeePersonsCount(heights)
 		fmt.Println(res)
 	}
 	{
-		segments := [][]int{{4,16,12},{9,10,15},{18,19,13},{3,13,20},{12,16,3},{2,10,10},{3,11,4},{13,16,6}}
+		segments := [][]int{{4, 16, 12}, {9, 10, 15}, {18, 19, 13}, {3, 13, 20}, {12, 16, 3}, {2, 10, 10}, {3, 11, 4}, {13, 16, 6}}
 		res := array.SplitPainting(segments)
 		fmt.Println(res)
 	}
 	{
 		m := 5
 		n := 5
-		res := array.ColorTheGrid(m,n)
+		res := array.ColorTheGrid(m, n)
 		fmt.Println(res)
 	}
 	{
 		n := 2
-		batteries := []int{3,3,3}
-		res := number.MaxRunTime(n,batteries)
+		batteries := []int{3, 3, 3}
+		res := number.MaxRunTime(n, batteries)
 		fmt.Println(res)
 	}
 	{
@@ -1739,7 +1759,7 @@ func main() {
 		fmt.Println(res)
 	}
 	{
-		var points [][]int = [][]int{{1,2,3},{1,5,1},{3,1,1}}
+		var points [][]int = [][]int{{1, 2, 3}, {1, 5, 1}, {3, 1, 1}}
 		res := array.MaxPoints(points)
 		fmt.Println(res)
 	}
@@ -1747,8 +1767,8 @@ func main() {
 		n := 5
 		//paths := [][]int{{0,1,2,3,4}, {2,3,4}, {4,0,1,2,3}}
 		//paths := [][]int{{0,1,2,3,4}, {4,3,2,1,0}}
-		paths := [][]int{{0,1,0,1,0,1,0,1,0},{0,1,3,0,1,4,0,1,0}}
-		res := diagram.LongestCommonSubpath(n,paths)
+		paths := [][]int{{0, 1, 0, 1, 0, 1, 0, 1, 0}, {0, 1, 3, 0, 1, 4, 0, 1, 0}}
+		res := diagram.LongestCommonSubpath(n, paths)
 		fmt.Println(res)
 	}
 	{

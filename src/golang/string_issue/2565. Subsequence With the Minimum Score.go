@@ -31,7 +31,9 @@ func MinimumScore(s string, t string) int {
 		}
 		res = min_int(res, l2-left_len-right_len)
 	}
+	//assume right party is empty,checking prefix of 't' by entire s
 	res = min_int(res, l2-left[l1-1])
-	res = min_int(res, right[0])
+	//assume left part is empty,checking suffix of 't' by entire s
+	res = min_int(res, right[0]+1)
 	return res
 }
