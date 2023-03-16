@@ -15,6 +15,39 @@ import (
 
 func main() {
 	{
+		nums := []int{4, 3, 1, 2, 4}
+		res := array.BeautifulSubarrays(nums)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{2, -1, 0, 1, -3, 3, -3}
+		res := array.MaxScore(nums)
+		fmt.Println(res)
+	}
+	{
+		n := 6
+		edges := [][]int{{0, 1}, {1, 2}, {1, 3}, {3, 4}, {3, 5}}
+		price := []int{9, 8, 7, 6, 10, 5}
+		res := diagram.MaxOutput(n, edges, price)
+		fmt.Println(res)
+	}
+	{
+		num := 4325
+		res := number.SplitNum(num)
+		fmt.Println(res)
+	}
+	{
+		word := "998244353"
+		m := 3
+		res := string_issue.DivisibilityArray(word, m)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{42, 83, 48, 10, 24, 55, 9, 100, 10, 17, 17, 99, 51, 32, 16, 98, 99, 31, 28, 68, 71, 14, 64, 29, 15, 40}
+		res := array.MaxNumOfMarkedIndices(nums)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{3, 4, 4, 5}
 		res := number.SquareFreeSubsets(nums)
 		fmt.Println(res)
