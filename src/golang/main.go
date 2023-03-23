@@ -15,6 +15,22 @@ import (
 
 func main() {
 	{
+		nums := []int{2, 1, 3, 4, 5, 2}
+		res := array.FindScore(nums)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{1, 2, 3, 4}
+		res := array.MaximizeGreatness(nums)
+		fmt.Println(res)
+	}
+	{
+		money := 17
+		children := 2
+		res := number.DistMoney(money, children)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{4, 3, 1, 2, 4}
 		res := array.BeautifulSubarrays(nums)
 		fmt.Println(res)
