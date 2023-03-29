@@ -15,6 +15,29 @@ import (
 
 func main() {
 	{
+		nums := []int{3, 1, 6, 8}
+		queries := []int{1, 5}
+		res := array.MinOperations2602(nums, queries)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{4, 9, 6, 10}
+		res := array.PrimeSubOperation(nums)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{1, -10, 7, 13, 6, 8}
+		value := 5
+		res := number.FindSmallestInteger(nums, value)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{4, 5, 6}
+		k := 2
+		res := number.BeautifulSubsets(nums, k)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{2, 1, 3, 4, 5, 2}
 		res := array.FindScore(nums)
 		fmt.Println(res)
