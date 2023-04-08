@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		arr := []int{1, 4, 1, 3}
+		k := 3
+		res := array.MakeSubKSumEqual(arr, k)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{3, 1, 6, 8}
 		queries := []int{1, 5}
 		res := array.MinOperations2602(nums, queries)

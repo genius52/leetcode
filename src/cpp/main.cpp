@@ -6,6 +6,14 @@
 
 int main() {
     {
+        std::vector reward1{2,1};
+        std::vector reward2{1,2};
+        int k = 0;
+        Solution_2611 s2611;
+        auto res = s2611.miceAndCheese(reward1,reward2,k);
+        std::cout << "2611 res = "<< res <<std::endl;
+    }
+    {
         Solution_2563 s2563;
         std::vector<int> nums{0,1,7,4,4,5};
         int lower = 3;
