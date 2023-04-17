@@ -15,6 +15,23 @@ import (
 
 func main() {
 	{
+		coins := []int{1, 0, 0, 0, 0, 1}
+		edges := [][]int{{0, 1}, {1, 2}, {2, 3}, {3, 4}, {4, 5}}
+		res := tree.CollectTheCoins(coins, edges)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{4, 2, 1, 2}
+		p := 1
+		res := array.MinimizeMax(nums, p)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{1, 3, 1, 1, 2}
+		res := array.Distance(nums)
+		fmt.Println(res)
+	}
+	{
 		arr := []int{1, 4, 1, 3}
 		k := 3
 		res := array.MakeSubKSumEqual(arr, k)
