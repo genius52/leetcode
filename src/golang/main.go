@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		nums := []int{2, 3, 7, 5, 10}
+		res := array.FindPrefixScore(nums)
+		fmt.Println(res)
+	}
+	{
 		coins := []int{1, 0, 0, 0, 0, 1}
 		edges := [][]int{{0, 1}, {1, 2}, {2, 3}, {3, 4}, {4, 5}}
 		res := tree.CollectTheCoins(coins, edges)

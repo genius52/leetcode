@@ -40,18 +40,6 @@ func CollectTheCoins(coins []int, edges [][]int) int {
 			graph[cur] = make(map[int]bool)
 		}
 	}
-	//for cnt := 0; cnt < 2; cnt++ {
-	//	for i := 0; i < l1; i++ {
-	//		if len(graph[i]) == 1 { //如果节点是叶子，则删除
-	//			if _, ok := delete_node[i]; !ok {
-	//				delete_node[i] = true
-	//			}
-	//		}
-	//	}
-	//	for i := 0; i < l1; i++ {
-	//
-	//	}
-	//}
 	var q2 list.List
 	for i := 0; i < l1; i++ {
 		if len(graph[i]) == 1 {
