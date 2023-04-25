@@ -6,6 +6,14 @@
 
 int main() {
     {
+        std::vector<int> nums{1,-1,-3,-2,3};
+        int k = 3;
+        int x = 2;
+        Solution_2653 s2653;
+        auto res = s2653.getSubarrayBeauty(nums,k,x);
+        std::cout << "2653 res = "<< res[0] <<std::endl;
+    }
+    {
         std::vector reward1{2,1};
         std::vector reward2{1,2};
         int k = 0;
