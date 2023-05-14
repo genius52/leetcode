@@ -15,6 +15,33 @@ import (
 
 func main() {
 	{
+		n := 7
+		cost := []int{1, 5, 2, 2, 3, 3, 1}
+		res := tree.MinIncrements(n, cost)
+		fmt.Println(res)
+	}
+	{
+		n := 4
+		var edges [][]int = [][]int{{0, 1}, {1, 2}, {1, 3}}
+		var price []int = []int{2, 2, 10, 6}
+		var trips [][]int = [][]int{{0, 3}, {2, 1}, {2, 3}}
+		res := tree.MinimumTotalPrice(n, edges, price, trips)
+		fmt.Println(res)
+	}
+	//{
+	//	start := []int{1, 1}
+	//	target := []int{4, 5}
+	//	specialRoads := [][]int{{1, 2, 3, 3, 2}, {3, 4, 4, 5, 1}}
+	//	res := diagram.MinimumCost(start, target, specialRoads)
+	//	fmt.Println(res)
+	//}
+	{
+		A := []int{1, 3, 2, 4}
+		B := []int{3, 1, 2, 4}
+		res := array.FindThePrefixCommonArray(A, B)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{2, 3, 7, 5, 10}
 		res := array.FindPrefixScore(nums)
 		fmt.Println(res)
