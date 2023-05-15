@@ -15,6 +15,22 @@ import (
 
 func main() {
 	{
+		n := 6
+		edges := [][]int{{0, 1}, {0, 2}, {1, 2}, {3, 4}, {3, 5}}
+		res := diagram.CountCompleteComponents(n, edges)
+		fmt.Println(res)
+	}
+	{
+		grid := [][]int{{2, 4, 3, 5}, {5, 4, 9, 3}, {3, 4, 2, 11}, {10, 9, 13, 15}}
+		res := array.MaxMoves(grid)
+		fmt.Println(res)
+	}
+	{
+		derived := []int{1, 1, 0}
+		res := number.DoesValidArrayExist(derived)
+		fmt.Println(res)
+	}
+	{
 		n := 7
 		cost := []int{1, 5, 2, 2, 3, 3, 1}
 		res := tree.MinIncrements(n, cost)
