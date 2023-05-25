@@ -35,21 +35,20 @@ import "container/list"
 //	return dfs_minimumCost(start, target, specialRoads, visited)
 //}
 
-type pos_cost struct {
-	x    int
-	y    int
-	cost int
-}
-
 func MinimumCost(start []int, target []int, specialRoads [][]int) int {
 	//var visited [100001][100001]bool
 	var l int = len(specialRoads)
-	var from_start []int = make([]int, l)
+	var distance_from_start []int = make([]int, l)
 	for i := 0; i < l; i++ {
-		from_start[i] = abs_int(start[0]-specialRoads[i][0]) + abs_int(start[1]-specialRoads[i][1])
+		distance_from_start[i] = abs_int(start[0]-specialRoads[i][0]) + abs_int(start[1]-specialRoads[i][1]) + specialRoads[i][4]
+	}
+	//var visited []bool = make([]bool, l)
+	type point struct {
+		x int
+		y int
 	}
 	var q list.List
-	var p pos_cost
+	var p point
 	p.x = start[0]
 	p.y = start[1]
 	var res int = abs_int(start[0]-target[0]) + abs_int(start[1]-target[1])

@@ -15,6 +15,16 @@ import (
 
 func main() {
 	{
+		n := 37
+		res := number.PunishmentNumber(n)
+		fmt.Println(res)
+	}
+	{
+		s := "ABFCACDB"
+		res := string_issue.MinLength(s)
+		fmt.Println(res)
+	}
+	{
 		n := 6
 		edges := [][]int{{0, 1}, {0, 2}, {1, 2}, {3, 4}, {3, 5}}
 		res := diagram.CountCompleteComponents(n, edges)
