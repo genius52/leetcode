@@ -15,6 +15,22 @@ import (
 
 func main() {
 	{
+		s := "0011"
+		res := string_issue.MinimumCost(s)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{9, 3, 6}
+		res := array.MaxStrength(nums)
+		fmt.Println(res)
+	}
+	{
+		s := "leetscode"
+		dictionary := []string{"leet", "code", "leetcode"}
+		res := string_issue.MinExtraChar(s, dictionary)
+		fmt.Println(res)
+	}
+	{
 		n := 37
 		res := number.PunishmentNumber(n)
 		fmt.Println(res)
