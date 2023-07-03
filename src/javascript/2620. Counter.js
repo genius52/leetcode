@@ -2,10 +2,11 @@
  * @param {number} n
  * @return {Function} counter
  */
+var cur_num = 0;
 var createCounter = function(n) {
-    var cur_num = n;
+    cur_num = n;
     return function() {
-        
+        return n++;
     };
 };
 

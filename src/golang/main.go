@@ -15,6 +15,70 @@ import (
 
 func main() {
 	{
+		num1 := 135
+		num2 := 26
+		res := number.MakeTheIntegerZero(num1, num2)
+		fmt.Println(res)
+	}
+	{
+		//4
+		//[[4,3],[2,16],[1,21],[3,22],[1,13],[3,10],[2,1],[1,12],[4,13],[2,18]]
+		//8
+		//[14,28,29]
+		n := 4
+		logs := [][]int{{4, 3}, {2, 16}, {1, 21}, {3, 22}, {1, 13}, {3, 10}, {2, 1}, {1, 12}, {4, 13}, {2, 18}}
+		x := 8
+		queries := []int{14, 28, 29}
+		res := number.CountServers(n, logs, x, queries)
+		fmt.Println(res)
+	}
+	{
+		//words := []string{"aad", "ebeb", "jgd", "ghdhc", "jcdc", "ffigd", "b", "jae", "j", "bbg", "gaii", "iha", "fj", "h", "aajf", "ccaf", "digbc", "efdi", "eb", "ff"}
+		words := []string{"aa", "ab", "bc"}
+		res := string_issue.MinimizeConcatenatedLength(words)
+		fmt.Println(res)
+	}
+	{
+		x := 2
+		y := 5
+		z := 1
+		res := string_issue.LongestString(x, y, z)
+		fmt.Println(res)
+	}
+	{
+		words := []string{"ku", "dd", "gu", "uk"}
+		res := string_issue.MaximumNumberOfStringPairs(words)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{2, 3, 6}
+		res := array.SpecialPerm(nums)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{20, 1, 15, 6, 7}
+		x := 5
+		res := number.MinCost2735(nums, x)
+		fmt.Println(res)
+	}
+	{
+		s := "acbbc"
+		res := string_issue.SmallestString(s)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{3, 30, 24}
+		res := number.FindNonMinOrMax(nums)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{-2, 0, 2}
+		s := "RLL"
+		d := 3
+		res := number.SumDistance(nums, s, d)
+		fmt.Println(res)
+	}
+	{
 		s := "0011"
 		res := string_issue.MinimumCost(s)
 		fmt.Println(res)
