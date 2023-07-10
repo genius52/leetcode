@@ -15,6 +15,11 @@ import (
 
 func main() {
 	{
+		s := "1011"
+		res := string_issue.MinimumBeautifulSubstrings(s)
+		fmt.Println(res)
+	}
+	{
 		num1 := 135
 		num2 := 26
 		res := number.MakeTheIntegerZero(num1, num2)

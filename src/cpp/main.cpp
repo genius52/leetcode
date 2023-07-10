@@ -6,6 +6,12 @@
 
 int main() {
     {
+        std::vector<int> nums{5,4,2,4};
+        Solution_2762 s2762;
+        auto res = s2762.continuousSubarrays(nums);
+        std::cout << "2762 res = "<< res <<std::endl;
+    }
+    {
         std::vector<int> nums{1,-1,-3,-2,3};
         int k = 3;
         int x = 2;

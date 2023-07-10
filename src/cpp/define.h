@@ -102,6 +102,7 @@ struct ListNode {
 #include "array/2542. Maximum Subsequence Score.hpp"
 #include "array/2563. Count the Number of Fair Pairs.hpp"
 #include "array/2653. Sliding Subarray Beauty.hpp"
+#include "array/2762. Continuous Subarrays.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"
