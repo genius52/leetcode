@@ -15,6 +15,26 @@ import (
 
 func main() {
 	{
+		nums := []int{2, 2, 3, 1, 1, 0}
+		k := 3
+		res := array.CheckArray(nums, k)
+		fmt.Println(res)
+	}
+	{
+		//nums1 := []int{3, 19, 13, 19}
+		//nums2 := []int{20, 18, 7, 14}
+		nums1 := []int{11, 7, 7, 9}
+		nums2 := []int{19, 19, 1, 7}
+		res := array.MaxNonDecreasingLength(nums1, nums2)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{1, 3, 6, 4, 1, 2}
+		target := 3
+		res := array.MaximumJumps(nums, target)
+		fmt.Println(res)
+	}
+	{
 		s := "1011"
 		res := string_issue.MinimumBeautifulSubstrings(s)
 		fmt.Println(res)
