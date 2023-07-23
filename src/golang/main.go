@@ -15,6 +15,18 @@ import (
 
 func main() {
 	{
+		n := 114
+		x := 1
+		res := number.NumberOfWays2787(n, x)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{2, 3, 6, 1, 9, 2}
+		x := 5
+		res := array.MaxScore2(nums, x)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{2, 2, 3, 1, 1, 0}
 		k := 3
 		res := array.CheckArray(nums, k)
