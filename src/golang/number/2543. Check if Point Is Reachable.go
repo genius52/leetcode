@@ -9,7 +9,12 @@ package number
 //(2 * x, y)
 //(x, 2 * y)
 
+//(x, y + x)
+//(x + y, y)
+//(x/2, y) 如果x是偶数
+//(x, y/2) 如果y是偶数
+
 func isReachable(targetX int, targetY int) bool {
-	//var visited map[string]bool = make(map[string]bool)
-	return true
+	r := gcd(targetX, targetY)
+	return r&(r-1) == 0
 }
