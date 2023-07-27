@@ -15,6 +15,12 @@ import (
 
 func main() {
 	{
+		parent := []int{-1, 0, 0, 1, 1, 2}
+		s := "acaabc"
+		res := tree.CountPalindromePaths(parent, s)
+		fmt.Println(res)
+	}
+	{
 		n := 114
 		x := 1
 		res := number.NumberOfWays2787(n, x)
