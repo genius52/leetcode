@@ -15,6 +15,18 @@ import (
 
 func main() {
 	{
+		a := "cab"
+		b := "a"
+		c := "b"
+		res := string_issue.MinimumString(a, b, c)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{1, 3, 1, 2, 2}
+		res := array.CountCompleteSubarrays(nums)
+		fmt.Println(res)
+	}
+	{
 		parent := []int{-1, 0, 0, 1, 1, 2}
 		s := "acaabc"
 		res := tree.CountPalindromePaths(parent, s)
