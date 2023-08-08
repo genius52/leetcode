@@ -6,6 +6,12 @@
 
 int main() {
     {
+        Solution_2812 s2812;
+        std::vector<std::vector<int>> grid{{0,0,1},{0,0,0},{0,0,0}};
+        auto res = s2812.maximumSafenessFactor(grid);
+        std::cout << "2812 res = "<< res <<std::endl;
+    }
+    {
         std::vector<int> nums{5,4,2,4};
         Solution_2762 s2762;
         auto res = s2762.continuousSubarrays(nums);

@@ -15,6 +15,22 @@ import (
 
 func main() {
 	{
+		nums := []int{2, 2, 1}
+		m := 4
+		res := array.CanSplitArray(nums, m)
+		fmt.Println(res)
+	}
+	{
+		s := "string"
+		res := string_issue.FinalString(s)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{11, 4, 10}
+		res := array.MinimumSeconds(nums)
+		fmt.Println(res)
+	}
+	{
 		a := "cab"
 		b := "a"
 		c := "b"
