@@ -6,6 +6,13 @@
 
 int main() {
     {
+        std::vector<int> nums{5,3,2,10,15};
+        int x = 1;
+        Solution_2817 s2817;
+        auto res = s2817.minAbsoluteDifference(nums,x);
+        std::cout << "2812 res = "<< res <<std::endl;
+    }
+    {
         Solution_2812 s2812;
         std::vector<std::vector<int>> grid{{0,0,1},{0,0,0},{0,0,0}};
         auto res = s2812.maximumSafenessFactor(grid);
