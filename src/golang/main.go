@@ -15,6 +15,35 @@ import (
 
 func main() {
 	{
+		n := 5
+		offers := [][]int{{0, 0, 1}, {0, 2, 2}, {1, 3, 2}}
+		res := number.MaximizeTheProfit(n, offers)
+		fmt.Println(res)
+	}
+	{
+		n := 5
+		k := 6
+		res := number.MinimumSum2829(n, k)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{2, 1, 3, 2, 1}
+		res := array.MinimumOperations2826(nums)
+		fmt.Println(res)
+	}
+	{
+		str1 := "abc"
+		str2 := "ad"
+		res := string_issue.CanMakeSubsequence(str1, str2)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{6, -1, 7, 4, 2, 3}
+		target := 8
+		res := array.CountPairs2824(nums, target)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{2, 2, 1}
 		m := 4
 		res := array.CanSplitArray(nums, m)
