@@ -3,8 +3,18 @@ from tree import *
 from other import *
 from Longest_Absolute_File_Path import *
 from stringissue.Solution1147 import *
+from number.Solution13 import *
+from number.Solution682 import Solution682
 
 if __name__ == '__main__':
+    operations = ["5", "2", "C", "D", "+"]
+    s682 = Solution682()
+    res = s682.calPoints(operations)
+
+    s13 = Solution13()
+    res = s13.romanToInt("MCMXCIV")
+
+    s = "MCMXCIV"
     s1569 = Solution_1569()
     nums = [31,23,14,24,15,12,25,28,5,35,17,6,9,11,1,27,18,20,2,3,33,10,13,4,7,36,32,29,8,30,26,19,34,22,21,16]
     res = s1569.numOfWays(nums)
