@@ -15,6 +15,19 @@ import (
 
 func main() {
 	{
+		nums := []int{3, 1, 9, 6}
+		modulo := 3
+		k := 0
+		res := array.CountInterestingSubarrays(nums, modulo, k)
+		fmt.Println(res)
+	}
+	{
+		//num := "5079348434341304786187138148710190664"
+		num := "25"
+		res := number.MinimumOperations2844(num)
+		fmt.Println(res)
+	}
+	{
 		n := 5
 		offers := [][]int{{0, 0, 1}, {0, 2, 2}, {1, 3, 2}}
 		res := number.MaximizeTheProfit(n, offers)
