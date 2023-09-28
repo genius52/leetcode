@@ -15,6 +15,21 @@ import (
 
 func main() {
 	{
+		maxHeights := []int{6, 5, 3, 9, 2, 7}
+		res := array.MaximumSumOfHeights2866(maxHeights)
+		fmt.Println(res)
+	}
+	{
+		n := 3
+		k := 2
+		budget := 15
+		composition := [][]int{{1, 1, 1}, {1, 1, 10}}
+		stock := []int{0, 0, 0}
+		cost := []int{1, 2, 3}
+		res := number.MaxNumberOfAlloys(n, k, budget, composition, stock, cost)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{3, 1, 9, 6}
 		modulo := 3
 		k := 0
