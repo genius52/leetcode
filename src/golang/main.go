@@ -15,6 +15,17 @@ import (
 
 func main() {
 	{
+		nums := []int{1, 2, 3}
+		target := 5
+		res := array.MinSizeSubarray(nums, target)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{5, 7, 1, 3}
+		res := array.MaxSubarrays(nums)
+		fmt.Println(res)
+	}
+	{
 		maxHeights := []int{6, 5, 3, 9, 2, 7}
 		res := array.MaximumSumOfHeights2866(maxHeights)
 		fmt.Println(res)
