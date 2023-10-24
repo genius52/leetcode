@@ -26,20 +26,6 @@ func MinSizeSubarray(nums []int, target int) int {
 		}
 		prefix_sum[sum] = i
 	}
-	//var suffix_sum map[int]int = make(map[int]int)
-	//suffix_sum[l*2] = 0
-	//sum = 0
-	//for i := l*2 - 1; i >= 0; i-- {
-	//	sum += nums[i%l]
-	//	need := sum - target
-	//	if idx, ok := suffix_sum[need]; ok {
-	//		gap := abs_int(idx - i)
-	//		if gap+cnt < res {
-	//			res = gap + cnt
-	//		}
-	//	}
-	//	suffix_sum[sum] = i
-	//}
 	if res == 1<<31-1 {
 		return -1
 	}

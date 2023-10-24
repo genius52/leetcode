@@ -15,6 +15,44 @@ import (
 
 func main() {
 	{
+		grid := [][]int{{1, 2}, {3, 4}}
+		res := array.ConstructProductMatrix(grid)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{5, 1, 4, 1}
+		indexDifference := 2
+		valueDifference := 4
+		res := array.FindIndices2905(nums, indexDifference, valueDifference)
+		fmt.Println(res)
+	}
+	{
+		s := "1111111011111"
+		k := 12
+		res := string_issue.ShortestBeautifulSubstring(s, k)
+		fmt.Println(res)
+	}
+	{
+		s1 := "1100011000"
+		s2 := "0101001010"
+		//s1 := "1100"
+		//s2 := "0101"
+		x := 2
+		res := string_issue.MinOperations2896(s1, s2, x)
+		fmt.Println(res)
+	}
+	{
+		processorTime := []int{121, 99}
+		tasks := []int{287, 315, 293, 260, 333, 362, 69, 233}
+		res := number.MinProcessingTime(processorTime, tasks)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{22, 21, 29, 22}
+		res := array.MaxSubarrays(nums)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{1, 2, 3}
 		target := 5
 		res := array.MinSizeSubarray(nums, target)
