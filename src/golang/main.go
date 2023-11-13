@@ -15,6 +15,28 @@ import (
 
 func main() {
 	{
+		edges := [][]int{{0, 1}, {0, 2}, {0, 3}, {2, 4}, {4, 5}}
+		values := []int{5, 2, 5, 2, 1, 1}
+		res := tree.MaximumScoreAfterOperations(edges, values)
+		fmt.Println(res)
+	}
+	{
+		nums1 := []int{0, 7, 28, 17, 18}
+		nums2 := []int{1, 2, 6, 26, 1, 0, 27, 3, 0, 30}
+		res := number.MinSum(nums1, nums2)
+		fmt.Println(res)
+	}
+	{
+		s := "1001"
+		res := string_issue.MinChanges(s)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{1, 2, 1}
+		res := array.SumCounts(nums)
+		fmt.Println(res)
+	}
+	{
 		grid := [][]int{{1, 2}, {3, 4}}
 		res := array.ConstructProductMatrix(grid)
 		fmt.Println(res)
