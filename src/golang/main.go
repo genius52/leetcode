@@ -15,6 +15,28 @@ import (
 
 func main() {
 	{
+		nums1 := []int{2, 3, 4, 5, 9}
+		nums2 := []int{8, 8, 4, 4, 4}
+		res := array.MinOperations2934(nums1, nums2)
+		fmt.Println(res)
+	}
+	{
+		access_times := [][]string{{"akuhmu", "0454"}, {"aywtqh", "0523"}, {"akuhmu", "0518"}, {"ihhkc", "0439"}, {"ihhkc", "0508"}, {"akuhmu", "0529"}, {"aywtqh", "0530"}, {"aywtqh", "0419"}}
+		res := number.FindHighAccessEmployees(access_times)
+		fmt.Println(res)
+	}
+	{
+		n := 5
+		res := number.StringCount(n)
+		fmt.Println(res)
+	}
+	{
+		n := 5
+		limit := 2
+		res := number.DistributeCandies2929(n, limit)
+		fmt.Println(res)
+	}
+	{
 		edges := [][]int{{0, 1}, {0, 2}, {0, 3}, {2, 4}, {4, 5}}
 		values := []int{5, 2, 5, 2, 1, 1}
 		res := tree.MaximumScoreAfterOperations(edges, values)
