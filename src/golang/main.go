@@ -15,6 +15,42 @@ import (
 
 func main() {
 	{
+		nums := []int{4, 3, 23, 84, 34, 88, 44, 44, 18, 15}
+		limit := 3
+		res := array.LexicographicallySmallestArray(nums, limit)
+		fmt.Println(res)
+	}
+	{
+		s := "baeyh"
+		k := 2
+		res := string_issue.BeautifulSubstrings(s, k)
+		fmt.Println(res)
+	}
+	{
+		prices := []int{3, 1, 2}
+		res := array.MinimumCoins(prices)
+		fmt.Println(res)
+	}
+	{
+		//n = 2, m = 3, hBars = [2,3], vBars = [2,3,4]
+		n := 2
+		m := 4
+		hBars := []int{2, 3}
+		vBars := []int{2, 4}
+		res := array.MaximizeSquareHoleArea(n, m, hBars, vBars)
+		fmt.Println(res)
+	}
+	{
+		//53449611838892
+		//b =
+		//712958946092406
+		var a int64 = 53449611838892
+		var b int64 = 712958946092406
+		var n int = 6
+		res := number.MaximumXorProduct(a, b, n)
+		fmt.Println(res)
+	}
+	{
 		nums1 := []int{2, 3, 4, 5, 9}
 		nums2 := []int{8, 8, 4, 4, 4}
 		res := array.MinOperations2934(nums1, nums2)
