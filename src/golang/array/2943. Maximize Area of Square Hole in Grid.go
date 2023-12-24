@@ -3,23 +3,48 @@ package array
 import "sort"
 
 func MaximizeSquareHoleArea(n int, m int, hBars []int, vBars []int) int {
-	//hBars = append(hBars, 1)
-	//hBars = append(hBars, n+2)
-	//vBars = append(vBars, 1)
-	//vBars = append(vBars, m+2)
 	sort.Ints(hBars)
 	sort.Ints(vBars)
-	var res int = 1
-	//loop:
-	//var edge_len int = 1
-	for left := 0; left < len(hBars); left++ {
-		var right int = left + 1
-		for right < len(hBars) {
-			if hBars[right]-1 != hBars[right-1] {
-				break
+	var max_h int = 1
+	var max_v int = 1
+	var cur_h int = 1
+	var cur_v int = 1
+	var l_h int = len(hBars)
+	var l_v int = len(vBars)
+	for i := 0; i < len(hBars); i++ {
+		if i == 0 {
+			cur_h++
+		} else {
+			if hBars[i] == hBars[i-1]+1 {
+				cur_h++
+			} else {
+				cur_h = 2
 			}
-			right++
+		}
+		if cur_h > max_h {
+			max_h = cur_h
 		}
 	}
-	return res
+	if l_h == 1 {
+		max_h = 2
+	}
+	for i := 0; i < len(vBars); i++ {
+		if i == 0 {
+			cur_v++
+		} else {
+			if vBars[i] == vBars[i-1]+1 {
+				cur_v++
+			} else {
+				cur_v = 2
+			}
+		}
+		if cur_v > max_v {
+			max_v = cur_v
+		}
+	}
+	if l_v == 1 {
+		max_v = 2
+	}
+	edge := min_int(max_h, max_v)
+	return edge * edge
 }

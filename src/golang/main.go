@@ -15,6 +15,54 @@ import (
 
 func main() {
 	{
+		nums := []int{1, 2, 3, 4}
+		res := array.IncremovableSubarrayCount(nums)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{6, 10, 5, 12, 7, 11, 6, 6, 12, 12, 11, 7}
+		k := 2
+		res := array.DivideArray2966(nums, k)
+		fmt.Println(res)
+	}
+	{
+		grid := [][]int{{1, 3}, {2, 2}}
+		res := array.FindMissingAndRepeatedValues(grid)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{1, 3, 2, 3, 3}
+		k := 2
+		res := array.CountSubarrays2962(nums, k)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{1, 2, 3, 1, 2, 3, 1, 2}
+		k := 2
+		res := array.MaxSubarrayLength(nums, k)
+		fmt.Println(res)
+	}
+	{
+		word := "zyxyxyz"
+		res := string_issue.RemoveAlmostEqualCharacters(word)
+		fmt.Println(res)
+	}
+	{
+		coins := []int{1, 1, 1}
+		target := 20
+		res := number.MinimumAddedCoins(coins, target)
+		fmt.Println(res)
+	}
+	{
+		//n = 2, m = 3, hBars = [2,3], vBars = [2,3,4]
+		n := 4
+		m := 40
+		hBars := []int{2, 3, 4, 5}
+		vBars := []int{36, 41, 6, 34, 33}
+		res := array.MaximizeSquareHoleArea(n, m, hBars, vBars)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{4, 3, 23, 84, 34, 88, 44, 44, 18, 15}
 		limit := 3
 		res := array.LexicographicallySmallestArray(nums, limit)
@@ -29,15 +77,6 @@ func main() {
 	{
 		prices := []int{3, 1, 2}
 		res := array.MinimumCoins(prices)
-		fmt.Println(res)
-	}
-	{
-		//n = 2, m = 3, hBars = [2,3], vBars = [2,3,4]
-		n := 2
-		m := 4
-		hBars := []int{2, 3}
-		vBars := []int{2, 4}
-		res := array.MaximizeSquareHoleArea(n, m, hBars, vBars)
 		fmt.Println(res)
 	}
 	{
