@@ -15,6 +15,16 @@ import (
 
 func main() {
 	{
+		s := "aada"
+		res := string_issue.MaximumLength2(s)
+		fmt.Println(res)
+	}
+	{
+		s := "cccerrrecdcdccedecdcccddeeeddcdcddedccdceeedccecde"
+		res := string_issue.MaximumLength(s)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{1, 2, 3, 4}
 		res := array.IncremovableSubarrayCount(nums)
 		fmt.Println(res)
