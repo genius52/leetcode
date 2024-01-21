@@ -15,6 +15,46 @@ import (
 
 func main() {
 	{
+		nums := []int{1, 10000000}
+		res := array.MaximumGap(nums)
+		fmt.Println(res)
+	}
+	{
+		s := "isawsquirrelnearmysquirrelhouseohmy"
+		a := "my"
+		b := "squirrel"
+		k := 15
+		res := array.BeautifulIndices(s, a, b, k)
+		fmt.Println(res)
+	}
+	{
+		nums1 := []int{10, 8, 7, 9}
+		nums2 := []int{7, 9, 9, 5}
+		res := number.MaximumSetSize(nums1, nums2)
+		fmt.Println(res)
+	}
+	{
+		a := 4
+		b := 3
+		c := 3
+		d := 4
+		e := 5
+		f := 2
+		res := number.MinMovesToCaptureTheQueen(a, b, c, d, e, f)
+		fmt.Println(res)
+	}
+	{
+		x := 26
+		y := 1
+		res := number.MinimumOperationsToMakeEqual(x, y)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{46, 8, 2, 4, 1, 4, 10, 2, 4, 10, 2, 5, 7, 3, 1}
+		res := array.MissingInteger(nums)
+		fmt.Println(res)
+	}
+	{
 		s := "aada"
 		res := string_issue.MaximumLength2(s)
 		fmt.Println(res)
