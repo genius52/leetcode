@@ -15,6 +15,16 @@ import (
 
 func main() {
 	{
+		word := "abzaqsqcyrbzsrvamylmyxdjl"
+		res := number.MinimumPushes2(word)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{20, 16}
+		res := array.CanSortArray(nums)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{1, 10000000}
 		res := array.MaximumGap(nums)
 		fmt.Println(res)
