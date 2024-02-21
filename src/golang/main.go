@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"oj/array"
 	"oj/diagram"
 	"oj/list_queue"
@@ -14,6 +15,32 @@ import (
 )
 
 func main() {
+	{
+		var res int64 = -1 << 63
+		res = math.MinInt64
+		fmt.Println(res)
+	}
+	{
+		points := [][]int{{1, 5}, {2, 0}, {5, 5}}
+		res := diagram.NumberOfPairs(points)
+		fmt.Println(res)
+	}
+	{
+		n := 3
+		m := 2
+		res := number.FowerGame(n, m)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024}
+		res := number.MaximumLength(nums)
+		fmt.Println(res)
+	}
+	{
+		s := "aAbBcC"
+		res := string_issue.CountKeyChanges(s)
+		fmt.Println(res)
+	}
 	{
 		word := "abzaqsqcyrbzsrvamylmyxdjl"
 		res := number.MinimumPushes2(word)
