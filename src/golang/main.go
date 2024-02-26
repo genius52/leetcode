@@ -16,6 +16,11 @@ import (
 
 func main() {
 	{
+		nums := []int{1, 9, 7, 3, 2, 7, 4, 12, 2, 6}
+		res := array.MaxOperations3040(nums)
+		fmt.Println(res)
+	}
+	{
 		var res int64 = -1 << 63
 		res = math.MinInt64
 		fmt.Println(res)
