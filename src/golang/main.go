@@ -16,6 +16,12 @@ import (
 
 func main() {
 	{
+		arr1 := []int{1, 10, 100}
+		arr2 := []int{1000}
+		res := array.LongestCommonPrefix(arr1, arr2)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{1, 9, 7, 3, 2, 7, 4, 12, 2, 6}
 		res := array.MaxOperations3040(nums)
 		fmt.Println(res)
