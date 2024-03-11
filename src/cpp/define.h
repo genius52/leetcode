@@ -105,6 +105,7 @@ struct ListNode {
 #include "array/2762. Continuous Subarrays.hpp"
 #include "array/2812. Find the Safest Path in a Grid.hpp"
 #include "array/2817. Minimum Absolute Difference Between Elements With Constraint.hpp"
+#include "array/3066. Minimum Operations to Exceed Threshold Value II.hpp"
 #include "number/229. Majority Element II.hpp"
 #include "number/220. Contains Duplicate III.hpp"
 #include "number/1441. Build an Array With Stack Operations.hpp"

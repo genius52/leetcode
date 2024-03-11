@@ -6,6 +6,13 @@
 
 int main() {
     {
+        std::vector<int> nums{999999999,999999999,999999999};
+        int k = 1000000000;
+        Solution_3066 s3066;
+        auto res = s3066.minOperations(nums,k);
+        std::cout << "3066 res = "<< res <<std::endl;
+    }
+    {
         std::vector<int> nums{5,3,2,10,15};
         int x = 1;
         Solution_2817 s2817;

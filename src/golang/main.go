@@ -16,6 +16,28 @@ import (
 
 func main() {
 	{
+		edges := [][]int{{0, 6, 3}, {6, 5, 3}, {0, 3, 1}, {3, 2, 7}, {3, 1, 6}, {3, 4, 2}}
+		signalSpeed := 3
+		res := tree.CountPairsOfConnectableServers(edges, signalSpeed)
+		fmt.Println(res)
+	}
+	{
+		grid := [][]int{{7, 6, 3}, {6, 6, 1}}
+		k := 18
+		res := array.CountSubmatrices(grid, k)
+		fmt.Println(res)
+	}
+	{
+		grid := [][]int{{1, 2, 2}, {1, 1, 0}, {0, 1, 0}}
+		res := array.MinimumOperationsToWriteY(grid)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{1, 2, 14, 15}
+		res := array.ResultArray(nums)
+		fmt.Println(res)
+	}
+	{
 		arr1 := []int{1, 10, 100}
 		arr2 := []int{1000}
 		res := array.LongestCommonPrefix(arr1, arr2)
