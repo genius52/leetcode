@@ -16,6 +16,11 @@ import (
 
 func main() {
 	{
+		arr := []string{"abc", "bcd", "abcd"}
+		res := string_issue.ShortestSubstrings(arr)
+		fmt.Println(res)
+	}
+	{
 		edges := [][]int{{0, 6, 3}, {6, 5, 3}, {0, 3, 1}, {3, 2, 7}, {3, 1, 6}, {3, 4, 2}}
 		signalSpeed := 3
 		res := tree.CountPairsOfConnectableServers(edges, signalSpeed)
