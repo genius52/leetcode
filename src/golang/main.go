@@ -16,6 +16,12 @@ import (
 
 func main() {
 	{
+		nums := []int{2, 2, 0}
+		changeIndices := []int{2, 2, 2, 2, 3, 2, 2, 1}
+		res := number.EarliestSecondToMarkIndices(nums, changeIndices)
+		fmt.Println(res)
+	}
+	{
 		arr := []string{"abc", "bcd", "abcd"}
 		res := string_issue.ShortestSubstrings(arr)
 		fmt.Println(res)
