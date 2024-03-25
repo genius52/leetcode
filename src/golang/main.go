@@ -16,6 +16,17 @@ import (
 
 func main() {
 	{
+		word := "inn"
+		k := 3
+		res := string_issue.MinimumDeletions3085(word, k)
+		fmt.Println(res)
+	}
+	{
+		s := "abcdefghijklmnopqrstuvwxy??"
+		res := string_issue.MinimizeStringValue(s)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{2, 2, 0}
 		changeIndices := []int{2, 2, 2, 2, 3, 2, 2, 1}
 		res := number.EarliestSecondToMarkIndices(nums, changeIndices)

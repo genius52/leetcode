@@ -6,6 +6,16 @@
 
 int main() {
     {
+        //[20,5,20]
+        //queries =
+        //[[1,1],[2,2],[0,1]]
+        std::vector<int> nums{20,5,20};
+        std::vector<std::vector<int>> queries{{1,1},{2,2},{0,1}};
+        Solution_3080 s3080;
+        auto res = s3080.unmarkedSumArray(nums,queries);
+        std::cout << "3080 res = "<< res.size() <<std::endl;
+    }
+    {
         std::vector<int> nums{999999999,999999999,999999999};
         int k = 1000000000;
         Solution_3066 s3066;
