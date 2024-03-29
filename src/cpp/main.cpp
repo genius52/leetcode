@@ -6,6 +6,13 @@
 
 int main() {
     {
+        Solution_3092 s3092;
+        std::vector<int> nums{5,5,3};
+        std::vector<int> freq{2,-2,1};
+        auto res = s3092.mostFrequentIDs(nums,freq);
+        std::cout << "3092 res = "<< res.size() <<std::endl;
+    }
+    {
         //[20,5,20]
         //queries =
         //[[1,1],[2,2],[0,1]]

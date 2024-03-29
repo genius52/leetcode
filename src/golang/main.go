@@ -16,6 +16,16 @@ import (
 
 func main() {
 	{
+		k := 2
+		res := number.MinOperations3091(k)
+		fmt.Println(res)
+	}
+	{
+		s := "bcbbbcba"
+		res := string_issue.MaximumLengthSubstring(s)
+		fmt.Println(res)
+	}
+	{
 		word := "inn"
 		k := 3
 		res := string_issue.MinimumDeletions3085(word, k)
