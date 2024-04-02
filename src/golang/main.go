@@ -16,6 +16,18 @@ import (
 
 func main() {
 	{
+		nums := []int{1, 2, 32, 21}
+		k := 55
+		res := array.MinimumSubarrayLength3097(nums, k)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{2, 1, 8}
+		k := 10
+		res := array.MinimumSubarrayLength(nums, k)
+		fmt.Println(res)
+	}
+	{
 		k := 2
 		res := number.MinOperations3091(k)
 		fmt.Println(res)
