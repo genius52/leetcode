@@ -16,6 +16,18 @@ import (
 
 func main() {
 	{
+		nums := []int{98, 52}
+		k := 82
+		res := number.MinOperationsToMakeMedianK(nums, k)
+		fmt.Println(res)
+	}
+	{
+		s := "xaxcd"
+		k := 4
+		res := string_issue.GetSmallestString3106(s, k)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{1, 2, 32, 21}
 		k := 55
 		res := array.MinimumSubarrayLength3097(nums, k)
