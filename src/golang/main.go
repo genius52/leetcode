@@ -16,6 +16,25 @@ import (
 
 func main() {
 	{
+		n := 3
+		x := 4
+		res := array.MinEnd(n, x)
+		fmt.Println(res)
+	}
+	{
+		nums1 := []int{4, 20, 16, 12, 8}
+		nums2 := []int{14, 18, 10}
+		res := array.MinimumAddedInteger(nums1, nums2)
+		fmt.Println(res)
+	}
+	{
+		zero := 199
+		one := 199
+		limit := 20
+		res := array.NumberOfStableArrays(zero, one, limit)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{98, 52}
 		k := 82
 		res := number.MinOperationsToMakeMedianK(nums, k)
