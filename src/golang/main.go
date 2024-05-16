@@ -16,6 +16,11 @@ import (
 
 func main() {
 	{
+		s := "fabccddg"
+		res := string_issue.MinimumSubstringsInPartition(s)
+		fmt.Println(res)
+	}
+	{
 		n := 3
 		x := 4
 		res := array.MinEnd(n, x)
