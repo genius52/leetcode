@@ -16,6 +16,17 @@ import (
 
 func main() {
 	{
+		nums := []int{13, 23, 12, 33, 45, 25, 78, 58, 90, 43}
+		res := array.SumDigitDifferences(nums)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{4, 3, 1, 6}
+		queries := [][]int{{0, 2}, {2, 3}}
+		res := array.IsArraySpecial2(nums, queries)
+		fmt.Println(res)
+	}
+	{
 		s := "fabccddg"
 		res := string_issue.MinimumSubstringsInPartition(s)
 		fmt.Println(res)
