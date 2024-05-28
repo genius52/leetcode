@@ -16,6 +16,24 @@ import (
 
 func main() {
 	{
+		nums1 := []int{1, 2, 4, 12}
+		nums2 := []int{2, 4}
+		k := 3
+		res := number.NumberOfPairs(nums1, nums2, k)
+		fmt.Println(res)
+	}
+	{
+		word := "aaaaaaaaaaaaaabb"
+		res := string_issue.CompressedString(word)
+		fmt.Println(res)
+	}
+	{
+		limit := 1
+		queries := [][]int{{0, 1}, {0, 4}, {0, 4}, {0, 1}, {1, 2}}
+		res := number.QueryResults(limit, queries)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{13, 23, 12, 33, 45, 25, 78, 58, 90, 43}
 		res := array.SumDigitDifferences(nums)
 		fmt.Println(res)
