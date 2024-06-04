@@ -15,7 +15,7 @@ func dfs_waysToReachStair(target int, cur int, jump_cnt int, pre_decrease bool, 
 	if cur == target {
 		res = 1
 	}
-	res += dfs_waysToReachStair(target, i+(1<<jump_cnt), jump_cnt+1, false, memo)
+	res += dfs_waysToReachStair(target, cur+(1<<jump_cnt), jump_cnt+1, false, memo)
 	if cur != 0 && !pre_decrease {
 		res += dfs_waysToReachStair(target, cur-1, jump_cnt, true, memo)
 	}

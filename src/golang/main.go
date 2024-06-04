@@ -16,6 +16,17 @@ import (
 
 func main() {
 	{
+		s := "aaba*"
+		res := string_issue.ClearStars(s)
+		fmt.Println(res)
+	}
+	{
+		days := 10
+		meetings := [][]int{{5, 7}, {1, 3}, {9, 10}}
+		res := number.CountDays(days, meetings)
+		fmt.Println(res)
+	}
+	{
 		nums1 := []int{1, 2, 4, 12}
 		nums2 := []int{2, 4}
 		k := 3
