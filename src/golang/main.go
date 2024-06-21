@@ -16,6 +16,34 @@ import (
 
 func main() {
 	{
+		power := []int{1, 1, 3, 4}
+		res := number.MaximumTotalDamage(power)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{65, 25, 26, 70, 40, 46, 37}
+		k := 5
+		res := array.MaximumLength(nums, k)
+		fmt.Println(res)
+	}
+	{
+		rewardValues := []int{6, 13, 9, 19}
+		res := number.MaxTotalReward(rewardValues)
+		fmt.Println(res)
+	}
+	{
+		n := 4
+		k := 5
+		res := number.ValueAfterKSeconds(n, k)
+		fmt.Println(res)
+	}
+	{
+		skills := []int{4, 2, 6, 3, 9}
+		k := 2
+		res := number.FindWinningPlayer(skills, k)
+		fmt.Println(res)
+	}
+	{
 		s := "aaba*"
 		res := string_issue.ClearStars(s)
 		fmt.Println(res)
