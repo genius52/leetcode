@@ -16,6 +16,11 @@ import (
 
 func main() {
 	{
+		nums := []int{1, -2, 3, 4}
+		res := array.MaximumTotalCost(nums)
+		fmt.Println(res)
+	}
+	{
 		power := []int{1, 1, 3, 4}
 		res := number.MaximumTotalDamage(power)
 		fmt.Println(res)

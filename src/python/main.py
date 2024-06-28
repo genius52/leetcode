@@ -5,8 +5,19 @@ from Longest_Absolute_File_Path import *
 from stringissue.Solution1147 import *
 from number.Solution13 import *
 from number.Solution682 import Solution682
+from arraytype.Solution3176 import *
+from arraytype.Solution3196 import *
 
 if __name__ == '__main__':
+    nums = [1, -2, 3, 4]
+    s3196 = Solution3196()
+    res = s3196.maximumTotalCost(nums)
+
+    s3176 = Solution3176()
+    nums = [1, 2, 1, 1, 3]
+    k = 2
+    res = s3176.maximumLength(nums,k)
+
     operations = ["5", "2", "C", "D", "+"]
     s682 = Solution682()
     res = s682.calPoints(operations)
