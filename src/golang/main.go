@@ -16,6 +16,12 @@ import (
 
 func main() {
 	{
+		//grid := [][]int{{1, 0, 1}, {1, 1, 1}}
+		grid := [][]int{{0, 0, 0}, {0, 0, 0}, {0, 0, 1}, {1, 1, 0}}
+		res := diagram.MinimumSum(grid)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{1, -2, 3, 4}
 		res := array.MaximumTotalCost(nums)
 		fmt.Println(res)
