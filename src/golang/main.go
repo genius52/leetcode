@@ -16,6 +16,23 @@ import (
 
 func main() {
 	{
+		nums := []int{1, 2, 3, 4, 5}
+		k := 2
+		res := array.MaximumLength3202(nums, k)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{1, 2, 3, 4}
+		res := array.MaximumLength3201(nums)
+		fmt.Println(res)
+	}
+	{
+		red := 1
+		blue := 1
+		res := number.MaxHeightOfTriangle(red, blue)
+		fmt.Println(res)
+	}
+	{
 		//grid := [][]int{{1, 0, 1}, {1, 1, 1}}
 		grid := [][]int{{0, 0, 0}, {0, 0, 0}, {0, 0, 1}, {1, 1, 0}}
 		res := diagram.MinimumSum(grid)
