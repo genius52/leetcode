@@ -16,6 +16,17 @@ import (
 
 func main() {
 	{
+		colors := []int{0, 1, 0, 1, 0}
+		k := 3
+		res := array.NumberOfAlternatingGroups2(colors, k)
+		fmt.Println(res)
+	}
+	{
+		var grid [][]byte = [][]byte{{'.', '.'}, {'Y', 'X'}}
+		res := array.NumberOfSubmatrices(grid)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{1, 2, 3, 4, 5}
 		k := 2
 		res := array.MaximumLength3202(nums, k)
