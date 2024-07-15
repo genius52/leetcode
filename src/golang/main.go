@@ -16,6 +16,33 @@ import (
 
 func main() {
 	{
+		m := 6
+		n := 3
+		horizontalCut := []int{2, 3, 2, 3, 1}
+		verticalCut := []int{1, 2}
+		res := number.MinimumCost3218(m, n, horizontalCut, verticalCut)
+		fmt.Println(res)
+	}
+	{
+		var l1 list_queue.ListNode
+		l1.Val = 1
+		var l2 list_queue.ListNode
+		l2.Val = 2
+		var l3 list_queue.ListNode
+		l3.Val = 3
+		var l4 list_queue.ListNode
+		l4.Val = 4
+		var l5 list_queue.ListNode
+		l5.Val = 5
+		l1.Next = &l2
+		l2.Next = &l3
+		l3.Next = &l4
+		l4.Next = &l5
+		nums := []int{1, 2, 3, 5}
+		res := list_queue.ModifiedList(nums, &l1)
+		fmt.Println(res)
+	}
+	{
 		colors := []int{0, 1, 0, 1, 0}
 		k := 3
 		res := array.NumberOfAlternatingGroups2(colors, k)
