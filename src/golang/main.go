@@ -16,6 +16,23 @@ import (
 
 func main() {
 	{
+		n := 5
+		queries := [][]int{{2, 4}, {0, 2}, {0, 4}}
+		res := diagram.ShortestDistanceAfterQueries3244(n, queries)
+		fmt.Println(res)
+	}
+	{
+		edges := [][]int{{2, 0}, {4, 2}, {1, 2}, {3, 1}, {5, 1}}
+		res := tree.CountGoodNodes(edges)
+		fmt.Println(res)
+	}
+	{
+		n := 5
+		queries := [][]int{{2, 4}, {0, 2}, {0, 4}}
+		res := diagram.ShortestDistanceAfterQueries(n, queries)
+		fmt.Println(res)
+	}
+	{
 		m := 6
 		n := 3
 		horizontalCut := []int{2, 3, 2, 3, 1}
