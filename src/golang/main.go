@@ -16,6 +16,24 @@ import (
 
 func main() {
 	{
+		nums := []int{1, 2, 3, 4, 3, 2, 5}
+		k := 3
+		res := array.ResultsArray2(nums, k)
+		fmt.Println(res)
+	}
+	{
+		nums := []int{1, 2, 3, 4, 3, 2, 5}
+		k := 3
+		res := array.ResultsArray(nums, k)
+		fmt.Println(res)
+	}
+	{
+		s := "10101"
+		k := 1
+		res := string_issue.CountKConstraintSubstrings(s, k)
+		fmt.Println(res)
+	}
+	{
 		n := 5
 		queries := [][]int{{2, 4}, {0, 2}, {0, 4}}
 		res := diagram.ShortestDistanceAfterQueries3244(n, queries)
