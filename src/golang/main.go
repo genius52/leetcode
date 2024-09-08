@@ -16,6 +16,12 @@ import (
 
 func main() {
 	{
+		queries := [][]int{{1, 2}, {3, 4}, {2, 3}, {-3, 0}}
+		k := 2
+		res := number.ResultsArray(queries, k)
+		fmt.Println(res)
+	}
+	{
 		nums := []int{1, 2, 3, 4, 3, 2, 5}
 		k := 3
 		res := array.ResultsArray2(nums, k)
