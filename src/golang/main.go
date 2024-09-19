@@ -16,6 +16,12 @@ import (
 
 func main() {
 	{
+		start := []int{6, 0, 3}
+		d := 2
+		res := array.MaxPossibleScore(start, d)
+		fmt.Println(res)
+	}
+	{
 		queries := [][]int{{1, 2}, {3, 4}, {2, 3}, {-3, 0}}
 		k := 2
 		res := number.ResultsArray(queries, k)
